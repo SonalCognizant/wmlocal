@@ -263,7 +263,9 @@ button:disabled:hover {
 
 a.button.primary,
 button.primary {
-  background-color: var(--primary-675);
+  /* background-color: var(--primary-675); */
+    background-color: red;
+
   color: var(--white);
 }
 
