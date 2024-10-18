@@ -18,6 +18,7 @@
   --text-color: #131313;
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
+  --primary-background: #005589;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
@@ -189,8 +190,8 @@ button {
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: #005589;
-  color: #FFFFFF;
+  background-color: var(--primary-background);
+  color: var(--background-color);
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
