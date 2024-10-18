@@ -189,8 +189,8 @@ button {
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: var(--link-color);
-  color: var(--background-color);
+  background-color: red;
+  color: #FFFFFF;
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
