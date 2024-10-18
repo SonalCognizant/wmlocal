@@ -18,7 +18,10 @@
   --text-color: #131313;
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
-  --primary-background: #005589;
+  /* Wellmark color start */
+  --primary-675: #005589;
+
+  /* Wellmark color end */
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
@@ -190,7 +193,7 @@ button {
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: var(--primary-background);
+  background-color: var(--primary-675);
   color: var(--background-color);
   cursor: pointer;
   overflow: hidden;
