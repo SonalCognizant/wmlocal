@@ -41,6 +41,15 @@
   --blue-675: #005589;
   /* wellmark color end */
 
+  /* wellmark heading size start */
+  --heading-1-size: 40px;
+  --heading-2-size: 32px;
+  --heading-3-size: 24px;
+  --heading-4-size: 20px;
+  --heading-1-mobile-size: 32px;
+  --heading-2-mobile-size: 28px;
+  /* wellmark heading size start */
+
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
   --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
@@ -128,10 +137,6 @@ footer .footer[data-block-status="loaded"] {
   }
 }
 
-h1,
-h2,
-h3,
-h4,
 h5,
 h6 {
   margin-top: 0.8em;
@@ -142,12 +147,52 @@ h6 {
   scroll-margin: 40px;
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
 h5 { font-size: var(--heading-font-size-s); }
 h6 { font-size: var(--heading-font-size-xs); }
+
+h1{
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-1-mobile-size);
+  font-weight: 700;
+  line-height: 33px;
+}
+
+h2{
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-2-mobile-size);
+  font-weight: 700;
+  line-height: 28px;
+}
+
+@media (width >= 480px) {
+  h1{
+    font-family: var(--heading-font-family);
+    font-size: var(--heading-1-size);
+    font-weight: 500;
+    line-height: 47px;
+  }
+  
+  h2{
+    font-family: var(--heading-font-family);
+    font-size: var(--heading-2-size);
+    font-weight: 700;
+    line-height: 31px;
+  }
+  
+  h3{
+    font-family: var(--heading-font-family);
+    font-size: var(--heading-3-size);
+    font-weight: bold;
+    line-height: 24px;
+  }
+  
+  h4{
+    font-family: var(--heading-font-family);
+    font-size: var(--heading-4-size);
+    font-weight: bold;
+    line-height: 21px;
+  }
+}
 
 p,
 dl,
