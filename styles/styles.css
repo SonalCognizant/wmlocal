@@ -18,6 +18,50 @@
   --text-color: #131313;
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
+  
+  /* wellmark color start */
+  --primary-675: #005589;
+  --blue-550: #4A7390;
+  --blue-100: #D6E5F1;
+  --blue-50: #F3F9FF;
+  --gray-700: #4B4C4D;
+  --gray-500: #757575;
+  --gray-225: #C2C2C3;
+  --gray-100: #F2F2F3;
+  --white: #FFFFFF;
+  --red-550: #B44242;
+  --green-550: #4E735D;
+  --yellow-550: #FFC345;
+  --primary-775: #0F3659;
+  --red-675: #862F2F;
+  --orange-450: #E45F0C;
+  --red-50: #FBEAE9;
+  --green-50: #F0F6EF;
+  --yellow-50: #FFFAEE;
+  --blue-675: #005589;
+  /* wellmark color end */
+
+   /* wellmark heading size start */
+   --spacing-xxs: 4px;
+   --spacing-xs: 8px;
+   --spacing-s: 12px;
+   --spacing-m: 16px;
+   --spacing-l: 24px;
+   --spacing-xl: 36px;
+   --spacing-xxl: 52px;
+   --spacing-huge: 72px;
+   --spacing-jumbo: 96px;
+   --spacing-max: 120px;
+   /* wellmark heading size start */
+ 
+  /* wellmark heading size start */
+  --heading-1-size: 40px;
+  --heading-2-size: 32px;
+  --heading-3-size: 24px;
+  --heading-4-size: 20px;
+  --heading-1-mobile-size: 32px;
+  --heading-2-mobile-size: 28px;
+  /* wellmark heading size start */
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
@@ -106,10 +150,6 @@ footer .footer[data-block-status="loaded"] {
   }
 }
 
-h1,
-h2,
-h3,
-h4,
 h5,
 h6 {
   margin-top: 0.8em;
@@ -120,12 +160,52 @@ h6 {
   scroll-margin: 40px;
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
 h5 { font-size: var(--heading-font-size-s); }
 h6 { font-size: var(--heading-font-size-xs); }
+
+h1{
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-1-mobile-size);
+  font-weight: 700;
+  line-height: 33px;
+}
+
+h2{
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-2-mobile-size);
+  font-weight: 700;
+  line-height: 28px;
+}
+
+@media (width >= 480px) {
+  h1{
+    font-family: var(--heading-font-family);
+    font-size: var(--heading-1-size);
+    font-weight: 500;
+    line-height: 47px;
+  }
+  
+  h2{
+    font-family: var(--heading-font-family);
+    font-size: var(--heading-2-size);
+    font-weight: 700;
+    line-height: 31px;
+  }
+  
+  h3{
+    font-family: var(--heading-font-family);
+    font-size: var(--heading-3-size);
+    font-weight: bold;
+    line-height: 24px;
+  }
+  
+  h4{
+    font-family: var(--heading-font-family);
+    font-size: var(--heading-4-size);
+    font-weight: bold;
+    line-height: 21px;
+  }
+}
 
 p,
 dl,
@@ -163,9 +243,38 @@ button {
 
 /* links */
 a:any-link {
-  color: var(--link-color);
-  text-decoration: none;
-  word-break: break-word;
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 100%;
+  margin: 12px 0;
+  border-radius: 2px;
+  padding: 0.5em 1.2em;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: var(--white);
+  color: var(--blue-675);
+}
+
+a:any-link:hover {
+  background-color: var(--blue-50);
+  color: var(--blue-675);
+}
+
+a:any-link:focus {
+  background-color: var(--blue-50);
+  color: var(--blue-675);
+  outline: 3px solid var(--orange-450);
+  outline-style: dashed;
+  outline-offset: 2px;
 }
 
 a:hover {
@@ -180,17 +289,15 @@ button {
   display: inline-block;
   max-width: 100%;
   margin: 12px 0;
-  border: 2px solid transparent;
-  border-radius: 2.4em;
+  border-radius: 2px;
   padding: 0.5em 1.2em;
   font-family: var(--body-font-family);
   font-style: normal;
+  font-size: 18px;
   font-weight: 500;
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: var(--link-color);
-  color: var(--background-color);
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -207,15 +314,54 @@ button:focus {
 
 button:disabled,
 button:disabled:hover {
-  background-color: var(--light-color);
+  background-color: var(--gray-100);
+  color: var(--gray-700);
   cursor: unset;
+}
+
+a.button.primary,
+button.primary {
+  background-color: var(--primary-675);
+  color: var(--white);
+}
+
+a.button.primary:hover,
+button.primary:hover {
+  background-color: var(--primary-775);
+  color: var(--white);
+}
+
+a.button.primary:focus,
+button.primary:focus {
+  background-color: var(--primary-775);
+  color: var(--white);
+  outline: 3px solid var(--orange-450);
+  outline-style: dashed;
+  outline-offset: 2px;
 }
 
 a.button.secondary,
 button.secondary {
-  background-color: unset;
-  border: 2px solid currentcolor;
-  color: var(--text-color);
+  background-color: var(--white);
+  border: 2px solid var(--blue-675);
+  color: var(--blue-675);
+}
+
+a.button.secondary:hover,
+button.secondary:hover {
+  background-color: var(--blue-50);
+  border: 2px solid var(--blue-675);
+  color: var(--blue-675);
+}
+
+a.button.secondary:focus,
+button.secondary:focus {
+  background-color: var(--blue-50);
+  border: 2px solid var(--blue-675);
+  color: var(--blue-675);
+  outline: 3px solid var(--orange-450);
+  outline-style: dashed;
+  outline-offset: 2px;
 }
 
 main img {
