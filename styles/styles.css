@@ -41,7 +41,7 @@
   --blue-675: #005589;
   /* wellmark color end */
 
-   /* wellmark heading size start */
+   /* wellmark spacing size start */
    --spacing-xxs: 4px;
    --spacing-xs: 8px;
    --spacing-s: 12px;
@@ -52,7 +52,7 @@
    --spacing-huge: 72px;
    --spacing-jumbo: 96px;
    --spacing-max: 120px;
-   /* wellmark heading size start */
+   /* wellmark spacing size start */
  
   /* wellmark heading size start */
   --heading-1-size: 40px;
