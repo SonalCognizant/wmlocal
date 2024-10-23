@@ -1,4 +1,4 @@
-@use "./tokens.scss";
+@import "tokens";
 /* buttons */
 a.button:any-link,
 button {
@@ -28,7 +28,7 @@ button {
       background-color: $--primary-775;
       color: $--white; 
 		}
-		:focus{
+		&:focus{
       background-color: $--primary-775;
       color: $--white;
       outline: 3px solid $--orange-450;
@@ -46,7 +46,7 @@ button {
       border: 2px solid $--blue-675;
       color: $--blue-675;     
     }
-    :focus{
+    &:focus{
       background-color: $--blue-50;
       border: 2px solid $--blue-675;
       color: $--blue-675;
@@ -59,7 +59,7 @@ button {
     background-color: $--blue-50;
     color: $--blue-675;
 	}
-	:focus{
+	&:focus{
     background-color: $--blue-50;
     color: $--blue-675;
     outline: 3px solid $--orange-450;
