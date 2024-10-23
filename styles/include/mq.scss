@@ -36,7 +36,7 @@ $breakpoint3: 1379px;
       }
   }
   //Non-Mobile
-  @mixin fora-nonmobile{
+  @mixin for-nonmobile{
     @media (min-width: $breakpoint1 ) {
         @content;
       }
