@@ -1,0 +1,65 @@
+@use "./mq.scss";
+@use "./tokens.scss";
+
+@include for-size(for-mobile) {
+    h1 {
+        font-family: var(--heading-font-family);
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 33px;
+        color: $--gray-700;
+        opacity: 1;
+        text-align: left;
+    }
+    h2 {
+        font-family: var(--heading-font-family);
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 28px;
+        color: $--gray-700;
+        opacity: 1;
+        text-align: left;
+    }
+}
+
+@include for-size(for-large) {
+    h1 {
+        font-family: var(--heading-font-family);
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 47px;
+        color: $--gray-700;
+        opacity: 1;
+        text-align: left;
+    }
+
+    h2 {
+        font-family: var(--heading-font-family);
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 31px;
+        color: $--gray-700;
+        opacity: 1;
+        text-align: left;
+    }
+
+    h3 {
+        font-family: var(--heading-font-family);
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 24px;
+        color: $--gray-700;
+        opacity: 1;
+        text-align: left;
+    }
+
+    h4 {
+        font-family: var(--heading-font-family);
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 21px;
+        color: $--gray-700;
+        opacity: 1;
+        text-align: left;
+    }
+}

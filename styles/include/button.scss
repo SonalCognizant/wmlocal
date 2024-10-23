@@ -1,0 +1,69 @@
+@use "./tokens.scss";
+/* buttons */
+a.button:any-link,
+button {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 100%;
+  border-radius: 2px;
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  padding:12px 36px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  opacity: 1;
+  font-style: normal;
+  letter-spacing: -0.18px;
+  line-height: 28px;
+&.primary{
+    background-color: $--primary-675;
+    color: $--white;
+    padding:12px 36px;
+&:hover{
+      background-color: $--primary-775;
+      color: $--white; 
+		}
+		:focus{
+      background-color: $--primary-775;
+      color: $--white;
+      outline: 3px solid $--orange-450;
+      outline-style: dashed;
+      outline-offset: 2px; 
+		}
+	}
+&.secondary{
+    background-color: $--white;
+    border: 2px solid $--blue-675;
+    color: $--blue-675;
+    padding:10px 34px;
+&:hover{
+      background-color: $--blue-50;
+      border: 2px solid $--blue-675;
+      color: $--blue-675;     
+    }
+    :focus{
+      background-color: $--blue-50;
+      border: 2px solid $--blue-675;
+      color: $--blue-675;
+      outline: 3px solid $--orange-450;
+      outline-style: dashed;
+      outline-offset: 2px;     
+    }
+  }
+&:hover{
+    background-color: $--blue-50;
+    color: $--blue-675;
+	}
+	:focus{
+    background-color: $--blue-50;
+    color: $--blue-675;
+    outline: 3px solid $--orange-450;
+    outline-style: dashed;
+    outline-offset: 2px; 
+	}
+}
