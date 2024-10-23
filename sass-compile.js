@@ -1,4 +1,4 @@
-import sass from 'sass';
+import * as sass from 'sass';
 import fs from 'fs';
 import path from 'path';
 import { readdir } from 'fs/promises';
