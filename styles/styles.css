@@ -246,30 +246,30 @@ a:any-link {
   box-sizing: border-box;
   display: inline-block;
   max-width: 100%;
-  margin: 12px 0;
   border-radius: 2px;
-  padding: 0.5em 1.2em;
   font-family: var(--body-font-family);
-  font-style: normal;
   font-size: 18px;
   font-weight: 500;
-  line-height: 1.25;
   text-align: center;
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  opacity: 1;
+  font-style: normal;
+  letter-spacing: -0.18px;
+  line-height: 28px;
   background-color: var(--white);
   color: var(--blue-675);
 }
 
-a:any-link:hover {
+a.button:hover {
   background-color: var(--blue-50);
   color: var(--blue-675);
 }
 
-a:any-link:focus {
+a.button:focus {
   background-color: var(--blue-50);
   color: var(--blue-675);
   outline: 3px solid var(--orange-450);
@@ -283,34 +283,83 @@ a:hover {
 }
 
 /* buttons */
+/* buttons */
 a.button:any-link,
 button {
   box-sizing: border-box;
   display: inline-block;
   max-width: 100%;
-  margin: 12px 0;
   border-radius: 2px;
-  padding: 0.5em 1.2em;
   font-family: var(--body-font-family);
-  font-style: normal;
   font-size: 18px;
   font-weight: 500;
-  line-height: 1.25;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
   overflow: hidden;
+  padding:12px 36px;
   text-overflow: ellipsis;
   white-space: nowrap;
+  opacity: 1;
+  font-style: Medium;
+  letter-spacing: -0.18px;
+  line-height: 28px;
+  &.primary{
+    background-color: var(--primary-675);
+    color: var(--white);
+    padding:12px 36px;
+		&:hover{
+      background-color: var(--primary-775);
+      color: var(--white); 
+		}
+		:focus{
+      background-color: var(--primary-775);
+      color: var(--white);
+      outline: 3px solid var(--orange-450);
+      outline-style: dashed;
+      outline-offset: 2px; 
+		}
+	}
+  &.secondary{
+    background-color: var(--white);
+    border: 2px solid var(--blue-675);
+    color: var(--blue-675);
+    padding:10px 34px;
+    &:hover{
+      background-color: var(--blue-50);
+      border: 2px solid var(--blue-675);
+      color: var(--blue-675);     
+    }
+    :focus{
+      background-color: var(--blue-50);
+      border: 2px solid var(--blue-675);
+      color: var(--blue-675);
+      outline: 3px solid var(--orange-450);
+      outline-style: dashed;
+      outline-offset: 2px;     
+    }
+  }
+  &:hover{
+    background-color: var(--blue-50);
+    color: var(--blue-675);
+	}
+	:focus{
+    background-color: var(--blue-50);
+    color: var(--blue-675);
+    outline: 3px solid var(--orange-450);
+    outline-style: dashed;
+    outline-offset: 2px; 
+	}
 }
 
-a.button:hover,
+
+/* a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
   background-color: var(--link-hover-color);
   cursor: pointer;
-}
+} */
 
 button:disabled,
 button:disabled:hover {
@@ -319,10 +368,11 @@ button:disabled:hover {
   cursor: unset;
 }
 
-a.button.primary,
+/* a.button.primary,
 button.primary {
   background-color: var(--primary-675);
   color: var(--white);
+  padding:12px 36px;
 }
 
 a.button.primary:hover,
@@ -345,6 +395,7 @@ button.secondary {
   background-color: var(--white);
   border: 2px solid var(--blue-675);
   color: var(--blue-675);
+  padding:10px 34px;
 }
 
 a.button.secondary:hover,
@@ -362,7 +413,7 @@ button.secondary:focus {
   outline: 3px solid var(--orange-450);
   outline-style: dashed;
   outline-offset: 2px;
-}
+} */
 
 main img {
   max-width: 100%;
