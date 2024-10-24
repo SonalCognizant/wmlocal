@@ -30,12 +30,23 @@
   }
 
   .image-text > div {
+    gap: $--spacing-l;
+    @include for-tablet {
+      align-items: center;
+      flex-direction: unset;
+      gap: $--spacing-l;
+    }
     @include for-laptop {
       align-items: center;
       flex-direction: unset;
       gap: $--spacing-huge;
     }
-    @include for-nonmobile {
+    @include for-large {
+      align-items: center;
+      flex-direction: unset;
+      gap: $--spacing-huge;
+    }
+    @include for-xlarge {
       align-items: center;
       flex-direction: unset;
       gap: $--spacing-jumbo;
@@ -50,7 +61,7 @@
     @include for-laptop {
       margin: $--spacing-max $--spacing-xl;
     }
-    @include for-nonmobile {
+    @include for-xlarge {
       margin: $--spacing-max $--spacing-xxl;
     }
   }

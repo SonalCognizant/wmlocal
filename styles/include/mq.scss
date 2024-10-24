@@ -1,7 +1,7 @@
 $breakpoint1: 480px;
 $breakpoint2: 1023px;
 $breakpoint3: 1200px;
-$breakpoint3: 1379px;
+$breakpoint4: 1379px;
 // for mobile with upto 480px
 @mixin for-mobile {
     @media (max-width: $breakpoint1) {
