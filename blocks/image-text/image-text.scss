@@ -44,7 +44,7 @@
     @include for-large {
       align-items: center;
       flex-direction: unset;
-      gap: $--spacing-huge;
+      gap: $--spacing-jumbo;
     }
     @include for-xlarge {
       align-items: center;
@@ -61,15 +61,21 @@
     @include for-laptop {
       margin: $--spacing-max $--spacing-xl;
     }
+    @include for-large {
+      margin: $--spacing-max $--spacing-xxl;
+    }
     @include for-xlarge {
       margin: $--spacing-max $--spacing-xxl;
     }
   }
   
   .image-text.block p.button-container {
+    margin-top: 0;
+    margin-bottom: $--spacing-m;
     @include for-nonmobile {
       display: inline-block;
       padding-right: $--spacing-l;
+      margin-bottom: $--spacing-m;
     }
   }
   
