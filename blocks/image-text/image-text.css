@@ -2,75 +2,75 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
-.columns > div {
+.image-text > div {
   display: flex;
   flex-direction: column;
 }
 
-.columns img {
+.image-text img {
   width: 100%;
 }
 
-.columns > div > div {
+.image-text > div > div {
   order: 1;
 }
 
-.columns > div > .columns-img-col {
+.image-text > div > .image-text-img-col {
   order: 0;
 }
 
-.columns > div > .columns-img-col img {
+.image-text > div > .image-text-img-col img {
   display: block;
 }
 
 @media (width >= 480px) {
-  .columns > div > div {
+  .image-text > div > div {
     flex: 1;
     order: unset;
   }
 }
 @media (min-width: 1023px) and (max-width: 1379px) {
-  .columns > div {
+  .image-text > div {
     align-items: center;
     flex-direction: unset;
     gap: 72px;
   }
 }
 @media (min-width: 480px) {
-  .columns > div {
+  .image-text > div {
     align-items: center;
     flex-direction: unset;
     gap: 96px;
   }
 }
 
-.columns.block {
+.image-text.block {
   margin: 72px 16px;
 }
 @media (min-width: 480px) and (max-width: 1023px) {
-  .columns.block {
+  .image-text.block {
     margin: 96px 36px;
   }
 }
 @media (min-width: 1023px) and (max-width: 1379px) {
-  .columns.block {
+  .image-text.block {
     margin: 120px 36px;
   }
 }
 @media (min-width: 480px) {
-  .columns.block {
+  .image-text.block {
     margin: 120px 52px;
   }
 }
 
 @media (min-width: 480px) {
-  .columns.block p.button-container {
+  .image-text.block p.button-container {
     display: inline-block;
     padding-right: 24px;
   }
 }
 
-.columns.block h2 {
+.image-text.block h2 {
   color: #4A7390;
   font-family: var(--body-font-family);
   font-size: 32px;
@@ -83,13 +83,13 @@
   margin-bottom: 24px;
 }
 @media (max-width: 480px) {
-  .columns.block h2 {
+  .image-text.block h2 {
     margin-top: 36px;
     margin-bottom: 16px;
   }
 }
 
-.columns.block p {
+.image-text.block p {
   color: #4B4C4D;
   font-family: var(--body-font-family);
   font-size: 16px;
