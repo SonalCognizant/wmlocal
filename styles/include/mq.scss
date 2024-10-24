@@ -1,0 +1,43 @@
+$breakpoint1: 480px;
+$breakpoint2: 1023px;
+$breakpoint3: 1200px;
+$breakpoint3: 1379px;
+// for mobile with upto 480px
+@mixin for-mobile {
+    @media (max-width: $breakpoint1) {
+      @content;
+    }
+  }
+   // for tablet 480 to 1023
+  @mixin for-tablet {
+    @media (min-width: $breakpoint1) and (max-width: $breakpoint2) {
+      @content;
+    }
+  }
+   
+  // for laptop 1023 to 1200
+  @mixin for-laptop {
+    @media (min-width: $breakpoint2) and (max-width: $breakpoint3) {
+      @content;
+    }
+  }
+   
+  // for 1200 to 1379
+  @mixin for-large {
+    @media (min-width: $breakpoint3) and (max-width : $breakpoint4) {
+      @content;
+    }
+  }
+
+  //very large screen 1379 +
+  @mixin for-xlarge{
+    @media (min-width: $breakpoint4) {
+        @content;
+      }
+  }
+  //Non-Mobile
+  @mixin for-nonmobile{
+    @media (min-width: $breakpoint1 ) {
+        @content;
+      }
+  }
