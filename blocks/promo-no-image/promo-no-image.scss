@@ -1,0 +1,49 @@
+.promo-no-image-container {
+  text-align: center;
+
+  .promo-no-image {
+      >ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+          grid-gap: 24px;
+
+          >li {
+              padding: 24px;
+              background-color: var(--background-color);
+
+              .cards-card-image {
+                  line-height: 0;
+
+                  img {
+                      width: 100%;
+                      aspect-ratio: 4 / 3;
+                      object-fit: cover;
+                  }
+              }
+
+              .cards-card-body {
+                  margin: 16px;
+
+                  p {
+                      font-weight: 400;
+                      font-family: 'roboto';
+                      line-height: 24px;
+                      font-size: 16px;
+                      color: #4B4C4D;
+
+                      strong {
+                          font-weight: 700;
+                          font-size: 20px;
+                          text-decoration: underline;
+                          font-family: 'roboto';
+                          color: #005589;
+                      }
+                  }
+              }
+          }
+      }
+  }
+}
