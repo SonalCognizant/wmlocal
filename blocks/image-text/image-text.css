@@ -1,7 +1,3 @@
-/* wellmark color start */
-/* wellmark color end */
-/* wellmark spacing size start */
-/* wellmark spacing size start */
 .image-text-container .image-text-wrapper {
   padding: 72px 16px;
 }
@@ -30,56 +26,36 @@
   flex-direction: column;
   gap: 24px;
 }
-@media (min-width: 480px) and (max-width: 1023px) {
+@media (min-width: 480px) {
   .image-text-container .image-text-wrapper .image-text > div {
     align-items: center;
-    flex-direction: unset;
+    flex-direction: row;
+  }
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .image-text-container .image-text-wrapper .image-text > div {
     gap: 24px;
   }
 }
 @media (min-width: 1023px) and (max-width: 1200px) {
   .image-text-container .image-text-wrapper .image-text > div {
-    align-items: center;
-    flex-direction: unset;
     gap: 72px;
   }
 }
 @media (min-width: 1200px) and (max-width: 1379px) {
   .image-text-container .image-text-wrapper .image-text > div {
-    align-items: center;
-    flex-direction: unset;
     gap: 96px;
   }
 }
 @media (min-width: 1379px) {
   .image-text-container .image-text-wrapper .image-text > div {
-    align-items: center;
-    flex-direction: unset;
     gap: 96px;
   }
 }
 .image-text-container .image-text-wrapper .image-text > div > div {
   order: 1;
 }
-@media (min-width: 480px) and (max-width: 1023px) {
-  .image-text-container .image-text-wrapper .image-text > div > div {
-    flex: 1;
-    order: unset;
-  }
-}
-@media (min-width: 1023px) and (max-width: 1200px) {
-  .image-text-container .image-text-wrapper .image-text > div > div {
-    flex: 1;
-    order: unset;
-  }
-}
-@media (min-width: 1200px) and (max-width: 1379px) {
-  .image-text-container .image-text-wrapper .image-text > div > div {
-    flex: 1;
-    order: unset;
-  }
-}
-@media (min-width: 1379px) {
+@media (min-width: 480px) {
   .image-text-container .image-text-wrapper .image-text > div > div {
     flex: 1;
     order: unset;
@@ -88,8 +64,8 @@
 .image-text-container .image-text-wrapper .image-text > div > .image-text-img-col {
   order: 0;
 }
-.image-text-container .image-text-wrapper .image-text > div > .image-text-img-col {
-  order: 0;
+.image-text-container .image-text-wrapper .image-text > div > .image-text-img-col img {
+  display: block;
 }
 .image-text-container .image-text-wrapper .image-text img {
   width: 100%;
@@ -131,7 +107,6 @@
   .image-text-container .image-text-wrapper .image-text.block p.button-container {
     display: inline-block;
     padding-right: 24px;
-    margin-bottom: 16px;
   }
 }
 @media (max-width: 480px) {
