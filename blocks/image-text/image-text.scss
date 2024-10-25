@@ -20,7 +20,6 @@
       > div {
         display: flex;
         flex-direction: column;
-        gap: $--spacing-l;
         @include for-nonmobile {
           align-items: center;
           flex-direction: row;
@@ -42,6 +41,7 @@
           @include for-nonmobile {
             flex: 1;
             order: unset;
+            text-align: left;
           }
         }
         > .image-text-img-col {
