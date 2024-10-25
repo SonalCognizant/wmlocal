@@ -24,7 +24,6 @@
 .image-text-container .image-text-wrapper .image-text > div {
   display: flex;
   flex-direction: column;
-  gap: 24px;
 }
 @media (min-width: 480px) {
   .image-text-container .image-text-wrapper .image-text > div {
@@ -59,6 +58,7 @@
   .image-text-container .image-text-wrapper .image-text > div > div {
     flex: 1;
     order: unset;
+    text-align: left;
   }
 }
 .image-text-container .image-text-wrapper .image-text > div > .image-text-img-col {
