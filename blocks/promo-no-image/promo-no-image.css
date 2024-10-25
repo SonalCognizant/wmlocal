@@ -1,4 +1,8 @@
-.promo-no-image-container {
+/* wellmark color start */
+/* wellmark color end */
+/* wellmark spacing size start */
+/* wellmark spacing size start */
+.promo-no-image-container .default-content-wrapper h2 {
   text-align: center;
 }
 .promo-no-image-container .promo-no-image > ul {
@@ -26,7 +30,7 @@
 }
 .promo-no-image-container .promo-no-image > ul > li .cards-card-body p {
   font-weight: 400;
-  font-family: "roboto";
+  font-family: var(--body-font-family);
   line-height: 24px;
   font-size: 16px;
   color: #4B4C4D;
@@ -35,6 +39,5 @@
   font-weight: 700;
   font-size: 20px;
   text-decoration: underline;
-  font-family: "roboto";
   color: #005589;
 }

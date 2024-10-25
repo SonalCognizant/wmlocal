@@ -1,7 +1,11 @@
 @import '../../styles/include/mq.scss';
 @import '../../styles/include/tokens.scss';
 .promo-no-image-container {
-  text-align: center;
+  .default-content-wrapper{
+    h2{
+        text-align: center;
+    }
+  }
 
   .promo-no-image {
       >ul {
@@ -15,7 +19,6 @@
           >li {
               padding: 24px;
               background-color: var(--background-color);
-
               .cards-card-image {
                   line-height: 0;
 
