@@ -15,7 +15,6 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
       grid-gap: 24px;
-      gap: 24px;
       @include for-mobile {
         grid-template-columns: 1fr;
       }
