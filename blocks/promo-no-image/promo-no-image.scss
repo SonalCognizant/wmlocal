@@ -1,53 +1,59 @@
-@import '../../styles/include/mq.scss';
-@import '../../styles/include/tokens.scss';
+@import "../../styles/include/mq.scss";
+@import "../../styles/include/tokens.scss";
 .promo-no-image-container {
-  .default-content-wrapper{
-    h2{
-        text-align: center;
+  .default-content-wrapper {
+    h2 {
+      text-align: center;
     }
   }
 
   .promo-no-image {
-      >ul {
-          list-style: none;
-          margin: 0;
-          padding: 0;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 24px;
-          >li {
-              padding: 24px;
-              background-color: var(--background-color);
-              .cards-card-image {
-                  line-height: 0;
-
-                  img {
-                      width: 100%;
-                      aspect-ratio: 4 / 3;
-                      object-fit: cover;
-                  }
-              }
-
-              .cards-card-body {
-                  margin: 16px;
-
-                  p {
-                      font-weight: 400;
-                      font-family: var(--body-font-family);
-                      line-height: 24px;
-                      font-size: 16px;
-                      color: $--gray-700;
-
-                      strong {
-                          font-weight: 700;
-                          font-size: 20px;
-                          text-decoration: underline;
-                          color: $--blue-675;
-                      }
-                  }
-              }
-          }
+    > ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+      grid-gap: 24px;
+      gap: 24px;
+      @include for-mobile {
+        grid-template-columns: 1fr;
       }
+      @include for-tablet {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      > li {
+        padding: 24px;
+        background-color: var(--background-color);
+        .cards-card-image {
+          line-height: 0;
+
+          img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+          }
+        }
+
+        .cards-card-body {
+          margin: 16px;
+
+          p {
+            font-weight: 400;
+            font-family: var(--body-font-family);
+            line-height: 24px;
+            font-size: 16px;
+            color: $--gray-700;
+
+            strong {
+              font-weight: 700;
+              font-size: 20px;
+              text-decoration: underline;
+              color: $--blue-675;
+            }
+          }
+        }
+      }
+    }
   }
 }

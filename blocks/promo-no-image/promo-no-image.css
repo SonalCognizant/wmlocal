@@ -12,6 +12,17 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
   grid-gap: 24px;
+  gap: 24px;
+}
+@media (max-width: 480px) {
+  .promo-no-image-container .promo-no-image > ul {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .promo-no-image-container .promo-no-image > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .promo-no-image-container .promo-no-image > ul > li {
   padding: 24px;
