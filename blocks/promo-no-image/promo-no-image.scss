@@ -10,24 +10,28 @@
   .promo-no-image {
     > ul {
       list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(4, 1fr));
-      grid-gap: 24px;
-      place-self: center;
-      @include for-mobile {
-        grid-template-columns: 1fr;
-      }
-      @include for-tablet {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      @include for-laptop{
-        grid-template-columns: repeat(4,1fr);
-      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // margin: 0;
+      // padding: 0;
+      // display: grid;
+      // grid-template-columns: repeat(auto-fill, minmax(4, 1fr));
+      // grid-gap: 24px;
+      // place-self: center;
+      // @include for-mobile {
+      //   grid-template-columns: 1fr;
+      // }
+      // @include for-tablet {
+      //   grid-template-columns: repeat(2, 1fr);
+      // }
+      // @include for-laptop{
+      //   grid-template-columns: repeat(4,1fr);
+      // }
       > li {
         padding: 24px;
         background-color: var(--background-color);
+        width: calc((100%- "104px")/4);
         .cards-card-image {
           line-height: 0;
 
