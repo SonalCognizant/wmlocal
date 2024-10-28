@@ -11,6 +11,7 @@
   align-items: start;
   justify-content: center;
   padding: 16px;
+  text-align: center;
   flex-direction: column;
 }
 @media (min-width: 480px) {
@@ -45,6 +46,7 @@
 }
 .promo-no-image-container .promo-no-image > ul > li {
   background-color: var(--background-color);
+  align-items: center;
 }
 @media (min-width: 1379px) {
   .promo-no-image-container .promo-no-image > ul > li {
