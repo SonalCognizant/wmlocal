@@ -44,6 +44,9 @@
         @include for-tablet{
           width: calc((100% - 72px)/2);
         }
+        @include for-mobile{
+          width: calc(100% - 32px);
+        }
         .cards-card-image {
           line-height: 0;
 

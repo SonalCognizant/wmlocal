@@ -36,6 +36,11 @@
     width: calc((100% - 72px) / 2);
   }
 }
+@media (max-width: 480px) {
+  .promo-no-image-container .promo-no-image > ul > li {
+    width: calc(100% - 32px);
+  }
+}
 .promo-no-image-container .promo-no-image > ul > li .cards-card-image {
   line-height: 0;
 }
