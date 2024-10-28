@@ -75,20 +75,7 @@ button.secondary:focus {
   background-color: #f3f9ff;
   border: 2px solid #005589;
   color: #005589;
-  outline: 3px solid #E45F0C;
-  outline-style: dashed;
-  outline-offset: 2px;
-}
-a.button:any-link:hover,
-button:hover {
-  background-color: #F3F9FF;
-  color: #005589;
-}
-a.button:any-link:focus,
-button:focus {
-  background-color: #F3F9FF;
-  color: #005589;
-  outline: 3px solid #E45F0C;
+  outline: 3px solid #e45f0c;
   outline-style: dashed;
   outline-offset: 2px;
 }
