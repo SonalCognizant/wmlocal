@@ -1,0 +1,43 @@
+/* wellmark color start */
+/* wellmark color end */
+/* wellmark spacing size start */
+/* wellmark spacing size start */
+.promo-no-image-container {
+  text-align: center;
+}
+.promo-no-image-container .promo-no-image > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+  grid-gap: 24px;
+}
+.promo-no-image-container .promo-no-image > ul > li {
+  padding: 24px;
+  background-color: var(--background-color);
+}
+.promo-no-image-container .promo-no-image > ul > li .cards-card-image {
+  line-height: 0;
+}
+.promo-no-image-container .promo-no-image > ul > li .cards-card-image img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+.promo-no-image-container .promo-no-image > ul > li .cards-card-body {
+  margin: 16px;
+}
+.promo-no-image-container .promo-no-image > ul > li .cards-card-body p {
+  font-weight: 400;
+  font-family: var(--body-font-family);
+  line-height: 24px;
+  font-size: 16px;
+  color: #4B4C4D;
+}
+.promo-no-image-container .promo-no-image > ul > li .cards-card-body p strong {
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: underline;
+  color: #005589;
+}
