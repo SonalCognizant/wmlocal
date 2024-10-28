@@ -8,21 +8,9 @@ https://assets.adobedtm.com/63b00f92ccdd/cf0bc8611341/launch-14781371ad01-develo
   async
 ></script>
 <script type="text/javascript">
-  var digitalData = {
-    page: {
-      pageInfo: {
-        pageType: 'content',
-        platform: 'eds',
-        environment: 'test',
-        pageName: 'test ADL',
-        pageID: 'EDS Home',
-      },
-    },
-    user: {
-      userInfo: {
-        authState: 'logged out',
-      },
-    },
-    event: [],
-  };
+  adobeDataLayer.push({
+    event: 'page_load',
+    sitesection1: 'test_adl',
+    sitename: 'eds home',
+  });
 </script>
