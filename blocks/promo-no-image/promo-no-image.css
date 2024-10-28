@@ -12,6 +12,11 @@
   justify-content: center;
   padding: 0;
 }
+@media (max-width: 480px) {
+  .promo-no-image-container .promo-no-image > ul {
+    flex-direction: column;
+  }
+}
 .promo-no-image-container .promo-no-image > ul > li {
   background-color: var(--background-color);
 }
@@ -37,13 +42,6 @@
   .promo-no-image-container .promo-no-image > ul > li {
     width: calc((100% - 72px) / 2);
     padding: 0 36px;
-  }
-}
-@media (max-width: 480px) {
-  .promo-no-image-container .promo-no-image > ul > li {
-    width: calc(100% - 32px);
-    padding: 0 16px;
-    flex-direction: column;
   }
 }
 .promo-no-image-container .promo-no-image > ul > li .cards-card-image {

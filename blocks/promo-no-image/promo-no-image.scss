@@ -14,6 +14,9 @@
       align-items: start;
       justify-content: center;
       padding: 0;
+      @include for-mobile{
+        flex-direction: column;
+      }
       // margin: 0;
       // padding: 0;
       // display: grid;
@@ -30,7 +33,6 @@
       //   grid-template-columns: repeat(4,1fr);
       // }
       > li {
-        // padding: 24px;
         background-color: var(--background-color);
         @include for-xlarge{
           width: calc((100% - 104px)/4);
@@ -47,11 +49,6 @@
         @include for-tablet{
           width: calc((100% - 72px)/2);
           padding: 0 36px;
-        }
-        @include for-mobile{
-          width: calc(100% - 32px);
-          padding: 0 16px;
-          flex-direction: column;
         }
         .cards-card-image {
           line-height: 0;
