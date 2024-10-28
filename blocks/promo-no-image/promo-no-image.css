@@ -22,13 +22,13 @@
 @media (min-width: 1379px) {
   .promo-no-image-container .promo-no-image > ul {
     padding: 0 52px;
-    gap: 50px;
+    gap: 30px;
   }
 }
 @media (min-width: 1200px) and (max-width: 1379px) {
   .promo-no-image-container .promo-no-image > ul {
     padding: 0 52px;
-    gap: 50px;
+    gap: 30px;
   }
 }
 @media (min-width: 1023px) and (max-width: 1200px) {
