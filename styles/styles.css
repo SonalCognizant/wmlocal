@@ -14,7 +14,7 @@
 /* wellmark spacing size start */
 /* wellmark spacing size start */
 /* buttons */
-a.button:any-link,
+a.button,
 button {
   box-sizing: border-box;
   display: inline-block;
@@ -36,19 +36,19 @@ button {
   letter-spacing: -0.18px;
   line-height: 28px;
 }
-a.button:any-link.primary,
+a.button.primary,
 button.primary {
   background-color: #005589;
   color: #ffffff;
   padding: 12px 36px;
   text-decoration: none;
 }
-a.button:any-link.primary:hover,
+a.button.primary:hover,
 button.primary:hover {
   background-color: #0f3659;
   color: #ffffff;
 }
-a.button:any-link.primary:focus,
+a.button.primary:focus,
 button.primary:focus {
   background-color: #0f3659;
   color: #ffffff;
@@ -56,7 +56,7 @@ button.primary:focus {
   outline-style: dashed;
   outline-offset: 2px;
 }
-a.button:any-link.secondary,
+a.button.secondary,
 button.secondary {
   background-color: #ffffff;
   border: 2px solid #005589;
@@ -64,31 +64,31 @@ button.secondary {
   padding: 10px 34px;
   text-decoration: none;
 }
-a.button:any-link.secondary:hover,
+a.button.secondary:hover,
 button.secondary:hover {
   background-color: #f3f9ff;
   border: 2px solid #005589;
   color: #005589;
 }
-a.button:any-link.secondary:focus,
+a.button.secondary:focus,
 button.secondary:focus {
   background-color: #f3f9ff;
   border: 2px solid #005589;
   color: #005589;
-  outline: 3px solid #e45f0c;
+  outline: 3px solid #E45F0C;
   outline-style: dashed;
   outline-offset: 2px;
 }
 a.button:any-link:hover,
 button:hover {
-  background-color: #f3f9ff;
+  background-color: #F3F9FF;
   color: #005589;
 }
 a.button:any-link:focus,
 button:focus {
-  background-color: #f3f9ff;
+  background-color: #F3F9FF;
   color: #005589;
-  outline: 3px solid #e45f0c;
+  outline: 3px solid #E45F0C;
   outline-style: dashed;
   outline-offset: 2px;
 }
@@ -300,14 +300,10 @@ button {
 
 /* links */
 a:any-link {
-  color: var(--link-color);
-  text-decoration: none;
-  word-break: break-word;
-}
-
-a:hover {
-  color: var(--link-hover-color);
+  color: #005589;
   text-decoration: underline;
+  word-break: break-word;
+  padding: 0;
 }
 
 /* buttons */
