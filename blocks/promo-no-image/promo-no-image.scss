@@ -22,6 +22,9 @@
       @include for-tablet {
         grid-template-columns: repeat(2, 1fr);
       }
+      @include for-laptop{
+        grid-template-columns: repeat(4,1fr);
+      }
       > li {
         padding: 24px;
         background-color: var(--background-color);
