@@ -14,59 +14,59 @@ button {
   text-decoration: underline;
   cursor: pointer;
   overflow: hidden;
-  padding:12px 36px;
+  padding: 12px 36px;
   text-overflow: ellipsis;
   white-space: nowrap;
   opacity: 1;
   font-style: normal;
   letter-spacing: -0.18px;
   line-height: 28px;
-&.primary{
+  &.primary {
     background-color: $--primary-675;
     color: $--white;
-    padding:12px 36px;
+    padding: 12px 36px;
     text-decoration: none;
-&:hover{
+    &:hover {
       background-color: $--primary-775;
-      color: $--white; 
-		}
-		&:focus{
+      color: $--white;
+    }
+    &:focus {
       background-color: $--primary-775;
       color: $--white;
       outline: 3px solid $--orange-450;
       outline-style: dashed;
-      outline-offset: 2px; 
-		}
-	}
-&.secondary{
+      outline-offset: 2px;
+    }
+  }
+  &.secondary {
     background-color: $--white;
     border: 2px solid $--blue-675;
     color: $--blue-675;
-    padding:10px 34px;
+    padding: 10px 34px;
     text-decoration: none;
-&:hover{
+    &:hover {
       background-color: $--blue-50;
       border: 2px solid $--blue-675;
-      color: $--blue-675;     
+      color: $--blue-675;
     }
-    &:focus{
+    &:focus {
       background-color: $--blue-50;
       border: 2px solid $--blue-675;
       color: $--blue-675;
       outline: 3px solid $--orange-450;
       outline-style: dashed;
-      outline-offset: 2px;     
+      outline-offset: 2px;
     }
   }
-&:hover{
+  &:hover {
     background-color: $--blue-50;
     color: $--blue-675;
-	}
-	&:focus{
+  }
+  &:focus {
     background-color: $--blue-50;
     color: $--blue-675;
     outline: 3px solid $--orange-450;
     outline-style: dashed;
-    outline-offset: 2px; 
-	}
+    outline-offset: 2px;
+  }
 }
