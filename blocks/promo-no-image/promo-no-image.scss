@@ -14,10 +14,10 @@
       align-items: start;
       justify-content: center;
       padding: 0 16px;
-      flex-direction: column;
-      flex-wrap: wrap;
+      flex-direction: column;     
       @include for-nonmobile{
         flex-direction: row;
+        flex-wrap: wrap;
       }
       @include for-xlarge{
         padding: 0 52px;
@@ -33,6 +33,7 @@
       }
       @include for-tablet{
         padding: 0 36px;
+        flex-wrap: wrap;
         gap: 30px;
       }
       > li {
