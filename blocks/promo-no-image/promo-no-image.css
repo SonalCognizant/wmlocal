@@ -14,7 +14,21 @@
 .promo-no-image-container .promo-no-image > ul > li {
   padding: 24px;
   background-color: var(--background-color);
-  width: calc((100% - 104px) / 4);
+}
+@media (min-width: 1379px) {
+  .promo-no-image-container .promo-no-image > ul > li {
+    width: calc((100% - 104px) / 4);
+  }
+}
+@media (min-width: 1200px) and (max-width: 1379px) {
+  .promo-no-image-container .promo-no-image > ul > li {
+    width: calc((100% - 104px) / 4);
+  }
+}
+@media (min-width: 1023px) and (max-width: 1200px) {
+  .promo-no-image-container .promo-no-image > ul > li {
+    width: calc((100% - 72px) / 3);
+  }
 }
 .promo-no-image-container .promo-no-image > ul > li .cards-card-image {
   line-height: 0;

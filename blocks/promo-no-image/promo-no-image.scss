@@ -31,7 +31,15 @@
       > li {
         padding: 24px;
         background-color: var(--background-color);
-        width: calc((100% - 104px)/4);
+        @include for-xlarge{
+          width: calc((100% - 104px)/4);
+        }
+        @include for-large{
+          width: calc((100% - 104px)/4);
+        }
+        @include for-laptop{
+          width: calc((100% - 72px)/3);
+        }
         .cards-card-image {
           line-height: 0;
 
