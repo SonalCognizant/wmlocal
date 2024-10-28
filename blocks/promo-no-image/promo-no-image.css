@@ -1,4 +1,8 @@
-.promo-no-image-container {
+/* wellmark color start */
+/* wellmark color end */
+/* wellmark spacing size start */
+/* wellmark spacing size start */
+.promo-no-image-container .default-content-wrapper h2 {
   text-align: center;
 }
 .promo-no-image-container .promo-no-image > ul {
@@ -6,9 +10,9 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(4, 1fr));
   grid-gap: 24px;
-  gap: 24px;
+  place-self: center;
 }
 @media (max-width: 480px) {
   .promo-no-image-container .promo-no-image > ul {
@@ -18,6 +22,11 @@
 @media (min-width: 480px) and (max-width: 1023px) {
   .promo-no-image-container .promo-no-image > ul {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1023px) and (max-width: 1200px) {
+  .promo-no-image-container .promo-no-image > ul {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 .promo-no-image-container .promo-no-image > ul > li {
@@ -40,7 +49,7 @@
   font-family: var(--body-font-family);
   line-height: 24px;
   font-size: 16px;
-  color: #4B4C4D;
+  color: #4b4c4d;
 }
 .promo-no-image-container .promo-no-image > ul > li .cards-card-body p strong {
   font-weight: 700;
