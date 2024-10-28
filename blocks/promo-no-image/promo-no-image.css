@@ -86,15 +86,11 @@
   object-fit: cover;
 }
 .promo-no-image-container .promo-no-image > ul > li .cards-card-body h3 {
-  font-weight: 400;
+  font-weight: 700;
   font-family: var(--body-font-family);
   line-height: 24px;
   font-size: 16px;
-  color: #4b4c4d;
-  text-align: center;
-}
-.promo-no-image-container .promo-no-image > ul > li .cards-card-body h3 strong {
-  font-weight: 700;
-  text-decoration: underline;
   color: #005589;
+  text-align: center;
+  text-decoration: underline;
 }
