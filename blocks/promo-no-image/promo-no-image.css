@@ -9,7 +9,7 @@
   list-style: none;
   display: flex;
   align-items: start;
-  justify-content: center;
+  justify-content: space-between;
   padding: 16px;
   text-align: center;
   flex-direction: column;
