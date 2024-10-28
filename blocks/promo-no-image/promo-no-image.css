@@ -22,21 +22,25 @@
 @media (min-width: 1379px) {
   .promo-no-image-container .promo-no-image > ul {
     padding: 0 52px;
+    gap: 50px;
   }
 }
 @media (min-width: 1200px) and (max-width: 1379px) {
   .promo-no-image-container .promo-no-image > ul {
     padding: 0 52px;
+    gap: 50px;
   }
 }
 @media (min-width: 1023px) and (max-width: 1200px) {
   .promo-no-image-container .promo-no-image > ul {
     padding: 0 36px;
+    gap: 30px;
   }
 }
 @media (min-width: 480px) and (max-width: 1023px) {
   .promo-no-image-container .promo-no-image > ul {
     padding: 0 36px;
+    gap: 30px;
   }
 }
 .promo-no-image-container .promo-no-image > ul > li {

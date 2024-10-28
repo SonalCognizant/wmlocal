@@ -21,15 +21,19 @@
       }
       @include for-xlarge{
         padding: 0 52px;
+        gap: 50px;
       }
       @include for-large{
         padding: 0 52px;
+        gap: 50px;
       }
       @include for-laptop{
         padding: 0 36px;
+        gap: 30px;
       }
       @include for-tablet{
         padding: 0 36px;
+        gap: 30px;
       }
       > li {
         background-color: var(--background-color);
