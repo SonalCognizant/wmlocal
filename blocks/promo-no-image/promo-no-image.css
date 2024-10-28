@@ -10,6 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
 }
 .promo-no-image-container .promo-no-image > ul > li {
   padding: 24px;
@@ -28,6 +29,11 @@
 @media (min-width: 1023px) and (max-width: 1200px) {
   .promo-no-image-container .promo-no-image > ul > li {
     width: calc((100% - 72px) / 3);
+  }
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .promo-no-image-container .promo-no-image > ul > li {
+    width: calc((100% - 72px) / 2);
   }
 }
 .promo-no-image-container .promo-no-image > ul > li .cards-card-image {
