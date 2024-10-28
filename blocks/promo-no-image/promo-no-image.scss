@@ -15,6 +15,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(4, 1fr));
       grid-gap: 24px;
+      place-self: center;
       @include for-mobile {
         grid-template-columns: 1fr;
       }
