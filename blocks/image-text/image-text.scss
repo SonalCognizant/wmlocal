@@ -1,8 +1,8 @@
 @import '../../styles/include/mq.scss';
 @import '../../styles/include/tokens.scss';
 
-.image-text-container{
-  .image-text-wrapper{
+.image-text-container {
+  .image-text-wrapper {
     padding: $--spacing-huge $--spacing-m;
     @include for-tablet {
       padding: $--spacing-jumbo $--spacing-xl;
@@ -16,8 +16,8 @@
     @include for-xlarge {
       padding: $--spacing-max $--spacing-xxl;
     }
-    .image-text{
-      > div {
+    .image-text {
+      >div {
         display: flex;
         flex-direction: column;
         @include for-nonmobile {
@@ -36,18 +36,21 @@
         @include for-xlarge {
           gap: $--spacing-jumbo;
         }
-        > div {
+        >div {
           order: 1;
+          display: flex;
+          flex-flow: row wrap;
           @include for-nonmobile {
             flex: 1;
             order: unset;
             text-align: left;
+            column-gap: 24px;
           }
         }
-        > .image-text-img-col {
+        >.columns-img-col {
           order: 0;
         }
-        > .image-text-img-col img{
+        >.columns-col img {
           display: block;
         }
       }
@@ -55,7 +58,7 @@
         width: 100%;
       }
       &.block {
-        h2{
+        h2 {
           color: $--blue-550;
           font-family: var(--body-font-family);
           font-size: 32px;
@@ -71,7 +74,7 @@
             margin-bottom: $--spacing-m;
           }
         }
-        p{
+        p {
           color: $--gray-700;
           font-family: var(--body-font-family);
           font-size: 16px;
@@ -83,18 +86,26 @@
           margin-bottom: $--spacing-xl;
           &.button-container {
             margin-top: 0;
-            margin-bottom: $--spacing-m;
-            @include for-nonmobile {
-              display: inline-block;
-              padding-right: $--spacing-l;
+            margin-bottom: 0;
+            @include for-tablet {
+              margin-bottom: $--spacing-m;
             }
-            a.button{
+            @include for-mobile {
+              width: 100%;
+              a.button,
+              button {
+                &.primary {
+                  margin-bottom: 16px;
+                }
+              }
+            }
+            a.button {
               @include for-mobile {
                 width: 100%;
               }
             }
           }
-        }  
+        }
       }
     }
   }
