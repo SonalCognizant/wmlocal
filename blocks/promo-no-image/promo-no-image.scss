@@ -13,42 +13,37 @@
       display: flex;
       align-items: start;
       justify-content: center;
-      padding: 0;
-      @include for-mobile{
-        flex-direction: column;
+      padding: 0 16px;
+      flex-direction: column;
+      flex-wrap: wrap;
+      @include for-nonmobile{
+        flex-direction: row;
       }
-      // margin: 0;
-      // padding: 0;
-      // display: grid;
-      // grid-template-columns: repeat(auto-fill, minmax(4, 1fr));
-      // grid-gap: 24px;
-      // place-self: center;
-      // @include for-mobile {
-      //   grid-template-columns: 1fr;
-      // }
-      // @include for-tablet {
-      //   grid-template-columns: repeat(2, 1fr);
-      // }
-      // @include for-laptop{
-      //   grid-template-columns: repeat(4,1fr);
-      // }
+      @include for-xlarge{
+        padding: 0 52px;
+      }
+      @include for-large{
+        padding: 0 52px;
+      }
+      @include for-laptop{
+        padding: 0 36px;
+      }
+      @include for-tablet{
+        padding: 0 36px;
+      }
       > li {
         background-color: var(--background-color);
         @include for-xlarge{
           width: calc((100% - 104px)/4);
-          padding: 0 52px;
         }
         @include for-large{
           width: calc((100% - 104px)/4);
-          padding: 0 52px;
         }
         @include for-laptop{
           width: calc((100% - 72px)/3);
-          padding: 0 36px;
         }
         @include for-tablet{
-          width: calc((100% - 72px)/2);
-          padding: 0 36px;
+          flex-basis: calc((100% - 72px) / 2);
         }
         .cards-card-image {
           line-height: 0;
