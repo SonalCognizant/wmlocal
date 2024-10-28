@@ -80,14 +80,6 @@ button.secondary:focus {
   outline-offset: 2px;
 }
 
-/* links */
-a:any-link {
-  color: #005589;
-  text-decoration: underline;
-  word-break: break-word;
-  padding: 0;
-}
-
 /* wellmark color start */
 /* wellmark color end */
 /* wellmark spacing size start */
@@ -291,6 +283,14 @@ textarea,
 select,
 button {
   font: inherit;
+}
+
+/* links */
+a:any-link {
+  color: #005589;
+  text-decoration: underline;
+  word-break: break-word;
+  padding: 0;
 }
 
 /* buttons */
