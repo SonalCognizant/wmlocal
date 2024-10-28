@@ -1,6 +1,7 @@
 @import "tokens";
+
 /* buttons */
-a.button:any-link,
+a.button,
 button {
   box-sizing: border-box;
   display: inline-block;
@@ -21,15 +22,18 @@ button {
   font-style: normal;
   letter-spacing: -0.18px;
   line-height: 28px;
+
   &.primary {
     background-color: $--primary-675;
     color: $--white;
     padding: 12px 36px;
     text-decoration: none;
+
     &:hover {
       background-color: $--primary-775;
       color: $--white;
     }
+
     &:focus {
       background-color: $--primary-775;
       color: $--white;
@@ -38,17 +42,20 @@ button {
       outline-offset: 2px;
     }
   }
+
   &.secondary {
     background-color: $--white;
     border: 2px solid $--blue-675;
     color: $--blue-675;
     padding: 10px 34px;
     text-decoration: none;
+
     &:hover {
       background-color: $--blue-50;
       border: 2px solid $--blue-675;
       color: $--blue-675;
     }
+
     &:focus {
       background-color: $--blue-50;
       border: 2px solid $--blue-675;
@@ -57,16 +64,5 @@ button {
       outline-style: dashed;
       outline-offset: 2px;
     }
-  }
-  &:hover {
-    background-color: $--blue-50;
-    color: $--blue-675;
-  }
-  &:focus {
-    background-color: $--blue-50;
-    color: $--blue-675;
-    outline: 3px solid $--orange-450;
-    outline-style: dashed;
-    outline-offset: 2px;
   }
 }

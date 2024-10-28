@@ -14,7 +14,7 @@
 /* wellmark spacing size start */
 /* wellmark spacing size start */
 /* buttons */
-a.button:any-link,
+a.button,
 button {
   box-sizing: border-box;
   display: inline-block;
@@ -36,59 +36,46 @@ button {
   letter-spacing: -0.18px;
   line-height: 28px;
 }
-a.button:any-link.primary,
+a.button.primary,
 button.primary {
   background-color: #005589;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 12px 36px;
   text-decoration: none;
 }
-a.button:any-link.primary:hover,
+a.button.primary:hover,
 button.primary:hover {
-  background-color: #0F3659;
-  color: #FFFFFF;
+  background-color: #0f3659;
+  color: #ffffff;
 }
-a.button:any-link.primary:focus,
+a.button.primary:focus,
 button.primary:focus {
-  background-color: #0F3659;
-  color: #FFFFFF;
-  outline: 3px solid #E45F0C;
+  background-color: #0f3659;
+  color: #ffffff;
+  outline: 3px solid #e45f0c;
   outline-style: dashed;
   outline-offset: 2px;
 }
-a.button:any-link.secondary,
+a.button.secondary,
 button.secondary {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: 2px solid #005589;
   color: #005589;
   padding: 10px 34px;
   text-decoration: none;
 }
-a.button:any-link.secondary:hover,
+a.button.secondary:hover,
 button.secondary:hover {
-  background-color: #F3F9FF;
+  background-color: #f3f9ff;
   border: 2px solid #005589;
   color: #005589;
 }
-a.button:any-link.secondary:focus,
+a.button.secondary:focus,
 button.secondary:focus {
-  background-color: #F3F9FF;
+  background-color: #f3f9ff;
   border: 2px solid #005589;
   color: #005589;
-  outline: 3px solid #E45F0C;
-  outline-style: dashed;
-  outline-offset: 2px;
-}
-a.button:any-link:hover,
-button:hover {
-  background-color: #F3F9FF;
-  color: #005589;
-}
-a.button:any-link:focus,
-button:focus {
-  background-color: #F3F9FF;
-  color: #005589;
-  outline: 3px solid #E45F0C;
+  outline: 3px solid #e45f0c;
   outline-style: dashed;
   outline-offset: 2px;
 }
@@ -106,7 +93,7 @@ h1 {
   font-size: 32px;
   font-weight: 700;
   line-height: 33px;
-  color: #4B4C4D;
+  color: #4b4c4d;
   opacity: 1;
   text-align: left;
 }
@@ -123,7 +110,7 @@ h2 {
   font-size: 28px;
   font-weight: 700;
   line-height: 28px;
-  color: #4B4C4D;
+  color: #4b4c4d;
   opacity: 1;
   text-align: left;
 }
@@ -140,7 +127,7 @@ h3 {
   font-size: 24px;
   font-weight: bold;
   line-height: 24px;
-  color: #4B4C4D;
+  color: #4b4c4d;
   opacity: 1;
   text-align: left;
 }
@@ -150,7 +137,7 @@ h4 {
   font-size: 20px;
   font-weight: bold;
   line-height: 21px;
-  color: #4B4C4D;
+  color: #4b4c4d;
   opacity: 1;
   text-align: left;
 }
@@ -300,14 +287,10 @@ button {
 
 /* links */
 a:any-link {
-  color: var(--link-color);
-  text-decoration: none;
-  word-break: break-word;
-}
-
-a:hover {
-  color: var(--link-hover-color);
+  color: #005589;
   text-decoration: underline;
+  word-break: break-word;
+  padding: 0;
 }
 
 /* buttons */
