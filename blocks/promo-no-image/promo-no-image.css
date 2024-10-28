@@ -89,8 +89,15 @@
   font-weight: 700;
   font-family: var(--body-font-family);
   line-height: 24px;
-  font-size: 16px;
+  font-size: 20px;
   color: #005589;
   text-align: center;
   text-decoration: underline;
+}
+.promo-no-image-container .promo-no-image > ul > li .cards-card-body p {
+  font-weight: 400;
+  font-family: var(--body-font-family);
+  line-height: 24px;
+  font-size: 16px;
+  color: #4b4c4d;
 }
