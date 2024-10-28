@@ -15,7 +15,9 @@
       justify-content: center;
       text-align: center;
       flex-direction: column;
-      padding: 36px 16px 72px 16px;
+      @include for-mobile{
+        padding: 36px 16px 72px 16px;
+      }
       @include for-nonmobile {
         flex-direction: row;
       }
