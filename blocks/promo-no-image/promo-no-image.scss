@@ -17,7 +17,6 @@
       flex-direction: column;     
       @include for-nonmobile{
         flex-direction: row;
-        flex-wrap: wrap;
       }
       @include for-xlarge{
         padding: 0 52px;
