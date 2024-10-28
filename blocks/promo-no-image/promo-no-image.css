@@ -13,32 +13,37 @@
   padding: 0;
 }
 .promo-no-image-container .promo-no-image > ul > li {
-  padding: 24px;
   background-color: var(--background-color);
 }
 @media (min-width: 1379px) {
   .promo-no-image-container .promo-no-image > ul > li {
     width: calc((100% - 104px) / 4);
+    padding: 0 52px;
   }
 }
 @media (min-width: 1200px) and (max-width: 1379px) {
   .promo-no-image-container .promo-no-image > ul > li {
     width: calc((100% - 104px) / 4);
+    padding: 0 52px;
   }
 }
 @media (min-width: 1023px) and (max-width: 1200px) {
   .promo-no-image-container .promo-no-image > ul > li {
     width: calc((100% - 72px) / 3);
+    padding: 0 36px;
   }
 }
 @media (min-width: 480px) and (max-width: 1023px) {
   .promo-no-image-container .promo-no-image > ul > li {
     width: calc((100% - 72px) / 2);
+    padding: 0 36px;
   }
 }
 @media (max-width: 480px) {
   .promo-no-image-container .promo-no-image > ul > li {
     width: calc(100% - 32px);
+    padding: 0 16px;
+    flex-direction: column;
   }
 }
 .promo-no-image-container .promo-no-image > ul > li .cards-card-image {
