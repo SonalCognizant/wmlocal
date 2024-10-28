@@ -1,20 +1,20 @@
-import * as sass from "sass";
-import fs from "fs";
-import path from "path";
-import { readdir } from "fs/promises";
-import { fileURLToPath } from "url";
+import * as sass from 'sass';
+import fs from 'fs';
+import path from 'path';
+import { readdir } from 'fs/promises';
+import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const ignoredFiles = [
-  "button.scss",
-  "mq.scss",
-  "tokens.scss",
-  "typography.scss",
+  'button.scss',
+  'mq.scss',
+  'tokens.scss',
+  'typography.scss',
 ];
 
 const compileAndSave = async (sassFile) => {
-  const dest = sassFile.replace(path.extname(sassFile), ".css");
+  const dest = sassFile.replace(path.extname(sassFile), '.css');
 
   fs.writeFile(dest, sass.compile(sassFile).css, (err) => {
     if (err) console.log(err);
@@ -28,7 +28,7 @@ const processFiles = async (parent) => {
     if (file.isDirectory()) {
       await processFiles(path.join(parent, file.name));
     }
-    if (path.extname(file.name) === ".scss") {
+    if (path.extname(file.name) === '.scss') {
       if (!ignoredFiles.includes(file.name)) {
         await compileAndSave(path.join(parent, file.name));
       } else {
@@ -39,7 +39,7 @@ const processFiles = async (parent) => {
 };
 
 // Program execution process
-for (const folder of ["styles", "blocks"]) {
+for (const folder of ['styles', 'blocks']) {
   try {
     await processFiles(path.join(__dirname, folder));
   } catch (err) {
@@ -47,8 +47,8 @@ for (const folder of ["styles", "blocks"]) {
   }
 }
 
-fs.watch(".", { recursive: true }, (eventType, fileName) => {
-  if (path.extname(fileName) === ".scss" && eventType === "change") {
+fs.watch('.', { recursive: true }, (eventType, fileName) => {
+  if (path.extname(fileName) === '.scss' && eventType === 'change') {
     console.log(fileName);
     if (!ignoredFiles.includes(fileName)) {
       compileAndSave(path.join(__dirname, fileName));

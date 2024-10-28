@@ -15,7 +15,9 @@ import { PLUGIN_EVENTS } from 'https://main--franklin-library-host--dylandepass.
 const selectedTags = [];
 
 function getSelectedLabel() {
-  return selectedTags.length > 0 ? `${selectedTags.length} tag${selectedTags.length > 1 ? 's' : ''} selected` : 'No tags selected';
+  return selectedTags.length > 0
+    ? `${selectedTags.length} tag${selectedTags.length > 1 ? 's' : ''} selected`
+    : 'No tags selected';
 }
 
 function getFilteredTags(data, query) {
@@ -23,20 +25,24 @@ function getFilteredTags(data, query) {
     return data;
   }
 
-  return data.filter(item => item.tag.toLowerCase().includes(query.toLowerCase()));
+  return data.filter((item) =>
+    item.tag.toLowerCase().includes(query.toLowerCase())
+  );
 }
 
 export async function decorate(container, data, query) {
   const createMenuItems = () => {
     const filteredTags = getFilteredTags(data, query);
-    return filteredTags.map((item) => {
-      const isSelected = selectedTags.includes(item.tag);
-      return `
-        <sp-menu-item value="${item.tag}" ${isSelected ? "selected" : ""}>
+    return filteredTags
+      .map((item) => {
+        const isSelected = selectedTags.includes(item.tag);
+        return `
+        <sp-menu-item value="${item.tag}" ${isSelected ? 'selected' : ''}>
           ${item.tag}
         </sp-menu-item>
       `;
-    }).join("");
+      })
+      .join('');
   };
 
   const handleMenuItemClick = (e) => {
@@ -50,21 +56,21 @@ export async function decorate(container, data, query) {
       selectedTags.push(value);
     }
 
-    const selectedLabel = container.querySelector(".selectedLabel");
+    const selectedLabel = container.querySelector('.selectedLabel');
     selectedLabel.textContent = getSelectedLabel();
   };
 
   const handleCopyButtonClick = () => {
-    navigator.clipboard.writeText(selectedTags.join(", "));
+    navigator.clipboard.writeText(selectedTags.join(', '));
     container.dispatchEvent(
       new CustomEvent(PLUGIN_EVENTS.TOAST, {
-        detail: { message: "Copied Tags" },
+        detail: { message: 'Copied Tags' },
       })
     );
   };
 
   const menuItems = createMenuItems();
-  const sp = /* html */`
+  const sp = /* html */ `
     <sp-menu
       label="Select tags"
       selects="multiple"
@@ -81,18 +87,18 @@ export async function decorate(container, data, query) {
     </div>
   `;
 
-  const spContainer = document.createElement("div");
+  const spContainer = document.createElement('div');
   spContainer.classList.add('container');
   spContainer.innerHTML = sp;
   container.append(spContainer);
 
-  const menuItemElements = spContainer.querySelectorAll("sp-menu-item");
+  const menuItemElements = spContainer.querySelectorAll('sp-menu-item');
   menuItemElements.forEach((item) => {
-    item.addEventListener("click", handleMenuItemClick);
+    item.addEventListener('click', handleMenuItemClick);
   });
 
-  const copyButton = spContainer.querySelector("sp-action-button");
-  copyButton.addEventListener("click", handleCopyButtonClick);
+  const copyButton = spContainer.querySelector('sp-action-button');
+  copyButton.addEventListener('click', handleCopyButtonClick);
 }
 
 export default {
