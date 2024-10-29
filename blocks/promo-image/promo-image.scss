@@ -1,0 +1,93 @@
+@import "../../styles/include/mq.scss";
+@import "../../styles/include/tokens.scss";
+.promo-no-image-container {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5uoY-6bJyGxzbtGDAGyUUu2Q_7nse9y-0Kg&s");
+  .default-content-wrapper {
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .promo-no-image {
+    > ul {
+      list-style: none;
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      @include for-mobile {
+        padding: 36px 16px 72px 16px;
+      }
+      @include for-nonmobile {
+        flex-direction: row;
+      }
+      @include for-xlarge {
+        gap: 30px;
+        padding: 72px 52px 120px 52px;
+      }
+      @include for-large {
+        padding: 72px 52px 120px 52px;
+        gap: 30px;
+      }
+      @include for-laptop {
+        padding: 72px 36px 120px 36px;
+        gap: 30px;
+      }
+      @include for-tablet {
+        padding: 52px 36px 96px 36px;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+      > li {
+        background-color: var(--background-color);
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        @include for-xlarge {
+          width: calc((100% - 104px) / 4);
+          padding: 24px;
+        }
+        @include for-large {
+          width: calc((100% - 104px) / 4);
+          padding: 24px;
+        }
+        @include for-laptop {
+          width: calc((100% - 72px) / 3);
+          padding: 24px;
+        }
+        @include for-tablet {
+          flex-basis: calc((100% - 72px) / 2);
+        }
+        .cards-card-image {
+          line-height: 0;
+
+          img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+          }
+        }
+
+        .cards-card-body {
+          h3 {
+            font-weight: 700;
+            font-family: var(--body-font-family);
+            line-height: 24px;
+            font-size: 20px;
+            color: $--blue-675;
+            text-align: center;
+            text-decoration: underline;
+          }
+          p {
+            font-weight: 400;
+            font-family: var(--body-font-family);
+            line-height: 24px;
+            font-size: 16px;
+            color: $--gray-700;
+          }
+        }
+      }
+    }
+  }
+}
