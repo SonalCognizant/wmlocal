@@ -102,11 +102,6 @@
                     }
                   }
                 }
-                a.button {
-                  @include for-mobile {
-                    width: 100%;
-                  }
-                }
               }
             }
           }
