@@ -76,6 +76,7 @@
 }
 .image-text-container .image-text-wrapper .image-text img {
   width: 100%;
+  display: flex;
 }
 .image-text-container .image-text-wrapper .image-text.block h2 {
   color: #4a7390;
