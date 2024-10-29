@@ -7,6 +7,7 @@
 https://assets.adobedtm.com/63b00f92ccdd/cf0bc8611341/launch-14781371ad01-development.min.js"
   async
 ></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
   window.dataLayer = window.dataLayer || [];
   dataLayer.push({
@@ -31,5 +32,21 @@ https://assets.adobedtm.com/63b00f92ccdd/cf0bc8611341/launch-14781371ad01-develo
       audience_type: 'new_visitor',
       environment: 'production',
     },
+  });
+
+  $(document).ready(function () {
+    $('.button-container a.button').on('click', function () {
+      console.log('test button click');
+      dataLayer.push({
+        event: 'cta_click',
+        eventInfo: {
+          cta_element_type: 'button',
+          cta_element_text: 'Learn More',
+          cta_click_image_alt_text: 'hero_image_alt_text',
+          cta_location: 'header',
+          cta_type: 'primary',
+        },
+      });
+    });
   });
 </script>
