@@ -63,6 +63,7 @@
           &.block {
             h2 {
               color: $--blue-550;
+              width: 100%;
               font-family: var(--body-font-family);
               font-size: 32px;
               font-weight: 600;
@@ -87,6 +88,7 @@
               text-align: left;
               line-height: 24px;
               margin-bottom: $--spacing-xl;
+              margin-top: 0;
               &.button-container {
                 margin-top: 0;
                 margin-bottom: 0;
