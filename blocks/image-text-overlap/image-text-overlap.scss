@@ -1,56 +1,67 @@
 @import '../../styles/include/mq.scss';
 @import '../../styles/include/tokens.scss';
 
-.image-text-container {
-  .image-text-wrapper {
-    .image-text {
+.image-text-overlap-container {
+  .image-text-overlap-wrapper {
+    padding: 0;
+    .image-text-overlap {
       &.block {
         &.columns-2-cols {
-          padding: $--spacing-huge $--spacing-m;
-          @include for-tablet {
-            padding: $--spacing-jumbo $--spacing-xl;
-          }
-          @include for-laptop {
-            padding: $--spacing-max $--spacing-xl;
-          }
-          @include for-large {
-            padding: $--spacing-max $--spacing-xxl;
-          }
-          @include for-xlarge {
-            padding: $--spacing-max $--spacing-xxl;
-          }
           >div {
             display: flex;
             flex-direction: column;
             @include for-nonmobile {
               align-items: center;
               flex-direction: row;
-            }
-            @include for-tablet {
               gap: 30px;
             }
-            @include for-laptop {
-              gap: $--spacing-huge;
-            }
-            @include for-large {
-              gap: $--spacing-jumbo;
-            }
-            @include for-xlarge {
-              gap: $--spacing-jumbo;
-            }
-            >div {
+            >div:has(h2) {
               order: 1;
-              display: flex;
-              flex-flow: row wrap;
+              position: relative;
+              @include for-mobile {
+                padding: 0 $--spacing-m $--spacing-huge $--spacing-m;
+              }
+              @include for-tablet {
+                padding: $--spacing-huge 0 $--spacing-huge $--spacing-xl;
+              }
+              @include for-laptop {
+                padding: $--spacing-huge 0 $--spacing-huge $--spacing-xl;
+              }
+              @include for-large {
+                padding: $--spacing-max 0 $--spacing-max $--spacing-xxl;
+              }
+              @include for-xlarge {
+                padding: $--spacing-max 0 $--spacing-max $--spacing-xxl;
+              }
               @include for-nonmobile {
                 flex: 1;
                 order: unset;
+                display: flex;
+                flex-flow: row wrap;
                 text-align: left;
                 column-gap: 24px;
+                width: 50%;
               }
             }
             >.columns-img-col {
               order: 0;
+              width: 50%;
+              @include for-mobile {
+                padding: 0;
+                width: 100%;
+              }
+              @include for-tablet {
+                padding: 0 $--spacing-xl 0 0;
+              }
+              @include for-laptop {
+                padding: 0 $--spacing-xl 0 0;
+              }
+              @include for-large {
+                padding: 0 $--spacing-xxl 0 0;
+              }
+              @include for-xlarge {
+                padding: 0 $--spacing-xxl 0 0;
+              }
             }
             >.columns-col img {
               display: block;
@@ -59,6 +70,21 @@
           img {
             width: 100%;
             display: flex;
+            @include for-mobile {
+              height: revert-layer;
+            }
+            @include for-laptop {
+              margin: -27px 0 -28px 0;
+              height: revert-layer;
+            }
+            @include for-large {
+              margin: -68px 0 -70px 0;
+              height: revert-layer;
+            }
+            @include for-xlarge {
+              margin: -68px 0 -70px 0;
+              height: revert-layer;
+            }
           }
           &.block {
             h2 {
@@ -74,8 +100,8 @@
               margin-top: 0;
               margin-bottom: $--spacing-l;
               @include for-mobile {
-                margin-top: $--spacing-xl;
-                margin-bottom: $--spacing-m;
+                margin-top: $--spacing-xxl;
+                margin-bottom: $--spacing-l;
               }
             }
             p {
