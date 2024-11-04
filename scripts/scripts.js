@@ -175,7 +175,7 @@ export function decorateMain(main) {
   decorateSections(main);
   decorateBlocks(main);
   decorateExternalImages(main);
-  decorateExternalImages(main, 'https://delivery-p66302-e574366.adobeaemcloud.com/adobe/dynamicmedia/deliver/urn:aaid:aem:ced69e3f-dda1-487c-921f-f1547476a4b4/seoname.webp?quality=60');
+  decorateExternalImages(main, '//External Image//');
 }
 
 /**
