@@ -52,6 +52,9 @@ function autolinkModals(doc) {
     }
   });
 }
+function getUrlExtension(url) {
+  return url.split(/[#?]/)[0].split('.').pop().trim();
+}
 function isExternalImage(element, externalImageMarker) {
   // if the element is not an anchor, it's not an external image
   if (element.tagName !== 'A') return false;
