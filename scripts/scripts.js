@@ -79,9 +79,6 @@ export function decorateExternalImages(ele, deliveryMarker) {
     }
   });
 }
-decorateExternalImages(main, 'https://delivery-p66302-e574366.adobeaemcloud.com/adobe/dynamicmedia/deliver/urn:aaid:aem:ced69e3f-dda1-487c-921f-f1547476a4b4/seoname.webp?quality=60');
-// decorate external images with implicit external image marker
-decorateExternalImages(main);
 /**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
@@ -107,6 +104,8 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  decorateExternalImages(main);
+  decorateExternalImages(main, 'https://delivery-p66302-e574366.adobeaemcloud.com/adobe/dynamicmedia/deliver/urn:aaid:aem:ced69e3f-dda1-487c-921f-f1547476a4b4/seoname.webp?quality=60');
 }
 
 /**
