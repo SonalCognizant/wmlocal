@@ -11,7 +11,8 @@ export default function decorate(block) {
   imageWrapperDiv.style.backgroundSize = "cover";
   imageWrapperDiv.style.backgroundPosition = "center";
   imageWrapperDiv.style.backgroundRepeat = "no-repeat";
-    [...block.children].forEach((row) => {
+    [...block.children].forEach((row,index) => {
+    if(index>1){
     const li = document.createElement('li');
     console.log(row.firstElementChild,"row")
     while (row.firstElementChild) li.append(row.firstElementChild);
@@ -19,8 +20,8 @@ export default function decorate(block) {
       if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
       else div.className = 'cards-card-body';
     });
-    
-    ul.append(li);
+    ul.append(li)
+    };
 });
   ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
   block.textContent = '';
