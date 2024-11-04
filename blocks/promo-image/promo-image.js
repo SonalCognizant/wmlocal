@@ -9,6 +9,10 @@ export default function decorate(block) {
     [...li.children].forEach((div) => {
       if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
       else div.className = 'cards-card-body';
+      if (element.textContent.trim() === element.getAttribute('href')) {
+        const ext = getUrlExtension(element.getAttribute('href'));
+        return ext && ['jpg', 'jpeg', 'png', 'gif', 'webp'].includes(ext.toLowerCase());
+      }
     });
     ul.append(li);
   });
@@ -16,3 +20,7 @@ export default function decorate(block) {
   block.textContent = '';
   block.append(ul);
 }
+// second way of adding external image is through 
+// export function decorateMain(main) {
+//     // decorate external images with explicit external image marker
+//     decorateExternalImages(main, '//External Image//');
