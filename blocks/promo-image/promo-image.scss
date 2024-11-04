@@ -9,6 +9,27 @@
         background-image: none !important;
       }
   }
+  .promo-image-heading{
+    text-align: center;
+    color: white;
+    @include for-mobile {
+        color: black;
+        padding-top: 72px;
+      }
+      @include for-tablet {
+        color: black;
+        padding-top: 96px;
+      }
+      @include for-xlarge {
+        padding-top: 120px;
+      }
+      @include for-large {
+        padding-top: 120px;
+      }
+      @include for-laptop {
+        padding-top: 120px;
+      }
+  }
 
   .promo-image {
     > ul {

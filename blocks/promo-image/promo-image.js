@@ -14,8 +14,6 @@ export default function decorate(block) {
   const mainHeading = document.createElement("h3");
   mainHeading.classList.add('promo-image-heading')
   mainHeading.textContent = `${title}`;
-  mainHeading.style.textAlign = "center";
-  mainHeading.style.color = "white";
   imageWrapperDiv.prepend(mainHeading);
   [...block.children].forEach((row, index) => {
     if (index > 1) {
