@@ -9,7 +9,7 @@ export default function decorate(block) {
   console.log(block.children.length);
   block.children[0]=backgroundImage;
   block.children[1]=title;
-  let list = [...block.children[2]].forEach((row) => {
+    [...block.children[2]].forEach((row) => {
     if(row.length>1){
     const li = document.createElement('li');
     console.log(row.firstElementChild,"row")
@@ -21,7 +21,7 @@ export default function decorate(block) {
     
     ul.append(li);
 }});
-  block.children[2]=list;
+  block.children[2]=ul;
   ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
   block.textContent = '';
   block.append(ul);
