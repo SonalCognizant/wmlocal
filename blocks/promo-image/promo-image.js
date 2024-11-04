@@ -13,6 +13,7 @@ export default function decorate(block) {
   imageWrapperDiv.style.backgroundRepeat = "no-repeat";
     [...block.children].forEach((row,index) => {
     if(index>1){
+        console.log(index);
     const li = document.createElement('li');
     console.log(row.firstElementChild,"row")
     while (row.firstElementChild) li.append(row.firstElementChild);
