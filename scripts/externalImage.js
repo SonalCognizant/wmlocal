@@ -74,7 +74,6 @@ function appendQueryParams(url, params) {
       if (isExternalImage(extImage, deliveryMarker)) {
         const extImageSrc = extImage.getAttribute('href');
         const extPicture = createOptimizedPicture(extImageSrc);
-        console.log("Inside the function");
         /* copy query params from link to img */
         const extImageUrl = new URL(extImageSrc);
         const { searchParams } = extImageUrl;
