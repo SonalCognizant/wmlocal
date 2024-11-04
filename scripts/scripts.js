@@ -52,7 +52,14 @@ function autolinkModals(doc) {
     }
   });
 }
-
+function appendQueryParams(url, params) {
+  const { searchParams } = url;
+  params.forEach((value, key) => {
+    searchParams.set(key, value);
+  });
+  url.search = searchParams.toString();
+  return url.toString();
+}
 export function createOptimizedPicture(src, alt = '', eager = false, breakpoints = [{ media: '(min-width: 600px)', width: '2000' }, { width: '750' }]) {
   const isAbsoluteUrl = /^https?:\/\//i.test(src);
 
