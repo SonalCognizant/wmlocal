@@ -3,10 +3,10 @@
 .promo-image-container {
   .promo-image-wrapper {
     @include for-mobile {
-        background-image: none;
+        background-image: none !important;
       }
       @include for-tablet {
-        background-image: none;
+        background-image: none !important;
       }
   }
 
