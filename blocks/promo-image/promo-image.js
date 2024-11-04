@@ -6,7 +6,7 @@ export default function decorate(block) {
   let title = block.children[1].innerText;
   console.log(backgroundImage,title)
   const ul = document.createElement('ul');
-  [...block.children[2]].forEach((row) => {
+  [...block.children].forEach((row) => {
     const li = document.createElement('li');
     while (row.firstElementChild) li.append(row.firstElementChild);
     [...li.children].forEach((div) => {
