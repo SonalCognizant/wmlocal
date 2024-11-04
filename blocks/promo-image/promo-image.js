@@ -4,8 +4,6 @@ export default function decorate(block) {
 //   console.log(block.children[0].innerHTML,"block");
   let backgroundImage = block.children[0].innerText;
   let title = block.children[1].innerText;
-  block.children[0]=backgroundImage;
-  block.children[1]=title;
   const ul = document.createElement('ul');
   const imageWrapperDiv = block.parentElement;
   console.log(imageWrapperDiv);
