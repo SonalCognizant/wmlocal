@@ -2,8 +2,34 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
-.promo-no-image-container .default-content-wrapper h2 {
+.promo-no-image-container .promo-no-image-heading {
   text-align: center;
+  color: black;
+}
+@media (max-width: 480px) {
+  .promo-no-image-container .promo-no-image-heading {
+    padding-top: 72px;
+  }
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .promo-no-image-container .promo-no-image-heading {
+    padding-top: 96px;
+  }
+}
+@media (min-width: 1379px) {
+  .promo-no-image-container .promo-no-image-heading {
+    padding-top: 120px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1379px) {
+  .promo-no-image-container .promo-no-image-heading {
+    padding-top: 120px;
+  }
+}
+@media (min-width: 1023px) and (max-width: 1200px) {
+  .promo-no-image-container .promo-no-image-heading {
+    padding-top: 120px;
+  }
 }
 .promo-no-image-container .promo-no-image > ul {
   list-style: none;

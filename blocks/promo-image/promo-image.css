@@ -2,8 +2,46 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
-.promo-image-container .default-content-wrapper h2 {
+@media (max-width: 480px) {
+  .promo-image-container .promo-image-wrapper {
+    background-image: none !important;
+  }
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .promo-image-container .promo-image-wrapper {
+    background-image: none !important;
+  }
+}
+.promo-image-container .promo-image-heading {
   text-align: center;
+  color: #ffffff;
+}
+@media (max-width: 480px) {
+  .promo-image-container .promo-image-heading {
+    color: black;
+    padding-top: 72px;
+  }
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .promo-image-container .promo-image-heading {
+    color: black;
+    padding-top: 96px;
+  }
+}
+@media (min-width: 1379px) {
+  .promo-image-container .promo-image-heading {
+    padding-top: 120px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1379px) {
+  .promo-image-container .promo-image-heading {
+    padding-top: 120px;
+  }
+}
+@media (min-width: 1023px) and (max-width: 1200px) {
+  .promo-image-container .promo-image-heading {
+    padding-top: 120px;
+  }
 }
 .promo-image-container .promo-image > ul {
   list-style: none;
@@ -44,8 +82,8 @@
 @media (min-width: 480px) and (max-width: 1023px) {
   .promo-image-container .promo-image > ul {
     padding: 52px 36px 96px 36px;
-    flex-wrap: wrap;
     gap: 30px;
+    flex-wrap: wrap;
   }
 }
 .promo-image-container .promo-image > ul > li {

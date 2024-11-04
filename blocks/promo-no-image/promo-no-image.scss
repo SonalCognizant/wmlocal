@@ -1,10 +1,24 @@
 @import "../../styles/include/mq.scss";
 @import "../../styles/include/tokens.scss";
 .promo-no-image-container {
-  .default-content-wrapper {
-    h2 {
-      text-align: center;
-    }
+  .promo-no-image-heading{
+    text-align: center;
+    color: black;
+    @include for-mobile {
+        padding-top: 72px;
+      }
+      @include for-tablet {
+        padding-top: 96px;
+      }
+      @include for-xlarge {
+        padding-top: 120px;
+      }
+      @include for-large {
+        padding-top: 120px;
+      }
+      @include for-laptop {
+        padding-top: 120px;
+      }
   }
 
   .promo-no-image {
