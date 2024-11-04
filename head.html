@@ -7,22 +7,46 @@
 https://assets.adobedtm.com/63b00f92ccdd/cf0bc8611341/launch-14781371ad01-development.min.js"
   async
 ></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
-  var digitalData = {
-    page: {
-      pageInfo: {
-        pageType: 'content',
-        platform: 'eds',
-        environment: 'test',
-        pageName: 'test ADL',
-        pageID: 'EDS Home',
-      },
+  window.adobeDataLayer = window.adobeDataLayer || [];
+  adobeDataLayer.push({
+    event: 'pageload',
+    userInfo: {
+      account_login_status: 'logged_in',
+      user_type: 'registered',
+      user_id: '123456',
+      gender: 'female',
+      age: 30,
+      user_relationship_to_member: 'self',
     },
-    user: {
-      userInfo: {
-        authState: 'logged out',
-      },
+    siteInfo: {
+      site_section1: 'home',
+      site_section2: 'electronics',
+      site_section3: 'smartphones',
+      site_name: 'ExampleSite',
+      page_type: 'product_page',
+      site_subcategory_depth: 3,
     },
-    event: [],
-  };
+    audienceInfo: {
+      audience_type: 'new_visitor',
+      environment: 'production',
+    },
+  });
+
+  $(document).ready(function () {
+    $('.button-container a.button').on('click', function () {
+      console.log('test button click');
+      adobeDataLayer.push({
+        event: 'cta_click',
+        eventInfo: {
+          cta_element_type: 'button',
+          cta_element_text: 'Learn More',
+          cta_click_image_alt_text: 'hero_image_alt_text',
+          cta_location: 'header',
+          cta_type: 'primary',
+        },
+      });
+    });
+  });
 </script>
