@@ -4,11 +4,10 @@ export default function decorate(block) {
 //   console.log(block.children[0].innerHTML,"block");
   let backgroundImage = block.children[0].innerText;
   let title = block.children[1].innerText;
-  console.log(block)
   const ul = document.createElement('ul');
-  console.log(block.children.length);
   const imageWrapperDiv = block.parentElement;
-  imageWrapperDiv.style.backgroundImage = url(backgroundImage);
+  console.log(imageWrapperDiv);
+  imageWrapperDiv.style.backgroundImage = "url(backgroundImage)";
   imageWrapperDiv.style.backgroundSize = "cover";
   imageWrapperDiv.style.backgroundPosition = "center";
   imageWrapperDiv.style.backgroundRepeat = "no-repeat";
