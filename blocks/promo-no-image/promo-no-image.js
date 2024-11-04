@@ -4,6 +4,7 @@ export default function decorate(block) {
   //   console.log(block.children[0].innerHTML,"block");
   let title = block.children[0].innerText;
   const ul = document.createElement("ul");
+  const imageWrapperDiv = block.parentElement;
   const mainHeading = document.createElement("h3");
   mainHeading.classList.add("promo-no-image-heading");
   mainHeading.textContent = `${title}`;
