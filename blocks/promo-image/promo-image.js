@@ -7,9 +7,13 @@ export default function decorate(block) {
   console.log(block)
   const ul = document.createElement('ul');
   console.log(block.children.length);
-  block.children[0]=backgroundImage;
-  block.children[1]=title;
-    [...block.children[2]].forEach((row) => {
+  const imageWrapperDiv = block.parentElement;
+  imageWrapperDiv.style.backgroundImage = url(backgroundImage);
+  imageWrapperDiv.style.backgroundSize = "cover";
+  imageWrapperDiv.style.backgroundPosition = "center";
+  imageWrapperDiv.style.backgroundRepeat = "no-repeat";
+  block.children[1] = title;
+    [...block.children].forEach((row) => {
     if(row.length>1){
     const li = document.createElement('li');
     console.log(row.firstElementChild,"row")
