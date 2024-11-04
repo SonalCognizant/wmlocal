@@ -39,6 +39,7 @@
       @include for-tablet {
         padding: 52px 36px 96px 36px;
         gap: 30px;
+        flex-wrap: wrap;
       }
       > li {
         background-color: var(--background-color);
