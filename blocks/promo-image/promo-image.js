@@ -19,7 +19,7 @@ export default function decorate(block) {
   ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
   block.textContent = '';
   block.append(ul);
-  decorateExternalImages(main, '//External Image//');
+  decorateExternalImages(main, 'https://delivery-p66302-e574366.adobeaemcloud.com/adobe/dynamicmedia/deliver/urn:aaid:aem:ced69e3f-dda1-487c-921f-f1547476a4b4/seoname.webp?quality=60');
   
   // decorate external images with implicit external image marker
   decorateExternalImages(main);
