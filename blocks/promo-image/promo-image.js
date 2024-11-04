@@ -6,8 +6,9 @@ export default function decorate(block) {
   let title = block.children[1].innerText;
   console.log(backgroundImage,title)
   const ul = document.createElement('ul');
-  [...block.children].forEach((row) => {
+  [...block.children[2]].forEach((row) => {
     const li = document.createElement('li');
+    console.log(row.firstElementChild,"row")
     while (row.firstElementChild) li.append(row.firstElementChild);
     [...li.children].forEach((div) => {
       if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
