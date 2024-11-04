@@ -27,7 +27,7 @@
               flex-direction: row;
             }
             @include for-tablet {
-              gap: $--spacing-l;
+              gap: 30px;
             }
             @include for-laptop {
               gap: $--spacing-huge;
@@ -97,6 +97,7 @@
                 }
                 @include for-mobile {
                   width: 100%;
+                  display: unset;
                   a.button,
                   button {
                     &.primary {

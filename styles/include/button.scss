@@ -1,6 +1,9 @@
 @import "tokens";
 
 /* buttons */
+.button-container {
+  display: flex;
+}
 a.button,
 button {
   box-sizing: border-box;
@@ -10,11 +13,9 @@ button {
   color: $--blue-675;
   font-size: 18px;
   font-weight: 500;
-  text-align: center;
   text-decoration: underline;
   display: flex;
   justify-content: center;
-  cursor: pointer;
   overflow: hidden;
   padding: 12px 36px;
   text-overflow: ellipsis;
