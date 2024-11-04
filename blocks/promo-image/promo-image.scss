@@ -1,10 +1,13 @@
 @import "../../styles/include/mq.scss";
 @import "../../styles/include/tokens.scss";
 .promo-image-container {
-  .default-content-wrapper {
-    h2 {
-      text-align: center;
-    }
+  .promo-image-wrapper {
+    @include for-mobile {
+        background-image: none;
+      }
+      @include for-tablet {
+        background-image: none;
+      }
   }
 
   .promo-image {
@@ -45,15 +48,15 @@
         flex-direction: column;
         @include for-xlarge {
           width: calc((100% - 104px) / 4);
-        //   padding: 24px;
+          //   padding: 24px;
         }
         @include for-large {
           width: calc((100% - 104px) / 4);
-        //   padding: 24px;
+          //   padding: 24px;
         }
         @include for-laptop {
           width: calc((100% - 72px) / 3);
-        //   padding: 24px;
+          //   padding: 24px;
         }
         @include for-tablet {
           flex-basis: calc((100% - 72px) / 2);
