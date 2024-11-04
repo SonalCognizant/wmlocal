@@ -52,6 +52,23 @@ function autolinkModals(doc) {
     }
   });
 }
+function isExternalImage(element, externalImageMarker) {
+  // if the element is not an anchor, it's not an external image
+  if (element.tagName !== 'A') return false;
+
+  // if the element is an anchor with the external image marker as text content,
+  // it's an external image
+  if (element.textContent.trim() === externalImageMarker) {
+    return true;
+  }
+
+  // if the element is an anchor with the href as text content and the href has
+  // an image extension, it's an external image
+  if (element.textContent.trim() === element.getAttribute('href')) {
+    const ext = getUrlExtension(element.getAttribute('href'));
+    return ext && ['jpg', 'jpeg', 'png', 'gif', 'webp'].includes(ext.toLowerCase());
+  }
+}
 export function decorateExternalImages(ele, deliveryMarker) {
   const extImages = ele.querySelectorAll('a');
   extImages.forEach((extImage) => {
