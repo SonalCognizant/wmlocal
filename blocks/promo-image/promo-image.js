@@ -13,6 +13,8 @@ export default function decorate(block) {
   imageWrapperDiv.style.backgroundRepeat = "no-repeat";
   const mainHeading = document.createElement("h3");
   mainHeading.textContent = `${title}`;
+  mainHeading.style.textAlign = "center";
+  mainHeading.style.color = "white";
   imageWrapperDiv.prepend(mainHeading);
   [...block.children].forEach((row, index) => {
     if (index > 1) {
