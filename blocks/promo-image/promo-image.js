@@ -9,7 +9,7 @@ export default function decorate(block) {
   console.log(block.children.length);
   block.children[0]=backgroundImage;
   block.children[1]=title;
-  let list = [...block.children].forEach((row) => {
+  let list = [...block.children[2]].forEach((row) => {
     const li = document.createElement('li');
     console.log(row.firstElementChild,"row")
     while (row.firstElementChild && row.length > 1) li.append(row.firstElementChild);
