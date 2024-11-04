@@ -3,13 +3,11 @@
 .promo-no-image-container {
   .promo-no-image-heading{
     text-align: center;
-    color: $--white;
+    color: black;
     @include for-mobile {
-        color: black;
         padding-top: 72px;
       }
       @include for-tablet {
-        color: black;
         padding-top: 96px;
       }
       @include for-xlarge {

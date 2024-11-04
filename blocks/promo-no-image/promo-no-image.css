@@ -4,17 +4,15 @@
 /* wellmark spacing size start */
 .promo-no-image-container .promo-no-image-heading {
   text-align: center;
-  color: #ffffff;
+  color: black;
 }
 @media (max-width: 480px) {
   .promo-no-image-container .promo-no-image-heading {
-    color: black;
     padding-top: 72px;
   }
 }
 @media (min-width: 480px) and (max-width: 1023px) {
   .promo-no-image-container .promo-no-image-heading {
-    color: black;
     padding-top: 96px;
   }
 }
