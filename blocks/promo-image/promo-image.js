@@ -11,7 +11,7 @@ export default function decorate(block) {
   imageWrapperDiv.style.backgroundSize = "cover";
   imageWrapperDiv.style.backgroundPosition = "center";
   imageWrapperDiv.style.backgroundRepeat = "no-repeat";
-    [...block.children[2]].forEach((row) => {
+    [...block.children].forEach((row) => {
     const li = document.createElement('li');
     console.log(row.firstElementChild,"row")
     while (row.firstElementChild) li.append(row.firstElementChild);
