@@ -12,6 +12,7 @@ export default function decorate(block) {
   imageWrapperDiv.style.backgroundPosition = "center";
   imageWrapperDiv.style.backgroundRepeat = "no-repeat";
   const mainHeading = document.createElement("h3");
+  mainHeading.classList.add('promo-image-heading')
   mainHeading.textContent = `${title}`;
   mainHeading.style.textAlign = "center";
   mainHeading.style.color = "white";
