@@ -11,9 +11,7 @@ export default function decorate(block) {
   imageWrapperDiv.style.backgroundSize = "cover";
   imageWrapperDiv.style.backgroundPosition = "center";
   imageWrapperDiv.style.backgroundRepeat = "no-repeat";
-  block.children[1] = title;
     [...block.children].forEach((row) => {
-    if(row.length>1){
     const li = document.createElement('li');
     console.log(row.firstElementChild,"row")
     while (row.firstElementChild) li.append(row.firstElementChild);
@@ -23,8 +21,7 @@ export default function decorate(block) {
     });
     
     ul.append(li);
-}});
-  block.children[2]=ul;
+});
   ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
   block.textContent = '';
   block.append(ul);
