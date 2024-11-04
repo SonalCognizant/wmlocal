@@ -11,6 +11,7 @@ export default function decorate(block) {
   imageWrapperDiv.style.backgroundSize = "cover";
   imageWrapperDiv.style.backgroundPosition = "center";
   imageWrapperDiv.style.backgroundRepeat = "no-repeat";
+  block.innerHTML = `${title}`;
   [...block.children].forEach((row, index) => {
     if (index > 1) {
       console.log(index);
