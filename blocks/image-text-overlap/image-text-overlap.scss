@@ -70,9 +70,6 @@
           img {
             width: 100%;
             display: flex;
-            @include for-mobile {
-              height: revert-layer;
-            }
             @include for-laptop {
               margin: -27px 0 -28px 0;
               height: revert-layer;
@@ -118,18 +115,14 @@
               &.button-container {
                 margin-top: 0;
                 margin-bottom: 0;
-                @include for-tablet {
-                  margin-bottom: $--spacing-m;
+                a.button {
+                  &.primary {
+                    margin-bottom: 16px;
+                  }
                 }
                 @include for-mobile {
                   width: 100%;
                   display: unset;
-                  a.button,
-                  button {
-                    &.primary {
-                      margin-bottom: 16px;
-                    }
-                  }
                 }
               }
             }

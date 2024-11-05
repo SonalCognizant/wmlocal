@@ -93,11 +93,6 @@
   width: 100%;
   display: flex;
 }
-@media (max-width: 480px) {
-  .image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols img {
-    height: revert-layer;
-  }
-}
 @media (min-width: 1023px) and (max-width: 1200px) {
   .image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols img {
     margin: -27px 0 -28px 0;
@@ -151,18 +146,12 @@
   margin-top: 0;
   margin-bottom: 0;
 }
-@media (min-width: 480px) and (max-width: 1023px) {
-  .image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols.block p.button-container {
-    margin-bottom: 16px;
-  }
+.image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols.block p.button-container a.button.primary {
+  margin-bottom: 16px;
 }
 @media (max-width: 480px) {
   .image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols.block p.button-container {
     width: 100%;
     display: unset;
-  }
-  .image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols.block p.button-container a.button.primary,
-  .image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols.block p.button-container button.primary {
-    margin-bottom: 16px;
   }
 }
