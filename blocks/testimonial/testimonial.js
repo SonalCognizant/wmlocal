@@ -21,7 +21,7 @@ export default function decorate(block) {
   const parentElement = block.parentElement;
   let title = block.children[0].innerText;
   console.log(title);
-  const mainHeading = document.createElement("h3");
+  const mainHeading = document.createElement("h2");
   mainHeading.classList.add("testimonial-heading");
   mainHeading.textContent = `${title}`;
   parentElement.prepend(mainHeading);

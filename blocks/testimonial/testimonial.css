@@ -2,31 +2,48 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
-.section.testimonial-container .testimonial ul {
+.section.testimonial-container .testimonial-wrapper {
+  padding: 120px 52px;
+  text-align: center;
+}
+.section.testimonial-container .testimonial-wrapper h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #4A7390;
+  margin-bottom: 72px;
+}
+.section.testimonial-container .testimonial-wrapper .testimonial-link {
+  font-size: 16px;
+  font-weight: 500;
+  color: #005589;
+}
+.section.testimonial-container .testimonial-wrapper .testimonial ul {
   display: flex;
   justify-content: space-between;
   gap: 30px;
   padding-left: 0;
 }
-.section.testimonial-container .testimonial ul li {
+.section.testimonial-container .testimonial-wrapper .testimonial ul li {
   width: 33.33%;
   list-style-type: none;
+  text-align: left;
   color: #4B4C4D;
+  padding: 36px 36px 96px 36px;
 }
-.section.testimonial-container .testimonial ul li .testimonial-card::before {
+.section.testimonial-container .testimonial-wrapper .testimonial ul li .testimonial-card::before {
   content: '"';
   font-size: 100px;
   font-weight: bold;
   color: #4A7390;
-  margin-right: 10px;
   display: inline-block;
   transform: rotate(175deg);
 }
-.section.testimonial-container .testimonial ul li h3 {
+.section.testimonial-container .testimonial-wrapper .testimonial ul li h3 {
   font-size: 32px;
   font-weight: 700;
+  margin: 36px 0 24px 0;
 }
-.section.testimonial-container .testimonial ul li p {
+.section.testimonial-container .testimonial-wrapper .testimonial ul li p {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
