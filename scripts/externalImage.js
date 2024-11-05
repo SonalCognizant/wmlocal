@@ -1,4 +1,4 @@
-import {libCreateOptimizedPicture as createOptimizedPicture} from "./scripts";
+import {createOptimizedPicture as libCreateOptimizedPicture} from "./scripts";
 function appendQueryParams(url, params) {
   const { searchParams } = url;
   params.forEach((value, key) => {
