@@ -23,6 +23,7 @@ export default function decorate(block) {
   mainHeading.classList.add("testimonial-heading");
   mainHeading.textContent = `${title}`;
   imageWrapperDiv.prepend(mainHeading);
+  let link = block.children[1].innerText;
   const hyperLink = document.createElement("a");
   hyperLink.classList.add("testimonial-link");
   hyperLink.textContent = `${link}`;
