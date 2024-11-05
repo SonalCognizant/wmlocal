@@ -6,6 +6,7 @@
     color: $--blue-550;
     font-weight: 700;
     font-size: 32px;
+    margin: 0;
     @include for-mobile {
         padding-top: 72px;
       }
