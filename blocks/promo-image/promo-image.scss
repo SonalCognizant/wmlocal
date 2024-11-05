@@ -12,6 +12,10 @@
   .promo-image-heading{
     text-align: center;
     color: $--white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 32px;
+    margin: 0;
     @include for-mobile {
         color: black;
         padding-top: 72px;
