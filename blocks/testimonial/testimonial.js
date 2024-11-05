@@ -15,6 +15,7 @@ export default function decorate(block) {
   ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
   block.textContent = '';
   block.append(ul);
+  const imageWrapperDiv = block.parentElement;
   const mainHeading = document.createElement("h3");
   mainHeading.classList.add("promo-image-heading");
   mainHeading.textContent = `${title}`;
