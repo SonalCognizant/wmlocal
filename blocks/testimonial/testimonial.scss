@@ -1,10 +1,9 @@
 @import "../../styles/include/mq.scss";
 @import "../../styles/include/tokens.scss";
 .section.testimonial-container{
-  .testimonial-wrapper{
-    background-color: red;
-  }
   .testimonial {
-    display: flex;
+    ul{
+      display: flex;
+    }
   }
 }

@@ -2,9 +2,6 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
-.section.testimonial-container .testimonial-wrapper {
-  background-color: red;
-}
-.section.testimonial-container .testimonial {
+.section.testimonial-container .testimonial ul {
   display: flex;
 }
