@@ -50,7 +50,7 @@
 .promo-image-container .promo-image > ul {
   list-style: none;
   display: flex;
-  align-items: start;
+  align-items: stretch;
   justify-content: center;
   text-align: center;
   flex-direction: column;
