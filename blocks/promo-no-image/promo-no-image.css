@@ -4,7 +4,9 @@
 /* wellmark spacing size start */
 .promo-no-image-container .promo-no-image-heading {
   text-align: center;
-  color: black;
+  color: #4a7390;
+  font-weight: 700;
+  font-size: 32px;
 }
 @media (max-width: 480px) {
   .promo-no-image-container .promo-no-image-heading {
