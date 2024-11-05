@@ -12,6 +12,7 @@
     }
     h2{
       font-size: 32px;
+      line-height: 40px;
       font-weight: 700;
       color: $--blue-550;
       margin-bottom: $--spacing-huge;
@@ -25,6 +26,7 @@
     }
     .testimonial-link{
       font-size: $--spacing-m;
+      line-height: 24px;
       font-weight: 500;
       color: $--primary-675;
       @include for-tablet{
@@ -77,6 +79,7 @@
           }
           h3{
             font-size: 32px;
+            line-height: 40px;
             font-weight: 700;
             margin: $--spacing-xl 0 $--spacing-l 0;
           }

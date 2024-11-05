@@ -19,6 +19,7 @@
 }
 .section.testimonial-container .testimonial-wrapper h2 {
   font-size: 32px;
+  line-height: 40px;
   font-weight: 700;
   color: #4a7390;
   margin-bottom: 72px;
@@ -36,6 +37,7 @@
 }
 .section.testimonial-container .testimonial-wrapper .testimonial-link {
   font-size: 16px;
+  line-height: 24px;
   font-weight: 500;
   color: #005589;
 }
@@ -99,6 +101,7 @@
 }
 .section.testimonial-container .testimonial-wrapper .testimonial ul li h3 {
   font-size: 32px;
+  line-height: 40px;
   font-weight: 700;
   margin: 36px 0 24px 0;
 }
