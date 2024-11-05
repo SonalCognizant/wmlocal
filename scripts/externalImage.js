@@ -8,11 +8,11 @@ function appendQueryParams(url, params) {
 }
 export function createOptimizedPicture(
   src,
-  alt = "",
+  alt = '',
   eager = false,
   breakpoints = [
-    { media: "(min-width: 600px)", width: "2000" },
-    { width: "750" },
+    { media: '(min-width: 600px)', width: '2000' },
+    { width: '750' },
   ]
 ) {
   const isAbsoluteUrl = /^https?:\/\//i.test(src);
@@ -23,20 +23,20 @@ export function createOptimizedPicture(
   }
 
   const url = new URL(src);
-  const picture = document.createElement("picture");
+  const picture = document.createElement('picture');
   const { pathname } = url;
-  const ext = pathname.substring(pathname.lastIndexOf(".") + 1);
+  const ext = pathname.substring(pathname.lastIndexOf('.') + 1);
 
   // webp
   breakpoints.forEach((br) => {
-    const source = document.createElement("source");
-    if (br.media) source.setAttribute("media", br.media);
-    source.setAttribute("type", "image/webp");
+    const source = document.createElement('source');
+    if (br.media) source.setAttribute('media', br.media);
+    source.setAttribute('type', 'image/webp');
     const searchParams = new URLSearchParams({
       width: br.width,
-      format: "webply",
+      format: 'webply',
     });
-    source.setAttribute("srcset", appendQueryParams(url, searchParams));
+    source.setAttribute('srcset', appendQueryParams(url, searchParams));
     picture.appendChild(source);
   });
 
@@ -45,16 +45,16 @@ export function createOptimizedPicture(
     const searchParams = new URLSearchParams({ width: br.width, format: ext });
 
     if (i < breakpoints.length - 1) {
-      const source = document.createElement("source");
-      if (br.media) source.setAttribute("media", br.media);
-      source.setAttribute("srcset", appendQueryParams(url, searchParams));
+      const source = document.createElement('source');
+      if (br.media) source.setAttribute('media', br.media);
+      source.setAttribute('srcset', appendQueryParams(url, searchParams));
       picture.appendChild(source);
     } else {
-      const img = document.createElement("img");
-      img.setAttribute("loading", eager ? "eager" : "lazy");
-      img.setAttribute("alt", alt);
+      const img = document.createElement('img');
+      img.setAttribute('loading', eager ? 'eager' : 'lazy');
+      img.setAttribute('alt', alt);
       picture.appendChild(img);
-      img.setAttribute("src", appendQueryParams(url, searchParams));
+      img.setAttribute('src', appendQueryParams(url, searchParams));
     }
   });
 
@@ -62,11 +62,11 @@ export function createOptimizedPicture(
 }
 
 function getUrlExtension(url) {
-  return url.split(/[#?]/)[0].split(".").pop().trim();
+  return url.split(/[#?]/)[0].split('.').pop().trim();
 }
 function isExternalImage(element, externalImageMarker) {
   // if the element is not an anchor, it's not an external image
-  if (element.tagName !== "A") return false;
+  if (element.tagName !== 'A') return false;
 
   // if the element is an anchor with the external image marker as text content,
   // it's an external image
@@ -76,36 +76,37 @@ function isExternalImage(element, externalImageMarker) {
 
   // if the element is an anchor with the href as text content and the href has
   // an image extension, it's an external image
-  if (element.textContent.trim() === element.getAttribute("href")) {
-    const ext = getUrlExtension(element.getAttribute("href"));
+  if (element.textContent.trim() === element.getAttribute('href')) {
+    const ext = getUrlExtension(element.getAttribute('href'));
     return (
-      ext && ["jpg", "jpeg", "png", "gif", "webp"].includes(ext.toLowerCase())
+      ext &&
+      ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'].includes(ext.toLowerCase())
     );
   }
 }
 export function decorateExternalImages(ele, deliveryMarker) {
-  const extImages = ele.querySelectorAll("a");
+  const extImages = ele.querySelectorAll('a');
   extImages.forEach((extImage) => {
     if (isExternalImage(extImage, deliveryMarker)) {
-      const extImageSrc = extImage.getAttribute("href");
+      const extImageSrc = extImage.getAttribute('href');
       const extPicture = createOptimizedPicture(extImageSrc);
       /* copy query params from link to img */
       const extImageUrl = new URL(extImageSrc);
       const { searchParams } = extImageUrl;
-      extPicture.querySelectorAll("source, img").forEach((child) => {
-        if (child.tagName === "SOURCE") {
-          const srcset = child.getAttribute("srcset");
+      extPicture.querySelectorAll('source, img').forEach((child) => {
+        if (child.tagName === 'SOURCE') {
+          const srcset = child.getAttribute('srcset');
           if (srcset) {
             child.setAttribute(
-              "srcset",
+              'srcset',
               appendQueryParams(new URL(srcset, extImageSrc), searchParams)
             );
           }
-        } else if (child.tagName === "IMG") {
-          const src = child.getAttribute("src");
+        } else if (child.tagName === 'IMG') {
+          const src = child.getAttribute('src');
           if (src) {
             child.setAttribute(
-              "src",
+              'src',
               appendQueryParams(new URL(src, extImageSrc), searchParams)
             );
           }
