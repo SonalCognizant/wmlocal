@@ -10,6 +10,15 @@
 .section.testimonial-container .testimonial ul li {
   width: 33.33%;
 }
-.section.testimonial-container .testimonial ul li ::marker {
+.section.testimonial-container .testimonial ul li::marker {
   display: none;
+}
+.section.testimonial-container .testimonial ul li::marker .testimonial-card::before {
+  content: '"';
+  font-size: 24px;
+  color: grey;
+  margin-right: 10px;
+  display: block;
+  transform: rotate(180deg);
+  vertical-align: middle;
 }

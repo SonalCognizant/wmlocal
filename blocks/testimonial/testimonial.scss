@@ -8,8 +8,17 @@
       gap: 30px;
       li{
         width: 33.33%;
-        ::marker{
+        &::marker{
           display: none;
+          .testimonial-card::before{
+            content: '"';
+            font-size: 24px;
+            color: grey;
+            margin-right: 10px;
+            display: block;
+            transform: rotate(180deg);
+            vertical-align: middle;
+          }
         }
       }
     }
