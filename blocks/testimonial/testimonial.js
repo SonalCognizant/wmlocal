@@ -5,7 +5,7 @@ export default function decorate(block) {
   console.log(block);
   const ul = document.createElement('ul');
   [...block.children].forEach((row, index) => {
-    if (index > 0){
+    if (index < block.children.length){
       const li = document.createElement('li');
       while (row.firstElementChild) li.append(row.firstElementChild);
       [...li.children].forEach((div) => {
@@ -19,16 +19,14 @@ export default function decorate(block) {
   block.textContent = '';
   block.append(ul);
   const imageWrapperDiv = block.parentElement;
-
   let title = block.children[0].innerText;
   const mainHeading = document.createElement("h3");
   mainHeading.classList.add("testimonial-heading");
   mainHeading.textContent = `${title}`;
   imageWrapperDiv.prepend(mainHeading);
-
-  // let link = block.children[1].innerText;
-  // const hyperLink = document.createElement("a");
-  // hyperLink.classList.add("testimonial-link");
-  // hyperLink.textContent = `${link}`;
-  // imageWrapperDiv.append(hyperLink);
+  let link = block.children[block.children.length - 1].innerText;
+  const hyperLink = document.createElement("a");
+  hyperLink.classList.add("testimonial-link");
+  hyperLink.textContent = `${link}`;
+  imageWrapperDiv.append(hyperLink);
 }
