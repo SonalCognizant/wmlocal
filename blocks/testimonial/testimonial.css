@@ -4,4 +4,9 @@
 /* wellmark spacing size start */
 .section.testimonial-container .testimonial ul {
   display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.section.testimonial-container .testimonial ul li {
+  width: 33.33%;
 }
