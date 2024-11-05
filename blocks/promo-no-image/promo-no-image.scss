@@ -3,7 +3,10 @@
 .promo-no-image-container {
   .promo-no-image-heading{
     text-align: center;
-    color: black;
+    color: $--blue-550;
+    font-weight: 700;
+    font-size: 32px;
+    margin: 0;
     @include for-mobile {
         padding-top: 72px;
       }
@@ -29,6 +32,7 @@
       justify-content: center;
       text-align: center;
       flex-direction: column;
+      margin: 0;
       @include for-mobile {
         padding: 36px 16px 72px 16px;
       }
@@ -59,15 +63,15 @@
         flex-direction: column;
         @include for-xlarge {
           width: calc((100% - 104px) / 4);
-          padding: 24px;
+          // padding: 24px;
         }
         @include for-large {
           width: calc((100% - 104px) / 4);
-          padding: 24px;
+          // padding: 24px;
         }
         @include for-laptop {
           width: calc((100% - 72px) / 3);
-          padding: 24px;
+          // padding: 24px;
         }
         @include for-tablet {
           flex-basis: calc((100% - 72px) / 2);

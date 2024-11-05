@@ -15,6 +15,10 @@
 .promo-image-container .promo-image-heading {
   text-align: center;
   color: #ffffff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+  margin: 0;
 }
 @media (max-width: 480px) {
   .promo-image-container .promo-image-heading {
