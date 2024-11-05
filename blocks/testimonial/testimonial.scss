@@ -1,0 +1,103 @@
+@import "../../styles/include/mq.scss";
+@import "../../styles/include/tokens.scss";
+.section.testimonial-container{
+  .testimonial-wrapper{
+    padding: $--spacing-max $--spacing-xxl;
+    text-align: center;
+    @include for-tablet{
+      padding: $--spacing-jumbo $--spacing-xl;
+    }
+    @include for-mobile{
+      padding: $--spacing-huge $--spacing-m;
+    }
+    h2{
+      font-size: 32px;
+      line-height: 38px;
+      font-weight: 700;
+      color: $--blue-550;
+      margin-bottom: $--spacing-huge;
+      text-align: center;
+      @include for-tablet{
+        margin-bottom: $--spacing-xxl;
+      }
+      @include for-mobile{
+        margin-bottom: $--spacing-xl;
+      }
+    }
+    .testimonial-link{
+      font-size: $--spacing-m;
+      line-height: 22px;
+      font-weight: 500;
+      color: $--primary-675;
+      @include for-tablet{
+        margin-top: $--spacing-m;
+      }
+      @include for-mobile{
+        margin-top: $--spacing-s;
+      }
+      &::after{
+        content: "\2192";
+        border: 2px solid $--primary-675;
+        border-radius: 100%;
+        padding: 0 5px;
+        font-size: 14px;
+        font-weight: bold;
+        margin-left: 5px;
+        display: inline-block;
+        text-decoration: none !important;
+      }
+    }
+    .testimonial {
+      ul{
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        padding-left: 0;
+        @include for-tablet{
+          display: unset;
+        }
+        li{
+          width: 33.33%;
+          list-style-type: none;
+          text-align: left;
+          color: $--gray-700;
+          padding: $--spacing-xl $--spacing-xl $--spacing-jumbo $--spacing-xl;
+          @include for-tablet{
+            width: 100%;
+            margin-bottom: $--spacing-xl;
+          }
+          @include for-mobile{
+            margin-bottom: $--spacing-l;
+          }
+            .testimonial-card::before{
+              content: '"';
+              font-size: 100px;
+              font-weight: bold;
+              color: $--blue-550;
+              display: inline-block;
+              transform: rotate(175deg);
+          }
+          h3{
+            font-size: 32px;
+            line-height: 38px;
+            font-weight: 700;
+            margin: $--spacing-xl 0 $--spacing-l 0;
+          }
+          p{
+            font-size: $--spacing-m;
+            line-height: $--spacing-l;
+            font-weight: 400;
+          }
+          &:last-child{
+            @include for-tablet{
+              margin-bottom: $--spacing-xxl;
+            }
+            @include for-mobile{
+              margin-bottom: $--spacing-xl;
+            }
+          }
+        }
+      }
+    }
+  }
+}
