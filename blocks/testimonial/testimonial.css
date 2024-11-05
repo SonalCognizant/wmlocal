@@ -10,3 +10,6 @@
 .section.testimonial-container .testimonial ul li {
   width: 33.33%;
 }
+.section.testimonial-container .testimonial ul li ::marker {
+  display: none;
+}
