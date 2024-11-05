@@ -146,8 +146,7 @@
   margin-top: 0;
   margin-bottom: 0;
 }
-.image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols.block p.button-container a.button.primary,
-.image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols.block p.button-container button.primary {
+.image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols.block p.button-container a.button.primary {
   margin-bottom: 16px;
 }
 @media (max-width: 480px) {
