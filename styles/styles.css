@@ -160,6 +160,10 @@ body {
   font-weight: 400;
 }
 
+.background-blue-50 {
+  background-color: #f3f9ff;
+}
+
 :root {
   /* colors */
   --background-color: white;
