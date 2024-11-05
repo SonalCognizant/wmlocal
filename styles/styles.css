@@ -14,6 +14,10 @@
 /* wellmark spacing size start */
 /* wellmark spacing size start */
 /* buttons */
+.button-container {
+  display: flex;
+}
+
 a.button,
 button {
   box-sizing: border-box;
@@ -23,11 +27,9 @@ button {
   color: #005589;
   font-size: 18px;
   font-weight: 500;
-  text-align: center;
   text-decoration: underline;
   display: flex;
   justify-content: center;
-  cursor: pointer;
   overflow: hidden;
   padding: 12px 36px;
   text-overflow: ellipsis;
@@ -93,10 +95,12 @@ h1 {
   font-family: var(--heading-font-family);
   font-size: 32px;
   font-weight: 700;
+  font-style: 700;
   line-height: 33px;
   color: #4b4c4d;
   opacity: 1;
   text-align: left;
+  letter-spacing: 0px;
 }
 @media (min-width: 480px) {
   h1 {
@@ -114,6 +118,8 @@ h2 {
   color: #4b4c4d;
   opacity: 1;
   text-align: left;
+  letter-spacing: 0px;
+  font-style: 700;
 }
 @media (min-width: 480px) {
   h2 {
@@ -127,20 +133,24 @@ h3 {
   font-family: var(--heading-font-family);
   font-size: 24px;
   font-weight: bold;
+  font-style: bold;
   line-height: 24px;
   color: #4b4c4d;
   opacity: 1;
   text-align: left;
+  letter-spacing: 0px;
 }
 
 h4 {
   font-family: var(--heading-font-family);
   font-size: 20px;
   font-weight: bold;
+  font-style: bold;
   line-height: 21px;
   color: #4b4c4d;
   opacity: 1;
   text-align: left;
+  letter-spacing: 0px;
 }
 
 body {
