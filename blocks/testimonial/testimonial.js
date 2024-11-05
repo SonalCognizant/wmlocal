@@ -28,5 +28,5 @@ export default function decorate(block) {
   const hyperLink = document.createElement("a");
   hyperLink.classList.add("testimonial-link");
   hyperLink.textContent = `${link}`;
-  imageWrapperDiv.append(hyperLink);
+  ul.append(hyperLink);
 }
