@@ -30,6 +30,7 @@ export default function decorate(block) {
   console.log(link);
   const hyperLink = document.createElement("a");
   hyperLink.classList.add("testimonial-link");
+  hyperLink.setAttribute("href","#");
   hyperLink.textContent = `${link}`;
   parentElement.append(hyperLink);
 }
