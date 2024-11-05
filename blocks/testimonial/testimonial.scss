@@ -6,10 +6,11 @@
       display: flex;
       justify-content: space-between;
       gap: 30px;
+      padding-left: 0;
       li{
         width: 33.33%;
-        &::marker{
-          display: none;
+        list-style-type: none;
+        display: none;
           .testimonial-card::before{
             content: '"';
             font-size: 24px;
@@ -18,7 +19,6 @@
             display: block;
             transform: rotate(180deg);
             vertical-align: middle;
-          }
         }
       }
     }
