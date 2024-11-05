@@ -11,13 +11,23 @@
 .section.testimonial-container .testimonial ul li {
   width: 33.33%;
   list-style-type: none;
+  color: #4B4C4D;
 }
 .section.testimonial-container .testimonial ul li .testimonial-card::before {
   content: '"';
-  font-size: 24px;
-  color: grey;
+  font-size: 100px;
+  font-weight: bold;
+  color: #4A7390;
   margin-right: 10px;
-  display: block;
-  transform: rotate(180deg);
-  vertical-align: middle;
+  display: inline-block;
+  transform: rotate(175deg);
+}
+.section.testimonial-container .testimonial ul li h3 {
+  font-size: 32px;
+  font-weight: 700;
+}
+.section.testimonial-container .testimonial ul li p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
 }
