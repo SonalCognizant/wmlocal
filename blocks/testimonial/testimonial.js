@@ -2,7 +2,7 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function decorate(block) {
   /* change to ul, li */
-  console.log(block);
+  console.log(block.children[0].children[0].children[0].innerText,"hello world");
   const ul = document.createElement('ul');
   [...block.children].forEach((row, index) => {
     if (index < block.children.length-1 && index > 0) {
@@ -19,15 +19,13 @@ export default function decorate(block) {
   block.textContent = '';
   block.append(ul);
   const parentElement = block.parentElement;
-  let title = block.children[0].innerText;
-  console.log(title);
+  let title = block.children[0].children[0].children[0].innerText;
   const mainHeading = document.createElement("h2");
   mainHeading.classList.add("testimonial-heading");
   mainHeading.textContent = `${title}`;
   parentElement.prepend(mainHeading);
 
   let link = block.children[block.children.length - 1].innerText;
-  console.log(link);
   const hyperLink = document.createElement("a");
   hyperLink.classList.add("testimonial-link");
   hyperLink.setAttribute("href","#");
