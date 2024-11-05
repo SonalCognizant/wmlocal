@@ -2,27 +2,46 @@
 @import "../../styles/include/tokens.scss";
 .section.testimonial-container{
   .testimonial-wrapper{
-    padding: 120px 52px;
+    padding: $--spacing-max $--spacing-xxl;
     text-align: center;
+    @include for-tablet{
+      padding: $--spacing-jumbo $--spacing-xl;
+    }
+    @include for-mobile{
+      padding: $--spacing-huge $--spacing-m;
+    }
     h2{
       font-size: 32px;
       font-weight: 700;
-      color: #4A7390;
-      margin-bottom: 72px;
+      color: $--blue-550;
+      margin-bottom: $--spacing-huge;
       text-align: center;
+      @include for-tablet{
+        margin-bottom: $--spacing-xxl;
+      }
+      @include for-mobile{
+        margin-bottom: $--spacing-xl;
+      }
     }
     .testimonial-link{
-      font-size: 16px;
+      font-size: $--spacing-m;
       font-weight: 500;
-      color: #005589;
+      color: $--primary-675;
+      @include for-tablet{
+        margin-top: $--spacing-m;
+      }
+      @include for-mobile{
+        margin-top: $--spacing-s;
+      }
       &::after{
         content: "\2192";
-        border: 2px solid #005589;
-        border-radius: 50%;
-        padding: 2px 3px 3px 3px;
-        font-size: 10px;
+        border: 2px solid $--primary-675;
+        border-radius: 100%;
+        padding: 0 5px;
+        font-size: 14px;
         font-weight: bold;
         margin-left: 5px;
+        display: inline-block;
         text-decoration: none !important;
       }
     }
@@ -32,32 +51,54 @@
         justify-content: space-between;
         gap: 30px;
         padding-left: 0;
+        @include for-tablet{
+          display: unset;
+        }
         li{
           width: 33.33%;
           list-style-type: none;
           text-align: left;
-          color: #4B4C4D;
-          padding: 36px 36px 96px 36px;
+          color: $--gray-700;
+          padding: $--spacing-xl $--spacing-xl $--spacing-jumbo $--spacing-xl;
+          @include for-tablet{
+            width: 100%;
+            margin-bottom: $--spacing-xl;
+          }
+          @include for-mobile{
+            margin-bottom: $--spacing-l;
+          }
             .testimonial-card::before{
               content: '"';
               font-size: 100px;
               font-weight: bold;
-              color: #4A7390;
+              color: $--blue-550;
               display: inline-block;
               transform: rotate(175deg);
           }
           h3{
             font-size: 32px;
             font-weight: 700;
-            margin: 36px 0 24px 0;
+            margin: $--spacing-xl 0 $--spacing-l 0;
           }
           p{
-            font-size: 16px;
-            line-height: 24px;
+            font-size: $--spacing-m;
+            line-height: $--spacing-l;
             font-weight: 400;
+          }
+          &:last-child{
+            @include for-tablet{
+              margin-bottom: $--spacing-xxl;
+            }
+            @include for-mobile{
+              margin-bottom: $--spacing-xl;
+            }
           }
         }
       }
     }
   }
+}
+// max-width: 480px;
+@include for-mobile{
+
 }
