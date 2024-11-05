@@ -5,10 +5,12 @@ h1 {
   font-family: var(--heading-font-family);
   font-size: 32px;
   font-weight: 700;
+  font-style: 700;
   line-height: 33px;
   color: $--gray-700;
   opacity: 1;
   text-align: left;
+  letter-spacing: 0px;
   @include for-nonmobile {
     font-size: 40px;
     font-weight: 500;
@@ -24,6 +26,8 @@ h2 {
   color: $--gray-700;
   opacity: 1;
   text-align: left;
+  letter-spacing: 0px;
+  font-style: 700;
   @include for-nonmobile {
     font-size: 32px;
     font-weight: 700;
@@ -35,20 +39,24 @@ h3 {
   font-family: var(--heading-font-family);
   font-size: 24px;
   font-weight: bold;
+  font-style: bold;
   line-height: 24px;
   color: $--gray-700;
   opacity: 1;
   text-align: left;
+  letter-spacing: 0px;
 }
 
 h4 {
   font-family: var(--heading-font-family);
   font-size: 20px;
   font-weight: bold;
+  font-style: bold;
   line-height: 21px;
   color: $--gray-700;
   opacity: 1;
   text-align: left;
+  letter-spacing: 0px;
 }
 
 body {
