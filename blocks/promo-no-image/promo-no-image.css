@@ -87,19 +87,16 @@
 @media (min-width: 1379px) {
   .promo-no-image-container .promo-no-image > ul > li {
     width: calc((100% - 104px) / 4);
-    padding: 24px;
   }
 }
 @media (min-width: 1200px) and (max-width: 1379px) {
   .promo-no-image-container .promo-no-image > ul > li {
     width: calc((100% - 104px) / 4);
-    padding: 24px;
   }
 }
 @media (min-width: 1023px) and (max-width: 1200px) {
   .promo-no-image-container .promo-no-image > ul > li {
     width: calc((100% - 72px) / 3);
-    padding: 24px;
   }
 }
 @media (min-width: 480px) and (max-width: 1023px) {
