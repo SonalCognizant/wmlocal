@@ -70,7 +70,7 @@
 }
 @media (min-width: 480px) and (max-width: 1023px) {
   .section.testimonial-container .testimonial-wrapper .testimonial ul {
-    display: unset;
+    flex-direction: column;
   }
 }
 .section.testimonial-container .testimonial-wrapper .testimonial ul li {
