@@ -74,19 +74,16 @@
             margin-bottom: $--spacing-l;
           }
           @include for-xlarge {
-            width: calc((100% - 104px) / 4);
-            padding: 24px;
+            width: calc((100% - 104px) / 3);
           }
           @include for-large {
-            width: calc((100% - 104px) / 4);
-            padding: 24px;
+            width: calc((100% - 104px) / 3);
           }
           @include for-laptop {
-            width: calc((100% - 72px) / 3);
-            padding: 24px;
+            width: calc((100% - 72px) / 2);
           }
           @include for-tablet {
-            flex-basis: calc((100% - 72px) / 2);
+            flex-basis: calc((100% - 72px) / 1);
           }
             .testimonial-card::before{
               content: '"';
