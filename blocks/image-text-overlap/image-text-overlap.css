@@ -114,11 +114,10 @@
 .image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols.block h2 {
   color: #4a7390;
   width: 100%;
-  font-family: var(--body-font-family);
+  font-family: museo, sans-serif;
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 700;
   opacity: 1;
-  font-style: 700;
   letter-spacing: 0px;
   text-align: left;
   margin-top: 0;
@@ -132,7 +131,7 @@
 }
 .image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols.block p {
   color: #4b4c4d;
-  font-family: var(--body-font-family);
+  font-family: roboto, sans-serif;
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
