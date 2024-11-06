@@ -1,7 +1,7 @@
 /* stylelint-disable max-line-length */
 
 @font-face {
-  font-family: roboto;
+  font-family: 'roboto';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -12,7 +12,7 @@
 }
 
 @font-face {
-  font-family: roboto;
+  font-family: 'roboto';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -23,7 +23,7 @@
 }
 
 @font-face {
-  font-family: roboto;
+  font-family: 'roboto';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -34,7 +34,7 @@
 }
 
 @font-face {
-  font-family: museo;
+  font-family: 'museo';
   src: url('../fonts/museo/Museo_Slab_700-webfont.woff2') format('woff2'),
     url('../fonts/museo/Museo_Slab_700-webfont.woff') format('woff');
   font-weight: 700;
@@ -42,7 +42,7 @@
 }
 
 @font-face {
-  font-family: museo;
+  font-family: 'museo';
   src: url('../fonts/museo/Museo_Slab_300-webfont.woff2') format('woff2'),
     url('../fonts/museo/Museo_Slab_300-webfont.woff') format('woff');
   font-weight: 300;
