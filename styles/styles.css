@@ -23,7 +23,7 @@ button {
   box-sizing: border-box;
   max-width: 100%;
   border-radius: 2px;
-  font-family: var(--body-font-family);
+  font-family: roboto, sans-serif;
   color: #005589;
   font-size: 18px;
   font-weight: 500;
