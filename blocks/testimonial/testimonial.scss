@@ -73,6 +73,21 @@
             width: 100%;
             margin-bottom: $--spacing-l;
           }
+          @include for-xlarge {
+            width: calc((100% - 104px) / 4);
+            padding: 24px;
+          }
+          @include for-large {
+            width: calc((100% - 104px) / 4);
+            padding: 24px;
+          }
+          @include for-laptop {
+            width: calc((100% - 72px) / 3);
+            padding: 24px;
+          }
+          @include for-tablet {
+            flex-basis: calc((100% - 72px) / 2);
+          }
             .testimonial-card::before{
               content: '"';
               font-size: 100px;

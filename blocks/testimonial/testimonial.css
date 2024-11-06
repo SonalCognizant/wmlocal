@@ -97,6 +97,29 @@
     margin-bottom: 24px;
   }
 }
+@media (min-width: 1379px) {
+  .section.testimonial-container .testimonial-wrapper .testimonial ul li {
+    width: calc((100% - 104px) / 4);
+    padding: 24px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1379px) {
+  .section.testimonial-container .testimonial-wrapper .testimonial ul li {
+    width: calc((100% - 104px) / 4);
+    padding: 24px;
+  }
+}
+@media (min-width: 1023px) and (max-width: 1200px) {
+  .section.testimonial-container .testimonial-wrapper .testimonial ul li {
+    width: calc((100% - 72px) / 3);
+    padding: 24px;
+  }
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .section.testimonial-container .testimonial-wrapper .testimonial ul li {
+    flex-basis: calc((100% - 72px) / 2);
+  }
+}
 .section.testimonial-container .testimonial-wrapper .testimonial ul li .testimonial-card::before {
   content: '"';
   font-size: 100px;
