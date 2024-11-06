@@ -56,6 +56,9 @@
         @include for-tablet{
           flex-direction: column;
         }
+        @include for-mobile{
+          flex-direction: column;
+        }
         li{
           width: 33.33%;
           list-style-type: none;
@@ -67,6 +70,7 @@
             margin-bottom: $--spacing-xl;
           }
           @include for-mobile{
+            width: 100%;
             margin-bottom: $--spacing-l;
           }
             .testimonial-card::before{
