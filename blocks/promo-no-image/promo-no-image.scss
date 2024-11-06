@@ -1,27 +1,29 @@
-@import "../../styles/include/mq.scss";
-@import "../../styles/include/tokens.scss";
+@import '../../styles/include/mq.scss';
+@import '../../styles/include/tokens.scss';
 .promo-no-image-container {
-  .promo-no-image-heading{
+  .promo-no-image-heading {
     text-align: center;
     color: $--blue-550;
     font-weight: 700;
     font-size: 32px;
     margin: 0;
+    font-family: $--font-museo;
+    font-style: normal;
     @include for-mobile {
-        padding-top: 72px;
-      }
-      @include for-tablet {
-        padding-top: 96px;
-      }
-      @include for-xlarge {
-        padding-top: 120px;
-      }
-      @include for-large {
-        padding-top: 120px;
-      }
-      @include for-laptop {
-        padding-top: 120px;
-      }
+      padding-top: 72px;
+    }
+    @include for-tablet {
+      padding-top: 96px;
+    }
+    @include for-xlarge {
+      padding-top: 120px;
+    }
+    @include for-large {
+      padding-top: 120px;
+    }
+    @include for-laptop {
+      padding-top: 120px;
+    }
   }
 
   .promo-no-image {
@@ -89,7 +91,7 @@
         .cards-card-body {
           h3 {
             font-weight: 700;
-            font-family: var(--body-font-family);
+            font-family: $--font-roboto;
             line-height: 24px;
             font-size: 20px;
             color: $--blue-675;
@@ -98,7 +100,7 @@
           }
           p {
             font-weight: 400;
-            font-family: var(--body-font-family);
+            font-family: $--font-roboto;
             line-height: 24px;
             font-size: 16px;
             color: $--gray-700;

@@ -17,18 +17,20 @@
   color: #ffffff;
   text-align: center;
   font-weight: 700;
+  font-style: normal;
   font-size: 32px;
   margin: 0;
+  font-family: museo, sans-serif;
 }
 @media (max-width: 480px) {
   .promo-image-container .promo-image-heading {
-    color: black;
+    color: #4a7390;
     padding-top: 72px;
   }
 }
 @media (min-width: 480px) and (max-width: 1023px) {
   .promo-image-container .promo-image-heading {
-    color: black;
+    color: #4a7390;
     padding-top: 96px;
   }
 }
@@ -46,6 +48,10 @@
   .promo-image-container .promo-image-heading {
     padding-top: 120px;
   }
+}
+.promo-image-container .promo-image {
+  max-width: 1275px;
+  margin: auto;
 }
 .promo-image-container .promo-image > ul {
   list-style: none;
@@ -126,7 +132,7 @@
 }
 .promo-image-container .promo-image > ul > li .cards-card-body h3 {
   font-weight: 700;
-  font-family: var(--body-font-family);
+  font-family: roboto, sans-serif;
   line-height: 24px;
   font-size: 20px;
   color: #005589;
@@ -135,7 +141,7 @@
 }
 .promo-image-container .promo-image > ul > li .cards-card-body p {
   font-weight: 400;
-  font-family: var(--body-font-family);
+  font-family: roboto, sans-serif;
   line-height: 24px;
   font-size: 16px;
   color: #4b4c4d;
