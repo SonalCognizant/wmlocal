@@ -50,7 +50,7 @@
     .testimonial {
       ul{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         gap: 30px;
         padding-left: 0;
         @include for-tablet{
