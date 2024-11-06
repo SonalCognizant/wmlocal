@@ -9,6 +9,7 @@
   font-size: 32px;
   margin: 0;
   font-family: museo, sans-serif;
+  font-style: normal;
 }
 @media (max-width: 480px) {
   .promo-no-image-container .promo-no-image-heading {

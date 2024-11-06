@@ -8,6 +8,7 @@
     font-size: 32px;
     margin: 0;
     font-family: $--font-museo;
+    font-style: normal;
     @include for-mobile {
       padding-top: 72px;
     }
