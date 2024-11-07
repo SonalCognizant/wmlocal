@@ -1,0 +1,35 @@
+@import '../../styles/include/mq.scss';
+@import '../../styles/include/tokens.scss';
+.footer-main {
+  @include for-mobile {
+    padding: 72px 16px 52px 16px;
+  }
+  @include for-tablet {
+    padding: 72px 36px 52px 36px;
+  }
+  @include for-xlarge {
+    padding: 72px 52px 36px 52px;
+  }
+  @include for-large {
+    padding: 72px 52px 36px 52px;
+  }
+  @include for-laptop {
+    padding: 72px 36px 52px 36px;
+  }
+  > div > div > ul {
+    list-style: none;
+    margin: 0px;
+    display: flex;
+    gap: 52px;
+    padding: 0px;
+    padding-top: 36px;
+    @include for-mobile {
+      flex-direction: column;
+      gap: 24px;
+    }
+    @include for-tablet {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+}

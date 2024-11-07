@@ -1,0 +1,49 @@
+/* wellmark color start */
+/* wellmark color end */
+/* wellmark spacing size start */
+/* wellmark spacing size start */
+@media (max-width: 480px) {
+  .footer-main {
+    padding: 72px 16px 52px 16px;
+  }
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .footer-main {
+    padding: 72px 36px 52px 36px;
+  }
+}
+@media (min-width: 1379px) {
+  .footer-main {
+    padding: 72px 52px 36px 52px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1379px) {
+  .footer-main {
+    padding: 72px 52px 36px 52px;
+  }
+}
+@media (min-width: 1023px) and (max-width: 1200px) {
+  .footer-main {
+    padding: 72px 36px 52px 36px;
+  }
+}
+.footer-main > div > div > ul {
+  list-style: none;
+  margin: 0px;
+  display: flex;
+  gap: 52px;
+  padding: 0px;
+  padding-top: 36px;
+}
+@media (max-width: 480px) {
+  .footer-main > div > div > ul {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .footer-main > div > div > ul {
+    flex-direction: column;
+    gap: 24px;
+  }
+}

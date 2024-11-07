@@ -1,11 +1,9 @@
-import { getMetadata } from '../../scripts/aem.js';
-import { loadFragment } from '../fragment/fragment.js';
-
-/**
- * loads and decorates the footer
- * @param {Element} block The footer block element
- */
-export default async function decorate(block) {
+// import logo from "../../images/footer-main/WellmarkLogo.png"
+export default function decorate(block) {
+  // console.log(block,"block")
+  // console.log(logo,"logo");
+  const footerMain= block.children[1].classList.add("contact-div");
+  // console.log(footerMain,"addclass");
   // load footer as fragment
   // console.log(block);
   // [...block.children].forEach((row, index) => {
@@ -21,6 +19,4 @@ export default async function decorate(block) {
   // block.textContent = '';
   // const footer = document.createElement('div');
   // while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
-
-  return block
 }
