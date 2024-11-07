@@ -126,6 +126,7 @@
 }
 .promo-image-container .promo-image > ul > li .cards-card-image {
   line-height: 0;
+  width: 100%;
 }
 .promo-image-container .promo-image > ul > li .cards-card-image img {
   width: 100%;
