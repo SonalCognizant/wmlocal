@@ -2,6 +2,7 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
+<<<<<<< HEAD
 h1 {
   font-family: var(--heading-font-family);
   font-size: 32px;
@@ -10,6 +11,37 @@ h1 {
   color: #4b4c4d;
   opacity: 1;
   text-align: left;
+=======
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #4b4c4d;
+  opacity: 1;
+  text-align: left;
+  letter-spacing: 0px;
+}
+
+h1,
+h2 {
+  font-family: museo, sans-serif;
+  font-weight: 700;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: roboto, sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 33px;
+>>>>>>> 1c77dc78173efce0a6776ccdc9652e583c54c146
 }
 @media (min-width: 480px) {
   h1 {
@@ -20,6 +52,7 @@ h1 {
 }
 
 h2 {
+<<<<<<< HEAD
   font-family: var(--heading-font-family);
   font-size: 28px;
   font-weight: 700;
@@ -27,16 +60,24 @@ h2 {
   color: #4b4c4d;
   opacity: 1;
   text-align: left;
+=======
+  font-size: 28px;
+  line-height: 28px;
+>>>>>>> 1c77dc78173efce0a6776ccdc9652e583c54c146
 }
 @media (min-width: 480px) {
   h2 {
     font-size: 32px;
+<<<<<<< HEAD
     font-weight: 700;
+=======
+>>>>>>> 1c77dc78173efce0a6776ccdc9652e583c54c146
     line-height: 31px;
   }
 }
 
 h3 {
+<<<<<<< HEAD
   font-family: var(--heading-font-family);
   font-size: 24px;
   font-weight: bold;
@@ -61,4 +102,32 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+=======
+  font-size: 24px;
+  line-height: 24px;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 21px;
+}
+
+body {
+  font-family: roboto, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+/* links */
+a:any-link {
+  color: #005589;
+  text-decoration: underline;
+  word-break: break-word;
+  padding: 0;
+}
+
+.background-blue-50 {
+  background-color: #f3f9ff;
+>>>>>>> 1c77dc78173efce0a6776ccdc9652e583c54c146
 }

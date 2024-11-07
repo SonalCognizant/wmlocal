@@ -14,7 +14,7 @@ import {
   loadCSS,
   sampleRUM,
 } from './aem.js';
-
+import { decorateExternalImages } from './externalImage.js';
 /**
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
@@ -52,7 +52,6 @@ function autolinkModals(doc) {
     }
   });
 }
-
 /**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
@@ -78,6 +77,8 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  decorateExternalImages(main);
+  decorateExternalImages(main, '//External Image//');
 }
 
 /**

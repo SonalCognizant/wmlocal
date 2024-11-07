@@ -1,18 +1,29 @@
 @import '../../styles/include/mq.scss';
 @import '../../styles/include/tokens.scss';
-.promo-no-image-container {
-  .promo-no-image-heading {
+.promo-image-container {
+  .promo-image-wrapper {
+    @include for-mobile {
+      background-image: none !important;
+    }
+    @include for-tablet {
+      background-image: none !important;
+    }
+  }
+  .promo-image-heading {
     text-align: center;
-    color: $--blue-550;
+    color: $--white;
+    text-align: center;
     font-weight: 700;
+    font-style: normal;
     font-size: 32px;
     margin: 0;
     font-family: $--font-museo;
-    font-style: normal;
     @include for-mobile {
+      color: $--blue-550;
       padding-top: 72px;
     }
     @include for-tablet {
+      color: $--blue-550;
       padding-top: 96px;
     }
     @include for-xlarge {
@@ -26,7 +37,9 @@
     }
   }
 
-  .promo-no-image {
+  .promo-image {
+    max-width: 1275px;
+    margin: auto;
     > ul {
       list-style: none;
       display: flex;
@@ -34,7 +47,6 @@
       justify-content: center;
       text-align: center;
       flex-direction: column;
-      margin: 0;
       @include for-mobile {
         padding: 36px 16px 72px 16px;
       }
@@ -55,8 +67,8 @@
       }
       @include for-tablet {
         padding: 52px 36px 96px 36px;
-        flex-wrap: wrap;
         gap: 30px;
+        flex-wrap: wrap;
       }
       > li {
         background-color: var(--background-color);
@@ -65,15 +77,15 @@
         flex-direction: column;
         @include for-xlarge {
           width: calc((100% - 104px) / 4);
-          // padding: 24px;
+          //   padding: 24px;
         }
         @include for-large {
           width: calc((100% - 104px) / 4);
-          // padding: 24px;
+          //   padding: 24px;
         }
         @include for-laptop {
           width: calc((100% - 72px) / 3);
-          // padding: 24px;
+          //   padding: 24px;
         }
         @include for-tablet {
           flex-basis: calc((100% - 72px) / 2);

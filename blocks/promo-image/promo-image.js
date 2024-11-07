@@ -1,15 +1,20 @@
 import { createOptimizedPicture } from "../../scripts/aem.js";
 export default function decorate(block) {
   /* change to ul, li */
-  let title = block.children[0].innerText;
+  let backgroundImage = block.children[0].innerText;
+  let title = block.children[1].innerText;
   const ul = document.createElement("ul");
   const imageWrapperDiv = block.parentElement;
+  imageWrapperDiv.style.backgroundImage = `url(${backgroundImage})`;
+  imageWrapperDiv.style.backgroundSize = "cover";
+  imageWrapperDiv.style.backgroundPosition = "center";
+  imageWrapperDiv.style.backgroundRepeat = "no-repeat";
   const mainHeading = document.createElement("h3");
-  mainHeading.classList.add("promo-no-image-heading");
+  mainHeading.classList.add("promo-image-heading");
   mainHeading.textContent = `${title}`;
   imageWrapperDiv.prepend(mainHeading);
   [...block.children].forEach((row, index) => {
-    if (index > 0) {
+    if (index > 1) {
       const li = document.createElement("li");
       while (row.firstElementChild) li.append(row.firstElementChild);
       [...li.children].forEach((div) => {

@@ -1,14 +1,35 @@
-@import "mq";
-@import "tokens";
+@import 'mq';
+@import 'tokens';
 
-h1 {
-  font-family: var(--heading-font-family);
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 33px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: $--gray-700;
   opacity: 1;
   text-align: left;
+  letter-spacing: 0px;
+}
+h1,
+h2 {
+  font-family: $--font-museo;
+  font-weight: 700;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: $--font-roboto;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 33px;
+
   @include for-nonmobile {
     font-size: 40px;
     font-weight: 500;
@@ -17,43 +38,40 @@ h1 {
 }
 
 h2 {
-  font-family: var(--heading-font-family);
   font-size: 28px;
-  font-weight: 700;
   line-height: 28px;
-  color: $--gray-700;
-  opacity: 1;
-  text-align: left;
+
   @include for-nonmobile {
     font-size: 32px;
-    font-weight: 700;
     line-height: 31px;
   }
 }
 
 h3 {
-  font-family: var(--heading-font-family);
   font-size: 24px;
-  font-weight: bold;
   line-height: 24px;
-  color: $--gray-700;
-  opacity: 1;
-  text-align: left;
 }
 
 h4 {
-  font-family: var(--heading-font-family);
   font-size: 20px;
-  font-weight: bold;
   line-height: 21px;
-  color: $--gray-700;
-  opacity: 1;
-  text-align: left;
 }
 
 body {
-  font-family: var(--body-font-family);
+  font-family: $--font-roboto;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+}
+
+/* links */
+a:any-link {
+  color: $--primary-675;
+  text-decoration: underline;
+  word-break: break-word;
+  padding: 0;
+}
+
+.background-blue-50 {
+  background-color: $--blue-50;
 }
