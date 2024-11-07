@@ -1,4 +1,4 @@
-import logo from "../../images/footer-main/WellmarkLogo.png"
+// import logo from "../../images/footer-main/WellmarkLogo.png"
 export default function decorate(block) {
   console.log(block,"block")
   console.log(logo,"logo");
