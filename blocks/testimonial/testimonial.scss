@@ -85,14 +85,6 @@
           @include for-tablet {
             flex-basis: calc((100% - 72px) / 1);
           }
-            .testimonial-card::before{
-              content: '"';
-              font-size: 100px;
-              font-weight: bold;
-              color: $--blue-550;
-              display: inline-block;
-              transform: rotate(175deg);
-          }
           h3{
             font-size: 32px;
             line-height: 38px;
@@ -112,6 +104,14 @@
               margin-bottom: $--spacing-xl;
             }
           }
+        }
+        .testimonial-card::before{
+          content: '"';
+          font-size: 100px;
+          font-weight: bold;
+          color: $--blue-550;
+          display: inline-block;
+          transform: rotate(175deg);
         }
       }
     }

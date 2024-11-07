@@ -117,14 +117,6 @@
     flex-basis: calc((100% - 72px) / 1);
   }
 }
-.section.testimonial-container .testimonial-wrapper .testimonial ul li .testimonial-card::before {
-  content: '"';
-  font-size: 100px;
-  font-weight: bold;
-  color: #4a7390;
-  display: inline-block;
-  transform: rotate(175deg);
-}
 .section.testimonial-container .testimonial-wrapper .testimonial ul li h3 {
   font-size: 32px;
   line-height: 38px;
@@ -145,4 +137,12 @@
   .section.testimonial-container .testimonial-wrapper .testimonial ul li:last-child {
     margin-bottom: 36px;
   }
+}
+.section.testimonial-container .testimonial-wrapper .testimonial ul .testimonial-card::before {
+  content: '"';
+  font-size: 100px;
+  font-weight: bold;
+  color: #4a7390;
+  display: inline-block;
+  transform: rotate(175deg);
 }
