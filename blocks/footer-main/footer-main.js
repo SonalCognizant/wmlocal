@@ -1,7 +1,7 @@
 // import logo from "../../images/footer-main/WellmarkLogo.png"
 export default function decorate(block) {
   console.log(block,"block")
-  console.log(logo,"logo");
+  // console.log(logo,"logo");
   const footerMain= block.children[1].classList.add("contact-div");
   console.log(footerMain,"addclass");
   // load footer as fragment
