@@ -1,6 +1,7 @@
 @import "../../styles/include/mq.scss";
 @import "../../styles/include/tokens.scss";
 .section.testimonial-container{
+  font-family: $--font-roboto;
   .testimonial-wrapper{
     padding: $--spacing-max $--spacing-xxl;
     text-align: center;
@@ -11,6 +12,7 @@
       padding: $--spacing-huge $--spacing-m;
     }
     h2{
+      font-family: $--font-museo;
       font-size: 32px;
       line-height: 38px;
       font-weight: 700;
@@ -86,6 +88,7 @@
             flex-basis: calc((100% - 72px) / 1);
           }
           h3{
+            font-family: $--font-museo;
             font-size: 32px;
             line-height: 38px;
             font-weight: 700;
