@@ -55,17 +55,14 @@
           flex-direction: column;
         }
         li{
-          width: 33.33%;
           list-style-type: none;
           text-align: left;
           color: $--gray-700;
           padding: $--spacing-xl $--spacing-xl $--spacing-jumbo $--spacing-xl;
           @include for-tablet{
-            width: 100%;
             margin-bottom: $--spacing-xl;
           }
           @include for-mobile{
-            width: 100%;
             margin-bottom: $--spacing-l;
           }
           @include for-xlarge {

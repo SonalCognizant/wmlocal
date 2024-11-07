@@ -75,7 +75,6 @@
   }
 }
 .section.testimonial-container .testimonial-wrapper .testimonial ul li {
-  width: 33.33%;
   list-style-type: none;
   text-align: left;
   color: #4b4c4d;
@@ -83,13 +82,11 @@
 }
 @media (min-width: 480px) and (max-width: 1023px) {
   .section.testimonial-container .testimonial-wrapper .testimonial ul li {
-    width: 100%;
     margin-bottom: 36px;
   }
 }
 @media (max-width: 480px) {
   .section.testimonial-container .testimonial-wrapper .testimonial ul li {
-    width: 100%;
     margin-bottom: 24px;
   }
 }
