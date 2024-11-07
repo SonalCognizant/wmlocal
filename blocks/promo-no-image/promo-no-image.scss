@@ -1,6 +1,25 @@
 @import '../../styles/include/mq.scss';
 @import '../../styles/include/tokens.scss';
 .promo-no-image-container {
+  .promo-image-wrapper {
+    @include for-mobile {
+      background-image: none !important;
+      padding: 0 16px;
+    }
+    @include for-tablet {
+      background-image: none !important;
+      padding: 0 36px;
+    }
+    @include for-xlarge {
+      padding: 0 52px;
+    }
+    @include for-large {
+      padding: 0 52px;
+    }
+    @include for-laptop {
+      padding: 0 36px;
+    }
+  }
   .promo-no-image-heading {
     text-align: center;
     color: $--blue-550;
@@ -8,12 +27,15 @@
     font-size: 32px;
     margin: 0;
     font-family: $--font-museo;
-    font-style: normal;
+    font-style: 700;
+    opacity: 1;
     @include for-mobile {
       padding-top: 72px;
+      font-size: 28px;
     }
     @include for-tablet {
       padding-top: 96px;
+      font-size: 28px;
     }
     @include for-xlarge {
       padding-top: 120px;
@@ -80,7 +102,7 @@
         }
         .cards-card-image {
           line-height: 0;
-
+          width: 100%;
           img {
             width: 100%;
             aspect-ratio: 4 / 3;

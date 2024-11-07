@@ -4,9 +4,20 @@
   .promo-image-wrapper {
     @include for-mobile {
       background-image: none !important;
+      padding: 0 16px;
     }
     @include for-tablet {
       background-image: none !important;
+      padding: 0 36px;
+    }
+    @include for-xlarge {
+      padding: 0 52px;
+    }
+    @include for-large {
+      padding: 0 52px;
+    }
+    @include for-laptop {
+      padding: 0 36px;
     }
   }
   .promo-image-heading {
@@ -14,17 +25,19 @@
     color: $--white;
     text-align: center;
     font-weight: 700;
-    font-style: normal;
+    font-style: 700;
     font-size: 32px;
     margin: 0;
     font-family: $--font-museo;
     @include for-mobile {
       color: $--blue-550;
       padding-top: 72px;
+      font-size: 28px;
     }
     @include for-tablet {
       color: $--blue-550;
       padding-top: 96px;
+      font-size: 28px;
     }
     @include for-xlarge {
       padding-top: 120px;
@@ -92,14 +105,13 @@
         }
         .cards-card-image {
           line-height: 0;
-
+          width: 100%;
           img {
             width: 100%;
             aspect-ratio: 4 / 3;
             object-fit: cover;
           }
         }
-
         .cards-card-body {
           h3 {
             font-weight: 700;
