@@ -1,0 +1,64 @@
+/* wellmark color start */
+/* wellmark color end */
+/* wellmark spacing size start */
+/* wellmark spacing size start */
+h1 {
+  font-family: var(--heading-font-family);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 33px;
+  color: #4b4c4d;
+  opacity: 1;
+  text-align: left;
+}
+@media (min-width: 480px) {
+  h1 {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 47px;
+  }
+}
+
+h2 {
+  font-family: var(--heading-font-family);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #4b4c4d;
+  opacity: 1;
+  text-align: left;
+}
+@media (min-width: 480px) {
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 31px;
+  }
+}
+
+h3 {
+  font-family: var(--heading-font-family);
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #4b4c4d;
+  opacity: 1;
+  text-align: left;
+}
+
+h4 {
+  font-family: var(--heading-font-family);
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 21px;
+  color: #4b4c4d;
+  opacity: 1;
+  text-align: left;
+}
+
+body {
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
