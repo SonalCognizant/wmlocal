@@ -9,16 +9,19 @@
   font-size: 32px;
   margin: 0;
   font-family: museo, sans-serif;
-  font-style: normal;
+  font-style: 700;
+  opacity: 1;
 }
 @media (max-width: 480px) {
   .promo-no-image-container .promo-no-image-heading {
     padding-top: 72px;
+    font-size: 28px;
   }
 }
 @media (min-width: 480px) and (max-width: 1023px) {
   .promo-no-image-container .promo-no-image-heading {
     padding-top: 96px;
+    font-size: 28px;
   }
 }
 @media (min-width: 1379px) {

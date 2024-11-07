@@ -17,7 +17,7 @@
   color: #ffffff;
   text-align: center;
   font-weight: 700;
-  font-style: normal;
+  font-style: 700;
   font-size: 32px;
   margin: 0;
   font-family: museo, sans-serif;
@@ -26,12 +26,14 @@
   .promo-image-container .promo-image-heading {
     color: #4a7390;
     padding-top: 72px;
+    font-size: 28px;
   }
 }
 @media (min-width: 480px) and (max-width: 1023px) {
   .promo-image-container .promo-image-heading {
     color: #4a7390;
     padding-top: 96px;
+    font-size: 28px;
   }
 }
 @media (min-width: 1379px) {
