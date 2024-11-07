@@ -139,8 +139,9 @@
   }
 }
 .section.testimonial-container .testimonial-wrapper .testimonial ul .testimonial-card::before {
-  content: '"';
+  content: "";
   font-size: 100px;
+  background-image: url("../images/testimonial/double-quotes.png");
   font-weight: bold;
   color: #4a7390;
   display: inline-block;
