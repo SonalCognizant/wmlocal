@@ -25,9 +25,11 @@
     padding-top: 36px;
     @include for-mobile {
       flex-direction: column;
+      gap: 24px;
     }
     @include for-tablet {
       flex-direction: column;
+      gap: 24px;
     }
   }
 }

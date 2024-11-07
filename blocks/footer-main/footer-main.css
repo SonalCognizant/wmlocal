@@ -38,10 +38,12 @@
 @media (max-width: 480px) {
   .footer-main > div > div > ul {
     flex-direction: column;
+    gap: 24px;
   }
 }
 @media (min-width: 480px) and (max-width: 1023px) {
   .footer-main > div > div > ul {
     flex-direction: column;
+    gap: 24px;
   }
 }
