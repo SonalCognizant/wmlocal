@@ -5,8 +5,8 @@ export default function decorate(block) {
   const parentElement = block.parentElement;
   const ul = document.createElement('ul');
   let title = block.children[0].children[0].children[0].innerText;
-  console.log(title);
-  console.log(block.children[0].innerText);
+  console.log(title,"title");
+  console.log(block.children[0].innerText,"innerText");
   //prepend the title
   const mainHeading = document.createElement("h2");
   mainHeading.classList.add("testimonial-heading");
