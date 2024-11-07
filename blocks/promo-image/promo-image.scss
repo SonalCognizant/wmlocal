@@ -4,9 +4,20 @@
   .promo-image-wrapper {
     @include for-mobile {
       background-image: none !important;
+      padding: 0 16px;
     }
     @include for-tablet {
       background-image: none !important;
+      padding: 0 36px;
+    }
+    @include for-xlarge {
+      padding: 0 52px;
+    }
+    @include for-large {
+      padding: 0 52px;
+    }
+    @include for-laptop {
+      padding: 0 36px;
     }
   }
   .promo-image-heading {
