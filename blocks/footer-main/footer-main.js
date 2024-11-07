@@ -1,11 +1,7 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 import {logo} from "../../images/footer-main/WellmarkLogo.png"
-/**
- * loads and decorates the footer
- * @param {Element} block The footer block element
- */
-export default async function decorate(block) {
+export default function decorate(block) {
   console.log(block,"block")
   console.log(logo,"logo");
   const footerMain= block.children[1].classList.add("contact-div");
