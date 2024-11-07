@@ -1,5 +1,3 @@
-import { getMetadata } from '../../scripts/aem.js';
-import { loadFragment } from '../fragment/fragment.js';
 import logo from "../../images/footer-main/WellmarkLogo.png"
 export default function decorate(block) {
   console.log(block,"block")
