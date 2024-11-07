@@ -1,3 +1,5 @@
+@import '../../styles/include/mq.scss';
+@import '../../styles/include/tokens.scss';
 .footer-main {
   @include for-mobile {
     padding: 72px 16px 52px 16px;
@@ -21,5 +23,11 @@
     gap: 52px;
     padding: 0px;
     padding-top: 36px;
+    @include for-mobile {
+      flex-direction: column;
+    }
+    @include for-tablet {
+      flex-direction: column;
+    }
   }
 }
