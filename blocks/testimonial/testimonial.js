@@ -1,35 +1,61 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
-
 export default function decorate(block) {
-  /* change to ul, li */
+  // Get the parent element and create a new unordered list
   const parentElement = block.parentElement;
   const ul = document.createElement('ul');
-  let title = block.children[0].children[0].children[0].innerText;
-  //prepend the title
+
+  // Get the title from the first child and prepend it
+  const title = block.children[0].innerText;
   const mainHeading = document.createElement("h2");
   mainHeading.classList.add("testimonial-heading");
-  mainHeading.textContent = `${title}`;
+  mainHeading.textContent = title;
   parentElement.prepend(mainHeading);
-  //append the link
-  let link = block.children[block.children.length - 1].innerText;
+
+  // Get the link from the last child and append it
+  const linkDiv = document.createElement("div");
+  const link = block.children[block.children.length - 1].innerText;
   const hyperLink = document.createElement("a");
   hyperLink.classList.add("testimonial-link");
-  hyperLink.setAttribute("href","#");
-  hyperLink.textContent = `${link}`;
-  parentElement.append(hyperLink);
+  hyperLink.textContent = link;
+  linkDiv.append(hyperLink);
+
+  // get the image for the link
+  const linkImg = document.createElement("img");
+  linkImg.src = '/icons/right-arrow.svg';
+  linkImg.setAttribute('data-icon-name','right-arrow');
+  linkImg.setAttribute('loading','eager');
+  linkImg.className = 'link-img';
+  linkDiv.append(linkImg);
+  parentElement.append(linkDiv);
+
+  // Process the remaining children to create list items
   [...block.children].forEach((row, index) => {
-    if (index < block.children.length-1 && index > 0) {
+    if (index < block.children.length - 1 && index > 0) {
       const li = document.createElement('li');
       while (row.firstElementChild) li.append(row.firstElementChild);
-      [...li.children].forEach((div) => {
-        if (div.children.length === 1 && div.querySelector('picture')) div.className = 'testimonial-image';
-        else div.className = 'testimonial-card';
-      });
+
+      // Set class for the list item
+      li.className = 'testimonial-card';
+
+      // get the image from the icon and append it to the list
+      const imgTag = document.createElement('img');
+      imgTag.src = '/icons/quote.svg';
+      imgTag.setAttribute('data-icon-name','quote');
+      imgTag.setAttribute('loading','eager');
+
+      //setAttribute for the header
+      const hTag = li.querySelector('h3');
+      hTag.className = 'testimonial-title';
+
+      //setAttribute for the paragraph
+      const pTag = li.querySelector('p');
+      pTag.className = 'testimonial-description';
+
+      li.prepend(imgTag);
       ul.append(li);
     }
   });
-  ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
+
+  // Clear the original block content and append the new list
   block.textContent = '';
   block.append(ul);
-  
 }
