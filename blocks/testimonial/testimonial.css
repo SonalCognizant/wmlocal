@@ -1,8 +1,10 @@
-@charset "UTF-8";
 /* wellmark color start */
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
+.section.testimonial-container {
+  font-family: roboto, sans-serif;
+}
 .section.testimonial-container .testimonial-wrapper {
   padding: 120px 52px;
   text-align: center;
@@ -18,6 +20,7 @@
   }
 }
 .section.testimonial-container .testimonial-wrapper h2 {
+  font-family: museo, sans-serif;
   font-size: 32px;
   line-height: 38px;
   font-weight: 700;
@@ -51,16 +54,9 @@
     margin-top: 12px;
   }
 }
-.section.testimonial-container .testimonial-wrapper .testimonial-link::after {
-  content: "→";
-  border: 2px solid #005589;
-  border-radius: 100%;
-  padding: 0 5px;
-  font-size: 14px;
-  font-weight: bold;
-  margin-left: 5px;
+.section.testimonial-container .testimonial-wrapper .link-img {
   display: inline-block;
-  text-decoration: none !important;
+  vertical-align: middle;
 }
 .section.testimonial-container .testimonial-wrapper .testimonial ul {
   display: flex;
@@ -117,13 +113,14 @@
     flex-basis: calc((100% - 72px) / 1);
   }
 }
-.section.testimonial-container .testimonial-wrapper .testimonial ul li h3 {
+.section.testimonial-container .testimonial-wrapper .testimonial ul li .testimonial-title {
+  font-family: museo, sans-serif;
   font-size: 32px;
   line-height: 38px;
   font-weight: 700;
   margin: 36px 0 24px 0;
 }
-.section.testimonial-container .testimonial-wrapper .testimonial ul li p {
+.section.testimonial-container .testimonial-wrapper .testimonial ul li .testimonial-description {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -137,13 +134,4 @@
   .section.testimonial-container .testimonial-wrapper .testimonial ul li:last-child {
     margin-bottom: 36px;
   }
-}
-.section.testimonial-container .testimonial-wrapper .testimonial ul .testimonial-card::before {
-  content: "";
-  font-size: 100px;
-  background-image: url("../images/testimonial/double-quotes.png");
-  font-weight: bold;
-  color: #4a7390;
-  display: inline-block;
-  transform: rotate(175deg);
 }

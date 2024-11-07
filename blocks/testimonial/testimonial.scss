@@ -37,17 +37,10 @@
       @include for-mobile{
         margin-top: $--spacing-s;
       }
-      &::after{
-        content: "\2192";
-        border: 2px solid $--primary-675;
-        border-radius: 100%;
-        padding: 0 5px;
-        font-size: 14px;
-        font-weight: bold;
-        margin-left: 5px;
-        display: inline-block;
-        text-decoration: none !important;
-      }
+    }
+    .link-img{
+      display: inline-block;
+      vertical-align: middle;
     }
     .testimonial {
       ul{
@@ -87,14 +80,14 @@
           @include for-tablet {
             flex-basis: calc((100% - 72px) / 1);
           }
-          h3{
+          .testimonial-title{
             font-family: $--font-museo;
             font-size: 32px;
             line-height: 38px;
             font-weight: 700;
             margin: $--spacing-xl 0 $--spacing-l 0;
           }
-          p{
+          .testimonial-description{
             font-size: $--spacing-m;
             line-height: $--spacing-l;
             font-weight: 400;
@@ -107,15 +100,6 @@
               margin-bottom: $--spacing-xl;
             }
           }
-        }
-        .testimonial-card::before{
-          content: '';
-          font-size: 100px;
-          background-image: url("../images/testimonial/double-quotes.png");
-          font-weight: bold;
-          color: $--blue-550;
-          display: inline-block;
-          transform: rotate(175deg);
         }
       }
     }
