@@ -9,7 +9,7 @@ export default function decorate(block) {
   [...block.children].forEach((row) => {
     // decorate accordion item label
     const label = row.children[0];
-    const summary = document.createElement('summary');
+    const summary = document.createElement('div');
     summary.classList.add('accordion-item-label');
     summary.append(...label.childNodes);
     // decorate accordion item body
@@ -17,7 +17,7 @@ export default function decorate(block) {
     body.classList.add('accordion-item-body');
     console.log("empty");
     // decorate accordion item
-    const details = document.createElement('details');
+    const details = document.createElement('div');
     details.classList.add('accordion-item');
     details.append(summary, body);
     row.replaceWith(details);
