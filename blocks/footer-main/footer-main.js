@@ -23,6 +23,11 @@ export default function decorate(block) {
   const anchor3 = document.createElement("a");
   const anchor4 = document.createElement("a");
   const anchor5 = document.createElement("a");
+  anchor1.setAttribute('href',"#")
+  anchor2.setAttribute('href',"#")
+  anchor3.setAttribute('href',"#")
+  anchor4.setAttribute('href',"#")
+  anchor5.setAttribute('href',"#")
   linkImg1.setAttribute('data-icon-name','right-arrow');
   linkImg1.src = '/icons/facebook.svg';
   linkImg1.setAttribute('loading','eager');
