@@ -1,2 +1,105 @@
 @import "../../styles/include/mq.scss";
 @import "../../styles/include/tokens.scss";
+
+.accordion-wrapper {
+    padding: $--spacing-max $--spacing-xxl;
+    @include for-laptop{
+        padding: $--spacing-max $--spacing-xl;
+    }
+    @include for-tablet{
+        padding: $--spacing-jumbo $--spacing-xl;
+    }
+    @include for-mobile{
+        padding: $--spacing-huge $--spacing-m;
+    }
+    .accordion-heading {
+        font-family: $--font-museo;
+        font-size: 32px;
+        font-weight: 700;
+        color: $--blue-550;
+        margin-top: 0;
+        margin-bottom: $--spacing-huge;
+        @include for-tablet{
+            margin-bottom: $--spacing-xxl;
+        }
+        @include for-mobile{
+            margin-bottom: $--spacing-xxl;
+        }
+    }
+
+    .accordion {
+        font-family: $--font-roboto;
+        details {
+            border-top: 2px solid #dadada;
+            width: 66.66%;
+            @include for-laptop{
+                width: 83.33%;
+            }
+            @include for-tablet{
+                width: 100%;
+            }
+            @include for-mobile{
+                width: 100%;
+            }
+            p {
+                margin: 0;
+                text-decoration: underline;
+            }
+            .accordion-item-body{
+                p{
+                    font-size: $--spacing-m;
+                    font-weight: 400;
+                    line-height: $--spacing-l;
+                    color: $--gray-700;
+                    text-decoration: none;
+                }
+            }
+            summary {
+                position: relative;
+                padding: $--spacing-l 63px $--spacing-l $--spacing-l;
+                cursor: pointer;
+                list-style: none;
+                overflow: auto;
+                transition: background-color 0.2s;
+                color: $--primary-675;
+                &:focus,
+                &:hover {
+                    background-color: var(--light-color);
+                }
+
+                &::-webkit-details-marker {
+                    display: none;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: 18px;
+                    transform: translateY(-50%) rotate(135deg);
+                    width: 8px;
+                    height: 8px;
+                    border: 2px solid;
+                    border-width: 2px 2px 0 0;
+                    transition: transform 0.2s;
+                }
+            }
+
+            &[open] {
+                summary {
+                    background-color: var(--light-color);
+
+                    &::after {
+                        transform: translateY(-50%) rotate(-45deg);
+                    }
+                }
+
+                .accordion-item-body {
+                    padding: 0 16px;
+                    border-top: 1px solid #dadada;
+                    background-color: var(--background-color);
+                }
+            }
+        }
+    }
+}
