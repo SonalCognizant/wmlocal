@@ -64,8 +64,14 @@
   letter-spacing: 0px;
   line-height: 24px;
 }
-.footer-main > .language-div > div h4 {
+.footer-main > .language-div > div h3 {
   margin: 0;
+  opacity: 1;
+  color: #005589;
+  font-family: "Roboto-Medium";
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0px;
 }
 .footer-main > .attention-div {
   padding-bottom: 52px;
