@@ -18,6 +18,11 @@ export default function decorate(block) {
   const linkImg3 = document.createElement("img");
   const linkImg4 = document.createElement("img");
   const linkImg5 = document.createElement("img");
+  const anchor1 = document.createElement("a");
+  const anchor2 = document.createElement("a");
+  const anchor3 = document.createElement("a");
+  const anchor4 = document.createElement("a");
+  const anchor5 = document.createElement("a");
   linkImg1.setAttribute('data-icon-name','right-arrow');
   linkImg1.src = '/icons/facebook.svg';
   linkImg1.setAttribute('loading','eager');
@@ -42,7 +47,13 @@ export default function decorate(block) {
   linkImg5.setAttribute('data-icon-name','right-arrow');
   linkImg5.setAttribute('loading','eager');
   linkImg5.className = 'link-img';
-  socialDiv.append(linkImg1,linkImg2,linkImg3,linkImg4,linkImg5);
+  // socialDiv.append(linkImg1,linkImg2,linkImg3,linkImg4,linkImg5);
+  anchor1.append(linkImg1);
+  anchor2.append(linkImg2);
+  anchor3.append(linkImg3);
+  anchor4.append(linkImg4);
+  anchor5.append(linkImg5);
+
+  socialDiv.append(anchor1,anchor2,anchor3,anchor4,anchor5);
   socialDiv.classList.add('social-div');
-  console.log(socialDiv)
 }
