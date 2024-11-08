@@ -20,12 +20,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    > div {
-        display: flex;
-        gap: 11px;
-        > img {
-            opacity: 1;
-        }
+    > .social-div {
+      display: flex;
+      gap: 11px;
+      > img {
+        height: 40px;
+        width: 40px;
+      }
     }
   }
   > .contact-div {
