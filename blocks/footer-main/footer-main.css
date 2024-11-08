@@ -74,6 +74,8 @@
 }
 .footer-main > .copyright-div {
   padding: 36px 0;
+  opacity: 1;
+  background-color: #d6e5f1;
 }
 .footer-main > .copyright-div > div p {
   padding-bottom: 24px;
