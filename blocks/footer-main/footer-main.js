@@ -14,7 +14,7 @@ export default function decorate(block) {
   logoDiv.classList.add("logo-social-div")
   const socialDiv = block.children[0].children[1]
   const linkImg = document.createElement("img");
-  linkImg.src = '/icons/right-arrow.svg';
+  linkImg.src = '/icons/facebook.svg';
   linkImg.setAttribute('data-icon-name','right-arrow');
   linkImg.setAttribute('loading','eager');
   linkImg.className = 'link-img';
