@@ -7,10 +7,10 @@ function renderMegaMenu(nav) {
   section2.className = 'sec2';
   const navul = document.createElement('ul');
   navul.className = 'nav-ul';
-  const navli = document.createElement('li');
-  navli.className = 'nav-li';
+  // const navli = document.createElement('li');
+  // navli.className = 'nav-li';
   section2.append(navul);
-  navul.append(navli);
+  // navul.append(navli);
 
   nav.append(section1);
   nav.append(section2);
