@@ -2,6 +2,9 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
+.footer-main {
+  background-color: #f3f9ff;
+}
 @media (max-width: 480px) {
   .footer-main {
     padding: 72px 16px 52px 16px;
