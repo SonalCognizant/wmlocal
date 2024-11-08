@@ -1,5 +1,5 @@
 export default function decorate(block) {
-  const footerMain= block.children[1].classList.add("contact-div");
+  block.children[1].classList.add("contact-div");
   const logoImg = document.createElement("img");
   logoImg.src = '../../images/global/WellmarkLogo.png';
   logoImg.className = 'logo-img';

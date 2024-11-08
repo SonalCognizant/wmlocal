@@ -27,6 +27,11 @@
     padding: 72px 36px 52px 36px;
   }
 }
+.footer-main > .logo-social-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .footer-main > div > div > ul {
   list-style: none;
   margin: 0px;
