@@ -43,5 +43,6 @@ export default function decorate(block) {
   linkImg5.setAttribute('loading','eager');
   linkImg5.className = 'link-img';
   socialDiv.append(linkImg1,linkImg2,linkImg3,linkImg4,linkImg5);
+  socialDiv.classList.add('social-div');
   console.log(socialDiv)
 }
