@@ -3,23 +3,22 @@
  * Recreate an accordion
  * https://www.hlx.live/developer/block-collection/accordion
  */
-
+ 
 export default function decorate(block) {
-  console.log("check");
   [...block.children].forEach((row) => {
     // decorate accordion item label
     const label = row.children[0];
-    const summary = document.createElement('div');
-    summary.classList.add('accordion-item-label');
+    const summary = document.createElement('summary');
+    summary.className = 'accordion-item-label';
     summary.append(...label.childNodes);
     // decorate accordion item body
     const body = row.children[1];
-    body.classList.add('accordion-item-body');
-    console.log("empty");
+    body.className = 'accordion-item-body';
     // decorate accordion item
-    const details = document.createElement('div');
-    details.classList.add('accordion-item');
+    const details = document.createElement('details');
+    details.className = 'accordion-item';
     details.append(summary, body);
     row.replaceWith(details);
   });
 }
+ 
