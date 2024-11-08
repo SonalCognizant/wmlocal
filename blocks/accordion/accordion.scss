@@ -1,0 +1,10 @@
+@import "../../styles/include/mq.scss";
+@import "../../styles/include/tokens.scss";
+
+.accordion-wrapper{
+    .accordion{
+        .accordion-item-label{
+            background-color: red;
+        }
+    }
+}
