@@ -22,7 +22,7 @@ export default function decorate(block) {
   const linkImg = document.createElement("img");
   linkImg.src = '/icons/right-arrow.svg';
   linkImg.setAttribute('data-icon-name','right-arrow');
-  linkImg.setAttribute('loading','eager');
+  // linkImg.setAttribute('loading','eager');
   linkImg.className = 'link-img';
   linkDiv.append(linkImg);
   parentElement.append(linkDiv);
@@ -40,7 +40,7 @@ export default function decorate(block) {
       const imgTag = document.createElement('img');
       imgTag.src = '/icons/quote.svg';
       imgTag.setAttribute('data-icon-name','quote');
-      imgTag.setAttribute('loading','eager');
+      // imgTag.setAttribute('loading','eager');
 
       //setAttribute for the header
       const hTag = li.querySelector('h3');
