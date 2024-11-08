@@ -37,7 +37,7 @@
     > div #language-assistance {
       padding-bottom: 4px;
       opacity: 1;
-      color: rgba(75, 76, 77, 1);
+      color: $--gray-700;
       font-family: "Roboto-Bold";
       font-size: 16px;
       font-weight: 700;
@@ -52,7 +52,7 @@
     padding-bottom: 52px;
     > div p {
       opacity: 1;
-      color: rgba(75, 76, 77, 1);
+      color: $--gray-700;
       font-family: "Roboto-Regular";
       font-size: 16px;
       font-weight: 400;
@@ -65,6 +65,15 @@
     padding: 36px 0;
     > div p {
       padding-bottom: 24px;
+      opacity: 1;
+      color: $--gray-700;
+      font-family: "Roboto-Regular";
+      font-size: 12px;
+      font-weight: 400;
+      font-style: Regular;
+      letter-spacing: 0px;
+      text-align: left;
+      line-height: 20px;
     }
   }
   > div > div > ul {
