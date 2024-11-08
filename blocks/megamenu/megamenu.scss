@@ -1,0 +1,76 @@
+@import '../../styles/include/tokens.scss';
+
+header {
+	.nav-wrapper {
+		width: 100%;
+		z-index: 2;
+		position: fixed;
+        nav {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 0 24px;
+            margin: auto;
+            // max-width: 1248px;
+            .sec1{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                background-color: $--blue-50;
+                padding: 12px 30px 12px 45px;
+                .nav-right{
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    .search{
+                        .search-box {
+                            display: flex;
+                            align-items: center;
+                            position: relative;
+                            width: 260px;
+                            input {
+                                box-sizing: border-box;
+                                display: block;
+                                width: 100%;
+                                margin: 0;
+                                padding: 12.75px 45px 12.25px 15px;
+                                border-radius: 4px;
+                                border: 1px solid $--blue-100;
+                                background-color: $--white;
+                                color: #6E6E6E;
+                                font-size: 12px;
+                                font-family: $--font-roboto;
+                                font-style: italic;
+                                font-weight: 400;
+                                transition: border-color 0.2s;
+                                &:hover {
+                                    border: 1px solid $--blue-100;
+                                }
+                                &:focus {
+                                    border: 1px solid $--blue-100;
+                                }
+                            }
+                            .icon-search{
+                                position: absolute;
+                                right: 15px;
+                                top: 15px;
+                                img{
+                                    height: 15px;
+                                    width: 15px;
+                                }
+                            }
+                        }  
+                    }    
+                    a.button.primary {
+                        background-color: #005589;
+                        color: #ffffff;
+                        padding: 9px 30px;
+                        text-decoration: none;
+                        font-size: 13.5px;
+                    }           
+                }
+            }
+        }
+	}
+}
