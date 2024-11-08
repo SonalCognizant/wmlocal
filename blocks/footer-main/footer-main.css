@@ -36,7 +36,7 @@
   display: flex;
   gap: 11px;
 }
-.footer-main > .logo-social-div > .social-div > img {
+.footer-main > .logo-social-div > .social-div > a > img {
   height: 40px;
   width: 40px;
 }
