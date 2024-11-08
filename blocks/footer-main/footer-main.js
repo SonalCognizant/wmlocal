@@ -7,6 +7,7 @@ export default function decorate(block) {
   const imgDiv = document.createElement("div");
   imgDiv.append(logoImg)
   logoDiv.prepend(imgDiv);
+  logoDiv.classList.add("logo-social-div")
   console.log(logoDiv,"logoDiv");
   console.log(imgDiv,"imgDiv");
   console.log(logoImg,"logoImg");
