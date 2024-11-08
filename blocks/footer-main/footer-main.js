@@ -6,7 +6,7 @@ export default function decorate(block) {
   const logoDiv = block.children[0];
   const imgDiv = document.createElement("div");
   imgDiv.append(logoImg,"logoimg")
-  // logoDiv.append(logoDiv);
+  logoDiv.prepend(imgDiv);
   console.log(logoDiv,"logoDiv");
   console.log(imgDiv,"imgDiv");
   console.log(logoImg,"logoImg");
