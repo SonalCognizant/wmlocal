@@ -42,10 +42,6 @@ export default function decorate(block) {
   linkImg5.setAttribute('data-icon-name','right-arrow');
   linkImg5.setAttribute('loading','eager');
   linkImg5.className = 'link-img';
-  socialDiv.append(linkImg1);
-  socialDiv.append(linkImg2);
-  socialDiv.append(linkImg3);
-  socialDiv.append(linkImg4);
-  socialDiv.append(linkImg5);
+  socialDiv.append(linkImg1,linkImg2,linkImg3,linkImg4,linkImg5);
   console.log(socialDiv)
 }
