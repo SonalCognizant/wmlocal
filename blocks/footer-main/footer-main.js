@@ -13,31 +13,39 @@ export default function decorate(block) {
   logoDiv.prepend(imgDiv);
   logoDiv.classList.add("logo-social-div")
   const socialDiv = block.children[0].children[1]
-  const linkImg = document.createElement("img");
-  linkImg.src = '/icons/facebook.svg';
-  linkImg.setAttribute('data-icon-name','right-arrow');
-  linkImg.setAttribute('loading','eager');
-  linkImg.className = 'link-img';
+  const linkImg1 = document.createElement("img");
+  const linkImg2 = document.createElement("img");
+  const linkImg3 = document.createElement("img");
+  const linkImg4 = document.createElement("img");
+  const linkImg5 = document.createElement("img");
+  linkImg1.setAttribute('data-icon-name','right-arrow');
+  linkImg1.src = '/icons/facebook.svg';
+  linkImg1.setAttribute('loading','eager');
+  linkImg1.className = 'link-img';
 
-  linkImg.src = '/icons/x.svg';
-  linkImg.setAttribute('data-icon-name','right-arrow');
-  linkImg.setAttribute('loading','eager');
-  linkImg.className = 'link-img';
+  linkImg2.src = '/icons/x.svg';
+  linkImg2.setAttribute('data-icon-name','right-arrow');
+  linkImg2.setAttribute('loading','eager');
+  linkImg2.className = 'link-img';
 
-  linkImg.src = '/icons/youtube.svg';
-  linkImg.setAttribute('data-icon-name','right-arrow');
-  linkImg.setAttribute('loading','eager');
-  linkImg.className = 'link-img';
+  linkImg3.src = '/icons/youtube.svg';
+  linkImg3.setAttribute('data-icon-name','right-arrow');
+  linkImg3.setAttribute('loading','eager');
+  linkImg3.className = 'link-img';
 
-  linkImg.src = '/icons/instagram.svg';
-  linkImg.setAttribute('data-icon-name','right-arrow');
-  linkImg.setAttribute('loading','eager');
-  linkImg.className = 'link-img';
+  linkImg4.src = '/icons/instagram.svg';
+  linkImg4.setAttribute('data-icon-name','right-arrow');
+  linkImg4.setAttribute('loading','eager');
+  linkImg4.className = 'link-img';
 
-  linkImg.src = '/icons/linkedin.svg';
-  linkImg.setAttribute('data-icon-name','right-arrow');
-  linkImg.setAttribute('loading','eager');
-  linkImg.className = 'link-img';
-  socialDiv.append(linkImg);
+  linkImg5.src = '/icons/linkedin.svg';
+  linkImg5.setAttribute('data-icon-name','right-arrow');
+  linkImg5.setAttribute('loading','eager');
+  linkImg5.className = 'link-img';
+  socialDiv.append(linkImg1);
+  socialDiv.append(linkImg2);
+  socialDiv.append(linkImg3);
+  socialDiv.append(linkImg4);
+  socialDiv.append(linkImg5);
   console.log(socialDiv)
 }
