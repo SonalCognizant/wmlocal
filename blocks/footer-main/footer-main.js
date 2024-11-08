@@ -18,6 +18,26 @@ export default function decorate(block) {
   linkImg.setAttribute('data-icon-name','right-arrow');
   linkImg.setAttribute('loading','eager');
   linkImg.className = 'link-img';
+
+  linkImg.src = '/icons/x.svg';
+  linkImg.setAttribute('data-icon-name','right-arrow');
+  linkImg.setAttribute('loading','eager');
+  linkImg.className = 'link-img';
+
+  linkImg.src = '/icons/youtube.svg';
+  linkImg.setAttribute('data-icon-name','right-arrow');
+  linkImg.setAttribute('loading','eager');
+  linkImg.className = 'link-img';
+
+  linkImg.src = '/icons/instagram.svg';
+  linkImg.setAttribute('data-icon-name','right-arrow');
+  linkImg.setAttribute('loading','eager');
+  linkImg.className = 'link-img';
+
+  linkImg.src = '/icons/linkedin.svg';
+  linkImg.setAttribute('data-icon-name','right-arrow');
+  linkImg.setAttribute('loading','eager');
+  linkImg.className = 'link-img';
   socialDiv.append(linkImg);
   console.log(socialDiv)
 }
