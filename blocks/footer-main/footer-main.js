@@ -12,7 +12,12 @@ export default function decorate(block) {
   imgDiv.append(logoImg)
   logoDiv.prepend(imgDiv);
   logoDiv.classList.add("logo-social-div")
-  console.log(logoDiv,"logoDiv");
-  console.log(imgDiv,"imgDiv");
-  console.log(logoImg,"logoImg");
+  const socialDiv = block.children[0].children[1]
+  const linkImg = document.createElement("img");
+  linkImg.src = '/icons/right-arrow.svg';
+  linkImg.setAttribute('data-icon-name','right-arrow');
+  linkImg.setAttribute('loading','eager');
+  linkImg.className = 'link-img';
+  socialDiv.append(linkImg);
+  console.log(socialDiv)
 }
