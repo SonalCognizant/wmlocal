@@ -52,6 +52,15 @@
 .footer-main > .language-div > div h4 {
   margin: 0;
 }
+.footer-main > .attention-div {
+  padding-bottom: 52px;
+}
+.footer-main > .copyright-div {
+  padding: 36px 0;
+}
+.footer-main > .copyright-div > div p {
+  padding-bottom: 24px;
+}
 .footer-main > div > div > ul {
   list-style: none;
   margin: 0px;
