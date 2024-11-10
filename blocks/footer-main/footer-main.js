@@ -59,6 +59,7 @@ export default function decorate(block) {
   anchor4.append(linkImg4);
   anchor5.append(linkImg5);
   socialDiv.classList.add("social-div");
+  socialDiv.append(anchor1, anchor2, anchor3, anchor4, anchor5);
   const socialDiv2 = block.children[4].children[0];
   console.log(socialDiv2);
   socialDiv2.append(anchor1, anchor2, anchor3, anchor4, anchor5);
