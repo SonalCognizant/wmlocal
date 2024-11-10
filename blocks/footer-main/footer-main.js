@@ -1,9 +1,3 @@
-// function addClasstoMixin(ele,className){
-//   if(window.innerWidth <= ){
-
-//   }
-//   ele.classList.add(className)
-// }
 export default function decorate(block) {
   block.children[1].classList.add("contact-div");
   block.children[2].classList.add("adobe-div");
@@ -66,10 +60,13 @@ export default function decorate(block) {
   anchor5.append(linkImg5);
   socialDiv.classList.add("social-div");
   const socialDiv2 = block.children[4].children[0];
+  console.log(socialDiv2);
   socialDiv2.append(anchor1, anchor2, anchor3, anchor4, anchor5);
-  if (window.innerWidth <= 1023) {
-    attentionDiv.append(socialDiv2);
-  } else {
-    socialDiv.append(anchor1, anchor2, anchor3, anchor4, anchor5);
-  }
+  attentionDiv.append(socialDiv2);
+  socialDiv.append(anchor1, anchor2, anchor3, anchor4, anchor5);
+  // if (window.innerWidth <= 1023) {
+  //   attentionDiv.append(socialDiv2);
+  // } else {
+  //   socialDiv.append(anchor1, anchor2, anchor3, anchor4, anchor5);
+  // }
 }
