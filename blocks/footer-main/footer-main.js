@@ -1,8 +1,14 @@
+// function addClasstoMixin(ele,className){
+//   if(window.innerWidth <= ){
+
+//   }
+//   ele.classList.add(className)
+// }
 export default function decorate(block) {
   block.children[1].classList.add("contact-div");
   block.children[2].classList.add("adobe-div");
   block.children[3].classList.add("language-div");
-  block.children[4].classList.add("attention-div");
+  const attentionDiv = block.children[4].classList.add("attention-div");
   block.children[5].classList.add("copyright-div");
   const logoImg = document.createElement("img");
   logoImg.src = '../../images/global/WellmarkLogo.png';
@@ -60,5 +66,7 @@ export default function decorate(block) {
   anchor5.append(linkImg5);
 
   socialDiv.append(anchor1,anchor2,anchor3,anchor4,anchor5);
+  const socialDiv2 = document.createElement('div')
+  attentionDiv.append(socialDiv2.append(anchor1,anchor2,anchor3,anchor4,anchor5))
   socialDiv.classList.add('social-div');
 }
