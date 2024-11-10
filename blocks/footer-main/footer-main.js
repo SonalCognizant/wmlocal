@@ -52,7 +52,7 @@ export default function decorate(block) {
   linkImg5.setAttribute("data-icon-name", "right-arrow");
   linkImg5.setAttribute("loading", "eager");
   linkImg5.className = "link-img";
-  // socialDiv.append(linkImg1,linkImg2,linkImg3,linkImg4,linkImg5);
+
   anchor1.append(linkImg1);
   anchor2.append(linkImg2);
   anchor3.append(linkImg3);
@@ -60,7 +60,10 @@ export default function decorate(block) {
   anchor5.append(linkImg5);
   socialDiv.classList.add("social-div");
   socialDiv.append(anchor1, anchor2, anchor3, anchor4, anchor5);
-  // const socialDiv2 = block.children[4].children[0];
+  const socialDiv2=document.createElement('div')
+  socialDiv2.append(anchor1, anchor2, anchor3, anchor4, anchor5);
+  console.log(socialDiv2,"socialDiv2")
+  // const socialDiv2 = block.children[4].children[0]
   // console.log(socialDiv2);
   // socialDiv2.append(anchor1, anchor2, anchor3, anchor4, anchor5);
   // attentionDiv.append(socialDiv2);
