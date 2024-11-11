@@ -65,7 +65,7 @@ export default function decorate(block) {
   const anchor10 = anchor5.cloneNode(true)
 
   socialDiv.classList.add("social-div");
-  socialDiv.append(anchor1, anchor2, anchor3, anchor4, anchor5);
+  // socialDiv.append(anchor1, anchor2, anchor3, anchor4, anchor5);
   const socialDiv2=document.createElement('div')
   socialDiv2.append(anchor6, anchor7, anchor8, anchor9, anchor10);
   socialDiv2.classList.add("social-div-mobile");
