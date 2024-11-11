@@ -58,11 +58,17 @@ export default function decorate(block) {
   anchor3.append(linkImg3);
   anchor4.append(linkImg4);
   anchor5.append(linkImg5);
+  const anchor6 = anchor1.cloneNode(false)
+  const anchor7 = anchor2.cloneNode(false)
+  const anchor8 = anchor3.cloneNode(false)
+  const anchor9 = anchor4.cloneNode(false)
+  const anchor10 = anchor5.cloneNode(false)
+
   socialDiv.classList.add("social-div");
   socialDiv.append(anchor1, anchor2, anchor3, anchor4, anchor5);
   const socialDiv2=document.createElement('div')
-  socialDiv2.append(anchor1, anchor2, anchor3, anchor4, anchor5);
-  console.log(socialDiv2,"socialDiv2")
+  socialDiv2.append(anchor6, anchor7, anchor8, anchor9, anchor10);
+  // console.log(socialDiv2,"socialDiv2")
   // const socialDiv2 = block.children[4].children[0]
   // console.log(socialDiv2);
   // socialDiv2.append(anchor1, anchor2, anchor3, anchor4, anchor5);
