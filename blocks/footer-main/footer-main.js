@@ -2,7 +2,7 @@ export default function decorate(block) {
   block.children[1].classList.add("contact-div");
   block.children[2].classList.add("adobe-div");
   block.children[3].classList.add("language-div");
-  const attentionDiv = block.children[4].classList.add("attention-div");
+  block.children[4].classList.add("attention-div");
   block.children[5].classList.add("copyright-div");
   const logoImg = document.createElement("img");
   logoImg.src = "../../images/global/WellmarkLogo.png";
@@ -68,6 +68,7 @@ export default function decorate(block) {
   socialDiv.append(anchor1, anchor2, anchor3, anchor4, anchor5);
   const socialDiv2=document.createElement('div')
   socialDiv2.append(anchor6, anchor7, anchor8, anchor9, anchor10);
+  const attentionDiv = block.children[4];
   attentionDiv.append(socialDiv2);
   // console.log(socialDiv2,"socialDiv2")
   // const socialDiv2 = block.children[4].children[0]
