@@ -71,9 +71,4 @@ export default function decorate(block) {
   socialDiv2.classList.add("social-div-mobile");
   const attentionDiv = block.children[4];
   attentionDiv.append(socialDiv2);
-  // if (window.innerWidth <= 1023) {
-  //   attentionDiv.append(socialDiv2);
-  // } else {
-  //   socialDiv.append(anchor1, anchor2, anchor3, anchor4, anchor5);
-  // }
 }
