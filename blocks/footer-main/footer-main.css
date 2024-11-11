@@ -39,7 +39,11 @@
   display: flex;
   gap: 11px;
 }
-.footer-main > .logo-social-div > .social-div > a > img {
+.footer-main > .logo-social-div > .social-div > p {
+  display: flex;
+  gap: 11px;
+}
+.footer-main > .logo-social-div > .social-div > a > span {
   height: 40px;
   width: 40px;
 }

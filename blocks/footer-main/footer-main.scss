@@ -24,7 +24,11 @@
     > .social-div {
       display: flex;
       gap: 11px;
-      > a > img {
+      > p {
+        display: flex;
+        gap: 11px;
+      }
+      > a > span {
         height: 40px;
         width: 40px;
       }
@@ -81,7 +85,7 @@
       text-align: left;
       line-height: 24px;
     }
-    > .social-div-mobile{
+    > .social-div-mobile {
       display: flex;
       gap: 11px;
       padding-top: 36px;
