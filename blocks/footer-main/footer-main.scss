@@ -27,11 +27,11 @@
       > p {
         display: flex;
         gap: 11px;
-      }
-      > a > span {
-        height: 40px;
-        width: 40px;
-      }
+        > a > span {
+          height: 40px;
+          width: 40px;
+        }
+      }     
       @include for-mobile {
         display: none;
       }
