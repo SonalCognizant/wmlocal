@@ -28,6 +28,12 @@
         height: 40px;
         width: 40px;
       }
+      @include for-mobile {
+        display: none;
+      }
+      @include for-tablet {
+        display: none;
+      }
     }
   }
   > .contact-div {
@@ -74,6 +80,29 @@
       letter-spacing: 0px;
       text-align: left;
       line-height: 24px;
+    }
+    > .social-div-mobile{
+      display: flex;
+      gap: 11px;
+      > a > img {
+        height: 40px;
+        width: 40px;
+      }
+      @include for-mobile {
+        display: flex;
+      }
+      @include for-tablet {
+        display: flex;
+      }
+      @include for-xlarge {
+        display: none;
+      }
+      @include for-large {
+        display: none;
+      }
+      @include for-laptop {
+        display: none;
+      }
     }
   }
   > .copyright-div {
