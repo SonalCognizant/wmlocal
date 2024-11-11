@@ -23,6 +23,7 @@
 .accordion-wrapper .accordion-heading {
   font-family: museo, sans-serif;
   font-size: 32px;
+  line-height: 36px;
   font-weight: 700;
   color: #4a7390;
   margin-top: 0;
@@ -43,11 +44,10 @@
 }
 .accordion-wrapper .accordion details {
   border-top: 2px solid #dadada;
-  width: 66.66%;
 }
 @media (min-width: 1023px) and (max-width: 1200px) {
   .accordion-wrapper .accordion details {
-    width: 83.33%;
+    width: 100%;
   }
 }
 @media (min-width: 480px) and (max-width: 1023px) {
@@ -74,6 +74,7 @@
 .accordion-wrapper .accordion details summary {
   position: relative;
   padding: 24px 63px 24px 24px;
+  background-color: unset !important;
   cursor: pointer;
   list-style: none;
   overflow: auto;
@@ -99,13 +100,52 @@
   transition: transform 0.2s;
 }
 .accordion-wrapper .accordion details[open] summary {
-  background-color: var(--light-color);
+  background-color: unset;
 }
 .accordion-wrapper .accordion details[open] summary::after {
   transform: translateY(-50%) rotate(-45deg);
 }
 .accordion-wrapper .accordion details[open] .accordion-item-body {
-  padding: 0 16px;
-  border-top: 1px solid #dadada;
+  padding: 24px;
+  padding-top: 0;
   background-color: var(--background-color);
+}
+
+.eight-column-layout.accordion-container .accordion-wrapper details {
+  width: 66.66%;
+}
+@media (min-width: 1023px) and (max-width: 1200px) {
+  .eight-column-layout.accordion-container .accordion-wrapper details {
+    width: 83.33%;
+  }
+}
+
+.six-column-layout.accordion-container {
+  max-width: 1275px;
+  margin: auto;
+  display: flex;
+  gap: 24px;
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .six-column-layout.accordion-container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  .six-column-layout.accordion-container {
+    flex-direction: column;
+  }
+}
+.six-column-layout.accordion-container .accordion-wrapper {
+  width: 50%;
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .six-column-layout.accordion-container .accordion-wrapper {
+    width: 90%;
+  }
+}
+@media (max-width: 480px) {
+  .six-column-layout.accordion-container .accordion-wrapper {
+    width: 90%;
+  }
 }
