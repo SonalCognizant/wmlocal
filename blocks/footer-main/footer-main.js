@@ -68,6 +68,7 @@ export default function decorate(block) {
   socialDiv.append(anchor1, anchor2, anchor3, anchor4, anchor5);
   const socialDiv2=document.createElement('div')
   socialDiv2.append(anchor6, anchor7, anchor8, anchor9, anchor10);
+  attentionDiv.append(socialDiv2);
   // console.log(socialDiv2,"socialDiv2")
   // const socialDiv2 = block.children[4].children[0]
   // console.log(socialDiv2);
