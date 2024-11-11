@@ -12,19 +12,19 @@ header {
             gap: 0 24px;
             margin: auto;
             // max-width: 1248px;
-            .sec1{
+            .navbar-brand{
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
                 background-color: $--blue-50;
-                padding: 12px 30px 12px 45px;
+                padding: 16px 52px 16px 52px;
                 .nav-right{
                     display: flex;
                     align-items: center;
-                    gap: 16px;
-                    .search{
-                        .search-box {
+                    gap: 24px;
+                    .navbar-search{
+                        .navbar-search-box {
                             display: flex;
                             align-items: center;
                             position: relative;
@@ -34,12 +34,12 @@ header {
                                 display: block;
                                 width: 100%;
                                 margin: 0;
-                                padding: 12.75px 45px 12.25px 15px;
+                                padding: 12px 0px 12px 20px;
                                 border-radius: 4px;
                                 border: 1px solid $--blue-100;
                                 background-color: $--white;
                                 color: #6E6E6E;
-                                font-size: 12px;
+                                font-size: 16px;
                                 font-family: $--font-roboto;
                                 font-style: italic;
                                 font-weight: 400;
@@ -55,20 +55,41 @@ header {
                                 position: absolute;
                                 right: 15px;
                                 top: 15px;
+                                padding: 0px 20px;
                                 img{
-                                    height: 15px;
-                                    width: 15px;
+                                    height: 20px;
+                                    width: 20px;
                                 }
                             }
                         }  
-                    }    
-                    a.button.primary {
-                        background-color: #005589;
-                        color: #ffffff;
-                        padding: 9px 30px;
+                    }          
+                }
+            }
+            .navbar-menu{
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                background-color:  $--white;
+                padding: 0 30px 0 45px;
+                box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+                .navbar-ul{
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    display:flex;
+                    .navbar-li{
+                        text-align: center;
+                        padding: 24px 52px 24px 0;
                         text-decoration: none;
-                        font-size: 13.5px;
-                    }           
+                        display:flex;
+                        font-size: 16px;
+                        font-family: $--font-roboto;
+                        font-weight: 500;
+                        a{
+                            color: $--gray-700;
+                            text-decoration: none;
+                        }
+                    }
                 }
             }
         }

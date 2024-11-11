@@ -14,60 +14,81 @@ header .nav-wrapper nav {
   gap: 0 24px;
   margin: auto;
 }
-header .nav-wrapper nav .sec1 {
+header .nav-wrapper nav .navbar-brand {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   background-color: #f3f9ff;
-  padding: 12px 30px 12px 45px;
+  padding: 16px 52px 16px 52px;
 }
-header .nav-wrapper nav .sec1 .nav-right {
+header .nav-wrapper nav .navbar-brand .nav-right {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 24px;
 }
-header .nav-wrapper nav .sec1 .nav-right .search .search-box {
+header .nav-wrapper nav .navbar-brand .nav-right .navbar-search .navbar-search-box {
   display: flex;
   align-items: center;
   position: relative;
   width: 260px;
 }
-header .nav-wrapper nav .sec1 .nav-right .search .search-box input {
+header .nav-wrapper nav .navbar-brand .nav-right .navbar-search .navbar-search-box input {
   box-sizing: border-box;
   display: block;
   width: 100%;
   margin: 0;
-  padding: 12.75px 45px 12.25px 15px;
+  padding: 12px 0px 12px 20px;
   border-radius: 4px;
   border: 1px solid #d6e5f1;
   background-color: #ffffff;
   color: #6E6E6E;
-  font-size: 12px;
+  font-size: 16px;
   font-family: roboto, sans-serif;
   font-style: italic;
   font-weight: 400;
   transition: border-color 0.2s;
 }
-header .nav-wrapper nav .sec1 .nav-right .search .search-box input:hover {
+header .nav-wrapper nav .navbar-brand .nav-right .navbar-search .navbar-search-box input:hover {
   border: 1px solid #d6e5f1;
 }
-header .nav-wrapper nav .sec1 .nav-right .search .search-box input:focus {
+header .nav-wrapper nav .navbar-brand .nav-right .navbar-search .navbar-search-box input:focus {
   border: 1px solid #d6e5f1;
 }
-header .nav-wrapper nav .sec1 .nav-right .search .search-box .icon-search {
+header .nav-wrapper nav .navbar-brand .nav-right .navbar-search .navbar-search-box .icon-search {
   position: absolute;
   right: 15px;
   top: 15px;
+  padding: 0px 20px;
 }
-header .nav-wrapper nav .sec1 .nav-right .search .search-box .icon-search img {
-  height: 15px;
-  width: 15px;
+header .nav-wrapper nav .navbar-brand .nav-right .navbar-search .navbar-search-box .icon-search img {
+  height: 20px;
+  width: 20px;
 }
-header .nav-wrapper nav .sec1 .nav-right a.button.primary {
-  background-color: #005589;
-  color: #ffffff;
-  padding: 9px 30px;
+header .nav-wrapper nav .navbar-menu {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 0 30px 0 45px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+header .nav-wrapper nav .navbar-menu .navbar-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+header .nav-wrapper nav .navbar-menu .navbar-ul .navbar-li {
+  text-align: center;
+  padding: 24px 52px 24px 0;
   text-decoration: none;
-  font-size: 13.5px;
+  display: flex;
+  font-size: 16px;
+  font-family: roboto, sans-serif;
+  font-weight: 500;
+}
+header .nav-wrapper nav .navbar-menu .navbar-ul .navbar-li a {
+  color: #4b4c4d;
+  text-decoration: none;
 }
