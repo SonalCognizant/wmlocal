@@ -63,26 +63,16 @@ export default function decorate(block) {
   const anchor8 = anchor3.cloneNode(true)
   const anchor9 = anchor4.cloneNode(true)
   const anchor10 = anchor5.cloneNode(true)
-  // anchor6.appendChild(linkImg1)
-  // anchor7.append(linkImg2);
-  // anchor8.append(linkImg3);
-  // anchor9.append(linkImg4);
-  // anchor10.append(linkImg5);
 
   socialDiv.classList.add("social-div");
-  socialDiv.append(anchor1, anchor2, anchor3, anchor4, anchor5);
+  // socialDiv.append(anchor1, anchor2, anchor3, anchor4, anchor5);
   const socialDiv2=document.createElement('div')
   socialDiv2.append(anchor6, anchor7, anchor8, anchor9, anchor10);
   const attentionDiv = block.children[4];
-  attentionDiv.append(socialDiv2);
-  // console.log(socialDiv2,"socialDiv2")
-  // const socialDiv2 = block.children[4].children[0]
-  // console.log(socialDiv2);
-  // socialDiv2.append(anchor1, anchor2, anchor3, anchor4, anchor5);
   // attentionDiv.append(socialDiv2);
-  // if (window.innerWidth <= 1023) {
-  //   attentionDiv.append(socialDiv2);
-  // } else {
-  //   socialDiv.append(anchor1, anchor2, anchor3, anchor4, anchor5);
-  // }
+  if (window.innerWidth <= 1023) {
+    attentionDiv.append(socialDiv2);
+  } else {
+    socialDiv.append(anchor1, anchor2, anchor3, anchor4, anchor5);
+  }
 }
