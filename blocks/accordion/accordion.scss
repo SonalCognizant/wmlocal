@@ -15,6 +15,7 @@
     .accordion-heading {
         font-family: $--font-museo;
         font-size: 32px;
+        line-height: $--spacing-xl;
         font-weight: 700;
         color: $--blue-550;
         margin-top: 0;
@@ -31,9 +32,8 @@
         font-family: $--font-roboto;
         details {
             border-top: 2px solid #dadada;
-            width: 66.66%;
             @include for-laptop{
-                width: 83.33%;
+                width: 100%;
             }
             @include for-tablet{
                 width: 100%;
@@ -57,6 +57,7 @@
             summary {
                 position: relative;
                 padding: $--spacing-l 63px $--spacing-l $--spacing-l;
+                background-color: unset !important;
                 cursor: pointer;
                 list-style: none;
                 overflow: auto;
@@ -87,19 +88,49 @@
 
             &[open] {
                 summary {
-                    background-color: var(--light-color);
-
+                    background-color: unset;
                     &::after {
                         transform: translateY(-50%) rotate(-45deg);
                     }
                 }
 
                 .accordion-item-body {
-                    padding: 0 16px;
-                    border-top: 1px solid #dadada;
+                    padding: $--spacing-l;
+                    padding-top: 0;
                     background-color: var(--background-color);
                 }
             }
+        }
+    }
+}
+.eight-column-layout.accordion-container{
+    .accordion-wrapper{
+        details{
+            width: 66.66%;
+            @include for-laptop{
+                width: 83.33%;
+            }
+        }
+    }
+}
+.six-column-layout.accordion-container{
+    max-width: 1275px;
+    margin: auto;
+    display: flex;
+    gap: $--spacing-l;
+    @include for-tablet{
+        flex-direction: column;
+    }
+    @include for-mobile{
+        flex-direction: column;
+    }
+    .accordion-wrapper{
+        width: 50%;
+        @include for-tablet{
+            width: 90%;
+        }
+        @include for-mobile{
+            width: 90%;
         }
     }
 }
