@@ -10,9 +10,16 @@ export default async function decorate(block) {
   const footerMeta = getMetadata("footer");
   // let footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
   let footerPath;
-  if (window.location.pathname === "/providers/*") {
+  // if (window.location.pathname === "/providers/*") {
+  //   footerPath = "/providers/provider";
+  // } else if (window.location.pathname === "/shop/shopplans/*") {
+  //   footerPath = "/shop/shopplans/medicareadvantage";
+  // } else {
+  //   footerPath = "/footer";
+  // }
+  if (window.location.pathname.includes("/providers/")) {
     footerPath = "/providers/provider";
-  } else if (window.location.pathname === "/shop/shopplans/*") {
+  } else if (window.location.pathname.includes("/shop/shopplans/*")) {
     footerPath = "/shop/shopplans/medicareadvantage";
   } else {
     footerPath = "/footer";
