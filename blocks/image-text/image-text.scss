@@ -65,12 +65,15 @@
               color: $--blue-550;
               width: 100%;
               font-family: $--font-museo;
-              font-size: 32px;
               font-weight: 700;
               opacity: 1;
               text-align: left;
               margin-top: 0;
               margin-bottom: $--spacing-l;
+              @include for-tablet {
+                font-size: 28px;
+                line-height: 28px;
+              }
               @include for-mobile {
                 margin-top: $--spacing-xl;
                 margin-bottom: $--spacing-m;
