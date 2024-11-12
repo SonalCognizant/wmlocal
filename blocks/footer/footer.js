@@ -11,17 +11,7 @@ export default async function decorate(block) {
   let footerPath = footerMeta
     ? new URL(footerMeta, window.location).pathname
     : "/footer";
-  console.log(footerPath, "footerPath");
-  if (window.location.pathname.includes("/providers/")) {
-    footerPath = "/providers/provider";
-  } else if (window.location.pathname.includes("/shop/shopplans/")) {
-    footerPath = "/shop/shopplans/medicareadvantage";
-  } else {
-    footerPath = "/footer";
-  }
   const fragment = await loadFragment(footerPath);
-  console.log(fragment, "fragment");
-
   block.textContent = "";
   const footer = document.createElement("div");
   console.log(fragment.firstElementChild, "fragmentfirstChild");
@@ -30,6 +20,13 @@ export default async function decorate(block) {
     const footerProvider = document.querySelector('.footer-provider-wrapper')
     const footerMedAdv = document.querySelector('.footer-medadv-wrapper')
     console.log(footerMain,footerProvider,footerMedAdv)
+    if (window.location.pathname.includes("/providers/")) {
+      fragment.firstElementChild(footerProvider)
+    } else if (window.location.pathname.includes("/shop/shopplans/")) {
+      fragment.firstElementChild(footerMedAdv)
+    } else {
+      fragment.firstElementChild(footerMain)
+    }
     footer.append(fragment.firstElementChild);
   }
 
