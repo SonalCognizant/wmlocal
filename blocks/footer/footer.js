@@ -9,7 +9,7 @@ export default async function decorate(block) {
   // load footer as fragment
   const footerMeta = getMetadata("footer");
   let footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
-  console.log(footerPath)
+  console.log(footerPath,"footerPath")
   // let footerPath;
   // if (window.location.pathname === "/providers/*") {
   //   footerPath = "/providers/provider";
@@ -26,11 +26,11 @@ export default async function decorate(block) {
   //   footerPath = "/footer";
   // }
   const fragment = await loadFragment(footerPath);
-  console.log(fragment)
+  console.log(fragment,"fragment")
 
   block.textContent = "";
   const footer = document.createElement("div");
-  console.log(fragment.firstElementChild)
+  console.log(fragment.firstElementChild,"fragmentfirstChild")
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
   block.append(footer);
