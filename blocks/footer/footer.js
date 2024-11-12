@@ -15,17 +15,19 @@ export default async function decorate(block) {
   block.textContent = "";
   const footer = document.createElement("div");
   console.log(fragment.firstElementChild, "fragmentfirstChild");
-    const footerMain = document.querySelector('.footer-main-wrapper')
-    const footerProvider = document.querySelector('.footer-provider-wrapper')
-    const footerMedAdv = document.querySelector('.footer-medadv-wrapper')
-    console.log(footerMain,footerProvider,footerMedAdv)
-    if (window.location.pathname.includes("/providers/")) {
-      footer.append(footerProvider)
-    } else if (window.location.pathname.includes("/shop/shopplans/")) {
-      footer.append(footerMedAdv)
-    } else {
-      footer.append(footerMain)
-    }
-
-  block.append(footer);
+  const footerMain = document.querySelector(".footer-main-wrapper");
+  const footerProvider = document.querySelector(".footer-provider-wrapper");
+  const footerMedAdv = document.querySelector(".footer-medadv-wrapper");
+  console.log(footerMain, footerProvider, footerMedAdv);
+  if (window.location.pathname.includes("/providers/")) {
+    footer.append(footerProvider)
+    console.log("1");
+  } else if (window.location.pathname.includes("/shop/")) {
+    footer.append(footerMedAdv)
+    console.log("2");
+  } else {
+    footer.append(footerMain)
+    console.log("3");
+  }
+ block.append(footer);
 }
