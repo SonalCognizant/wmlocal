@@ -7,27 +7,22 @@ import { loadFragment } from "../fragment/fragment.js";
  */
 export default async function decorate(block) {
   // load footer as fragment
-  const footerMeta = getMetadata("footer");
-  let footerPath = footerMeta
-    ? new URL(footerMeta, window.location).pathname
-    : "/footer";
-  const fragment = await loadFragment(footerPath);
+  // const footerMeta = getMetadata("footer");
+  // let footerPath = footerMeta
+  //   ? new URL(footerMeta, window.location).pathname
+  //   : "/footer";
+  // const fragment = await loadFragment(footerPath);
   block.textContent = "";
-  const footer = document.createElement("div");
-  console.log(fragment.firstElementChild, "fragmentfirstChild");
+  // const footer = document.createElement("div");
   const footerMain = document.querySelector(".footer-main-wrapper");
   const footerProvider = document.querySelector(".footer-provider-wrapper");
   const footerMedAdv = document.querySelector(".footer-medadv-wrapper");
-  console.log(footerMain, footerProvider, footerMedAdv);
   if (window.location.pathname.includes("/providers/")) {
-    footer.append(footerProvider)
-    console.log("1");
+    block.append(footerProvider)
   } else if (window.location.pathname.includes("/shop/")) {
-    footer.append(footerMedAdv)
-    console.log("2");
+    block.append(footerMedAdv)
   } else {
-    footer.append(footerMain)
-    console.log("3");
+    block.append(footerMain)
   }
- block.append(footer);
+//  block.append(footer);
 }
