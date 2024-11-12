@@ -21,13 +21,12 @@ export default async function decorate(block) {
     const footerMedAdv = document.querySelector('.footer-medadv-wrapper')
     console.log(footerMain,footerProvider,footerMedAdv)
     if (window.location.pathname.includes("/providers/")) {
-      fragment.firstElementChild(footerProvider)
+      footer.append(footerProvider)
     } else if (window.location.pathname.includes("/shop/shopplans/")) {
-      fragment.firstElementChild(footerMedAdv)
+      footer.append(footerMedAdv)
     } else {
-      fragment.firstElementChild(footerMain)
+      footer.append(footerMain)
     }
-    footer.append(fragment.firstElementChild);
   }
 
   block.append(footer);
