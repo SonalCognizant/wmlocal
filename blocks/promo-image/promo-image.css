@@ -85,11 +85,6 @@
     padding: 36px 16px 72px 16px;
   }
 }
-@media (min-width: 481px) {
-  .promo-image-container .promo-image > ul {
-    flex-direction: row;
-  }
-}
 @media (min-width: 1380px) {
   .promo-image-container .promo-image > ul {
     gap: 30px;
