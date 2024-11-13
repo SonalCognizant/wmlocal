@@ -4,14 +4,16 @@
  */
 export default async function decorate(block) {
   block.textContent = "";
+  const footer = document.createElement("div");
   const footerMain = document.querySelector(".footer-main-wrapper");
   const footerProvider = document.querySelector(".footer-provider-wrapper");
   const footerMedAdv = document.querySelector(".footer-medadv-wrapper");
   if (window.location.pathname.includes("/providers/")) {
-    block.append(footerProvider)
+    footer.append(footerProvider);
   } else if (window.location.pathname.includes("/shop/")) {
-    block.append(footerMedAdv)
+    footer.append(footerMedAdv);
   } else {
-    block.append(footerMain)
+    footer.append(footerMain);
   }
+  block.append(footer);
 }
