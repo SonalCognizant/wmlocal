@@ -72,17 +72,13 @@
   align-items: stretch;
   justify-content: center;
   text-align: center;
-  flex-direction: column;
+  flex-direction: row;
   margin: 0;
 }
 @media (max-width: 480px) {
   .promo-no-image-container .promo-no-image > ul {
     padding: 36px 16px 72px 16px;
-  }
-}
-@media (min-width: 481px) {
-  .promo-no-image-container .promo-no-image > ul {
-    flex-direction: row;
+    flex-direction: column;
   }
 }
 @media (min-width: 1380px) {

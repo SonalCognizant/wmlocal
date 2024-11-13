@@ -55,13 +55,11 @@
       align-items: stretch;
       justify-content: center;
       text-align: center;
-      flex-direction: column;
+      flex-direction: row;
       margin: 0;
       @include for-mobile {
         padding: 36px 16px 72px 16px;
-      }
-      @include for-nonmobile {
-        flex-direction: row;
+        flex-direction: column;
       }
       @include for-xlarge {
         gap: 30px;
