@@ -28,6 +28,4 @@ export default async function decorate(block) {
     }
   }
   block.append(footer);
-  block.children.style.maxWidth = "";
-  console.log(block.children,"child");
 }
