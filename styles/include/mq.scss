@@ -1,37 +1,37 @@
-$breakpoint1: 481px;
-$breakpoint2: 1024px;
-$breakpoint3: 1201px;
-$breakpoint4: 1380px;
+$breakpoint1: 480px;
+$breakpoint2: 1023px;
+$breakpoint3: 1200px;
+$breakpoint4: 1379px;
 // for mobile with upto 480px
 @mixin for-mobile {
   @media (max-width: $breakpoint1) {
     @content;
   }
 }
-// for tablet 480 to 1023
+// for tablet 481 to 1023
 @mixin for-tablet {
-  @media (min-width: $breakpoint1) and (max-width: $breakpoint2) {
+  @media (min-width: calc($breakpoint1 + 1px)) and (max-width: $breakpoint2) {
     @content;
   }
 }
-
-// for laptop 1023 to 1200
+ 
+// for laptop 1024 to 1200
 @mixin for-laptop {
-  @media (min-width: $breakpoint2) and (max-width: $breakpoint3) {
+  @media (min-width: calc($breakpoint2 + 1px)) and (max-width: $breakpoint3) {
     @content;
   }
 }
-
-// for 1200 to 1379
+ 
+// for 1201 to 1379
 @mixin for-large {
-  @media (min-width: $breakpoint3) and (max-width: $breakpoint4) {
+  @media (min-width: calc($breakpoint3 + 1px)) and (max-width: $breakpoint4) {
     @content;
   }
 }
-
+ 
 //very large screen 1379 +
 @mixin for-xlarge {
-  @media (min-width: $breakpoint4) {
+  @media (min-width: calc($breakpoint4 + 1px)) {
     @content;
   }
 }
