@@ -102,3 +102,23 @@
     }
   }
 }
+.eight-column-large{
+  .testimonial-wrapper{
+    .testimonial{
+      ul{
+        li{
+            width: calc((100% - 104px) / 2) !important;
+            @include for-laptop{
+              width: calc((100% - 104px) / 1) !important;
+            }
+            @include for-tablet{
+              width: unset !important;
+            }
+            @include for-mobile{
+              width: unset !important;
+            }
+        }
+      }
+    }
+  }
+}
