@@ -64,7 +64,7 @@
         padding: 36px 16px 72px 16px;
       }
       @include for-nonmobile {
-        // flex-direction: row;
+        flex-direction: row;
       }
       @include for-xlarge {
         gap: 30px;
