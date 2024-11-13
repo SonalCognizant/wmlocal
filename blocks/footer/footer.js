@@ -50,7 +50,7 @@ export default async function decorate(block) {
   const footer = document.createElement("div");
   console.log(fragment.firstElementChild,"total");
   console.log(fragment.firstElementChild.children,"total child");
-  console.log(fragment.firstElementChild.children.children[0],"footer-main");
+  console.log(fragment.firstElementChild.children[0],"footer-main");
   while (fragment.firstElementChild) {
     footer.append(fragment.firstElementChild);
     const footerMain = document.querySelector(".footer-main-wrapper");
