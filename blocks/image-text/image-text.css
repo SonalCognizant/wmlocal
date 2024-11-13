@@ -70,6 +70,7 @@
 }
 .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div > .columns-img-col {
   order: 0;
+  align-self: flex-start;
 }
 .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div > .columns-col img {
   display: block;
