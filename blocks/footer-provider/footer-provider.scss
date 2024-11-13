@@ -1,91 +1,94 @@
 @import "../../styles/include/mq.scss";
 @import "../../styles/include/tokens.scss";
-.footer-provider {
+.footer-provider-wrapper {
+  max-width: 1275px;
   background-color: $--blue-50;
-  @include for-mobile {
-    padding: 72px 16px 52px 16px;
-  }
-  @include for-tablet {
-    padding: 72px 36px 52px 36px;
-  }
-  @include for-xlarge {
-    padding: 72px 52px 52px 52px;
-  }
-  @include for-large {
-    padding: 72px 52px 52px 52px;
-  }
-  @include for-laptop {
-    padding: 72px 36px 52px 36px;
-  }
-  > .logo-social-div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    > .social-div {
-      display: flex;
-      gap: 11px;
-      > p {
-        display: flex;
-        gap: 11px;
-        > a > span {
-          height: 40px;
-          width: 40px;
-        }
-      }     
-      @include for-mobile {
-        display: none;
-      }
-      @include for-tablet {
-        display: none;
-      }
-    }
-  }
-  > .claims-div {
-    padding: 36px 0 36px 0;
-    border-bottom: 1px solid lightgray;
-  }
-  > .wellmarkdrug-div {
-    padding: 36px 0 36px 0;
-    border-bottom: 1px solid lightgray;
-  }
-  > .copyright-div {
-    padding: 36px 0;
-    opacity: 1;
-    background-color: $--blue-100;
-    > div p {
-      padding-bottom: 24px;
-      opacity: 1;
-      color: $--gray-700;
-      font-family: "Roboto-Regular";
-      font-size: 12px;
-      font-weight: 400;
-      font-style: Regular;
-      letter-spacing: 0px;
-      text-align: left;
-      line-height: 20px;
-    }
-  }
-  > div > div > ul {
-    list-style: none;
-    margin: 0px;
-    display: flex;
-    gap: 52px;
-    padding: 0px;
+  .footer-provider {
     @include for-mobile {
-      flex-direction: column;
-      gap: 24px;
+      padding: 72px 16px 52px 16px;
     }
     @include for-tablet {
-      flex-direction: column;
-      gap: 24px;
+      padding: 72px 36px 52px 36px;
     }
-  }
-  > div > div > ul > li {
-    font-size: 16px;
-    font-weight: 500;
-    color: $--primary-675;
-    opacity: 1;
-    font-family: "Roboto-Medium";
-    letter-spacing: 0px;
+    @include for-xlarge {
+      padding: 72px 52px 52px 52px;
+    }
+    @include for-large {
+      padding: 72px 52px 52px 52px;
+    }
+    @include for-laptop {
+      padding: 72px 36px 52px 36px;
+    }
+    > .logo-social-div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      > .social-div {
+        display: flex;
+        gap: 11px;
+        > p {
+          display: flex;
+          gap: 11px;
+          > a > span {
+            height: 40px;
+            width: 40px;
+          }
+        }
+        @include for-mobile {
+          display: none;
+        }
+        @include for-tablet {
+          display: none;
+        }
+      }
+    }
+    > .claims-div {
+      padding: 36px 0 36px 0;
+      border-bottom: 1px solid lightgray;
+    }
+    > .wellmarkdrug-div {
+      padding: 36px 0 36px 0;
+      border-bottom: 1px solid lightgray;
+    }
+    > .copyright-div {
+      padding: 36px 0;
+      opacity: 1;
+      background-color: $--blue-100;
+      > div p {
+        padding-bottom: 24px;
+        opacity: 1;
+        color: $--gray-700;
+        font-family: "Roboto-Regular";
+        font-size: 12px;
+        font-weight: 400;
+        font-style: Regular;
+        letter-spacing: 0px;
+        text-align: left;
+        line-height: 20px;
+      }
+    }
+    > div > div > ul {
+      list-style: none;
+      margin: 0px;
+      display: flex;
+      gap: 52px;
+      padding: 0px;
+      @include for-mobile {
+        flex-direction: column;
+        gap: 24px;
+      }
+      @include for-tablet {
+        flex-direction: column;
+        gap: 24px;
+      }
+    }
+    > div > div > ul > li {
+      font-size: 16px;
+      font-weight: 500;
+      color: $--primary-675;
+      opacity: 1;
+      font-family: "Roboto-Medium";
+      letter-spacing: 0px;
+    }
   }
 }
