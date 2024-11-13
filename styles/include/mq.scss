@@ -37,7 +37,7 @@ $breakpoint4: 1379px;
 }
 //Non-Mobile
 @mixin for-nonmobile {
-  @media (min-width: $breakpoint1) {
+  @media (min-width: calc($breakpoint1 + 1px)) {
     @content;
   }
 }
