@@ -11,22 +11,22 @@
     padding: 72px 16px 52px 16px;
   }
 }
-@media (min-width: 480px) and (max-width: 1023px) {
+@media (min-width: 481px) and (max-width: 1023px) {
   .footer-main-wrapper .footer-main {
     padding: 72px 36px 52px 36px;
   }
 }
-@media (min-width: 1379px) {
+@media (min-width: 1380px) {
   .footer-main-wrapper .footer-main {
     padding: 72px 52px 36px 52px;
   }
 }
-@media (min-width: 1200px) and (max-width: 1379px) {
+@media (min-width: 1201px) and (max-width: 1379px) {
   .footer-main-wrapper .footer-main {
     padding: 72px 52px 36px 52px;
   }
 }
-@media (min-width: 1023px) and (max-width: 1200px) {
+@media (min-width: 1024px) and (max-width: 1200px) {
   .footer-main-wrapper .footer-main {
     padding: 72px 36px 52px 36px;
   }
@@ -53,7 +53,7 @@
     display: none;
   }
 }
-@media (min-width: 480px) and (max-width: 1023px) {
+@media (min-width: 481px) and (max-width: 1023px) {
   .footer-main-wrapper .footer-main > .logo-social-div > .social-div {
     display: none;
   }
@@ -122,22 +122,22 @@
     display: flex;
   }
 }
-@media (min-width: 480px) and (max-width: 1023px) {
+@media (min-width: 481px) and (max-width: 1023px) {
   .footer-main-wrapper .footer-main > .attention-div > .social-div {
     display: flex;
   }
 }
-@media (min-width: 1379px) {
+@media (min-width: 1380px) {
   .footer-main-wrapper .footer-main > .attention-div > .social-div {
     display: none;
   }
 }
-@media (min-width: 1200px) and (max-width: 1379px) {
+@media (min-width: 1201px) and (max-width: 1379px) {
   .footer-main-wrapper .footer-main > .attention-div > .social-div {
     display: none;
   }
 }
-@media (min-width: 1023px) and (max-width: 1200px) {
+@media (min-width: 1024px) and (max-width: 1200px) {
   .footer-main-wrapper .footer-main > .attention-div > .social-div {
     display: none;
   }
@@ -172,7 +172,7 @@
     gap: 24px;
   }
 }
-@media (min-width: 480px) and (max-width: 1023px) {
+@media (min-width: 481px) and (max-width: 1023px) {
   .footer-main-wrapper .footer-main > div > div > ul {
     flex-direction: column;
     gap: 24px;
