@@ -2,6 +2,8 @@
  * loads and decorates the footer
  * @param {Element} block The footer block element
  */
+import { getMetadata } from '../../scripts/aem.js';
+import { loadFragment } from '../fragment/fragment.js';
 export default async function decorate(block) {
   // load footer as fragment
   const footerMeta = getMetadata("footer");
