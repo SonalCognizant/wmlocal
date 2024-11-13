@@ -14,6 +14,7 @@ export default async function decorate(block) {
   console.log(fragment)
   const footer = document.createElement("div");
   const footerMain = document.querySelector(".footer-main-wrapper");
+  console.log(footerMain,"footers")
   const footerProvider = document.querySelector(".footer-provider-wrapper");
   const footerMedAdv = document.querySelector(".footer-medadv-wrapper");
   if (window.location.pathname.includes("/providers/")) {
