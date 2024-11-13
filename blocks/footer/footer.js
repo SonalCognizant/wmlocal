@@ -1,51 +1,25 @@
-// /**
-//  * loads and decorates the footer
-//  * @param {Element} block The footer block element
-//  */
-// export default async function decorate(block) {
-//   // block.textContent = "";
-//   // const footerMeta = getMetadata('footer');
-//   // const footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
-//   // const fragment = await loadFragment(footerPath);
-//   const footer = document.createElement("div");
-//   const footerMain = document.querySelector(".footer-main-wrapper");
-//   const footerProvider = document.querySelector(".footer-provider-wrapper");
-//   const footerMedAdv = document.querySelector(".footer-medadv-wrapper");
-//   if (window.location.pathname.includes("/providers/")) {
-//     footer.append(footerProvider);
-//   } else if (window.location.pathname.includes("/shop/")) {
-//     footer.append(footerMedAdv);
-//   } else {
-//     footer.append(footerMain);
-//   }
-//   block.append(footer);
-// }
+/**
+ * loads and decorates the footer
+ * @param {Element} block The footer block element
+ */
 export default async function decorate(block) {
-  block.textContent = ""; // Clear the block
- 
-  // Create a new footer element
+  block.textContent = "";
+  const footerMeta = getMetadata('footer');
+  console.log(footerMeta)
+  const footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
+  console.log(footerPath)
+  const fragment = await loadFragment(footerPath);
+  console.log(fragment)
   const footer = document.createElement("div");
- 
-  // Select the footer wrappers
   const footerMain = document.querySelector(".footer-main-wrapper");
   const footerProvider = document.querySelector(".footer-provider-wrapper");
   const footerMedAdv = document.querySelector(".footer-medadv-wrapper");
- 
-  // Check the current path and append the correct footer
   if (window.location.pathname.includes("/providers/")) {
-    if (footerProvider) {
-      footer.append(footerProvider.cloneNode(true)); // Clone the node to avoid moving it
-    }
+    footer.append(footerProvider);
   } else if (window.location.pathname.includes("/shop/")) {
-    if (footerMedAdv) {
-      footer.append(footerMedAdv.cloneNode(true)); // Clone the node to avoid moving it
-    }
+    footer.append(footerMedAdv);
   } else {
-    if (footerMain) {
-      footer.append(footerMain.cloneNode(true)); // Clone the node to avoid moving it
-    }
+    footer.append(footerMain);
   }
- 
-  // Append the constructed footer to the block
   block.append(footer);
 }
