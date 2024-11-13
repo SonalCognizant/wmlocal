@@ -21,7 +21,9 @@ export default async function decorate(block) {
   } else if (window.location.pathname.includes("/shop/")) {
     footer.append(footerMedAdv);
   } else {
+    console.log(footerMain);
     footer.append(footerMain);
+    
   }
   block.append(footer);
 }
