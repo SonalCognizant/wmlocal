@@ -173,8 +173,8 @@ function renderMegaMenu(nav) {
   navbarcontainer.append(logoImg);
 
   // Search path
-  const navright = document.createElement('div');
-  navright.className = 'nav-right';
+  const navbarright = document.createElement('div');
+  navbarright.className = 'navbar-right';
   const search = document.createElement('div');
   search.classList.add('navbar-search');
   const searchbox = document.createElement('div');
@@ -205,10 +205,10 @@ function renderMegaMenu(nav) {
   anchor.classList.add('button', 'primary');
 
   // Append elements
-  navbarcontainer.append(navright);
-  navright.append(search);
+  navbarcontainer.append(navbarright);
+  navbarright.append(search);
   anchor.prepend(btnicon);
-  navright.append(anchor);
+  navbarright.append(anchor);
   search.append(searchbox);
   searchbox.append(searchicon);
   searchicon.append(searchanchor);

@@ -30,7 +30,7 @@ header {
                     justify-content: space-between;
                     max-width: 1275px;
                     margin: auto;
-                    .nav-right{
+                    .navbar-right{
                         display: flex;
                         align-items: center;
                         gap: 24px;
@@ -158,7 +158,7 @@ header {
                                     left: -51px;
                                     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
                                     .submenu-list {
-                                        width: 65%;
+                                        width: 58%;
                                         .submenu-ul{
                                             display: flex; 
                                             gap: 30px;
@@ -185,7 +185,7 @@ header {
                                         }
                                     }
                                     .submenu-content {
-                                        width: 35%;
+                                        width: 42%;
                                         background: $--blue-50;
                                     }
                                 }

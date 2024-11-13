@@ -18,12 +18,12 @@ header .nav-wrapper nav {
     display: none;
   }
 }
-@media (min-width: 480px) and (max-width: 1023px) {
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
   header .nav-wrapper nav {
     display: none;
   }
 }
-@media (min-width: 1023px) and (max-width: 1200px) {
+@media (min-width: 1024px) and (max-width: 1200px) {
   header .nav-wrapper nav {
     display: none;
   }
@@ -40,17 +40,17 @@ header .nav-wrapper nav .navbar-brand .navbar-container {
   max-width: 1275px;
   margin: auto;
 }
-header .nav-wrapper nav .navbar-brand .navbar-container .nav-right {
+header .nav-wrapper nav .navbar-brand .navbar-container .navbar-right {
   display: flex;
   align-items: center;
   gap: 24px;
 }
-header .nav-wrapper nav .navbar-brand .navbar-container .nav-right .navbar-search .navbar-search-box {
+header .nav-wrapper nav .navbar-brand .navbar-container .navbar-right .navbar-search .navbar-search-box {
   display: flex;
   align-items: center;
   position: relative;
 }
-header .nav-wrapper nav .navbar-brand .navbar-container .nav-right .navbar-search .navbar-search-box input {
+header .nav-wrapper nav .navbar-brand .navbar-container .navbar-right .navbar-search .navbar-search-box input {
   box-sizing: border-box;
   display: block;
   width: 100%;
@@ -68,28 +68,28 @@ header .nav-wrapper nav .navbar-brand .navbar-container .nav-right .navbar-searc
   width: 345px;
   transition: border-color 0.2s;
 }
-header .nav-wrapper nav .navbar-brand .navbar-container .nav-right .navbar-search .navbar-search-box input:hover {
+header .nav-wrapper nav .navbar-brand .navbar-container .navbar-right .navbar-search .navbar-search-box input:hover {
   border: 1px solid #d6e5f1;
 }
-header .nav-wrapper nav .navbar-brand .navbar-container .nav-right .navbar-search .navbar-search-box input:focus {
+header .nav-wrapper nav .navbar-brand .navbar-container .navbar-right .navbar-search .navbar-search-box input:focus {
   border: 1px solid #d6e5f1;
 }
-header .nav-wrapper nav .navbar-brand .navbar-container .nav-right .navbar-search .navbar-search-box .icon-search {
+header .nav-wrapper nav .navbar-brand .navbar-container .navbar-right .navbar-search .navbar-search-box .icon-search {
   position: absolute;
   right: 0;
   top: 16px;
   padding: 0px 20px;
 }
-header .nav-wrapper nav .navbar-brand .navbar-container .nav-right .navbar-search .navbar-search-box .icon-search img {
+header .nav-wrapper nav .navbar-brand .navbar-container .navbar-right .navbar-search .navbar-search-box .icon-search img {
   height: 20px;
   width: 20px;
 }
-header .nav-wrapper nav .navbar-brand .navbar-container .nav-right a.button.primary {
+header .nav-wrapper nav .navbar-brand .navbar-container .navbar-right a.button.primary {
   display: flex;
   align-items: center;
   gap: 9px;
 }
-header .nav-wrapper nav .navbar-brand .navbar-container .nav-right a.button.primary .login-icon {
+header .nav-wrapper nav .navbar-brand .navbar-container .navbar-right a.button.primary .login-icon {
   width: 15px;
   height: 15px;
 }
@@ -164,7 +164,7 @@ header .nav-wrapper nav .navbar-menu .menucontainer .navbar-ul .navbar-li:hover 
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 header .nav-wrapper nav .navbar-menu .menucontainer .navbar-ul .navbar-li:hover .submenu-block .submenu-list {
-  width: 65%;
+  width: 58%;
 }
 header .nav-wrapper nav .navbar-menu .menucontainer .navbar-ul .navbar-li:hover .submenu-block .submenu-list .submenu-ul {
   display: flex;
@@ -191,6 +191,6 @@ header .nav-wrapper nav .navbar-menu .menucontainer .navbar-ul .navbar-li:hover 
   padding: 0;
 }
 header .nav-wrapper nav .navbar-menu .menucontainer .navbar-ul .navbar-li:hover .submenu-block .submenu-content {
-  width: 35%;
+  width: 42%;
   background: #f3f9ff;
 }
