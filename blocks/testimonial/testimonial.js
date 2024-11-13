@@ -22,12 +22,12 @@ export default function decorate(block) {
   const linkImg = document.createElement("img");
   linkImg.src = '/icons/right-arrow.svg';
   linkImg.setAttribute('data-icon-name','right-arrow');
-  // linkImg.setAttribute('loading','eager');
   linkImg.className = 'link-img';
   linkDiv.append(linkImg);
   parentElement.append(linkDiv);
-
-  // Process the remaining children to create list items
+  const testimonialFlag = block.closest('.testimonial-container');
+  if (testimonialFlag.classList.contains('testimonial-with-image')  || testimonialFlag.classList.contains('testimonial-with-small-image')){
+    // Process the remaining children to create list items
   [...block.children].forEach((row, index) => {
     if (index < block.children.length - 1 && index > 0) {
       const li = document.createElement('li');
@@ -35,27 +35,50 @@ export default function decorate(block) {
 
       // Set class for the list item
       li.className = 'testimonial-card';
-
-      // get the image from the icon and append it to the list
-      const imgTag = document.createElement('img');
-      imgTag.src = '/icons/quote.svg';
-      imgTag.setAttribute('data-icon-name','quote');
-      // imgTag.setAttribute('loading','eager');
-
+      
+      const hTag = li.querySelectorAll('h3');
       //setAttribute for the header
-      const hTag = li.querySelector('h3');
-      hTag.className = 'testimonial-title';
+      hTag[1].className = 'testimonial-title';
 
       //setAttribute for the paragraph
       const pTag = li.querySelector('p');
       pTag.className = 'testimonial-description';
 
-      li.prepend(imgTag);
       ul.append(li);
     }
   });
+  }
+  else {
+    // Process the remaining children to create list items
+  [...block.children].forEach((row, index) => {
+    if (index < block.children.length - 1 && index > 0) {
+      const li = document.createElement('li');
+      while (row.firstElementChild) li.append(row.firstElementChild);
+
+      // Set class for the list item
+      li.className = 'testimonial-card';
+      
+      const hTag = li.querySelectorAll('h3');
+      const iconDiv = document.createElement('div');
+      iconDiv.className = 'testimonial-icon';
+      iconDiv.append(hTag[0]);
+      li.prepend(iconDiv);
+
+      //setAttribute for the header
+      hTag[1].className = 'testimonial-title';
+
+      //setAttribute for the paragraph
+      const pTag = li.querySelector('p');
+      pTag.className = 'testimonial-description';
+
+      ul.append(li);
+    }
+  });
+  }
+  
 
   // Clear the original block content and append the new list
   block.textContent = '';
   block.append(ul);
 }
+// section testimonial-with-image testimonial-container
