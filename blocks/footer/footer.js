@@ -19,7 +19,6 @@ export default async function decorate(block) {
     const footerMain = fragment.firstElementChild.children[0]
     const footerProvider = fragment.firstElementChild.children[1];
     const footerMedAdv = fragment.firstElementChild.children[2];
-    console.log(footerMain,footerProvider,footerMedAdv);
     if (window.location.pathname.includes("/providers/")) {
       footer.append(footerProvider);
     } else if (window.location.pathname.includes("/shop/")) {
