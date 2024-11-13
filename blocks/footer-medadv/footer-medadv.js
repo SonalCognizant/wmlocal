@@ -5,7 +5,7 @@ export default function decorate(block) {
   block.children[4].classList.add("attention-div");
   block.children[5].classList.add("copyright-div");
   const logoImg = document.createElement("img");
-  logoImg.src = "../../images/global/WellmarkLogo.png";
+  logoImg.src = "../../images/global/Logo.png";
   logoImg.className = "logo-img";
   const logoDiv = block.children[0];
   const imgDiv = document.createElement("div");
