@@ -23,7 +23,6 @@ export default async function decorate(block) {
   } else {
     console.log(footerMain);
     footer.append(footerMain);
-    
   }
   block.append(footer);
 }
