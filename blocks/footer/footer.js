@@ -14,9 +14,11 @@ export default async function decorate(block) {
   console.log(fragment)
   const footer = document.createElement("div");
   const footerMain = document.querySelector(".footer-main-wrapper");
-  console.log(footerMain,"footers")
+  console.log(footerMain,"footer-main");
   const footerProvider = document.querySelector(".footer-provider-wrapper");
+  console.log(footerProvider,"footer-provider");
   const footerMedAdv = document.querySelector(".footer-medadv-wrapper");
+  console.log(footerMedAdv,"footer-medAdv");
   if (window.location.pathname.includes("/providers/")) {
     footer.append(footerProvider);
   } else if (window.location.pathname.includes("/shop/")) {
