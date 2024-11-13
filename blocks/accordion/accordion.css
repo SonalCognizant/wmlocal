@@ -2,6 +2,10 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
+main .section div {
+  margin: 0 auto;
+}
+
 .accordion-wrapper {
   padding: 120px 52px;
 }
@@ -119,10 +123,15 @@
     width: 83.33%;
   }
 }
+@media (max-width: 480px) {
+  .eight-column-layout.accordion-container .accordion-wrapper details {
+    width: 100%;
+  }
+}
 
 .six-column-layout.accordion-container {
   max-width: 1275px;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   gap: 24px;
 }

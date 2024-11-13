@@ -1,6 +1,13 @@
 @import "../../styles/include/mq.scss";
 @import "../../styles/include/tokens.scss";
 
+main {
+    .section {
+        div {
+            margin: 0 auto;
+        }
+    }
+}
 .accordion-wrapper {
     padding: $--spacing-max $--spacing-xxl;
     @include for-laptop{
@@ -110,12 +117,15 @@
             @include for-laptop{
                 width: 83.33%;
             }
+            @include for-mobile{
+                width: 100%;
+            }
         }
     }
 }
 .six-column-layout.accordion-container{
     max-width: 1275px;
-    margin: auto;
+    margin: 0 auto;
     display: flex;
     gap: $--spacing-l;
     @include for-tablet{
