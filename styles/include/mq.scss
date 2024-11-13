@@ -10,7 +10,7 @@ $breakpoint4: 1379px;
 }
 // for tablet 481 to 1023
 @mixin for-tablet {
-  @media (min-width: calc($breakpoint1 + 1px)) and (max-width: calc($breakpoint2 + 1px)) {
+  @media (min-width: calc($breakpoint1 + 1px)) and (max-width: $breakpoint2) {
     @content;
   }
 }

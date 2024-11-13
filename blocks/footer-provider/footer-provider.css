@@ -11,7 +11,7 @@
     padding: 72px 16px 52px 16px;
   }
 }
-@media (min-width: 481px) and (max-width: 1024px) {
+@media (min-width: 481px) and (max-width: 1023px) {
   .footer-provider-wrapper .footer-provider {
     padding: 72px 36px 52px 36px;
   }
@@ -53,7 +53,7 @@
     display: none;
   }
 }
-@media (min-width: 481px) and (max-width: 1024px) {
+@media (min-width: 481px) and (max-width: 1023px) {
   .footer-provider-wrapper .footer-provider > .logo-social-div > .social-div {
     display: none;
   }
@@ -96,7 +96,7 @@
     gap: 24px;
   }
 }
-@media (min-width: 481px) and (max-width: 1024px) {
+@media (min-width: 481px) and (max-width: 1023px) {
   .footer-provider-wrapper .footer-provider > div > div > ul {
     flex-direction: column;
     gap: 24px;
