@@ -3,15 +3,28 @@
  * @param {Element} block The footer block element
  */
 export default async function decorate(block) {
+  // load footer as fragment
+  const footerMeta = getMetadata("footer");
+  const footerPath = footerMeta
+    ? new URL(footerMeta, window.location).pathname
+    : "/footer";
+  const fragment = await loadFragment(footerPath);
+
+  // decorate footer DOM
   block.textContent = "";
-  const footerMain = document.querySelector(".footer-main-wrapper");
-  const footerProvider = document.querySelector(".footer-provider-wrapper");
-  const footerMedAdv = document.querySelector(".footer-medadv-wrapper");
-  if (window.location.pathname.includes("/providers/")) {
-    block.append(footerProvider)
-  } else if (window.location.pathname.includes("/shop/")) {
-    block.append(footerMedAdv)
-  } else {
-    block.append(footerMain)
+  const footer = document.createElement("div");
+  if (fragment.firstElementChild) {
+    const footerMain = fragment.firstElementChild.children[0]
+    const footerProvider = fragment.firstElementChild.children[1];
+    const footerMedAdv = fragment.firstElementChild.children[2];
+    console.log(footerMain,footerProvider,footerMedAdv);
+    if (window.location.pathname.includes("/providers/")) {
+      footer.append(footerProvider);
+    } else if (window.location.pathname.includes("/shop/")) {
+      footer.append(footerMedAdv);
+    } else {
+      footer.append(footerMain);
+    }
   }
+  block.append(footer);
 }
