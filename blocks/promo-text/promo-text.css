@@ -33,7 +33,7 @@
   padding-bottom: 24px;
   margin: 0;
 }
-> p .promo-text-wrapper > .promo-text > div > div > p:last-child {
+.promo-text-wrapper > .promo-text > div > div > p:last-child {
   padding-top: 36px;
   margin: 0;
 }

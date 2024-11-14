@@ -1,5 +1,5 @@
-@import '../../styles/include/mq.scss';
-@import '../../styles/include/tokens.scss';
+@import "../../styles/include/mq.scss";
+@import "../../styles/include/tokens.scss";
 
 .promo-text-wrapper {
   > .promo-text {
@@ -33,7 +33,7 @@
             padding-bottom: 24px;
             margin: 0;
           }
-          > p &:last-child {
+          &:last-child {
             padding-top: 36px;
             margin: 0;
           }
