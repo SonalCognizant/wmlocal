@@ -146,52 +146,59 @@
     }
   }
 }
-// .testimonial-with-small-image{
-//   .testimonial-wrapper{
-//     .testimonial{
-//       ul{
-//         li{
-//           display: flex;
-//           gap: 30px;
-//           align-items: center;
-//           width: unset !important;
-//           @include for-laptop{
-//             flex-direction: row-reverse;
-//           }
-//           @include for-tablet{
-//             flex-direction: column-reverse;
-//           }
-//           @include for-mobile{
-//             flex-direction: column-reverse;
-//           }
-//           div{
-//             &:first-child{
-//               width: 70%;
-//               @include for-laptop{
-//                 width: 50%;
-//               }
-//               @include for-laptop{
-//                 width: 100%;
-//               }
-//               @include for-mobile{
-//                 width: 100%;
-//               }
-//             }
-//             &:last-child{
-//               width: 30%;
-//               @include for-laptop{
-//                 width: 50%;
-//               }
-//               @include for-tablet{
-//                 width: 100%;
-//               }
-//               @include for-mobile{
-//                 width: 100%;
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+.testimonial-small-image{
+  .testimonial-with-image-wrapper{
+    .testimonial-with-image{
+      ul{
+        li{
+          @include for-laptop{
+            flex-direction: row-reverse;
+            align-items: flex-start !important;
+          }
+          @include for-tablet{
+            flex-direction: column-reverse;
+          }
+          @include for-mobile{
+            flex-direction: column-reverse;
+          }
+          div{
+            &:first-child{
+              width: 70% !important;
+              @include for-laptop{
+                width: 50% !important;
+                padding: $--spacing-xl $--spacing-xl $--spacing-jumbo $--spacing-xl !important;
+              }
+              @include for-laptop{
+                width: 100%;
+              }
+              @include for-mobile{
+                width: 100%;
+              }
+              @include for-tablet{
+                width: 100% !important;
+              }
+            }
+            &:last-child{
+              width: 30% !important;
+              margin: 0;
+              @include for-laptop{
+                width: 50% !important;
+              }
+              @include for-tablet{
+                width: 100% !important;
+              }
+              @include for-mobile{
+                width: 100% !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    div{
+      &:last-child{
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+}

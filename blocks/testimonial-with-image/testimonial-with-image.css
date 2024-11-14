@@ -176,3 +176,66 @@
     margin-top: 36px;
   }
 }
+
+@media (min-width: 1023px) and (max-width: 1200px) {
+  .testimonial-small-image .testimonial-with-image-wrapper .testimonial-with-image ul li {
+    flex-direction: row-reverse;
+    align-items: flex-start !important;
+  }
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .testimonial-small-image .testimonial-with-image-wrapper .testimonial-with-image ul li {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 480px) {
+  .testimonial-small-image .testimonial-with-image-wrapper .testimonial-with-image ul li {
+    flex-direction: column-reverse;
+  }
+}
+.testimonial-small-image .testimonial-with-image-wrapper .testimonial-with-image ul li div:first-child {
+  width: 70% !important;
+}
+@media (min-width: 1023px) and (max-width: 1200px) {
+  .testimonial-small-image .testimonial-with-image-wrapper .testimonial-with-image ul li div:first-child {
+    width: 50% !important;
+    padding: 36px 36px 96px 36px !important;
+  }
+}
+@media (min-width: 1023px) and (max-width: 1200px) {
+  .testimonial-small-image .testimonial-with-image-wrapper .testimonial-with-image ul li div:first-child {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .testimonial-small-image .testimonial-with-image-wrapper .testimonial-with-image ul li div:first-child {
+    width: 100%;
+  }
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .testimonial-small-image .testimonial-with-image-wrapper .testimonial-with-image ul li div:first-child {
+    width: 100% !important;
+  }
+}
+.testimonial-small-image .testimonial-with-image-wrapper .testimonial-with-image ul li div:last-child {
+  width: 30% !important;
+  margin: 0;
+}
+@media (min-width: 1023px) and (max-width: 1200px) {
+  .testimonial-small-image .testimonial-with-image-wrapper .testimonial-with-image ul li div:last-child {
+    width: 50% !important;
+  }
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .testimonial-small-image .testimonial-with-image-wrapper .testimonial-with-image ul li div:last-child {
+    width: 100% !important;
+  }
+}
+@media (max-width: 480px) {
+  .testimonial-small-image .testimonial-with-image-wrapper .testimonial-with-image ul li div:last-child {
+    width: 100% !important;
+  }
+}
+.testimonial-small-image .testimonial-with-image-wrapper div:last-child {
+  margin-bottom: 0 !important;
+}
