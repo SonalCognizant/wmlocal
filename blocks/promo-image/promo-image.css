@@ -146,13 +146,16 @@
   aspect-ratio: 4/3;
   object-fit: cover;
 }
+.promo-image-container .promo-image > ul > li .cards-card-body {
+  padding: 0 36px 37px 36px;
+}
 .promo-image-container .promo-image > ul > li .cards-card-body h3 {
   font-weight: 700;
   font-family: roboto, sans-serif;
   line-height: 24px;
   font-size: 20px;
   color: #005589;
-  text-align: center;
+  text-align: left;
   text-decoration: underline;
 }
 .promo-image-container .promo-image > ul > li .cards-card-body p {
@@ -161,5 +164,4 @@
   line-height: 24px;
   font-size: 16px;
   color: #4b4c4d;
-  padding: 0 24px;
 }
