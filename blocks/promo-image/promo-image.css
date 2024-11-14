@@ -159,6 +159,7 @@
   text-decoration: underline;
   opacity: 1;
   letter-spacing: 0px;
+  margin: 0;
 }
 .promo-image-container .promo-image > ul > li .cards-card-body p {
   font-weight: 400;
