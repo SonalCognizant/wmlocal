@@ -3,11 +3,11 @@
 .promo-no-image-container {
   .promo-image-wrapper {
     @include for-mobile {
-      background-image: none !important;
+      // background-image: none !important;
       padding: 0 16px;
     }
     @include for-tablet {
-      background-image: none !important;
+      // background-image: none !important;
       padding: 0 36px;
     }
     @include for-xlarge {
