@@ -1,8 +1,8 @@
 @import "../../styles/include/mq.scss";
 @import "../../styles/include/tokens.scss";
-.section.testimonial-container{
+.section.testimonial-with-image-container{
   font-family: $--font-roboto;
-  .testimonial-wrapper{
+  .testimonial-with-image-wrapper{
     padding: $--spacing-max $--spacing-xxl;
     text-align: center;
     @include for-tablet{
@@ -11,12 +11,16 @@
     @include for-mobile{
       padding: $--spacing-huge $--spacing-m;
     }
+    @include for-laptop{
+      padding: $--spacing-max $--spacing-xl;
+    }
     h2{
       font-family: $--font-museo;
       font-size: 32px;
       line-height: 38px;
       font-weight: 700;
       color: $--blue-550;
+      margin: 0;
       margin-bottom: $--spacing-huge;
       text-align: center;
       @include for-tablet{
@@ -42,7 +46,7 @@
       display: inline-block;
       vertical-align: middle;
     }
-    .testimonial {
+    .testimonial-with-image{
       ul{
         display: flex;
         justify-content: center;
@@ -50,6 +54,7 @@
         padding-left: 0;
         @include for-tablet{
           flex-direction: column;
+          align-items: center;
         }
         @include for-mobile{
           flex-direction: column;
@@ -58,24 +63,15 @@
           list-style-type: none;
           text-align: left;
           color: $--gray-700;
-          padding: $--spacing-xl $--spacing-xl $--spacing-jumbo $--spacing-xl;
+          display: flex;
+          gap: 36px;
+          align-items: center;
           @include for-tablet{
-            margin-bottom: $--spacing-xl;
+            flex-direction: column-reverse;
           }
           @include for-mobile{
-            margin-bottom: $--spacing-l;
-          }
-          @include for-xlarge {
-            width: calc((100% - 104px) / 3);
-          }
-          @include for-large {
-            width: calc((100% - 104px) / 3);
-          }
-          @include for-laptop {
-            width: calc((100% - 72px) / 2);
-          }
-          @include for-tablet {
-            flex-basis: calc((100% - 72px) / 1);
+            flex-direction: column-reverse;
+            gap: 24px;
           }
           .testimonial-title{
             font-family: $--font-museo;
@@ -89,15 +85,45 @@
             line-height: $--spacing-l;
             font-weight: 400;
           }
-          &:first-child{
-            margin-bottom: 0 !important;
-          }
-          &:last-child{
-            @include for-tablet{
-              margin-bottom: $--spacing-xxl;
+          div{
+            &:first-child{
+              width: 30%;
+              padding: 0 $--spacing-xl;
+              @include for-laptop{
+                width: 50%;
+              }
+              @include for-tablet{
+                width: 100%;
+                padding: $--spacing-xl $--spacing-xl $--spacing-jumbo $--spacing-xl;
+              }
+              @include for-mobile{
+                width: 100%;
+                padding: $--spacing-xl 0 $--spacing-jumbo 0;
+              }
+              h3{
+                &:first-child{
+                  margin: 0;
+                }
+              }
             }
-            @include for-mobile{
-              margin-bottom: $--spacing-xl;
+            &:last-child{
+              width: 70%;
+              @include for-laptop{
+                width: 50%;
+              }
+              @include for-tablet{
+                width: 100%;
+                margin: 0;
+              }
+              @include for-mobile{
+                width: 100%;
+                margin: 0;
+              }
+            }
+          }
+          picture{
+            img{
+              width: 100%;
             }
           }
           .icon{
@@ -107,23 +133,14 @@
         }
       }
     }
-  }
-}
-.eight-column-large{
-  .testimonial-wrapper{
-    .testimonial{
-      ul{
-        li{
-            width: calc((100% - 104px) / 2) !important;
-            @include for-laptop{
-              width: calc((100% - 104px) / 1) !important;
-            }
-            @include for-tablet{
-              width: unset !important;
-            }
-            @include for-mobile{
-              width: unset !important;
-            }
+    div{
+      &:last-child{
+        margin-top: $--spacing-huge;
+        @include for-tablet{
+          margin: $--spacing-xxl 0 $--spacing-jumbo 0;
+        }
+        @include for-mobile{
+          margin-top: $--spacing-xl;
         }
       }
     }
