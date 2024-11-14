@@ -4,6 +4,21 @@
 .promo-text-wrapper {
   > .promo-text {
     padding: 0 52px;
+    @include for-xlarge {
+        padding: 0 52px;
+      }
+      @include for-large {
+        padding: 0 52px;
+      }
+      @include for-laptop {
+        padding: 0 36px;
+      }
+      @include for-mobile {
+        padding: 0 16px;
+      }
+      @include for-tablet {
+        padding: 0 36px;
+      }
     > div {
       > div {
         display: flex;
@@ -21,6 +36,12 @@
           @include for-laptop {
             padding: 118px 81px 120px 81px;
           }
+          @include for-mobile {
+            padding: 72px 0;
+          }
+          @include for-tablet {
+            padding: 96px 0;
+          }
         > p {
           opacity: 1;
           color: rgba(75, 76, 77, 1);
@@ -32,6 +53,11 @@
           text-align: center;
           line-height: 24px;
           margin: 0;
+          > strong {
+            @include for-mobile {
+                width: 100%;
+            }
+          }
           &:first-child {
             opacity: 1;
             color: $--blue-550;
@@ -46,6 +72,9 @@
           &:last-child {
             padding-top: 36px;
             margin: 0;
+            @include for-mobile {
+                width: 100%;
+              }
           }
         }
       }
