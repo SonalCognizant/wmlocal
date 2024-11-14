@@ -82,31 +82,31 @@
 }
 @media (max-width: 480px) {
   .promo-image-container .promo-image > ul {
-    padding: 36px 16px 72px 16px;
+    padding: 36px 0px 72px 0px;
     flex-direction: column;
   }
 }
 @media (min-width: 1380px) {
   .promo-image-container .promo-image > ul {
     gap: 30px;
-    padding: 72px 52px 120px 52px;
+    padding: 72px 0px 120px 0px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .promo-image-container .promo-image > ul {
-    padding: 72px 52px 120px 52px;
+    padding: 72px 0px 120px 0px;
     gap: 30px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .promo-image-container .promo-image > ul {
-    padding: 72px 36px 120px 36px;
+    padding: 72px 0px 120px 0px;
     gap: 30px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .promo-image-container .promo-image > ul {
-    padding: 52px 36px 96px 36px;
+    padding: 52px 0px 96px 0px;
     gap: 30px;
     flex-wrap: wrap;
   }
@@ -153,10 +153,12 @@
   font-weight: 700;
   font-family: roboto, sans-serif;
   line-height: 24px;
-  font-size: 20px;
+  font-size: 24px;
   color: #005589;
   text-align: left;
   text-decoration: underline;
+  opacity: 1;
+  letter-spacing: 0px;
 }
 .promo-image-container .promo-image > ul > li .cards-card-body p {
   font-weight: 400;
@@ -164,4 +166,8 @@
   line-height: 24px;
   font-size: 16px;
   color: #4b4c4d;
+  text-align: left;
+  margin: 0;
+  padding-top: 16px;
+  opacity: 1;
 }

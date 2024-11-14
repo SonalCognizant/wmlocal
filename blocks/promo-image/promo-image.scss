@@ -61,23 +61,23 @@
       text-align: center;
       flex-direction: row;
       @include for-mobile {
-        padding: 36px 16px 72px 16px;
+        padding: 36px 0px 72px 0px;
         flex-direction: column;
       }
       @include for-xlarge {
         gap: 30px;
-        padding: 72px 52px 120px 52px;
+        padding: 72px 0px 120px 0px;
       }
       @include for-large {
-        padding: 72px 52px 120px 52px;
+        padding: 72px 0px 120px 0px;
         gap: 30px;
       }
       @include for-laptop {
-        padding: 72px 36px 120px 36px;
+        padding: 72px 0px 120px 0px;
         gap: 30px;
       }
       @include for-tablet {
-        padding: 52px 36px 96px 36px;
+        padding: 52px 0px 96px 0px;
         gap: 30px;
         flex-wrap: wrap;
       }
@@ -116,11 +116,12 @@
             font-weight: 700;
             font-family: $--font-roboto;
             line-height: 24px;
-            font-size: 20px;
+            font-size: 24px;
             color: $--blue-675;
             text-align: left;
             text-decoration: underline;
-            
+            opacity: 1;
+            letter-spacing: 0px;
           }
           p {
             font-weight: 400;
@@ -128,6 +129,10 @@
             line-height: 24px;
             font-size: 16px;
             color: $--gray-700;
+            text-align: left;
+            margin: 0;
+            padding-top: 16px;
+            opacity: 1;
           }
         }
       }
