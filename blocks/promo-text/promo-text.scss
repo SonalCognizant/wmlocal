@@ -1,0 +1,41 @@
+@import '../../styles/include/mq.scss';
+@import '../../styles/include/tokens.scss';
+
+.promo-text-wrapper {
+  > .promo-text {
+    > div {
+      > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: 120px 217px;
+        > p {
+          opacity: 1;
+          color: rgba(75, 76, 77, 1);
+          font-family: "Roboto-Regular";
+          font-size: 16px;
+          font-weight: 400;
+          font-style: Regular;
+          letter-spacing: 0px;
+          text-align: center;
+          line-height: 24px;
+          &:first-child {
+            opacity: 1;
+            color: $--blue-550;
+            font-family: "MuseoSlab-700";
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: 0px;
+            text-align: center;
+            padding-bottom: 24px;
+          }
+          > p &:last-child {
+            padding-top: 36px;
+          }
+        }
+      }
+    }
+  }
+}
