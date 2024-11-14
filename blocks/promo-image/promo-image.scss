@@ -101,17 +101,8 @@
         @include for-tablet {
           flex-basis: calc((100% - 72px) / 2);
         }
-        .cards-card-image {
-          line-height: 0;
-          width: 100%;
-          img {
-            width: 100%;
-            aspect-ratio: 4 / 3;
-            object-fit: cover;
-          }
-        }
         .cards-card-body {
-          padding: 0 36px 37px 36px;
+          // padding: 0 36px 37px 36px;
           h3 {
             font-weight: 700;
             font-family: $--font-roboto;
@@ -123,6 +114,7 @@
             opacity: 1;
             letter-spacing: 0px;
             margin: 0;
+            padding: 36px 36px 16px 36px
           }
           p {
             font-weight: 400;
@@ -132,8 +124,14 @@
             color: $--gray-700;
             text-align: left;
             margin: 0;
-            padding-top: 16px;
             opacity: 1;
+            padding: 36px 36px 37px 36px;
+            > span{
+              width: 80px;
+              height: 80px;
+              border-bottom: 1px solid lightgray;
+              padding: 36px;
+            }
           }
         }
       }
