@@ -37,11 +37,6 @@ export default function decorate(block) {
       li.className = 'testimonial-card';
       
       const hTag = li.querySelectorAll('h3');
-      const iconDiv = document.createElement('div');
-      iconDiv.className = 'testimonial-icon';
-      iconDiv.append(hTag[0]);
-      li.prepend(iconDiv);
-
       //setAttribute for the header
       hTag[1].className = 'testimonial-title';
 
@@ -52,7 +47,6 @@ export default function decorate(block) {
       ul.append(li);
     }
   });
-  
   // Clear the original block content and append the new list
   block.textContent = '';
   block.append(ul);
