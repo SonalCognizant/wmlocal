@@ -25,9 +25,8 @@ export default function decorate(block) {
   linkImg.className = 'link-img';
   linkDiv.append(linkImg);
   parentElement.append(linkDiv);
-  const testimonialFlag = block.closest('.testimonial-container');
 
-    // Process the remaining children to create list items
+  // Process the remaining children to create list items
   [...block.children].forEach((row, index) => {
     if (index < block.children.length - 1 && index > 0) {
       const li = document.createElement('li');
@@ -35,20 +34,20 @@ export default function decorate(block) {
 
       // Set class for the list item
       li.className = 'testimonial-card';
-      
-      const hTag = li.querySelectorAll('h3');
-      const iconDiv = document.createElement('div');
-      iconDiv.className = 'testimonial-icon';
-      iconDiv.append(hTag[0]);
-      li.prepend(iconDiv);
+
+      // get the image from the icon and append it to the list
+      const imgTag = document.createElement('img');
+      imgTag.src = '/icons/quote.svg';
+      imgTag.setAttribute('data-icon-name','quote');
 
       //setAttribute for the header
-      hTag[1].className = 'testimonial-title';
-
+      const hTag = li.querySelector('h3');
+      hTag.className = 'testimonial-title';
+      
       //setAttribute for the paragraph
       const pTag = li.querySelector('p');
       pTag.className = 'testimonial-description';
-
+      li.prepend(imgTag);
       ul.append(li);
     }
   });

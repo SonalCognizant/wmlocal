@@ -172,7 +172,7 @@
                 width: 100%;
               }
               @include for-mobile{
-                width: 100%;
+                width: 100% !important;
               }
               @include for-tablet{
                 width: 100% !important;
