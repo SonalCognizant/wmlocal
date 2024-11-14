@@ -79,11 +79,13 @@
   justify-content: center;
   text-align: center;
   flex-direction: row;
+  margin: 0;
 }
 @media (max-width: 480px) {
   .promo-image-container .promo-image > ul {
     padding: 36px 0px 72px 0px;
     flex-direction: column;
+    gap: 24px;
   }
 }
 @media (min-width: 1380px) {
