@@ -1,0 +1,199 @@
+@import '../../styles/include/tokens.scss';
+@import '../../styles/include/mq.scss';
+
+header {
+	.nav-wrapper {
+		width: 100%;
+		z-index: 2;
+		position: fixed;
+        nav {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            @include for-mobile {
+                display: none;
+            }
+            @include for-tablet {
+                display: none;
+            }
+            @include for-laptop {
+                display: none;
+            }
+            .navbar-brand{
+                background-color: $--blue-50;
+                padding: 16px 52px 16px 52px;
+                .navbar-container{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    max-width: 1275px;
+                    margin: auto;
+                    .nav-right{
+                        display: flex;
+                        align-items: center;
+                        gap: 24px;
+                        .navbar-search{
+                            .navbar-search-box {
+                                display: flex;
+                                align-items: center;
+                                position: relative;
+                                input {
+                                    box-sizing: border-box;
+                                    display: block;
+                                    width: 100%;
+                                    margin: 0;
+                                    padding: 12px 0px 12px 20px;
+                                    border-radius: 4px;
+                                    border: 1px solid $--blue-100;
+                                    background-color: $--white;
+                                    color: #6E6E6E;
+                                    font-size: 16px;
+                                    font-family: $--font-roboto;
+                                    font-style: italic;
+                                    font-weight: 400;
+                                    height: 52px;
+                                    width: 345px;
+                                    transition: border-color 0.2s;
+                                    &:hover {
+                                        border: 1px solid $--blue-100;
+                                    }
+                                    &:focus {
+                                        border: 1px solid $--blue-100;
+                                    }
+                                }
+                                .icon-search{
+                                    position: absolute;
+                                    right: 0;
+                                    top: 16px;
+                                    padding: 0px 20px;
+                                    img{
+                                        height: 20px;
+                                        width: 20px;
+                                    }
+                                }
+                            }  
+                        } 
+                        a.button.primary{
+                            display: flex;
+                            align-items: center;
+                            gap: 9px;
+                            .login-icon {
+                                width: 15px;
+                                height: 15px;
+                            }
+                        }         
+                    }
+                }
+            }
+            .navbar-menu{
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                background-color:  $--white;
+                padding: 0 52px;
+                box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+                .menucontainer{
+                    max-width: 1275px;
+                    margin: auto;
+                    .navbar-ul{
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+                        display:flex;
+                        position: relative;
+                        .navbar-li{
+                            text-align: center;
+                            padding: 24px 52px 24px 0;
+                            text-decoration: none;
+                            display:flex;
+                            font-size: 16px;
+                            font-family: $--font-roboto;
+                            font-weight: 500;
+                            a{
+                                color: $--gray-700;
+                                text-decoration: none;
+                                padding-bottom: 4px;
+                            }
+                            .active{
+                                color: $--blue-675;
+                                border-bottom: 2px solid $--blue-675;
+                            }
+                            .submenu-block {
+                                display: none;
+                            }
+                            .navbar-span{
+                                .navbar-up-arrow{
+                                    display: none;
+                                }
+                                img{
+                                    width: 16px;
+                                    height: 9px;
+                                    margin-left: 8px;
+                                }
+                            }
+                            &:hover{
+                                a{
+                                    color: $--blue-675;
+                                    border-bottom: 2px solid $--blue-675;
+                                }
+                                .navbar-span{
+                                    .navbar-up-arrow{
+                                        display: inline-block;
+                                    }
+                                    .navbar-down-arrow{
+                                        display: none;
+                                    }
+                                }
+                                .submenu-block {
+                                    position: absolute;
+                                    display: flex;
+                                    flex-direction: row;
+                                    background-color: #ffffff;
+                                    padding: 0 52px;
+                                    top: 78px;
+                                    gap: 30px;
+                                    width: 100%;
+                                    left: -51px;
+                                    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+                                    .submenu-list {
+                                        width: 65%;
+                                        .submenu-ul{
+                                            display: flex; 
+                                            gap: 30px;
+                                            ul{
+                                                list-style-type: none;
+                                                margin: 0;
+                                                padding: 36px 0 52px 0;
+                                                text-align: left;
+                                                width: calc((100% - 24px) / 3);
+                                                h4{
+                                                    margin: 0;
+                                                    border-bottom: 2px solid $--gray-100;
+                                                    padding-bottom: 24px;
+                                                }
+                                                li {
+                                                    padding-top: 24px;
+                                                    a{
+                                                        border: none;
+                                                        text-decoration: underline;
+                                                        padding: 0;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .submenu-content {
+                                        width: 35%;
+                                        background: $--blue-50;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+	}
+}
