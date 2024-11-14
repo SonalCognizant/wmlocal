@@ -1,7 +1,7 @@
 @import '../../styles/include/mq.scss';
 @import '../../styles/include/tokens.scss';
 .promo-no-image-container {
-  .promo-image-wrapper {
+  .promo-no-image-wrapper {
     @include for-mobile {
       // background-image: none !important;
       padding: 0 16px;

@@ -3,27 +3,27 @@
 /* wellmark spacing size start */
 /* wellmark spacing size start */
 @media (max-width: 480px) {
-  .promo-no-image-container .promo-image-wrapper {
+  .promo-no-image-container .promo-no-image-wrapper {
     padding: 0 16px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
-  .promo-no-image-container .promo-image-wrapper {
+  .promo-no-image-container .promo-no-image-wrapper {
     padding: 0 36px;
   }
 }
 @media (min-width: 1380px) {
-  .promo-no-image-container .promo-image-wrapper {
+  .promo-no-image-container .promo-no-image-wrapper {
     padding: 0 52px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
-  .promo-no-image-container .promo-image-wrapper {
+  .promo-no-image-container .promo-no-image-wrapper {
     padding: 0 52px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
-  .promo-no-image-container .promo-image-wrapper {
+  .promo-no-image-container .promo-no-image-wrapper {
     padding: 0 36px;
   }
 }
