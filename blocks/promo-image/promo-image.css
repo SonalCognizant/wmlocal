@@ -83,7 +83,7 @@
 }
 @media (max-width: 480px) {
   .promo-image-container .promo-image > ul {
-    padding: 36px 0px 72px 0px;
+    padding: 52px 0px 72px 0px;
     flex-direction: column;
     gap: 24px;
   }
