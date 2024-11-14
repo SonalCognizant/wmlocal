@@ -128,6 +128,9 @@
             margin: 0;
             opacity: 1;
             padding: 36px;
+            &:last-child{
+              padding-top: 16px;
+            }
             > span{
               width: 80px;
               height: 80px;
