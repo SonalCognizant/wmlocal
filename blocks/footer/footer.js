@@ -14,7 +14,7 @@ export default async function decorate(block) {
   const fragment = await loadFragment(footerPath);
 
   // decorate footer DOM
-  block.textContent = "";
+  block.textContent = '';
   const footer = document.createElement('div');
   if (fragment.firstElementChild) {
     const footerMain = fragment.firstElementChild.children[0];
