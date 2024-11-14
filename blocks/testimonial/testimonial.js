@@ -5,23 +5,23 @@ export default function decorate(block) {
 
   // Get the title from the first child and prepend it
   const title = block.children[0].innerText;
-  const mainHeading = document.createElement("h2");
-  mainHeading.classList.add("testimonial-heading");
+  const mainHeading = document.createElement('h2');
+  mainHeading.classList.add('testimonial-heading');
   mainHeading.textContent = title;
   parentElement.prepend(mainHeading);
 
   // Get the link from the last child and append it
-  const linkDiv = document.createElement("div");
+  const linkDiv = document.createElement('div');
   const link = block.children[block.children.length - 1].innerText;
-  const hyperLink = document.createElement("a");
-  hyperLink.classList.add("testimonial-link");
+  const hyperLink = document.createElement('a');
+  hyperLink.classList.add('testimonial-link');
   hyperLink.textContent = link;
   linkDiv.append(hyperLink);
 
   // get the image for the link
-  const linkImg = document.createElement("img");
+  const linkImg = document.createElement('img');
   linkImg.src = '/icons/right-arrow.svg';
-  linkImg.setAttribute('data-icon-name','right-arrow');
+  linkImg.setAttribute('data-icon-name', 'right-arrow');
   // linkImg.setAttribute('loading','eager');
   linkImg.className = 'link-img';
   linkDiv.append(linkImg);
@@ -39,7 +39,7 @@ export default function decorate(block) {
       // get the image from the icon and append it to the list
       const imgTag = document.createElement('img');
       imgTag.src = '/icons/quote.svg';
-      imgTag.setAttribute('data-icon-name','quote');
+      imgTag.setAttribute('data-icon-name', 'quote');
       // imgTag.setAttribute('loading','eager');
 
       //setAttribute for the header
