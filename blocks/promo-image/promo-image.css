@@ -167,7 +167,8 @@
   padding-top: 16px;
 }
 .promo-image-container .promo-image > ul > li .cards-card-body p > span {
-  width: 80px;
+  width: 100%;
+  height: 100%;
   border-bottom: 2px solid #f2f2f3;
   padding-bottom: 36px;
 }
