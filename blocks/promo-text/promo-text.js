@@ -1,8 +1,8 @@
 export default function decorate(block) {
   const title = block.children[0].textContent;
   const description = block.children[1].textContent;
-  const button = block.children[2].children[0].children[0];
-  button.classList.add('button-container');
+  const button = block.children[2];
+//   button.classList.add('button-container');
   const div = document.createElement('div');
   const heading = document.createElement('h2');
   heading.append(title);
@@ -13,11 +13,4 @@ export default function decorate(block) {
   div.append(heading, paragraph, button);
   block.innerHTML = '';
   block.append(div);
-  [...block.children].forEach((row, index) => {
-    if (index > 1) {
-      console.log(row.firstElementChild, 'hi');
-      while (row.firstElementChild) div.append(row.firstElementChild);
-    }
-  });
-  console.log(div);
 }
