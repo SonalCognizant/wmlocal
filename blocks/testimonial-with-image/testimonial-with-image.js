@@ -1,6 +1,6 @@
 export default function decorate(block) {
   // Get the parent element and create a new unordered list
-  const parentElement = block.parentElement;
+  const { parentElement } = block;
   const ul = document.createElement('ul');
 
   // Get the title from the first child and prepend it
@@ -21,61 +21,60 @@ export default function decorate(block) {
   // get the image for the link
   const linkImg = document.createElement('img');
   linkImg.src = '/icons/right-arrow.svg';
-  linkImg.setAttribute('data-icon-name','right-arrow');
+  linkImg.setAttribute('data-icon-name', 'right-arrow');
   linkImg.className = 'link-img';
   linkDiv.append(linkImg);
   parentElement.append(linkDiv);
-  
+
   const testimonialFlag = block.closest('.section');
-  if (testimonialFlag.classList.contains('testimonial-with-image-container')){
+  if (testimonialFlag.classList.contains('testimonial-with-image-container')) {
     // Process the remaining children to create list items
     [...block.children].forEach((row, index) => {
       if (index < block.children.length - 1 && index > 0) {
         const li = document.createElement('li');
         while (row.firstElementChild) li.append(row.firstElementChild);
-  
+
         // Set class for the list item
         li.className = 'testimonial-card';
-  
+
         // get the image from the icon and append it to the list
         const imgTag = document.createElement('img');
         imgTag.src = '/icons/quote.svg';
-        imgTag.setAttribute('data-icon-name','quote');
-  
-        //setAttribute for the header
+        imgTag.setAttribute('data-icon-name', 'quote');
+
+        // setAttribute for the header
         const hTag = li.querySelector('h3');
         hTag.className = 'testimonial-title';
-        
+
         const liList = li.querySelectorAll('div');
         console.log(liList);
         liList[0].prepend(imgTag);
 
-        //setAttribute for the paragraph
+        // setAttribute for the paragraph
         const pTag = li.querySelector('p');
         pTag.className = 'testimonial-description';
         ul.append(li);
       }
     });
-  }
-  else {
+  } else {
     [...block.children].forEach((row, index) => {
       if (index < block.children.length - 1 && index > 0) {
         const li = document.createElement('li');
         while (row.firstElementChild) li.append(row.firstElementChild);
-  
+
         // Set class for the list item
         li.className = 'testimonial-card';
-  
+
         // get the image from the icon and append it to the list
         const imgTag = document.createElement('img');
         imgTag.src = '/icons/quote.svg';
-        imgTag.setAttribute('data-icon-name','quote');
-  
-        //setAttribute for the header
+        imgTag.setAttribute('data-icon-name', 'quote');
+
+        // setAttribute for the header
         const hTag = li.querySelector('h3');
         hTag.className = 'testimonial-title';
-        
-        //setAttribute for the paragraph
+
+        // setAttribute for the paragraph
         const pTag = li.querySelector('p');
         pTag.className = 'testimonial-description';
         li.prepend(imgTag);

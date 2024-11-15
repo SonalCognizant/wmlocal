@@ -1,6 +1,6 @@
 export default function decorate(block) {
   // Get the parent element and create a new unordered list
-  const parentElement = block.parentElement;
+  const { parentElement } = block;
   const ul = document.createElement('ul');
 
   // Get the title from the first child and prepend it
@@ -21,7 +21,7 @@ export default function decorate(block) {
   // get the image for the link
   const linkImg = document.createElement('img');
   linkImg.src = '/icons/right-arrow.svg';
-  linkImg.setAttribute('data-icon-name','right-arrow');
+  linkImg.setAttribute('data-icon-name', 'right-arrow');
   linkImg.className = 'link-img';
   linkDiv.append(linkImg);
   parentElement.append(linkDiv);
@@ -38,20 +38,20 @@ export default function decorate(block) {
       // get the image from the icon and append it to the list
       const imgTag = document.createElement('img');
       imgTag.src = '/icons/quote.svg';
-      imgTag.setAttribute('data-icon-name','quote');
+      imgTag.setAttribute('data-icon-name', 'quote');
 
-      //setAttribute for the header
+      // setAttribute for the header
       const hTag = li.querySelector('h3');
       hTag.className = 'testimonial-title';
-      
-      //setAttribute for the paragraph
+
+      // setAttribute for the paragraph
       const pTag = li.querySelector('p');
       pTag.className = 'testimonial-description';
       li.prepend(imgTag);
       ul.append(li);
     }
   });
-  
+
   // Clear the original block content and append the new list
   block.textContent = '';
   block.append(ul);

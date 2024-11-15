@@ -1,9 +1,13 @@
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable no-await-in-loop */
+// eslint-disable-next-line import/no-extraneous-dependencies
 import * as sass from 'sass';
 import fs from 'fs';
 import path from 'path';
 import { readdir } from 'fs/promises';
 import { fileURLToPath } from 'url';
 
+// eslint-disable-next-line no-underscore-dangle
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const ignoredFiles = [
@@ -23,7 +27,7 @@ const compileAndSave = async (sassFile) => {
 };
 
 const processFiles = async (parent) => {
-  let files = await readdir(parent, { withFileTypes: true });
+  const files = await readdir(parent, { withFileTypes: true });
   for (const file of files) {
     if (file.isDirectory()) {
       await processFiles(path.join(parent, file.name));
