@@ -49,6 +49,22 @@
   }
 
   .promo-no-image {
+    @include for-mobile {
+      padding: 36px 16px 72px 16px;
+    }
+    @include for-xlarge {
+      padding: 72px 52px 120px 52px;
+    }
+    @include for-large {
+      padding: 72px 52px 120px 52px;;
+    }
+    @include for-laptop {
+      padding: 72px 36px 120px 36px;
+      gap: 30px;
+    }
+    @include for-tablet {
+      padding: 52px 36px 96px 36px;
+    }
     > ul {
       list-style: none;
       display: flex;
@@ -58,23 +74,21 @@
       flex-direction: row;
       margin: 0;
       @include for-mobile {
-        padding: 36px 16px 72px 16px;
         flex-direction: column;
       }
       @include for-xlarge {
         gap: 30px;
-        padding: 72px 52px 120px 52px;
+        padding: 0 24px;
       }
       @include for-large {
-        padding: 72px 52px 120px 52px;
         gap: 30px;
+        padding: 0 24px;
       }
       @include for-laptop {
-        padding: 72px 36px 120px 36px;
         gap: 30px;
+        padding: 0 24px;
       }
       @include for-tablet {
-        padding: 52px 36px 96px 36px;
         flex-wrap: wrap;
         gap: 30px;
       }
