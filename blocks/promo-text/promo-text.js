@@ -13,6 +13,7 @@ export default function decorate(block) {
   div.append(heading, paragraph, button);
   [...block.children].forEach((row, index) => {
     if (index > 1) {
+      console.log(row.firstElementChild, 'hi');
       while (row.firstElementChild) div.append(row.firstElementChild);
     }
   });
