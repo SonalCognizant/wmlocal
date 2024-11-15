@@ -81,6 +81,8 @@ const navmenu = JSON.stringify([
 function toggleMenu(e) {
   const menuBarlist = e.target.closest('.collapse-bar');
   menuBarlist.classList.toggle('active');
+  const mymenu = document.querySelector('.main-header-menu');
+  mymenu.classList.toggle('active');
 }
 function toggleMegaMenu() {
   const menuBar = document.querySelector('.collapse-bar');
@@ -113,7 +115,9 @@ function renderMegaMenu(nav) {
   menuItems.forEach((item) => {
     const menuli = document.createElement('li');
     menuli.className = 'menu-li';
-
+    const spanli = document.createElement('div');
+    spanli.className = 'li-span';
+    menuli.prepend(spanli);
     const navbaranchor = document.createElement('a');
     navbaranchor.setAttribute('href', item.href);
     navbaranchor.innerText = item.title;
@@ -126,7 +130,7 @@ function renderMegaMenu(nav) {
       });
       navbaranchor.classList.add('menu-active');
     });
-    menuli.appendChild(navbaranchor);
+    spanli.append(navbaranchor);
 
     // View menu list
     if (item.children) {
@@ -143,7 +147,7 @@ function renderMegaMenu(nav) {
 
       menuspan.appendChild(menuuparrow);
       menuspan.appendChild(menudownarrow);
-      menuli.appendChild(menuspan);
+      spanli.appendChild(menuspan);
       // View submenu list
       const menuitem = document.createElement('div');
       menuitem.className = 'menu-item';
