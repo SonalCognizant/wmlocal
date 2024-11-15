@@ -11,6 +11,6 @@ export default function decorate(block) {
   paragraph.append(description);
   div.append(heading, paragraph, button);
   console.log(div);
-  block.innerHTML = '';
+//   block.innerHTML = '';
   block.append(div);
 }
