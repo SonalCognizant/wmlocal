@@ -2,6 +2,7 @@
 @import "../../styles/include/tokens.scss";
 
 .promo-text-wrapper {
+    margin: 0;
   > .promo-text {
     padding: 0 52px;
     @include for-xlarge {

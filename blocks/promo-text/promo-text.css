@@ -2,6 +2,9 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
+.promo-text-wrapper {
+  margin: 0;
+}
 .promo-text-wrapper > .promo-text {
   padding: 0 52px;
 }
@@ -85,11 +88,6 @@
   line-height: 24px;
   margin: 0;
 }
-@media (max-width: 480px) {
-  .promo-text-wrapper > .promo-text > div > div > p > strong {
-    width: 100%;
-  }
-}
 .promo-text-wrapper > .promo-text > div > div > h2 {
   opacity: 1;
   color: #4a7390;
@@ -100,9 +98,4 @@
   text-align: center;
   padding-bottom: 24px;
   margin: 0;
-}
-@media (max-width: 480px) {
-  .promo-text-wrapper > .promo-text > div > div > h2 {
-    padding-bottom: 16px;
-  }
 }
