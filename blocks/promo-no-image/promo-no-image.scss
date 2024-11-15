@@ -145,6 +145,9 @@
             padding: 0 24px;
             margin: 0;
             padding-top: 16px;
+            @include for-mobile {
+              padding-top: 12px;
+            }
           }
         }
       }

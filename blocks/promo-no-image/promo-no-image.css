@@ -189,3 +189,8 @@
   margin: 0;
   padding-top: 16px;
 }
+@media (max-width: 480px) {
+  .promo-no-image-container .promo-no-image > ul > li .cards-card-body p {
+    padding-top: 12px;
+  }
+}
