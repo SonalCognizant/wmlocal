@@ -5,22 +5,22 @@
 .image-text-container .image-text-wrapper .image-text.block.columns-2-cols {
   padding: 72px 16px;
 }
-@media (min-width: 480px) and (max-width: 1023px) {
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
   .image-text-container .image-text-wrapper .image-text.block.columns-2-cols {
     padding: 96px 36px;
   }
 }
-@media (min-width: 1023px) and (max-width: 1200px) {
+@media (min-width: 1024px) and (max-width: 1200px) {
   .image-text-container .image-text-wrapper .image-text.block.columns-2-cols {
     padding: 120px 36px;
   }
 }
-@media (min-width: 1200px) and (max-width: 1379px) {
+@media (min-width: 1201px) and (max-width: 1379px) {
   .image-text-container .image-text-wrapper .image-text.block.columns-2-cols {
     padding: 120px 52px;
   }
 }
-@media (min-width: 1379px) {
+@media (min-width: 1380px) {
   .image-text-container .image-text-wrapper .image-text.block.columns-2-cols {
     padding: 120px 52px;
   }
@@ -29,28 +29,28 @@
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 480px) {
+@media (min-width: 480.5px) {
   .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div {
     align-items: center;
     flex-direction: row;
   }
 }
-@media (min-width: 480px) and (max-width: 1023px) {
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
   .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div {
     gap: 30px;
   }
 }
-@media (min-width: 1023px) and (max-width: 1200px) {
+@media (min-width: 1024px) and (max-width: 1200px) {
   .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div {
     gap: 72px;
   }
 }
-@media (min-width: 1200px) and (max-width: 1379px) {
+@media (min-width: 1201px) and (max-width: 1379px) {
   .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div {
     gap: 96px;
   }
 }
-@media (min-width: 1379px) {
+@media (min-width: 1380px) {
   .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div {
     gap: 96px;
   }
@@ -60,7 +60,7 @@
   display: flex;
   flex-flow: row wrap;
 }
-@media (min-width: 480px) {
+@media (min-width: 480.5px) {
   .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div > div {
     flex: 1;
     order: unset;
@@ -89,7 +89,7 @@
   margin-top: 0;
   margin-bottom: 24px;
 }
-@media (min-width: 480px) and (max-width: 1023px) {
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
   .image-text-container .image-text-wrapper .image-text.block.columns-2-cols.block h2 {
     font-size: 28px;
     line-height: 28px;

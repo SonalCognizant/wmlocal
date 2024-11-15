@@ -2,40 +2,180 @@
 @import '../../styles/include/mq.scss';
 
 header {
-	.nav-wrapper {
+	.main-header-wrapper {
 		width: 100%;
 		z-index: 2;
 		position: fixed;
-        nav {
+        header {
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
             margin: auto;
-            @include for-mobile {
-                display: none;
-            }
-            @include for-tablet {
-                display: none;
-            }
-            @include for-laptop {
-                display: none;
-            }
-            .navbar-brand{
+            // @include for-mobile {
+            //     display: none;
+            // }
+            // @include for-tablet {
+            //     display: none;
+            // }
+            // @include for-laptop {
+            //     display: none;
+            // }
+            .main-header{
                 background-color: $--blue-50;
                 padding: 16px 52px 16px 52px;
-                .navbar-container{
+                border-bottom: 1.5px solid $--blue-100;
+                @include for-mobile {
+                    padding: 0;
+                    border: none;
+                }
+                @include for-tablet {
+                    padding: 0;
+                    border: none;
+                }
+                @include for-laptop {
+                    padding: 0;
+                    border: none;
+                }
+                .main-header-nav{
                     display: flex;
                     flex-direction: row;
                     align-items: center;
                     justify-content: space-between;
                     max-width: 1275px;
                     margin: auto;
-                    .nav-right{
+                    @include for-mobile {
+                        justify-content: space-between;
+                    }
+                    @include for-tablet {
+                        justify-content: space-between;
+                    }
+                    @include for-laptop {
+                        justify-content: space-between;
+                    }
+                    .collapse-bar{
+                        display: none;
+                        &.active{
+                            background-color: $--white;
+                            flex-direction: column;
+                            align-items: center;
+                            height: 49px;
+                            @include for-mobile {
+                                display: flex;
+                            }
+                            @include for-tablet {
+                                display: flex;
+                            }
+                            @include for-laptop {
+                                display: flex;
+                            }
+                            .collapse-btn{
+                                display: none;
+                            }
+                            .collapse-menu{
+                                display: none;
+                            }
+                            .close-btn{
+                                display: inline-block;
+                                width: 20px;
+                                height: 20px;
+                            }
+                            .collapse-close{
+                                display: inline-block;
+                                padding-top: 6px;
+                            }
+                        }
+                        display: none;
+                        @include for-mobile {
+                            display: inline-block;
+                            text-align: center;
+                            padding: 12px 15px;
+                            border-right: 1px solid $--blue-100;
+                            p{
+                                margin: 0;
+                            }
+                            .close-btn{
+                                display: none;
+                            }
+                            .collapse-close{
+                                display: none;
+                            }
+                        }
+                        @include for-tablet {
+                            display: inline-block;
+                            text-align: center;
+                            padding: 12px 15px;
+                            border-right: 1px solid $--blue-100;
+                            p{
+                                margin: 0;
+                            }
+                            .close-btn{
+                                display: none;
+                            }
+                            .collapse-close{
+                                display: none;
+                            }
+                        }
+                        @include for-laptop {
+                            display: inline-block;
+                            text-align: center;
+                            padding: 12px 15px;
+                            border-right: 1px solid $--blue-100;
+                            p{
+                                margin: 0;
+                            }
+                            .close-btn{
+                                display: none;
+                            }
+                            .collapse-close{
+                                display: none;
+                            }
+                        }
+                    }
+                    .search-bar{
+                        display: none;
+                        @include for-mobile {
+                            display: inline-block;
+                            text-align: center;
+                            padding: 12px 15px;
+                            border-left: 1px solid $--blue-100;
+                            p{
+                                margin: 0;
+                            }
+                        }
+                        @include for-tablet {
+                            display: inline-block;
+                            text-align: center;
+                            padding: 12px 15px;
+                            border-left: 1px solid $--blue-100;
+                            p{
+                                margin: 0;
+                            }
+                        }
+                        @include for-laptop {
+                            display: inline-block;
+                            text-align: center;
+                            padding: 12px 15px;
+                            border-left: 1px solid $--blue-100;
+                            p{
+                                margin: 0;
+                            }
+                        }
+                    }
+                    .main-header-right{
                         display: flex;
                         align-items: center;
                         gap: 24px;
-                        .navbar-search{
-                            .navbar-search-box {
+                        @include for-mobile {
+                            display: none;
+                        }
+                        @include for-tablet {
+                            display: none;
+                        }
+                        @include for-laptop {
+                            display: none;
+                        }
+                        .main-header-search{
+                            .main-header-search-box {
                                 display: flex;
                                 align-items: center;
                                 position: relative;
@@ -45,8 +185,8 @@ header {
                                     width: 100%;
                                     margin: 0;
                                     padding: 12px 0px 12px 20px;
-                                    border-radius: 4px;
-                                    border: 1px solid $--blue-100;
+                                    border-radius: 1.5px;
+                                    border: 1.5px solid $--blue-100;
                                     background-color: $--white;
                                     color: #6E6E6E;
                                     font-size: 16px;
@@ -55,7 +195,7 @@ header {
                                     font-weight: 400;
                                     height: 52px;
                                     width: 345px;
-                                    transition: border-color 0.2s;
+                                    opacity: 1;
                                     &:hover {
                                         border: 1px solid $--blue-100;
                                     }
@@ -63,7 +203,7 @@ header {
                                         border: 1px solid $--blue-100;
                                     }
                                 }
-                                .icon-search{
+                                .main-header-search-icon{
                                     position: absolute;
                                     right: 0;
                                     top: 16px;
@@ -79,7 +219,7 @@ header {
                             display: flex;
                             align-items: center;
                             gap: 9px;
-                            .login-icon {
+                            .main-header-login-icon {
                                 width: 15px;
                                 height: 15px;
                             }
@@ -87,23 +227,41 @@ header {
                     }
                 }
             }
-            .navbar-menu{
+            .main-header-menu{
                 flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
                 background-color:  $--white;
                 padding: 0 52px;
                 box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-                .menucontainer{
+                @include for-mobile {
+                    padding: 0;
+                }
+                @include for-tablet {
+                    padding: 0;
+                }
+                @include for-laptop {
+                    padding: 0;
+                }
+                .menu-block{
                     max-width: 1275px;
                     margin: auto;
-                    .navbar-ul{
+                    .menu-ul{
                         list-style-type: none;
                         margin: 0;
                         padding: 0;
                         display:flex;
                         position: relative;
-                        .navbar-li{
+                        @include for-mobile {
+                            flex-direction: column;
+                        }
+                        @include for-tablet {
+                            flex-direction: column;
+                        }
+                        @include for-laptop {
+                            flex-direction: column;
+                        }
+                        .menu-li{
                             text-align: center;
                             padding: 24px 52px 24px 0;
                             text-decoration: none;
@@ -111,20 +269,38 @@ header {
                             font-size: 16px;
                             font-family: $--font-roboto;
                             font-weight: 500;
+                            @include for-mobile {
+                                padding: 16px 36px;
+                                text-align: left;
+                                border-bottom: 1px solid $--blue-100;
+                                display: inline-block;
+                            }
+                            @include for-tablet {
+                                padding: 16px 36px;
+                                text-align: left;
+                                border-bottom: 1px solid $--blue-100;
+                                display: inline-block;
+                            }
+                            @include for-laptop {
+                                padding: 16px 36px;
+                                text-align: left;
+                                border-bottom: 1px solid $--blue-100;
+                                display: inline-block;
+                            }
                             a{
                                 color: $--gray-700;
                                 text-decoration: none;
                                 padding-bottom: 4px;
                             }
-                            .active{
+                            .menu-active{
                                 color: $--blue-675;
-                                border-bottom: 2px solid $--blue-675;
+                                border-bottom: 1.5px solid $--blue-675;
                             }
-                            .submenu-block {
+                            .menu-item {
                                 display: none;
                             }
-                            .navbar-span{
-                                .navbar-up-arrow{
+                            .menu-span{
+                                .menu-up-arrow{
                                     display: none;
                                 }
                                 img{
@@ -136,17 +312,17 @@ header {
                             &:hover{
                                 a{
                                     color: $--blue-675;
-                                    border-bottom: 2px solid $--blue-675;
+                                    border-bottom: 1.5px solid $--blue-675;
                                 }
-                                .navbar-span{
-                                    .navbar-up-arrow{
+                                .menu-span{
+                                    .menu-up-arrow{
                                         display: inline-block;
                                     }
-                                    .navbar-down-arrow{
+                                    .menu-down-arrow{
                                         display: none;
                                     }
                                 }
-                                .submenu-block {
+                                .menu-item {
                                     position: absolute;
                                     display: flex;
                                     flex-direction: row;
@@ -156,10 +332,11 @@ header {
                                     gap: 30px;
                                     width: 100%;
                                     left: -51px;
-                                    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-                                    .submenu-list {
-                                        width: 65%;
-                                        .submenu-ul{
+                                    // box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+                                    border-top: 1.5px solid $--blue-100;
+                                    .menu-submenu-list {
+                                        width: 58%;
+                                        .menu-submenu-ul{
                                             display: flex; 
                                             gap: 30px;
                                             ul{
@@ -170,7 +347,7 @@ header {
                                                 width: calc((100% - 24px) / 3);
                                                 h4{
                                                     margin: 0;
-                                                    border-bottom: 2px solid $--gray-100;
+                                                    border-bottom: 1.5px solid $--gray-100;
                                                     padding-bottom: 24px;
                                                 }
                                                 li {
@@ -184,9 +361,18 @@ header {
                                             }
                                         }
                                     }
-                                    .submenu-content {
-                                        width: 35%;
+                                    .menu-submenu-content {
+                                        width: 42%;
                                         background: $--blue-50;
+                                        @include for-mobile {
+                                            display: none;
+                                        }
+                                        @include for-tablet {
+                                            display: none;
+                                        }
+                                        @include for-laptop {
+                                            display: none;
+                                        }
                                     }
                                 }
                             }

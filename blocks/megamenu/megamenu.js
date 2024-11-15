@@ -77,22 +77,42 @@ const navmenu = JSON.stringify([
   },
 ]);
 
-function renderMegaMenu(nav) {
-  const section1 = document.createElement('div');
-  section1.className = 'navbar-brand';
-  const navbarcontainer = document.createElement('div');
-  navbarcontainer.className = 'navbar-container';
-  const section2 = document.createElement('div');
-  section2.className = 'navbar-menu';
-  const menucontainer = document.createElement('div');
-  menucontainer.className = 'menucontainer';
-  const navbarul = document.createElement('ul');
-  navbarul.className = 'navbar-ul';
-  const menuItems = JSON.parse(navmenu);
+// Menu bar onclick event
+function toggleMenu(e) {
+  const menuBarlist = e.target.closest('.collapse-bar');
+  menuBarlist.classList.toggle('active');
+}
+function toggleMegaMenu() {
+  const menuBar = document.querySelector('.collapse-bar');
+  menuBar.addEventListener('click', toggleMenu);
+}
 
+// Search bar onclick event
+function toggleSearch(e) {
+  const menuBarlist = e.target.closest('.search-bar');
+  menuBarlist.classList.toggle('active');
+}
+function toggleSearchBar() {
+  const menuBar = document.querySelector('.search-bar');
+  menuBar.addEventListener('click', toggleSearch);
+}
+
+function renderMegaMenu(nav) {
+  const mainheader = document.createElement('div');
+  mainheader.className = 'main-header';
+  const mainheadernav = document.createElement('div');
+  mainheadernav.className = 'main-header-nav';
+  const mainheadermenu = document.createElement('div');
+  mainheadermenu.className = 'main-header-menu';
+  const menublock = document.createElement('div');
+  menublock.className = 'menu-block';
+  const menuul = document.createElement('ul');
+  menuul.className = 'menu-ul';
+  const menuItems = JSON.parse(navmenu);
+  // Menu bar view
   menuItems.forEach((item) => {
-    const navbarli = document.createElement('li');
-    navbarli.className = 'navbar-li';
+    const menuli = document.createElement('li');
+    menuli.className = 'menu-li';
 
     const navbaranchor = document.createElement('a');
     navbaranchor.setAttribute('href', item.href);
@@ -100,41 +120,43 @@ function renderMegaMenu(nav) {
 
     // Active menu
     navbaranchor.addEventListener('click', () => {
-      const anchoractive = document.querySelectorAll('.navbar-li a');
+      const anchoractive = document.querySelectorAll('.menu-li a');
       anchoractive.forEach((anchor) => {
-        anchor.classList.remove('active');
+        anchor.classList.remove('menu-active');
       });
-      navbaranchor.classList.add('active');
+      navbaranchor.classList.add('menu-active');
     });
-    navbarli.appendChild(navbaranchor);
+    menuli.appendChild(navbaranchor);
 
-    // Menu list
+    // View menu list
     if (item.children) {
-      const navbarspan = document.createElement('span');
-      navbarspan.className = 'navbar-span';
-      const navbaruparrow = document.createElement('img');
-      navbaruparrow.className = 'navbar-up-arrow';
-      navbaruparrow.src = '../../icons/up-arrow.svg';
-      navbaruparrow.setAttribute('title', 'image');
-      const navbardownarrow = document.createElement('img');
-      navbardownarrow.className = 'navbar-down-arrow';
-      navbardownarrow.src = '../../icons/down-arrow.svg';
-      navbardownarrow.setAttribute('title', 'image');
+      const menuspan = document.createElement('span');
+      menuspan.className = 'menu-span';
+      const menuuparrow = document.createElement('img');
+      menuuparrow.className = 'menu-up-arrow';
+      menuuparrow.src = '../../icons/up-arrow.svg';
+      menuuparrow.setAttribute('title', 'image');
+      const menudownarrow = document.createElement('img');
+      menudownarrow.className = 'menu-down-arrow';
+      menudownarrow.src = '../../icons/down-arrow.svg';
+      menudownarrow.setAttribute('title', 'image');
 
-      navbarspan.appendChild(navbaruparrow);
-      navbarspan.appendChild(navbardownarrow);
-      navbarli.appendChild(navbarspan);
+      menuspan.appendChild(menuuparrow);
+      menuspan.appendChild(menudownarrow);
+      menuli.appendChild(menuspan);
+      // View submenu list
+      const menuitem = document.createElement('div');
+      menuitem.className = 'menu-item';
+      const menusubmenuul = document.createElement('div');
+      menusubmenuul.className = 'menu-submenu-ul';
+      navbaranchor.appendChild(menuitem);
 
-      const submenublock = document.createElement('div');
-      submenublock.className = 'submenu-block';
-      const submenuul = document.createElement('div');
-      submenuul.className = 'submenu-ul';
       item.children.forEach((child) => {
         const submenuli = document.createElement('ul');
         const title = document.createElement('h4');
         title.append(child.title);
         submenuli.append(title);
-        submenuul.append(submenuli);
+        menusubmenuul.append(submenuli);
         if (child.subChildren) {
           child.subChildren.forEach((subchild) => {
             const submenuchild = document.createElement('li');
@@ -146,41 +168,41 @@ function renderMegaMenu(nav) {
           });
         }
       });
-      const submenulist = document.createElement('div');
-      submenulist.className = 'submenu-list';
-      const submenucontent = document.createElement('div');
-      submenucontent.className = 'submenu-content';
-      submenublock.appendChild(submenulist);
-      submenulist.appendChild(submenuul);
-      submenublock.appendChild(submenucontent);
-      navbarli.appendChild(submenublock);
+      const menusubmenulist = document.createElement('div');
+      menusubmenulist.className = 'menu-submenu-list';
+      const menusubmenucontent = document.createElement('div');
+      menusubmenucontent.className = 'menu-submenu-content';
+      menuitem.appendChild(menusubmenulist);
+      menusubmenulist.appendChild(menusubmenuul);
+      menuitem.appendChild(menusubmenucontent);
+      menuli.appendChild(menuitem);
     }
 
-    navbarul.appendChild(navbarli);
+    menuul.appendChild(menuli);
   });
 
-  nav.append(section1);
-  section2.appendChild(menucontainer);
-  nav.append(section2);
-  section1.append(navbarcontainer);
-  menucontainer.append(navbarul);
+  nav.append(mainheader);
+  mainheadermenu.appendChild(menublock);
+  nav.append(mainheadermenu);
+  mainheader.append(mainheadernav);
+  menublock.append(menuul);
 
   // Logo path
   const logoImg = document.createElement('img');
   logoImg.src = '../../images/global/header-logo.png';
   logoImg.setAttribute('title', 'image');
   logoImg.className = 'navbar-logo';
-  navbarcontainer.append(logoImg);
+  mainheadernav.append(logoImg);
 
   // Search path
-  const navright = document.createElement('div');
-  navright.className = 'nav-right';
-  const search = document.createElement('div');
-  search.classList.add('navbar-search');
-  const searchbox = document.createElement('div');
-  searchbox.className = 'navbar-search-box';
-  const searchicon = document.createElement('span');
-  searchicon.classList.add('icon-search');
+  const mainheaderright = document.createElement('div');
+  mainheaderright.className = 'main-header-right';
+  const headersearch = document.createElement('div');
+  headersearch.classList.add('main-header-search');
+  const headersearchbox = document.createElement('div');
+  headersearchbox.className = 'main-header-search-box';
+  const headersearchicon = document.createElement('span');
+  headersearchicon.classList.add('main-header-search-icon');
   const searchanchor = document.createElement('a');
   searchanchor.classList.add('search-anchor');
   searchanchor.setAttribute('href', '#');
@@ -193,7 +215,7 @@ function renderMegaMenu(nav) {
   searchinput.className = 'search-input';
   searchinput.setAttribute('placeholder', 'Search Wellmark');
   const btnicon = document.createElement('img');
-  btnicon.classList.add('login-icon');
+  btnicon.classList.add('main-header-login-icon');
   btnicon.src = '../../icons/login-btn.svg';
   btnicon.setAttribute('title', 'image');
 
@@ -205,15 +227,55 @@ function renderMegaMenu(nav) {
   anchor.classList.add('button', 'primary');
 
   // Append elements
-  navbarcontainer.append(navright);
-  navright.append(search);
+  mainheadernav.append(mainheaderright);
+  mainheaderright.append(headersearch);
   anchor.prepend(btnicon);
-  navright.append(anchor);
-  search.append(searchbox);
-  searchbox.append(searchicon);
-  searchicon.append(searchanchor);
+  mainheaderright.append(anchor);
+  headersearch.append(headersearchbox);
+  headersearchbox.append(headersearchicon);
+  headersearchicon.append(searchanchor);
   searchanchor.append(iconImg);
-  searchbox.append(searchinput);
+  headersearchbox.append(searchinput);
+
+  // Mobile code start
+  const collapsediv = document.createElement('div');
+  collapsediv.classList.add('collapse-bar');
+  mainheadernav.prepend(collapsediv);
+  setTimeout(() => {
+    toggleMegaMenu();
+  }, 500);
+  const searchdiv = document.createElement('div');
+  searchdiv.classList.add('search-bar');
+  mainheadernav.append(searchdiv);
+  setTimeout(() => {
+    toggleSearchBar();
+  }, 500);
+  const breadcrumbsicon = document.createElement('img');
+  breadcrumbsicon.classList.add('collapse-btn');
+  breadcrumbsicon.src = '../../icons/breadcrumbs-icon.svg';
+  const collapsemenu = document.createElement('p');
+  collapsemenu.classList.add('collapse-menu');
+  collapsemenu.innerHTML = ('Menu');
+  const collapseclose = document.createElement('img');
+  collapseclose.src = '../../icons/close-icon.svg';
+  collapseclose.classList.add('close-btn');
+  const colclose = document.createElement('p');
+  colclose.classList.add('collapse-close');
+  colclose.innerHTML = ('Close');
+  collapsediv.prepend(breadcrumbsicon);
+  collapsediv.append(collapsemenu);
+  collapsediv.append(collapseclose);
+  collapsediv.append(colclose);
+
+  const searchicon = document.createElement('img');
+  searchicon.classList.add('search-btn');
+  searchicon.src = '../../icons/search-icon.svg';
+  const searchmenu = document.createElement('p');
+  searchmenu.classList.add('search-menu');
+  searchmenu.innerHTML = ('Search');
+
+  searchdiv.append(searchicon);
+  searchdiv.append(searchmenu);
 }
 
 /**
@@ -222,11 +284,11 @@ function renderMegaMenu(nav) {
  */
 export default async function decorate(block) {
   block.textContent = '';
-  const nav = document.createElement('nav');
-  nav.id = 'nav';
+  const nav = document.createElement('header');
+  nav.id = 'header';
   renderMegaMenu(nav);
   const navWrapper = document.createElement('div');
-  navWrapper.className = 'nav-wrapper';
+  navWrapper.className = 'main-header-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
 }
