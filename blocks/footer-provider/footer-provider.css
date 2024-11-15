@@ -61,13 +61,13 @@
 }
 .footer-provider-wrapper .footer-provider > .claims-div {
   padding: 36px 0 36px 0;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 2px solid #c2c2c3;
   max-width: 1275px;
   margin: auto;
 }
 .footer-provider-wrapper .footer-provider > .wellmarkdrug-div {
   padding: 36px 0 36px 0;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 2px solid #c2c2c3;
   max-width: 1275px;
   margin: auto;
 }
@@ -84,7 +84,7 @@
   padding-bottom: 24px;
   opacity: 1;
   color: #4b4c4d;
-  font-family: "Roboto-Regular";
+  font-family: roboto, sans-serif;
   font-size: 12px;
   font-weight: 400;
   font-style: Regular;
@@ -116,6 +116,6 @@
   font-weight: 500;
   color: #005589;
   opacity: 1;
-  font-family: "Roboto-Medium";
+  font-family: roboto, sans-serif;
   letter-spacing: 0px;
 }
