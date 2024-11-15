@@ -1,1 +1,3 @@
-export default async function decorate() {}
+export default async function decorate(block) {
+  return block;
+}
