@@ -50,7 +50,7 @@
 
   .promo-no-image {
     @include for-mobile {
-      padding: 36px 0px 72px 0px;
+      padding: 52px 0px 72px 0px;
     }
     @include for-xlarge {
       padding: 72px 0px 120px 0px;
@@ -59,7 +59,7 @@
       padding: 72px 0px 120px 0px;;
     }
     @include for-laptop {
-      padding: 72px 0px 120px 0px;
+      padding: 69px 0px 122px 0px;
       gap: 30px;
     }
     @include for-tablet {
@@ -75,6 +75,7 @@
       margin: 0;
       @include for-mobile {
         flex-direction: column;
+        padding: 0;
       }
       @include for-xlarge {
         gap: 30px;
@@ -89,6 +90,7 @@
         padding: 0 24px;
       }
       @include for-tablet {
+        padding: 0;
         flex-wrap: wrap;
         gap: 30px;
       }
