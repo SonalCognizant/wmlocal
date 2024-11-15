@@ -33,7 +33,7 @@
     padding: 0 36px;
   }
 }
-.promo-text-wrapper > .promo-text > div > div {
+.promo-text-wrapper > .promo-text > div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,45 +42,45 @@
   padding: 0;
 }
 @media (min-width: 1380px) {
-  .promo-text-wrapper > .promo-text > div > div {
+  .promo-text-wrapper > .promo-text > div {
     padding: 120px 217px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
-  .promo-text-wrapper > .promo-text > div > div {
+  .promo-text-wrapper > .promo-text > div {
     padding: 120px 217px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
-  .promo-text-wrapper > .promo-text > div > div {
+  .promo-text-wrapper > .promo-text > div {
     padding: 118px 81px 120px 81px;
   }
 }
 @media (max-width: 480px) {
-  .promo-text-wrapper > .promo-text > div > div {
+  .promo-text-wrapper > .promo-text > div {
     padding: 72px 0;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
-  .promo-text-wrapper > .promo-text > div > div {
+  .promo-text-wrapper > .promo-text > div {
     padding: 96px 0;
   }
 }
-.promo-text-wrapper > .promo-text > div > div > .button-container {
+.promo-text-wrapper > .promo-text > div > .button-container {
   padding-top: 36px;
   margin: 0;
   border-radius: 2px;
 }
-.promo-text-wrapper > .promo-text > div > div > .button-container > strong {
+.promo-text-wrapper > .promo-text > div > .button-container > strong {
   width: 100%;
 }
 @media (max-width: 480px) {
-  .promo-text-wrapper > .promo-text > div > div > .button-container {
+  .promo-text-wrapper > .promo-text > div > .button-container {
     width: 100%;
     padding-top: 24px;
   }
 }
-.promo-text-wrapper > .promo-text > div > div > p {
+.promo-text-wrapper > .promo-text > div > .description {
   opacity: 1;
   color: #4b4c4d;
   font-family: roboto, sans-serif;
@@ -92,7 +92,7 @@
   line-height: 24px;
   margin: 0;
 }
-.promo-text-wrapper > .promo-text > div > div > h2 {
+.promo-text-wrapper > .promo-text > div > .title {
   opacity: 1;
   color: #4a7390;
   font-family: museo, sans-serif;
