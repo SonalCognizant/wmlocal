@@ -161,12 +161,17 @@
   text-align: left;
   margin: 0;
   opacity: 1;
-  padding: 36px;
+  padding: 36px 36px 0 36px;
 }
 .promo-image-container .promo-image > ul > li .cards-card-body p:last-child {
   padding-top: 16px;
 }
 .promo-image-container .promo-image > ul > li .cards-card-body p > span {
+  width: 80px;
+  border-bottom: 2px solid #f2f2f3;
+  padding-bottom: 36px;
+}
+.promo-image-container .promo-image > ul > li .cards-card-body p > span > img {
   width: 80px;
   height: 80px;
 }
