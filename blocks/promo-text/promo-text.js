@@ -1,12 +1,13 @@
 export default function decorate(block) {
+  const title = block.children[0].innerContent;
+  const description = block.children[1].innerContent;
+  const button = block.children[2].innerContent;
+  console.log(title, description, button);
   const div = document.createElement('div');
   const heading = document.createElement('h2');
-  const title = block.children[0].innerContent;
   heading.append(title);
   const paragraph = document.createElement('p');
-  const description = block.children[1].innerContent;
   paragraph.append(description);
-  const button = block.children[2].innerContent;
   div.append(heading, paragraph, button);
   console.log(div);
   block.innerHTML = '';
