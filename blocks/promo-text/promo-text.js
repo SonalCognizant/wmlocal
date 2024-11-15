@@ -3,7 +3,6 @@ export default function decorate(block) {
   const description = block.children[1].textContent;
   const button = block.children[2].children[0].children[0];
   button.classList.add('button-container');
-  console.log(title, description, button);
   const div = document.createElement('div');
   const heading = document.createElement('h2');
   heading.append(title);
@@ -12,6 +11,11 @@ export default function decorate(block) {
   paragraph.classList.add('description');
   paragraph.append(description);
   div.append(heading, paragraph, button);
+  [...block.children].forEach((row, index) => {
+    if (index > 1) {
+      while (row.firstElementChild) div.append(row.firstElementChild);
+    }
+  });
   console.log(div);
   block.innerHTML = '';
   block.append(div);
