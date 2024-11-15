@@ -23,7 +23,7 @@ export default function decorate(block) {
     details.append(summary, body);
     row.replaceWith(details);
   });
-  const parentElement = block.parentElement;
+  const { parentElement } = block;
   // Get the title innertext from the first child
   const titleText = block.children[0].innerText;
   // get the first child
