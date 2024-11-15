@@ -9,10 +9,15 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
+
 /* wellmark color start */
+
 /* wellmark color end */
+
 /* wellmark spacing size start */
+
 /* wellmark spacing size start */
+
 /* buttons */
 .button-container {
   display: flex;
@@ -39,40 +44,46 @@ button {
   letter-spacing: -0.18px;
   line-height: 28px;
 }
+
 a.button.primary,
 button.primary {
   background-color: #005589;
-  color: #ffffff;
+  color: #fff;
   padding: 12px 36px;
   text-decoration: none;
 }
+
 a.button.primary:hover,
 button.primary:hover {
   background-color: #0f3659;
-  color: #ffffff;
+  color: #fff;
 }
+
 a.button.primary:focus,
 button.primary:focus {
   background-color: #0f3659;
-  color: #ffffff;
+  color: #fff;
   outline: 3px solid #e45f0c;
   outline-style: dashed;
   outline-offset: 2px;
 }
+
 a.button.secondary,
 button.secondary {
-  background-color: #ffffff;
+  background-color: #fff;
   border: 2px solid #005589;
   color: #005589;
   padding: 10px 34px;
   text-decoration: none;
 }
+
 a.button.secondary:hover,
 button.secondary:hover {
   background-color: #f3f9ff;
   border: 2px solid #0f3659;
   color: #0f3659;
 }
+
 a.button.secondary:focus,
 button.secondary:focus {
   background-color: #f3f9ff;
@@ -84,12 +95,19 @@ button.secondary:focus {
 }
 
 /* wellmark color start */
+
 /* wellmark color end */
+
 /* wellmark spacing size start */
+
 /* wellmark spacing size start */
+
 /* wellmark color start */
+
 /* wellmark color end */
+
 /* wellmark spacing size start */
+
 /* wellmark spacing size start */
 h1,
 h2,
@@ -100,7 +118,7 @@ h6 {
   color: #4b4c4d;
   opacity: 1;
   text-align: left;
-  letter-spacing: 0px;
+  letter-spacing: 0;
 }
 
 h1,
@@ -121,6 +139,7 @@ h1 {
   font-size: 32px;
   line-height: 33px;
 }
+
 @media (min-width: 480.5px) {
   h1 {
     font-size: 40px;
@@ -132,6 +151,7 @@ h2 {
   font-size: 28px;
   line-height: 28px;
 }
+
 @media (min-width: 480.5px) {
   h2 {
     font-size: 32px;
@@ -169,10 +189,12 @@ a:any-link {
   --text-color: #131313;
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
+
   /* body sizes */
   --body-font-size-m: 22px;
   --body-font-size-s: 19px;
   --body-font-size-xs: 17px;
+
   /* heading sizes */
   --heading-font-size-xxl: 55px;
   --heading-font-size-xl: 44px;
@@ -180,6 +202,7 @@ a:any-link {
   --heading-font-size-m: 27px;
   --heading-font-size-s: 24px;
   --heading-font-size-xs: 22px;
+
   /* nav heights */
   --nav-height: 64px;
   --breadcrumbs-height: 34px;
@@ -192,6 +215,7 @@ a:any-link {
     --body-font-size-m: 18px;
     --body-font-size-s: 16px;
     --body-font-size-xs: 14px;
+
     /* heading sizes */
     --heading-font-size-xxl: 45px;
     --heading-font-size-xl: 36px;
@@ -201,6 +225,7 @@ a:any-link {
     --heading-font-size-xs: 18px;
   }
 }
+
 body {
   display: none;
   margin: 0;
@@ -225,8 +250,8 @@ footer .footer {
   visibility: hidden;
 }
 
-header .header[data-block-status=loaded],
-footer .footer[data-block-status=loaded] {
+header .header[data-block-status="loaded"],
+footer .footer[data-block-status="loaded"] {
   visibility: visible;
 }
 
@@ -235,6 +260,7 @@ footer .footer[data-block-status=loaded] {
     --header-height: calc(var(--nav-height) + var(--breadcrumbs-height));
   }
 }
+
 p,
 dl,
 ol,
@@ -297,10 +323,12 @@ main img {
 main > .section {
   margin: 0;
 }
+
 main > .section > div {
   max-width: 1275px;
   margin: auto;
 }
+
 main > .section > div.promo-image-wrapper {
   max-width: 1920px;
 }
