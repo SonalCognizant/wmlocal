@@ -2,6 +2,9 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
+.promo-text-wrapper {
+  margin: 0;
+}
 .promo-text-wrapper > .promo-text {
   padding: 0 52px;
 }
@@ -63,10 +66,24 @@
     padding: 96px 0;
   }
 }
+.promo-text-wrapper > .promo-text > div > div > .button-container {
+  padding-top: 36px;
+  margin: 0;
+  border-radius: 2px;
+}
+.promo-text-wrapper > .promo-text > div > div > .button-container > strong {
+  width: 100%;
+}
+@media (max-width: 480px) {
+  .promo-text-wrapper > .promo-text > div > div > .button-container {
+    width: 100%;
+    padding-top: 24px;
+  }
+}
 .promo-text-wrapper > .promo-text > div > div > p {
   opacity: 1;
-  color: rgb(75, 76, 77);
-  font-family: "Roboto-Regular";
+  color: #4b4c4d;
+  font-family: roboto, sans-serif;
   font-size: 16px;
   font-weight: 400;
   font-style: Regular;
@@ -75,34 +92,14 @@
   line-height: 24px;
   margin: 0;
 }
-@media (max-width: 480px) {
-  .promo-text-wrapper > .promo-text > div > div > p > strong {
-    width: 100%;
-  }
-}
-.promo-text-wrapper > .promo-text > div > div > p:first-child {
+.promo-text-wrapper > .promo-text > div > div > h2 {
   opacity: 1;
   color: #4a7390;
-  font-family: "MuseoSlab-700";
+  font-family: museo, sans-serif;
   font-size: 32px;
   font-weight: 600;
   letter-spacing: 0px;
   text-align: center;
   padding-bottom: 24px;
   margin: 0;
-}
-@media (max-width: 480px) {
-  .promo-text-wrapper > .promo-text > div > div > p:first-child {
-    padding-bottom: 16px;
-  }
-}
-.promo-text-wrapper > .promo-text > div > div > p:last-child {
-  padding-top: 36px;
-  margin: 0;
-}
-@media (max-width: 480px) {
-  .promo-text-wrapper > .promo-text > div > div > p:last-child {
-    width: 100%;
-    padding-top: 24px;
-  }
 }
