@@ -1,0 +1,108 @@
+/* wellmark color start */
+/* wellmark color end */
+/* wellmark spacing size start */
+/* wellmark spacing size start */
+.promo-text-wrapper > .promo-text {
+  padding: 0 52px;
+}
+@media (min-width: 1380px) {
+  .promo-text-wrapper > .promo-text {
+    padding: 0 52px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .promo-text-wrapper > .promo-text {
+    padding: 0 52px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .promo-text-wrapper > .promo-text {
+    padding: 0 36px;
+  }
+}
+@media (max-width: 480px) {
+  .promo-text-wrapper > .promo-text {
+    padding: 0 16px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .promo-text-wrapper > .promo-text {
+    padding: 0 36px;
+  }
+}
+.promo-text-wrapper > .promo-text > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 0;
+}
+@media (min-width: 1380px) {
+  .promo-text-wrapper > .promo-text > div > div {
+    padding: 120px 217px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .promo-text-wrapper > .promo-text > div > div {
+    padding: 120px 217px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .promo-text-wrapper > .promo-text > div > div {
+    padding: 118px 81px 120px 81px;
+  }
+}
+@media (max-width: 480px) {
+  .promo-text-wrapper > .promo-text > div > div {
+    padding: 72px 0;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .promo-text-wrapper > .promo-text > div > div {
+    padding: 96px 0;
+  }
+}
+.promo-text-wrapper > .promo-text > div > div > p {
+  opacity: 1;
+  color: rgb(75, 76, 77);
+  font-family: "Roboto-Regular";
+  font-size: 16px;
+  font-weight: 400;
+  font-style: Regular;
+  letter-spacing: 0px;
+  text-align: center;
+  line-height: 24px;
+  margin: 0;
+}
+@media (max-width: 480px) {
+  .promo-text-wrapper > .promo-text > div > div > p > strong {
+    width: 100%;
+  }
+}
+.promo-text-wrapper > .promo-text > div > div > p:first-child {
+  opacity: 1;
+  color: #4a7390;
+  font-family: "MuseoSlab-700";
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  text-align: center;
+  padding-bottom: 24px;
+  margin: 0;
+}
+@media (max-width: 480px) {
+  .promo-text-wrapper > .promo-text > div > div > p:first-child {
+    padding-bottom: 16px;
+  }
+}
+.promo-text-wrapper > .promo-text > div > div > p:last-child {
+  padding-top: 36px;
+  margin: 0;
+}
+@media (max-width: 480px) {
+  .promo-text-wrapper > .promo-text > div > div > p:last-child {
+    width: 100%;
+    padding-top: 24px;
+  }
+}
