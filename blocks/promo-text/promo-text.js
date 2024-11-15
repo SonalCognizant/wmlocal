@@ -1,5 +1,4 @@
 export default function decorate(block) {
-  block.innerHTML = '';
   const div = document.createElement('div');
   const heading = document.createElement('h2');
   const title = block.children[0].innerContent;
