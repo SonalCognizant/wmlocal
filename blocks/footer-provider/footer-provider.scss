@@ -67,7 +67,7 @@
           padding-bottom: 24px;
           opacity: 1;
           color: $--gray-700;
-          font-family: "Roboto-Regular";
+          font-family: $--font-roboto;
           font-size: 12px;
           font-weight: 400;
           font-style: Regular;
@@ -97,7 +97,7 @@
       font-weight: 500;
       color: $--primary-675;
       opacity: 1;
-      font-family: "Roboto-Medium";
+      font-family: $--font-roboto;
       letter-spacing: 0px;
     }
   }
