@@ -1,8 +1,7 @@
 export default function decorate(block) {
-  console.log(block);
   const title = block.children[0].textContent;
   const description = block.children[1].textContent;
-  const button = block.children[2].textContent;
+  const button = block.children[2].innerHTML;
   console.log(title, description, button);
   const div = document.createElement('div');
   const heading = document.createElement('h2');
@@ -11,6 +10,6 @@ export default function decorate(block) {
   paragraph.append(description);
   div.append(heading, paragraph, button);
   console.log(div);
-//   block.innerHTML = '';
+  block.innerHTML = '';
   block.append(div);
 }
