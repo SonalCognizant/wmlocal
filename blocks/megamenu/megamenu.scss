@@ -53,12 +53,21 @@ header {
                         justify-content: space-between;
                     }
                     .collapse-bar{
+                        display: none;
                         &.active{
                             background-color: $--white;
-                            display: flex;
                             flex-direction: column;
                             align-items: center;
                             height: 49px;
+                            @include for-mobile {
+                                display: flex;
+                            }
+                            @include for-tablet {
+                                display: flex;
+                            }
+                            @include for-laptop {
+                                display: flex;
+                            }
                             .collapse-btn{
                                 display: none;
                             }
