@@ -11,6 +11,8 @@ export default function decorate(block) {
   paragraph.classList.add('description');
   paragraph.append(description);
   div.append(heading, paragraph, button);
+  block.innerHTML = '';
+  block.append(div);
   [...block.children].forEach((row, index) => {
     if (index > 1) {
       console.log(row.firstElementChild, 'hi');
@@ -18,6 +20,4 @@ export default function decorate(block) {
     }
   });
   console.log(div);
-  block.innerHTML = '';
-  block.append(div);
 }
