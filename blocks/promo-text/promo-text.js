@@ -1,8 +1,8 @@
 export default function decorate(block) {
   console.log(block);
-  const title = block.children[0].innerContent;
-  const description = block.children[1].innerContent;
-  const button = block.children[2].innerContent;
+  const title = block.children[0].textContent;
+  const description = block.children[1].textContent;
+  const button = block.children[2].textContent;
   console.log(title, description, button);
   const div = document.createElement('div');
   const heading = document.createElement('h2');
