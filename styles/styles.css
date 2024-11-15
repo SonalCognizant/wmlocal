@@ -70,14 +70,14 @@ button.secondary {
 a.button.secondary:hover,
 button.secondary:hover {
   background-color: #f3f9ff;
-  border: 2px solid #0F3659;
-  color: #0F3659;
+  border: 2px solid #0f3659;
+  color: #0f3659;
 }
 a.button.secondary:focus,
 button.secondary:focus {
   background-color: #f3f9ff;
-  border: 2px solid #0F3659;
-  color: #0F3659;
+  border: 2px solid #0f3659;
+  color: #0f3659;
   outline: 3px solid #e45f0c;
   outline-style: dashed;
   outline-offset: 2px;
@@ -150,6 +150,8 @@ h4 {
 }
 
 body {
+  display: none;
+  margin: 0;
   font-family: roboto, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -208,13 +210,6 @@ a:any-link {
     --heading-font-size-xs: 18px;
   }
 }
-body {
-  display: none;
-  margin: 0;
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
 body.appear {
   display: block;
 }
