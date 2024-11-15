@@ -79,15 +79,15 @@
       }
       @include for-xlarge {
         gap: 30px;
-        padding: 0 24px;
+        padding: 0;
       }
       @include for-large {
         gap: 30px;
-        padding: 0 24px;
+        padding: 0;
       }
       @include for-laptop {
         gap: 30px;
-        padding: 0 24px;
+        padding: 0;
       }
       @include for-tablet {
         padding: 0;
@@ -101,15 +101,15 @@
         flex-direction: column;
         @include for-xlarge {
           width: calc((100% - 104px) / 4);
-          // padding: 24px;
+          padding: 0 24px;
         }
         @include for-large {
           width: calc((100% - 104px) / 4);
-          // padding: 24px;
+          padding: 0 24px;
         }
         @include for-laptop {
           width: calc((100% - 72px) / 3);
-          // padding: 24px;
+          padding: 0 24px;
         }
         @include for-tablet {
           flex-basis: calc((100% - 72px) / 2);
