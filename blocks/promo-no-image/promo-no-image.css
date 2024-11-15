@@ -176,6 +176,8 @@
   color: #005589;
   text-align: center;
   text-decoration: underline;
+  margin: 0;
+  padding-top: 24px;
 }
 .promo-no-image-container .promo-no-image > ul > li .cards-card-body p {
   font-weight: 400;
@@ -184,4 +186,6 @@
   font-size: 16px;
   color: #4b4c4d;
   padding: 0 24px;
+  margin: 0;
+  padding-top: 16px;
 }
