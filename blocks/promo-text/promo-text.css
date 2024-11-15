@@ -69,6 +69,10 @@
 .promo-text-wrapper > .promo-text > div > div > .button-container {
   padding-top: 36px;
   margin: 0;
+  border-radius: 2px;
+}
+.promo-text-wrapper > .promo-text > div > div > .button-container > strong {
+  width: 100%;
 }
 @media (max-width: 480px) {
   .promo-text-wrapper > .promo-text > div > div > .button-container {
@@ -91,7 +95,7 @@
 .promo-text-wrapper > .promo-text > div > div > h2 {
   opacity: 1;
   color: #4a7390;
-  font-family: roboto, sans-serif;
+  font-family: museo, sans-serif;
   font-size: 32px;
   font-weight: 600;
   letter-spacing: 0px;
