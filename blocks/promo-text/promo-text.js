@@ -1,4 +1,5 @@
 export default function decorate(block) {
+  console.log(block);
   const title = block.children[0].innerContent;
   const description = block.children[1].innerContent;
   const button = block.children[2].innerContent;
