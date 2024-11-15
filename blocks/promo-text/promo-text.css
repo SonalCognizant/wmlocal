@@ -65,8 +65,8 @@
 }
 .promo-text-wrapper > .promo-text > div > div > p {
   opacity: 1;
-  color: rgb(75, 76, 77);
-  font-family: "Roboto-Regular";
+  color: #4b4c4d;
+  font-family: roboto, sans-serif;
   font-size: 16px;
   font-weight: 400;
   font-style: Regular;
@@ -83,7 +83,7 @@
 .promo-text-wrapper > .promo-text > div > div > p:first-child {
   opacity: 1;
   color: #4a7390;
-  font-family: "MuseoSlab-700";
+  font-family: roboto, sans-serif;
   font-size: 32px;
   font-weight: 600;
   letter-spacing: 0px;
