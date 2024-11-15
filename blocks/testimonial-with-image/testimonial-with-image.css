@@ -159,10 +159,6 @@
 .section.testimonial-with-image-container .testimonial-with-image-wrapper .testimonial-with-image ul li picture img {
   width: 100%;
 }
-.section.testimonial-with-image-container .testimonial-with-image-wrapper .testimonial-with-image ul li .icon {
-  width: 65px;
-  height: 45px;
-}
 .section.testimonial-with-image-container .testimonial-with-image-wrapper div:last-child {
   margin-top: 72px;
 }
