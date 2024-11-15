@@ -17,6 +17,6 @@ export default async function decorate(block) {
       em.replaceWith(cite);
     });
   }
-  block.innerHTML = '';
+  // block.innerHTML = '';
   block.append(blockquote);
 }
