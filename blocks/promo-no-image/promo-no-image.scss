@@ -50,20 +50,20 @@
 
   .promo-no-image {
     @include for-mobile {
-      padding: 36px 16px 72px 16px;
+      padding: 36px 0px 72px 0px;
     }
     @include for-xlarge {
-      padding: 72px 52px 120px 52px;
+      padding: 72px 0px 120px 0px;
     }
     @include for-large {
-      padding: 72px 52px 120px 52px;;
+      padding: 72px 0px 120px 0px;;
     }
     @include for-laptop {
-      padding: 72px 36px 120px 36px;
+      padding: 72px 0px 120px 0px;
       gap: 30px;
     }
     @include for-tablet {
-      padding: 52px 36px 96px 36px;
+      padding: 52px 0px 96px 0px;
     }
     > ul {
       list-style: none;
