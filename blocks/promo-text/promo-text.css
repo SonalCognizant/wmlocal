@@ -67,12 +67,8 @@
   }
 }
 .promo-text-wrapper > .promo-text > div > .button-container {
-  padding-top: 36px;
   margin: 0;
   border-radius: 2px;
-}
-.promo-text-wrapper > .promo-text > div > .button-container > strong {
-  width: 100%;
 }
 @media (max-width: 480px) {
   .promo-text-wrapper > .promo-text > div > .button-container {
@@ -91,6 +87,7 @@
   text-align: center;
   line-height: 24px;
   margin: 0;
+  padding-bottom: 36px;
 }
 .promo-text-wrapper > .promo-text > div > .title {
   opacity: 1;

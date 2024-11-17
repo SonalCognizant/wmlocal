@@ -43,12 +43,8 @@
         padding: 96px 0;
       }
       > .button-container {
-        padding-top: 36px;
         margin: 0;
         border-radius: 2px;
-        > strong {
-          width: 100%;
-        }
         @include for-mobile {
           width: 100%;
           padding-top: 24px;
@@ -65,6 +61,7 @@
         text-align: center;
         line-height: 24px;
         margin: 0;
+        padding-bottom: 36px;
       }
 
       > .title {
