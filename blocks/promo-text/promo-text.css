@@ -66,14 +66,13 @@
     padding: 96px 0;
   }
 }
-.promo-text-wrapper > .promo-text > div > .button-container {
+.promo-text-wrapper > .promo-text > div > .button {
   margin: 0;
   border-radius: 2px;
 }
 @media (max-width: 480px) {
-  .promo-text-wrapper > .promo-text > div > .button-container {
+  .promo-text-wrapper > .promo-text > div > .button {
     width: 100%;
-    padding-top: 24px;
   }
 }
 .promo-text-wrapper > .promo-text > div > .description {
@@ -88,6 +87,11 @@
   line-height: 24px;
   margin: 0;
   padding-bottom: 36px;
+}
+@media (max-width: 480px) {
+  .promo-text-wrapper > .promo-text > div > .description {
+    padding-bottom: 24px;
+  }
 }
 .promo-text-wrapper > .promo-text > div > .title {
   opacity: 1;

@@ -42,12 +42,11 @@
       @include for-tablet {
         padding: 96px 0;
       }
-      > .button-container {
+      > .button {
         margin: 0;
         border-radius: 2px;
         @include for-mobile {
           width: 100%;
-          padding-top: 24px;
         }
       }
       > .description {
@@ -62,6 +61,9 @@
         line-height: 24px;
         margin: 0;
         padding-bottom: 36px;
+        @include for-mobile {
+          padding-bottom: 24px;
+        }
       }
 
       > .title {
