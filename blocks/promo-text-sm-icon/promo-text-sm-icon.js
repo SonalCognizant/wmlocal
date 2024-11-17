@@ -10,7 +10,7 @@ export default function decorate(block) {
   heading.append(title);
   heading.classList.add('title');
   div2.append(svg, heading);
-  console.log(div2);
+  console.log(div2, 'hello');
   const paragraph = document.createElement('p');
   paragraph.classList.add('description');
   paragraph.append(description);
