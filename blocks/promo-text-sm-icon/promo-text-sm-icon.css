@@ -85,6 +85,8 @@
 .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > div > p {
   position: absolute;
   margin: 0;
+  width: 110px;
+  height: 165px;
 }
 .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > div > p > span {
   height: 110px;
