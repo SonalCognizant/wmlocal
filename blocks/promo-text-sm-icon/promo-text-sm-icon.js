@@ -4,7 +4,6 @@ export default function decorate(block) {
   const description = block.children[1].textContent;
   const button = block.children[2].children[0].children[0];
   button.classList.add('button-container');
-  console.log(button);
   const div = document.createElement('div');
   const div2 = document.createElement('div');
   const svg = svgIcon;
