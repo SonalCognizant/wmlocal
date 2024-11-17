@@ -7,18 +7,15 @@
     .title-banner {
       &.block {
         &.columns-2-cols {
-          padding: $--spacing-huge $--spacing-m;
+          padding: 50px $--spacing-xxl;
           @include for-tablet {
-            padding: $--spacing-jumbo $--spacing-xl;
+            padding: $--spacing-huge $--spacing-xl;
           }
           @include for-laptop {
-            padding: $--spacing-max $--spacing-xl;
+            padding: $--spacing-jumbo $--spacing-xl;
           }
-          @include for-large {
-            padding: $--spacing-max $--spacing-xxl;
-          }
-          @include for-xlarge {
-            padding: $--spacing-max $--spacing-xxl;
+          @include for-mobile{
+            padding: $--spacing-xxl $--spacing-m;
           }
           >div {
             display: flex;
@@ -47,12 +44,21 @@
                 flex: 1;
                 order: unset;
                 text-align: left;
-                column-gap: 24px;
+                column-gap: 12px;
+              }
+              @include for-tablet{
+                max-width: 90%;
               }
             }
             >.columns-img-col {
               order: 0;
               align-self: flex-start;
+              @include for-tablet{
+                display: none;
+              }
+              @include for-mobile{
+                display: none;
+              }
             }
             >.columns-col img {
               display: block;
@@ -65,32 +71,33 @@
           &.block {
             h2 {
               color: $--white;
-              width: 100%;
               font-family: $--font-museo;
+              font-size: 60px;
+              line-height: 66px;
               font-weight: 700;
-              opacity: 1;
-              text-align: left;
               margin-top: 0;
               margin-bottom: $--spacing-l;
               @include for-tablet {
-                font-size: 28px;
-                line-height: 28px;
+                font-size: 60px;
+                line-height: 66px;
               }
               @include for-mobile {
-                margin-top: $--spacing-xl;
                 margin-bottom: $--spacing-m;
+                font-size: 40px;
+                line-height: 48px;
+              }
+              @include for-laptop{
+                margin-bottom: $--spacing-xs;
               }
             }
             p {
               color: $--white;
-              font-family: $--font-roboto;
-              font-size: 16px;
-              font-weight: 400;
+              font-family: $--font-museo;
+              font-size: 60px;
+              line-height: 66px;
+              font-weight: 300;
               font-style: normal;
-              letter-spacing: 0px;
-              text-align: left;
-              line-height: 24px;
-              margin-bottom: $--spacing-xl;
+              margin-bottom: $--spacing-l;
               margin-top: 0;
               &.button-container {
                 margin-top: 0;
@@ -104,6 +111,10 @@
                   width: 100%;
                   display: unset;
                 }
+              }
+              @include for-mobile{
+                font-size: 40px;
+                line-height: 48px;
               }
             }
           }
