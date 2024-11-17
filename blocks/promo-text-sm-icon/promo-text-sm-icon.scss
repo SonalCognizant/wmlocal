@@ -42,6 +42,20 @@
       @include for-tablet {
         padding: 96px 0;
       }
+      > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        > p {
+          position: absolute;
+          margin: 0;
+          > span {
+            height: 110px;
+            width: 110px;
+            opacity: 10%;
+          }
+        }
+      }
       > .button-container {
         padding-top: 36px;
         margin: 0;

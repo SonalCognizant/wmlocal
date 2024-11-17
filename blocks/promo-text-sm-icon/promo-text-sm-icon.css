@@ -66,6 +66,20 @@
     padding: 96px 0;
   }
 }
+.promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > div > p {
+  position: absolute;
+  margin: 0;
+}
+.promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > div > p > span {
+  height: 110px;
+  width: 110px;
+  opacity: 10%;
+}
 .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > .button-container {
   padding-top: 36px;
   margin: 0;
