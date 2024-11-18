@@ -1,4 +1,6 @@
 export default function decorate(block) {
+  const parentElement = block.parentElement;
+  parentElement.classList.add('blue-550');
   const cols = [...block.firstElementChild.children];
   block.classList.add(`columns-${cols.length}-cols`);
 
