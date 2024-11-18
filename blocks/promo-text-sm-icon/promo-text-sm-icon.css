@@ -70,6 +70,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > div > .title {
   opacity: 1;
@@ -86,12 +87,17 @@
   position: absolute;
   margin: 0;
   width: 110px;
-  height: 165px;
+  height: 110px;
+  bottom: 10px;
 }
 .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > div > p > span {
-  height: 110px;
-  width: 110px;
+  height: 100%;
+  width: 100%;
   opacity: 10%;
+}
+.promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > div > p > span > img {
+  height: 100%;
+  width: 100%;
 }
 .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > .button {
   margin: 0;
