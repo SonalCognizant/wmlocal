@@ -3,7 +3,6 @@ export default function decorate(block) {
   parentElement.classList.add('blue-550');
   const cols = [...block.firstElementChild.children];
   block.classList.add(`columns-${cols.length}-cols`);
-
   // setup image columns
   [...block.children].forEach((row) => {
     [...row.children].forEach((col) => {
@@ -18,4 +17,3 @@ export default function decorate(block) {
     });
   });
 }
-
