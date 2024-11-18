@@ -103,6 +103,7 @@
   .promo-no-image-container .promo-no-image > ul {
     flex-direction: column;
     padding: 0;
+    gap: 24px;
   }
 }
 @media (min-width: 1380px) {

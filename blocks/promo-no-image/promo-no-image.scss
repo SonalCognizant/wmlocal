@@ -76,6 +76,7 @@
       @include for-mobile {
         flex-direction: column;
         padding: 0;
+        gap: 24px;
       }
       @include for-xlarge {
         gap: 30px;
