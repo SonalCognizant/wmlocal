@@ -64,6 +64,21 @@
           width: 110px;
           height: 110px;
           bottom: 10px;
+          @include for-xlarge {
+            bottom: 10px;
+          }
+          @include for-large {
+            bottom: 10px;
+          }
+          @include for-laptop {
+            bottom: 14px;
+          }
+          @include for-mobile {
+            bottom: -30px;
+          }
+          @include for-tablet {
+            bottom: 2px;
+          }
           > span {
             height: 100%;
             width: 100%;

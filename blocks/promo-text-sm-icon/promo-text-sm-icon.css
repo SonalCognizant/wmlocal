@@ -90,6 +90,31 @@
   height: 110px;
   bottom: 10px;
 }
+@media (min-width: 1380px) {
+  .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > div > p {
+    bottom: 10px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > div > p {
+    bottom: 10px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > div > p {
+    bottom: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > div > p {
+    bottom: -30px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > div > p {
+    bottom: 2px;
+  }
+}
 .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > div > p > span {
   height: 100%;
   width: 100%;
