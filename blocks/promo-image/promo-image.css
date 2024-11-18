@@ -89,18 +89,18 @@
 @media (min-width: 1380px) {
   .promo-image-container .promo-image > ul {
     gap: 30px;
-    padding: 72px 0px 120px 0px;
+    padding: 72px 0px 157px 0px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .promo-image-container .promo-image > ul {
-    padding: 72px 0px 120px 0px;
+    padding: 72px 0px 157px 0px;
     gap: 30px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .promo-image-container .promo-image > ul {
-    padding: 72px 0px 120px 0px;
+    padding: 72px 0px 109px 0px;
     gap: 30px;
   }
 }
