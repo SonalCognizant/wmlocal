@@ -30,12 +30,10 @@
     margin: 0;
     font-family: $--font-museo;
     @include for-mobile {
-      color: $--blue-550;
       padding-top: 72px;
       font-size: 28px;
     }
     @include for-tablet {
-      color: $--blue-550;
       padding-top: 96px;
       font-size: 28px;
     }
