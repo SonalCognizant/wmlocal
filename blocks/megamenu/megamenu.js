@@ -311,12 +311,12 @@ function renderMegaMenu(nav) {
   loginbtn.textContent = 'Log in';
   loginbtn.setAttribute('href', '#');
   loginbtn.setAttribute('title', 'button');
-  loginbtn.classList.add('blue-550', 'button', 'secondary');
+  loginbtn.classList.add('button', 'secondary');
   const registerbtn = document.createElement('a');
   registerbtn.textContent = 'Register';
   registerbtn.setAttribute('href', '#');
   registerbtn.setAttribute('title', 'button');
-  registerbtn.classList.add('blue-550', 'button', 'secondary');
+  registerbtn.classList.add('button', 'secondary');
   const forgetuser = document.createElement('p');
   forgetuser.classList.add('forget-user');
   forgetuser.innerHTML = ('Forgot User ID or Email?');
