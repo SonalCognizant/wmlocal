@@ -285,11 +285,11 @@ function renderMegaMenu(nav) {
 
   // Login & Register division
   const sectionblock = document.createElement('div');
-  sectionblock.className = 'section-block';
+  sectionblock.classList.add('section-block', 'blue-550');
   const sectionlogin = document.createElement('div');
-  sectionlogin.className = 'section-login';
+  sectionlogin.classList.add('section-login', 'button-container');
   const sectionregister = document.createElement('div');
-  sectionregister.className = 'section-register';
+  sectionregister.classList.add('section-register', 'button-container');
   const loginheading = document.createElement('h4');
   loginheading.classList.add('login-heading');
   loginheading.innerHTML = ('Log in to your account');
@@ -311,7 +311,7 @@ function renderMegaMenu(nav) {
   loginbtn.textContent = 'Log in';
   loginbtn.setAttribute('href', '#');
   loginbtn.setAttribute('title', 'button');
-  loginbtn.classList.add('button', 'secondary');
+  loginbtn.classList.add('button', 'primary');
   const registerbtn = document.createElement('a');
   registerbtn.textContent = 'Register';
   registerbtn.setAttribute('href', '#');
