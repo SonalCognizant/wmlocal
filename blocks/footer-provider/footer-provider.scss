@@ -55,6 +55,33 @@
       border-bottom: 2px solid $--gray-225;
       max-width: 1275px;
       margin: auto;
+      > .social-div {
+        display: flex;
+        gap: 11px;
+        > p {
+          display: flex;
+          gap: 11px;
+          > a > span {
+            height: 40px;
+            width: 40px;
+          }
+        }
+        @include for-mobile {
+          display: flex;
+        }
+        @include for-tablet{
+          display: flex;
+        }
+        @include for-xlarge {
+          display: none;
+        }
+        @include for-large {
+          display: none;
+        }
+        @include for-laptop {
+          display: none;
+        }
+      }
     }
     > .copyright-div {
       padding: 36px 0;
