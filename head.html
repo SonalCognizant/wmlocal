@@ -39,12 +39,12 @@ https://assets.adobedtm.com/63b00f92ccdd/cf0bc8611341/launch-14781371ad01-develo
       console.log('test button click');
       adobeDataLayer.push({
         event: 'cta_click',
-        eventInfo: {
-          cta_element_type: 'button',
-          cta_element_text: 'Learn More',
-          cta_click_image_alt_text: 'hero_image_alt_text',
-          cta_location: 'header',
-          cta_type: 'primary',
+        CusInfo: {
+          ctaClickImageAltText: 'hero_image_alt_text',
+          ctaElementText: 'Learn More',
+          ctaElementType: 'button',
+          ctaLocation: 'header',
+          ctaType: 'primary',
         },
       });
     });

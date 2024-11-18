@@ -10,6 +10,7 @@
  * governing permissions and limitations under the License.
  */
 
+// eslint-disable-next-line import/no-unresolved
 import { PLUGIN_EVENTS } from 'https://main--franklin-library-host--dylandepass.hlx.live/tools/sidekick/library/events/events.js';
 
 const selectedTags = [];
@@ -25,9 +26,7 @@ function getFilteredTags(data, query) {
     return data;
   }
 
-  return data.filter((item) =>
-    item.tag.toLowerCase().includes(query.toLowerCase())
-  );
+  return data.filter((item) => item.tag.toLowerCase().includes(query.toLowerCase()));
 }
 
 export async function decorate(container, data, query) {
@@ -65,7 +64,7 @@ export async function decorate(container, data, query) {
     container.dispatchEvent(
       new CustomEvent(PLUGIN_EVENTS.TOAST, {
         detail: { message: 'Copied Tags' },
-      })
+      }),
     );
   };
 

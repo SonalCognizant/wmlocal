@@ -13,12 +13,13 @@ export function createOptimizedPicture(
   breakpoints = [
     { media: '(min-width: 600px)', width: '2000' },
     { width: '750' },
-  ]
+  ],
 ) {
   const isAbsoluteUrl = /^https?:\/\//i.test(src);
 
   // Fallback to createOptimizedPicture if src is not an absolute URL
   if (!isAbsoluteUrl) {
+    // eslint-disable-next-line no-undef
     return libCreateOptimizedPicture(src, alt, eager, breakpoints);
   }
 
@@ -64,6 +65,7 @@ export function createOptimizedPicture(
 function getUrlExtension(url) {
   return url.split(/[#?]/)[0].split('.').pop().trim();
 }
+// eslint-disable-next-line consistent-return
 function isExternalImage(element, externalImageMarker) {
   // if the element is not an anchor, it's not an external image
   if (element.tagName !== 'A') return false;
@@ -79,8 +81,8 @@ function isExternalImage(element, externalImageMarker) {
   if (element.textContent.trim() === element.getAttribute('href')) {
     const ext = getUrlExtension(element.getAttribute('href'));
     return (
-      ext &&
-      ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'].includes(ext.toLowerCase())
+      ext
+      && ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'].includes(ext.toLowerCase())
     );
   }
 }
@@ -99,7 +101,7 @@ export function decorateExternalImages(ele, deliveryMarker) {
           if (srcset) {
             child.setAttribute(
               'srcset',
-              appendQueryParams(new URL(srcset, extImageSrc), searchParams)
+              appendQueryParams(new URL(srcset, extImageSrc), searchParams),
             );
           }
         } else if (child.tagName === 'IMG') {
@@ -107,7 +109,7 @@ export function decorateExternalImages(ele, deliveryMarker) {
           if (src) {
             child.setAttribute(
               'src',
-              appendQueryParams(new URL(src, extImageSrc), searchParams)
+              appendQueryParams(new URL(src, extImageSrc), searchParams),
             );
           }
         }
