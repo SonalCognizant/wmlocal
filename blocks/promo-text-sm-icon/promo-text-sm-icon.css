@@ -83,6 +83,11 @@
   padding-bottom: 24px;
   margin: 0;
 }
+@media (max-width: 480px) {
+  .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > div > .title {
+    padding-bottom: 16px;
+  }
+}
 .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > div > p {
   position: absolute;
   margin: 0;
