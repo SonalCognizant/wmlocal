@@ -127,13 +127,27 @@
   .title-banner-wrapper.blue-550{
     .block.columns-2-cols{
       div{
+        @include for-laptop{
+          gap: 30px;
+        }
         div{
+          @include for-laptop{
+            gap: unset;
+          }
+          h2{
+            @include for-laptop{
+              margin-bottom: $--spacing-m;
+            }
+          }
           p:nth-child(2){
             width: 100%;
             font-family: $--font-roboto;
             font-weight: 400;
             font-size: 16px;
             line-height: 24px;
+            @include for-laptop{
+              margin-bottom: $--spacing-xl;
+            }
           }
         }
       }
