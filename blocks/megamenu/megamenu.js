@@ -9,26 +9,26 @@ const navmenu = JSON.stringify([
       {
         title: 'Shop plans',
         subChildren: [
-          { title: 'Medicare Advantage', href: '#' },
-          { title: 'Medicare Supplement', href: '#' },
-          { title: 'Individual and Family', href: '#' },
-          { title: 'Explore all plans', href: '#' },
+          { title: 'Medicare Advantage', href: '#', description: '' },
+          { title: 'Medicare Supplement', href: '#', description: '' },
+          { title: 'Individual and Family', href: '#', description: '' },
+          { title: 'Explore all plans', href: '#', description: '' },
         ],
       },
       {
         title: 'Business plans',
         subChildren: [
-          { title: 'Small group employer', href: '#' },
-          { title: 'Mid-size employer', href: '#' },
-          { title: 'Large employer', href: '#' },
+          { title: 'Small group employer', href: '#', description: '' },
+          { title: 'Mid-size employer', href: '#', description: '' },
+          { title: 'Large employer', href: '#', description: '' },
         ],
       },
       {
         title: 'Understanding plans',
         subChildren: [
-          { title: 'Be well 24/7', href: '#' },
-          { title: 'Case Management', href: '#' },
-          { title: 'Preventative services', href: '#' },
+          { title: 'Be well 24/7', href: '#', description: '' },
+          { title: 'Case Management', href: '#', description: '' },
+          { title: 'Preventative services', href: '#', description: '' },
         ],
       },
     ],
@@ -40,17 +40,17 @@ const navmenu = JSON.stringify([
       {
         title: 'Find Care',
         subChildren: [
-          { title: 'Overview', href: '#' },
-          { title: 'Medicare', href: '#' },
-          { title: 'Affordable Care Act', href: '#' },
+          { title: 'Overview', href: '#', description: '' },
+          { title: 'Medicare', href: '#', description: '' },
+          { title: 'Affordable Care Act', href: '#', description: '' },
         ],
       },
       {
         title: 'Member Find care',
         subChildren: [
-          { title: 'Member care options', href: '#' },
-          { title: 'Mental health solutions', href: '#' },
-          { title: 'Virtual care', href: '#' },
+          { title: 'Member care options', href: '#', description: '' },
+          { title: 'Mental health solutions', href: '#', description: '' },
+          { title: 'Virtual care', href: '#', description: '' },
         ],
       },
       {
@@ -73,7 +73,8 @@ const navmenu = JSON.stringify([
     title: 'Providers', href: '#',
   },
   {
-    title: 'Producers', href: '#',
+    title: 'Producers',
+    href: '#',
   },
 ]);
 
@@ -100,42 +101,46 @@ function toggleSearchBar() {
 }
 
 function renderMegaMenu(nav) {
-  const mainheader = document.createElement('div');
-  mainheader.className = 'main-header';
+  const mainheadersection = document.createElement('div');
+  mainheadersection.className = 'main-header-section';
   const mainheadernav = document.createElement('div');
   mainheadernav.className = 'main-header-nav';
   const mainheadermenu = document.createElement('div');
   mainheadermenu.className = 'main-header-menu';
-  const menublock = document.createElement('div');
-  menublock.className = 'menu-block';
-  const menuul = document.createElement('ul');
-  menuul.className = 'menu-ul';
+  const headermenublock = document.createElement('div');
+  headermenublock.className = 'header-menu-block';
+  const headermenuul = document.createElement('ul');
+  headermenuul.className = 'header-menu-ul';
   const menuItems = JSON.parse(navmenu);
   // Menu bar view
   menuItems.forEach((item) => {
-    const menuli = document.createElement('li');
-    menuli.className = 'menu-li';
-    const spanli = document.createElement('div');
-    spanli.className = 'li-span';
-    menuli.prepend(spanli);
+    const headermenuli = document.createElement('li');
+    headermenuli.className = 'header-menu-li';
+    const headermenulink = document.createElement('div');
+    headermenulink.className = 'header-menu-link';
+    headermenuli.prepend(headermenulink);
     const navbaranchor = document.createElement('a');
     navbaranchor.setAttribute('href', item.href);
     navbaranchor.innerText = item.title;
-
     // Active menu
-    navbaranchor.addEventListener('click', () => {
-      const anchoractive = document.querySelectorAll('.menu-li a');
-      anchoractive.forEach((anchor) => {
-        anchor.classList.remove('menu-active');
-      });
-      navbaranchor.classList.add('menu-active');
+    headermenuli.addEventListener('click', (e) => {
+      const navbarselect = e.target?.closest('.header-menu-link');
+      if (navbarselect?.classList.contains('menu-active')) {
+        navbarselect?.classList.remove('menu-active');
+      } else {
+        const anchoractive = document.querySelectorAll('.header-menu-link');
+        anchoractive.forEach((anchor) => {
+          anchor.classList.remove('menu-active');
+        });
+        navbarselect?.classList.add('menu-active');
+      }
     });
-    spanli.append(navbaranchor);
+    headermenulink.append(navbaranchor);
 
     // View menu list
     if (item.children) {
-      const menuspan = document.createElement('span');
-      menuspan.className = 'menu-span';
+      const headermenuicon = document.createElement('span');
+      headermenuicon.className = 'header-menu-icon';
       const menuuparrow = document.createElement('img');
       menuuparrow.className = 'menu-up-arrow';
       menuuparrow.src = '../../icons/up-arrow.svg';
@@ -145,22 +150,22 @@ function renderMegaMenu(nav) {
       menudownarrow.src = '../../icons/down-arrow.svg';
       menudownarrow.setAttribute('title', 'image');
 
-      menuspan.appendChild(menuuparrow);
-      menuspan.appendChild(menudownarrow);
-      spanli.appendChild(menuspan);
+      headermenuicon.appendChild(menuuparrow);
+      headermenuicon.appendChild(menudownarrow);
+      headermenulink.appendChild(headermenuicon);
       // View submenu list
-      const menuitem = document.createElement('div');
-      menuitem.className = 'menu-item';
-      const menusubmenuul = document.createElement('div');
-      menusubmenuul.className = 'menu-submenu-ul';
-      navbaranchor.appendChild(menuitem);
+      const headermenuitem = document.createElement('div');
+      headermenuitem.className = 'header-menu-item';
+      const headersubmenuul = document.createElement('div');
+      headersubmenuul.className = 'header-submenu-ul';
+      navbaranchor.appendChild(headermenuitem);
 
       item.children.forEach((child) => {
         const submenuli = document.createElement('ul');
         const title = document.createElement('h4');
         title.append(child.title);
         submenuli.append(title);
-        menusubmenuul.append(submenuli);
+        headersubmenuul.append(submenuli);
         if (child.subChildren) {
           child.subChildren.forEach((subchild) => {
             const submenuchild = document.createElement('li');
@@ -172,24 +177,23 @@ function renderMegaMenu(nav) {
           });
         }
       });
-      const menusubmenulist = document.createElement('div');
-      menusubmenulist.className = 'menu-submenu-list';
+      const headersubmenulist = document.createElement('div');
+      headersubmenulist.className = 'header-submenu-list';
       const menusubmenucontent = document.createElement('div');
       menusubmenucontent.className = 'menu-submenu-content';
-      menuitem.appendChild(menusubmenulist);
-      menusubmenulist.appendChild(menusubmenuul);
-      menuitem.appendChild(menusubmenucontent);
-      menuli.appendChild(menuitem);
+      headermenuitem.appendChild(headersubmenulist);
+      headersubmenulist.appendChild(headersubmenuul);
+      headermenuitem.appendChild(menusubmenucontent);
+      headermenuli.appendChild(headermenuitem);
     }
-
-    menuul.appendChild(menuli);
+    headermenuul.appendChild(headermenuli);
   });
-
-  nav.append(mainheader);
-  mainheadermenu.appendChild(menublock);
+  // Append main header menu
+  nav.append(mainheadersection);
+  mainheadermenu.appendChild(headermenublock);
   nav.append(mainheadermenu);
-  mainheader.append(mainheadernav);
-  menublock.append(menuul);
+  mainheadersection.append(mainheadernav);
+  headermenublock.append(headermenuul);
 
   // Logo path
   const logoImg = document.createElement('img');
@@ -218,12 +222,11 @@ function renderMegaMenu(nav) {
   searchinput.setAttribute('type', 'search');
   searchinput.className = 'search-input';
   searchinput.setAttribute('placeholder', 'Search Wellmark');
+  // Button path
   const btnicon = document.createElement('img');
   btnicon.classList.add('main-header-login-icon');
   btnicon.src = '../../icons/login-btn.svg';
   btnicon.setAttribute('title', 'image');
-
-  // Button path
   const anchor = document.createElement('a');
   anchor.textContent = 'Log in / Register';
   anchor.setAttribute('href', '#');
@@ -277,9 +280,63 @@ function renderMegaMenu(nav) {
   const searchmenu = document.createElement('p');
   searchmenu.classList.add('search-menu');
   searchmenu.innerHTML = ('Search');
-
   searchdiv.append(searchicon);
   searchdiv.append(searchmenu);
+
+  // Login & Register division
+  const sectionblock = document.createElement('div');
+  sectionblock.classList.add('section-block', 'blue-550');
+  const sectionlogin = document.createElement('div');
+  sectionlogin.classList.add('section-login', 'button-container');
+  const sectionregister = document.createElement('div');
+  sectionregister.classList.add('section-register', 'button-container');
+  const loginheading = document.createElement('h4');
+  loginheading.classList.add('login-heading');
+  loginheading.innerHTML = ('Log in to your account');
+  const emaillabel = document.createElement('p');
+  emaillabel.classList.add('email-label');
+  emaillabel.innerHTML = ('User ID or Email (required)');
+  const logininput = document.createElement('input');
+  logininput.className = 'input-login';
+  logininput.setAttribute('type', 'text');
+  logininput.setAttribute('name', 'username');
+  const passwordlabel = document.createElement('p');
+  passwordlabel.classList.add('password-label');
+  passwordlabel.innerHTML = ('Password (required)');
+  const passwordinput = document.createElement('input');
+  passwordinput.className = 'input-password';
+  passwordinput.setAttribute('type', 'password');
+  passwordinput.setAttribute('name', 'password');
+  const loginbtn = document.createElement('a');
+  loginbtn.textContent = 'Log in';
+  loginbtn.setAttribute('href', '#');
+  loginbtn.setAttribute('title', 'button');
+  loginbtn.classList.add('button', 'primary');
+  const registerbtn = document.createElement('a');
+  registerbtn.textContent = 'Register';
+  registerbtn.setAttribute('href', '#');
+  registerbtn.setAttribute('title', 'button');
+  registerbtn.classList.add('button', 'secondary');
+  const forgetuser = document.createElement('p');
+  forgetuser.classList.add('forget-user');
+  forgetuser.innerHTML = ('Forgot User ID or Email?');
+  const forgetpassword = document.createElement('p');
+  forgetpassword.classList.add('forget-password');
+  forgetpassword.innerHTML = ('Forgot Password?');
+  // Section login append
+  headermenublock.appendChild(sectionblock);
+  sectionblock.appendChild(sectionlogin);
+  sectionlogin.appendChild(loginheading);
+  sectionlogin.appendChild(emaillabel);
+  sectionlogin.appendChild(logininput);
+  sectionlogin.appendChild(passwordlabel);
+  sectionlogin.appendChild(passwordinput);
+  sectionlogin.appendChild(loginbtn);
+  // Section Register append
+  sectionblock.appendChild(sectionregister);
+  sectionregister.appendChild(registerbtn);
+  sectionregister.appendChild(forgetuser);
+  sectionregister.appendChild(forgetpassword);
 }
 
 /**

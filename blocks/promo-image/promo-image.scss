@@ -22,7 +22,7 @@
   }
   .promo-image-heading {
     text-align: center;
-    color: $--blue-550;
+    color: $--white;
     text-align: center;
     font-weight: 700;
     font-style: 700;
@@ -30,12 +30,10 @@
     margin: 0;
     font-family: $--font-museo;
     @include for-mobile {
-      color: $--blue-550;
       padding-top: 72px;
       font-size: 28px;
     }
     @include for-tablet {
-      color: $--blue-550;
       padding-top: 96px;
       font-size: 28px;
     }
