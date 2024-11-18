@@ -3,10 +3,9 @@
  * Recreate an accordion
  * https://www.hlx.live/developer/block-collection/accordion
  */
-  
+
 export default function decorate(block) {
-  
-  let accordionWrapper = [...block.children];
+  const accordionWrapper = [...block.children];
   const accordionSection = accordionWrapper.slice(1, accordionWrapper.length);
 
   accordionSection.forEach((row) => {
@@ -24,16 +23,16 @@ export default function decorate(block) {
     details.append(summary, body);
     row.replaceWith(details);
   });
-  const parentElement = block.parentElement;
-  // Get the title innertext from the first child 
+  const { parentElement } = block;
+  // Get the title innertext from the first child
   const titleText = block.children[0].innerText;
   // get the first child
   const title = block.children[0];
   // remove the first child
   title.remove();
   // create the heading element for accordion
-  const mainHeading = document.createElement("h2");
-  mainHeading.classList.add("accordion-heading");
+  const mainHeading = document.createElement('h2');
+  mainHeading.classList.add('accordion-heading');
   mainHeading.textContent = titleText;
   parentElement.prepend(mainHeading);
 }

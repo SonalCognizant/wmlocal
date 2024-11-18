@@ -1,28 +1,27 @@
 export default function decorate(block) {
   // Get the parent element and create a new unordered list
-  const parentElement = block.parentElement;
+  const { parentElement } = block;
   const ul = document.createElement('ul');
 
   // Get the title from the first child and prepend it
   const title = block.children[0].innerText;
-  const mainHeading = document.createElement("h2");
-  mainHeading.classList.add("testimonial-heading");
+  const mainHeading = document.createElement('h2');
+  mainHeading.classList.add('testimonial-heading');
   mainHeading.textContent = title;
   parentElement.prepend(mainHeading);
 
   // Get the link from the last child and append it
-  const linkDiv = document.createElement("div");
+  const linkDiv = document.createElement('div');
   const link = block.children[block.children.length - 1].innerText;
-  const hyperLink = document.createElement("a");
-  hyperLink.classList.add("testimonial-link");
+  const hyperLink = document.createElement('a');
+  hyperLink.classList.add('testimonial-link');
   hyperLink.textContent = link;
   linkDiv.append(hyperLink);
 
   // get the image for the link
-  const linkImg = document.createElement("img");
+  const linkImg = document.createElement('img');
   linkImg.src = '/icons/right-arrow.svg';
-  linkImg.setAttribute('data-icon-name','right-arrow');
-  // linkImg.setAttribute('loading','eager');
+  linkImg.setAttribute('data-icon-name', 'right-arrow');
   linkImg.className = 'link-img';
   linkDiv.append(linkImg);
   parentElement.append(linkDiv);
@@ -39,17 +38,15 @@ export default function decorate(block) {
       // get the image from the icon and append it to the list
       const imgTag = document.createElement('img');
       imgTag.src = '/icons/quote.svg';
-      imgTag.setAttribute('data-icon-name','quote');
-      // imgTag.setAttribute('loading','eager');
+      imgTag.setAttribute('data-icon-name', 'quote');
 
-      //setAttribute for the header
+      // setAttribute for the header
       const hTag = li.querySelector('h3');
       hTag.className = 'testimonial-title';
 
-      //setAttribute for the paragraph
+      // setAttribute for the paragraph
       const pTag = li.querySelector('p');
       pTag.className = 'testimonial-description';
-
       li.prepend(imgTag);
       ul.append(li);
     }

@@ -1,13 +1,13 @@
 @import '../../styles/include/mq.scss';
 @import '../../styles/include/tokens.scss';
 .promo-no-image-container {
-  .promo-image-wrapper {
+  .promo-no-image-wrapper {
     @include for-mobile {
-      background-image: none !important;
+      // background-image: none !important;
       padding: 0 16px;
     }
     @include for-tablet {
-      background-image: none !important;
+      // background-image: none !important;
       padding: 0 36px;
     }
     @include for-xlarge {
@@ -49,6 +49,22 @@
   }
 
   .promo-no-image {
+    @include for-mobile {
+      padding: 52px 0px 72px 0px;
+    }
+    @include for-xlarge {
+      padding: 72px 0px 120px 0px;
+    }
+    @include for-large {
+      padding: 72px 0px 120px 0px;;
+    }
+    @include for-laptop {
+      padding: 69px 0px 122px 0px;
+      gap: 30px;
+    }
+    @include for-tablet {
+      padding: 52px 0px 96px 0px;
+    }
     > ul {
       list-style: none;
       display: flex;
@@ -58,23 +74,23 @@
       flex-direction: row;
       margin: 0;
       @include for-mobile {
-        padding: 36px 16px 72px 16px;
         flex-direction: column;
+        padding: 0;
       }
       @include for-xlarge {
         gap: 30px;
-        padding: 72px 52px 120px 52px;
+        padding: 0;
       }
       @include for-large {
-        padding: 72px 52px 120px 52px;
         gap: 30px;
+        padding: 0;
       }
       @include for-laptop {
-        padding: 72px 36px 120px 36px;
         gap: 30px;
+        padding: 0;
       }
       @include for-tablet {
-        padding: 52px 36px 96px 36px;
+        padding: 0;
         flex-wrap: wrap;
         gap: 30px;
       }
@@ -85,15 +101,15 @@
         flex-direction: column;
         @include for-xlarge {
           width: calc((100% - 104px) / 4);
-          // padding: 24px;
+          padding: 0 24px;
         }
         @include for-large {
           width: calc((100% - 104px) / 4);
-          // padding: 24px;
+          padding: 0 24px;
         }
         @include for-laptop {
           width: calc((100% - 72px) / 3);
-          // padding: 24px;
+          padding: 0 24px;
         }
         @include for-tablet {
           flex-basis: calc((100% - 72px) / 2);
@@ -117,6 +133,8 @@
             color: $--blue-675;
             text-align: center;
             text-decoration: underline;
+            margin: 0;
+            padding-top: 24px;
           }
           p {
             font-weight: 400;
@@ -124,7 +142,11 @@
             line-height: 24px;
             font-size: 16px;
             color: $--gray-700;
-            padding: 0 24px;
+            margin: 0;
+            padding-top: 16px;
+            @include for-mobile {
+              padding-top: 12px;
+            }
           }
         }
       }
