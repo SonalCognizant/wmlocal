@@ -723,13 +723,13 @@ header .main-header-wrapper header .main-header-menu .header-menu-block .section
   width: calc(100% - 8px);
   margin-bottom: 16px;
 }
-header .main-header-wrapper header .main-header-menu .header-menu-block .section-block .section-login a.button.secondary, header .main-header-wrapper header .main-header-menu .header-menu-block .section-block .section-login button.secondary {
+header .main-header-wrapper header .main-header-menu .header-menu-block .section-block .section-login a.button.primary, header .main-header-wrapper header .main-header-menu .header-menu-block .section-block .section-login button.primary {
   width: 100%;
 }
 header .main-header-wrapper header .main-header-menu .header-menu-block .section-block .section-register.button-container {
   display: block;
 }
-header .main-header-wrapper header .main-header-menu .header-menu-block .section-block .section-register a.button.primary, header .main-header-wrapper header .main-header-menu .header-menu-block .section-block .section-register button.primary {
+header .main-header-wrapper header .main-header-menu .header-menu-block .section-block .section-register a.button.secondary, header .main-header-wrapper header .main-header-menu .header-menu-block .section-block .section-register button.secondary {
   width: 100%;
   margin-bottom: 16px;
 }

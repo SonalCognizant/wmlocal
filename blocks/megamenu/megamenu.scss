@@ -665,7 +665,7 @@ header {
                                 width: calc(100% - 8px);
                                 margin-bottom: $--spacing-m;
                             }
-                            a.button.secondary, button.secondary {
+                            a.button.primary, button.primary {
                                 width: 100%;
                             }
                         }
@@ -673,7 +673,7 @@ header {
                             &.button-container{
                                 display: block;
                             }
-                            a.button.primary, button.primary {
+                            a.button.secondary, button.secondary {
                                 width: 100%;
                                 margin-bottom: $--spacing-m;
                             }
