@@ -695,6 +695,9 @@ header .main-header-wrapper header .main-header-menu .header-menu-block .section
   padding-bottom: 36px;
   margin-bottom: 36px;
 }
+header .main-header-wrapper header .main-header-menu .header-menu-block .section-block .section-login.button-container {
+  display: block;
+}
 header .main-header-wrapper header .main-header-menu .header-menu-block .section-block .section-login .login-heading {
   margin: 0;
   color: #ffffff;
@@ -721,12 +724,13 @@ header .main-header-wrapper header .main-header-menu .header-menu-block .section
   margin-bottom: 16px;
 }
 header .main-header-wrapper header .main-header-menu .header-menu-block .section-block .section-login a.button.secondary, header .main-header-wrapper header .main-header-menu .header-menu-block .section-block .section-login button.secondary {
-  border: 2px solid #4a7390;
+  width: 100%;
 }
-header .main-header-wrapper header .main-header-menu .header-menu-block .section-block .section-register a.button.secondary, header .main-header-wrapper header .main-header-menu .header-menu-block .section-block .section-register button.secondary {
-  color: #ffffff;
-  border: 2px solid #ffffff;
-  background-color: #4a7390;
+header .main-header-wrapper header .main-header-menu .header-menu-block .section-block .section-register.button-container {
+  display: block;
+}
+header .main-header-wrapper header .main-header-menu .header-menu-block .section-block .section-register a.button.primary, header .main-header-wrapper header .main-header-menu .header-menu-block .section-block .section-register button.primary {
+  width: 100%;
   margin-bottom: 16px;
 }
 header .main-header-wrapper header .main-header-menu .header-menu-block .section-block .section-register p {

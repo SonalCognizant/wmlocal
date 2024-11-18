@@ -285,11 +285,11 @@ function renderMegaMenu(nav) {
 
   // Login & Register division
   const sectionblock = document.createElement('div');
-  sectionblock.className = 'section-block';
+  sectionblock.classList.add('section-block', 'blue-550');
   const sectionlogin = document.createElement('div');
-  sectionlogin.className = 'section-login';
+  sectionlogin.classList.add('section-login', 'button-container');
   const sectionregister = document.createElement('div');
-  sectionregister.className = 'section-register';
+  sectionregister.classList.add('section-register', 'button-container');
   const loginheading = document.createElement('h4');
   loginheading.classList.add('login-heading');
   loginheading.innerHTML = ('Log in to your account');
@@ -316,7 +316,7 @@ function renderMegaMenu(nav) {
   registerbtn.textContent = 'Register';
   registerbtn.setAttribute('href', '#');
   registerbtn.setAttribute('title', 'button');
-  registerbtn.classList.add('button', 'secondary');
+  registerbtn.classList.add('button', 'primary');
   const forgetuser = document.createElement('p');
   forgetuser.classList.add('forget-user');
   forgetuser.innerHTML = ('Forgot User ID or Email?');

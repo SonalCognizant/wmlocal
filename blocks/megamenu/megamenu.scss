@@ -634,6 +634,9 @@ header {
                             display: none;
                         }
                         .section-login{
+                            &.button-container{
+                                display: block;
+                            }
                             border-bottom: 2px solid $--blue-600;
                             padding-bottom: $--spacing-xl;
                             margin-bottom: $--spacing-xl;
@@ -663,14 +666,15 @@ header {
                                 margin-bottom: $--spacing-m;
                             }
                             a.button.secondary, button.secondary {
-                                border: 2px solid #4a7390;
+                                width: 100%;
                             }
                         }
                         .section-register{
-                            a.button.secondary, button.secondary {
-                                color: $--white;
-                                border: 2px solid $--white;
-                                background-color: $--blue-550;
+                            &.button-container{
+                                display: block;
+                            }
+                            a.button.primary, button.primary {
+                                width: 100%;
                                 margin-bottom: $--spacing-m;
                             }
                             p{
