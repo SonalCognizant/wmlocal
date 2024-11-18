@@ -9,28 +9,33 @@ https://assets.adobedtm.com/63b00f92ccdd/cf0bc8611341/launch-14781371ad01-develo
 ></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
+  const domain=window.location.hostname;
+  const pathname=window.location.pathname;
+  const pathsegment= pathname.split('/').filter(segment => segment !=='');
+  const  depth=pathsegment.length;
+  const level1=pathsegment[0] || 'undefined';
+  const level2=pathsegment[1] || 'undefined'; 
   window.adobeDataLayer = window.adobeDataLayer || [];
   adobeDataLayer.push({
-    event: 'pageload',
+    event: 'page_view',
     userInfo: {
-      account_login_status: 'logged_in',
-      user_type: 'registered',
-      user_id: '123456',
-      gender: 'female',
-      age: 30,
-      user_relationship_to_member: 'self',
+      account_login_status: 'logged out',
+      user_type: '',
+      user_role: '',
+      gender: '',
+      age: '',
+      user_relationship_to_member: '',
+      user_id: '',
     },
     siteInfo: {
-      site_section1: 'home',
-      site_section2: 'electronics',
-      site_section3: 'smartphones',
-      site_name: 'ExampleSite',
-      page_type: 'product_page',
-      site_subcategory_depth: 3,
+      site_section: level1,
+      site_name: domain,
+      page_type: level1,
+      site_subcategory: level2,
+      site_subcategory_depth: depth,
     },
     audienceInfo: {
-      audience_type: 'new_visitor',
-      environment: 'production',
+      environment: 'Prod | Dev',
     },
   });
 
