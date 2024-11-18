@@ -104,3 +104,8 @@
   padding-bottom: 24px;
   margin: 0;
 }
+@media (max-width: 480px) {
+  .promo-text-wrapper > .promo-text > div > .title {
+    padding-bottom: 16px;
+  }
+}
