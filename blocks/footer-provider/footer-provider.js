@@ -15,4 +15,6 @@ export default function decorate(block) {
   const socialDiv2 = socialDiv.cloneNode(true);
   const attentionDiv = block.children[4];
   attentionDiv.append(socialDiv2);
+  console.log(attentionDiv);
+  console.log(socialDiv2);
 }
