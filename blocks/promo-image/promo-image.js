@@ -19,7 +19,7 @@ export default function decorate(block) {
   //   bloc
   // }
   const blockDiv = document.querySelector('.promo-image');
-  console.log(blockDiv);
+  console.log(blockDiv.children, blockDiv.children.children);
   // if (block.children.length === 6) {
   //   }
   console.log(block.children.length);
