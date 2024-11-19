@@ -103,10 +103,10 @@
           //   padding: 24px;
         }
         @include for-tablet {
-          width: 66.66%;
-          margin: 0 auto;
+          flex-basis: calc((100% - 72px) / 2);
         }
         .cards-card-body {
+          // padding: 0 36px 37px 36px;
           h3 {
             font-weight: 700;
             font-family: $--font-roboto;
@@ -181,7 +181,6 @@
       
       > li {
         background-color: var(--background-color);
-        // align-items: center;
         display: flex;
         flex-direction: column;
         @include for-xlarge {
@@ -197,7 +196,8 @@
           //   padding: 24px;
         }
         @include for-tablet {
-          flex-basis: calc((100% - 72px) / 2);
+          width: 66.66%;
+          margin: 0 auto;
         }
         .cards-card-body {
           // padding: 0 36px 37px 36px;
