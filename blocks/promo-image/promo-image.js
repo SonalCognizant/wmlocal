@@ -18,12 +18,16 @@ export default function decorate(block) {
   // if (block.children.length === 3) {
   //   bloc
   // }
-  const blockDiv = document.querySelector('.promo-image');
-  console.log(blockDiv.children, blockDiv.children?.children, blockDiv.children.length);
-  // if (block.children.length === 6) {
-  //   }
+  // const blockDiv = document.querySelector('.promo-image');
   console.log(block.children.length);
   [...block.children].forEach((row, index) => {
+    if (block.children.length === 6) {
+      console.log('promo image 4 column');
+    } else if (block.children.length === 5) {
+      console.log('promo image 3 column');
+    } else if (block.children.length === 4) {
+      console.log('promo image 2 column');
+    }
     if (index > 1) {
       const li = document.createElement('li');
       while (row.firstElementChild) li.append(row.firstElementChild);
