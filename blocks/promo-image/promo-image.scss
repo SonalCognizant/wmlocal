@@ -174,9 +174,9 @@
         gap: 30px;
       }
       @include for-tablet {
-        padding: 52px 0px 96px 0px;
+        padding: 52px 201px 96px 199px;
         gap: 30px;
-        flex-wrap: column;
+        flex-direction: column;
       }
       
       > li {

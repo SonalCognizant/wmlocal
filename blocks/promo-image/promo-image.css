@@ -217,9 +217,9 @@
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .promo-image-container .promo-image > .promo-3-column {
-    padding: 52px 0px 96px 0px;
+    padding: 52px 201px 96px 199px;
     gap: 30px;
-    flex-wrap: column;
+    flex-direction: column;
   }
 }
 .promo-image-container .promo-image > .promo-3-column > li {
