@@ -123,8 +123,8 @@
     }
   }
 }
-.one-btn-banner.title-banner-container{
-  .title-banner-wrapper.blue-550{
+.one-btn-banner.title-banner-container.blue-550{
+  .title-banner-wrapper{
     .block.columns-2-cols{
       div{
         @include for-laptop{
@@ -147,6 +147,14 @@
             line-height: 24px;
             @include for-laptop{
               margin-bottom: $--spacing-xl;
+            }
+            @include for-mobile{
+              margin-bottom: $--spacing-xl;
+            }
+          }
+          p.button-container{
+            @include for-mobile{
+              width: unset;
             }
           }
         }
