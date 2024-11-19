@@ -316,7 +316,7 @@
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .promo-image-container .promo-image > .promo-2-column {
-    padding: 72px 0px 109px 0px;
+    padding: 72px 0px 120px 0px;
     gap: 30px;
   }
 }
