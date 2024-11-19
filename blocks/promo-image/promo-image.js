@@ -15,7 +15,7 @@ export default function decorate(block) {
   mainHeading.textContent = `${title}`;
   imageWrapperDiv.prepend(mainHeading);
   const blockDiv = document.querySelector('.promo-image ul');
-  // console.log(block.children.length);
+  console.log(blockDiv);
   if (block.children.length === 6) {
     console.log('promo image 4 column');
     blockDiv.classList.add('4-column');
