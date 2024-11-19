@@ -70,14 +70,14 @@ button.secondary {
 a.button.secondary:hover,
 button.secondary:hover {
   background-color: #f3f9ff;
-  border: 2px solid #0f3659;
-  color: #0f3659;
+  border: 2px solid #0F3659;
+  color: #0F3659;
 }
 a.button.secondary:focus,
 button.secondary:focus {
   background-color: #f3f9ff;
-  border: 2px solid #0f3659;
-  color: #0f3659;
+  border: 2px solid #0F3659;
+  color: #0F3659;
   outline: 3px solid #e45f0c;
   outline-style: dashed;
   outline-offset: 2px;
@@ -220,7 +220,6 @@ a:any-link {
   /* nav heights */
   --nav-height: 64px;
   --breadcrumbs-height: 34px;
-  --header-height: var(--nav-height);
 }
 
 @media (width >= 900px) {
@@ -242,8 +241,28 @@ body.appear {
   display: block;
 }
 
-header {
-  height: var(--header-height);
+header.megamenu-wrapper {
+  height: 60px;
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  header.megamenu-wrapper {
+    height: 60px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  header.megamenu-wrapper {
+    height: 60px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  header.megamenu-wrapper {
+    height: 161px;
+  }
+}
+@media (min-width: 1380px) {
+  header.megamenu-wrapper {
+    height: 161px;
+  }
 }
 
 header .header,

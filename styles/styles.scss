@@ -39,7 +39,6 @@
   /* nav heights */
   --nav-height: 64px;
   --breadcrumbs-height: 34px;
-  --header-height: var(--nav-height);
 }
 
 @media (width >= 900px) {
@@ -63,8 +62,24 @@ body.appear {
   display: block;
 }
 
-header {
-  height: var(--header-height);
+header.megamenu-wrapper {
+  height: 60px;
+
+  @include for-tablet {
+    height: 60px;
+  }
+  
+  @include for-laptop {
+    height: 60px;
+  }
+  
+  @include for-large {
+    height: 161px;
+  }
+  
+  @include for-xlarge {
+    height: 161px;
+  }
 }
 
 header .header,
