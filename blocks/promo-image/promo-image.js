@@ -14,7 +14,7 @@ export default function decorate(block) {
   mainHeading.classList.add('promo-image-heading');
   mainHeading.textContent = `${title}`;
   imageWrapperDiv.prepend(mainHeading);
-  console.log(block, block.children);
+  console.log(block.children);
   // if (block.children.length === 3) {
   //   bloc
   // }
