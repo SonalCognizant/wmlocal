@@ -181,7 +181,7 @@
       
       > li {
         background-color: var(--background-color);
-        align-items: center;
+        // align-items: center;
         display: flex;
         flex-direction: column;
         @include for-xlarge {

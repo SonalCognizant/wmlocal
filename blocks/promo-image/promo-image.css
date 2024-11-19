@@ -224,7 +224,6 @@
 }
 .promo-image-container .promo-image > .promo-3-column > li {
   background-color: var(--background-color);
-  align-items: center;
   display: flex;
   flex-direction: column;
 }
