@@ -14,16 +14,16 @@ export default function decorate(block) {
   mainHeading.classList.add('promo-image-heading');
   mainHeading.textContent = `${title}`;
   imageWrapperDiv.prepend(mainHeading);
-  const blockDiv = document.querySelector('.promo-image ul');
-  console.log(blockDiv);
-  if (block.children.length === 6) {
-    console.log('promo image 4 column');
-    blockDiv.classList.add('4-column');
-  } else if (block.children.length === 5) {
-    console.log('promo image 3 column');
-  } else if (block.children.length === 4) {
-    console.log('promo image 2 column');
-  }
+  // const blockDiv = document.querySelector('.promo-image ul');
+  // console.log(blockDiv);
+  // if (block.children.length === 6) {
+  //   console.log('promo image 4 column');
+  //   blockDiv.classList.add('4-column');
+  // } else if (block.children.length === 5) {
+  //   console.log('promo image 3 column');
+  // } else if (block.children.length === 4) {
+  //   console.log('promo image 2 column');
+  // }
   [...block.children].forEach((row, index) => {
     if (index > 1) {
       const li = document.createElement('li');
@@ -32,8 +32,9 @@ export default function decorate(block) {
         if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
         else div.className = 'cards-card-body';
       });
-      console.log(li.length);
+      console.log(li.length,"li");
       ul.append(li);
+      console.log(ul.length,"ul")
     }
   });
   ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
