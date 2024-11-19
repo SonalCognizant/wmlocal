@@ -18,10 +18,10 @@ export default function decorate(block) {
   // if (block.children.length === 3) {
   //   bloc
   // }
+  console.log(block.children.length);
   [...block.children].forEach((row, index) => {
     if (index > 1) {
       const li = document.createElement('li');
-      console.log(row.length);
       while (row.firstElementChild) li.append(row.firstElementChild);
       [...li.children].forEach((div) => {
         if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
