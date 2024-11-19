@@ -18,6 +18,10 @@ export default function decorate(block) {
   // if (block.children.length === 3) {
   //   bloc
   // }
+  const blockDiv = document.querySelector('.promo-image');
+  console.log(blockDiv);
+  // if (block.children.length === 6) {
+  //   }
   console.log(block.children.length);
   [...block.children].forEach((row, index) => {
     if (index > 1) {
