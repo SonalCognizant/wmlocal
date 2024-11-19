@@ -59,7 +59,7 @@
       padding: 72px 0px 120px 0px;;
     }
     @include for-laptop {
-      padding: 71px 0px 121px 0px;
+      padding: 72px 0px 120px 0px;
       gap: 30px;
     }
     @include for-tablet {
@@ -163,7 +163,7 @@
       @include for-mobile {
         flex-direction: column;
         padding: 0;
-        gap: 24px;
+        gap: 52px;
       }
       @include for-xlarge {
         gap: 30px;
@@ -251,7 +251,7 @@
       @include for-mobile {
         flex-direction: column;
         padding: 0;
-        gap: 24px;
+        gap: 52px;
       }
       @include for-xlarge {
         gap: 30px;

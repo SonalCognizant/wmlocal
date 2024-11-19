@@ -81,7 +81,7 @@
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .promo-no-image-container .promo-no-image {
-    padding: 71px 0px 121px 0px;
+    padding: 72px 0px 120px 0px;
     gap: 30px;
   }
 }
@@ -207,7 +207,7 @@
   .promo-no-image-container .promo-no-image > .promo-no-image-3-column {
     flex-direction: column;
     padding: 0;
-    gap: 24px;
+    gap: 52px;
   }
 }
 @media (min-width: 1380px) {
@@ -311,7 +311,7 @@
   .promo-no-image-container .promo-no-image > .promo-no-image-2-column {
     flex-direction: column;
     padding: 0;
-    gap: 24px;
+    gap: 52px;
   }
 }
 @media (min-width: 1380px) {
