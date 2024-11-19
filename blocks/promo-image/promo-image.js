@@ -14,6 +14,9 @@ export default function decorate(block) {
   mainHeading.classList.add('promo-image-heading');
   mainHeading.textContent = `${title}`;
   imageWrapperDiv.prepend(mainHeading);
+  const promoClass = `promo-${block.children.length - 2}-column`;
+  console.log(promoClass)
+  ul.classList.add(promoClass);
   // const blockDiv = document.querySelector('.promo-image ul');
   // console.log(blockDiv);
   // if (block.children.length === 6) {
@@ -32,9 +35,9 @@ export default function decorate(block) {
         if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
         else div.className = 'cards-card-body';
       });
-      console.log(li.length,"li");
+      // console.log(li.length,"li");
       ul.append(li);
-      console.log(ul.length,"ul")
+      // console.log(ul.length,"ul")
     }
   });
   ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
