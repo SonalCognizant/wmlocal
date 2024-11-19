@@ -81,7 +81,7 @@
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .promo-no-image-container .promo-no-image {
-    padding: 69px 0px 122px 0px;
+    padding: 71px 0px 121px 0px;
     gap: 30px;
   }
 }
@@ -103,7 +103,7 @@
   .promo-no-image-container .promo-no-image > .promo-no-image-4-column {
     flex-direction: column;
     padding: 0;
-    gap: 24px;
+    gap: 52px;
   }
 }
 @media (min-width: 1380px) {
@@ -231,8 +231,8 @@
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-3-column {
     padding: 0;
-    flex-wrap: wrap;
-    gap: 30px;
+    flex-direction: column;
+    gap: 52px;
   }
 }
 .promo-no-image-container .promo-no-image > .promo-no-image-3-column > li {
@@ -243,13 +243,13 @@
 }
 @media (min-width: 1380px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-3-column > li {
-    width: calc((100% - 104px) / 4);
+    width: calc((100% - 104px) / 5 + 48px);
     padding: 0 24px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-3-column > li {
-    width: calc((100% - 104px) / 4);
+    width: calc((100% - 104px) / 5 + 48px);
     padding: 0 24px;
   }
 }
@@ -261,7 +261,7 @@
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-3-column > li {
-    flex-basis: calc((100% - 72px) / 2);
+    width: 100%;
   }
 }
 .promo-no-image-container .promo-no-image > .promo-no-image-3-column > li .cards-card-image {

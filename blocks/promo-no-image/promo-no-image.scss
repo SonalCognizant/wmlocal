@@ -59,7 +59,7 @@
       padding: 72px 0px 120px 0px;;
     }
     @include for-laptop {
-      padding: 69px 0px 122px 0px;
+      padding: 71px 0px 121px 0px;
       gap: 30px;
     }
     @include for-tablet {
@@ -76,7 +76,7 @@
       @include for-mobile {
         flex-direction: column;
         padding: 0;
-        gap: 24px;
+        gap: 52px;
       }
       @include for-xlarge {
         gap: 30px;
@@ -179,8 +179,9 @@
       }
       @include for-tablet {
         padding: 0;
-        flex-wrap: wrap;
-        gap: 30px;
+        // flex-wrap: wrap;
+        flex-direction: column;
+        gap: 52px;
       }
       > li {
         background-color: var(--background-color);
@@ -188,11 +189,11 @@
         display: flex;
         flex-direction: column;
         @include for-xlarge {
-          width: calc((100% - 104px) / 4);
+          width: calc(((100% - 104px) / 5) + 48px);
           padding: 0 24px;
         }
         @include for-large {
-          width: calc((100% - 104px) / 4);
+          width: calc(((100% - 104px) / 5) + 48px);
           padding: 0 24px;
         }
         @include for-laptop {
@@ -200,7 +201,7 @@
           padding: 0 24px;
         }
         @include for-tablet {
-          flex-basis: calc((100% - 72px) / 2);
+          width: 100%;
         }
         .cards-card-image {
           line-height: 0;
