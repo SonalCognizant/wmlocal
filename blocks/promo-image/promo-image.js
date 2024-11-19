@@ -14,6 +14,10 @@ export default function decorate(block) {
   mainHeading.classList.add('promo-image-heading');
   mainHeading.textContent = `${title}`;
   imageWrapperDiv.prepend(mainHeading);
+  console.log(block, block.children, block.children.children[0]);
+  // if (block.children.length === 3) {
+  //   bloc
+  // }
   [...block.children].forEach((row, index) => {
     if (index > 1) {
       const li = document.createElement('li');
