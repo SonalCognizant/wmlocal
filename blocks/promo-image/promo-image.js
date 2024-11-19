@@ -20,14 +20,14 @@ export default function decorate(block) {
   // }
   // const blockDiv = document.querySelector('.promo-image');
   console.log(block.children.length);
+  if (block.children.length === 6) {
+    console.log('promo image 4 column');
+  } else if (block.children.length === 5) {
+    console.log('promo image 3 column');
+  } else if (block.children.length === 4) {
+    console.log('promo image 2 column');
+  }
   [...block.children].forEach((row, index) => {
-    if (block.children.length === 6) {
-      console.log('promo image 4 column');
-    } else if (block.children.length === 5) {
-      console.log('promo image 3 column');
-    } else if (block.children.length === 4) {
-      console.log('promo image 2 column');
-    }
     if (index > 1) {
       const li = document.createElement('li');
       while (row.firstElementChild) li.append(row.firstElementChild);
