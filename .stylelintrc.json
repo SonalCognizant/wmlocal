@@ -12,6 +12,7 @@
     "declaration-block-no-duplicate-properties": null,
     "color-function-notation": null,
     "alpha-value-notation": null,
-    "value-keyword-case": null
+    "value-keyword-case": null,
+    "number-max-precision": null
   }
 }
