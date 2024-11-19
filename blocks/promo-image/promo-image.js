@@ -14,14 +14,11 @@ export default function decorate(block) {
   mainHeading.classList.add('promo-image-heading');
   mainHeading.textContent = `${title}`;
   imageWrapperDiv.prepend(mainHeading);
-  // console.log(block.children?.children);
-  // if (block.children.length === 3) {
-  //   bloc
-  // }
-  // const blockDiv = document.querySelector('.promo-image');
-  console.log(block.children.length);
+  const blockDiv = document.querySelector('.promo-image ul');
+  // console.log(block.children.length);
   if (block.children.length === 6) {
     console.log('promo image 4 column');
+    blockDiv.classList.add('4-column');
   } else if (block.children.length === 5) {
     console.log('promo image 3 column');
   } else if (block.children.length === 4) {
