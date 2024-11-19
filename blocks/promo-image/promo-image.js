@@ -14,13 +14,14 @@ export default function decorate(block) {
   mainHeading.classList.add('promo-image-heading');
   mainHeading.textContent = `${title}`;
   imageWrapperDiv.prepend(mainHeading);
-  console.log(block.children?.children);
+  // console.log(block.children?.children);
   // if (block.children.length === 3) {
   //   bloc
   // }
   [...block.children].forEach((row, index) => {
     if (index > 1) {
       const li = document.createElement('li');
+      console.log(row.length);
       while (row.firstElementChild) li.append(row.firstElementChild);
       [...li.children].forEach((div) => {
         if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
