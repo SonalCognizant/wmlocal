@@ -65,7 +65,181 @@
     @include for-tablet {
       padding: 52px 0px 96px 0px;
     }
-    > ul {
+    > .promo-no-image-4-column {
+      list-style: none;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      text-align: center;
+      flex-direction: row;
+      margin: 0;
+      @include for-mobile {
+        flex-direction: column;
+        padding: 0;
+        gap: 24px;
+      }
+      @include for-xlarge {
+        gap: 30px;
+        padding: 0;
+      }
+      @include for-large {
+        gap: 30px;
+        padding: 0;
+      }
+      @include for-laptop {
+        gap: 30px;
+        padding: 0;
+      }
+      @include for-tablet {
+        padding: 0;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+      > li {
+        background-color: var(--background-color);
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        @include for-xlarge {
+          width: calc((100% - 104px) / 4);
+          padding: 0 24px;
+        }
+        @include for-large {
+          width: calc((100% - 104px) / 4);
+          padding: 0 24px;
+        }
+        @include for-laptop {
+          width: calc((100% - 72px) / 3);
+          padding: 0 24px;
+        }
+        @include for-tablet {
+          flex-basis: calc((100% - 72px) / 2);
+        }
+        .cards-card-image {
+          line-height: 0;
+          width: 100%;
+          img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+          }
+        }
+
+        .cards-card-body {
+          h3 {
+            font-weight: 700;
+            font-family: $--font-roboto;
+            line-height: 24px;
+            font-size: 20px;
+            color: $--blue-675;
+            text-align: center;
+            text-decoration: underline;
+            margin: 0;
+            padding-top: 24px;
+          }
+          p {
+            font-weight: 400;
+            font-family: $--font-roboto;
+            line-height: 24px;
+            font-size: 16px;
+            color: $--gray-700;
+            margin: 0;
+            padding-top: 16px;
+            @include for-mobile {
+              padding-top: 12px;
+            }
+          }
+        }
+      }
+    }
+    > .promo-no-image-3-column {
+      list-style: none;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      text-align: center;
+      flex-direction: row;
+      margin: 0;
+      @include for-mobile {
+        flex-direction: column;
+        padding: 0;
+        gap: 24px;
+      }
+      @include for-xlarge {
+        gap: 30px;
+        padding: 0;
+      }
+      @include for-large {
+        gap: 30px;
+        padding: 0;
+      }
+      @include for-laptop {
+        gap: 30px;
+        padding: 0;
+      }
+      @include for-tablet {
+        padding: 0;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+      > li {
+        background-color: var(--background-color);
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        @include for-xlarge {
+          width: calc((100% - 104px) / 4);
+          padding: 0 24px;
+        }
+        @include for-large {
+          width: calc((100% - 104px) / 4);
+          padding: 0 24px;
+        }
+        @include for-laptop {
+          width: calc((100% - 72px) / 3);
+          padding: 0 24px;
+        }
+        @include for-tablet {
+          flex-basis: calc((100% - 72px) / 2);
+        }
+        .cards-card-image {
+          line-height: 0;
+          width: 100%;
+          img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+          }
+        }
+
+        .cards-card-body {
+          h3 {
+            font-weight: 700;
+            font-family: $--font-roboto;
+            line-height: 24px;
+            font-size: 20px;
+            color: $--blue-675;
+            text-align: center;
+            text-decoration: underline;
+            margin: 0;
+            padding-top: 24px;
+          }
+          p {
+            font-weight: 400;
+            font-family: $--font-roboto;
+            line-height: 24px;
+            font-size: 16px;
+            color: $--gray-700;
+            margin: 0;
+            padding-top: 16px;
+            @include for-mobile {
+              padding-top: 12px;
+            }
+          }
+        }
+      }
+    }
+    > .promo-no-image-2-column {
       list-style: none;
       display: flex;
       align-items: stretch;
