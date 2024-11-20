@@ -154,7 +154,7 @@
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .promo-image-container .promo-image > .promo-4-column > li {
-    flex-basis: calc((100% - 72px) / 2);
+    flex-basis: calc((100% - 30px) / 2);
   }
 }
 .promo-image-container .promo-image > .promo-4-column > li .cards-card-body h3 {
