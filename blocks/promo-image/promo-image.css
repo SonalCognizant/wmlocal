@@ -362,7 +362,6 @@
   .promo-image-container .promo-image > .promo-2-column {
     padding: 52px 0px 96px 0px;
     gap: 30px;
-    flex-wrap: wrap;
   }
 }
 .promo-image-container .promo-image > .promo-2-column > li {
@@ -388,7 +387,7 @@
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .promo-image-container .promo-image > .promo-2-column > li {
-    flex-basis: calc((100% - 72px) / 2);
+    width: 50%;
   }
 }
 .promo-image-container .promo-image > .promo-2-column > li .cards-card-body h3 {
