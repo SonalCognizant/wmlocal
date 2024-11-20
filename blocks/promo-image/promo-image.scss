@@ -234,7 +234,21 @@
             padding: 36px 36px 0 36px;
             &:last-child{
               padding-top: 16px;
-              padding-bottom: 36px;
+              @include for-xlarge {
+                padding-bottom: 60px;
+              }
+              @include for-large {
+                padding-bottom: 60px;
+              }
+              @include for-laptop {
+                padding-bottom: 64px;
+              }
+              @include for-tablet {
+                padding-bottom: 84px;
+              }
+              @include for-mobile {
+                padding-bottom: 60px;
+              }
             }
             > span{
               width: 100%;
@@ -328,7 +342,22 @@
             padding: 36px 36px 0 36px;
             &:last-child{
               padding-top: 16px;
-              padding-bottom: 36px;
+
+              @include for-xlarge {
+                padding-bottom: 36px;
+              }
+              @include for-large {
+                padding-bottom: 36px;
+              }
+              @include for-laptop {
+                padding-bottom: 36px;
+              }
+              @include for-tablet {
+                padding-bottom: 84px;
+              }
+              @include for-mobile {
+                padding-bottom: 60px;
+              }
             }
             > span{
               width: 100%;
