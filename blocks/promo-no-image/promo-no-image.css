@@ -153,19 +153,19 @@
 }
 @media (min-width: 1380px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-4-column > li {
-    width: calc((100% - 104px) / 4);
+    width: 25%;
     padding: 0 24px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-4-column > li {
-    width: calc((100% - 104px) / 4);
+    width: 25%;
     padding: 0 24px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-4-column > li {
-    width: calc((100% - 72px) / 3);
+    width: calc((100% - 72px) / 4);
     padding: 0 24px;
   }
 }
