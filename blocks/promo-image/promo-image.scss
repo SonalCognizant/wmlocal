@@ -98,6 +98,12 @@
         align-items: center;
         display: flex;
         flex-direction: column;
+        &:first-child {
+          padding-bottom: 6px;
+        }
+        &:nth-child(2) {
+          padding-bottom: 6px;
+        }
         @include for-xlarge {
           width: calc((100% - 104px) / 4);
           //   padding: 24px;
