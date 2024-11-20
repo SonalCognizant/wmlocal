@@ -295,7 +295,6 @@
       }
       @include for-tablet {
         padding: 0;
-        flex-wrap: wrap;
         gap: 30px;
         // width: 100%;
       }
@@ -317,7 +316,7 @@
           padding: 0 24px;
         }
         @include for-tablet {
-          flex-basis: calc((100% - 72px) / 2);
+          flex-basis: calc(100% / 2);
         }
         @include for-tablet {
           width: calc((100% - 60px) / 2);
