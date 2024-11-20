@@ -17,7 +17,7 @@
             padding: $--spacing-max $--spacing-xxl;
           }
           @include for-xlarge {
-            padding: $--spacing-max $--spacing-xxl;
+            padding: $--spacing-max 0;
           }
           >div {
             display: flex;
