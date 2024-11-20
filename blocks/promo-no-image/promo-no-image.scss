@@ -291,7 +291,7 @@
       @include for-laptop {
         gap: 30px;
         padding: 0;
-        // width: 66.66%;
+        width: 66.66%;
       }
       @include for-tablet {
         padding: 0;
@@ -312,7 +312,7 @@
           padding: 0 24px;
         }
         @include for-laptop {
-          width: calc((100% - 72px) / 3);
+          width: 50%;
           padding: 0 24px;
         }
         @include for-tablet {
