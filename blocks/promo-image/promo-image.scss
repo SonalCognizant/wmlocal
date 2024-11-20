@@ -198,11 +198,11 @@
         display: flex;
         flex-direction: column;
         @include for-xlarge {
-          width: calc((100% - 104px) / 4);
+          width: 25%;
           //   padding: 24px;
         }
         @include for-large {
-          width: calc((100% - 104px) / 4);
+          width: 25%;;
           //   padding: 24px;
         }
         @include for-laptop {
@@ -210,7 +210,7 @@
           //   padding: 24px;
         }
         @include for-tablet {
-          width: 66.66%;
+          width: calc(66.66% - 10px);
           margin: 0 auto;
         }
         .cards-card-body {
