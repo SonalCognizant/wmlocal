@@ -328,12 +328,16 @@
   .promo-no-image-container .promo-no-image > .promo-no-image-2-column {
     gap: 30px;
     padding: 0;
+    width: 50%;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-2-column {
     gap: 30px;
     padding: 0;
+    width: 50%;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
@@ -357,13 +361,11 @@
 }
 @media (min-width: 1380px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-2-column > li {
-    width: calc((100% - 104px) / 4);
     padding: 0 24px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-2-column > li {
-    width: calc((100% - 104px) / 4);
     padding: 0 24px;
   }
 }

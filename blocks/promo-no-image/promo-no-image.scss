@@ -266,10 +266,14 @@
       @include for-xlarge {
         gap: 30px;
         padding: 0;
+        width: 50%;
+        margin: 0 auto;
       }
       @include for-large {
         gap: 30px;
         padding: 0;
+        width: 50%;
+        margin: 0 auto;
       }
       @include for-laptop {
         gap: 30px;
@@ -286,11 +290,11 @@
         display: flex;
         flex-direction: column;
         @include for-xlarge {
-          width: calc((100% - 104px) / 4);
+          // width: calc((100% - 104px) / 4);
           padding: 0 24px;
         }
         @include for-large {
-          width: calc((100% - 104px) / 4);
+          // width: calc((100% - 104px) / 4);
           padding: 0 24px;
         }
         @include for-laptop {
