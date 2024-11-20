@@ -243,12 +243,12 @@
 }
 @media (min-width: 1380px) {
   .promo-image-container .promo-image > .promo-3-column > li {
-    width: 25%;
+    width: calc(25% + 10px);
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .promo-image-container .promo-image > .promo-3-column > li {
-    width: 25%;
+    width: calc(25% + 10px);
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
