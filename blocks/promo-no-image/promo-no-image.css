@@ -171,7 +171,12 @@
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-4-column > li {
-    flex-basis: calc((100% - 72px) / 2);
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media (max-width: 480px) {
+  .promo-no-image-container .promo-no-image > .promo-no-image-4-column > li {
+    width: 100%;
   }
 }
 .promo-no-image-container .promo-no-image > .promo-no-image-4-column > li .cards-card-image {

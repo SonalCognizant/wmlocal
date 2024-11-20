@@ -127,7 +127,11 @@
           padding: 0 24px;
         }
         @include for-tablet {
-          flex-basis: calc((100% - 72px) / 2);
+          flex-basis: calc((100% - 30px) / 2);
+        }
+        @include for-mobile {
+          width: 100%;
+          // padding: 0 24px;
         }
         .cards-card-image {
           line-height: 0;
