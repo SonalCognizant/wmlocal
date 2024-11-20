@@ -32,19 +32,27 @@
     @include for-mobile {
       padding-top: 72px;
       font-size: 28px;
+      width: 100%;
     }
     @include for-tablet {
       padding-top: 96px;
       font-size: 28px;
+      width: 100%;
     }
     @include for-xlarge {
       padding-top: 120px;
+      width: 50%;
+      margin: 0 auto;
     }
     @include for-large {
       padding-top: 120px;
+      width: 50%;
+      margin: 0 auto;
     }
     @include for-laptop {
       padding-top: 120px;
+      width: 66.66%;
+      margin: 0 auto;
     }
   }
 

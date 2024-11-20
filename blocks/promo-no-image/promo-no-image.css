@@ -41,27 +41,35 @@
   .promo-no-image-container .promo-no-image-heading {
     padding-top: 72px;
     font-size: 28px;
+    width: 100%;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .promo-no-image-container .promo-no-image-heading {
     padding-top: 96px;
     font-size: 28px;
+    width: 100%;
   }
 }
 @media (min-width: 1380px) {
   .promo-no-image-container .promo-no-image-heading {
     padding-top: 120px;
+    width: 50%;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .promo-no-image-container .promo-no-image-heading {
     padding-top: 120px;
+    width: 50%;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .promo-no-image-container .promo-no-image-heading {
     padding-top: 120px;
+    width: 66.66%;
+    margin: 0 auto;
   }
 }
 @media (max-width: 480px) {
