@@ -31,7 +31,7 @@
                 padding: $--spacing-max 0 $--spacing-max $--spacing-xxl;
               }
               @include for-xlarge {
-                padding: $--spacing-max 0 $--spacing-max $--spacing-xxl;
+                padding: $--spacing-max 0 $--spacing-max 0;
               }
               @include for-nonmobile {
                 flex: 1;
@@ -57,9 +57,6 @@
                 padding: 0 $--spacing-xl 0 0;
               }
               @include for-large {
-                padding: 0 $--spacing-xxl 0 0;
-              }
-              @include for-xlarge {
                 padding: 0 $--spacing-xxl 0 0;
               }
             }

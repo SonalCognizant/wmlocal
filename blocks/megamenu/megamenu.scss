@@ -385,6 +385,102 @@ header {
                             }
                             .header-menu-item {
                                 display: none;
+                                @include for-mobile{
+                                    position: unset;
+                                    display: block;
+                                    padding: 0;
+                                    box-shadow: none;
+                                    .header-submenu-list {
+                                        width: 100%;
+                                        .header-submenu-ul{
+                                            display: flex; 
+                                            gap: $--spacing-xs;
+                                            flex-direction: column;
+                                            width: 100%;
+                                            ul{
+                                                list-style-type: none;
+                                                margin: 0;
+                                                padding: 0 $--spacing-xxl;
+                                                text-align: left;
+                                                width: calc(100% - 104px);
+                                                background: $--blue-50;
+                                                h4{
+                                                    margin: 0;
+                                                    border-bottom: 1.5px solid $--gray-100;
+                                                    padding: $--spacing-m 0 18px 0;
+                                                }
+                                                li {
+                                                    padding: $--spacing-m 0;
+                                                    a{
+                                                        color: $--blue-675;
+                                                    }
+                                                }
+                                                p{
+                                                    font-family: $--font-roboto;
+                                                    font-size: 16px;
+                                                    font-weight: 400;
+                                                    color: $--gray-500;
+                                                    letter-spacing: 0px;
+                                                    text-align: left;
+                                                    line-height: 24px;
+                                                    margin: 0;
+                                                    padding-top: $--spacing-xxs;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .menu-submenu-content {
+                                        display: none;
+                                    }
+                                }  
+                                @include for-tablet{
+                                    position: unset;
+                                    display: block;
+                                    padding: 0;
+                                    box-shadow: none;
+                                    .header-submenu-list {
+                                        width: 100%;
+                                        .header-submenu-ul{
+                                            display: flex; 
+                                            gap: $--spacing-xs;
+                                            flex-direction: column;
+                                            width: 100%;
+                                            ul{
+                                                list-style-type: none;
+                                                margin: 0;
+                                                padding: 0 $--spacing-xxl;
+                                                text-align: left;
+                                                width: calc(100% - 104px);
+                                                background: $--blue-50;
+                                                h4{
+                                                    margin: 0;
+                                                    border-bottom: 1.5px solid $--gray-100;
+                                                    padding: $--spacing-m 0 18px 0;
+                                                }
+                                                li {
+                                                    padding: $--spacing-m 0;
+                                                    a{
+                                                        color: $--blue-675;
+                                                    }
+                                                }
+                                                p{
+                                                    font-family: $--font-roboto;
+                                                    font-size: 16px;
+                                                    font-weight: 400;
+                                                    color: $--gray-500;
+                                                    letter-spacing: 0px;
+                                                    text-align: left;
+                                                    line-height: 24px;
+                                                    margin: 0;
+                                                    padding-top: $--spacing-xxs;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .menu-submenu-content {
+                                        display: none;
+                                    }
+                                } 
                             }
                             @include for-laptop{
                                 .header-menu-icon{
@@ -450,207 +546,296 @@ header {
                                         }
                                     }
                                 }
-                                .header-menu-item {
-                                    position: absolute;
-                                    display: flex;
-                                    flex-direction: row;
-                                    background-color: $--white;
-                                    padding: 0 $--spacing-xxl;
-                                    top: 77px;
-                                    gap: 30px;
-                                    width: 100%;
-                                    left: -51px;
-                                    box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.2);
-                                    @include for-mobile {
-                                        position: unset;
-                                        display: block;
-                                        padding: 0;
-                                        box-shadow: none;
-                                    }
-                                    @include for-tablet {
-                                        position: unset;
-                                        display: block;
-                                        padding: 0;
-                                        box-shadow: none;
-                                    }
-                                    .header-submenu-list {
-                                        width: 58%;
-                                        @include for-mobile {
-                                            width: 100%;
-                                        }
-                                        @include for-tablet {
-                                            width: 100%;
-                                        }
-                                        .header-submenu-ul{
-                                            display: flex; 
-                                            gap: 30px;
-                                            @include for-mobile {
-                                                gap: $--spacing-xs;
-                                                flex-direction: column;
-                                                width: 100%;
-                                            }
-                                            @include for-tablet {
-                                                gap: $--spacing-xs;
-                                                flex-direction: column;
-                                                width: 100%;
-                                            }
-                                            ul{
-                                                list-style-type: none;
-                                                margin: 0;
-                                                padding: $--spacing-xl 0 $--spacing-xxl 0;
-                                                text-align: left;
-                                                width: calc((100% - 24px) / 3);
-                                                @include for-mobile {
-                                                    padding: 0;
-                                                    width: calc(100% - 104px);
-                                                    padding: 0 $--spacing-xxl;
-                                                    background: $--blue-50;
-                                                }
-                                                @include for-tablet {
-                                                    padding: 0;
-                                                    width: calc(100% - 104px);
-                                                    padding: 0 $--spacing-xxl;
-                                                    background: $--blue-50;
-                                                }
-                                                h4{
+                                @include for-laptop{
+                                    .header-menu-item {
+                                        position: absolute;
+                                        display: flex;
+                                        flex-direction: row;
+                                        background-color: $--white;
+                                        padding: 0 $--spacing-xxl;
+                                        top: 77px;
+                                        gap: 30px;
+                                        width: 100%;
+                                        left: -51px;
+                                        box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.2);
+                                        .header-submenu-list {
+                                            width: 58%;
+                                            .header-submenu-ul{
+                                                display: flex; 
+                                                gap: 30px;
+                                                ul{
+                                                    list-style-type: none;
                                                     margin: 0;
-                                                    border-bottom: 1.5px solid $--gray-100;
-                                                    padding-bottom: 24px;
-                                                    @include for-mobile {
-                                                        padding: $--spacing-m 0 18px 0;
+                                                    padding: $--spacing-xl 0 $--spacing-xxl 0;
+                                                    text-align: left;
+                                                    width: calc((100% - 24px) / 3);
+                                                    h4{
+                                                        margin: 0;
+                                                        border-bottom: 1.5px solid $--gray-100;
+                                                        padding-bottom: 24px;
                                                     }
-                                                    @include for-tablet {
-                                                        padding: $--spacing-m 0 18px 0;
+                                                    li {
+                                                        padding-top: 24px;
+                                                        a{
+                                                            border: none;
+                                                            text-decoration: underline;
+                                                            padding: 0;
+                                                            color: $--blue-675;
+                                                        }
+                                                        p{
+                                                            font-family: $--font-roboto;
+                                                            font-size: 16px;
+                                                            font-weight: 400;
+                                                            color: $--gray-500;
+                                                            letter-spacing: 0px;
+                                                            text-align: left;
+                                                            line-height: 24px;
+                                                            margin: 0;
+                                                            padding-top: $--spacing-xxs;
+                                                        }
                                                     }
                                                 }
-                                                li {
-                                                    padding-top: 24px;
-                                                    @include for-mobile {
-                                                        padding: $--spacing-m 0;
-                                                    }
-                                                    @include for-tablet {
-                                                        padding: $--spacing-m 0;
-                                                    }
-                                                    a{
-                                                        border: none;
-                                                        text-decoration: underline;
-                                                        padding: 0;
-                                                        color: $--blue-675;
-                                                    }
-                                                    p{
-                                                        font-family: $--font-roboto;
-                                                        font-size: 16px;
-                                                        font-weight: 400;
-                                                        color: $--gray-500;
-                                                        letter-spacing: 0px;
-                                                        text-align: left;
-                                                        line-height: 24px;
+                                            }
+                                        }
+                                        .menu-submenu-content {
+                                            width: 42%;
+                                            background: $--blue-50;
+                                            padding: $--spacing-xl;
+                                            .image-text-container{
+                                                .default-content-wrapper{
+                                                    h4{
                                                         margin: 0;
-                                                        padding-top: $--spacing-xxs;
+                                                        border-bottom: 1.5px solid $--blue-100;
+                                                        padding-bottom: $--spacing-l;
+                                                    }
+                                                }
+                                                .image-text-wrapper{
+                                                    .image-text {
+                                                        &.block {
+                                                          &.columns-2-cols {
+                                                            padding: $--spacing-l 0 $--spacing-l 0;
+                                                            >div {
+                                                                gap: $--spacing-m;
+                                                                align-items: start;
+                                                            }
+                                                            >div{
+                                                                .columns-img-col{
+                                                                    display: contents;
+                                                                }
+                                                                .button-container{
+                                                                    a{
+                                                                        border: none;
+                                                                        padding-bottom: $--spacing-xs;
+                                                                        font-size: 16px;
+                                                                    }
+                                                                }
+                                                                p{
+                                                                    font-size: 16px;
+                                                                    margin: 0;
+                                                                }
+                                                            }
+                                                          }
+                                                        }
                                                     }
                                                 }
                                             }
                                         }
                                     }
-                                    .menu-submenu-content {
-                                        width: 42%;
-                                        background: $--blue-50;
-                                        @include for-mobile {
-                                            display: none;
+                                }
+                                @include for-large{
+                                    .header-menu-item {
+                                        position: absolute;
+                                        display: flex;
+                                        flex-direction: row;
+                                        background-color: $--white;
+                                        padding: 0 $--spacing-xxl;
+                                        top: 77px;
+                                        gap: 30px;
+                                        width: 100%;
+                                        left: -51px;
+                                        box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.2);
+                                        .header-submenu-list {
+                                            width: 58%;
+                                            .header-submenu-ul{
+                                                display: flex; 
+                                                gap: 30px;
+                                                ul{
+                                                    list-style-type: none;
+                                                    margin: 0;
+                                                    padding: $--spacing-xl 0 $--spacing-xxl 0;
+                                                    text-align: left;
+                                                    width: calc((100% - 24px) / 3);
+                                                    h4{
+                                                        margin: 0;
+                                                        border-bottom: 1.5px solid $--gray-100;
+                                                        padding-bottom: 24px;
+                                                    }
+                                                    li {
+                                                        padding-top: 24px;
+                                                        a{
+                                                            border: none;
+                                                            text-decoration: underline;
+                                                            padding: 0;
+                                                            color: $--blue-675;
+                                                        }
+                                                        p{
+                                                            font-family: $--font-roboto;
+                                                            font-size: 16px;
+                                                            font-weight: 400;
+                                                            color: $--gray-500;
+                                                            letter-spacing: 0px;
+                                                            text-align: left;
+                                                            line-height: 24px;
+                                                            margin: 0;
+                                                            padding-top: $--spacing-xxs;
+                                                        }
+                                                    }
+                                                }
+                                            }
                                         }
-                                        @include for-tablet {
-                                            display: none;
+                                        .menu-submenu-content {
+                                            width: 42%;
+                                            background: $--blue-50;
+                                            padding: $--spacing-xl;
+                                            .image-text-container{
+                                                .default-content-wrapper{
+                                                    h4{
+                                                        margin: 0;
+                                                        border-bottom: 1.5px solid $--blue-100;
+                                                        padding-bottom: $--spacing-l;
+                                                    }
+                                                }
+                                                .image-text-wrapper{
+                                                    .image-text {
+                                                        &.block {
+                                                          &.columns-2-cols {
+                                                            padding: $--spacing-l 0 $--spacing-l 0;
+                                                            >div {
+                                                                gap: $--spacing-m;
+                                                                align-items: start;
+                                                            }
+                                                            >div{
+                                                                .columns-img-col{
+                                                                    display: contents;
+                                                                }
+                                                                .button-container{
+                                                                    a{
+                                                                        border: none;
+                                                                        padding-bottom: $--spacing-xs;
+                                                                        font-size: 16px;
+                                                                    }
+                                                                }
+                                                                p{
+                                                                    font-size: 16px;
+                                                                    margin: 0;
+                                                                }
+                                                            }
+                                                          }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                @include for-xlarge{
+                                    .header-menu-item {
+                                        position: absolute;
+                                        display: flex;
+                                        flex-direction: row;
+                                        background-color: $--white;
+                                        padding: 0 $--spacing-xxl;
+                                        top: 77px;
+                                        gap: 30px;
+                                        width: 100%;
+                                        left: -51px;
+                                        box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.2);
+                                        .header-submenu-list {
+                                            width: 58%;
+                                            .header-submenu-ul{
+                                                display: flex; 
+                                                gap: 30px;
+                                                ul{
+                                                    list-style-type: none;
+                                                    margin: 0;
+                                                    padding: $--spacing-xl 0 $--spacing-xxl 0;
+                                                    text-align: left;
+                                                    width: calc((100% - 24px) / 3);
+                                                    h4{
+                                                        margin: 0;
+                                                        border-bottom: 1.5px solid $--gray-100;
+                                                        padding-bottom: 24px;
+                                                    }
+                                                    li {
+                                                        padding-top: 24px;
+                                                        a{
+                                                            border: none;
+                                                            text-decoration: underline;
+                                                            padding: 0;
+                                                            color: $--blue-675;
+                                                        }
+                                                        p{
+                                                            font-family: $--font-roboto;
+                                                            font-size: 16px;
+                                                            font-weight: 400;
+                                                            color: $--gray-500;
+                                                            letter-spacing: 0px;
+                                                            text-align: left;
+                                                            line-height: 24px;
+                                                            margin: 0;
+                                                            padding-top: $--spacing-xxs;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .menu-submenu-content {
+                                            width: 42%;
+                                            background: $--blue-50;
+                                            padding: $--spacing-xl;
+                                            .image-text-container{
+                                                .default-content-wrapper{
+                                                    h4{
+                                                        margin: 0;
+                                                        border-bottom: 1.5px solid $--blue-100;
+                                                        padding-bottom: $--spacing-l;
+                                                    }
+                                                }
+                                                .image-text-wrapper{
+                                                    .image-text {
+                                                        &.block {
+                                                          &.columns-2-cols {
+                                                            padding: $--spacing-l 0 $--spacing-l 0;
+                                                            >div {
+                                                                gap: $--spacing-m;
+                                                                align-items: start;
+                                                            }
+                                                            >div{
+                                                                .columns-img-col{
+                                                                    display: contents;
+                                                                }
+                                                                .button-container{
+                                                                    a{
+                                                                        border: none;
+                                                                        padding-bottom: $--spacing-xs;
+                                                                        font-size: 16px;
+                                                                    }
+                                                                }
+                                                                p{
+                                                                    font-size: 16px;
+                                                                    margin: 0;
+                                                                }
+                                                            }
+                                                          }
+                                                        }
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
                             }
                         }
-                    }
-                    .header-menu-item {
-                        @include for-mobile{
-                            position: unset;
-                            display: block;
-                            padding: 0;
-                            box-shadow: none;
-                            .header-submenu-list {
-                                width: 100%;
-                                .header-submenu-ul{
-                                    display: flex; 
-                                    gap: $--spacing-xs;
-                                    flex-direction: column;
-                                    width: 100%;
-                                    ul{
-                                        list-style-type: none;
-                                        margin: 0;
-                                        padding: 0 $--spacing-xxl;
-                                        text-align: left;
-                                        width: calc(100% - 104px);
-                                        background: $--blue-50;
-                                        h4{
-                                            margin: 0;
-                                            border-bottom: 1.5px solid $--gray-100;
-                                            padding: $--spacing-m 0 18px 0;
-                                        }
-                                        li {
-                                            padding: $--spacing-m 0;
-                                        }
-                                        p{
-                                            font-family: $--font-roboto;
-                                            font-size: 16px;
-                                            font-weight: 400;
-                                            color: $--gray-500;
-                                            letter-spacing: 0px;
-                                            text-align: left;
-                                            line-height: 24px;
-                                            margin: 0;
-                                            padding-top: $--spacing-xxs;
-                                        }
-                                    }
-                                }
-                            }
-                        }  
-                        @include for-tablet{
-                            position: unset;
-                            display: block;
-                            padding: 0;
-                            box-shadow: none;
-                            .header-submenu-list {
-                                width: 100%;
-                                .header-submenu-ul{
-                                    display: flex; 
-                                    gap: $--spacing-xs;
-                                    flex-direction: column;
-                                    width: 100%;
-                                    ul{
-                                        list-style-type: none;
-                                        margin: 0;
-                                        padding: 0 $--spacing-xxl;
-                                        text-align: left;
-                                        width: calc(100% - 104px);
-                                        background: $--blue-50;
-                                        h4{
-                                            margin: 0;
-                                            border-bottom: 1.5px solid $--gray-100;
-                                            padding: $--spacing-m 0 18px 0;
-                                        }
-                                        li {
-                                            padding: $--spacing-m 0;
-                                        }
-                                        p{
-                                            font-family: $--font-roboto;
-                                            font-size: 16px;
-                                            font-weight: 400;
-                                            color: $--gray-500;
-                                            letter-spacing: 0px;
-                                            text-align: left;
-                                            line-height: 24px;
-                                            margin: 0;
-                                            padding-top: $--spacing-xxs;
-                                        }
-                                    }
-                                }
-                            }
-                        } 
                     }
                     .section-block{
                         background: $--blue-550;
