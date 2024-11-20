@@ -220,12 +220,16 @@
   .promo-no-image-container .promo-no-image > .promo-no-image-3-column {
     gap: 30px;
     padding: 0;
+    width: 66.6666666667%;
+    margin: auto;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-3-column {
     gap: 30px;
     padding: 0;
+    width: 66.6666666667%;
+    margin: auto;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
@@ -249,13 +253,13 @@
 }
 @media (min-width: 1380px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-3-column > li {
-    width: calc((100% - 104px) / 5 + 48px);
+    width: calc((100% - 60px) / 3);
     padding: 0 24px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-3-column > li {
-    width: calc((100% - 104px) / 5 + 48px);
+    width: calc((100% - 60px) / 3);
     padding: 0 24px;
   }
 }
