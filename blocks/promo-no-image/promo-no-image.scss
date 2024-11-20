@@ -183,13 +183,13 @@
         gap: 30px;
         padding: 0;
         width: calc((100% / 12) * 8);
-        margin: auto;
+        margin: 0 auto;
       }
       @include for-large {
         gap: 30px;
         padding: 0;
         width: calc((100% / 12) * 8);
-        margin: auto;
+        margin: 0 auto;
       }
       @include for-laptop {
         gap: 30px;
@@ -270,6 +270,7 @@
         flex-direction: column;
         padding: 0;
         gap: 52px;
+        width: 100%;
       }
       @include for-xlarge {
         gap: 30px;
@@ -286,11 +287,13 @@
       @include for-laptop {
         gap: 30px;
         padding: 0;
+        width: 66.66%;
       }
       @include for-tablet {
         padding: 0;
         flex-wrap: wrap;
         gap: 30px;
+        width: 100%;
       }
       > li {
         background-color: var(--background-color);
@@ -311,6 +314,9 @@
         }
         @include for-tablet {
           flex-basis: calc((100% - 72px) / 2);
+        }
+        @include for-tablet {
+          width: calc((100% - 60px) / 2);
         }
         .cards-card-image {
           line-height: 0;
