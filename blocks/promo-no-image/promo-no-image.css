@@ -365,13 +365,13 @@
 }
 @media (min-width: 1380px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-2-column > li {
-    width: calc(25% - 48px);
+    width: calc(25% - 69px);
     padding: 0 24px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-2-column > li {
-    width: calc(25% - 48px);
+    width: calc(25% - 69px);
     padding: 0 24px;
   }
 }
