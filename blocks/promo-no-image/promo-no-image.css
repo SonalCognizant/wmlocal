@@ -41,27 +41,35 @@
   .promo-no-image-container .promo-no-image-heading {
     padding-top: 72px;
     font-size: 28px;
+    width: 100%;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .promo-no-image-container .promo-no-image-heading {
     padding-top: 96px;
     font-size: 28px;
+    width: 100%;
   }
 }
 @media (min-width: 1380px) {
   .promo-no-image-container .promo-no-image-heading {
     padding-top: 120px;
+    width: 50%;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .promo-no-image-container .promo-no-image-heading {
     padding-top: 120px;
+    width: 50%;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .promo-no-image-container .promo-no-image-heading {
     padding-top: 120px;
+    width: 66.66%;
+    margin: 0 auto;
   }
 }
 @media (max-width: 480px) {
@@ -145,25 +153,30 @@
 }
 @media (min-width: 1380px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-4-column > li {
-    width: calc((100% - 104px) / 4);
+    width: 25%;
     padding: 0 24px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-4-column > li {
-    width: calc((100% - 104px) / 4);
+    width: 25%;
     padding: 0 24px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-4-column > li {
-    width: calc((100% - 72px) / 3);
+    width: calc((100% - 72px) / 4);
     padding: 0 24px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-4-column > li {
-    flex-basis: calc((100% - 72px) / 2);
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media (max-width: 480px) {
+  .promo-no-image-container .promo-no-image > .promo-no-image-4-column > li {
+    width: 100%;
   }
 }
 .promo-no-image-container .promo-no-image > .promo-no-image-4-column > li .cards-card-image {
@@ -220,12 +233,16 @@
   .promo-no-image-container .promo-no-image > .promo-no-image-3-column {
     gap: 30px;
     padding: 0;
+    width: 66.6666666667%;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-3-column {
     gap: 30px;
     padding: 0;
+    width: 66.6666666667%;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
@@ -249,13 +266,13 @@
 }
 @media (min-width: 1380px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-3-column > li {
-    width: calc((100% - 104px) / 5 + 48px);
+    width: calc((100% - 60px) / 3);
     padding: 0 24px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-3-column > li {
-    width: calc((100% - 104px) / 5 + 48px);
+    width: calc((100% - 60px) / 3);
     padding: 0 24px;
   }
 }
@@ -336,12 +353,12 @@
   .promo-no-image-container .promo-no-image > .promo-no-image-2-column {
     gap: 30px;
     padding: 0;
+    width: 66.66%;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-2-column {
     padding: 0;
-    flex-wrap: wrap;
     gap: 30px;
   }
 }
@@ -353,25 +370,30 @@
 }
 @media (min-width: 1380px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-2-column > li {
-    width: calc((100% - 104px) / 4);
+    width: calc(25% - 69px);
     padding: 0 24px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-2-column > li {
-    width: calc((100% - 104px) / 4);
+    width: calc(25% - 69px);
     padding: 0 24px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-2-column > li {
-    width: calc((100% - 72px) / 3);
+    width: 50%;
     padding: 0 24px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-2-column > li {
-    flex-basis: calc((100% - 72px) / 2);
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .promo-no-image-container .promo-no-image > .promo-no-image-2-column > li {
+    width: calc((100% - 60px) / 2);
   }
 }
 .promo-no-image-container .promo-no-image > .promo-no-image-2-column > li .cards-card-image {

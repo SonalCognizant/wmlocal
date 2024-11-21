@@ -49,27 +49,35 @@
   .promo-image-container .promo-image-heading {
     padding-top: 72px;
     font-size: 28px;
+    width: 100%;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .promo-image-container .promo-image-heading {
     padding-top: 96px;
     font-size: 28px;
+    width: 100%;
   }
 }
 @media (min-width: 1380px) {
   .promo-image-container .promo-image-heading {
     padding-top: 120px;
+    width: 50%;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .promo-image-container .promo-image-heading {
     padding-top: 120px;
+    width: 50%;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .promo-image-container .promo-image-heading {
     padding-top: 120px;
+    width: 66.66%;
+    margin: 0 auto;
   }
 }
 .promo-image-container .promo-image {
@@ -123,6 +131,12 @@
   display: flex;
   flex-direction: column;
 }
+.promo-image-container .promo-image > .promo-4-column > li:first-child {
+  padding-bottom: 6px;
+}
+.promo-image-container .promo-image > .promo-4-column > li:nth-child(2) {
+  padding-bottom: 6px;
+}
 @media (min-width: 1380px) {
   .promo-image-container .promo-image > .promo-4-column > li {
     width: calc((100% - 104px) / 4);
@@ -140,7 +154,7 @@
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .promo-image-container .promo-image > .promo-4-column > li {
-    flex-basis: calc((100% - 72px) / 2);
+    flex-basis: calc((100% - 30px) / 2);
   }
 }
 .promo-image-container .promo-image > .promo-4-column > li .cards-card-body h3 {
@@ -229,12 +243,12 @@
 }
 @media (min-width: 1380px) {
   .promo-image-container .promo-image > .promo-3-column > li {
-    width: calc((100% - 104px) / 4);
+    width: calc(25% + 10px);
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .promo-image-container .promo-image > .promo-3-column > li {
-    width: calc((100% - 104px) / 4);
+    width: calc(25% + 10px);
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
@@ -244,7 +258,7 @@
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .promo-image-container .promo-image > .promo-3-column > li {
-    width: 66.66%;
+    width: calc(66.66% - 10px);
     margin: 0 auto;
   }
 }
@@ -274,7 +288,31 @@
 }
 .promo-image-container .promo-image > .promo-3-column > li .cards-card-body p:last-child {
   padding-top: 16px;
-  padding-bottom: 36px;
+}
+@media (min-width: 1380px) {
+  .promo-image-container .promo-image > .promo-3-column > li .cards-card-body p:last-child {
+    padding-bottom: 60px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .promo-image-container .promo-image > .promo-3-column > li .cards-card-body p:last-child {
+    padding-bottom: 60px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .promo-image-container .promo-image > .promo-3-column > li .cards-card-body p:last-child {
+    padding-bottom: 64px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .promo-image-container .promo-image > .promo-3-column > li .cards-card-body p:last-child {
+    padding-bottom: 84px;
+  }
+}
+@media (max-width: 480px) {
+  .promo-image-container .promo-image > .promo-3-column > li .cards-card-body p:last-child {
+    padding-bottom: 60px;
+  }
 }
 .promo-image-container .promo-image > .promo-3-column > li .cards-card-body p > span {
   width: 100%;
@@ -324,7 +362,6 @@
   .promo-image-container .promo-image > .promo-2-column {
     padding: 52px 0px 96px 0px;
     gap: 30px;
-    flex-wrap: wrap;
   }
 }
 .promo-image-container .promo-image > .promo-2-column > li {
@@ -350,7 +387,7 @@
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .promo-image-container .promo-image > .promo-2-column > li {
-    flex-basis: calc((100% - 72px) / 2);
+    width: 50%;
   }
 }
 .promo-image-container .promo-image > .promo-2-column > li .cards-card-body h3 {
@@ -379,7 +416,31 @@
 }
 .promo-image-container .promo-image > .promo-2-column > li .cards-card-body p:last-child {
   padding-top: 16px;
-  padding-bottom: 36px;
+}
+@media (min-width: 1380px) {
+  .promo-image-container .promo-image > .promo-2-column > li .cards-card-body p:last-child {
+    padding-bottom: 36px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .promo-image-container .promo-image > .promo-2-column > li .cards-card-body p:last-child {
+    padding-bottom: 36px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .promo-image-container .promo-image > .promo-2-column > li .cards-card-body p:last-child {
+    padding-bottom: 36px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .promo-image-container .promo-image > .promo-2-column > li .cards-card-body p:last-child {
+    padding-bottom: 84px;
+  }
+}
+@media (max-width: 480px) {
+  .promo-image-container .promo-image > .promo-2-column > li .cards-card-body p:last-child {
+    padding-bottom: 60px;
+  }
 }
 .promo-image-container .promo-image > .promo-2-column > li .cards-card-body p > span {
   width: 100%;

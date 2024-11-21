@@ -36,19 +36,27 @@
     @include for-mobile {
       padding-top: 72px;
       font-size: 28px;
+      width: 100%;
     }
     @include for-tablet {
       padding-top: 96px;
       font-size: 28px;
+      width: 100%;
     }
     @include for-xlarge {
       padding-top: 120px;
+      width: 50%;
+      margin: 0 auto;
     }
     @include for-large {
       padding-top: 120px;
+      width: 50%;
+      margin: 0 auto;
     }
     @include for-laptop {
       padding-top: 120px;
+      width: 66.66%;
+      margin: 0 auto;
     }
   }
 
@@ -90,6 +98,12 @@
         align-items: center;
         display: flex;
         flex-direction: column;
+        &:first-child {
+          padding-bottom: 6px;
+        }
+        &:nth-child(2) {
+          padding-bottom: 6px;
+        }
         @include for-xlarge {
           width: calc((100% - 104px) / 4);
           //   padding: 24px;
@@ -103,7 +117,7 @@
           //   padding: 24px;
         }
         @include for-tablet {
-          flex-basis: calc((100% - 72px) / 2);
+          flex-basis: calc((100% - 30px) / 2);
         }
         .cards-card-body {
           // padding: 0 36px 37px 36px;
@@ -184,11 +198,11 @@
         display: flex;
         flex-direction: column;
         @include for-xlarge {
-          width: calc((100% - 104px) / 4);
+          width: calc(25% + 10px);
           //   padding: 24px;
         }
         @include for-large {
-          width: calc((100% - 104px) / 4);
+          width: calc(25% + 10px);
           //   padding: 24px;
         }
         @include for-laptop {
@@ -196,7 +210,7 @@
           //   padding: 24px;
         }
         @include for-tablet {
-          width: 66.66%;
+          width: calc(66.66% - 10px);
           margin: 0 auto;
         }
         .cards-card-body {
@@ -226,7 +240,21 @@
             padding: 36px 36px 0 36px;
             &:last-child{
               padding-top: 16px;
-              padding-bottom: 36px;
+              @include for-xlarge {
+                padding-bottom: 60px;
+              }
+              @include for-large {
+                padding-bottom: 60px;
+              }
+              @include for-laptop {
+                padding-bottom: 64px;
+              }
+              @include for-tablet {
+                padding-bottom: 84px;
+              }
+              @include for-mobile {
+                padding-bottom: 60px;
+              }
             }
             > span{
               width: 100%;
@@ -270,7 +298,7 @@
       @include for-tablet {
         padding: 52px 0px 96px 0px;
         gap: 30px;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
       }
       
       > li {
@@ -291,7 +319,7 @@
           //   padding: 24px;
         }
         @include for-tablet {
-          flex-basis: calc((100% - 72px) / 2);
+          width: 50%;
         }
         .cards-card-body {
           // padding: 0 36px 37px 36px;
@@ -320,7 +348,22 @@
             padding: 36px 36px 0 36px;
             &:last-child{
               padding-top: 16px;
-              padding-bottom: 36px;
+
+              @include for-xlarge {
+                padding-bottom: 36px;
+              }
+              @include for-large {
+                padding-bottom: 36px;
+              }
+              @include for-laptop {
+                padding-bottom: 36px;
+              }
+              @include for-tablet {
+                padding-bottom: 84px;
+              }
+              @include for-mobile {
+                padding-bottom: 60px;
+              }
             }
             > span{
               width: 100%;
