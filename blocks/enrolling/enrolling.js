@@ -18,6 +18,7 @@ export default function decorate(block) {
     if (index > 0) {
       const li = document.createElement('li');
       console.log(row.firstElementChild, 'hi');
+      console.log(row);
       while (row.firstElementChild) {
         let count = 0;
         li.append(row.firstElementChild);
