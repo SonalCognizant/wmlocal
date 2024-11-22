@@ -14,11 +14,10 @@ export default function decorate(block) {
   mainHeading.classList.add('enrolling-heading');
   mainHeading.textContent = `${title}`;
   imageWrapperDiv.prepend(mainHeading);
-  // const promoClass = `promo-${block.children.length - 2}-column`;
-  // ul.classList.add(promoClass);
   [...block.children].forEach((row, index) => {
     if (index > 1) {
       const li = document.createElement('li');
+      console.log(row.firstElementChild, 'hi');
       while (row.firstElementChild) li.append(row.firstElementChild);
       [...li.children].forEach((div) => {
         if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
