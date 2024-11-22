@@ -90,10 +90,13 @@
   margin: 0;
   list-style: none;
 }
-.enrolling-container .enrolling-wrapper .enrolling > ul > li {
+.enrolling-container .enrolling-wrapper .enrolling > ul > li > .cards-card-body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-right: 2px solid lightgray;
+  padding: 72px;
+  flex-direction: column;
 }
 .enrolling-container .enrolling-wrapper .enrolling > ul > li > .cards-card-body > p {
   margin: 0;

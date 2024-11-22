@@ -70,17 +70,20 @@
         margin: 0;
         list-style: none;
         > li {
-          display: flex;
-          align-items: center;
-          justify-content: center;
           > .cards-card-body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 2px solid lightgray;
+            padding: 72px;
+            flex-direction: column;
             > p {
               margin: 0;
               > span {
                 height: 100%;
                 width: 100%;
                 text-align: center;
-                > img{
+                > img {
                   height: 64px;
                   width: 64px;
                 }
