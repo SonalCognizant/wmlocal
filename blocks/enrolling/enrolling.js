@@ -8,7 +8,7 @@ export default function decorate(block) {
   imageWrapperDiv.prepend(mainHeading);
   [...block.children].forEach((row, index) => {
     const li = document.createElement('li');
-    li.classList.add(`${index}-column`);
+    li.classList.add(`enrolling-${index}-column`);
     console.log(index, 'count');
     if (index > 0) {
       while (row.firstElementChild) {
