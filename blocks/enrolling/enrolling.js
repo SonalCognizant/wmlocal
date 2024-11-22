@@ -23,15 +23,14 @@ export default function decorate(block) {
         li.append(row.firstElementChild);
         li.classList.add(`${count}-column`);
         count += 1;
+        console.log(count, 'count');
         [...li.children].forEach((div) => {
-          if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
-          else div.className = 'cards-card-body';
+          div.className = 'cards-card-body';
         });
         ul.append(li);
       }
     }
   });
-  ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
   block.textContent = '';
   block.append(ul);
 }
