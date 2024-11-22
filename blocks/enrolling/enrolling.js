@@ -15,7 +15,7 @@ export default function decorate(block) {
   mainHeading.textContent = `${title}`;
   imageWrapperDiv.prepend(mainHeading);
   [...block.children].forEach((row, index) => {
-    if (index > 1) {
+    if (index > 0) {
       const li = document.createElement('li');
       console.log(row.firstElementChild, 'hi');
       while (row.firstElementChild) li.append(row.firstElementChild);
