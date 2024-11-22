@@ -22,11 +22,11 @@ export default function decorate(block) {
         let count = 0;
         li.append(row.firstElementChild);
         li.classList.add(`${count}-column`);
+        count += 1;
         [...li.children].forEach((div) => {
           if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
           else div.className = 'cards-card-body';
         });
-        count += 1;
         ul.append(li);
       }
     }
