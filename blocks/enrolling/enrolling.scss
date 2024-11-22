@@ -24,15 +24,16 @@
       padding: 0 36px;
     }
     .enrolling-heading {
-      text-align: center;
       color: $--blue-675;
-      text-align: center;
-      font-weight: 700;
-      font-style: 700;
+      font-family: $--font-museo;
+      padding: 120px 0 52px 0;
+      width: 100%;
+      opacity: 1;
       font-size: 32px;
+      font-weight: 600;
+      text-align: center;
       line-height: 38px;
       margin: 0;
-      font-family: $--font-museo;
       @include for-mobile {
         padding-top: 72px;
         font-size: 28px;
@@ -88,6 +89,18 @@
                   width: 64px;
                 }
               }
+            }
+            > h3 {
+              margin: 0;
+              padding: 24px 0px 24px 0;
+              opacity: 1;
+              color: rgba(75, 76, 77, 1);
+              font-family: "Roboto-Bold";
+              font-size: 24px;
+              font-weight: 700;
+              font-style: Bold;
+              letter-spacing: 0px;
+              text-align: center;
             }
           }
         }
