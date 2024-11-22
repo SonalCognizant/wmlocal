@@ -10,13 +10,11 @@
 }
 @media (max-width: 480px) {
   .enrolling-container .enrolling-wrapper {
-    background-image: linear-gradient(180deg, rgb(75, 76, 77) 0%, rgba(93, 93, 93, 0.65) 29%, rgba(115, 115, 115, 0.2) 100%) !important;
     padding: 0 16px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .enrolling-container .enrolling-wrapper {
-    background-image: linear-gradient(180deg, rgb(75, 76, 77) 0%, rgba(93, 93, 93, 0.65) 29%, rgba(115, 115, 115, 0.2) 100%) !important;
     padding: 0 36px;
   }
 }
