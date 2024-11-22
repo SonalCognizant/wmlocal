@@ -25,7 +25,41 @@
           display: flex;
           margin: 0;
           list-style: none;
-          > li {
+          > .enrolling-1-column {
+            > .cards-card-body {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-right: 2px solid lightgray;
+              padding: 72px;
+              flex-direction: column;
+              > p {
+                margin: 0;
+                > span {
+                  height: 100%;
+                  width: 100%;
+                  text-align: center;
+                  > img {
+                    height: 64px;
+                    width: 64px;
+                  }
+                }
+              }
+              > h3 {
+                margin: 0;
+                padding: 24px 0px 24px 0;
+                opacity: 1;
+                color: rgba(75, 76, 77, 1);
+                font-family: "Roboto-Bold";
+                font-size: 24px;
+                font-weight: 700;
+                font-style: Bold;
+                letter-spacing: 0px;
+                text-align: center;
+              }
+            }
+          }
+          > .enrolling-2-column {
             > .cards-card-body {
               display: flex;
               align-items: center;
