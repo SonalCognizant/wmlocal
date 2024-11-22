@@ -31,17 +31,20 @@
     font-weight: 700;
     font-style: 700;
     font-size: 32px;
+    line-height: 38px;
     margin: 0;
     font-family: $--font-museo;
     @include for-mobile {
       padding-top: 72px;
       font-size: 28px;
       width: 100%;
+      line-height: 34px;
     }
     @include for-tablet {
       padding-top: 96px;
       font-size: 28px;
       width: 100%;
+      line-height: 34px;
     }
     @include for-xlarge {
       padding-top: 120px;
