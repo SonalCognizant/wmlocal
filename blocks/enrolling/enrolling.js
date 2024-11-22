@@ -18,12 +18,17 @@ export default function decorate(block) {
     if (index > 0) {
       const li = document.createElement('li');
       console.log(row.firstElementChild, 'hi');
-      while (row.firstElementChild) li.append(row.firstElementChild);
-      [...li.children].forEach((div) => {
-        if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
-        else div.className = 'cards-card-body';
-      });
-      ul.append(li);
+      while (row.firstElementChild) {
+        let count = 0;
+        li.append(row.firstElementChild);
+        li.classList.add(`${count}-column`);
+        [...li.children].forEach((div) => {
+          if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
+          else div.className = 'cards-card-body';
+        });
+        count += 1;
+        ul.append(li);
+      }
     }
   });
   ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
