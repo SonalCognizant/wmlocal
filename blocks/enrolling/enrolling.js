@@ -7,12 +7,10 @@ export default function decorate(block) {
   mainHeading.textContent = `${title}`;
   imageWrapperDiv.prepend(mainHeading);
   [...block.children].forEach((row, index) => {
+    const li = document.createElement('li');
+    li.classList.add(`${index}-column`);
+    console.log(index, 'count');
     if (index > 0) {
-      const li = document.createElement('li');
-      let count = 0;
-      li.classList.add(`${count}-column`);
-      count += 1;
-      console.log(count, 'count');
       while (row.firstElementChild) {
         li.append(row.firstElementChild);
         [...li.children].forEach((div) => {
