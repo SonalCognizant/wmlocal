@@ -1,0 +1,82 @@
+@import '../../styles/include/mq.scss';
+@import '../../styles/include/tokens.scss';
+
+.benefit-blocks-container{
+  .benefit-blocks-wrapper{
+    .benefit-blocks{
+      display: flex;
+      @include for-xlarge{
+        gap: calc(((100% - (11 * 30px)) / 12) + 60px);
+        padding: $--spacing-max 0;
+      }
+      .block-left{
+        border-radius: 4px;
+        background-color: $--blue-50;
+        display: flex;
+        align-items: center;
+        width: calc((100% - 30px) / 12 * 4);
+        > div{
+          > div{
+            padding: 0 $--spacing-xxl;
+            h2{
+              color: $--blue-550;
+              font-family: $--font-museo;
+              font-size: 32px;
+              font-weight: 600;
+              margin: 0;
+            }
+            p{
+              color: $--gray-700;
+              font-family: $--font-roboto;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+              margin: 0;
+              padding:$--spacing-l 0 $--spacing-xl 0;
+            }
+            .button-container{
+              padding: 0;
+              .button{
+                font-size: 16px;
+                line-height: 22px;
+                font-family: $--font-roboto;
+                font-weight: 500;
+                color: $--blue-675;
+                text-decoration: underline; 
+              }
+              .link-img{
+                margin-left: 5px;
+              }
+            }
+          }
+        }
+      }
+      .block-right{
+       > div{
+          display: flex;
+          > div{
+            padding-top: $--spacing-xxl;
+            h2{
+              color: $--blue-675;
+              font-family: $--font-roboto;
+              font-size: 20px;
+              font-weight: 700;
+              text-decoration: underline;
+              cursor: pointer;
+              margin: 0;
+            }
+            p{
+              color: $--gray-700;
+              font-family: $--font-roboto;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+              margin: 0;
+              padding-top: $--spacing-s;
+            }
+          }
+        }
+      }
+    }
+  }
+}

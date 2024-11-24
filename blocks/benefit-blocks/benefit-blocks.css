@@ -1,0 +1,77 @@
+/* wellmark color start */
+/* wellmark color end */
+/* wellmark spacing size start */
+/* wellmark spacing size start */
+.benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks {
+  display: flex;
+}
+@media (min-width: 1380px) {
+  .benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks {
+    gap: calc((100% - 330px) / 12 + 60px);
+    padding: 120px 0;
+  }
+}
+.benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-left {
+  border-radius: 4px;
+  background-color: #f3f9ff;
+  display: flex;
+  align-items: center;
+  width: calc((100% - 30px) / 12 * 4);
+}
+.benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-left > div > div {
+  padding: 0 52px;
+}
+.benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-left > div > div h2 {
+  color: #4a7390;
+  font-family: museo, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+}
+.benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-left > div > div p {
+  color: #4b4c4d;
+  font-family: roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+  padding: 24px 0 36px 0;
+}
+.benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-left > div > div .button-container {
+  padding: 0;
+}
+.benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-left > div > div .button-container .button {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: roboto, sans-serif;
+  font-weight: 500;
+  color: #005589;
+  text-decoration: underline;
+}
+.benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-left > div > div .button-container .link-img {
+  margin-left: 5px;
+}
+.benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-right > div {
+  display: flex;
+}
+.benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-right > div > div {
+  padding-top: 52px;
+}
+.benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-right > div > div h2 {
+  color: #005589;
+  font-family: roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 0;
+}
+.benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-right > div > div p {
+  color: #4b4c4d;
+  font-family: roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+  padding-top: 12px;
+}
