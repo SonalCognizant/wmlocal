@@ -5,19 +5,48 @@
   .benefit-blocks-wrapper{
     .benefit-blocks{
       display: flex;
+      gap: calc(((100% - (11 * 30px)) / 12) + 60px);
       @include for-xlarge{
-        gap: calc(((100% - (11 * 30px)) / 12) + 60px);
         padding: $--spacing-max 0;
+      }
+      @include for-laptop{
+        padding: $--spacing-max $--spacing-xl;
+      }
+      @include for-tablet{
+        flex-direction: column;
+        padding: $--spacing-jumbo $--spacing-xl;
+        gap: unset;
+      }
+      @include for-mobile{
+        flex-direction: column;
+        padding: $--spacing-huge $--spacing-m;
+        gap: unset;
       }
       .block-left{
         border-radius: 4px;
         background-color: $--blue-50;
         display: flex;
         align-items: center;
-        width: calc((100% - 30px) / 12 * 4);
+        width: calc((100% - 60px) / 12 * 4);
+        @include for-tablet{
+          width: 100%;
+          padding: $--spacing-jumbo 0;
+        }
+        @include for-mobile{
+          width: 100%;
+        }
         > div{
           > div{
             padding: 0 $--spacing-xxl;
+            @include for-laptop{
+              padding: 0 39px;
+            }
+            @include for-tablet{
+              padding: 0 $--spacing-xxl 0 $--spacing-xl;
+            }
+            @include for-mobile{
+              padding: $--spacing-huge $--spacing-xl;
+            }
             h2{
               color: $--blue-550;
               font-family: $--font-museo;
@@ -33,6 +62,9 @@
               line-height: 24px;
               margin: 0;
               padding:$--spacing-l 0 $--spacing-xl 0;
+              @include for-mobile{
+                padding: $--spacing-m 0 $--spacing-l 0;
+              }
             }
             .button-container{
               padding: 0;
@@ -52,10 +84,32 @@
         }
       }
       .block-right{
+        width: calc((100% / 12) * 7);
+        @include for-tablet{
+          width: 100%;
+        }
+        @include for-mobile{
+          width: 100%;
+        }
        > div{
           display: flex;
+          gap: calc(((100% - (6 * 30px)) / 7) + 60px);
+          @include for-tablet{
+            gap: 30px;
+          }
+          @include for-mobile{
+            flex-direction: column;
+            gap: unset;
+          }
           > div{
             padding-top: $--spacing-xxl;
+            width: calc((100% / 7) * 3);
+            @include for-tablet{
+              width: calc(100% / 2);
+            }
+            @include for-mobile{
+              width: 100%;
+            }
             h2{
               color: $--blue-675;
               font-family: $--font-roboto;
