@@ -26,21 +26,32 @@
         margin-bottom: $--spacing-xl;
       }
     }
-    .testimonial-link{
-      font-size: $--spacing-m;
-      line-height: 22px;
-      font-weight: 500;
-      color: $--primary-675;
-      @include for-tablet{
-        margin-top: $--spacing-m;
+    div{
+      &:last-child{
+        padding-top: $--spacing-huge;
+        @include for-tablet{
+          padding-top: $--spacing-xxl;
+        }
+        @include for-mobile{
+          padding-top: $--spacing-xl;
+        }
       }
-      @include for-mobile{
-        margin-top: $--spacing-s;
+      .testimonial-link{
+        font-size: $--spacing-m;
+        line-height: 22px;
+        font-weight: 500;
+        color: $--primary-675;
+        @include for-tablet{
+          margin-top: $--spacing-m;
+        }
+        @include for-mobile{
+          margin-top: $--spacing-s;
+        }
       }
-    }
-    .link-img{
-      display: inline-block;
-      vertical-align: middle;
+      .link-img{
+        display: inline-block;
+        vertical-align: middle;
+      }
     }
     .testimonial {
       ul{
