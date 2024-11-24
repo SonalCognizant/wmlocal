@@ -5,6 +5,7 @@
   .benefit-blocks-wrapper{
     .benefit-blocks{
       display: flex;
+      align-items: center;
       gap: calc(((100% - (11 * 30px)) / 12) + 60px);
       @include for-xlarge{
         padding: $--spacing-max 0;
@@ -25,15 +26,18 @@
       .block-left{
         border-radius: 4px;
         background-color: $--blue-50;
-        display: flex;
-        align-items: center;
         width: calc((100% - 60px) / 12 * 4);
+        padding: 190px 0;
+        @include for-laptop{
+          padding: 150px 0;
+        }
         @include for-tablet{
           width: 100%;
           padding: $--spacing-jumbo 0;
         }
         @include for-mobile{
           width: 100%;
+          padding: $--spacing-huge 0;
         }
         > div{
           > div{

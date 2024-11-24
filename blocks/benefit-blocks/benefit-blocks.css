@@ -4,6 +4,7 @@
 /* wellmark spacing size start */
 .benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks {
   display: flex;
+  align-items: center;
   gap: calc((100% - 330px) / 12 + 60px);
 }
 @media (min-width: 1380px) {
@@ -33,9 +34,13 @@
 .benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-left {
   border-radius: 4px;
   background-color: #f3f9ff;
-  display: flex;
-  align-items: center;
   width: calc((100% - 60px) / 12 * 4);
+  padding: 190px 0;
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-left {
+    padding: 150px 0;
+  }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-left {
@@ -46,6 +51,7 @@
 @media (max-width: 480px) {
   .benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-left {
     width: 100%;
+    padding: 72px 0;
   }
 }
 .benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-left > div > div {
