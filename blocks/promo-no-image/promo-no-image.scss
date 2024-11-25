@@ -25,6 +25,7 @@
     color: $--blue-550;
     font-weight: 700;
     font-size: 32px;
+    line-height: 38px;
     margin: 0;
     font-family: $--font-museo;
     font-style: 700;
@@ -32,11 +33,13 @@
     @include for-mobile {
       padding-top: 72px;
       font-size: 28px;
+      line-height: 34px;
       width: 100%;
     }
     @include for-tablet {
       padding-top: 96px;
       font-size: 28px;
+      line-height: 34px;
       width: 100%;
     }
     @include for-xlarge {

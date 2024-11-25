@@ -31,31 +31,34 @@
     font-weight: 700;
     font-style: 700;
     font-size: 32px;
+    line-height: 38px;
     margin: 0;
     font-family: $--font-museo;
     @include for-mobile {
       padding-top: 72px;
       font-size: 28px;
       width: 100%;
+      line-height: 34px;
     }
     @include for-tablet {
       padding-top: 96px;
       font-size: 28px;
       width: 100%;
+      line-height: 34px;
     }
     @include for-xlarge {
       padding-top: 120px;
-      width: 50%;
+      width: calc(50% - 15px);
       margin: 0 auto;
     }
     @include for-large {
       padding-top: 120px;
-      width: 50%;
+      width: calc(50% - 15px);
       margin: 0 auto;
     }
     @include for-laptop {
       padding-top: 120px;
-      width: 66.66%;
+      width: calc(66.66% - 12px);
       margin: 0 auto;
     }
   }

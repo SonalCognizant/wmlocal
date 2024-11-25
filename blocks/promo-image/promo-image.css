@@ -42,6 +42,7 @@
   font-weight: 700;
   font-style: 700;
   font-size: 32px;
+  line-height: 38px;
   margin: 0;
   font-family: museo, sans-serif;
 }
@@ -50,6 +51,7 @@
     padding-top: 72px;
     font-size: 28px;
     width: 100%;
+    line-height: 34px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
@@ -57,26 +59,27 @@
     padding-top: 96px;
     font-size: 28px;
     width: 100%;
+    line-height: 34px;
   }
 }
 @media (min-width: 1380px) {
   .promo-image-container .promo-image-heading {
     padding-top: 120px;
-    width: 50%;
+    width: calc(50% - 15px);
     margin: 0 auto;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .promo-image-container .promo-image-heading {
     padding-top: 120px;
-    width: 50%;
+    width: calc(50% - 15px);
     margin: 0 auto;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .promo-image-container .promo-image-heading {
     padding-top: 120px;
-    width: 66.66%;
+    width: calc(66.66% - 12px);
     margin: 0 auto;
   }
 }
