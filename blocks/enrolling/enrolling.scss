@@ -8,7 +8,7 @@
     flex-direction: column;
 
     .enrolling-heading {
-      color: $--blue-675;
+      color: $--blue-550;
       font-family: $--font-museo;
       padding: 120px 0 52px 0;
       width: 100%;
@@ -37,6 +37,7 @@
             flex-direction: column;
             > p {
               margin: 0;
+              color: $--gray-700;
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -61,15 +62,15 @@
             }
             > .button-container {
               a {
-                padding: 12px 23px;
+                padding: 12px 22px;
               }
             }
             > h3 {
               margin: 0;
               padding: 24px 0px 12px 0;
               opacity: 1;
-              color: rgba(75, 76, 77, 1);
-              font-family: "Roboto-Bold";
+              color: $--gray-700;
+              font-family: $--font-roboto;
               font-size: 24px;
               font-weight: 700;
               font-style: Bold;
