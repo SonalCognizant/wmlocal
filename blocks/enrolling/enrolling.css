@@ -61,12 +61,15 @@
   width: 22px;
   vertical-align: middle;
 }
+.enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-1-column > .cards-card-body > p:last-child {
+  padding-top: 12px;
+}
 .enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-1-column > .cards-card-body > .button-container a {
   padding: 12px 23px;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-1-column > .cards-card-body > h3 {
   margin: 0;
-  padding: 24px 0px 24px 0;
+  padding: 24px 0px 12px 0;
   opacity: 1;
   color: rgb(75, 76, 77);
   font-family: "Roboto-Bold";
