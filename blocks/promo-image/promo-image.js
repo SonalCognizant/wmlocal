@@ -10,10 +10,12 @@ export default function decorate(block) {
   imageWrapperDiv.style.backgroundSize = 'cover';
   imageWrapperDiv.style.backgroundPosition = 'center';
   imageWrapperDiv.style.backgroundRepeat = 'no-repeat';
-  const mainHeading = document.createElement('h3');
+  const mainHeading = document.createElement('h2');
   mainHeading.classList.add('promo-image-heading');
   mainHeading.textContent = `${title}`;
   imageWrapperDiv.prepend(mainHeading);
+  const promoClass = `promo-${block.children.length - 2}-column`;
+  ul.classList.add(promoClass);
   [...block.children].forEach((row, index) => {
     if (index > 1) {
       const li = document.createElement('li');

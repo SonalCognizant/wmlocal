@@ -47,7 +47,6 @@ export default function decorate(block) {
         hTag.className = 'testimonial-title';
 
         const liList = li.querySelectorAll('div');
-        console.log(liList);
         liList[0].prepend(imgTag);
 
         // setAttribute for the paragraph

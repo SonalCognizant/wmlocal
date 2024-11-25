@@ -22,7 +22,7 @@
 }
 @media (min-width: 1380px) {
   .image-text-container .image-text-wrapper .image-text.block.columns-2-cols {
-    padding: 120px 52px;
+    padding: 120px 0;
   }
 }
 .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div {

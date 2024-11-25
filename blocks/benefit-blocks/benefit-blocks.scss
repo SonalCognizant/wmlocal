@@ -1,0 +1,140 @@
+@import '../../styles/include/mq.scss';
+@import '../../styles/include/tokens.scss';
+
+.benefit-blocks-container{
+  .benefit-blocks-wrapper{
+    .benefit-blocks{
+      display: flex;
+      align-items: center;
+      gap: calc(((100% - (11 * 30px)) / 12) + 60px);
+      @include for-xlarge{
+        padding: $--spacing-max 0;
+      }
+      @include for-laptop{
+        padding: $--spacing-max $--spacing-xl;
+      }
+      @include for-tablet{
+        flex-direction: column;
+        padding: $--spacing-jumbo $--spacing-xl;
+        gap: unset;
+      }
+      @include for-mobile{
+        flex-direction: column;
+        padding: $--spacing-huge $--spacing-m;
+        gap: unset;
+      }
+      .block-left{
+        border-radius: 4px;
+        background-color: $--blue-50;
+        width: calc((100% - 60px) / 12 * 4);
+        padding: 190px 0;
+        @include for-laptop{
+          padding: 150px 0;
+        }
+        @include for-tablet{
+          width: 100%;
+          padding: $--spacing-jumbo 0;
+        }
+        @include for-mobile{
+          width: 100%;
+          padding: $--spacing-huge 0;
+        }
+        > div{
+          > div{
+            padding: 0 $--spacing-xxl;
+            @include for-laptop{
+              padding: 0 39px;
+            }
+            @include for-tablet{
+              padding: 0 $--spacing-xxl 0 $--spacing-xl;
+            }
+            @include for-mobile{
+              padding: $--spacing-huge $--spacing-xl;
+            }
+            h2{
+              color: $--blue-550;
+              font-family: $--font-museo;
+              font-size: 32px;
+              font-weight: 600;
+              margin: 0;
+            }
+            p{
+              color: $--gray-700;
+              font-family: $--font-roboto;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+              margin: 0;
+              padding:$--spacing-l 0 $--spacing-xl 0;
+              @include for-mobile{
+                padding: $--spacing-m 0 $--spacing-l 0;
+              }
+            }
+            .button-container{
+              padding: 0;
+              .button{
+                font-size: 16px;
+                line-height: 22px;
+                font-family: $--font-roboto;
+                font-weight: 500;
+                color: $--blue-675;
+                text-decoration: underline; 
+              }
+              .link-img{
+                margin-left: 5px;
+              }
+            }
+          }
+        }
+      }
+      .block-right{
+        width: calc((100% / 12) * 7);
+        @include for-tablet{
+          width: 100%;
+        }
+        @include for-mobile{
+          width: 100%;
+        }
+       > div{
+          display: flex;
+          gap: calc(((100% - (6 * 30px)) / 7) + 60px);
+          @include for-tablet{
+            gap: 30px;
+          }
+          @include for-mobile{
+            flex-direction: column;
+            gap: unset;
+          }
+          > div{
+            padding-top: $--spacing-xxl;
+            width: calc((100% / 7) * 3);
+            @include for-tablet{
+              width: calc(100% / 2);
+            }
+            @include for-mobile{
+              width: 100%;
+            }
+            h2{
+              color: $--blue-675;
+              font-family: $--font-roboto;
+              font-size: 20px;
+              font-weight: 700;
+              text-decoration: underline;
+              cursor: pointer;
+              margin: 0;
+            }
+            p{
+              color: $--gray-700;
+              font-family: $--font-roboto;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+              margin: 0;
+              padding-top: $--spacing-s;
+            }
+          }
+        }
+      }
+    }
+  }
+}

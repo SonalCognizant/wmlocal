@@ -1,9 +1,12 @@
+import { loadFragment } from '../fragment/fragment.js';
+
 const navmenu = JSON.stringify([
   {
-    title: 'Home', href: '#',
+    title: 'Home', path: 'home', href: '#',
   },
   {
     title: 'Shop',
+    path: 'shop',
     href: '#',
     children: [
       {
@@ -26,15 +29,15 @@ const navmenu = JSON.stringify([
       {
         title: 'Understanding plans',
         subChildren: [
-          { title: 'Be well 24/7', href: '#', description: '' },
-          { title: 'Case Management', href: '#', description: '' },
-          { title: 'Preventative services', href: '#', description: '' },
+          { title: 'Be well 24/7', href: '#', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+          { title: 'Preventative services', href: '#', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
         ],
       },
     ],
   },
   {
     title: 'Find care',
+    path: 'find-care',
     href: '#',
     children: [
       {
@@ -56,24 +59,25 @@ const navmenu = JSON.stringify([
       {
         title: 'Additional Resources',
         subChildren: [
-          { title: 'Be well 24/7', href: '#' },
-          { title: 'Case Management', href: '#' },
-          { title: 'Preventative services', href: '#' },
+          { title: 'Be well 24/7', href: '#', description: '' },
+          { title: 'Case Management', href: '#', description: '' },
+          { title: 'Preventative services', href: '#', description: '' },
         ],
       },
     ],
   },
   {
-    title: 'Members', href: '#',
+    title: 'Members', path: 'member', href: '#',
   },
   {
-    title: 'Employer', href: '#',
+    title: 'Employer', path: 'employer', href: '#',
   },
   {
-    title: 'Providers', href: '#',
+    title: 'Providers', path: 'providers', href: '#',
   },
   {
     title: 'Producers',
+    path: 'producers',
     href: '#',
   },
 ]);
@@ -98,6 +102,14 @@ function toggleSearch(e) {
 function toggleSearchBar() {
   const menuBar = document.querySelector('.search-bar');
   menuBar.addEventListener('click', toggleSearch);
+}
+
+// render header content fargment
+async function renderheaderfargment(loadheaderdata) {
+  const fragmentcontent = `/content-fragment/header/${loadheaderdata}`;
+  const headerpath = await loadFragment(fragmentcontent);
+  const headerviewcontent = headerpath?.firstElementChild;
+  return headerviewcontent;
 }
 
 function renderMegaMenu(nav) {
@@ -160,31 +172,47 @@ function renderMegaMenu(nav) {
       headersubmenuul.className = 'header-submenu-ul';
       navbaranchor.appendChild(headermenuitem);
 
-      item.children.forEach((child) => {
-        const submenuli = document.createElement('ul');
-        const title = document.createElement('h4');
-        title.append(child.title);
-        submenuli.append(title);
-        headersubmenuul.append(submenuli);
-        if (child.subChildren) {
-          child.subChildren.forEach((subchild) => {
-            const submenuchild = document.createElement('li');
-            const submenuanchor = document.createElement('a');
-            submenuanchor.setAttribute('href', subchild.href);
-            submenuanchor.append(subchild.title);
-            submenuli.append(submenuchild);
-            submenuchild.append(submenuanchor);
-          });
-        }
-      });
       const headersubmenulist = document.createElement('div');
       headersubmenulist.className = 'header-submenu-list';
       const menusubmenucontent = document.createElement('div');
       menusubmenucontent.className = 'menu-submenu-content';
+      // renderheaderfargment().then((res)=>{console.log('test', res)});
+      // menusubmenucontent.append(renderheaderfargment());
       headermenuitem.appendChild(headersubmenulist);
       headersubmenulist.appendChild(headersubmenuul);
       headermenuitem.appendChild(menusubmenucontent);
       headermenuli.appendChild(headermenuitem);
+
+      item.children.forEach((child) => {
+        const submenuul = document.createElement('ul');
+        const title = document.createElement('h4');
+        title.append(child.title);
+        submenuul.append(title);
+        headersubmenuul.append(submenuul);
+        if (child.subChildren) {
+          child.subChildren.forEach((subchild) => {
+            const submenuchild = document.createElement('li');
+            const submenuanchor = document.createElement('a');
+            const desc = document.createElement('p');
+            submenuanchor.setAttribute('href', subchild.href);
+            submenuanchor.append(subchild.title);
+            if (subchild.description) {
+              desc.append(subchild.description);
+              submenuchild.append(desc);
+            }
+            submenuul.append(submenuchild);
+            submenuchild.append(submenuanchor);
+            submenuchild.append(desc);
+          });
+        }
+      });
+      try {
+        renderheaderfargment(item?.path).then((res) => {
+          menusubmenucontent.append(res);
+        });
+      } catch (error) {
+        console.log('error', error);
+      }
     }
     headermenuul.appendChild(headermenuli);
   });
@@ -345,8 +373,8 @@ function renderMegaMenu(nav) {
  */
 export default async function decorate(block) {
   block.textContent = '';
-  const nav = document.createElement('header');
-  nav.id = 'header';
+  const nav = document.createElement('div');
+  nav.className = 'main-header';
   renderMegaMenu(nav);
   const navWrapper = document.createElement('div');
   navWrapper.className = 'main-header-wrapper';

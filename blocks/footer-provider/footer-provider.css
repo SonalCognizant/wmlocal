@@ -71,6 +71,43 @@
   max-width: 1275px;
   margin: auto;
 }
+.footer-provider-wrapper .footer-provider > .wellmarkdrug-div > .social-div {
+  display: flex;
+  gap: 11px;
+}
+.footer-provider-wrapper .footer-provider > .wellmarkdrug-div > .social-div > p {
+  display: flex;
+  gap: 11px;
+}
+.footer-provider-wrapper .footer-provider > .wellmarkdrug-div > .social-div > p > a > span {
+  height: 40px;
+  width: 40px;
+}
+@media (max-width: 480px) {
+  .footer-provider-wrapper .footer-provider > .wellmarkdrug-div > .social-div {
+    display: flex;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .footer-provider-wrapper .footer-provider > .wellmarkdrug-div > .social-div {
+    display: flex;
+  }
+}
+@media (min-width: 1380px) {
+  .footer-provider-wrapper .footer-provider > .wellmarkdrug-div > .social-div {
+    display: none;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .footer-provider-wrapper .footer-provider > .wellmarkdrug-div > .social-div {
+    display: none;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .footer-provider-wrapper .footer-provider > .wellmarkdrug-div > .social-div {
+    display: none;
+  }
+}
 .footer-provider-wrapper .footer-provider > .copyright-div {
   padding: 36px 0;
   opacity: 1;
