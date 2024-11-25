@@ -5,7 +5,10 @@
  */
 
 export default function decorate(block) {
-  [...block.children].forEach((row) => {
+  const accordionWrapper = [...block.children];
+  const accordionSection = accordionWrapper.slice(1, accordionWrapper.length);
+
+  accordionSection.forEach((row) => {
     // decorate accordion item label
     const label = row.children[0];
     const summary = document.createElement('summary');
@@ -20,4 +23,16 @@ export default function decorate(block) {
     details.append(summary, body);
     row.replaceWith(details);
   });
+  const { parentElement } = block;
+  // Get the title innertext from the first child
+  const titleText = block.children[0].innerText;
+  // get the first child
+  const title = block.children[0];
+  // remove the first child
+  title.remove();
+  // create the heading element for accordion
+  const mainHeading = document.createElement('h2');
+  mainHeading.classList.add('accordion-heading');
+  mainHeading.textContent = titleText;
+  parentElement.prepend(mainHeading);
 }

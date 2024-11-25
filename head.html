@@ -1,4 +1,57 @@
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <script src="/scripts/aem.js" type="module"></script>
 <script src="/scripts/scripts.js" type="module"></script>
-<link rel="stylesheet" href="/styles/styles.css"/>
+<link rel="stylesheet" href="/styles/styles.css" />
+<script
+  src="
+https://assets.adobedtm.com/63b00f92ccdd/cf0bc8611341/launch-14781371ad01-development.min.js"
+  async
+></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+  const domain=window.location.hostname;
+  const pathname=window.location.pathname;
+  const pathsegment= pathname.split('/').filter(segment => segment !=='');
+  const  depth=pathsegment.length;
+  const level1=pathsegment[0] || 'undefined';
+  const level2=pathsegment[1] || 'undefined'; 
+  window.adobeDataLayer = window.adobeDataLayer || [];
+  adobeDataLayer.push({
+    event: 'page_view',
+    userInfo: {
+      account_login_status: 'logged out',
+      user_type: '',
+      user_role: '',
+      gender: '',
+      age: '',
+      user_relationship_to_member: '',
+      user_id: '',
+    },
+    siteInfo: {
+      site_section: level1,
+      site_name: domain,
+      page_type: level1,
+      site_subcategory: level2,
+      site_subcategory_depth: depth,
+    },
+    audienceInfo: {
+      environment: 'Prod | Dev',
+    },
+  });
+
+  $(document).ready(function () {
+    $('.button-container a.button').on('click', function () {
+      console.log('test button click');
+      adobeDataLayer.push({
+        event: 'cta_click',
+        CusInfo: {
+          ctaClickImageAltText: 'hero_image_alt_text',
+          ctaElementText: 'Learn More',
+          ctaElementType: 'button',
+          ctaLocation: 'header',
+          ctaType: 'primary',
+        },
+      });
+    });
+  });
+</script>
