@@ -45,14 +45,19 @@
   height: 64px;
   width: 64px;
 }
-.enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-1-column > .cards-card-body > p > span {
+.enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-1-column > .cards-card-body > p > .icon-mobile {
   height: 100%;
   width: 100%;
   text-align: center;
 }
-.enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-1-column > .cards-card-body > p > span > img {
+.enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-1-column > .cards-card-body > p > .icon-mobile > img {
   height: 100%;
   width: 100%;
+}
+.enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-1-column > .cards-card-body > p > .icon-cell-enrolling {
+  height: 24px;
+  width: 22px;
+  vertical-align: middle;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-1-column > .cards-card-body > h3 {
   margin: 0;

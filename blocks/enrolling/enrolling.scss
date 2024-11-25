@@ -39,7 +39,7 @@
               margin: 0;
               height: 64px;
               width: 64px;
-              > span {
+              > .icon-mobile {
                 height: 100%;
                 width: 100%;
                 text-align: center;
@@ -47,6 +47,11 @@
                   height: 100%;
                   width: 100%;
                 }
+              }
+              > .icon-cell-enrolling {
+                height: 24px;
+                width: 22px;
+                vertical-align: middle;
               }
             }
             > h3 {
