@@ -34,7 +34,7 @@
   align-items: center;
   justify-content: center;
   border-right: 2px solid lightgray;
-  padding: 72px;
+  padding: 0 72px 120px 0;
   flex-direction: column;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-1-column > .cards-card-body > p {
@@ -65,7 +65,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-right: 2px solid lightgray;
   padding: 72px;
   flex-direction: column;
 }
