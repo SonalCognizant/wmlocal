@@ -42,6 +42,8 @@
 }
 .enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-1-column > .cards-card-body > p {
   margin: 0;
+  height: 64px;
+  width: 64px;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-1-column > .cards-card-body > p > span {
   height: 100%;
@@ -49,8 +51,8 @@
   text-align: center;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-1-column > .cards-card-body > p > span > img {
-  height: 64px;
-  width: 64px;
+  height: 100%;
+  width: 100%;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-1-column > .cards-card-body > h3 {
   margin: 0;

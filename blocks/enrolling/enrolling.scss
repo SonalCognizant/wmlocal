@@ -37,13 +37,15 @@
             flex-direction: column;
             > p {
               margin: 0;
+              height: 64px;
+              width: 64px;
               > span {
                 height: 100%;
                 width: 100%;
                 text-align: center;
                 > img {
-                  height: 64px;
-                  width: 64px;
+                  height: 100%;
+                  width: 100%;
                 }
               }
             }
