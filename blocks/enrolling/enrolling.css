@@ -42,8 +42,6 @@
 }
 .enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-1-column > .cards-card-body > p {
   margin: 0;
-  height: 64px;
-  width: 64px;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-1-column > .cards-card-body > p > .icon-mobile {
   height: 100%;
@@ -58,6 +56,9 @@
   height: 24px;
   width: 22px;
   vertical-align: middle;
+}
+.enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-1-column > .cards-card-body > .button-container a {
+  padding: 12px 23px;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-1-column > .cards-card-body > h3 {
   margin: 0;
