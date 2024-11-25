@@ -85,31 +85,54 @@
           }
         }
         > .enrolling-2-column {
+          padding-bottom: 120px;
           > .cards-card-body {
             display: flex;
             align-items: center;
             justify-content: center;
-            // border-right: 2px solid lightgray;
-            padding: 72px;
+            padding: 0px;
             flex-direction: column;
             > p {
               margin: 0;
-              > span {
-                height: 100%;
-                width: 100%;
+              color: $--gray-700;
+              > .icon-mobile {
+                height: 64px;
+                width: 64px;
                 text-align: center;
                 > img {
-                  height: 64px;
-                  width: 64px;
+                  height: 100%;
+                  width: 100%;
                 }
+              }
+              > .icon-search-icon-enrolling {
+                height: 64px;
+                width: 64px;
+              }
+              > .icon-cell-enrolling {
+                height: 24px;
+                width: 22px;
+                vertical-align: middle;
+              }
+              &:last-child {
+                padding-top: 12px;
+                opacity: 1;
+                font-family: $--font-roboto;
+                font-size: 20px;
+                font-weight: 700;
+                letter-spacing: 0px;
+              }
+            }
+            > .button-container {
+              a {
+                padding: 12px 22px;
               }
             }
             > h3 {
               margin: 0;
-              padding: 24px 0px 24px 0;
+              padding: 24px 0px 12px 0;
               opacity: 1;
-              color: rgba(75, 76, 77, 1);
-              font-family: "Roboto-Bold";
+              color: $--gray-700;
+              font-family: $--font-roboto;
               font-size: 24px;
               font-weight: 700;
               font-style: Bold;

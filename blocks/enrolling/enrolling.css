@@ -85,31 +85,55 @@
   letter-spacing: 0px;
   text-align: center;
 }
+.enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-2-column {
+  padding-bottom: 120px;
+}
 .enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-2-column > .cards-card-body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 72px;
+  padding: 0px;
   flex-direction: column;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-2-column > .cards-card-body > p {
   margin: 0;
+  color: #4b4c4d;
 }
-.enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-2-column > .cards-card-body > p > span {
-  height: 100%;
-  width: 100%;
+.enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-2-column > .cards-card-body > p > .icon-mobile {
+  height: 64px;
+  width: 64px;
   text-align: center;
 }
-.enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-2-column > .cards-card-body > p > span > img {
+.enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-2-column > .cards-card-body > p > .icon-mobile > img {
+  height: 100%;
+  width: 100%;
+}
+.enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-2-column > .cards-card-body > p > .icon-search-icon-enrolling {
   height: 64px;
   width: 64px;
 }
+.enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-2-column > .cards-card-body > p > .icon-cell-enrolling {
+  height: 24px;
+  width: 22px;
+  vertical-align: middle;
+}
+.enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-2-column > .cards-card-body > p:last-child {
+  padding-top: 12px;
+  opacity: 1;
+  font-family: roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0px;
+}
+.enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-2-column > .cards-card-body > .button-container a {
+  padding: 12px 22px;
+}
 .enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-2-column > .cards-card-body > h3 {
   margin: 0;
-  padding: 24px 0px 24px 0;
+  padding: 24px 0px 12px 0;
   opacity: 1;
-  color: rgb(75, 76, 77);
-  font-family: "Roboto-Bold";
+  color: #4b4c4d;
+  font-family: roboto, sans-serif;
   font-size: 24px;
   font-weight: 700;
   font-style: Bold;
