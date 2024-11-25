@@ -46,10 +46,10 @@
               padding: 0 39px;
             }
             @include for-tablet{
-              padding: 0 $--spacing-xxl 0 $--spacing-xl;
+              padding: 0 $--spacing-xl 0 $--spacing-xl;
             }
             @include for-mobile{
-              padding: $--spacing-huge $--spacing-xl;
+              padding: 0 $--spacing-xl;
             }
             h2{
               color: $--blue-550;
