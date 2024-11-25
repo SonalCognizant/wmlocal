@@ -58,6 +58,11 @@
               }
               &:last-child {
                 padding-top: 12px;
+                opacity: 1;
+                font-family: $--font-roboto;
+                font-size: 20px;
+                font-weight: 700;
+                letter-spacing: 0px;
               }
             }
             > .button-container {
