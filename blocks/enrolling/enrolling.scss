@@ -27,12 +27,13 @@
         margin: 0;
         list-style: none;
         > .enrolling-1-column {
+          padding-bottom: 120px;
           > .cards-card-body {
             display: flex;
             align-items: center;
             justify-content: center;
             border-right: 2px solid lightgray;
-            padding: 0 72px 120px 0;
+            padding: 0 72px 0 0;
             flex-direction: column;
             > p {
               margin: 0;
