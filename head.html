@@ -42,7 +42,7 @@ https://assets.adobedtm.com/63b00f92ccdd/cf0bc8611341/launch-14781371ad01-develo
   $(document).ready(function () {
     $('.button-container a.button').on('click', function (e) {
       console.log('test button click');
-      const linkClasses=e.currentTarget.classList.toString;
+      const linkClasses=Array.from(e.currentTarget.classList).join(' ');
 
       const linkHref=e.currentTarget.getAttribute('href');
       const linkStr = new URL(linkHref);
@@ -58,7 +58,7 @@ https://assets.adobedtm.com/63b00f92ccdd/cf0bc8611341/launch-14781371ad01-develo
           link_classes: linkClasses,
           link_domain: linkDomain,
           link_url: linkUrl,
-          link_id: linkID,
+          link_id: linkID ? linkID : 'undefined',
           outbound: isOutBound,
         },
       });
