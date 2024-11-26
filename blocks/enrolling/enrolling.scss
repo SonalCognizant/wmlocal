@@ -59,13 +59,16 @@
         list-style: none;
         padding: 0;
         padding-bottom: 120px;
+        @include for-mobile {
+          flex-direction: column;
+          gap: 52px;
+        }
+        @include for-tablet {
+          flex-direction: column;
+          gap: 52px;
+        }
         > .enrolling-1-column {
           padding-right: 80px;
-          @include for-mobile {
-            // padding: 72px 0 52px 0;
-            flex-direction: column;
-            gap: 52px;
-          }
           @include for-xlarge {
             padding-right: 80px;
           }
@@ -74,11 +77,6 @@
           }
           @include for-laptop {
             padding-right: 36px;
-          }
-          @include for-tablet {
-            // padding: 96px 0 72px 0;
-            flex-direction: column;
-            gap: 52px;
           }
           > .cards-card-body {
             display: flex;
