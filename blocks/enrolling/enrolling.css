@@ -148,6 +148,11 @@
   letter-spacing: 0px;
   text-align: center;
 }
+.enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-2-column > .secondblock {
+  padding-left: 72px;
+  padding-right: 72px;
+  border-left: 2px solid lightgray;
+}
 .enrolling-container .enrolling-wrapper > .enrolling > ul > .enrolling-3-column {
   padding-bottom: 120px;
 }
