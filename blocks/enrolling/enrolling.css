@@ -424,8 +424,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 72px;
-  border-left: 2px solid lightgray;
   flex-direction: column;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-2-column > .cards-card-body > p {
