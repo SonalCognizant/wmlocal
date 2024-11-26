@@ -1,9 +1,12 @@
+import { loadFragment } from '../fragment/fragment.js';
+
 const navmenu = JSON.stringify([
   {
-    title: 'Home', href: '#',
+    title: 'Home', path: 'home', href: '#',
   },
   {
     title: 'Shop',
+    path: 'shop',
     href: '#',
     children: [
       {
@@ -34,6 +37,7 @@ const navmenu = JSON.stringify([
   },
   {
     title: 'Find care',
+    path: 'find-care',
     href: '#',
     children: [
       {
@@ -63,16 +67,17 @@ const navmenu = JSON.stringify([
     ],
   },
   {
-    title: 'Members', href: '#',
+    title: 'Members', path: 'member', href: '#',
   },
   {
-    title: 'Employer', href: '#',
+    title: 'Employer', path: 'employer', href: '#',
   },
   {
-    title: 'Providers', href: '#',
+    title: 'Providers', path: 'providers', href: '#',
   },
   {
     title: 'Producers',
+    path: 'producers',
     href: '#',
   },
 ]);
@@ -97,6 +102,14 @@ function toggleSearch(e) {
 function toggleSearchBar() {
   const menuBar = document.querySelector('.search-bar');
   menuBar.addEventListener('click', toggleSearch);
+}
+
+// render header content fargment
+async function renderheaderfargment(loadheaderdata) {
+  const fragmentcontent = `/content-fragment/header/${loadheaderdata}`;
+  const headerpath = await loadFragment(fragmentcontent);
+  const headerviewcontent = headerpath?.firstElementChild;
+  return headerviewcontent;
 }
 
 function renderMegaMenu(nav) {
@@ -163,6 +176,8 @@ function renderMegaMenu(nav) {
       headersubmenulist.className = 'header-submenu-list';
       const menusubmenucontent = document.createElement('div');
       menusubmenucontent.className = 'menu-submenu-content';
+      // renderheaderfargment().then((res)=>{console.log('test', res)});
+      // menusubmenucontent.append(renderheaderfargment());
       headermenuitem.appendChild(headersubmenulist);
       headersubmenulist.appendChild(headersubmenuul);
       headermenuitem.appendChild(menusubmenucontent);
@@ -191,6 +206,13 @@ function renderMegaMenu(nav) {
           });
         }
       });
+      try {
+        renderheaderfargment(item?.path).then((res) => {
+          menusubmenucontent.append(res);
+        });
+      } catch (error) {
+        console.log('error', error);
+      }
     }
     headermenuul.appendChild(headermenuli);
   });
