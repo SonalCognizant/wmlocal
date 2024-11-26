@@ -7,7 +7,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 0;
 }
 @media (max-width: 480px) {
   .enrolling-container .enrolling-wrapper {
