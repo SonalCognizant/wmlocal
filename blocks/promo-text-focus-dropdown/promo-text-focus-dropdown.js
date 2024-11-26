@@ -1,32 +1,26 @@
 const promodropdown = [
   {
     title: 'Select an option',
-    path: 'selectoption',
     href: '#',
   },
   {
     title: 'Medicare plan for myself',
-    path: 'medicareplanformyself',
     href: '#',
   },
   {
     title: 'Medicare plan for a family member',
-    path: 'medicareplanformyself',
     href: '#',
   },
   {
     title: 'Health plan for my family and/or myself',
-    path: 'medicareplanformyself',
     href: '#',
   },
   {
     title: 'Business health insurance plan',
-    path: 'businesshealthinsuranceplan',
     href: '#',
   },
   {
     title: 'I’m a member and have a question about my plan',
-    path: 'memberandhaveaquestionaboutmyplan',
     href: '#',
   },
 ];
@@ -87,7 +81,7 @@ export default function decorate(block) {
   promodropdown.forEach((item) => {
     const dropdownli = document.createElement('li');
     dropdownli.className = 'drop-down-li';
-    dropdownli.setAttribute('data-value', item.path);
+    dropdownli.setAttribute('data-value', item.title);
 
     const dropdownanchor = document.createElement('a');
     dropdownanchor.setAttribute('href', item.href);
