@@ -18,6 +18,7 @@ export default function decorate(block) {
         ul.append(li);
       }
     }
+    console.log(index, 'hello')
   });
   block.textContent = '';
   block.append(ul);
