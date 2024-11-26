@@ -10,61 +10,33 @@
 }
 @media (min-width: 1380px) {
   .article-wrapper > .article {
-    padding: 0 52px;
+    padding: 120px 52px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .article-wrapper > .article {
-    padding: 0 52px;
+    padding: 120px 52px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .article-wrapper > .article {
-    padding: 0 36px;
+    padding: 120px 36px;
   }
 }
 @media (max-width: 480px) {
   .article-wrapper > .article {
-    padding: 0 16px;
+    padding: 72px 16px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .article-wrapper > .article {
-    padding: 0 36px;
+    padding: 96px 36px;
   }
 }
 .article-wrapper > .article > div {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
   padding: 0;
-}
-@media (min-width: 1380px) {
-  .article-wrapper > .article > div {
-    padding: 120px 217px;
-  }
-}
-@media (min-width: 1201px) and (max-width: 1379px) {
-  .article-wrapper > .article > div {
-    padding: 120px 217px;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1200px) {
-  .article-wrapper > .article > div {
-    padding: 118px 81px 120px 81px;
-  }
-}
-@media (max-width: 480px) {
-  .article-wrapper > .article > div {
-    padding: 72px 0;
-  }
-}
-@media (min-width: 480.5px) and (max-width: 1023.5px) {
-  .article-wrapper > .article > div {
-    padding: 96px 0;
-  }
 }
 .article-wrapper > .article > div > .description {
   opacity: 1;
@@ -74,10 +46,11 @@
   font-weight: 400;
   font-style: Regular;
   letter-spacing: 0px;
-  text-align: center;
+  text-align: left;
   line-height: 24px;
   margin: 0;
   padding-bottom: 36px;
+  opacity: 1;
 }
 @media (max-width: 480px) {
   .article-wrapper > .article > div > .description {
@@ -91,9 +64,10 @@
   font-size: 32px;
   font-weight: 600;
   letter-spacing: 0px;
-  text-align: center;
+  text-align: left;
   padding-bottom: 24px;
   margin: 0;
+  opacity: 1;
 }
 @media (max-width: 480px) {
   .article-wrapper > .article > div > .title {
