@@ -5,6 +5,9 @@
   .testimonial-wrapper{
     padding: $--spacing-max $--spacing-xxl;
     text-align: center;
+    @include for-laptop{
+      padding: $--spacing-max $--spacing-xl;
+    }
     @include for-tablet{
       padding: $--spacing-jumbo $--spacing-xl;
     }
@@ -21,19 +24,24 @@
       text-align: center;
       @include for-tablet{
         margin-bottom: $--spacing-xxl;
+        font-size: 28px;
       }
       @include for-mobile{
         margin-bottom: $--spacing-xl;
+        font-size: 28px;
       }
     }
     div{
       &:last-child{
         padding-top: $--spacing-huge;
+        @include for-laptop{
+          padding-top: $--spacing-l;
+        }
         @include for-tablet{
-          padding-top: $--spacing-xxl;
+          padding-top: $--spacing-l;
         }
         @include for-mobile{
-          padding-top: $--spacing-xl;
+          padding-top: $--spacing-l;
         }
       }
       .testimonial-link{
@@ -41,6 +49,7 @@
         line-height: 22px;
         font-weight: 500;
         color: $--primary-675;
+        text-decoration: underline;
         @include for-tablet{
           margin-top: $--spacing-m;
         }
@@ -61,13 +70,16 @@
         padding-left: 0;
         @include for-tablet{
           flex-direction: column;
+          gap: 36px;
         }
         @include for-mobile{
           flex-direction: column;
+          gap: 24px;
         }
         li{
           list-style-type: none;
           text-align: left;
+          background-color: $--blue-50;
           color: $--gray-700;
           padding: $--spacing-xl $--spacing-xl $--spacing-jumbo $--spacing-xl;
           @include for-tablet{
@@ -94,6 +106,18 @@
             line-height: 38px;
             font-weight: 700;
             margin: $--spacing-xl 0 $--spacing-l 0;
+            @include for-laptop {
+              margin: 0;
+              margin-top: 45px;
+            }
+            @include for-tablet{
+              margin: 0;
+              margin-top: 45px;
+            }
+            @include for-mobile{
+              margin: 0;
+              margin-top: 45px;
+            }
           }
           .testimonial-description{
             font-size: $--spacing-m;
@@ -121,6 +145,7 @@
     .testimonial{
       ul{
         li{
+          background-color: $--blue-50;
             width: calc((100% - 104px) / 2) !important;
             @include for-laptop{
               width: calc((100% - 104px) / 1) !important;
