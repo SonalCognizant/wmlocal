@@ -27,8 +27,9 @@
         margin: 0;
         list-style: none;
         padding: 0;
+        padding-bottom: 120px;
         > .enrolling-1-column {
-          padding-bottom: 120px;
+          padding-right: 80px;
           > .cards-card-body {
             display: flex;
             align-items: center;
@@ -89,7 +90,9 @@
           }
         }
         > .enrolling-2-column {
-          padding-bottom: 120px;
+          border-left: 2px solid lightgray;
+          padding: 0 80px;
+          border-right: 2px solid lightgray;
           > .cards-card-body {
             display: flex;
             align-items: center;
@@ -148,14 +151,9 @@
               text-align: center;
             }
           }
-          > .secondblock {
-            padding-left: 72px;
-            padding-right: 72px;
-            border-left: 2px solid lightgray;
-          }
         }
         > .enrolling-3-column {
-          padding-bottom: 120px;
+          padding-left: 80px;
           > .cards-card-body {
             display: flex;
             align-items: center;
@@ -221,13 +219,13 @@
         margin: 0;
         list-style: none;
         padding: 0;
+        padding-bottom: 120px;
         > .enrolling-1-column {
-          padding-bottom: 120px;
+          padding-right: 72px;
           > .cards-card-body {
             display: flex;
             align-items: center;
             justify-content: center;
-            padding-right: 72px;
             flex-direction: column;
             > p {
               margin: 0;
@@ -283,7 +281,8 @@
           }
         }
         > .enrolling-2-column {
-          padding-bottom: 120px;
+          border-left: 2px solid lightgray;
+          padding-left: 72x;
           > .cards-card-body {
             display: flex;
             align-items: center;
@@ -355,6 +354,7 @@
         margin: 0;
         list-style: none;
         padding: 0;
+        padding-bottom: 120px;
         > .enrolling-1-column {
           padding-bottom: 120px;
           > .cards-card-body {
