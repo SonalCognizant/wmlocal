@@ -3,27 +3,27 @@
 /* wellmark spacing size start */
 /* wellmark spacing size start */
 @media (min-width: 1380px) {
-  .article-wrapper > .article {
+  .article-wrapper {
     padding: 120px 52px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
-  .article-wrapper > .article {
+  .article-wrapper {
     padding: 120px 52px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
-  .article-wrapper > .article {
+  .article-wrapper {
     padding: 120px 36px;
   }
 }
 @media (max-width: 480px) {
-  .article-wrapper > .article {
+  .article-wrapper {
     padding: 72px 16px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
-  .article-wrapper > .article {
+  .article-wrapper {
     padding: 96px 36px;
   }
 }

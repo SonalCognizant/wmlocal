@@ -2,22 +2,22 @@
 @import "../../styles/include/tokens.scss";
 
 .article-wrapper {
+  @include for-xlarge {
+    padding: 120px 52px;
+  }
+  @include for-large {
+    padding: 120px 52px;
+  }
+  @include for-laptop {
+    padding: 120px 36px;
+  }
+  @include for-mobile {
+    padding: 72px 16px;
+  }
+  @include for-tablet {
+    padding: 96px 36px;
+  }
   > .article {
-    @include for-xlarge {
-      padding: 120px 52px;
-    }
-    @include for-large {
-      padding: 120px 52px;
-    }
-    @include for-laptop {
-      padding: 120px 36px;
-    }
-    @include for-mobile {
-      padding: 72px 16px;
-    }
-    @include for-tablet {
-      padding: 96px 36px;
-    }
     > div {
       display: flex;
       flex-direction: column;
