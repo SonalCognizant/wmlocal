@@ -106,6 +106,9 @@
 }
 .benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-left > div > div .button-container .link-img {
   margin-left: 5px;
+  width: 15px;
+  height: 15px;
+  margin-top: 4px;
 }
 .benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-right {
   width: 58.3333333333%;
