@@ -69,11 +69,11 @@ export default function decorate(block) {
   promotextfocus.append(promotextdiv);
 
   const dropdownWrapper = document.createElement('div');
-  dropdownWrapper.className = 'dropdown-wrapper';
+  dropdownWrapper.className = 'drop-down-block';
 
   // Create and append dropdown
   const dropdown = document.createElement('div');
-  dropdown.className = 'promo-dropdown';
+  dropdown.className = 'promo-drop-down';
 
   const dropdownbtn = document.createElement('button');
   dropdownbtn.className = 'drop-down-btn';

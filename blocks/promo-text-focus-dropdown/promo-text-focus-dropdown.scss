@@ -80,12 +80,12 @@
                   margin-bottom: 0;
                 }
               }
-              .dropdown-wrapper{
+              .drop-down-block{
                 position: relative;
                 @include for-tablet{
                   width: calc(((100%* 4) / 6) - 15px);
                 }
-                .promo-dropdown{
+                .promo-drop-down{
                   position: relative;
                   display: inline-block;
                   width: 100%;
