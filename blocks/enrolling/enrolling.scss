@@ -63,6 +63,8 @@
           padding-right: 80px;
           @include for-mobile {
             // padding: 72px 0 52px 0;
+            flex-direction: column;
+            gap: 52px;
           }
           @include for-xlarge {
             padding-right: 80px;
@@ -75,6 +77,8 @@
           }
           @include for-tablet {
             // padding: 96px 0 72px 0;
+            flex-direction: column;
+            gap: 52px;
           }
           > .cards-card-body {
             display: flex;
@@ -82,21 +86,6 @@
             justify-content: center;
             padding: 0px;
             flex-direction: column;
-            @include for-mobile {
-              // padding: 72px 0 52px 0;
-            }
-            @include for-xlarge {
-              padding-right: 80px;
-            }
-            @include for-large {
-              padding-right: 80px;
-            }
-            @include for-laptop {
-              padding-right: 36px;
-            }
-            @include for-tablet {
-              // padding: 96px 0 72px 0;
-            }
             > p {
               margin: 0;
               color: $--gray-700;
@@ -151,9 +140,21 @@
           }
         }
         > .enrolling-2-column {
-          border-left: 2px solid lightgray;
-          padding: 0 80px;
-          border-right: 2px solid lightgray;
+          @include for-xlarge {
+            border-left: 2px solid lightgray;
+            padding: 0 80px;
+            border-right: 2px solid lightgray;
+          }
+          @include for-large {
+            border-left: 2px solid lightgray;
+            padding: 0 80px;
+            border-right: 2px solid lightgray;
+          }
+          @include for-laptop {
+            border-left: 2px solid lightgray;
+            padding: 0 36px;
+            border-right: 2px solid lightgray;
+          }
           > .cards-card-body {
             display: flex;
             align-items: center;
@@ -215,6 +216,15 @@
         }
         > .enrolling-3-column {
           padding-left: 80px;
+          @include for-xlarge {
+            padding-left: 80px;
+          }
+          @include for-large {
+            padding-left: 80px;
+          }
+          @include for-laptop {
+            padding-left: 36px;
+          }
           > .cards-card-body {
             display: flex;
             align-items: center;
