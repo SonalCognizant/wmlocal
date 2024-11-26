@@ -42,13 +42,13 @@ https://assets.adobedtm.com/63b00f92ccdd/cf0bc8611341/launch-14781371ad01-develo
   $(document).ready(function () {
     $('.button-container a.button').on('click', function (e) {
       console.log('test button click');
-      const linkClasses=e.currentTarget.classList;
+      const linkClasses=e.currentTarget.classList.toString;
 
       const linkHref=e.currentTarget.getAttribute('href');
       const linkStr = new URL(linkHref);
       linkStr.search='';
       const linkUrl=linkStr.href;
-      const linkDomain=linkStr.domain;
+      const linkDomain=linkStr.hostname;
       const linkID=e.currentTarget.getAttribute('id');
 
       const isOutBound= linkDomain !== window.location.hostname;
