@@ -11,7 +11,9 @@ export default function decorate(block) {
     const li = document.createElement('li');
     if (block.children.length - 1 === 3) {
       const blockedDiv = document.querySelector('.enrolling-2-column');
+      const nextDiv = document.getElementsByClassName('cards-card-body');
       console.log(blockedDiv, 'blockedDiv');
+      console.log(nextDiv);
     }
     li.classList.add(`enrolling-${index}-column`);
     if (index > 0) {
