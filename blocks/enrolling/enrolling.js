@@ -9,6 +9,10 @@ export default function decorate(block) {
   console.log(block.children.length);
   [...block.children].forEach((row, index) => {
     const li = document.createElement('li');
+    if (block.children.length - 1 === 3) {
+      const blockedDiv = document.querySelector('.enrolling-2-column');
+      console.log(blockedDiv, 'blockedDiv');
+    }
     li.classList.add(`enrolling-${index}-column`);
     if (index > 0) {
       while (row.firstElementChild) {
