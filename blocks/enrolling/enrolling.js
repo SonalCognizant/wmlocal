@@ -6,7 +6,6 @@ export default function decorate(block) {
   mainHeading.classList.add('enrolling-heading');
   mainHeading.textContent = `${title}`;
   imageWrapperDiv.prepend(mainHeading);
-  console.log(block.children.length);
   [...block.children].forEach((row, index) => {
     const li = document.createElement('li');
     li.classList.add(`enrolling-${index}-column`);
