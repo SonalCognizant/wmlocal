@@ -68,7 +68,6 @@
           gap: 52px;
         }
         > .enrolling-1-column {
-          padding-right: 80px;
           @include for-xlarge {
             padding-right: 80px;
           }
@@ -213,7 +212,6 @@
           }
         }
         > .enrolling-3-column {
-          padding-left: 80px;
           @include for-xlarge {
             padding-left: 80px;
           }
