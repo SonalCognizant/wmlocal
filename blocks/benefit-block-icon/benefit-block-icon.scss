@@ -1,11 +1,10 @@
 @import '../../styles/include/mq.scss';
 @import '../../styles/include/tokens.scss';
 
-.benefit-blocks-container{
-  .benefit-blocks-wrapper{
-    .benefit-blocks{
+.benefit-block-icon-container{
+  .benefit-block-icon-wrapper{
+    .benefit-block-icon{
       display: flex;
-      align-items: center;
       gap: calc(((100% - (11 * 30px)) / 12) + 60px);
       @include for-xlarge{
         padding: $--spacing-max 0;
@@ -28,6 +27,7 @@
         background-color: $--blue-50;
         width: calc((100% - 60px) / 12 * 4);
         padding: 190px 0;
+        height: 100%;
         @include for-laptop{
           padding: 150px 0;
         }
@@ -43,7 +43,7 @@
           > div{
             padding: 0 $--spacing-xxl;
             @include for-laptop{
-              padding: 0 39px;
+              padding: 0 36px;
             }
             @include for-tablet{
               padding: 0 $--spacing-xl 0 $--spacing-xl;
@@ -67,6 +67,9 @@
               margin: 0;
               padding:$--spacing-l 0 $--spacing-xl 0;
               @include for-mobile{
+                padding: $--spacing-m 0 $--spacing-l 0;
+              }
+              @include for-tablet{
                 padding: $--spacing-m 0 $--spacing-l 0;
               }
             }
@@ -116,6 +119,11 @@
             }
             @include for-mobile{
               width: 100%;
+            }
+            .icon-benefit-icon{
+              width: 64px;
+              height: 64px;
+              margin-bottom: 24px;
             }
             h2{
               color: $--blue-675;

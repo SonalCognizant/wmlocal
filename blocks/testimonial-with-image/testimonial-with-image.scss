@@ -65,6 +65,7 @@
           color: $--gray-700;
           display: flex;
           gap: 36px;
+          background-color: $--blue-50;
           align-items: center;
           @include for-tablet{
             flex-direction: column-reverse;
@@ -131,7 +132,6 @@
     }
     div{
       &:last-child{
-        margin-top: $--spacing-huge;
         @include for-tablet{
           margin: $--spacing-xxl 0 $--spacing-jumbo 0;
         }
