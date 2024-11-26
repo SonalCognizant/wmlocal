@@ -348,9 +348,6 @@
   padding: 0;
   padding-bottom: 120px;
 }
-.enrolling-container .enrolling-wrapper > .enrolling > .column-1-variation > .enrolling-1-column {
-  padding-bottom: 120px;
-}
 .enrolling-container .enrolling-wrapper > .enrolling > .column-1-variation > .enrolling-1-column > .cards-card-body {
   display: flex;
   align-items: center;
