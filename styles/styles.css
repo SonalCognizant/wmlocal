@@ -251,7 +251,7 @@ header.megamenu-wrapper {
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   header.megamenu-wrapper {
-    height: 60px;
+    height: 161px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
