@@ -287,8 +287,24 @@
         list-style: none;
         padding: 0;
         padding-bottom: 120px;
+        @include for-mobile {
+          flex-direction: column;
+          gap: 52px;
+        }
+        @include for-tablet {
+          flex-direction: column;
+          gap: 52px;
+        }
         > .enrolling-1-column {
-          padding-right: 72px;
+          @include for-xlarge {
+            padding-right: 72px;
+          }
+          @include for-large {
+            padding-right: 72px;
+          }
+          @include for-laptop {
+            padding-right: 72px;
+          }
           > .cards-card-body {
             display: flex;
             align-items: center;
@@ -348,8 +364,18 @@
           }
         }
         > .enrolling-2-column {
-          border-left: 2px solid lightgray;
-          padding-left: 72x;
+          @include for-xlarge {
+            border-left: 2px solid lightgray;
+            padding-left: 72x;
+          }
+          @include for-large {
+            border-left: 2px solid lightgray;
+            padding-left: 72x;
+          }
+          @include for-laptop {
+            border-left: 2px solid lightgray;
+            padding-left: 72x;
+          }
           > .cards-card-body {
             display: flex;
             align-items: center;
