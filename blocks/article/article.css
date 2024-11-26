@@ -2,12 +2,6 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
-.article-wrapper {
-  margin: 0;
-}
-.article-wrapper > .article {
-  padding: 0 52px;
-}
 @media (min-width: 1380px) {
   .article-wrapper > .article {
     padding: 120px 52px;

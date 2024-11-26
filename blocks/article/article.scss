@@ -2,9 +2,7 @@
 @import "../../styles/include/tokens.scss";
 
 .article-wrapper {
-  margin: 0;
   > .article {
-    padding: 0 52px;
     @include for-xlarge {
       padding: 120px 52px;
     }
