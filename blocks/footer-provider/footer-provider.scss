@@ -3,22 +3,22 @@
 
 .footer-provider-wrapper {
   background-color: $--blue-50;
+  @include for-mobile {
+    padding: 72px 16px 52px 16px;
+  }
+  @include for-tablet {
+    padding: 72px 36px 52px 36px;
+  }
+  @include for-xlarge {
+    padding: 72px 52px 52px 52px;
+  }
+  @include for-large {
+    padding: 72px 52px 52px 52px;
+  }
+  @include for-laptop {
+    padding: 72px 36px 52px 36px;
+  }
   .footer-provider {
-    @include for-mobile {
-      padding: 72px 16px 52px 16px;
-    }
-    @include for-tablet {
-      padding: 72px 36px 52px 36px;
-    }
-    @include for-xlarge {
-      padding: 72px 52px 52px 52px;
-    }
-    @include for-large {
-      padding: 72px 52px 52px 52px;
-    }
-    @include for-laptop {
-      padding: 72px 36px 52px 36px;
-    }
     > .logo-social-div {
       display: flex;
       align-items: center;
@@ -49,12 +49,24 @@
       border-bottom: 2px solid $--gray-225;
       max-width: 1275px;
       margin: auto;
+      > div ul li .icon-lock {
+        height: 19px;
+        width: 16.29px;
+        vertical-align: sub;
+        padding-left: 4px;
+      }
     }
     > .wellmarkdrug-div {
       padding: 36px 0 36px 0;
       border-bottom: 2px solid $--gray-225;
       max-width: 1275px;
       margin: auto;
+      > div ul li .icon-pdf {
+        height: 19px;
+        width: 16.29px;
+        vertical-align: sub;
+        padding-left: 4px;
+      }
       > .social-div {
         display: flex;
         gap: 11px;
@@ -69,7 +81,7 @@
         @include for-mobile {
           display: flex;
         }
-        @include for-tablet{
+        @include for-tablet {
           display: flex;
         }
         @include for-xlarge {
