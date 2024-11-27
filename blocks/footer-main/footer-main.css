@@ -39,7 +39,7 @@
 }
 .footer-main-wrapper .footer-main > .logo-social-div > .social-div {
   display: flex;
-  gap: 11px;
+  gap: 12px;
 }
 .footer-main-wrapper .footer-main > .logo-social-div > .social-div > p {
   display: flex;
@@ -122,7 +122,7 @@
 }
 .footer-main-wrapper .footer-main > .attention-div > .social-div {
   display: flex;
-  gap: 11px;
+  gap: 12px;
   padding-top: 36px;
 }
 .footer-main-wrapper .footer-main > .attention-div > .social-div > p {
