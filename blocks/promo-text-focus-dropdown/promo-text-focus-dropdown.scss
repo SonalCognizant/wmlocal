@@ -64,10 +64,11 @@
                 color: $--white;
                 margin: 0;
                 .icon-whitepromoicon{
+                  margin-bottom: $--spacing-l;
                   width: 64px;
                   height: 64px;
-                  img {
-                    padding-bottom: $--spacing-l;
+                  @include for-laptop{
+                    margin-left: 15px;
                   }
                 }
               }

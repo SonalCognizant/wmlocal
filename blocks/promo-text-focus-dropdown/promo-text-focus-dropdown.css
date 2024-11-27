@@ -93,11 +93,14 @@
   margin: 0;
 }
 .promo-text-focus-dropdown-container .promo-text-focus-dropdown-wrapper .promo-text-focus-dropdown.block .promo-focus-block > div > div h2 .icon-whitepromoicon {
+  margin-bottom: 24px;
   width: 64px;
   height: 64px;
 }
-.promo-text-focus-dropdown-container .promo-text-focus-dropdown-wrapper .promo-text-focus-dropdown.block .promo-focus-block > div > div h2 .icon-whitepromoicon img {
-  padding-bottom: 24px;
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .promo-text-focus-dropdown-container .promo-text-focus-dropdown-wrapper .promo-text-focus-dropdown.block .promo-focus-block > div > div h2 .icon-whitepromoicon {
+    margin-left: 15px;
+  }
 }
 .promo-text-focus-dropdown-container .promo-text-focus-dropdown-wrapper .promo-text-focus-dropdown.block .promo-focus-block > div > div p {
   color: #ffffff;
