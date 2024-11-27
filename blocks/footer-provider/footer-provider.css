@@ -72,7 +72,7 @@
   padding-left: 4px;
 }
 .footer-provider-wrapper .footer-provider > .wellmarkdrug-div {
-  padding: 36px 0 36px 0;
+  padding: 36px 0 52px 0;
   border-bottom: 2px solid #c2c2c3;
   max-width: 1275px;
   margin: auto;
@@ -90,6 +90,8 @@
 .footer-provider-wrapper .footer-provider > .wellmarkdrug-div > .social-div > p {
   display: flex;
   gap: 11px;
+  margin: 0;
+  padding-top: 36px;
 }
 .footer-provider-wrapper .footer-provider > .wellmarkdrug-div > .social-div > p > a > span {
   height: 40px;
