@@ -140,6 +140,7 @@
   letter-spacing: 0px;
   text-align: left;
   line-height: 20px;
+  margin: 0;
 }
 @media (max-width: 480px) {
   .footer-provider-wrapper .footer-provider > .copyright-div > div > p {
