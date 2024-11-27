@@ -141,6 +141,21 @@
   text-align: left;
   line-height: 20px;
 }
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .footer-provider-wrapper .footer-provider > .copyright-div > div > ul {
+    gap: 44px;
+  }
+}
+@media (min-width: 1380px) {
+  .footer-provider-wrapper .footer-provider > .copyright-div > div > ul {
+    gap: 44px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .footer-provider-wrapper .footer-provider > .copyright-div > div > ul {
+    gap: 44px;
+  }
+}
 .footer-provider-wrapper .footer-provider > div > div > ul {
   list-style: none;
   margin: 0px;

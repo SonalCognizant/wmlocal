@@ -114,6 +114,17 @@
           text-align: left;
           line-height: 20px;
         }
+        > ul {
+          @include for-laptop {
+            gap: 44px;
+          }
+          @include for-xlarge {
+            gap: 44px;
+          }
+          @include for-large {
+            gap: 44px;
+          }
+        }
       }
     }
     > div > div > ul {
