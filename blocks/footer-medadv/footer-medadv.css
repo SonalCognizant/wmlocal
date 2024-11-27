@@ -176,6 +176,17 @@
 .footer-medadv-wrapper .footer-medadv > .copyright-div > div > p:last-child {
   padding-top: 24px;
   padding-bottom: 0px;
+  font-size: 12px;
+}
+@media (max-width: 480px) {
+  .footer-medadv-wrapper .footer-medadv > .copyright-div > div > p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .footer-medadv-wrapper .footer-medadv > .copyright-div > div > p {
+    font-size: 14px;
+  }
 }
 .footer-medadv-wrapper .footer-medadv > .copyright-div > div > ul > li {
   font-size: 12px;

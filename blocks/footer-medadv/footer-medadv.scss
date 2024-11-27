@@ -148,6 +148,13 @@
           &:last-child {
             padding-top: 24px;
             padding-bottom: 0px;
+            font-size: 12px;
+          }
+          @include for-mobile {
+            font-size: 14px;
+          }
+          @include for-tablet {
+            font-size: 14px;
           }
         }
         > ul {
