@@ -98,7 +98,7 @@
       }
     }
     > .copyright-div {
-      padding: 36px 0;
+      padding-top: 36px;
       opacity: 1;
       background-color: $--blue-100;
       > div {
@@ -132,6 +132,9 @@
           }
           @include for-large {
             gap: 44px;
+          }
+          > li {
+            font-size: 12px;
           }
         }
       }

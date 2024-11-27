@@ -161,6 +161,9 @@
           @include for-large {
             gap: 33px;
           }
+          > li {
+            font-size: 12px;
+          }
         }
       }
     }

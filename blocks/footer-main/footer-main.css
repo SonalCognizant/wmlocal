@@ -195,6 +195,9 @@
     gap: 33px;
   }
 }
+.footer-main-wrapper .footer-main > .copyright-div > div > ul > li {
+  font-size: 12px;
+}
 .footer-main-wrapper .footer-main > div > div > ul {
   list-style: none;
   margin: 0px;
