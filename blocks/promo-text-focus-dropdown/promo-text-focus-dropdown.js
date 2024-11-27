@@ -1,9 +1,5 @@
 const promodropdown = [
   {
-    title: 'Select an option',
-    href: '#',
-  },
-  {
     title: 'Medicare plan for myself',
     href: '#',
   },
