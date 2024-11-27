@@ -5,7 +5,6 @@ function buttonAnalytics() {
     const buttons = document.querySelectorAll('.button-container a.button');
     buttons.forEach((button) => {
       button.addEventListener('click', (e) => {
-        console.log('Button clicked vanilla111!');
         const linkClasses = Array.from(e.currentTarget.classList).join(' ');
 
         const linkHref = e.currentTarget.getAttribute('href');
