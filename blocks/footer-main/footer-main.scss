@@ -152,7 +152,15 @@
           margin: 0;
         }
         > ul {
-          gap: 33px;
+          @include for-laptop {
+            gap: 33px;
+          }
+          @include for-xlarge {
+            gap: 33px;
+          }
+          @include for-large {
+            gap: 33px;
+          }
         }
       }
     }
