@@ -35,8 +35,37 @@ https://assets.adobedtm.com/63b00f92ccdd/cf0bc8611341/launch-14781371ad01-develo
     },
   });
 
+  const buttons = document.querySelectorAll(".button-container a.button");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", function(e) {
+    console.log("Button clicked vanilla!");
+    console.log('test button click ');
+      const linkClasses=Array.from(e.currentTarget.classList).join(' ');
+
+      const linkHref=e.currentTarget.getAttribute('href');
+      const linkStr = new URL(linkHref);
+      linkStr.search='';
+      const linkUrl=linkStr.href;
+      const linkDomain=linkStr.hostname;
+      const linkID=e.currentTarget.getAttribute('id');
+
+      const isOutBound= linkDomain !== window.location.hostname;
+      adobeDataLayer.push({
+        event: 'click',
+        eventData: {
+          link_classes: linkClasses,
+          link_domain: linkDomain,
+          link_url: linkUrl,
+          link_id: linkID ? linkID : 'undefined',
+          outbound: isOutBound,
+        },
+      });
+  });
+});
+
   $(document).ready(function () {
-    $('.button-container a.button').on('click', function (e) {
+    $('.button-container a.button').on('clicks', function (e) {
       console.log('test button click ');
       const linkClasses=Array.from(e.currentTarget.classList).join(' ');
 
