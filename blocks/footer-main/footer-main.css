@@ -17,12 +17,12 @@
 }
 @media (min-width: 1380px) {
   .footer-main-wrapper {
-    padding: 72px 52px 36px 52px;
+    padding: 72px 52px 52px 52px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .footer-main-wrapper {
-    padding: 72px 52px 36px 52px;
+    padding: 72px 52px 52px 52px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
