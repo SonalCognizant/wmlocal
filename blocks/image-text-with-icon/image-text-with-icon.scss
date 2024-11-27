@@ -87,13 +87,9 @@
             h2 {
               color: $--blue-550;
               width: 100%;
-              font-family: $--font-museo;
-              font-weight: 700;
-              opacity: 1;
-              text-align: left;
               margin: 0;
-              span{
-                padding-bottom: $--spacing-l;
+              .icon-promoimage{
+                margin-bottom: $--spacing-l;
                 width: 64px;
                 height: 64px;
               }
@@ -111,14 +107,12 @@
               letter-spacing: 0px;
               text-align: left;
               line-height: 24px;
-              margin: $--spacing-l 0 $--spacing-xl 0;
+              margin: $--spacing-l 0 20px 0;
               &.button-container {
                 margin-top: 0;
                 margin-bottom: 0;
                 a.button {
-                  &.primary {
-                    margin-bottom: $--spacing-m;
-                  }
+                  margin-top: $--spacing-m;
                 }
                 @include for-mobile {
                   width: 100%;
