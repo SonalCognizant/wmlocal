@@ -104,6 +104,11 @@
   max-width: 1275px;
   margin: auto;
 }
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .footer-main-wrapper .footer-main > .attention-div {
+    padding-bottom: 64px;
+  }
+}
 .footer-main-wrapper .footer-main > .attention-div > div p {
   opacity: 1;
   color: #4b4c4d;

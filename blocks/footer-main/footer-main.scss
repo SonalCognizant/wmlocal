@@ -88,6 +88,9 @@
       padding-bottom: 52px;
       max-width: 1275px;
       margin: auto;
+      @include for-tablet {
+        padding-bottom: 64px;
+      }
       > div p {
         opacity: 1;
         color: $--gray-700;
