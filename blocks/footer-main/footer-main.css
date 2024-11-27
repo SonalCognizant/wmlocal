@@ -113,6 +113,7 @@
   letter-spacing: 0px;
   text-align: left;
   line-height: 24px;
+  margin: 0;
 }
 .footer-main-wrapper .footer-main > .attention-div > .social-div {
   display: flex;
