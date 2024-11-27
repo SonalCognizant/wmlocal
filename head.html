@@ -35,9 +35,9 @@ https://assets.adobedtm.com/63b00f92ccdd/cf0bc8611341/launch-14781371ad01-develo
     },
   });
 
-  const buttons = document.querySelectorAll(".button-container a.button");
-
-buttons.forEach((button) => {
+  document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll(".button-container a.button");
+    buttons.forEach((button) => {
   button.addEventListener("click", function(e) {
     console.log("Button clicked vanilla!");
     console.log('test button click ');
@@ -63,6 +63,10 @@ buttons.forEach((button) => {
       });
   });
 });
+});
+ 
+
+
 
   $(document).ready(function () {
     $('.button-container a.button').on('clicks', function (e) {
