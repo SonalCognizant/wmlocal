@@ -49,6 +49,11 @@
       border-bottom: 2px solid $--gray-225;
       max-width: 1275px;
       margin: auto;
+      > div ul li .icon-toprigthtarrow {
+        height: 16px;
+        width: 16px;
+        vertical-align: text-top;
+      }
     }
     > .adobe-div {
       padding: 36px 0 36px 0;
@@ -175,6 +180,7 @@
               height: 14px;
               width: 13.68px;
               padding-left: 4.58px;
+              vertical-align: sub;
             }
           }
         }

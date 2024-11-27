@@ -65,6 +65,11 @@
   max-width: 1275px;
   margin: auto;
 }
+.footer-medadv-wrapper .footer-medadv > .contact-div > div ul li .icon-toprigthtarrow {
+  height: 16px;
+  width: 16px;
+  vertical-align: text-top;
+}
 .footer-medadv-wrapper .footer-medadv > .adobe-div {
   padding: 36px 0 36px 0;
   border-bottom: 2px solid #c2c2c3;
@@ -212,6 +217,7 @@
   height: 14px;
   width: 13.68px;
   padding-left: 4.58px;
+  vertical-align: sub;
 }
 .footer-medadv-wrapper .footer-medadv > div > div > ul {
   list-style: none;
