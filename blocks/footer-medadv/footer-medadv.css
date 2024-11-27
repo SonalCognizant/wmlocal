@@ -171,6 +171,14 @@
   letter-spacing: 0px;
   text-align: left;
   line-height: 20px;
+  margin: 0;
+}
+.footer-medadv-wrapper .footer-medadv > .copyright-div > div > p:last-child {
+  padding-top: 24px;
+  padding-bottom: 0px;
+}
+.footer-medadv-wrapper .footer-medadv > .copyright-div > div > ul > li {
+  font-size: 12px;
 }
 .footer-medadv-wrapper .footer-medadv > div > div > ul {
   list-style: none;
