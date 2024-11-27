@@ -4,7 +4,7 @@
 .footer-main-wrapper {
   background-color: $--blue-50;
   @include for-mobile {
-    padding: 72px 16px 52px 16px;
+    padding: 72px 20px 52px 20px;
   }
   @include for-tablet {
     padding: 72px 36px 52px 36px;

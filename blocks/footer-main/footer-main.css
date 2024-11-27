@@ -7,7 +7,7 @@
 }
 @media (max-width: 480px) {
   .footer-main-wrapper {
-    padding: 72px 16px 52px 16px;
+    padding: 72px 20px 52px 20px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
