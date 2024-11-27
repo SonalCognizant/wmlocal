@@ -190,6 +190,9 @@
     font-size: 14px;
   }
 }
+.footer-medadv-wrapper .footer-medadv > .copyright-div > div > ul {
+  gap: 44px;
+}
 .footer-medadv-wrapper .footer-medadv > .copyright-div > div > ul > li {
   font-size: 12px;
 }
