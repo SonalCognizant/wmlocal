@@ -7,14 +7,13 @@
 https://assets.adobedtm.com/63b00f92ccdd/cf0bc8611341/launch-14781371ad01-development.min.js"
   async
 ></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
-  const domain=window.location.hostname;
-  const pathname=window.location.pathname;
-  const pathsegment= pathname.split('/').filter(segment => segment !=='');
-  const  depth=pathsegment.length;
-  const level1=pathsegment[0] || 'undefined';
-  const level2=pathsegment[1] || 'undefined'; 
+  const domain = window.location.hostname;
+  const pathname = window.location.pathname;
+  const pathsegment = pathname.split('/').filter((segment) => segment !== '');
+  const depth = pathsegment.length;
+  const level1 = pathsegment[0] || 'undefined';
+  const level2 = pathsegment[1] || 'undefined';
   window.adobeDataLayer = window.adobeDataLayer || [];
   adobeDataLayer.push({
     event: 'page_view',
@@ -33,31 +32,5 @@ https://assets.adobedtm.com/63b00f92ccdd/cf0bc8611341/launch-14781371ad01-develo
       site_subcategory_depth: depth,
       environment: 'Prod | Dev',
     },
-  });
-
-  $(document).ready(function () {
-    $('.button-container a.button').on('click', function (e) {
-      console.log('test button click ');
-      const linkClasses=Array.from(e.currentTarget.classList).join(' ');
-
-      const linkHref=e.currentTarget.getAttribute('href');
-      const linkStr = new URL(linkHref);
-      linkStr.search='';
-      const linkUrl=linkStr.href;
-      const linkDomain=linkStr.hostname;
-      const linkID=e.currentTarget.getAttribute('id');
-
-      const isOutBound= linkDomain !== window.location.hostname;
-      adobeDataLayer.push({
-        event: 'click',
-        eventData: {
-          link_classes: linkClasses,
-          link_domain: linkDomain,
-          link_url: linkUrl,
-          link_id: linkID ? linkID : 'undefined',
-          outbound: isOutBound,
-        },
-      });
-    });
   });
 </script>

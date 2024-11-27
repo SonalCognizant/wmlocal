@@ -38,6 +38,10 @@ header .main-header-wrapper .main-header .main-header-section .main-header-nav {
   max-width: 1275px;
   margin: auto;
 }
+header .main-header-wrapper .main-header .main-header-section .main-header-nav a {
+  display: flex;
+  align-items: center;
+}
 @media (max-width: 480px) {
   header .main-header-wrapper .main-header .main-header-section .main-header-nav {
     height: 60px;
