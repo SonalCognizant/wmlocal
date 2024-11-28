@@ -63,34 +63,33 @@
   }
 }
 .footer-provider-wrapper .footer-provider > .claims-div {
-  padding: 36px 0 36px 0;
   border-bottom: 2px solid #c2c2c3;
   max-width: 1275px;
   margin: auto;
 }
 @media (max-width: 480px) {
   .footer-provider-wrapper .footer-provider > .claims-div {
-    padding: 0 16px;
+    padding: 36px 16px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .footer-provider-wrapper .footer-provider > .claims-div {
-    padding: 0 36px;
+    padding: 36px 36px;
   }
 }
 @media (min-width: 1380px) {
   .footer-provider-wrapper .footer-provider > .claims-div {
-    padding: 0 52px;
+    padding: 36px 52px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .footer-provider-wrapper .footer-provider > .claims-div {
-    padding: 0 52px;
+    padding: 36px 52px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .footer-provider-wrapper .footer-provider > .claims-div {
-    padding: 0 36px;
+    padding: 36px 36px;
   }
 }
 .footer-provider-wrapper .footer-provider > .claims-div > div ul li .icon-lock {
@@ -100,34 +99,33 @@
   padding-left: 4px;
 }
 .footer-provider-wrapper .footer-provider > .wellmarkdrug-div {
-  padding: 36px 0 52px 0;
   border-bottom: 2px solid #c2c2c3;
   max-width: 1275px;
   margin: auto;
 }
 @media (max-width: 480px) {
   .footer-provider-wrapper .footer-provider > .wellmarkdrug-div {
-    padding: 0 16px;
+    padding: 36px 16px 52px 16px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .footer-provider-wrapper .footer-provider > .wellmarkdrug-div {
-    padding: 0 36px;
+    padding: 36px 36px 52px 36px;
   }
 }
 @media (min-width: 1380px) {
   .footer-provider-wrapper .footer-provider > .wellmarkdrug-div {
-    padding: 0 52px;
+    padding: 36px 52px 52px 52px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .footer-provider-wrapper .footer-provider > .wellmarkdrug-div {
-    padding: 0 52px;
+    padding: 36px 52px 52px 52px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .footer-provider-wrapper .footer-provider > .wellmarkdrug-div {
-    padding: 0 36px;
+    padding: 36px 36px 52px 36px;
   }
 }
 .footer-provider-wrapper .footer-provider > .wellmarkdrug-div > div ul li .icon-pdf {
@@ -176,34 +174,32 @@
   }
 }
 .footer-provider-wrapper .footer-provider > .copyright-div {
-  padding-top: 36px;
   opacity: 1;
   background-color: #d6e5f1;
-  padding-bottom: 52px;
 }
 @media (max-width: 480px) {
   .footer-provider-wrapper .footer-provider > .copyright-div {
-    padding: 0 16px;
+    padding: 36px 16px 52px 16px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .footer-provider-wrapper .footer-provider > .copyright-div {
-    padding: 0 36px;
+    padding: 36px 36px 52px 36px;
   }
 }
 @media (min-width: 1380px) {
   .footer-provider-wrapper .footer-provider > .copyright-div {
-    padding: 0 52px;
+    padding: 36px 52px 52px 52px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .footer-provider-wrapper .footer-provider > .copyright-div {
-    padding: 0 52px;
+    padding: 36px 52px 52px 52px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .footer-provider-wrapper .footer-provider > .copyright-div {
-    padding: 0 36px;
+    padding: 36px 52px 52px 52px;
   }
 }
 .footer-provider-wrapper .footer-provider > .copyright-div > div {
