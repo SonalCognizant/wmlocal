@@ -67,7 +67,38 @@ const navmenu = JSON.stringify([
     ],
   },
   {
-    title: 'Members', path: 'member', href: '#',
+    title: 'Members',
+    path: 'member',
+    href: '#',
+    children: [
+      {
+        title: 'Members',
+        subChildren: [
+          { title: 'Pay your Bills', href: '/member/pay-your-bill', description: '' },
+          { title: 'Overview', href: '/member/overview', description: '' },
+          { title: 'ID Cards', href: '/member/id-cards', description: '' },
+          { title: 'Health Insurance Basics', href: '/member/health-insurance-basics', description: '' },
+        ],
+      },
+      {
+        title: 'Coverage and Benefits',
+        subChildren: [
+          { title: 'Life Events', href: '/member/coveraage-and-benefits/life-events', description: '' },
+          { title: 'Claims', href: '/member/coveraage-and-benefits/claims', description: '' },
+          { title: 'Coverage While Travelling', href: '/member/coveraage-and-benefits/coverage-while-traveling', description: '' },
+          { title: 'Cost Estimation', href: '/member/coveraage-and-benefits/cost-estimation', description: '' },
+          { title: 'Authorizations & Approvals', href: '/member/coveraage-and-benefits/authorizations-and-approvals', description: '' },
+        ],
+      },
+      {
+        title: 'Prescription Drugs',
+        subChildren: [
+          { title: 'My Wellmark', href: '/member/prescription-drugs-and-pharmacy-benefits/mywellmark', description: '' },
+          { title: 'Biosimilars', href: '/member/prescription-drugs-and-pharmacy-benefits/biosimilars', description: '' },
+          { title: 'Speciality Drugs', href: '/member/prescription-drugs-and-pharmacy-benefits/specialty-drugs', description: '' },
+        ],
+      },
+    ],
   },
   {
     title: 'Employer', path: 'employer', href: '#',
@@ -193,16 +224,15 @@ function renderMegaMenu(nav) {
           child.subChildren.forEach((subchild) => {
             const submenuchild = document.createElement('li');
             const submenuanchor = document.createElement('a');
-            const desc = document.createElement('p');
             submenuanchor.setAttribute('href', subchild.href);
             submenuanchor.append(subchild.title);
+            submenuul.append(submenuchild);
+            submenuchild.append(submenuanchor);
             if (subchild.description) {
+              const desc = document.createElement('p');
               desc.append(subchild.description);
               submenuchild.append(desc);
             }
-            submenuul.append(submenuchild);
-            submenuchild.append(submenuanchor);
-            submenuchild.append(desc);
           });
         }
       });
@@ -224,11 +254,15 @@ function renderMegaMenu(nav) {
   headermenublock.append(headermenuul);
 
   // Logo path
+  const headerlogoanchor = document.createElement('a');
+  headerlogoanchor.setAttribute('href', '/');
   const logoImg = document.createElement('img');
   logoImg.src = '../../images/global/header-logo.png';
-  logoImg.setAttribute('title', 'image');
+  logoImg.setAttribute('title', 'Wellmark Logo');
+  logoImg.setAttribute('alt', 'Wellmark Logo');
   logoImg.className = 'navbar-logo';
-  mainheadernav.append(logoImg);
+  mainheadernav.append(headerlogoanchor);
+  headerlogoanchor.append(logoImg);
 
   // Search path
   const mainheaderright = document.createElement('div');

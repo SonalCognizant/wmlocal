@@ -3,17 +3,20 @@
 <script src="/scripts/scripts.js" type="module"></script>
 <link rel="stylesheet" href="/styles/styles.css" />
 <script
-  src="
-https://assets.adobedtm.com/63b00f92ccdd/cf0bc8611341/launch-14781371ad01-development.min.js"
+  src="https://assets.adobedtm.com/63b00f92ccdd/fc7867b8b4e7/launch-418f1c5afcef-development.min.js"
   async
 ></script>
 <script type="text/javascript">
   const domain = window.location.hostname;
   const pathname = window.location.pathname;
   const pathsegment = pathname.split('/').filter((segment) => segment !== '');
-  const depth = pathsegment.length;
+  const depth = pathsegment.length.toString();
   const level1 = pathsegment[0] || 'undefined';
   const level2 = pathsegment[1] || 'undefined';
+  let env='Dev';
+  if(domain.startsWith('main--')){
+    env='Prod';
+  }
   window.adobeDataLayer = window.adobeDataLayer || [];
   adobeDataLayer.push({
     event: 'page_view',
@@ -30,7 +33,7 @@ https://assets.adobedtm.com/63b00f92ccdd/cf0bc8611341/launch-14781371ad01-develo
       page_type: level1,
       site_subcategory: level2,
       site_subcategory_depth: depth,
-      environment: 'Prod | Dev',
+      environment: env,
     },
   });
 </script>

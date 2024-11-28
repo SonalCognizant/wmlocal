@@ -14,7 +14,7 @@ header {
             .main-header-section{
                 background-color: $--blue-50;
                 padding: $--spacing-m $--spacing-xxl $--spacing-m $--spacing-xxl;
-                border-bottom: 1.5px solid $--blue-100;
+                border-bottom: 2px solid $--blue-100;
                 @include for-mobile {
                     padding: 0;
                     border: none;
@@ -22,6 +22,9 @@ header {
                 @include for-tablet {
                     padding: 0;
                     border: none;
+                }
+                @include for-laptop {
+                    padding: $--spacing-m $--spacing-xl $--spacing-m $--spacing-xl;
                 }
                 .main-header-nav{
                     display: flex;
@@ -85,7 +88,7 @@ header {
                         }
                         @include for-mobile {
                             display: flex;
-                            text-align: center;
+                            text-align: left;
                             padding: $--spacing-s $--spacing-m 9px 17px;
                             border-right: 1px solid $--blue-100;
                             flex-direction: column;
@@ -93,6 +96,7 @@ header {
                             p{
                                 margin: 0;
                                 font-size: 12px;
+                                font-weight: 500;
                             }
                             .close-btn{
                                 display: none;
@@ -103,7 +107,7 @@ header {
                         }
                         @include for-tablet {
                             display: flex;
-                            text-align: center;
+                            text-align: left;
                             padding: $--spacing-s $--spacing-m 9px 17px;
                             border-right: 1px solid $--blue-100;
                             flex-direction: column;
@@ -111,6 +115,7 @@ header {
                             p{
                                 margin: 0;
                                 font-size: 12px;
+                                font-weight: 500;
                             }
                             .close-btn{
                                 display: none;
@@ -128,7 +133,7 @@ header {
                         }
                         @include for-mobile {
                             display: flex;
-                            text-align: center;
+                            text-align: left;
                             padding: 10px $--spacing-m $--spacing-xs 17px;
                             border-left: 1px solid $--blue-100;
                             flex-direction: column;
@@ -136,11 +141,12 @@ header {
                             p{
                                 margin: 0;
                                 font-size: 12px;
+                                font-weight: 500;
                             }
                         }
                         @include for-tablet {
                             display: flex;
-                            text-align: center;
+                            text-align: left;
                             padding: 10px $--spacing-m $--spacing-xs 17px;
                             border-left: 1px solid $--blue-100;
                             flex-direction: column;
@@ -148,6 +154,7 @@ header {
                             p{
                                 margin: 0;
                                 font-size: 12px;
+                                font-weight: 500;
                             }
                         }
                     }
@@ -171,9 +178,9 @@ header {
                                     display: block;
                                     width: 100%;
                                     margin: 0;
-                                    padding: $--spacing-s 0px $--spacing-s 20px;
-                                    border-radius: 1.5px;
-                                    border: 1.5px solid $--blue-100;
+                                    padding: 17px 0px 16px 20px;
+                                    border-radius: 2px;
+                                    border: 2px solid $--blue-100;
                                     background-color: $--white;
                                     color: #6E6E6E;
                                     font-size: 16px;
@@ -183,6 +190,7 @@ header {
                                     height: 52px;
                                     width: 345px;
                                     opacity: 1;
+                                    line-height: 19px;
                                     &:hover {
                                         border: 1px solid $--blue-100;
                                     }
@@ -235,6 +243,9 @@ header {
                         display: block;
                     }
                 }
+                @include for-laptop {
+                    padding: 0 $--spacing-xl;
+                }
                 .header-menu-block{
                     max-width: 1275px;
                     margin: auto;
@@ -261,18 +272,16 @@ header {
                             flex-direction: column;
                         }
                         .header-menu-li{
-                            text-align: center;
+                            text-align: left;
                             text-decoration: none;
                             font-size: 16px;
                             font-family: $--font-roboto;
                             font-weight: 500;
                             @include for-mobile {
-                                text-align: left;
                                 border-bottom: 1px solid $--blue-100;
                                 display: inline-block;
                             }
                             @include for-tablet {
-                                text-align: left;
                                 border-bottom: 1px solid $--blue-100;
                                 display: inline-block;
                             }
@@ -311,7 +320,7 @@ header {
                                 &.menu-active{
                                     a{
                                         color: $--blue-675;
-                                        border-bottom: 1.5px solid $--blue-675; 
+                                        border-bottom: 2px solid $--blue-675; 
                                     }
                                     @include for-mobile{
                                         a{
@@ -345,6 +354,9 @@ header {
                                 @include for-mobile{
                                     padding: $--spacing-m $--spacing-xl;
                                     margin: 0;
+                                    a{
+                                        line-height: 18px;
+                                    }
                                     .header-menu-icon{
                                         .menu-up-arrow{
                                             display: none;
@@ -367,6 +379,9 @@ header {
                                 @include for-tablet{
                                     padding: $--spacing-m $--spacing-xl;
                                     margin: 0;
+                                    a{
+                                        line-height: 18px;
+                                    }
                                     .header-menu-icon{
                                         .menu-up-arrow{
                                             display: none;
@@ -410,7 +425,7 @@ header {
                                                 background: $--blue-50;
                                                 h4{
                                                     margin: 0;
-                                                    border-bottom: 1.5px solid $--gray-100;
+                                                    border-bottom: 2px solid $--gray-100;
                                                     padding: $--spacing-m 0 18px 0;
                                                 }
                                                 li {
@@ -458,7 +473,7 @@ header {
                                                 background: $--blue-50;
                                                 h4{
                                                     margin: 0;
-                                                    border-bottom: 1.5px solid $--gray-100;
+                                                    border-bottom: 2px solid $--gray-100;
                                                     padding: $--spacing-m 0 18px 0;
                                                 }
                                                 li {
@@ -510,7 +525,7 @@ header {
                             &:hover{
                                 a{
                                     color: $--blue-675;
-                                    border-bottom: 1.5px solid $--blue-675;
+                                    border-bottom: 2px solid $--blue-675;
                                     @include for-mobile {
                                         border-bottom: none;
                                         color: $--gray-700;
@@ -556,11 +571,11 @@ header {
                                         display: flex;
                                         flex-direction: row;
                                         background-color: $--white;
-                                        padding: 0 $--spacing-xxl;
+                                        padding: 0 $--spacing-xl;
                                         top: 77px;
                                         gap: 30px;
                                         width: 100%;
-                                        left: -51px;
+                                        left: -37px;
                                         box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.2);
                                         .header-submenu-list {
                                             width: 58%;
@@ -575,7 +590,7 @@ header {
                                                     width: calc((100% - 24px) / 3);
                                                     h4{
                                                         margin: 0;
-                                                        border-bottom: 1.5px solid $--gray-100;
+                                                        border-bottom: 2px solid $--gray-100;
                                                         padding-bottom: 24px;
                                                     }
                                                     li {
@@ -607,9 +622,10 @@ header {
                                             padding: $--spacing-xl;
                                             .image-text-container{
                                                 .default-content-wrapper{
+                                                    padding: 0;
                                                     h4{
                                                         margin: 0;
-                                                        border-bottom: 1.5px solid $--blue-100;
+                                                        border-bottom: 2px solid $--blue-100;
                                                         padding-bottom: $--spacing-l;
                                                     }
                                                 }
@@ -671,7 +687,7 @@ header {
                                                     width: calc((100% - 24px) / 3);
                                                     h4{
                                                         margin: 0;
-                                                        border-bottom: 1.5px solid $--gray-100;
+                                                        border-bottom: 2px solid $--gray-100;
                                                         padding-bottom: 24px;
                                                     }
                                                     li {
@@ -703,9 +719,10 @@ header {
                                             padding: $--spacing-xl;
                                             .image-text-container{
                                                 .default-content-wrapper{
+                                                    padding: 0;
                                                     h4{
                                                         margin: 0;
-                                                        border-bottom: 1.5px solid $--blue-100;
+                                                        border-bottom: 2px solid $--blue-100;
                                                         padding-bottom: $--spacing-l;
                                                     }
                                                 }
@@ -767,7 +784,7 @@ header {
                                                     width: calc((100% - 24px) / 3);
                                                     h4{
                                                         margin: 0;
-                                                        border-bottom: 1.5px solid $--gray-100;
+                                                        border-bottom: 2px solid $--gray-100;
                                                         padding-bottom: 24px;
                                                     }
                                                     li {
@@ -799,9 +816,10 @@ header {
                                             padding: $--spacing-xl;
                                             .image-text-container{
                                                 .default-content-wrapper{
+                                                    padding: 0;
                                                     h4{
                                                         margin: 0;
-                                                        border-bottom: 1.5px solid $--blue-100;
+                                                        border-bottom: 2px solid $--blue-100;
                                                         padding-bottom: $--spacing-l;
                                                     }
                                                 }
