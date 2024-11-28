@@ -3,22 +3,22 @@
 
 .footer-medadv-wrapper {
   background-color: $--blue-50;
+  @include for-mobile {
+    padding: 72px 16px 52px 16px;
+  }
+  @include for-tablet {
+    padding: 72px 36px 52px 36px;
+  }
+  @include for-xlarge {
+    padding: 72px 52px 52px 52px;
+  }
+  @include for-large {
+    padding: 72px 52px 52px 52px;
+  }
+  @include for-laptop {
+    padding: 72px 36px 52px 36px;
+  }
   .footer-medadv {
-    @include for-mobile {
-      padding: 72px 16px 52px 16px;
-    }
-    @include for-tablet {
-      padding: 72px 36px 52px 36px;
-    }
-    @include for-xlarge {
-      padding: 72px 52px 36px 52px;
-    }
-    @include for-large {
-      padding: 72px 52px 36px 52px;
-    }
-    @include for-laptop {
-      padding: 72px 36px 52px 36px;
-    }
     > .logo-social-div {
       display: flex;
       align-items: center;
@@ -30,7 +30,7 @@
         gap: 11px;
         > p {
           display: flex;
-          gap: 11px;
+          gap: 12px;
           > a > span {
             height: 40px;
             width: 40px;
@@ -49,6 +49,12 @@
       border-bottom: 2px solid $--gray-225;
       max-width: 1275px;
       margin: auto;
+      > div ul li .icon-toprigthtarrow {
+        height: 16px;
+        width: 16px;
+        vertical-align: text-top;
+        padding-left: 4px;
+      }
     }
     > .adobe-div {
       padding: 36px 0 36px 0;
@@ -63,7 +69,7 @@
       > div ul {
         padding-bottom: 24px;
       }
-      > div #language-assistance {
+      > div h4 {
         padding-bottom: 4px;
         opacity: 1;
         color: $--gray-700;
@@ -71,7 +77,9 @@
         font-size: 16px;
         font-weight: 700;
         letter-spacing: 0px;
-        line-height: 24px;
+        text-align: left;
+        line-height: 20px;
+        margin: 0;
       }
       > div h3 {
         margin: 0;
@@ -103,7 +111,7 @@
         padding-top: 36px;
         > p {
           display: flex;
-          gap: 11px;
+          gap: 12px;
           > a > span {
             height: 40px;
             width: 40px;
@@ -127,24 +135,54 @@
       }
     }
     > .copyright-div {
-      padding: 36px 0;
+      padding-top: 36px;
       opacity: 1;
       background-color: $--blue-100;
       > div {
         max-width: 1275px;
         margin: auto;
         > p {
-          p {
-            padding-bottom: 24px;
-            opacity: 1;
-            color: $--gray-700;
-            font-family: $--font-roboto;
+          padding-bottom: 24px;
+          opacity: 1;
+          color: $--gray-700;
+          font-family: $--font-roboto;
+          font-size: 12px;
+          font-weight: 400;
+          font-style: Regular;
+          letter-spacing: 0px;
+          text-align: left;
+          line-height: 20px;
+          margin: 0;
+          &:last-child {
+            padding-top: 24px;
+            padding-bottom: 0px;
             font-size: 12px;
-            font-weight: 400;
-            font-style: Regular;
-            letter-spacing: 0px;
-            text-align: left;
-            line-height: 20px;
+          }
+          @include for-mobile {
+            font-size: 14px;
+          }
+          @include for-tablet {
+            font-size: 14px;
+          }
+        }
+        > ul {
+          @include for-laptop {
+            gap: 44px;
+          }
+          @include for-xlarge {
+            gap: 44px;
+          }
+          @include for-large {
+            gap: 44px;
+          }
+          > li {
+            font-size: 12px;
+            > .icon-pdf {
+              height: 14px;
+              width: 13.68px;
+              padding-left: 4.58px;
+              vertical-align: sub;
+            }
           }
         }
       }
