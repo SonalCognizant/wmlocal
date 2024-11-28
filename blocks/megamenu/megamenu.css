@@ -655,6 +655,9 @@ header .main-header-wrapper .main-header .main-header-menu .header-menu-block .h
     background: #f3f9ff;
     padding: 36px;
   }
+  header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li:hover .header-menu-item .menu-submenu-content .image-text-container .default-content-wrapper {
+    padding: 0;
+  }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li:hover .header-menu-item .menu-submenu-content .image-text-container .default-content-wrapper h4 {
     margin: 0;
     border-bottom: 1.5px solid #d6e5f1;
