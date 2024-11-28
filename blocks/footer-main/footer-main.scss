@@ -223,17 +223,43 @@
           margin: 0;
         }
         > ul {
-          @include for-laptop {
-            gap: 33px;
-          }
-          @include for-xlarge {
-            gap: 33px;
-          }
-          @include for-large {
-            gap: 33px;
-          }
           > li {
             font-size: 12px;
+            > a {
+              @include for-laptop {
+                padding: 0 16px;
+                border-right: 1px solid $--gray-700;
+                &:first-child {
+                  padding-left: 0;
+                }
+                &:last-child {
+                  border-right: none;
+                  padding-right: 0;
+                }
+              }
+              @include for-xlarge {
+                padding: 0 16px;
+                border-right: 1px solid $--gray-700;
+                &:first-child {
+                  padding-left: 0;
+                }
+                &:last-child {
+                  border-right: none;
+                  padding-right: 0;
+                }
+              }
+              @include for-large {
+                padding: 0 16px;
+                border-right: 1px solid $--gray-700;
+                &:first-child {
+                  padding-left: 0;
+                }
+                &:last-child {
+                  border-right: none;
+                  padding-right: 0;
+                }
+              }              
+            }
           }
         }
       }
