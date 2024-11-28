@@ -42,17 +42,17 @@
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div {
-    gap: 72px;
+    gap: calc((100% - 330px) / 12 + 60px);
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div {
-    gap: 96px;
+    gap: calc((100% - 330px) / 12 + 60px);
   }
 }
 @media (min-width: 1380px) {
   .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div {
-    gap: 96px;
+    gap: calc((100% - 330px) / 12 + 60px);
   }
 }
 .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div > div {
@@ -68,9 +68,39 @@
     column-gap: 24px;
   }
 }
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div > div {
+    width: calc((100% - 30px) / 2);
+    min-width: calc((100% - 30px) / 2);
+  }
+}
 .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div > .columns-img-col {
   order: 0;
   align-self: flex-start;
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div > .columns-img-col {
+    width: calc((100% - 30px) / 2);
+    min-width: calc((100% - 30px) / 2);
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div > .columns-img-col {
+    width: calc((100% - 30px) / 2);
+    min-width: calc((100% - 30px) / 2);
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div > .columns-img-col {
+    width: calc((100% - 30px) / 2);
+    min-width: calc((100% - 30px) / 2);
+  }
+}
+@media (min-width: 1380px) {
+  .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div > .columns-img-col {
+    width: calc((100% - 30px) / 2);
+    min-width: calc((100% - 30px) / 2);
+  }
 }
 .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div > .columns-col img {
   display: block;

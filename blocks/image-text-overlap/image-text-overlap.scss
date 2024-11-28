@@ -15,6 +15,12 @@
               flex-direction: row;
               gap: 30px;
             }
+            @include for-large {
+              gap: calc(((100% - (11 * 30px)) / 12) + 60px);
+            }
+            @include for-xlarge {
+              gap: calc(((100% - (11 * 30px)) / 12) + 60px);
+            }
             >div:has(h2) {
               order: 1;
               position: relative;
@@ -25,6 +31,8 @@
                 padding: $--spacing-huge 0 $--spacing-huge $--spacing-xl;
               }
               @include for-laptop {
+                min-width: calc(50% - 51px);
+                max-width: calc(50% - 51px);
                 padding: $--spacing-huge 0 $--spacing-huge $--spacing-xl;
               }
               @include for-large {
@@ -40,24 +48,30 @@
                 flex-flow: row wrap;
                 text-align: left;
                 column-gap: 24px;
-                width: 50%;
               }
             }
             >.columns-img-col {
               order: 0;
-              width: 50%;
               @include for-mobile {
                 padding: 0;
                 width: 100%;
               }
               @include for-tablet {
                 padding: 0 $--spacing-xl 0 0;
+                width: calc(50% - 51px);
               }
               @include for-laptop {
                 padding: 0 $--spacing-xl 0 0;
+                width: calc(50% - 51px);
               }
               @include for-large {
                 padding: 0 $--spacing-xxl 0 0;
+                width: calc((100% - 30px) / 2);
+                min-width: calc((100% - 30px) / 2);
+              }
+              @include for-xlarge {
+                width: calc((100% - 30px) / 2);
+                min-width: calc((100% - 30px) / 2);
               }
             }
             >.columns-col img {
