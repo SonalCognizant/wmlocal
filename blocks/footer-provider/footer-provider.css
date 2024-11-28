@@ -3,7 +3,7 @@
 /* wellmark spacing size start */
 /* wellmark spacing size start */
 .footer-provider-wrapper {
-  max-width: unset;
+  max-width: unset !important;
   margin: 0 !important;
   background-color: #f3f9ff;
   padding-top: 72px;

@@ -2,7 +2,7 @@
 @import "../../styles/include/tokens.scss";
 
 .footer-provider-wrapper {
-  max-width: unset;
+  max-width: unset !important;
   margin: 0 !important;
   background-color: $--blue-50;
   padding-top: 72px;
