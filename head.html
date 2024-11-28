@@ -13,6 +13,10 @@
   const depth = pathsegment.length;
   const level1 = pathsegment[0] || 'undefined';
   const level2 = pathsegment[1] || 'undefined';
+  let env='Dev';
+  if(domain.startsWith('main--')){
+    env='Prod';
+  }
   window.adobeDataLayer = window.adobeDataLayer || [];
   adobeDataLayer.push({
     event: 'page_view',
@@ -29,7 +33,7 @@
       page_type: level1,
       site_subcategory: level2,
       site_subcategory_depth: depth,
-      environment: 'Prod | Dev',
+      environment: env,
     },
   });
 </script>
