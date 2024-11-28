@@ -30,13 +30,13 @@
               gap: 30px;
             }
             @include for-laptop {
-              gap: $--spacing-huge;
+              gap: calc(((100% - (11 * 30px)) / 12) + 60px);
             }
             @include for-large {
-              gap: $--spacing-jumbo;
+              gap: calc(((100% - (11 * 30px)) / 12) + 60px);
             }
             @include for-xlarge {
-              gap: $--spacing-jumbo;
+              gap: calc(((100% - (11 * 30px)) / 12) + 60px);
             }
             >div {
               order: 1;
@@ -48,10 +48,30 @@
                 text-align: left;
                 column-gap: 24px;
               }
+              @include for-tablet {
+                width: calc((100% - 30px) / 2);
+                min-width: calc((100% - 30px) / 2);
+              }
             }
             >.columns-img-col {
               order: 0;
               align-self: flex-start;
+              @include for-tablet {
+                width: calc((100% - 30px) / 2);
+                min-width: calc((100% - 30px) / 2);
+              }
+              @include for-laptop {
+                width: calc((100% - 30px) / 2);
+                min-width: calc((100% - 30px) / 2);
+              }
+              @include for-large {
+                width: calc((100% - 30px) / 2);
+                min-width: calc((100% - 30px) / 2);
+              }
+              @include for-xlarge {
+                width: calc((100% - 30px) / 2);
+                min-width: calc((100% - 30px) / 2);
+              }
             }
             >.columns-col img {
               display: block;
