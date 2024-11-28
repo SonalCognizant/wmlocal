@@ -76,3 +76,40 @@ a:any-link {
 .background-blue-50 {
   background-color: $--blue-50;
 }
+
+/* Auto block css start */
+
+.section{
+  .text-container {
+    .text-wrapper{
+      padding: $--spacing-huge $--spacing-m;
+      @include for-tablet {
+        padding: $--spacing-jumbo $--spacing-xl;
+      }
+      @include for-laptop {
+        padding: $--spacing-max $--spacing-xl;
+      }
+      @include for-large {
+        padding: $--spacing-max $--spacing-xxl;
+      }
+      @include for-xlarge {
+        padding: $--spacing-max 0;
+      }
+    }
+  }
+  .default-content-wrapper{
+    padding: $--spacing-huge $--spacing-m;
+    @include for-tablet {
+      padding: $--spacing-jumbo $--spacing-xl;
+    }
+    @include for-laptop {
+      padding: $--spacing-max $--spacing-xl;
+    }
+    @include for-large {
+      padding: $--spacing-max $--spacing-xxl;
+    }
+    @include for-xlarge {
+      padding: $--spacing-max 0;
+    }
+  }
+}
