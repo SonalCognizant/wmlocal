@@ -13,6 +13,21 @@
       justify-content: space-between;
       max-width: 1275px;
       margin: auto;
+      @include for-mobile {
+        padding: 0 16px;
+      }
+      @include for-tablet {
+        padding: 0 36px;
+      }
+      @include for-xlarge {
+        padding: 0 52px;
+      }
+      @include for-large {
+        padding: 0 52px;
+      }
+      @include for-laptop {
+        padding: 0 36px;
+      }
       > .social-div {
         display: flex;
         gap: 12px;
@@ -37,6 +52,21 @@
       border-bottom: 2px solid $--gray-225;
       max-width: 1275px;
       margin: auto;
+      @include for-mobile {
+        padding: 0 16px;
+      }
+      @include for-tablet {
+        padding: 0 36px;
+      }
+      @include for-xlarge {
+        padding: 0 52px;
+      }
+      @include for-large {
+        padding: 0 52px;
+      }
+      @include for-laptop {
+        padding: 0 36px;
+      }
       > div ul li .icon-lock {
         height: 19px;
         width: 16.29px;
@@ -49,6 +79,21 @@
       border-bottom: 2px solid $--gray-225;
       max-width: 1275px;
       margin: auto;
+      @include for-mobile {
+        padding: 0 16px;
+      }
+      @include for-tablet {
+        padding: 0 36px;
+      }
+      @include for-xlarge {
+        padding: 0 52px;
+      }
+      @include for-large {
+        padding: 0 52px;
+      }
+      @include for-laptop {
+        padding: 0 36px;
+      }
       > div ul li .icon-pdf {
         height: 19px;
         width: 16.29px;
@@ -90,6 +135,21 @@
       opacity: 1;
       background-color: $--blue-100;
       padding-bottom: 52px;
+      @include for-mobile {
+        padding: 0 16px;
+      }
+      @include for-tablet {
+        padding: 0 36px;
+      }
+      @include for-xlarge {
+        padding: 0 52px;
+      }
+      @include for-large {
+        padding: 0 52px;
+      }
+      @include for-laptop {
+        padding: 0 36px;
+      }
       > div {
         max-width: 1275px;
         margin: auto;
