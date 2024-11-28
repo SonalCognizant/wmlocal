@@ -231,34 +231,49 @@
           }
           @include for-large {
             gap: 0;
-          } 
+          }
           > li {
             font-size: 12px;
             @include for-laptop {
-              > &:first-child a {
+              > &:first-child {
+                > a {
+                  padding-left: 0;
+                }
                 padding-left: 0;
               }
-              > &:last-child a {
-                padding-right: 0;
-                border: none;
+              > &:last-child {
+                > a {
+                  padding-right: 0;
+                  border: none;
+                }
               }
             }
             @include for-xlarge {
-              > &:first-child a {
+              > &:first-child {
+                > a {
+                  padding-left: 0;
+                }
                 padding-left: 0;
               }
-              > &:last-child a {
-                padding-right: 0;
-                border: none;
+              > &:last-child {
+                > a {
+                  padding-right: 0;
+                  border: none;
+                }
               }
             }
             @include for-large {
-              > &:first-child a {
+              > &:first-child {
+                > a {
+                  padding-left: 0;
+                }
                 padding-left: 0;
               }
-              > &:last-child a {
-                padding-right: 0;
-                border: none;
+              > &:last-child {
+                > a {
+                  padding-right: 0;
+                  border: none;
+                }
               }
             }
             > a {
@@ -273,7 +288,7 @@
               @include for-large {
                 padding: 0 16px;
                 border-right: 1px solid $--gray-700;
-              }              
+              }
             }
           }
         }

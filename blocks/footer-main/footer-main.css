@@ -317,28 +317,37 @@
   font-size: 12px;
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
-  > .footer-main-wrapper .footer-main > .copyright-div > div > ul > li:first-child a {
+  > .footer-main-wrapper .footer-main > .copyright-div > div > ul > li:first-child {
     padding-left: 0;
   }
-  > .footer-main-wrapper .footer-main > .copyright-div > div > ul > li:last-child a {
+  > .footer-main-wrapper .footer-main > .copyright-div > div > ul > li:first-child > a {
+    padding-left: 0;
+  }
+  > .footer-main-wrapper .footer-main > .copyright-div > div > ul > li:last-child > a {
     padding-right: 0;
     border: none;
   }
 }
 @media (min-width: 1380px) {
-  > .footer-main-wrapper .footer-main > .copyright-div > div > ul > li:first-child a {
+  > .footer-main-wrapper .footer-main > .copyright-div > div > ul > li:first-child {
     padding-left: 0;
   }
-  > .footer-main-wrapper .footer-main > .copyright-div > div > ul > li:last-child a {
+  > .footer-main-wrapper .footer-main > .copyright-div > div > ul > li:first-child > a {
+    padding-left: 0;
+  }
+  > .footer-main-wrapper .footer-main > .copyright-div > div > ul > li:last-child > a {
     padding-right: 0;
     border: none;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
-  > .footer-main-wrapper .footer-main > .copyright-div > div > ul > li:first-child a {
+  > .footer-main-wrapper .footer-main > .copyright-div > div > ul > li:first-child {
     padding-left: 0;
   }
-  > .footer-main-wrapper .footer-main > .copyright-div > div > ul > li:last-child a {
+  > .footer-main-wrapper .footer-main > .copyright-div > div > ul > li:first-child > a {
+    padding-left: 0;
+  }
+  > .footer-main-wrapper .footer-main > .copyright-div > div > ul > li:last-child > a {
     padding-right: 0;
     border: none;
   }
