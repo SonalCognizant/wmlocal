@@ -7,6 +7,8 @@ export default function decorate(block) {
   const logoImg = document.createElement('img');
   logoImg.src = '../../images/global/Logo.png';
   logoImg.className = 'logo-img';
+  logoImg.alt = 'wellmark-logo';
+  logoImg.title = 'logo';
   const logoDiv = block.children[0];
   const imgDiv = document.createElement('div');
   imgDiv.append(logoImg);
