@@ -15,6 +15,7 @@ function buttonAnalytics() {
         const linkID = e.currentTarget.getAttribute('id');
 
         const isOutBound = linkDomain !== window.location.hostname;
+        const isOutBoundString = String(isOutBound);
         window.adobeDataLayer.push({
           event: 'click',
           eventData: {
@@ -22,7 +23,7 @@ function buttonAnalytics() {
             link_domain: linkDomain,
             link_url: linkUrl,
             link_id: linkID || 'undefined',
-            outbound: String(isOutBound),
+            outbound: isOutBoundString,
           },
         });
       });
