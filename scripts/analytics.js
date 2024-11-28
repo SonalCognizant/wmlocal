@@ -22,7 +22,7 @@ function buttonAnalytics() {
             link_domain: linkDomain,
             link_url: linkUrl,
             link_id: linkID || 'undefined',
-            outbound: isOutBound,
+            outbound: String.valueOf(isOutBound),
           },
         });
       });
