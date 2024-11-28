@@ -232,45 +232,42 @@
           @include for-large {
             gap: 0;
           }
-          > li {
+           li {
             font-size: 12px;
             @include for-laptop {
-              > &:first-child {
-                > a {
+              &:first-child {
+                a {
                   padding-left: 0;
                 }
-                padding-left: 0;
               }
-              > &:last-child {
-                > a {
+              &:last-child {
+                a {
                   padding-right: 0;
                   border: none;
                 }
               }
             }
             @include for-xlarge {
-              > &:first-child {
-                > a {
+              &:first-child {
+                a {
                   padding-left: 0;
                 }
-                padding-left: 0;
               }
-              > &:last-child {
-                > a {
+              &:last-child {
+                a {
                   padding-right: 0;
                   border: none;
                 }
               }
             }
             @include for-large {
-              > &:first-child {
-                > a {
+              &:first-child {
+                a {
                   padding-left: 0;
                 }
-                padding-left: 0;
               }
-              > &:last-child {
-                > a {
+              &:last-child {
+                a {
                   padding-right: 0;
                   border: none;
                 }
