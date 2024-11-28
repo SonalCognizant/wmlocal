@@ -14,7 +14,7 @@ header {
             .main-header-section{
                 background-color: $--blue-50;
                 padding: $--spacing-m $--spacing-xxl $--spacing-m $--spacing-xxl;
-                border-bottom: 1.5px solid $--blue-100;
+                border-bottom: 2px solid $--blue-100;
                 @include for-mobile {
                     padding: 0;
                     border: none;
@@ -179,8 +179,8 @@ header {
                                     width: 100%;
                                     margin: 0;
                                     padding: 17px 0px 16px 20px;
-                                    border-radius: 1.5px;
-                                    border: 1.5px solid $--blue-100;
+                                    border-radius: 2px;
+                                    border: 2px solid $--blue-100;
                                     background-color: $--white;
                                     color: #6E6E6E;
                                     font-size: 16px;
@@ -320,7 +320,7 @@ header {
                                 &.menu-active{
                                     a{
                                         color: $--blue-675;
-                                        border-bottom: 1.5px solid $--blue-675; 
+                                        border-bottom: 2px solid $--blue-675; 
                                     }
                                     @include for-mobile{
                                         a{
@@ -425,7 +425,7 @@ header {
                                                 background: $--blue-50;
                                                 h4{
                                                     margin: 0;
-                                                    border-bottom: 1.5px solid $--gray-100;
+                                                    border-bottom: 2px solid $--gray-100;
                                                     padding: $--spacing-m 0 18px 0;
                                                 }
                                                 li {
@@ -473,7 +473,7 @@ header {
                                                 background: $--blue-50;
                                                 h4{
                                                     margin: 0;
-                                                    border-bottom: 1.5px solid $--gray-100;
+                                                    border-bottom: 2px solid $--gray-100;
                                                     padding: $--spacing-m 0 18px 0;
                                                 }
                                                 li {
@@ -525,7 +525,7 @@ header {
                             &:hover{
                                 a{
                                     color: $--blue-675;
-                                    border-bottom: 1.5px solid $--blue-675;
+                                    border-bottom: 2px solid $--blue-675;
                                     @include for-mobile {
                                         border-bottom: none;
                                         color: $--gray-700;
@@ -590,7 +590,7 @@ header {
                                                     width: calc((100% - 24px) / 3);
                                                     h4{
                                                         margin: 0;
-                                                        border-bottom: 1.5px solid $--gray-100;
+                                                        border-bottom: 2px solid $--gray-100;
                                                         padding-bottom: 24px;
                                                     }
                                                     li {
@@ -625,7 +625,7 @@ header {
                                                     padding: 0;
                                                     h4{
                                                         margin: 0;
-                                                        border-bottom: 1.5px solid $--blue-100;
+                                                        border-bottom: 2px solid $--blue-100;
                                                         padding-bottom: $--spacing-l;
                                                     }
                                                 }
@@ -687,7 +687,7 @@ header {
                                                     width: calc((100% - 24px) / 3);
                                                     h4{
                                                         margin: 0;
-                                                        border-bottom: 1.5px solid $--gray-100;
+                                                        border-bottom: 2px solid $--gray-100;
                                                         padding-bottom: 24px;
                                                     }
                                                     li {
@@ -719,9 +719,10 @@ header {
                                             padding: $--spacing-xl;
                                             .image-text-container{
                                                 .default-content-wrapper{
+                                                    padding: 0;
                                                     h4{
                                                         margin: 0;
-                                                        border-bottom: 1.5px solid $--blue-100;
+                                                        border-bottom: 2px solid $--blue-100;
                                                         padding-bottom: $--spacing-l;
                                                     }
                                                 }
@@ -783,7 +784,7 @@ header {
                                                     width: calc((100% - 24px) / 3);
                                                     h4{
                                                         margin: 0;
-                                                        border-bottom: 1.5px solid $--gray-100;
+                                                        border-bottom: 2px solid $--gray-100;
                                                         padding-bottom: 24px;
                                                     }
                                                     li {
@@ -815,9 +816,10 @@ header {
                                             padding: $--spacing-xl;
                                             .image-text-container{
                                                 .default-content-wrapper{
+                                                    padding: 0;
                                                     h4{
                                                         margin: 0;
-                                                        border-bottom: 1.5px solid $--blue-100;
+                                                        border-bottom: 2px solid $--blue-100;
                                                         padding-bottom: $--spacing-l;
                                                     }
                                                 }
