@@ -13,6 +13,21 @@
       justify-content: space-between;
       max-width: 1275px;
       margin: auto;
+      @include for-mobile {
+        padding: 0 20px;
+      }
+      @include for-tablet {
+        padding: 0 36px;
+      }
+      @include for-xlarge {
+        padding: 0 52px;
+      }
+      @include for-large {
+        padding: 0 52px;
+      }
+      @include for-laptop {
+        padding: 0 36px;
+      }
       > .social-div {
         display: flex;
         gap: 12px;

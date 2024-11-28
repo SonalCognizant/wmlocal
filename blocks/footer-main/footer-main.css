@@ -15,6 +15,31 @@
   max-width: 1275px;
   margin: auto;
 }
+@media (max-width: 480px) {
+  .footer-main-wrapper .footer-main > .logo-social-div {
+    padding: 0 20px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .footer-main-wrapper .footer-main > .logo-social-div {
+    padding: 0 36px;
+  }
+}
+@media (min-width: 1380px) {
+  .footer-main-wrapper .footer-main > .logo-social-div {
+    padding: 0 52px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .footer-main-wrapper .footer-main > .logo-social-div {
+    padding: 0 52px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .footer-main-wrapper .footer-main > .logo-social-div {
+    padding: 0 36px;
+  }
+}
 .footer-main-wrapper .footer-main > .logo-social-div > .social-div {
   display: flex;
   gap: 12px;
