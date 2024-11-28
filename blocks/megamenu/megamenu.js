@@ -67,7 +67,9 @@ const navmenu = JSON.stringify([
     ],
   },
   {
-    title: 'Members', path: 'member', href: '#',
+    title: 'Members',
+    path: 'member',
+    href: '#',
     children: [
       {
         title: 'Members',
@@ -75,7 +77,7 @@ const navmenu = JSON.stringify([
           { title: 'Pay your Bills', href: '/member/pay-your-bill', description: '' },
           { title: 'Overview', href: '/member/overview', description: '' },
           { title: 'ID Cards', href: '/member/id-cards', description: '' },
-		  { title: 'Health Insurance Basics', href: '/member/health-insurance-basics', description: '' },
+          { title: 'Health Insurance Basics', href: '/member/health-insurance-basics', description: '' },
         ],
       },
       {
@@ -84,8 +86,8 @@ const navmenu = JSON.stringify([
           { title: 'Life Events', href: '/member/coveraage-and-benefits/life-events', description: '' },
           { title: 'Claims', href: '/member/coveraage-and-benefits/claims', description: '' },
           { title: 'Coverage While Travelling', href: '/member/coveraage-and-benefits/coverage-while-traveling', description: '' },
-		  { title: 'Cost Estimation', href: '/member/coveraage-and-benefits/cost-estimation', description: '' },
-		  { title: 'Authorizations & Approvals', href: '/member/coveraage-and-benefits/authorizations-and-approvals', description: '' },
+          { title: 'Cost Estimation', href: '/member/coveraage-and-benefits/cost-estimation', description: '' },
+          { title: 'Authorizations & Approvals', href: '/member/coveraage-and-benefits/authorizations-and-approvals', description: '' },
         ],
       },
       {
