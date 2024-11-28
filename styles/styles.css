@@ -198,6 +198,54 @@ a:any-link {
   background-color: #f3f9ff;
 }
 
+/* Auto block css start */
+.section .text-container .text-wrapper {
+  padding: 72px 16px;
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .section .text-container .text-wrapper {
+    padding: 96px 36px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .section .text-container .text-wrapper {
+    padding: 120px 36px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .section .text-container .text-wrapper {
+    padding: 120px 52px;
+  }
+}
+@media (min-width: 1380px) {
+  .section .text-container .text-wrapper {
+    padding: 120px 0;
+  }
+}
+.section .default-content-wrapper {
+  padding: 72px 16px;
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .section .default-content-wrapper {
+    padding: 96px 36px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .section .default-content-wrapper {
+    padding: 120px 36px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .section .default-content-wrapper {
+    padding: 120px 52px;
+  }
+}
+@media (min-width: 1380px) {
+  .section .default-content-wrapper {
+    padding: 120px 0;
+  }
+}
+
 :root {
   /* colors */
   --background-color: white;
