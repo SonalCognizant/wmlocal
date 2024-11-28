@@ -4,15 +4,15 @@ function buttonAnalytics() {
   document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.button-container a.button');
     buttons.forEach((button) => {
-      button.addEventListener('click', (e) => {
-        const linkClasses = Array.from(e.currentTarget.classList).join(' ');
+      button.addEventListener('click', (event) => {
+        const linkClasses = Array.from(event.currentTarget.classList).join(' ');
 
-        const linkHref = e.currentTarget.getAttribute('href');
+        const linkHref = event.currentTarget.getAttribute('href');
         const linkStr = new URL(linkHref);
         linkStr.search = '';
         const linkUrl = linkStr.href;
         const linkDomain = linkStr.hostname;
-        const linkID = e.currentTarget.getAttribute('id');
+        const linkID = event.currentTarget.getAttribute('id');
 
         const isOutBound = linkDomain !== window.location.hostname;
         const isOutBoundString = String(isOutBound);
