@@ -88,9 +88,23 @@
       }
     }
     > .language-div {
-      padding: 36px 0 24px 0;
       max-width: 1275px;
       margin: auto;
+      @include for-mobile {
+        padding: 36px 20px 24px 20px;
+      }
+      @include for-tablet {
+        padding: 36px 36px 24px 36px;
+      }
+      @include for-xlarge {
+        padding: 36px 52px 24px 52px;
+      }
+      @include for-large {
+        padding: 36px 52px 24px 52px;
+      }
+      @include for-laptop {
+        padding: 36px 36px 24px 36px;
+      }
       > div ul {
         padding-bottom: 24px;
       }
@@ -116,11 +130,22 @@
       }
     }
     > .attention-div {
-      padding-bottom: 52px;
       max-width: 1275px;
       margin: auto;
+      @include for-mobile {
+        padding: 0 20px 52px 20px;
+      }
       @include for-tablet {
-        padding-bottom: 64px;
+        padding: 0 36px 64px 36px;
+      }
+      @include for-xlarge {
+        padding: 0 52px 52px 52px;
+      }
+      @include for-large {
+        padding: 0 52px 52px 52px;
+      }
+      @include for-laptop {
+        padding: 0 36px 52px 36px;
       }
       > div p {
         opacity: 1;
@@ -163,9 +188,24 @@
       }
     }
     > .copyright-div {
-      padding-top: 36px;
+      // padding-top: 36px;
       opacity: 1;
       background-color: $--blue-100;
+      @include for-mobile {
+        padding: 36px 20px 52px 20px;
+      }
+      @include for-tablet {
+        padding: 36px 36px 52px 36px;
+      }
+      @include for-xlarge {
+        padding: 36px 52px 52px 52px;
+      }
+      @include for-large {
+        padding: 36px 52px 52px 52px;
+      }
+      @include for-laptop {
+        padding: 36px 36px 52px 36px;
+      }
       > div {
         max-width: 1275px;
         margin: auto;
