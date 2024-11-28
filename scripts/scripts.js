@@ -15,7 +15,9 @@ import {
   sampleRUM,
 } from './aem.js';
 import { decorateExternalImages } from './externalImage.js';
-import { buttonAnalytics } from './analytics.js';
+import {
+  buttonAnalytics
+} from './analytics.js';
 /**
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
@@ -30,7 +32,6 @@ function buildHeroBlock(main) {
     main.prepend(section);
   }
 }
-
 /**
  * load fonts.css and set a session storage flag
  */
@@ -42,7 +43,6 @@ async function loadFonts() {
     // do nothing
   }
 }
-
 function autolinkModals(doc) {
   doc.addEventListener('click', async (e) => {
     const origin = e.target.closest('a');
@@ -65,7 +65,6 @@ function buildAutoBlocks(main) {
     console.error('Auto Blocking failed', error);
   }
 }
-
 /**
  * Decorates the main element.
  * @param {Element} main The main element
@@ -82,7 +81,6 @@ export function decorateMain(main) {
   decorateExternalImages(main, '//External Image//');
   buttonAnalytics();
 }
-
 /**
  * Loads everything needed to get to LCP.
  * @param {Element} doc The container element
@@ -99,9 +97,7 @@ async function loadEager(doc) {
     doc.body.classList.add('appear');
     await loadSection(main.querySelector('.section'), waitForFirstImage);
   }
-
   sampleRUM.enhance();
-
   try {
     /* if desktop (proxy for fast connection) or fonts already loaded, load fonts.css */
     if (window.innerWidth >= 900 || sessionStorage.getItem('fonts-loaded')) {
@@ -111,28 +107,22 @@ async function loadEager(doc) {
     // do nothing
   }
 }
-
 /**
  * Loads everything that doesn't need to be delayed.
  * @param {Element} doc The container element
  */
 async function loadLazy(doc) {
   autolinkModals(doc);
-
   const main = doc.querySelector('main');
   await loadSections(main);
-
   const { hash } = window.location;
   const element = hash ? doc.getElementById(hash.substring(1)) : false;
   if (hash && element) element.scrollIntoView();
-
   loadHeader(doc.querySelector('header'));
   loadFooter(doc.querySelector('footer'));
-
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
 }
-
 /**
  * Loads everything that happens a lot later,
  * without impacting the user experience.
@@ -142,11 +132,9 @@ function loadDelayed() {
   window.setTimeout(() => import('./delayed.js'), 3000);
   // load anything that can be postponed to the latest here
 }
-
 async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
 }
-
 loadPage();
