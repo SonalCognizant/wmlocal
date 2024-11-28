@@ -3,8 +3,11 @@
 .section.testimonial-container{
   font-family: $--font-roboto;
   .testimonial-wrapper{
-    padding: $--spacing-max $--spacing-xxl;
+    padding: $--spacing-max $--spacing-xl;
     text-align: center;
+    @include for-xlarge{
+      padding: $--spacing-max 0;
+    }
     @include for-laptop{
       padding: $--spacing-max $--spacing-xl;
     }
@@ -20,6 +23,7 @@
       line-height: 38px;
       font-weight: 700;
       color: $--blue-550;
+      margin: 0;
       margin-bottom: $--spacing-huge;
       text-align: center;
       @include for-tablet{
@@ -35,13 +39,13 @@
       &:last-child{
         padding-top: $--spacing-huge;
         @include for-laptop{
-          padding-top: $--spacing-l;
+          padding-top: $--spacing-huge;
         }
         @include for-tablet{
-          padding-top: $--spacing-l;
+          padding-top: $--spacing-xl;
         }
         @include for-mobile{
-          padding-top: $--spacing-l;
+          padding-top: $--spacing-xl;
         }
       }
       .testimonial-link{
@@ -81,10 +85,7 @@
           text-align: left;
           background-color: $--blue-50;
           color: $--gray-700;
-          padding: $--spacing-xl $--spacing-xl $--spacing-jumbo $--spacing-xl;
-          @include for-tablet{
-            margin-bottom: $--spacing-xl;
-          }
+          padding: 45px $--spacing-xl $--spacing-jumbo $--spacing-xl;
           @include for-mobile{
             margin-bottom: $--spacing-l;
           }
@@ -96,6 +97,7 @@
           }
           @include for-laptop {
             width: calc((100% - 72px) / 2);
+            padding-bottom: 20px;
           }
           @include for-tablet {
             flex-basis: calc((100% - 72px) / 1);
@@ -105,7 +107,7 @@
             font-size: 32px;
             line-height: 38px;
             font-weight: 700;
-            margin: $--spacing-xl 0 $--spacing-l 0;
+            margin: 45px 0 $--spacing-l 0;
             @include for-laptop {
               margin: 0;
               margin-top: 45px;
@@ -123,16 +125,23 @@
             font-size: $--spacing-m;
             line-height: $--spacing-l;
             font-weight: 400;
+            margin: 0;
           }
           &:first-child{
             margin-bottom: 0 !important;
           }
-          &:last-child{
-            @include for-tablet{
-              margin-bottom: $--spacing-xxl;
-            }
-            @include for-mobile{
-              margin-bottom: $--spacing-xl;
+          > div{
+            &:last-child{
+              padding: 0;
+              @include for-laptop{
+                padding-top: $--spacing-l;
+              }
+              @include for-tablet{
+                padding-top: $--spacing-l;
+              }
+              @include for-mobile{
+                padding-top: $--spacing-l;
+              }
             }
           }
         }
@@ -146,9 +155,13 @@
       ul{
         li{
           background-color: $--blue-50;
-            width: calc((100% - 104px) / 2) !important;
+          width: calc((100% - 104px) / 2) !important;
+          @include for-xlarge{
+            width: calc((100% / 12)* 7 + 20px) !important;
+          }
             @include for-laptop{
-              width: calc((100% - 104px) / 1) !important;
+              width: calc((100% / 12) * 9) !important;
+              padding-bottom: 61px !important;
             }
             @include for-tablet{
               width: unset !important;
@@ -156,6 +169,16 @@
             @include for-mobile{
               width: unset !important;
             }
+        }
+      }
+    }
+    div{
+      &:last-child{
+        @include for-tablet{
+          padding-top: $--spacing-xxl !important;
+        }
+        @include for-mobile{
+          padding-top: $--spacing-xl !important;
         }
       }
     }
