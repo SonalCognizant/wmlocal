@@ -46,7 +46,7 @@
 }
 .footer-provider-wrapper .footer-provider > .logo-social-div > .social-div > p {
   display: flex;
-  gap: 11px;
+  gap: 12px;
 }
 .footer-provider-wrapper .footer-provider > .logo-social-div > .social-div > p > a > span {
   height: 40px;
@@ -140,7 +140,7 @@
 }
 .footer-provider-wrapper .footer-provider > .wellmarkdrug-div > .social-div > p {
   display: flex;
-  gap: 11px;
+  gap: 12px;
   margin: 0;
   padding-top: 36px;
 }
