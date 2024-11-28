@@ -63,10 +63,34 @@
   }
 }
 .footer-main-wrapper .footer-main > .contact-div {
-  padding: 36px 0 36px 0;
   border-bottom: 2px solid #c2c2c3;
   max-width: 1275px;
   margin: auto;
+}
+@media (max-width: 480px) {
+  .footer-main-wrapper .footer-main > .contact-div {
+    padding: 36px 20px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .footer-main-wrapper .footer-main > .contact-div {
+    padding: 36px 36px;
+  }
+}
+@media (min-width: 1380px) {
+  .footer-main-wrapper .footer-main > .contact-div {
+    padding: 36px 52px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .footer-main-wrapper .footer-main > .contact-div {
+    padding: 36px 52px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .footer-main-wrapper .footer-main > .contact-div {
+    padding: 36px 36px;
+  }
 }
 .footer-main-wrapper .footer-main > .adobe-div {
   padding: 36px 0 36px 0;
