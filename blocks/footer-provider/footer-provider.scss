@@ -2,22 +2,10 @@
 @import "../../styles/include/tokens.scss";
 
 .footer-provider-wrapper {
+  max-width: unset !important;
+  margin: 0 !important;
   background-color: $--blue-50;
-  @include for-mobile {
-    padding: 72px 16px 52px 16px;
-  }
-  @include for-tablet {
-    padding: 72px 36px 52px 36px;
-  }
-  @include for-xlarge {
-    padding: 72px 52px 52px 52px;
-  }
-  @include for-large {
-    padding: 72px 52px 52px 52px;
-  }
-  @include for-laptop {
-    padding: 72px 36px 52px 36px;
-  }
+  padding-top: 72px;
   .footer-provider {
     > .logo-social-div {
       display: flex;
@@ -25,12 +13,27 @@
       justify-content: space-between;
       max-width: 1275px;
       margin: auto;
+      @include for-mobile {
+        padding: 0 16px;
+      }
+      @include for-tablet {
+        padding: 0 36px;
+      }
+      @include for-xlarge {
+        padding: 0 52px;
+      }
+      @include for-large {
+        padding: 0 52px;
+      }
+      @include for-laptop {
+        padding: 0 36px;
+      }
       > .social-div {
         display: flex;
         gap: 12px;
         > p {
           display: flex;
-          gap: 11px;
+          gap: 12px;
           > a > span {
             height: 40px;
             width: 40px;
@@ -45,10 +48,24 @@
       }
     }
     > .claims-div {
-      padding: 36px 0 36px 0;
       border-bottom: 2px solid $--gray-225;
       max-width: 1275px;
       margin: auto;
+      @include for-mobile {
+        padding: 36px 16px;
+      }
+      @include for-tablet {
+        padding: 36px 36px;
+      }
+      @include for-xlarge {
+        padding: 36px 52px;
+      }
+      @include for-large {
+        padding: 36px 52px;
+      }
+      @include for-laptop {
+        padding: 36px 36px;
+      }
       > div ul li .icon-lock {
         height: 19px;
         width: 16.29px;
@@ -57,10 +74,24 @@
       }
     }
     > .wellmarkdrug-div {
-      padding: 36px 0 52px 0;
       border-bottom: 2px solid $--gray-225;
       max-width: 1275px;
       margin: auto;
+      @include for-mobile {
+        padding: 36px 16px 52px 16px;
+      }
+      @include for-tablet {
+        padding: 36px 36px 52px 36px;
+      }
+      @include for-xlarge {
+        padding: 36px 52px 52px 52px;
+      }
+      @include for-large {
+        padding: 36px 52px 52px 52px;
+      }
+      @include for-laptop {
+        padding: 36px 36px 52px 36px;
+      }
       > div ul li .icon-pdf {
         height: 19px;
         width: 16.29px;
@@ -72,7 +103,7 @@
         gap: 12px;
         > p {
           display: flex;
-          gap: 11px;
+          gap: 12px;
           margin: 0;
           padding-top: 36px;
           > a > span {
@@ -98,9 +129,23 @@
       }
     }
     > .copyright-div {
-      padding-top: 36px;
       opacity: 1;
       background-color: $--blue-100;
+      @include for-mobile {
+        padding: 36px 16px 52px 16px;
+      }
+      @include for-tablet {
+        padding: 36px 36px 52px 36px;
+      }
+      @include for-xlarge {
+        padding: 36px 52px 52px 52px;
+      }
+      @include for-large {
+        padding: 36px 52px 52px 52px;
+      }
+      @include for-laptop {
+        padding: 36px 52px 52px 52px;
+      }
       > div {
         max-width: 1275px;
         margin: auto;
