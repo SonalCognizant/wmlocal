@@ -3,32 +3,10 @@
 /* wellmark spacing size start */
 /* wellmark spacing size start */
 .footer-provider-wrapper {
+  width: unset;
+  margin: 0;
   background-color: #f3f9ff;
-}
-@media (max-width: 480px) {
-  .footer-provider-wrapper {
-    padding: 72px 16px 52px 16px;
-  }
-}
-@media (min-width: 480.5px) and (max-width: 1023.5px) {
-  .footer-provider-wrapper {
-    padding: 72px 36px 52px 36px;
-  }
-}
-@media (min-width: 1380px) {
-  .footer-provider-wrapper {
-    padding: 72px 52px 52px 52px;
-  }
-}
-@media (min-width: 1201px) and (max-width: 1379px) {
-  .footer-provider-wrapper {
-    padding: 72px 52px 52px 52px;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1200px) {
-  .footer-provider-wrapper {
-    padding: 72px 36px 52px 36px;
-  }
+  padding-top: 72px;
 }
 .footer-provider-wrapper .footer-provider > .logo-social-div {
   display: flex;
@@ -126,6 +104,7 @@
   padding-top: 36px;
   opacity: 1;
   background-color: #d6e5f1;
+  padding-bottom: 52px;
 }
 .footer-provider-wrapper .footer-provider > .copyright-div > div {
   max-width: 1275px;

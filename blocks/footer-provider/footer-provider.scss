@@ -2,22 +2,10 @@
 @import "../../styles/include/tokens.scss";
 
 .footer-provider-wrapper {
+  width: unset;
+  margin: 0;
   background-color: $--blue-50;
-  @include for-mobile {
-    padding: 72px 16px 52px 16px;
-  }
-  @include for-tablet {
-    padding: 72px 36px 52px 36px;
-  }
-  @include for-xlarge {
-    padding: 72px 52px 52px 52px;
-  }
-  @include for-large {
-    padding: 72px 52px 52px 52px;
-  }
-  @include for-laptop {
-    padding: 72px 36px 52px 36px;
-  }
+  padding-top: 72px;
   .footer-provider {
     > .logo-social-div {
       display: flex;
@@ -101,6 +89,7 @@
       padding-top: 36px;
       opacity: 1;
       background-color: $--blue-100;
+      padding-bottom: 52px;
       > div {
         max-width: 1275px;
         margin: auto;
