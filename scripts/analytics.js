@@ -1,25 +1,56 @@
 /* eslint-env browser */
 
-function callToActionEvent(adobeDataLayer) {
+function isRelativeURL(linkHref) {
+  const url = new URL(linkHref, window.location.href);
+  return url.origin === window.location.origin;
+}
+
+const isOutboundLink = (linkHref) => {
+  let outboundLink = false;
+
+  if (isRelativeURL(linkHref)) {
+    outboundLink = false;
+  } else {
+    const linkURL = new URL(linkHref);
+    if (linkURL.hostname !== window.location.hostname) {
+      outboundLink = true;
+    }
+  }
+  return outboundLink;
+};
+
+const callToActionEvent = (adobeDataLayer, linkHref, event) => {
+  let ctaElementType = event.target.href;
+  if (isOutboundLink(linkHref)) {
+    const url = new URL(linkHref, window.location.href);
+    ctaElementType = url.href;
+  }
+  const ctaClickText = event.target.innerText || event.currentTarget.text;
+  const ctaLocation = window.location.href;
+  const ctaType = event.target.innerText || event.currentTarget.text;
+  const ctaDataInfo = '';
+  const ctaClickImage = '';
+
   adobeDataLayer.push({
     event: 'call_to_action',
     eventData: {
-      cta_element_type: '',
-      cta_click_text: '',
-      cta_data_info: '',
-      cta_click_image: '',
-      cta_location: '',
-      cta_type: '',
+      cta_element_type: ctaElementType,
+      cta_click_text: ctaClickText,
+      cta_data_info: ctaDataInfo,
+      cta_click_image: ctaClickImage,
+      cta_location: ctaLocation,
+      cta_type: ctaType,
     },
   });
-}
+};
 
-function navigationEvent(adobeDataLayer) {
+function navigationEvent(adobeDataLayer, linkHref, event) {
+  const navClickText = event.target.innerText || event.currentTarget.text;
   adobeDataLayer.push({
     event: 'navigation',
-    nav_menu_type: '',
+    nav_menu_type: 'body',
     nav_click_image_alt_text: '',
-    nav_click_text: '',
+    nav_click_text: navClickText,
   });
 }
 
@@ -41,38 +72,23 @@ function clickEvent(adobeDataLayer, linkStr, event) {
   });
 }
 
-function isOutboundLink(linkURL) {
-  let outboundLink = false;
-  if (!linkURL.hostname) {
-    outboundLink = false;
-  }
-  if (linkURL.hostname !== window.location.hostname) {
-    outboundLink = true;
-  }
-  console.log(linkURL, ' ', outboundLink);
-  return outboundLink;
-}
-
 function buttonAnalytics(adobeDataLayer) {
   const buttons = document.querySelectorAll('a');
-  console.log('anchor clicked 2', buttons);
   buttons.forEach((button) => {
     button.addEventListener('click', (event) => {
-      console.log('anchor clicked');
       const linkHref = event.currentTarget.getAttribute('href');
-      const linkURL = new URL(linkHref);
       if (linkHref) {
-        if (isOutboundLink(linkURL)) {
-          clickEvent(adobeDataLayer, linkURL, event);
+        if (isOutboundLink(linkHref)) {
+          clickEvent(adobeDataLayer, linkHref, event);
         }
 
         if (button.classList.contains('button')) {
-          callToActionEvent(adobeDataLayer);
+          callToActionEvent(adobeDataLayer, linkHref, event);
         } else if (
           !button.classList.contains('button') &&
-          !isOutboundLink(linkURL)
+          !isOutboundLink(linkHref)
         ) {
-          navigationEvent(adobeDataLayer);
+          navigationEvent(adobeDataLayer, linkHref, event);
         }
       }
     });
@@ -81,7 +97,6 @@ function buttonAnalytics(adobeDataLayer) {
 
 function analyticsMain() {
   document.addEventListener('DOMContentLoaded', () => {
-    console.log('anchor clicked 1');
     const adobeDataLayer = window.adobeDataLayer || [];
     buttonAnalytics(adobeDataLayer);
   });
