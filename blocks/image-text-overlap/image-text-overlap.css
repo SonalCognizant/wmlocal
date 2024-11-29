@@ -111,19 +111,16 @@
 @media (min-width: 1024px) and (max-width: 1200px) {
   .image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols img {
     margin: -27px 0 -28px 0;
-    height: revert-layer;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols img {
     margin: -68px 0 -70px 0;
-    height: revert-layer;
   }
 }
 @media (min-width: 1380px) {
   .image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols img {
     margin: -68px 0 -70px 0;
-    height: revert-layer;
   }
 }
 .image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols.block h2 {

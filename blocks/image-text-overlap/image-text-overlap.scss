@@ -83,15 +83,12 @@
             display: flex;
             @include for-laptop {
               margin: -27px 0 -28px 0;
-              height: revert-layer;
             }
             @include for-large {
               margin: -68px 0 -70px 0;
-              height: revert-layer;
             }
             @include for-xlarge {
               margin: -68px 0 -70px 0;
-              height: revert-layer;
             }
           }
           &.block {

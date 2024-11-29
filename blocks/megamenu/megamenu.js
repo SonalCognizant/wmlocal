@@ -67,7 +67,9 @@ const navmenu = JSON.stringify([
     ],
   },
   {
-    title: 'Members', path: 'member', href: '#',
+    title: 'Members',
+    path: 'member',
+    href: '#',
     children: [
       {
         title: 'Members',
@@ -75,7 +77,7 @@ const navmenu = JSON.stringify([
           { title: 'Pay your Bills', href: '/member/pay-your-bill', description: '' },
           { title: 'Overview', href: '/member/overview', description: '' },
           { title: 'ID Cards', href: '/member/id-cards', description: '' },
-		  { title: 'Health Insurance Basics', href: '/member/health-insurance-basics', description: '' },
+          { title: 'Health Insurance Basics', href: '/member/health-insurance-basics', description: '' },
         ],
       },
       {
@@ -84,8 +86,8 @@ const navmenu = JSON.stringify([
           { title: 'Life Events', href: '/member/coveraage-and-benefits/life-events', description: '' },
           { title: 'Claims', href: '/member/coveraage-and-benefits/claims', description: '' },
           { title: 'Coverage While Travelling', href: '/member/coveraage-and-benefits/coverage-while-traveling', description: '' },
-		  { title: 'Cost Estimation', href: '/member/coveraage-and-benefits/cost-estimation', description: '' },
-		  { title: 'Authorizations & Approvals', href: '/member/coveraage-and-benefits/authorizations-and-approvals', description: '' },
+          { title: 'Cost Estimation', href: '/member/coveraage-and-benefits/cost-estimation', description: '' },
+          { title: 'Authorizations & Approvals', href: '/member/coveraage-and-benefits/authorizations-and-approvals', description: '' },
         ],
       },
       {
@@ -252,6 +254,8 @@ function renderMegaMenu(nav) {
   headermenublock.append(headermenuul);
 
   // Logo path
+  const headerlogodiv = document.createElement('div');
+  headerlogodiv.classList.add('main-header-logo');
   const headerlogoanchor = document.createElement('a');
   headerlogoanchor.setAttribute('href', '/');
   const logoImg = document.createElement('img');
@@ -259,7 +263,8 @@ function renderMegaMenu(nav) {
   logoImg.setAttribute('title', 'Wellmark Logo');
   logoImg.setAttribute('alt', 'Wellmark Logo');
   logoImg.className = 'navbar-logo';
-  mainheadernav.append(headerlogoanchor);
+  mainheadernav.append(headerlogodiv);
+  headerlogodiv.append(headerlogoanchor);
   headerlogoanchor.append(logoImg);
 
   // Search path
@@ -317,6 +322,11 @@ function renderMegaMenu(nav) {
   setTimeout(() => {
     toggleSearchBar();
   }, 500);
+  const collapsebarmenu = document.createElement('div');
+  collapsebarmenu.classList.add('collapse-bar-menu');
+  const collapsebarclose = document.createElement('div');
+  collapsebarclose.classList.add('collapse-bar-close');
+
   const breadcrumbsicon = document.createElement('img');
   breadcrumbsicon.classList.add('collapse-btn');
   breadcrumbsicon.src = '../../icons/breadcrumbs-icon.svg';
@@ -329,10 +339,12 @@ function renderMegaMenu(nav) {
   const colclose = document.createElement('p');
   colclose.classList.add('collapse-close');
   colclose.innerHTML = ('Close');
-  collapsediv.prepend(breadcrumbsicon);
-  collapsediv.append(collapsemenu);
-  collapsediv.append(collapseclose);
-  collapsediv.append(colclose);
+  collapsediv.append(collapsebarmenu);
+  collapsebarmenu.prepend(breadcrumbsicon);
+  collapsebarmenu.append(collapsemenu);
+  collapsediv.append(collapsebarclose);
+  collapsebarclose.prepend(collapseclose);
+  collapsebarclose.append(colclose);
 
   const searchicon = document.createElement('img');
   searchicon.classList.add('search-btn');
