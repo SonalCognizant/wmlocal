@@ -41,6 +41,7 @@
       line-height: 22px;
       font-weight: 500;
       color: $--primary-675;
+      text-decoration: underline;
       @include for-tablet{
         margin-top: $--spacing-m;
       }
@@ -265,7 +266,7 @@
         }
       }
     }
-    div{
+    > div{
       &:last-child{
         margin-bottom: 0 !important;
         margin-top: 52px !important;
