@@ -55,6 +55,7 @@ function isOutboundLink(linkURL) {
 
 function buttonAnalytics(adobeDataLayer) {
   const buttons = document.querySelectorAll('a');
+  console.log('anchor clicked 2', buttons);
   buttons.forEach((button) => {
     button.addEventListener('click', (event) => {
       console.log('anchor clicked');
