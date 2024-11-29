@@ -243,6 +243,9 @@
       display: flex;
       gap: 52px;
       padding: 0px;
+      @include for-laptop {
+        flex-wrap: wrap;
+      }
       @include for-mobile {
         flex-direction: column;
         gap: 24px;

@@ -299,6 +299,11 @@
   gap: 52px;
   padding: 0px;
 }
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .footer-provider-wrapper .footer-provider > div > div > ul {
+    flex-wrap: wrap;
+  }
+}
 @media (max-width: 480px) {
   .footer-provider-wrapper .footer-provider > div > div > ul {
     flex-direction: column;
