@@ -115,11 +115,6 @@
   color: #4b4c4d;
   padding: 45px 36px 96px 36px;
 }
-@media (max-width: 480px) {
-  .section.testimonial-container .testimonial-wrapper .testimonial ul li {
-    margin-bottom: 24px;
-  }
-}
 @media (min-width: 1380px) {
   .section.testimonial-container .testimonial-wrapper .testimonial ul li {
     width: calc((100% - 104px) / 3);

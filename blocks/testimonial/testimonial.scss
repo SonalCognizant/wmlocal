@@ -86,9 +86,6 @@
           background-color: $--blue-50;
           color: $--gray-700;
           padding: 45px $--spacing-xl $--spacing-jumbo $--spacing-xl;
-          @include for-mobile{
-            margin-bottom: $--spacing-l;
-          }
           @include for-xlarge {
             width: calc((100% - 104px) / 3);
           }
