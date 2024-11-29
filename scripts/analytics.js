@@ -49,6 +49,7 @@ function isOutboundLink(linkURL) {
   if (linkURL.hostname !== window.location.hostname) {
     outboundLink = true;
   }
+  console.log(linkURL, ' ', outboundLink);
   return outboundLink;
 }
 
