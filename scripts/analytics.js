@@ -54,11 +54,11 @@ function navigationEvent(adobeDataLayer, linkHref, event) {
   });
 }
 
-function clickEvent(adobeDataLayer, linkStr, event) {
+function clickEvent(adobeDataLayer, linkHref, event) {
   const linkClasses = Array.from(event.currentTarget.classList).join(' ');
-  linkStr.search = '';
-  const linkUrl = linkStr.href;
-  const linkDomain = linkStr.hostname;
+  const linkURL = new URL(linkHref);
+  const linkUrl = linkURL.href;
+  const linkDomain = linkURL.hostname;
   const linkID = event.currentTarget.getAttribute('id');
   adobeDataLayer.push({
     event: 'click',
@@ -85,8 +85,8 @@ function buttonAnalytics(adobeDataLayer) {
         if (button.classList.contains('button')) {
           callToActionEvent(adobeDataLayer, linkHref, event);
         } else if (
-          !button.classList.contains('button')
-          && !isOutboundLink(linkHref)
+          !button.classList.contains('button') &&
+          !isOutboundLink(linkHref)
         ) {
           navigationEvent(adobeDataLayer, linkHref, event);
         }
