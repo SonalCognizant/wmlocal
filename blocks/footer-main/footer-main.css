@@ -138,12 +138,12 @@
 }
 @media (min-width: 1380px) {
   .footer-main-wrapper .footer-main > .language-div {
-    padding: 36px 52px 24px 52px;
+    padding: 36px 52px 30px 52px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .footer-main-wrapper .footer-main > .language-div {
-    padding: 36px 52px 24px 52px;
+    padding: 36px 52px 30px 52px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
