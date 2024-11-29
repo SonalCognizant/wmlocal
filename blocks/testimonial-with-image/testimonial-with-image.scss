@@ -5,6 +5,9 @@
   .testimonial-with-image-wrapper{
     padding: $--spacing-max $--spacing-xxl;
     text-align: center;
+    @include for-xlarge{
+      padding: $--spacing-max 0;
+    }
     @include for-tablet{
       padding: $--spacing-jumbo $--spacing-xl;
     }

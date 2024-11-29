@@ -9,6 +9,11 @@
   padding: 120px 52px;
   text-align: center;
 }
+@media (min-width: 1380px) {
+  .section.testimonial-with-image-container .testimonial-with-image-wrapper {
+    padding: 120px 0;
+  }
+}
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .section.testimonial-with-image-container .testimonial-with-image-wrapper {
     padding: 96px 36px;
