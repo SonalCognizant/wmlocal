@@ -224,16 +224,69 @@
         }
         > ul {
           @include for-laptop {
-            gap: 33px;
+            gap: 0;
           }
           @include for-xlarge {
-            gap: 33px;
+            gap: 0;
           }
           @include for-large {
-            gap: 33px;
+            gap: 0;
           }
-          > li {
+           li {
             font-size: 12px;
+            @include for-laptop {
+              &:first-child {
+                a {
+                  padding-left: 0;
+                }
+              }
+              &:last-child {
+                a {
+                  padding-right: 0;
+                  border: none;
+                }
+              }
+            }
+            @include for-xlarge {
+              &:first-child {
+                a {
+                  padding-left: 0;
+                }
+              }
+              &:last-child {
+                a {
+                  padding-right: 0;
+                  border: none;
+                }
+              }
+            }
+            @include for-large {
+              &:first-child {
+                a {
+                  padding-left: 0;
+                }
+              }
+              &:last-child {
+                a {
+                  padding-right: 0;
+                  border: none;
+                }
+              }
+            }
+            > a {
+              @include for-laptop {
+                padding: 0 16px;
+                border-right: 1px solid $--gray-700;
+              }
+              @include for-xlarge {
+                padding: 0 16px;
+                border-right: 1px solid $--gray-700;
+              }
+              @include for-large {
+                padding: 0 16px;
+                border-right: 1px solid $--gray-700;
+              }
+            }
           }
         }
       }

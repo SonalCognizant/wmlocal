@@ -94,7 +94,7 @@
       }
       > div ul li .icon-pdf {
         height: 19px;
-        width: 16.29px;
+        width: 18.57px;
         vertical-align: sub;
         padding-left: 4px;
       }
@@ -170,16 +170,69 @@
         }
         > ul {
           @include for-laptop {
-            gap: 44px;
+            gap: 0;
           }
           @include for-xlarge {
-            gap: 44px;
+            gap: 0;
           }
           @include for-large {
-            gap: 44px;
+            gap: 0;
           }
-          > li {
+           li {
             font-size: 12px;
+            @include for-laptop {
+              &:first-child {
+                a {
+                  padding-left: 0;
+                }
+              }
+              &:last-child {
+                a {
+                  padding-right: 0;
+                  border: none;
+                }
+              }
+            }
+            @include for-xlarge {
+              &:first-child {
+                a {
+                  padding-left: 0;
+                }
+              }
+              &:last-child {
+                a {
+                  padding-right: 0;
+                  border: none;
+                }
+              }
+            }
+            @include for-large {
+              &:first-child {
+                a {
+                  padding-left: 0;
+                }
+              }
+              &:last-child {
+                a {
+                  padding-right: 0;
+                  border: none;
+                }
+              }
+            }
+            > a {
+              @include for-laptop {
+                padding: 0 22px;
+                border-right: 1px solid $--gray-700;
+              }
+              @include for-xlarge {
+                padding: 0 22px;
+                border-right: 1px solid $--gray-700;
+              }
+              @include for-large {
+                padding: 0 22px;
+                border-right: 1px solid $--gray-700;
+              }
+            }
           }
         }
       }
