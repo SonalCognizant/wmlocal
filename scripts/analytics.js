@@ -85,8 +85,8 @@ function buttonAnalytics(adobeDataLayer) {
         if (button.classList.contains('button')) {
           callToActionEvent(adobeDataLayer, linkHref, event);
         } else if (
-          !button.classList.contains('button') &&
-          !isOutboundLink(linkHref)
+          !button.classList.contains('button')
+          && !isOutboundLink(linkHref)
         ) {
           navigationEvent(adobeDataLayer, linkHref, event);
         }
