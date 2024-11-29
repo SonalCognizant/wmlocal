@@ -57,7 +57,7 @@ function buttonAnalytics(adobeDataLayer) {
   const buttons = document.querySelectorAll('a');
   buttons.forEach((button) => {
     button.addEventListener('click', (event) => {
-      console.log("anchor clicked");
+      console.log('anchor clicked');
       const linkHref = event.currentTarget.getAttribute('href');
       const linkURL = new URL(linkHref);
       if (linkHref) {
@@ -80,6 +80,7 @@ function buttonAnalytics(adobeDataLayer) {
 
 function analyticsMain() {
   document.addEventListener('DOMContentLoaded', () => {
+    console.log('anchor clicked 1');
     const adobeDataLayer = window.adobeDataLayer || [];
     buttonAnalytics(adobeDataLayer);
   });
