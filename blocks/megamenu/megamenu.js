@@ -254,6 +254,8 @@ function renderMegaMenu(nav) {
   headermenublock.append(headermenuul);
 
   // Logo path
+  const headerlogodiv = document.createElement('div');
+  headerlogodiv.classList.add('main-header-logo');
   const headerlogoanchor = document.createElement('a');
   headerlogoanchor.setAttribute('href', '/');
   const logoImg = document.createElement('img');
@@ -261,7 +263,8 @@ function renderMegaMenu(nav) {
   logoImg.setAttribute('title', 'Wellmark Logo');
   logoImg.setAttribute('alt', 'Wellmark Logo');
   logoImg.className = 'navbar-logo';
-  mainheadernav.append(headerlogoanchor);
+  mainheadernav.append(headerlogodiv);
+  headerlogodiv.append(headerlogoanchor);
   headerlogoanchor.append(logoImg);
 
   // Search path
@@ -319,6 +322,11 @@ function renderMegaMenu(nav) {
   setTimeout(() => {
     toggleSearchBar();
   }, 500);
+  const collapsebarmenu = document.createElement('div');
+  collapsebarmenu.classList.add('collapse-bar-menu');
+  const collapsebarclose = document.createElement('div');
+  collapsebarclose.classList.add('collapse-bar-close');
+
   const breadcrumbsicon = document.createElement('img');
   breadcrumbsicon.classList.add('collapse-btn');
   breadcrumbsicon.src = '../../icons/breadcrumbs-icon.svg';
@@ -331,10 +339,12 @@ function renderMegaMenu(nav) {
   const colclose = document.createElement('p');
   colclose.classList.add('collapse-close');
   colclose.innerHTML = ('Close');
-  collapsediv.prepend(breadcrumbsicon);
-  collapsediv.append(collapsemenu);
-  collapsediv.append(collapseclose);
-  collapsediv.append(colclose);
+  collapsediv.append(collapsebarmenu);
+  collapsebarmenu.prepend(breadcrumbsicon);
+  collapsebarmenu.append(collapsemenu);
+  collapsediv.append(collapsebarclose);
+  collapsebarclose.prepend(collapseclose);
+  collapsebarclose.append(colclose);
 
   const searchicon = document.createElement('img');
   searchicon.classList.add('search-btn');
