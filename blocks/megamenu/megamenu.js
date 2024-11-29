@@ -166,7 +166,7 @@ function renderMegaMenu(nav) {
     navbaranchor.setAttribute('href', item.href);
     navbaranchor.innerText = item.title;
     // Active menu
-    headermenuli.addEventListener('click', (e) => {
+    headermenulink.addEventListener('click', (e) => {
       const navbarselect = e.target?.closest('.header-menu-link');
       if (navbarselect?.classList.contains('menu-active')) {
         navbarselect?.classList.remove('menu-active');
@@ -201,14 +201,11 @@ function renderMegaMenu(nav) {
       headermenuitem.className = 'header-menu-item';
       const headersubmenuul = document.createElement('div');
       headersubmenuul.className = 'header-submenu-ul';
-      navbaranchor.appendChild(headermenuitem);
 
       const headersubmenulist = document.createElement('div');
       headersubmenulist.className = 'header-submenu-list';
       const menusubmenucontent = document.createElement('div');
       menusubmenucontent.className = 'menu-submenu-content';
-      // renderheaderfargment().then((res)=>{console.log('test', res)});
-      // menusubmenucontent.append(renderheaderfargment());
       headermenuitem.appendChild(headersubmenulist);
       headersubmenulist.appendChild(headersubmenuul);
       headermenuitem.appendChild(menusubmenucontent);
