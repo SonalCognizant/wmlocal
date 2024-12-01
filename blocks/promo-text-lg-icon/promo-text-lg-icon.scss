@@ -1,9 +1,9 @@
 @import "../../styles/include/mq.scss";
 @import "../../styles/include/tokens.scss";
 
-.promo-text-sm-icon-wrapper {
+.promo-text-lg-icon-wrapper {
   margin: 0;
-  > .promo-text-sm-icon {
+  > .promo-text-lg-icon {
     padding: 0 52px;
     @include for-xlarge {
       padding: 0 52px;
