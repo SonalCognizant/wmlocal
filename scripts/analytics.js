@@ -29,7 +29,7 @@ const callToActionEvent = (adobeDataLayer, linkHref, event) => {
   const ctaLocation = window.location.href;
   const ctaType = event.target.innerText || event.currentTarget.text;
   const ctaDataInfo = '';
-  const ctaClickImage = '';
+  const ctaClickImageAltTxt = '';
 
   adobeDataLayer.push({
     event: 'call_to_action',
@@ -37,7 +37,7 @@ const callToActionEvent = (adobeDataLayer, linkHref, event) => {
       cta_element_type: ctaElementType,
       cta_click_text: ctaClickText,
       cta_data_info: ctaDataInfo,
-      cta_click_image: ctaClickImage,
+      cta_click_image_alt_text: ctaClickImageAltTxt,
       cta_location: ctaLocation,
       cta_type: ctaType,
     },
