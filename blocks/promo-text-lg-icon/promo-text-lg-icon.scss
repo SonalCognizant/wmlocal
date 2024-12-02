@@ -68,7 +68,7 @@
           position: absolute;
           margin: 0;
           @include for-xlarge {
-            bottom: 10px;
+            bottom: -210px;
             width: 345px;
             height: 345px;
           }
@@ -78,7 +78,7 @@
             height: 345px;
           }
           @include for-laptop {
-            bottom: 14px;
+            bottom: -210px;
             width: 345px;
             height: 345px;
           }
