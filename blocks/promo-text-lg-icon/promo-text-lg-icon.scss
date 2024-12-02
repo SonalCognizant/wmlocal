@@ -3,6 +3,8 @@
 
 .promo-text-lg-icon-wrapper {
   margin: 0;
+  opacity: 1;
+  background-color: rgba(74, 115, 144, 1);
   > .promo-text-lg-icon {
     padding: 0 52px;
     @include for-xlarge {

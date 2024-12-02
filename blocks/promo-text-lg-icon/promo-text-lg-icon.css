@@ -4,6 +4,8 @@
 /* wellmark spacing size start */
 .promo-text-lg-icon-wrapper {
   margin: 0;
+  opacity: 1;
+  background-color: rgb(74, 115, 144);
 }
 .promo-text-lg-icon-wrapper > .promo-text-lg-icon {
   padding: 0 52px;
