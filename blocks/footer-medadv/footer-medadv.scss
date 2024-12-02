@@ -48,24 +48,26 @@
       }
     }
     > .contact-div {
-      padding: 36px 0 36px 0;
-      border-bottom: 2px solid $--gray-225;
       max-width: 1275px;
       margin: auto;
       @include for-mobile {
-        padding: 36px 20px;
+        padding: 36px 20px 0px 20px;
       }
       @include for-tablet {
-        padding: 36px 36px;
+        padding: 36px 36px 0px 36px;
       }
       @include for-xlarge {
-        padding: 36px 52px;
+        padding: 36px 52px 0px 52px;
       }
       @include for-large {
-        padding: 36px 52px;
+        padding: 36px 52px 0px 52px;
       }
       @include for-laptop {
-        padding: 36px 36px;
+        padding: 36px 36px 0px 36px;
+      }
+      > div {
+        border-bottom: 2px solid $--gray-225;
+        padding-bottom: 36px;
       }
       > div ul li .icon-toprigthtarrow {
         height: 16px;
@@ -75,23 +77,26 @@
       }
     }
     > .adobe-div {
-      border-bottom: 2px solid $--gray-225;
       max-width: 1275px;
       margin: auto;
       @include for-mobile {
-        padding: 36px 20px;
+        padding: 36px 20px 0px 20px;
       }
       @include for-tablet {
-        padding: 36px 36px;
+        padding: 36px 36px 0px 36px;
       }
       @include for-xlarge {
-        padding: 36px 52px;
+        padding: 36px 52px 0px 52px;
       }
       @include for-large {
-        padding: 36px 52px;
+        padding: 36px 52px 0px 52px;
       }
       @include for-laptop {
-        padding: 36px 36px;
+        padding: 36px 36px 0px 36px;
+      }
+      > div {
+        border-bottom: 2px solid $--gray-225;
+        padding-bottom: 36px;
       }
     }
     > .language-div {
@@ -234,9 +239,11 @@
           }
           @include for-mobile {
             font-size: 14px;
+            color: #545454;
           }
           @include for-tablet {
             font-size: 14px;
+            color: #545454;
           }
         }
         > ul {
@@ -269,6 +276,16 @@
                   border: none;
                 }
               }
+              &:nth-child(3) {
+                a {
+                  padding-right: 0;
+                  border-right: none;
+                }
+                span{
+                  padding-right: 22px;
+                  border-right: 1px solid $--gray-700;
+                }
+              }
             }
             @include for-xlarge {
               &:first-child {
@@ -280,6 +297,16 @@
                 a {
                   padding-right: 0;
                   border: none;
+                }
+              }
+              &:nth-child(3) {
+                a {
+                  padding-right: 0;
+                  border-right: none;
+                }
+                span{
+                  padding-right: 22px;
+                  border-right: 1px solid $--gray-700;
                 }
               }
             }
@@ -295,18 +322,28 @@
                   border: none;
                 }
               }
+              &:nth-child(3) {
+                a {
+                  padding-right: 0;
+                  border-right: none;
+                }
+                span{
+                  padding-right: 22px;
+                  border-right: 1px solid $--gray-700;
+                }
+              }
             }
             > a {
               @include for-laptop {
-                padding: 0 16px;
+                padding: 0 22px;
                 border-right: 1px solid $--gray-700;
               }
               @include for-xlarge {
-                padding: 0 16px;
+                padding: 0 22px;
                 border-right: 1px solid $--gray-700;
               }
               @include for-large {
-                padding: 0 16px;
+                padding: 0 22px;
                 border-right: 1px solid $--gray-700;
               }
             }

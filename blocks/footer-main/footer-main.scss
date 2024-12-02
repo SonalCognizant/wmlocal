@@ -48,43 +48,49 @@
       }
     }
     > .contact-div {
-      border-bottom: 2px solid $--gray-225;
       max-width: 1275px;
       margin: auto;
       @include for-mobile {
-        padding: 36px 20px;
+        padding: 36px 20px 0px 20px;
       }
       @include for-tablet {
-        padding: 36px 36px;
+        padding: 36px 36px 0px 36px;
       }
       @include for-xlarge {
-        padding: 36px 52px;
+        padding: 36px 52px 0px 52px;
       }
       @include for-large {
-        padding: 36px 52px;
+        padding: 36px 52px 0 52px;
       }
       @include for-laptop {
-        padding: 36px 36px;
+        padding: 36px 36px 0 36px;
+      }
+      > div {
+        padding-bottom: 36px;
+        border-bottom: 2px solid $--gray-225;
       }
     }
     > .adobe-div {
-      border-bottom: 2px solid $--gray-225;
       max-width: 1275px;
       margin: auto;
       @include for-mobile {
-        padding: 36px 20px;
+        padding: 36px 20px 0px 20px;
       }
       @include for-tablet {
-        padding: 36px 36px;
+        padding: 36px 36px 0px 36px;
       }
       @include for-xlarge {
-        padding: 36px 52px;
+        padding: 36px 52px 0px 52px;
       }
       @include for-large {
-        padding: 36px 52px;
+        padding: 36px 52px 0px 52px;
       }
       @include for-laptop {
-        padding: 36px 36px;
+        padding: 36px 36px 0px 36px;
+      }
+      > div {
+        padding-bottom: 36px;
+        border-bottom: 2px solid $--gray-225;
       }
     }
     > .language-div {
@@ -232,7 +238,7 @@
           @include for-large {
             gap: 0;
           }
-           li {
+          li {
             font-size: 12px;
             @include for-laptop {
               &:first-child {
