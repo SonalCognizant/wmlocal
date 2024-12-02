@@ -97,7 +97,7 @@ function buttonAnalytics(adobeDataLayer) {
 }
 
 function analyticsMain() {
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('load', () => {
     const adobeDataLayer = window.adobeDataLayer || [];
     setTimeout(buttonAnalytics(adobeDataLayer), 10000000);
   });
