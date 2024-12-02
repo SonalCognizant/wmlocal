@@ -50,7 +50,7 @@
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .promo-text-lg-icon-wrapper > .promo-text-lg-icon > div {
-    padding: 120px 0x;
+    padding: 120px 0px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
