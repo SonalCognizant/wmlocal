@@ -169,15 +169,5 @@
         }
       }
     }
-    div{
-      &:last-child{
-        @include for-tablet{
-          padding-top: $--spacing-xxl !important;
-        }
-        @include for-mobile{
-          padding-top: $--spacing-xl !important;
-        }
-      }
-    }
   }
 }
