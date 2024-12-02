@@ -97,8 +97,10 @@ function buttonAnalytics(adobeDataLayer) {
 }
 
 function analyticsMain() {
+  console.log("ddd1");
   window.addEventListener('load', () => {
     const adobeDataLayer = window.adobeDataLayer || [];
+    console.log("ddd2");
     buttonAnalytics(adobeDataLayer);
   });
 }
