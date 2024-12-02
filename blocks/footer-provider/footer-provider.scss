@@ -48,23 +48,26 @@
       }
     }
     > .claims-div {
-      border-bottom: 2px solid $--gray-225;
       max-width: 1275px;
       margin: auto;
       @include for-mobile {
-        padding: 36px 16px;
+        padding: 36px 16px 0px 16px;
       }
       @include for-tablet {
-        padding: 36px 36px;
+        padding: 36px 36px 0px 36px;
       }
       @include for-xlarge {
-        padding: 36px 52px;
+        padding: 36px 52px 0px 52px;
       }
       @include for-large {
-        padding: 36px 52px;
+        padding: 36px 52px 0px 52px;
       }
       @include for-laptop {
-        padding: 36px 36px;
+        padding: 36px 36px 0px 36px;
+      }
+      > div {
+        padding-bottom: 36px;
+        border-bottom: 2px solid $--gray-225;
       }
       > div ul li .icon-lock {
         height: 19px;
@@ -74,23 +77,26 @@
       }
     }
     > .wellmarkdrug-div {
-      border-bottom: 2px solid $--gray-225;
       max-width: 1275px;
       margin: auto;
       @include for-mobile {
-        padding: 36px 16px 52px 16px;
+        padding: 36px 16px 0px 16px;
       }
       @include for-tablet {
-        padding: 36px 36px 52px 36px;
+        padding: 36px 36px 0px 36px;
       }
       @include for-xlarge {
-        padding: 36px 52px 52px 52px;
+        padding: 36px 52px 0px 52px;
       }
       @include for-large {
-        padding: 36px 52px 52px 52px;
+        padding: 36px 52px 0px 52px;
       }
       @include for-laptop {
-        padding: 36px 36px 52px 36px;
+        padding: 36px 36px 0px 36px;
+      }
+      > div {
+        border-bottom: 2px solid $--gray-225;
+        padding-bottom: 52px;
       }
       > div ul li .icon-pdf {
         height: 19px;
