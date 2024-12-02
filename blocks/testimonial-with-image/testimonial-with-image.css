@@ -105,6 +105,7 @@
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .section.testimonial-with-image-container .testimonial-with-image-wrapper .testimonial-with-image ul li {
     flex-direction: column-reverse;
+    gap: 36px;
   }
 }
 @media (max-width: 480px) {

@@ -75,6 +75,7 @@
           }
           @include for-tablet{
             flex-direction: column-reverse;
+            gap: 36px;
           }
           @include for-mobile{
             flex-direction: column-reverse;
