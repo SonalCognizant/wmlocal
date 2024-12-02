@@ -621,14 +621,14 @@ header {
                                         display: flex;
                                         flex-direction: row;
                                         background-color: $--white;
-                                        padding: 0 $--spacing-xl;
                                         top: 77px;
                                         gap: 30px;
-                                        width: 100%;
-                                        left: -37px;
+                                        width: calc(100% + 72px);
+                                        left: -36px;
                                         box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.2);
                                         .header-submenu-list {
-                                            width: calc((100% + 72px) / 12* 7);
+                                            width: calc((100% + 66px) / 12* 7);
+                                            padding-left: $--spacing-xl;
                                             .header-submenu-ul{
                                                 display: flex; 
                                                 gap: 30px;
@@ -667,9 +667,9 @@ header {
                                             }
                                         }
                                         .menu-submenu-content {
-                                            width: calc((100% - 72px) / 12* 5);
+                                            width: calc((100% - 153px) / 12* 5);
                                             background: $--blue-50;
-                                            padding: $--spacing-xl;
+                                            padding: $--spacing-xl $--spacing-huge $--spacing-xl $--spacing-xl;
                                             .image-text-container{
                                                 .default-content-wrapper{
                                                     padding: 0;
@@ -691,6 +691,10 @@ header {
                                                             >div{
                                                                 .columns-img-col{
                                                                     display: contents;
+                                                                    img{
+                                                                        width: 74px;
+                                                                        height: 74px;
+                                                                    }
                                                                 }
                                                                 .button-container{
                                                                     a{
@@ -702,6 +706,7 @@ header {
                                                                 p{
                                                                     font-size: 16px;
                                                                     margin: 0;
+                                                                    padding-right: 18px;
                                                                 }
                                                             }
                                                           }
@@ -788,6 +793,10 @@ header {
                                                             >div{
                                                                 .columns-img-col{
                                                                     display: contents;
+                                                                    img{
+                                                                        width: 125px;
+                                                                        height: 125px;
+                                                                    }
                                                                 }
                                                                 .button-container{
                                                                     a{
@@ -885,6 +894,10 @@ header {
                                                             >div{
                                                                 .columns-img-col{
                                                                     display: contents;
+                                                                    img{
+                                                                        width: 125px;
+                                                                        height: 125px;
+                                                                    }
                                                                 }
                                                                 .button-container{
                                                                     a{
