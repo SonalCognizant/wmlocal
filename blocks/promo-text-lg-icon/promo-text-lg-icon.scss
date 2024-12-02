@@ -59,6 +59,7 @@
           text-align: center;
           padding-bottom: 24px;
           margin: 0;
+          z-index: 2;
           @include for-mobile {
             padding-bottom: 16px;
           }
@@ -72,7 +73,7 @@
             height: 345px;
           }
           @include for-large {
-            bottom: 10px;
+            bottom: -210px;
             width: 345px;
             height: 345px;
           }
@@ -103,6 +104,7 @@
         @include for-mobile {
           width: 100%;
         }
+        z-index: 2;
       }
       > .description {
         opacity: 1;
@@ -116,6 +118,7 @@
         line-height: 24px;
         margin: 0;
         padding-bottom: 36px;
+        z-index: 2;
         @include for-mobile {
           padding-bottom: 24px;
         }
