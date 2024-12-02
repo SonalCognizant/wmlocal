@@ -234,9 +234,11 @@
           }
           @include for-mobile {
             font-size: 14px;
+            color: #545454;
           }
           @include for-tablet {
             font-size: 14px;
+            color: #545454;
           }
         }
         > ul {

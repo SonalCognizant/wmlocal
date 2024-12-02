@@ -222,11 +222,13 @@
 @media (max-width: 480px) {
   .footer-provider-wrapper .footer-provider > .copyright-div > div > p {
     font-size: 14px;
+    color: #545454;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .footer-provider-wrapper .footer-provider > .copyright-div > div > p {
     font-size: 14px;
+    color: #545454;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
