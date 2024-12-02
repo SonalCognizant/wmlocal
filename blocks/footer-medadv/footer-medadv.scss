@@ -300,15 +300,15 @@
             }
             > a {
               @include for-laptop {
-                padding: 0 16px;
+                padding: 0 22px;
                 border-right: 1px solid $--gray-700;
               }
               @include for-xlarge {
-                padding: 0 16px;
+                padding: 0 22px;
                 border-right: 1px solid $--gray-700;
               }
               @include for-large {
-                padding: 0 16px;
+                padding: 0 22px;
                 border-right: 1px solid $--gray-700;
               }
             }
