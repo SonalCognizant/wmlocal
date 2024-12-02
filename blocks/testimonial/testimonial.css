@@ -195,7 +195,7 @@
 }
 @media (min-width: 1380px) {
   .eight-column-large .testimonial-wrapper .testimonial ul li {
-    width: calc(58.3333333333% + 20px) !important;
+    width: calc(66.6666666667% - 82px) !important;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
