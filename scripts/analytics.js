@@ -98,10 +98,12 @@ function buttonAnalytics(adobeDataLayer) {
 
 function analyticsMain() {
   console.log("ddd1");
+  const adobeDataLayer = window.adobeDataLayer || [];
+  buttonAnalytics(adobeDataLayer);
   window.addEventListener('load', () => {
-    const adobeDataLayer = window.adobeDataLayer || [];
+   
     console.log("ddd2");
-    buttonAnalytics(adobeDataLayer);
+   
   });
 }
 
