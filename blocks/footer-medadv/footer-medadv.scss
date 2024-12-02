@@ -265,18 +265,6 @@
               vertical-align: sub;
             }
             @include for-laptop {
-              &:nth-child(3) {
-                a {
-                  padding-right: 0;
-                  border-right: none;
-                }
-                span{
-                  padding-right: 16px;
-                  border-right: 1px solid $--gray-700;
-                }
-              }
-            }
-            @include for-laptop {
               &:first-child {
                 a {
                   padding-left: 0;
@@ -286,6 +274,16 @@
                 a {
                   padding-right: 0;
                   border: none;
+                }
+              }
+              &:nth-child(3) {
+                a {
+                  padding-right: 0;
+                  border-right: none;
+                }
+                span{
+                  padding-right: 22px;
+                  border-right: 1px solid $--gray-700;
                 }
               }
             }
@@ -301,6 +299,16 @@
                   border: none;
                 }
               }
+              &:nth-child(3) {
+                a {
+                  padding-right: 0;
+                  border-right: none;
+                }
+                span{
+                  padding-right: 22px;
+                  border-right: 1px solid $--gray-700;
+                }
+              }
             }
             @include for-large {
               &:first-child {
@@ -312,6 +320,16 @@
                 a {
                   padding-right: 0;
                   border: none;
+                }
+              }
+              &:nth-child(3) {
+                a {
+                  padding-right: 0;
+                  border-right: none;
+                }
+                span{
+                  padding-right: 22px;
+                  border-right: 1px solid $--gray-700;
                 }
               }
             }
