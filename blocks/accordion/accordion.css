@@ -36,18 +36,20 @@ main .section div {
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .accordion-wrapper .accordion-heading {
     margin-bottom: 52px;
+    font-size: 28px;
   }
 }
 @media (max-width: 480px) {
   .accordion-wrapper .accordion-heading {
-    margin-bottom: 52px;
+    margin-bottom: 36px;
+    font-size: 28px;
   }
 }
 .accordion-wrapper .accordion {
   font-family: roboto, sans-serif;
 }
 .accordion-wrapper .accordion details {
-  border-top: 2px solid #dadada;
+  border-top: 2px solid #c2c2c3;
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .accordion-wrapper .accordion details {
@@ -67,6 +69,8 @@ main .section div {
 .accordion-wrapper .accordion details p {
   margin: 0;
   text-decoration: underline;
+  font-size: 18px;
+  font-weight: 700;
 }
 .accordion-wrapper .accordion details .accordion-item-body p {
   font-size: 16px;
@@ -97,8 +101,8 @@ main .section div {
   top: 50%;
   right: 18px;
   transform: translateY(-50%) rotate(135deg);
-  width: 8px;
-  height: 8px;
+  width: 20px;
+  height: 20px;
   border: 2px solid;
   border-width: 2px 2px 0 0;
   transition: transform 0.2s;

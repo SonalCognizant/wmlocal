@@ -29,16 +29,18 @@ main {
         margin-bottom: $--spacing-huge;
         @include for-tablet{
             margin-bottom: $--spacing-xxl;
+            font-size: 28px;
         }
         @include for-mobile{
-            margin-bottom: $--spacing-xxl;
+            margin-bottom: $--spacing-xl;
+            font-size: 28px;
         }
     }
 
     .accordion {
         font-family: $--font-roboto;
         details {
-            border-top: 2px solid #dadada;
+            border-top: 2px solid $--gray-225;
             @include for-laptop{
                 width: 100%;
             }
@@ -51,10 +53,12 @@ main {
             p {
                 margin: 0;
                 text-decoration: underline;
+                font-size: 18px;
+                font-weight: 700;
             }
             .accordion-item-body{
                 p{
-                    font-size: $--spacing-m;
+                    font-size: 16px;
                     font-weight: 400;
                     line-height: $--spacing-l;
                     color: $--gray-700;
@@ -85,8 +89,8 @@ main {
                     top: 50%;
                     right: 18px;
                     transform: translateY(-50%) rotate(135deg);
-                    width: 8px;
-                    height: 8px;
+                    width: 20px;
+                    height: 20px;
                     border: 2px solid;
                     border-width: 2px 2px 0 0;
                     transition: transform 0.2s;

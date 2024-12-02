@@ -55,35 +55,6 @@ header {
                     }
                     .collapse-bar{
                         display: none;
-                        .collapse-btn{
-                            width: 18px;
-                            height: 14px;
-                        }
-                        &.active{
-                            background-color: $--white;
-                            flex-direction: column;
-                            align-items: center;
-                            @include for-mobile {
-                                display: flex;
-                            }
-                            @include for-tablet {
-                                display: flex;
-                            }
-                            .collapse-btn{
-                                display: none;
-                            }
-                            .collapse-bar-menu{
-                                display: none;
-                            }
-                            .close-btn{
-                                display: inline-block;
-                                width: 18px;
-                                height: 18px;
-                            }
-                            .collapse-bar-close{
-                                display: flex;
-                            }
-                        }
                         @include for-mobile {
                             display: flex;
                             text-align: left;
@@ -94,6 +65,10 @@ header {
                                 padding: 14px 15px 9px 14px;
                                 border-right: 1px solid $--blue-100;
                                 border-bottom: 1px solid $--blue-100;
+                                .collapse-btn{
+                                    width: 18px;
+                                    height: 14px;
+                                }
                                 .collapse-menu {
                                     margin: 0;
                                     font-size: 12px;
@@ -103,24 +78,32 @@ header {
                                 }
                             }
                             .collapse-bar-close{
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                                border-right: 1px solid $--blue-100;
-                                padding: $--spacing-s 15px 11px 14px;
-                                .collapse-close {
-                                    margin: 0;
-                                    font-size: 12px;
-                                    font-weight: 500;
-                                    padding-top: 4px;
-                                    line-height: 14px;
+                                display: none;
+                            }
+                            &.active{
+                                background-color: $--white;
+                                .collapse-bar-menu{
+                                    display: none;
                                 }
-                            }
-                            .close-btn{
-                                display: none;
-                            }
-                            .collapse-bar-close{
-                                display: none;
+                                .collapse-bar-close{
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    border-right: 1px solid $--blue-100;
+                                    padding: $--spacing-s 15px 11px 14px;
+                                    .close-btn{
+                                        display: inline-block;
+                                        width: 18px;
+                                        height: 18px;
+                                    }
+                                    .collapse-close {
+                                        margin: 0;
+                                        font-size: 12px;
+                                        font-weight: 500;
+                                        padding-top: 4px;
+                                        line-height: 14px;
+                                    }
+                                }
                             }
                         }
                         @include for-tablet {
@@ -133,6 +116,10 @@ header {
                                 padding: 14px 15px 9px 14px;
                                 border-right: 1px solid $--blue-100;
                                 border-bottom: 1px solid $--blue-100;
+                                .collapse-btn{
+                                    width: 18px;
+                                    height: 14px;
+                                }
                                 .collapse-menu {
                                     margin: 0;
                                     font-size: 12px;
@@ -142,24 +129,32 @@ header {
                                 }
                             }
                             .collapse-bar-close{
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                                border-right: 1px solid $--blue-100;
-                                padding: $--spacing-s 15px 11px 14px;
-                                .collapse-close {
-                                    margin: 0;
-                                    font-size: 12px;
-                                    font-weight: 500;
-                                    padding-top: 4px;
-                                    line-height: 14px;
+                                display: none;
+                            }
+                            &.active{
+                                background-color: $--white;
+                                .collapse-bar-menu{
+                                    display: none;
                                 }
-                            }
-                            .close-btn{
-                                display: none;
-                            }
-                            .collapse-bar-close{
-                                display: none;
+                                .collapse-bar-close{
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    border-right: 1px solid $--blue-100;
+                                    padding: $--spacing-s 15px 11px 14px;
+                                    .close-btn{
+                                        display: inline-block;
+                                        width: 18px;
+                                        height: 18px;
+                                    }
+                                    .collapse-close {
+                                        margin: 0;
+                                        font-size: 12px;
+                                        font-weight: 500;
+                                        padding-top: 4px;
+                                        line-height: 14px;
+                                    }
+                                }
                             }
                         }
                     }
@@ -357,18 +352,18 @@ header {
                                 }
                                 ~ .header-menu-item{
                                     @include for-mobile {
-                                        display: none !important;
+                                        display: none;
                                     }
                                     @include for-tablet {
-                                        display: none !important;
+                                        display: none;
                                     }
                                 }
                                 &.menu-active ~ .header-menu-item{
                                     @include for-mobile {
-                                        display: block !important;
+                                        display: block;
                                     }
                                     @include for-tablet {
-                                        display: block !important;
+                                        display: block;
                                     }
                                 }
                                 a{
@@ -380,34 +375,6 @@ header {
                                     a{
                                         color: $--blue-675;
                                         border-bottom: 2px solid $--blue-675; 
-                                    }
-                                    @include for-mobile{
-                                        a{
-                                            color: $--gray-700;
-                                            border-bottom: none;
-                                        }
-                                        .header-menu-icon{
-                                            .menu-up-arrow{
-                                                display: inline-block !important;
-                                            }
-                                            .menu-down-arrow{
-                                                display: none !important;
-                                            }
-                                        }
-                                    }
-                                    @include for-tablet{
-                                        a{
-                                            color: $--gray-700;
-                                            border-bottom: none;
-                                        }
-                                        .header-menu-icon{
-                                            .menu-up-arrow{
-                                                display: inline-block !important;
-                                            }
-                                            .menu-down-arrow{
-                                                display: none !important;
-                                            }
-                                        }
                                     }
                                 }
                                 @include for-mobile{
@@ -422,12 +389,24 @@ header {
                                         }
                                         .menu-down-arrow{
                                             display: inline-block;
+                                            width: 12px;
+                                            height: 7px;
+                                            margin-left: 10px;
+                                            margin-bottom: 3px;
                                         }
                                     }
                                     &.menu-active {
+                                        a{
+                                            color: $--gray-700;
+                                            border-bottom: none;
+                                        }
                                         .header-menu-icon{
                                             .menu-up-arrow{
                                                 display: inline-block;
+                                                width: 12px;
+                                                height: 7px;
+                                                margin-left: 9px;
+                                                margin-bottom: 3px;
                                             }
                                             .menu-down-arrow{
                                                 display: none;
@@ -447,12 +426,24 @@ header {
                                         }
                                         .menu-down-arrow{
                                             display: inline-block;
+                                            width: 12px;
+                                            height: 7px;
+                                            margin-left: 10px;
+                                            margin-bottom: 3px;
                                         }
                                     }
                                     &.menu-active {
+                                        a{
+                                            color: $--gray-700;
+                                            border-bottom: none;
+                                        }
                                         .header-menu-icon{
                                             .menu-up-arrow{
                                                 display: inline-block;
+                                                width: 12px;
+                                                height: 7px;
+                                                margin-left: 9px;
+                                                margin-bottom: 3px;
                                             }
                                             .menu-down-arrow{
                                                 display: none;
@@ -484,7 +475,7 @@ header {
                                                 background: $--blue-50;
                                                 h4{
                                                     margin: 0;
-                                                    border-bottom: 2px solid $--gray-100;
+                                                    border-bottom: 2px solid $--blue-100;
                                                     padding: $--spacing-m 0 18px 0;
                                                 }
                                                 li {
@@ -532,7 +523,7 @@ header {
                                                 background: $--blue-50;
                                                 h4{
                                                     margin: 0;
-                                                    border-bottom: 2px solid $--gray-100;
+                                                    border-bottom: 2px solid $--blue-100;
                                                     padding: $--spacing-m 0 18px 0;
                                                 }
                                                 li {
@@ -649,7 +640,7 @@ header {
                                                     width: calc((100% - 24px) / 3);
                                                     h4{
                                                         margin: 0;
-                                                        border-bottom: 2px solid $--gray-100;
+                                                        border-bottom: 2px solid #ededee;
                                                         padding-bottom: 24px;
                                                     }
                                                     li {
@@ -746,7 +737,7 @@ header {
                                                     width: calc((100% - 24px) / 3);
                                                     h4{
                                                         margin: 0;
-                                                        border-bottom: 2px solid $--gray-100;
+                                                        border-bottom: 2px solid #ededee;
                                                         padding-bottom: 24px;
                                                     }
                                                     li {
@@ -843,7 +834,7 @@ header {
                                                     width: calc((100% - 24px) / 3);
                                                     h4{
                                                         margin: 0;
-                                                        border-bottom: 2px solid $--gray-100;
+                                                        border-bottom: 2px solid #ededee;
                                                         padding-bottom: 24px;
                                                     }
                                                     li {
