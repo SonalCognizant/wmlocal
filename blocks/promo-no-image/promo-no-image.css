@@ -75,6 +75,11 @@
     margin: 0 auto;
   }
 }
+.promo-no-image-container .promo-no-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @media (max-width: 480px) {
   .promo-no-image-container .promo-no-image {
     padding: 52px 0px 72px 0px;
