@@ -74,7 +74,6 @@ function clickEvent(adobeDataLayer, linkHref, event) {
 
 function buttonAnalytics(adobeDataLayer) {
   const buttons = document.querySelectorAll('a');
-  console.log(buttons);
   buttons.forEach((button) => {
     button.addEventListener('click', (event) => {
       const linkHref = event.currentTarget.getAttribute('href');
@@ -86,8 +85,8 @@ function buttonAnalytics(adobeDataLayer) {
         if (button.classList.contains('button')) {
           callToActionEvent(adobeDataLayer, linkHref, event);
         } else if (
-          !button.classList.contains('button')
-          && !isOutboundLink(linkHref)
+          !button.classList.contains('button') &&
+          !isOutboundLink(linkHref)
         ) {
           navigationEvent(adobeDataLayer, linkHref, event);
         }
@@ -97,14 +96,8 @@ function buttonAnalytics(adobeDataLayer) {
 }
 
 function analyticsMain() {
-  console.log("ddd1");
   const adobeDataLayer = window.adobeDataLayer || [];
   buttonAnalytics(adobeDataLayer);
-  window.addEventListener('load', () => {
-   
-    console.log("ddd2");
-   
-  });
 }
 
 export {
