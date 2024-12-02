@@ -74,6 +74,7 @@ function clickEvent(adobeDataLayer, linkHref, event) {
 
 function buttonAnalytics(adobeDataLayer) {
   const buttons = document.querySelectorAll('a');
+  console.log(buttons);
   buttons.forEach((button) => {
     button.addEventListener('click', (event) => {
       const linkHref = event.currentTarget.getAttribute('href');
