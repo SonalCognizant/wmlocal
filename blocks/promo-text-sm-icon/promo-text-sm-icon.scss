@@ -57,8 +57,21 @@
           text-align: center;
           padding-bottom: 24px;
           margin: 0;
+          @include for-xlarge {
+            width: calc(66.66% + 60px);
+          }
+          @include for-large {
+            width: calc(66.66% + 60px);
+          }
+          @include for-laptop {
+            width: calc(100% / 12* 10);
+          }
+          @include for-tablet {
+            width: 100%
+          }
           @include for-mobile {
             padding-bottom: 16px;
+            width: 100%
           }
         }
         > p {
@@ -112,8 +125,21 @@
         line-height: 24px;
         margin: 0;
         padding-bottom: 36px;
+        @include for-xlarge {
+          width: calc(66.66% + 60px);
+        }
+        @include for-large {
+          width: calc(66.66% + 60px);
+        }
+        @include for-laptop {
+          width: calc(100% / 12* 10);
+        }
+        @include for-tablet {
+          width: 100%
+        }
         @include for-mobile {
           padding-bottom: 24px;
+          width: 100%
         }
       }
     }
