@@ -28,13 +28,13 @@
       justify-content: center;
       padding: 0;
       @include for-xlarge {
-        padding: 120px 217px;
+        padding: 120px 0px;
       }
       @include for-large {
-        padding: 120px 217px;
+        padding: 120px 0px;
       }
       @include for-laptop {
-        padding: 118px 81px 120px 81px;
+        padding: 118px 0px 120px 0px;
       }
       @include for-mobile {
         padding: 72px 0;
