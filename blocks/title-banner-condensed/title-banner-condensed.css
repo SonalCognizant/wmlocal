@@ -23,6 +23,7 @@
 @media (max-width: 480px) {
   .title-banner-condensed-container .title-banner-condensed-wrapper .title-banner-condensed.columns-1-cols {
     width: 100%;
+    padding: 52px 0 52px 0;
   }
 }
 @media (max-width: 480px) {
