@@ -94,6 +94,17 @@
       @include for-laptop {
         padding: 36px 36px 0px 36px;
       }
+      > div {
+        @include for-xlarge {
+          padding-bottom: 52px;
+        }
+        @include for-large {
+          padding-bottom: 52px;
+        }
+        @include for-laptop {
+          padding-bottom: 52px;
+        }
+      }
       > div ul li .icon-pdf {
         height: 19px;
         width: 18.57px;
