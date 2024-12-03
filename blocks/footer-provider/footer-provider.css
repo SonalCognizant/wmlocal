@@ -130,9 +130,6 @@
     padding: 36px 36px 0px 36px;
   }
 }
-.footer-provider-wrapper .footer-provider > .wellmarkdrug-div > div {
-  padding-bottom: 52px;
-}
 .footer-provider-wrapper .footer-provider > .wellmarkdrug-div > div ul li .icon-pdf {
   height: 19px;
   width: 18.57px;
@@ -305,6 +302,7 @@
   display: flex;
   gap: 52px;
   padding: 0px;
+  row-gap: 24px;
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .footer-provider-wrapper .footer-provider > div > div > ul {
