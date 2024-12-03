@@ -27,7 +27,7 @@ const callToActionEvent = (adobeDataLayer, linkHref, event) => {
   }
   const ctaClickText = event.target.innerText || event.currentTarget.text;
   const ctaLocation = window.location.href;
-  const ctaType = event.target.innerText || event.currentTarget.text;
+  const ctaType = 'button';
   const ctaDataInfo = '';
   const ctaClickImageAltTxt = '';
 
