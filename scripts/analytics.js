@@ -80,9 +80,10 @@ function buttonAnalytics(adobeDataLayer) {
       if (linkHref) {
         if (isOutboundLink(linkHref)) {
           clickEvent(adobeDataLayer, linkHref, event);
-        }
-
-        if (button.classList.contains('button')) {
+        } else if (
+          !isOutboundLink(linkHref)
+          && button.classList.contains('button')
+        ) {
           callToActionEvent(adobeDataLayer, linkHref, event);
         } else if (
           !button.classList.contains('button')
