@@ -68,6 +68,9 @@
                   width: 64px;
                   height: 64px;
                 }
+                @include for-mobile {
+                  font-size: 32px;
+                }
               }
               p{
                 color: $--white;
@@ -79,6 +82,7 @@
                 &.button-container {
                   margin-top: 0;
                   margin-bottom: 0;
+                  text-align: center;
                   @include for-mobile {
                     width: 100%;
                     display: unset;

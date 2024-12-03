@@ -102,6 +102,11 @@
     margin-left: 15px;
   }
 }
+@media (max-width: 480px) {
+  .promo-text-focus-dropdown-container .promo-text-focus-dropdown-wrapper .promo-text-focus-dropdown.block .promo-focus-block > div > div h2 {
+    font-size: 32px;
+  }
+}
 .promo-text-focus-dropdown-container .promo-text-focus-dropdown-wrapper .promo-text-focus-dropdown.block .promo-focus-block > div > div p {
   color: #ffffff;
   margin: 0;

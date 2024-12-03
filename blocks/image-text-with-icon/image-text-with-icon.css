@@ -37,7 +37,7 @@
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols > div {
-    max-width: 83.3333333333%;
+    width: calc(83.3333333333% - 4px);
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
@@ -125,8 +125,12 @@
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols.block h2 {
-    font-size: 28px;
-    line-height: 28px;
+    font-size: 32px;
+  }
+}
+@media (max-width: 480px) {
+  .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols.block h2 {
+    font-size: 32px;
   }
 }
 .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols.block p {
@@ -146,6 +150,7 @@
 }
 .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols.block p.button-container a.button {
   margin-top: 16px;
+  text-align: center;
 }
 @media (max-width: 480px) {
   .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols.block p.button-container {

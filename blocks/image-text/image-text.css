@@ -147,6 +147,9 @@
   margin-top: 0;
   margin-bottom: 0;
 }
+.image-text-container .image-text-wrapper .image-text.block.columns-2-cols.block p.button-container a.button {
+  text-align: center;
+}
 .image-text-container .image-text-wrapper .image-text.block.columns-2-cols.block p.button-container a.button.primary {
   margin-bottom: 16px;
 }
