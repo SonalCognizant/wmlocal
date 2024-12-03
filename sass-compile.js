@@ -15,6 +15,7 @@ const ignoredFiles = [
   'mq.scss',
   'tokens.scss',
   'typography.scss',
+  'defaultcontent.scss',
 ];
 
 const compileAndSave = async (sassFile) => {

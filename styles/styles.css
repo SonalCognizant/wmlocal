@@ -198,7 +198,93 @@ a:any-link {
   background-color: #f3f9ff;
 }
 
-/* Auto block css start */
+/* wellmark color start */
+/* wellmark color end */
+/* wellmark spacing size start */
+/* wellmark spacing size start */
+/* wellmark color start */
+/* wellmark color end */
+/* wellmark spacing size start */
+/* wellmark spacing size start */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #4b4c4d;
+  opacity: 1;
+  text-align: left;
+  letter-spacing: 0px;
+}
+
+h1,
+h2 {
+  font-family: museo, sans-serif;
+  font-weight: 700;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: roboto, sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 33px;
+}
+@media (min-width: 480.5px) {
+  h1 {
+    font-size: 40px;
+    line-height: 47px;
+  }
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 28px;
+}
+@media (min-width: 480.5px) {
+  h2 {
+    font-size: 32px;
+    line-height: 31px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 21px;
+}
+
+body {
+  display: none;
+  margin: 0;
+  font-family: roboto, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+/* links */
+a:any-link {
+  color: #005589;
+  text-decoration: underline;
+  word-break: break-word;
+  padding: 0;
+}
+
+.background-blue-50 {
+  background-color: #f3f9ff;
+}
+
 .section .text-container .text-wrapper {
   padding: 72px 16px;
 }
@@ -244,6 +330,30 @@ a:any-link {
   .section .default-content-wrapper {
     padding: 120px 0;
   }
+}
+.section .default-content-wrapper h1,
+.section .default-content-wrapper h2,
+.section .default-content-wrapper h3,
+.section .default-content-wrapper h4 {
+  margin: 0;
+  padding-bottom: 24px;
+}
+.section .default-content-wrapper p {
+  margin: 0;
+  padding-bottom: 36px;
+}
+.section .default-content-wrapper p.button-container {
+  display: inline-flex;
+  padding-bottom: 0;
+  padding-right: 24px;
+}
+.section .default-content-wrapper p.button-container:last-child {
+  padding-right: 0;
+}
+.section .default-content-wrapper ul {
+  padding-left: 24px;
+  margin: 0;
+  padding-bottom: 36px;
 }
 
 :root {

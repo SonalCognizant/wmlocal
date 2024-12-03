@@ -71,6 +71,9 @@
                     margin-left: 15px;
                   }
                 }
+                @include for-mobile {
+                  font-size: 32px;
+                }
               }
               p{
                 color: $--white;
