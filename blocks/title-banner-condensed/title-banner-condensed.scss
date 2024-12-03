@@ -17,6 +17,7 @@
         }
         @include for-mobile{
           width: 100%;
+          padding: $--spacing-xxl 0 $--spacing-xxl 0;
         }
         div{
           div{

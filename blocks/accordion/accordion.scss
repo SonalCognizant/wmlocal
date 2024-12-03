@@ -131,7 +131,7 @@ main {
     max-width: 1275px;
     margin: 0 auto;
     display: flex;
-    gap: $--spacing-l;
+    gap: 108px;
     @include for-tablet{
         flex-direction: column;
     }
@@ -140,11 +140,15 @@ main {
     }
     .accordion-wrapper{
         width: 50%;
+        padding: $--spacing-max $--spacing-xxl $--spacing-max 0;
         @include for-tablet{
             width: 90%;
         }
         @include for-mobile{
             width: 90%;
+        }
+        .accordion-heading{
+            margin-bottom: 45px;
         }
     }
 }
