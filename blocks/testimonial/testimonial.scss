@@ -94,7 +94,6 @@
           }
           @include for-laptop {
             width: calc((100% - 72px) / 2);
-            padding-bottom: 20px;
           }
           @include for-tablet {
             flex-basis: calc((100% - 72px) / 1);

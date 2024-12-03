@@ -95,10 +95,18 @@
           }
           div{
             &:first-child{
-              padding: 200px 35px 214px 36px;
+              padding: 0 35px 0 36px;
               background-color: $--blue-50;
               @include for-xlarge{
                 width: calc((100% / 12) * 4 - 85px);
+                min-height: 600px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                img{
+                  width: 65px;
+                  height: 45px;
+                }
               }
               @include for-large{
                 width: calc((100% / 12) * 4 - 85px);
@@ -201,10 +209,18 @@
           }
           div{
             &:first-child{
-              padding: 179px 470px 235px 36px !important;
+              padding-left: 36px !important;
               background-color: $--blue-50;
               @include for-xlarge{
-                width: calc((100% / 12) *8 - 38%) !important;
+                width: calc((100% / 12) * 8 ) !important;
+                min-height: 600px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                img{
+                  width: 65px;
+                  height: 45px;
+                }
               }
               @include for-large{
                 width: calc((100% / 12) *8 - 38%) !important;
