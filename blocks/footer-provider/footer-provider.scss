@@ -126,9 +126,11 @@
         }
         @include for-mobile {
           display: flex;
+          padding-bottom: 52px;
         }
         @include for-tablet {
           display: flex;
+          padding-bottom: 52px;
         }
         @include for-xlarge {
           display: none;
