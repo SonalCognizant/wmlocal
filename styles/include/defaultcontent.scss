@@ -1,26 +1,9 @@
 @import 'mq';
 @import 'tokens';
-@import 'typography';
 
-.section{
-    .text-container {
-      .text-wrapper{
-        padding: $--spacing-huge $--spacing-m;
-        @include for-tablet {
-          padding: $--spacing-jumbo $--spacing-xl;
-        }
-        @include for-laptop {
-          padding: $--spacing-max $--spacing-xl;
-        }
-        @include for-large {
-          padding: $--spacing-max $--spacing-xxl;
-        }
-        @include for-xlarge {
-          padding: $--spacing-max 0;
-        }
-      }
-    }
-    .default-content-wrapper{
+.section {
+  .text-container {
+    .text-wrapper {
       padding: $--spacing-huge $--spacing-m;
       @include for-tablet {
         padding: $--spacing-jumbo $--spacing-xl;
@@ -34,29 +17,45 @@
       @include for-xlarge {
         padding: $--spacing-max 0;
       }
-      h1,
-      h2,
-      h3,
-      h4{
-        margin: 0;
-        padding-bottom: 24px;
-      }
-      p{
-        margin: 0;
-        padding-bottom: 36px;
-        &.button-container{
-            display: inline-flex;
-            padding-bottom: 0;
-            padding-right: 24px;
-            &:last-child{
-                padding-right: 0;
-            }
+    }
+  }
+  .default-content-wrapper {
+    padding: $--spacing-huge $--spacing-m;
+    @include for-tablet {
+      padding: $--spacing-jumbo $--spacing-xl;
+    }
+    @include for-laptop {
+      padding: $--spacing-max $--spacing-xl;
+    }
+    @include for-large {
+      padding: $--spacing-max $--spacing-xxl;
+    }
+    @include for-xlarge {
+      padding: $--spacing-max 0;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 0;
+      padding-bottom: 24px;
+    }
+    p {
+      margin: 0;
+      padding-bottom: 36px;
+      &.button-container {
+        display: inline-flex;
+        padding-bottom: 0;
+        padding-right: 24px;
+
+        &:last-child {
+          padding-right: 0;
         }
       }
-      ul{
-        padding-left: 24px;
-        margin: 0;
-        padding-bottom: 36px;
-      }
     }
+    ul {
+      padding-left: 24px;
+      margin: 0;
+    }
+  }
 }
