@@ -48,9 +48,11 @@ function navigationEvent(adobeDataLayer, linkHref, event) {
   const navClickText = event.target.innerText || event.currentTarget.text;
   adobeDataLayer.push({
     event: 'navigation',
-    nav_menu_type: 'link',
-    nav_click_image_alt_text: '',
-    nav_click_text: navClickText,
+    eventData: {
+      nav_menu_type: 'link',
+      nav_click_image_alt_text: '',
+      nav_click_text: navClickText,
+    },
   });
 }
 
