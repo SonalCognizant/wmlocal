@@ -86,7 +86,7 @@ main {
                 &::after {
                     content: '';
                     position: absolute;
-                    top: 50%;
+                    top: 40%;
                     right: 18px;
                     transform: translateY(-50%) rotate(135deg);
                     width: 20px;
@@ -102,6 +102,7 @@ main {
                     background-color: unset;
                     &::after {
                         transform: translateY(-50%) rotate(-45deg);
+                        top: 60%;
                     }
                 }
 
