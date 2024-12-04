@@ -189,22 +189,22 @@
 }
 
 @media (min-width: 1380px) {
-  .testimonial-wrapper .testimonial.six-column ul li {
+  .testimonial-wrapper .testimonial .testimonial-1-quote li {
     width: calc((100% - 175px) / 12 * 6) !important;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
-  .testimonial-wrapper .testimonial.six-column ul li {
+  .testimonial-wrapper .testimonial .testimonial-1-quote li {
     width: calc((100% - 175px) / 12 * 6) !important;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
-  .testimonial-wrapper .testimonial.six-column ul li {
+  .testimonial-wrapper .testimonial .testimonial-1-quote li {
     width: calc((100% - 175px) / 12 * 6) !important;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
-  .testimonial-wrapper .testimonial.six-column ul li {
+  .testimonial-wrapper .testimonial .testimonial-1-quote li {
     width: calc(100% - 72px) !important;
   }
 }

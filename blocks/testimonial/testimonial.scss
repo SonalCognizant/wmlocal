@@ -146,8 +146,8 @@
   }
 }
 .testimonial-wrapper{
-  .testimonial.six-column{
-    ul{
+  .testimonial{
+    .testimonial-1-quote{
       li{
         @include for-xlarge{
           width: calc((100% - 175px) / 12 * 6) !important;

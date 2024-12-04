@@ -25,9 +25,9 @@ export default function decorate(block) {
   linkImg.className = 'link-img';
   linkDiv.append(linkImg);
   parentElement.append(linkDiv);
-  if (block.children.length == 3){
-    block.classList.add('six-column');
-  }
+  // adding class for the ul based on the children length
+  const testimonialClass = `testimonial-${block.children.length - 2}-quote`;
+  ul.classList.add(testimonialClass);
   // Process the remaining children to create list items
   [...block.children].forEach((row, index) => {
     if (index < block.children.length - 1 && index > 0) {
