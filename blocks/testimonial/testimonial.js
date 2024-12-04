@@ -25,7 +25,10 @@ export default function decorate(block) {
   linkImg.className = 'link-img';
   linkDiv.append(linkImg);
   parentElement.append(linkDiv);
-
+  // console.log(block, block.children.length);
+  if (block.children.length == 3){
+    block.classList.add('six-column');
+  }
   // Process the remaining children to create list items
   [...block.children].forEach((row, index) => {
     if (index < block.children.length - 1 && index > 0) {
