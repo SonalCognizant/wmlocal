@@ -157,7 +157,6 @@
           }
             @include for-laptop{
               width: calc((100% / 12) * 9 ) !important;
-              padding-bottom: 61px !important;
             }
             @include for-tablet{
               width: unset !important;
