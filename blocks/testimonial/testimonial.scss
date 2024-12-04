@@ -87,13 +87,13 @@
           color: $--gray-700;
           padding: 45px $--spacing-xl $--spacing-jumbo $--spacing-xl;
           @include for-xlarge {
-            width: calc((100% - 104px) / 3);
+            width: calc((100% + 60px) / 12* 3);
           }
           @include for-large {
-            width: calc((100% - 104px) / 3);
+            width: calc((100% + 60px) / 12* 3);
           }
           @include for-laptop {
-            width: calc((100% - 72px) / 2);
+            width: calc((100% - 30px) / 3);
           }
           @include for-tablet {
             flex-basis: calc((100% - 72px) / 1);
@@ -145,6 +145,26 @@
     }
   }
 }
+.testimonial-wrapper{
+  .testimonial.six-column{
+    ul{
+      li{
+        @include for-xlarge{
+          width: calc((100% - 175px) / 12 * 6) !important;
+        }
+        @include for-large{
+          width: calc((100% - 175px) / 12 * 6) !important;
+        }
+        @include for-laptop{
+          width: calc((100% - 175px) / 12 * 6) !important;
+        }
+        @include for-tablet{
+          width: calc(100% - 72px) !important;
+        }
+      }
+    }
+  }
+}
 .eight-column-large{
   .testimonial-wrapper{
     .testimonial{
@@ -157,7 +177,6 @@
           }
             @include for-laptop{
               width: calc((100% / 12) * 9 ) !important;
-              padding-bottom: 61px !important;
             }
             @include for-tablet{
               width: unset !important;

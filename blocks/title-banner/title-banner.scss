@@ -150,7 +150,16 @@
           }
           h2{
             font-weight: 300;
+            @include for-xlarge{
+              margin-bottom: $--spacing-m;
+            }
             @include for-laptop{
+              margin-bottom: $--spacing-m;
+            }
+            @include for-tablet{
+              margin-bottom: $--spacing-m;
+            }
+            @include for-mobile{
               margin-bottom: $--spacing-m;
             }
           }
@@ -160,7 +169,13 @@
             font-weight: 400;
             font-size: 16px;
             line-height: 24px;
+            @include for-xlarge{
+              margin-bottom: $--spacing-xl;
+            }
             @include for-laptop{
+              margin-bottom: $--spacing-xl;
+            }
+            @include for-tablet{
               margin-bottom: $--spacing-xl;
             }
             @include for-mobile{
