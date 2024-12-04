@@ -184,7 +184,22 @@
 .one-btn-banner.title-banner-container.blue-550 .title-banner-wrapper .block.columns-2-cols div div h2 {
   font-weight: 300;
 }
+@media (min-width: 1380px) {
+  .one-btn-banner.title-banner-container.blue-550 .title-banner-wrapper .block.columns-2-cols div div h2 {
+    margin-bottom: 16px;
+  }
+}
 @media (min-width: 1024px) and (max-width: 1200px) {
+  .one-btn-banner.title-banner-container.blue-550 .title-banner-wrapper .block.columns-2-cols div div h2 {
+    margin-bottom: 16px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .one-btn-banner.title-banner-container.blue-550 .title-banner-wrapper .block.columns-2-cols div div h2 {
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 480px) {
   .one-btn-banner.title-banner-container.blue-550 .title-banner-wrapper .block.columns-2-cols div div h2 {
     margin-bottom: 16px;
   }
@@ -196,7 +211,17 @@
   font-size: 16px;
   line-height: 24px;
 }
+@media (min-width: 1380px) {
+  .one-btn-banner.title-banner-container.blue-550 .title-banner-wrapper .block.columns-2-cols div div p:nth-child(2) {
+    margin-bottom: 36px;
+  }
+}
 @media (min-width: 1024px) and (max-width: 1200px) {
+  .one-btn-banner.title-banner-container.blue-550 .title-banner-wrapper .block.columns-2-cols div div p:nth-child(2) {
+    margin-bottom: 36px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
   .one-btn-banner.title-banner-container.blue-550 .title-banner-wrapper .block.columns-2-cols div div p:nth-child(2) {
     margin-bottom: 36px;
   }
