@@ -65,7 +65,7 @@
 @media (min-width: 1380px) {
   .promo-image-container .promo-image-heading {
     padding-top: 120px;
-    width: calc(50% - 15px);
+    max-width: 623px;
     margin: 0 auto;
   }
 }
