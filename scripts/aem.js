@@ -451,7 +451,8 @@ function decorateFontIcon(span, prefix = '') {
     .find((c) => c.startsWith('icon-'))
     .substring(5);
   const iconTag = document.createElement('i');
-  iconTag.classList.add(`fa-${iconName} fa-${prefix}`);
+  iconTag.classList.add(`fa-${iconName}`);
+  console.log(prefix);
   iconTag.dataset.iconName = iconName;
   span.append(iconTag);
 }
