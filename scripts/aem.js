@@ -451,6 +451,8 @@ function decorateFontIcon(span, prefix = '') {
     .find((c) => c.startsWith('icon-'))
     .substring(5);
   const iconTag = document.createElement('i');
+  console.log(iconTag);
+  console.log(prefix, 'prefix 2');
   iconTag.classList.add(`fa-${prefix}`);
   iconTag.dataset.iconName = iconName;
   // iconTag.src = `${window.hlx.codeBasePath}${prefix}/icons/${iconName}.svg`;
@@ -460,6 +462,7 @@ function decorateFontIcon(span, prefix = '') {
 }
 
 function decorateIcons(element, prefix = '') {
+  console.log(prefix, 'prefix 1');
   const isFontIcon = true;
   const icons = [...element.querySelectorAll('span.icon')];
   icons.forEach((span) => {
