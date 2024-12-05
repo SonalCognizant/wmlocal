@@ -71,11 +71,17 @@
                     margin-left: 15px;
                   }
                 }
+                @include for-mobile {
+                  font-size: 32px;
+                }
               }
               p{
                 color: $--white;
                 margin: 0;
-                margin: $--spacing-m 0 27px 0;
+                margin: $--spacing-l 0 35px 0;
+                @include for-nonmobile {
+                  margin: $--spacing-m 0 27px 0;
+                }
                 &.button-container {
                   margin-top: 0;
                   margin-bottom: 0;

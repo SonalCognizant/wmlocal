@@ -3,6 +3,15 @@
 
 .title-banner-condensed-container {
   background: linear-gradient(270deg, rgba(166, 198, 221, 1) 0%, rgba(73, 115, 144, 1) 50%);
+  @include for-xlarge{
+    background: linear-gradient(180deg, rgba(166, 198, 221, 1) 0%, rgba(73, 115, 144, 1) 50%);
+  }
+  @include for-tablet{
+    background: $--blue-550;
+  }
+  @include for-mobile{
+    background: $--blue-550;
+  }
   .title-banner-condensed-wrapper {
     .title-banner-condensed {
       &.columns-1-cols {

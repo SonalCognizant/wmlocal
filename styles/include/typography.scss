@@ -63,6 +63,9 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+  opacity: 1;
+  letter-spacing: 0px;
+  text-align: left;
 }
 
 /* links */
@@ -71,45 +74,46 @@ a:any-link {
   text-decoration: underline;
   word-break: break-word;
   padding: 0;
+  font-size: 16px;
+  opacity: 1;
+  font-weight: 500;
+  letter-spacing: 0px;
+  text-align: left;
 }
 
 .background-blue-50 {
   background-color: $--blue-50;
 }
 
-/* Auto block css start */
-
 .section{
-  .text-container {
-    .text-wrapper{
-      padding: $--spacing-huge $--spacing-m;
-      @include for-tablet {
-        padding: $--spacing-jumbo $--spacing-xl;
+  &.body-small{
+    .default-content-wrapper{
+      padding-top: 0;
+      padding-bottom: 0;
+      p{
+        opacity: 1;
+        color: $--gray-700;
+        font-family: $--font-roboto;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        text-align: left;
+        line-height: 24px;
+        &.button-container{
+          a{
+            &.button{
+              opacity: 1;
+              color: $--primary-675;
+              font-family: $--font-roboto;
+              font-size: 14px;
+              font-weight: 500;
+              letter-spacing: 0px;
+              text-align: left;
+              text-decoration: underline;
+            }
+          }
+        }
       }
-      @include for-laptop {
-        padding: $--spacing-max $--spacing-xl;
-      }
-      @include for-large {
-        padding: $--spacing-max $--spacing-xxl;
-      }
-      @include for-xlarge {
-        padding: $--spacing-max 0;
-      }
-    }
-  }
-  .default-content-wrapper{
-    padding: $--spacing-huge $--spacing-m;
-    @include for-tablet {
-      padding: $--spacing-jumbo $--spacing-xl;
-    }
-    @include for-laptop {
-      padding: $--spacing-max $--spacing-xl;
-    }
-    @include for-large {
-      padding: $--spacing-max $--spacing-xxl;
-    }
-    @include for-xlarge {
-      padding: $--spacing-max 0;
     }
   }
 }

@@ -27,7 +27,7 @@ const callToActionEvent = (adobeDataLayer, linkHref, event) => {
   }
   const ctaClickText = event.target.innerText || event.currentTarget.text;
   const ctaLocation = window.location.href;
-  const ctaType = event.target.innerText || event.currentTarget.text;
+  const ctaType = 'button';
   const ctaDataInfo = '';
   const ctaClickImageAltTxt = '';
 
@@ -48,9 +48,11 @@ function navigationEvent(adobeDataLayer, linkHref, event) {
   const navClickText = event.target.innerText || event.currentTarget.text;
   adobeDataLayer.push({
     event: 'navigation',
-    nav_menu_type: 'body',
-    nav_click_image_alt_text: '',
-    nav_click_text: navClickText,
+    eventData: {
+      nav_menu_type: 'link',
+      nav_click_image_alt_text: '',
+      nav_click_text: navClickText,
+    },
   });
 }
 
@@ -80,9 +82,10 @@ function buttonAnalytics(adobeDataLayer) {
       if (linkHref) {
         if (isOutboundLink(linkHref)) {
           clickEvent(adobeDataLayer, linkHref, event);
-        }
-
-        if (button.classList.contains('button')) {
+        } else if (
+          !isOutboundLink(linkHref)
+          && button.classList.contains('button')
+        ) {
           callToActionEvent(adobeDataLayer, linkHref, event);
         } else if (
           !button.classList.contains('button')

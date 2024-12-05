@@ -3,11 +3,23 @@
 
 .title-banner-container {
   background: linear-gradient(270deg, rgba(166, 198, 221, 1) 0%, rgba(73, 115, 144, 1) 50%);
+  @include for-xlarge{
+    background: linear-gradient(180deg, rgba(166, 198, 221, 1) 0%, rgba(73, 115, 144, 1) 50%);
+  }
+  @include for-tablet{
+    background: $--blue-550;
+  }
+  @include for-mobile{
+    background: $--blue-550;
+  }
   .title-banner-wrapper {
     .title-banner {
       &.block {
         &.columns-2-cols {
           padding: 50px $--spacing-xxl;
+          @include for-xlarge{
+            padding: 50px 0;
+          }
           @include for-tablet {
             padding: $--spacing-huge $--spacing-xl;
           }
@@ -20,39 +32,37 @@
           >div {
             display: flex;
             flex-direction: column;
+            gap: 30px;
             @include for-nonmobile {
               align-items: center;
               flex-direction: row;
             }
-            @include for-tablet {
-              gap: 30px;
-            }
-            @include for-laptop {
-              gap: $--spacing-huge;
-            }
-            @include for-large {
-              gap: $--spacing-jumbo;
-            }
             @include for-xlarge {
-              gap: $--spacing-jumbo;
+              gap: calc(((100% - (11 * 30px)) / 12) + 60px);
+            }
+            @include for-tablet{
+              width: calc((100% * 5) / 6);
             }
             >div {
               order: 1;
               display: flex;
               flex-flow: row wrap;
+              @include for-xlarge{
+                width: calc((100% / 12) * 6);
+              }
               @include for-nonmobile {
                 flex: 1;
                 order: unset;
                 text-align: left;
                 column-gap: 12px;
               }
-              @include for-tablet{
-                max-width: 90%;
-              }
             }
             >.columns-img-col {
               order: 0;
               align-self: flex-start;
+              @include for-xlarge{
+                min-width: calc((100% - 30px) / 2);
+              }
               @include for-tablet{
                 display: none;
               }
@@ -77,12 +87,16 @@
               font-weight: 700;
               margin-top: 0;
               margin-bottom: $--spacing-l;
+              @include for-xlarge{
+                margin-bottom: 0;
+              }
               @include for-tablet {
                 font-size: 60px;
                 line-height: 66px;
+                margin-bottom: $--spacing-xs;
               }
               @include for-mobile {
-                margin-bottom: $--spacing-m;
+                margin-bottom: $--spacing-xs;
                 font-size: 40px;
                 line-height: 48px;
               }
@@ -135,7 +149,17 @@
             gap: unset;
           }
           h2{
+            font-weight: 300;
+            @include for-xlarge{
+              margin-bottom: $--spacing-m;
+            }
             @include for-laptop{
+              margin-bottom: $--spacing-m;
+            }
+            @include for-tablet{
+              margin-bottom: $--spacing-m;
+            }
+            @include for-mobile{
               margin-bottom: $--spacing-m;
             }
           }
@@ -145,7 +169,13 @@
             font-weight: 400;
             font-size: 16px;
             line-height: 24px;
+            @include for-xlarge{
+              margin-bottom: $--spacing-xl;
+            }
             @include for-laptop{
+              margin-bottom: $--spacing-xl;
+            }
+            @include for-tablet{
               margin-bottom: $--spacing-xl;
             }
             @include for-mobile{
