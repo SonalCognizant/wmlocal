@@ -52,6 +52,12 @@ function navigationEvent(adobeDataLayer, linkHref, event) {
       nav_menu_type: 'link',
       nav_click_image_alt_text: '',
       nav_click_text: navClickText,
+      cta_element_type: null,
+      cta_click_text: null,
+      cta_data_info: null,
+      cta_click_image_alt_text: null,
+      cta_location: null,
+      cta_type: null,
     },
   });
 }

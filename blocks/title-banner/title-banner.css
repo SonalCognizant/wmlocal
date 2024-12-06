@@ -25,7 +25,12 @@
 }
 @media (min-width: 1380px) {
   .title-banner-container .title-banner-wrapper .title-banner.block.columns-2-cols {
-    padding: 50px 0;
+    padding: 50px 0 0 0;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .title-banner-container .title-banner-wrapper .title-banner.block.columns-2-cols {
+    padding: 50px 36px 0 36px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
@@ -35,7 +40,7 @@
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .title-banner-container .title-banner-wrapper .title-banner.block.columns-2-cols {
-    padding: 96px 36px;
+    padding: 96px 36px 0 36px;
   }
 }
 @media (max-width: 480px) {
@@ -89,6 +94,16 @@
 @media (min-width: 1380px) {
   .title-banner-container .title-banner-wrapper .title-banner.block.columns-2-cols > div > .columns-img-col {
     min-width: calc((100% - 30px) / 2);
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .title-banner-container .title-banner-wrapper .title-banner.block.columns-2-cols > div > .columns-img-col {
+    align-self: flex-end;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .title-banner-container .title-banner-wrapper .title-banner.block.columns-2-cols > div > .columns-img-col {
+    align-self: flex-end;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
