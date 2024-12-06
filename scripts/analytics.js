@@ -79,6 +79,8 @@ function buttonAnalytics() {
   buttons.forEach((button) => {
     button.addEventListener('click', (event) => {
       event.stopPropagation();
+      window.adobeDataLayer = {};
+      window.adobeDataLayer.eventData = [];
       const adobeDataLayer = window.adobeDataLayer || [];
       adobeDataLayer.eventData = [];
       const linkHref = event.currentTarget.getAttribute('href');
