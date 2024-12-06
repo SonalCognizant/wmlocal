@@ -452,8 +452,8 @@ function decorateFontIcon(span, prefix = '') {
     .substring(5);
   let style = 'regular'; // Default style is 'fa-regular'
   let icon = '';
-  if (iconName.includes('|')) {
-    [style, icon] = iconName.split('|');
+  if (iconName.includes('--')) {
+    [style, icon] = iconName.split('--');
   } else {
     icon = iconName;
   }
