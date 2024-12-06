@@ -74,10 +74,11 @@ function clickEvent(adobeDataLayer, linkHref, event) {
   });
 }
 
-function buttonAnalytics(adobeDataLayer) {
+function buttonAnalytics() {
   const buttons = document.querySelectorAll('a');
   buttons.forEach((button) => {
     button.addEventListener('click', (event) => {
+      const adobeDataLayer = window.adobeDataLayer || [];
       const linkHref = event.currentTarget.getAttribute('href');
       if (linkHref) {
         if (isOutboundLink(linkHref)) {
@@ -99,11 +100,11 @@ function buttonAnalytics(adobeDataLayer) {
 }
 
 function analyticsMain() {
-  const adobeDataLayer = window.adobeDataLayer || [];
-  buttonAnalytics(adobeDataLayer);
+  buttonAnalytics();
 }
 
 export {
+  // test
   // eslint-disable-next-line import/prefer-default-export
   analyticsMain,
 };
