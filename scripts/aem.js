@@ -452,7 +452,7 @@ function decorateFontIcon(span, prefix = '') {
     .substring(5);
   const iconTag = document.createElement('i');
   iconTag.classList.add(`fa-${iconName}`);
-  console.log(prefix);
+  console.log(prefix, iconName, 'hello');
   iconTag.dataset.iconName = iconName;
   span.append(iconTag);
 }
