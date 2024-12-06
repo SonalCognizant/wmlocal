@@ -19,7 +19,8 @@ const isOutboundLink = (linkHref) => {
   return outboundLink;
 };
 
-const callToActionEvent = (adobeDataLayer, linkHref, event) => {
+const callToActionEvent = (linkHref, event) => {
+  const adobeDataLayer = window.adobeDataLayer || [];
   let ctaElementType = event.target.href;
   if (isOutboundLink(linkHref)) {
     const url = new URL(linkHref, window.location.href);
@@ -44,7 +45,8 @@ const callToActionEvent = (adobeDataLayer, linkHref, event) => {
   });
 };
 
-function navigationEvent(adobeDataLayer, linkHref, event) {
+function navigationEvent(linkHref, event) {
+  const adobeDataLayer = window.adobeDataLayer || [];
   const navClickText = event.target.innerText || event.currentTarget.text;
   adobeDataLayer.push({
     event: 'navigation',
@@ -56,7 +58,8 @@ function navigationEvent(adobeDataLayer, linkHref, event) {
   });
 }
 
-function clickEvent(adobeDataLayer, linkHref, event) {
+function clickEvent(linkHref, event) {
+  const adobeDataLayer = window.adobeDataLayer || [];
   const linkClasses = Array.from(event.currentTarget.classList).join(' ');
   const linkURL = new URL(linkHref);
   const linkUrl = linkURL.href;
@@ -79,22 +82,20 @@ function buttonAnalytics() {
   buttons.forEach((button) => {
     button.addEventListener('click', (event) => {
       event.stopPropagation();
-      const adobeDataLayer = window.adobeDataLayer || [];
-      adobeDataLayer.eventData = [];
       const linkHref = event.currentTarget.getAttribute('href');
       if (linkHref) {
         if (isOutboundLink(linkHref)) {
-          clickEvent(adobeDataLayer, linkHref, event);
+          clickEvent(linkHref, event);
         } else if (
           !isOutboundLink(linkHref)
           && button.classList.contains('button')
         ) {
-          callToActionEvent(adobeDataLayer, linkHref, event);
+          callToActionEvent(linkHref, event);
         } else if (
           !button.classList.contains('button')
           && !isOutboundLink(linkHref)
         ) {
-          navigationEvent(adobeDataLayer, linkHref, event);
+          navigationEvent(linkHref, event);
         }
       }
     });
