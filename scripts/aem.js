@@ -450,9 +450,16 @@ function decorateFontIcon(span, prefix = '') {
   const iconName = Array.from(span.classList)
     .find((c) => c.startsWith('icon-'))
     .substring(5);
+  let style = 'regular'; // Default style is 'fa-regular'
+  let icon = '';
+  if (iconName.includes('|')) {
+    [style, icon] = iconName.split('|');
+  } else {
+    icon = iconName;
+  }
   const iconTag = document.createElement('i');
-  iconTag.classList.add(`fa-${iconName}`);
-  console.log(prefix, iconName, 'hello');
+  iconTag.classList.add(`fa-${style} fa-${icon}`);
+  console.log(prefix, iconName, icon, style, 'hello');
   iconTag.dataset.iconName = iconName;
   span.append(iconTag);
 }
