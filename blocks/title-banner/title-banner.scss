@@ -2,9 +2,9 @@
 @import '../../styles/include/tokens.scss';
 
 .title-banner-container {
-  background: linear-gradient(270deg, rgba(166, 198, 221, 1) 0%, rgba(73, 115, 144, 1) 50%);
+  background-image: linear-gradient(270deg, rgba(166, 198, 221, 1) 0%, rgba(148, 182, 206, 1) 0%, rgba(73, 115, 144, 1) 100%);
   @include for-xlarge{
-    background: linear-gradient(180deg, rgba(166, 198, 221, 1) 0%, rgba(73, 115, 144, 1) 50%);
+    background-image: linear-gradient(180deg, rgba(166, 198, 221, 1) 0%, rgba(148, 182, 206, 1) 0%, rgba(73, 115, 144, 1) 100%);
   }
   @include for-tablet{
     background: $--blue-550;
