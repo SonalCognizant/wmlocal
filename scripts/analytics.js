@@ -79,7 +79,7 @@ function buttonAnalytics() {
   buttons.forEach((button) => {
     button.addEventListener('click', (event) => {
       const adobeDataLayer = window.adobeDataLayer || [];
-      adobeDataLayer.event = [];
+      adobeDataLayer.eventData = [];
       const linkHref = event.currentTarget.getAttribute('href');
       if (linkHref) {
         if (isOutboundLink(linkHref)) {
