@@ -46,7 +46,7 @@
 }
 .footer-main-wrapper .footer-main > .logo-social-div > .social-div > p {
   display: flex;
-  gap: 11px;
+  gap: 12px;
 }
 .footer-main-wrapper .footer-main > .logo-social-div > .social-div > p > a > span {
   height: 40px;
@@ -227,7 +227,7 @@
 }
 .footer-main-wrapper .footer-main > .attention-div > .social-div > p {
   display: flex;
-  gap: 11px;
+  gap: 12px;
 }
 .footer-main-wrapper .footer-main > .attention-div > .social-div > p > a > span {
   height: 40px;
