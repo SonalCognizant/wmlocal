@@ -73,6 +73,9 @@ function clickEvent(linkHref, event) {
       link_url: linkUrl,
       link_id: linkID || 'undefined',
       outbound: 'true',
+      nav_menu_type: null,
+      nav_click_image_alt_text: null,
+      nav_click_text: null,
     },
   });
 }
