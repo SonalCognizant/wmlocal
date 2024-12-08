@@ -34,7 +34,7 @@
         padding: 120px 0px;
       }
       @include for-laptop {
-        padding: 118px 0px 120px 0px;
+        padding: 120px 0px 120px 0px;
       }
       @include for-mobile {
         padding: 72px 0;
@@ -99,11 +99,13 @@
           width: calc(100% / 12* 10);
         }
         @include for-tablet {
-          width: 100%
+          width: 100%;
+          font-size: 28px;
         }
         @include for-mobile {
           padding-bottom: 16px;
-          width: 100%
+          width: 100%;
+          font-size: 28px;
         }
       }
     }
