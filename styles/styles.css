@@ -1,4 +1,3 @@
-@import './include/font-icons.scss';
 /*
  * Copyright 2020 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
@@ -314,6 +313,20 @@ a:any-link {
   margin: 0;
 }
 
+/* wellmark color start */
+/* wellmark color end */
+/* wellmark spacing size start */
+/* wellmark spacing size start */
+.icon {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+}
+.icon > i {
+  font-size: 24px;
+  color: #4a7390;
+}
+
 :root {
   /* colors */
   --background-color: white;
@@ -441,12 +454,6 @@ main img {
   max-width: 100%;
   width: auto;
   height: auto;
-}
-
-.icon {
-  display: inline-block;
-  height: 24px;
-  width: 24px;
 }
 
 .icon img {
