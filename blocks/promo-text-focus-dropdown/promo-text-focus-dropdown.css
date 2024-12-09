@@ -90,6 +90,7 @@
 }
 .promo-text-focus-dropdown-container .promo-text-focus-dropdown-wrapper .promo-text-focus-dropdown.block .promo-focus-block > div > div h2 {
   color: #ffffff;
+  width: 100%;
   margin: 0;
 }
 .promo-text-focus-dropdown-container .promo-text-focus-dropdown-wrapper .promo-text-focus-dropdown.block .promo-focus-block > div > div h2 .icon-whitepromoicon {
@@ -109,6 +110,7 @@
 }
 .promo-text-focus-dropdown-container .promo-text-focus-dropdown-wrapper .promo-text-focus-dropdown.block .promo-focus-block > div > div p {
   color: #ffffff;
+  width: 100%;
   margin: 0;
   margin: 24px 0 35px 0;
 }

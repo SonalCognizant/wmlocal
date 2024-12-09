@@ -1,8 +1,13 @@
+@import 'mq';
 @import "tokens";
 
 /* buttons */
 .button-container {
   display: flex;
+  @include for-mobile {
+    width: 100%;
+    display: inline-block;
+  }
 }
 a.button,
 button {
@@ -24,6 +29,8 @@ button {
   font-style: normal;
   letter-spacing: -0.18px;
   line-height: 28px;
+  text-align: center;
+  text-wrap: auto;
 
   &.primary {
     background-color: $--primary-675;
