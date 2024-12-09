@@ -67,9 +67,11 @@
         opacity: 1;
         @include for-mobile {
           padding-bottom: 16px;
+          font-size: 28px;
         }
         @include for-tablet {
           padding-bottom: 16px;
+          font-size: 28px;
         }
       }
     }
