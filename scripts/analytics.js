@@ -101,12 +101,76 @@ function clickEvent(linkHref, event) {
   });
 }
 
+function modalOpenEvent() {
+  window.adobeDataLayer.push({
+    event: 'modal',
+    eventData: {
+      modal_action: 'open',
+      modal_location: window.location.href,
+      modal_name: '',
+      modal_impression: '1',
+      /* link_classes: null,
+      link_domain: null,
+      link_url: null,
+      link_id: null,
+      outbound: null,
+       nav_menu_type: null,
+      nav_click_image_alt_text: null,
+      nav_click_text: null,
+      cta_element_type: null,
+      cta_click_text: null,
+      cta_data_info: null,
+      cta_click_image_alt_text: null,
+      cta_location: null,
+      cta_type: null, */
+    },
+  });
+}
+
+function modalCloseEvent() {
+  window.adobeDataLayer.push({
+    event: 'modal',
+    eventData: {
+      modal_action: 'close',
+      modal_location: window.location.href,
+      modal_name: '',
+      modal_impression: '0',
+      /* link_classes: null,
+      link_domain: null,
+      link_url: null,
+      link_id: null,
+      outbound: null,
+       nav_menu_type: null,
+      nav_click_image_alt_text: null,
+      nav_click_text: null,
+      cta_element_type: null,
+      cta_click_text: null,
+      cta_data_info: null,
+      cta_click_image_alt_text: null,
+      cta_location: null,
+      cta_type: null, */
+    },
+  });
+}
+
 function buttonAnalytics() {
   const buttons = document.querySelectorAll('a');
   buttons.forEach((button) => {
     button.addEventListener('click', (event) => {
       event.stopPropagation();
       const linkHref = event.currentTarget.getAttribute('href');
+      if (
+        button.hasAttribute('data-toggle')
+        && button.getAttribute('data-toggle') === 'modal'
+      ) {
+        modalOpenEvent();
+      }
+      if (
+        button.hasAttribute('data-dismiss')
+        && button.getAttribute('data-dismiss') === 'modal'
+      ) {
+        modalCloseEvent();
+      }
       if (linkHref) {
         if (isOutboundLink(linkHref)) {
           clickEvent(linkHref, event);
