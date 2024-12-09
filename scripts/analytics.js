@@ -20,7 +20,6 @@ const isOutboundLink = (linkHref) => {
 };
 
 const callToActionEvent = (linkHref, event) => {
-  const adobeDataLayer = window.adobeDataLayer || [];
   let ctaElementType = event.target.href;
   if (isOutboundLink(linkHref)) {
     const url = new URL(linkHref, window.location.href);
@@ -32,7 +31,7 @@ const callToActionEvent = (linkHref, event) => {
   const ctaDataInfo = '';
   const ctaClickImageAltTxt = '';
 
-  adobeDataLayer.push({
+  window.adobeDataLayer.push({
     event: 'call_to_action',
     eventData: {
       cta_element_type: ctaElementType,
@@ -54,9 +53,8 @@ const callToActionEvent = (linkHref, event) => {
 };
 
 function navigationEvent(linkHref, event) {
-  const adobeDataLayer = window.adobeDataLayer || [];
   const navClickText = event.target.innerText || event.currentTarget.text;
-  adobeDataLayer.push({
+  window.adobeDataLayer.push({
     event: 'navigation',
     eventData: {
       nav_menu_type: 'link',
@@ -78,13 +76,12 @@ function navigationEvent(linkHref, event) {
 }
 
 function clickEvent(linkHref, event) {
-  const adobeDataLayer = window.adobeDataLayer || [];
   const linkClasses = Array.from(event.currentTarget.classList).join(' ');
   const linkURL = new URL(linkHref);
   const linkUrl = linkURL.href;
   const linkDomain = linkURL.hostname;
   const linkID = event.currentTarget.getAttribute('id');
-  adobeDataLayer.push({
+  window.adobeDataLayer.push({
     event: 'click',
     eventData: {
       link_classes: linkClasses,
