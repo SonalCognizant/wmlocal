@@ -21,6 +21,5 @@ export default function decorate(block) {
   });
   block.textContent = '';
   block.append(ul);
-  console.log(ul.children.length);
   ul.classList.add(`column-${ul.children.length}-variation`);
 }
