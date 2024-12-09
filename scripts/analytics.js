@@ -30,7 +30,7 @@ const callToActionEvent = (linkHref, event) => {
   const ctaType = 'button';
   const ctaDataInfo = '';
   const ctaClickImageAltTxt = '';
-
+  window.adobeDataLayer.reset({}, []);
   window.adobeDataLayer.push({
     event: 'call_to_action',
     eventData: {
@@ -40,27 +40,28 @@ const callToActionEvent = (linkHref, event) => {
       cta_click_image_alt_text: ctaClickImageAltTxt,
       cta_location: ctaLocation,
       cta_type: ctaType,
-      nav_menu_type: null,
+      /* nav_menu_type: null,
       nav_click_image_alt_text: null,
       nav_click_text: null,
       link_classes: null,
       link_domain: null,
       link_url: null,
       link_id: null,
-      outbound: null,
+      outbound: null, */
     },
   });
 };
 
 function navigationEvent(linkHref, event) {
   const navClickText = event.target.innerText || event.currentTarget.text;
+  window.adobeDataLayer.reset({}, []);
   window.adobeDataLayer.push({
     event: 'navigation',
     eventData: {
       nav_menu_type: 'link',
       nav_click_image_alt_text: '',
       nav_click_text: navClickText,
-      link_classes: null,
+      /*  link_classes: null,
       link_domain: null,
       link_url: null,
       link_id: null,
@@ -70,7 +71,7 @@ function navigationEvent(linkHref, event) {
       cta_data_info: null,
       cta_click_image_alt_text: null,
       cta_location: null,
-      cta_type: null,
+      cta_type: null, */
     },
   });
 }
@@ -81,6 +82,7 @@ function clickEvent(linkHref, event) {
   const linkUrl = linkURL.href;
   const linkDomain = linkURL.hostname;
   const linkID = event.currentTarget.getAttribute('id');
+  window.adobeDataLayer.reset({}, []);
   window.adobeDataLayer.push({
     event: 'click',
     eventData: {
@@ -89,7 +91,7 @@ function clickEvent(linkHref, event) {
       link_url: linkUrl,
       link_id: linkID || 'undefined',
       outbound: 'true',
-      nav_menu_type: null,
+      /* nav_menu_type: null,
       nav_click_image_alt_text: null,
       nav_click_text: null,
       cta_element_type: null,
@@ -97,7 +99,7 @@ function clickEvent(linkHref, event) {
       cta_data_info: null,
       cta_click_image_alt_text: null,
       cta_location: null,
-      cta_type: null,
+      cta_type: null, */
     },
   });
 }
