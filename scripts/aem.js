@@ -466,7 +466,7 @@ function decorateFontIcon(span, prefix = '') {
 }
 
 function decorateIcons(element, prefix = '') {
-  const isFontIcon = false;
+  const isFontIcon = true;
   const icons = [...element.querySelectorAll('span.icon')];
   icons.forEach((span) => {
     if (isFontIcon) {
