@@ -30,7 +30,6 @@ const callToActionEvent = (linkHref, event) => {
   const ctaType = 'button';
   const ctaDataInfo = '';
   const ctaClickImageAltTxt = '';
-  window.adobeDataLayer.reset();
   window.adobeDataLayer.push({
     event: 'call_to_action',
     eventData: {
@@ -54,7 +53,6 @@ const callToActionEvent = (linkHref, event) => {
 
 function navigationEvent(linkHref, event) {
   const navClickText = event.target.innerText || event.currentTarget.text;
-  window.adobeDataLayer.reset();
   window.adobeDataLayer.push({
     event: 'navigation',
     eventData: {
@@ -82,7 +80,6 @@ function clickEvent(linkHref, event) {
   const linkUrl = linkURL.href;
   const linkDomain = linkURL.hostname;
   const linkID = event.currentTarget.getAttribute('id');
-  window.adobeDataLayer.reset();
   window.adobeDataLayer.push({
     event: 'click',
     eventData: {
