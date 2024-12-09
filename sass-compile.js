@@ -16,6 +16,7 @@ const ignoredFiles = [
   'tokens.scss',
   'typography.scss',
   'defaultcontent.scss',
+  'font-icons.scss',
 ];
 
 const compileAndSave = async (sassFile) => {
