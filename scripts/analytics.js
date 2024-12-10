@@ -172,13 +172,15 @@ function buttonAnalytics() {
       event.stopPropagation();
       const linkHref = event.currentTarget.getAttribute('href');
       if (
-        button.hasAttribute('data-toggle') &&
+        button.hasAttribute('data-toggle') 
+        &&
         button.getAttribute('data-toggle') === 'modal'
       ) {
         modalOpenEvent();
       }
       if (
-        button.hasAttribute('data-dismiss') &&
+        button.hasAttribute('data-dismiss') 
+        &&
         button.getAttribute('data-dismiss') === 'modal'
       ) {
         modalCloseEvent();
@@ -187,12 +189,14 @@ function buttonAnalytics() {
         if (isOutboundLink(linkHref)) {
           clickEvent(linkHref, event);
         } else if (
-          !isOutboundLink(linkHref) &&
+          !isOutboundLink(linkHref) 
+          &&
           button.classList.contains('button')
         ) {
           callToActionEvent(linkHref, event);
         } else if (
-          !button.classList.contains('button') &&
+          !button.classList.contains('button') 
+          &&
           !isOutboundLink(linkHref)
         ) {
           navigationEvent(linkHref, event);
@@ -204,7 +208,7 @@ function buttonAnalytics() {
 function modalAnalytics() {
   const headerExpand = document.querySelectorAll('header .collapse-bar-menu');
   headerExpand.forEach((buttonExpand) => {
-    buttonExpand.addEventListener('click', (event) => {
+    buttonExpand.addEventListener('click', () => {
       modalOpenEvent();
     });
   });
@@ -213,7 +217,7 @@ function modalAnalytics() {
     'header .collapse-bar-close'
   );
   headerCollapse.forEach((buttonCollapse) => {
-    buttonCollapse.addEventListener('click', (event) => {
+    buttonCollapse.addEventListener('click', () => {
       modalCloseEvent();
     });
   });
