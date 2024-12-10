@@ -88,7 +88,7 @@ function clickEvent(linkHref, event) {
       link_url: linkUrl,
       link_id: linkID || 'undefined',
       outbound: 'true',
-       nav_menu_type: null,
+      nav_menu_type: null,
       nav_click_image_alt_text: null,
       nav_click_text: null,
       cta_element_type: null,
@@ -140,7 +140,7 @@ function modalCloseEvent() {
       link_url: null,
       link_id: null,
       outbound: null,
-       nav_menu_type: null,
+      nav_menu_type: null,
       nav_click_image_alt_text: null,
       nav_click_text: null,
       cta_element_type: null,
@@ -160,14 +160,14 @@ function buttonAnalytics() {
       event.stopPropagation();
       const linkHref = event.currentTarget.getAttribute('href');
       if (
-        button.hasAttribute('data-toggle')
-        && button.getAttribute('data-toggle') === 'modal'
+        button.hasAttribute('data-toggle') &&
+        button.getAttribute('data-toggle') === 'modal'
       ) {
         modalOpenEvent();
       }
       if (
-        button.hasAttribute('data-dismiss')
-        && button.getAttribute('data-dismiss') === 'modal'
+        button.hasAttribute('data-dismiss') &&
+        button.getAttribute('data-dismiss') === 'modal'
       ) {
         modalCloseEvent();
       }
@@ -175,13 +175,13 @@ function buttonAnalytics() {
         if (isOutboundLink(linkHref)) {
           clickEvent(linkHref, event);
         } else if (
-          !isOutboundLink(linkHref)
-          && button.classList.contains('button')
+          !isOutboundLink(linkHref) &&
+          button.classList.contains('button')
         ) {
           callToActionEvent(linkHref, event);
         } else if (
-          !button.classList.contains('button')
-          && !isOutboundLink(linkHref)
+          !button.classList.contains('button') &&
+          !isOutboundLink(linkHref)
         ) {
           navigationEvent(linkHref, event);
         }
@@ -191,7 +191,7 @@ function buttonAnalytics() {
 }
 
 function analyticsMain() {
- // buttonAnalytics();
+  buttonAnalytics();
 }
 
 export {
