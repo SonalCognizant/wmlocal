@@ -153,6 +153,9 @@
   font-weight: 700;
   letter-spacing: 0px;
 }
+.enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-1-column > .cards-card-body > p > span > i {
+  font-size: 64px;
+}
 .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-1-column > .cards-card-body > .button-container a {
   padding: 12px 22px;
 }
@@ -221,6 +224,9 @@
   height: 24px;
   width: 22px;
   vertical-align: middle;
+}
+.enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-2-column > .cards-card-body > p > span > i {
+  font-size: 64px;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-2-column > .cards-card-body > p:last-child {
   padding-top: 12px;
@@ -300,6 +306,9 @@
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 0px;
+}
+.enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-3-column > .cards-card-body > p > span > i {
+  font-size: 64px;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-3-column > .cards-card-body > .button-container a {
   padding: 12px 22px;
@@ -390,6 +399,9 @@
   font-weight: 700;
   letter-spacing: 0px;
 }
+.enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-1-column > .cards-card-body > p > span > i {
+  font-size: 64px;
+}
 .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-1-column > .cards-card-body > .button-container a {
   padding: 12px 22px;
 }
@@ -463,6 +475,9 @@
   font-weight: 700;
   letter-spacing: 0px;
 }
+.enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-2-column > .cards-card-body > p > span > i {
+  font-size: 64px;
+}
 .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-2-column > .cards-card-body > .button-container a {
   padding: 12px 22px;
 }
@@ -525,6 +540,9 @@
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 0px;
+}
+.enrolling-container .enrolling-wrapper > .enrolling > .column-1-variation > .enrolling-1-column > .cards-card-body > p > span > i {
+  font-size: 64px;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-1-variation > .enrolling-1-column > .cards-card-body > .button-container a {
   padding: 12px 22px;
