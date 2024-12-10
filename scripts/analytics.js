@@ -47,6 +47,10 @@ const callToActionEvent = (linkHref, event) => {
       link_url: null,
       link_id: null,
       outbound: null,
+      modal_action: null,
+      modal_location: null,
+      modal_name: null,
+      modal_impression: null,
     },
   });
 };
@@ -70,6 +74,10 @@ function navigationEvent(linkHref, event) {
       cta_click_image_alt_text: null,
       cta_location: null,
       cta_type: null,
+      modal_action: null,
+      modal_location: null,
+      modal_name: null,
+      modal_impression: null,
     },
   });
 }
@@ -97,6 +105,10 @@ function clickEvent(linkHref, event) {
       cta_click_image_alt_text: null,
       cta_location: null,
       cta_type: null,
+      modal_action: null,
+      modal_location: null,
+      modal_name: null,
+      modal_impression: null,
     },
   });
 }
@@ -197,7 +209,9 @@ function modalAnalytics() {
     });
   });
 
-  const headerCollapse = document.querySelectorAll('header .collapse-bar-close');
+  const headerCollapse = document.querySelectorAll(
+    'header .collapse-bar-close'
+  );
   headerCollapse.forEach((buttonCollapse) => {
     buttonCollapse.addEventListener('click', (event) => {
       modalCloseEvent();
