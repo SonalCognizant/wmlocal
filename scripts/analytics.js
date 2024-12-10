@@ -193,7 +193,6 @@ function modalAnalytics() {
   const headerExpand = document.querySelectorAll('header .collapse-bar-menu');
   headerExpand.forEach((buttonExpand) => {
     buttonExpand.addEventListener('click', (event) => {
-      event.stopPropagation();
       modalOpenEvent();
     });
   });
@@ -201,7 +200,6 @@ function modalAnalytics() {
   const headerCollapse = document.querySelectorAll('header .collapse-bar-close');
   headerCollapse.forEach((buttonCollapse) => {
     buttonCollapse.addEventListener('click', (event) => {
-      event.stopPropagation();
       modalCloseEvent();
     });
   });
