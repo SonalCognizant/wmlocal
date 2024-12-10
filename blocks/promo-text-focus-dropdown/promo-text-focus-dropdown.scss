@@ -51,7 +51,7 @@
               padding: $--spacing-huge $--spacing-xl;
             }
             @include for-laptop{
-              padding: $--spacing-huge $--spacing-xl;
+              padding: $--spacing-huge $--spacing-xxl $--spacing-huge 37px;
             }
             @include for-large{
               padding: $--spacing-huge $--spacing-xxl;
