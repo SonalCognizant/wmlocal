@@ -1005,3 +1005,89 @@ header {
         }
 	}
 }
+.breadcrumb-ul{
+    display: flex;
+    max-width: 1275px;
+    margin: auto;
+    padding: $--spacing-l 0;
+    .breadcrumb-list{
+        list-style: none;
+        padding: 8px 0;
+        position: relative;
+        margin: 0 15px;
+        a{
+            color: $--blue-675;
+            font-size: 16px;
+            font-weight: 400;
+            font-family: $--font-roboto;
+            text-transform: capitalize;
+        }
+        .divider-img{
+            width: 8px;
+            height: 15px;
+            position: absolute;
+            bottom: 11px;
+            right: -20px;
+        }
+        .backarrow{
+            width: 8px;
+            height: 15px;
+            position: absolute;
+            bottom: 4px;
+            left: -15px;
+            display: none;
+        }
+        &:first-child{
+            margin-left: 0;
+        }
+        &:last-child{
+            margin-right: 0;
+            a{
+                font-weight: 500;
+                color: $--gray-700;
+            }
+            .divider-img{
+                display: none;
+            }
+        }
+    }
+    @include for-laptop{
+        width: calc(100% - 75px);
+    }
+    @include for-tablet{
+        width: 100%;
+        padding: 32px 0 32px 36px;
+        .breadcrumb-list{
+            display: none;
+            padding: 0;
+            &:nth-last-child(2){
+                display: block;
+                margin-right: 0;
+            }
+            .backarrow{
+                display: block;
+            }
+            .divider-img{
+                display: none;
+            }
+        }
+    }
+    @include for-mobile{
+        width: 100%;
+        padding: 32px 0 32px 16px;
+        .breadcrumb-list{
+            display: none;
+            padding: 0;
+            &:nth-last-child(2){
+                display: block;
+                margin-right: 0;
+            }
+            .backarrow{
+                display: block;
+            }
+            .divider-img{
+                display: none;
+            }
+        }
+    }
+}

@@ -423,4 +423,53 @@ export default async function decorate(block) {
   navWrapper.className = 'main-header-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+  // create the breadcrumbs for the page
+  const breadCrumbTag = document.querySelector('meta[name="breadcrumbs"]').content;
+  // if the page has the metadata as like true then loading the breadcrumbs to the page
+  if (breadCrumbTag.toLowerCase() === 'true') {
+    const locationPath = window.location.pathname.split('/');
+    locationPath.shift();
+    // creation of breadcrumb ul
+    const breadCrumbdiv = document.createElement('ul');
+    breadCrumbdiv.classList.add('breadcrumb-ul');
+    const mainTag = document.querySelector('main');
+    mainTag.prepend(breadCrumbdiv);
+    const breadcrumLength = locationPath.length;
+    for (let i in locationPath) {
+      // creation of breadcrumbs lists
+      const breadcrumbList = document.createElement('li');
+      breadcrumbList.classList.add('breadcrumb-list');
+      const breadcrumbaTag = document.createElement('a');
+      breadcrumbaTag.textContent = locationPath[i];
+      breadcrumbaTag.setAttribute('data-breadcrumb-value',locationPath[i]);
+      breadcrumbList.append(breadcrumbaTag);
+      breadCrumbdiv.append(breadcrumbList);
+      // get the image for the breadcrumb
+      const breadcrumbImg = document.createElement('img');
+      breadcrumbImg.src = '/icons/breadcrumb-divider.svg';
+      breadcrumbImg.setAttribute('data-icon-name', 'divider');
+      breadcrumbImg.className = 'divider-img';
+      breadcrumbList.append(breadcrumbImg);
+      // get the image for the breadcrumb
+      const breadcrumbImg2 = document.createElement('img');
+      breadcrumbImg2.src = '/icons/breadcrumb-backarrow.svg';
+      breadcrumbImg2.setAttribute('data-icon-name', 'divider');
+      breadcrumbImg2.className = 'backarrow';
+      breadcrumbList.prepend(breadcrumbImg2);
+    }
+    const breadcrumurlLength = locationPath.length;
+    for (let j = breadcrumurlLength; j > 0; j--){
+      const lastchildUrls = j == breadcrumLength;
+      if(!lastchildUrls){
+        generateUrl(locationPath,j);
+      }
+    }
+  }
+}
+function generateUrl(dataArray, index){
+  const locateIndex = index - 1;
+  const dynamicString = dataArray.slice(0, index).join().replaceAll(',','/');
+  const breadcrumbUrl = window.location.origin + '/' + dynamicString;
+  const productElement = document.querySelector(`[data-breadcrumb-value=${dataArray[locateIndex]}]`);
+  productElement.setAttribute('href',breadcrumbUrl);
 }
