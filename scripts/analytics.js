@@ -189,13 +189,29 @@ function buttonAnalytics() {
     });
   });
 }
+function modalAnalytics() {
+  const headerExpand = document.querySelectorAll('header .collapse-bar-menu');
+  headerExpand.forEach((buttonExpand) => {
+    buttonExpand.addEventListener('click', (event) => {
+      event.stopPropagation();
+      modalOpenEvent();
+    });
+  });
 
+  const headerCollapse = document.querySelectorAll('header .collapse-bar-close');
+  headerCollapse.forEach((buttonCollapse) => {
+    buttonCollapse.addEventListener('click', (event) => {
+      event.stopPropagation();
+      modalCloseEvent();
+    });
+  });
+}
 function analyticsMain() {
   buttonAnalytics();
+  modalAnalytics();
 }
 
 export {
-  // test
   // eslint-disable-next-line import/prefer-default-export
   analyticsMain,
 };
