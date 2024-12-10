@@ -3,8 +3,6 @@
 
 .promo-text-wrapper {
   margin: 0;
-  > .promo-text {
-    padding: 0 52px;
     @include for-xlarge {
       padding: 0 52px;
     }
@@ -20,6 +18,7 @@
     @include for-tablet {
       padding: 0 36px;
     }
+  > .promo-text {
     > div {
       display: flex;
       flex-direction: column;

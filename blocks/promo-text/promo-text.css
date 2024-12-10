@@ -5,31 +5,28 @@
 .promo-text-wrapper {
   margin: 0;
 }
-.promo-text-wrapper > .promo-text {
-  padding: 0 52px;
-}
 @media (min-width: 1380px) {
-  .promo-text-wrapper > .promo-text {
+  .promo-text-wrapper {
     padding: 0 52px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
-  .promo-text-wrapper > .promo-text {
+  .promo-text-wrapper {
     padding: 0 52px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
-  .promo-text-wrapper > .promo-text {
+  .promo-text-wrapper {
     padding: 0 36px;
   }
 }
 @media (max-width: 480px) {
-  .promo-text-wrapper > .promo-text {
+  .promo-text-wrapper {
     padding: 0 16px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
-  .promo-text-wrapper > .promo-text {
+  .promo-text-wrapper {
     padding: 0 36px;
   }
 }
