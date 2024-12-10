@@ -321,12 +321,8 @@ function renderMegaMenu(nav) {
   }, 500);
   const collapsebarmenu = document.createElement('div');
   collapsebarmenu.classList.add('collapse-bar-menu');
-  const anchorbarmenu = document.createElement('a');
-  anchorbarmenu.classList.add('anchor-bar-menu');
   const collapsebarclose = document.createElement('div');
   collapsebarclose.classList.add('collapse-bar-close');
-  const anchorbarclose = document.createElement('a');
-  anchorbarclose.classList.add('anchor-bar-close');
 
   const breadcrumbsicon = document.createElement('img');
   breadcrumbsicon.classList.add('collapse-btn');
@@ -343,12 +339,10 @@ function renderMegaMenu(nav) {
   colclose.classList.add('collapse-close');
   colclose.innerHTML = ('Close');
   collapsediv.append(collapsebarmenu);
-  collapsebarmenu.prepend(anchorbarmenu);
-  anchorbarmenu.prepend(breadcrumbsicon);
+  collapsebarmenu.prepend(breadcrumbsicon);
   collapsebarmenu.append(collapsemenu);
   collapsediv.append(collapsebarclose);
-  collapsebarclose.prepend(anchorbarclose);
-  anchorbarclose.prepend(collapseclose);
+  collapsebarclose.prepend(collapseclose);
   collapsebarclose.append(colclose);
 
   const searchicon = document.createElement('img');

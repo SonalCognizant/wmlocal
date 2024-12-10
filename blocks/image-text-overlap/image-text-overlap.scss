@@ -28,18 +28,20 @@
                 padding: 0 $--spacing-m $--spacing-huge $--spacing-m;
               }
               @include for-tablet {
+                max-width: calc(50% - 51px);
                 padding: $--spacing-huge 0 $--spacing-huge $--spacing-xl;
               }
               @include for-laptop {
-                min-width: calc(50% - 51px);
                 max-width: calc(50% - 51px);
                 padding: $--spacing-huge 0 $--spacing-huge $--spacing-xl;
               }
               @include for-large {
                 padding: $--spacing-max 0 $--spacing-max $--spacing-xxl;
+                max-width: calc((100% - 30px) / 12* 5);
               }
               @include for-xlarge {
                 padding: $--spacing-max 0 $--spacing-max 0;
+                max-width: calc((100% - 30px) / 12* 5);
               }
               @include for-nonmobile {
                 flex: 1;
@@ -109,6 +111,7 @@
               }
             }
             p {
+              width: 100%;
               color: $--gray-700;
               font-family: $--font-roboto;
               font-size: 16px;
@@ -117,20 +120,16 @@
               letter-spacing: 0px;
               text-align: left;
               line-height: 24px;
-              margin-bottom: $--spacing-xl;
+              margin-bottom: 20px;
               margin-top: 0;
               &.button-container {
                 margin-top: 0;
                 margin-bottom: 0;
-                a.button {
-                  text-align: center;
-                  &.primary {
-                    margin-bottom: 16px;
-                  }
+                @include for-nonmobile {
+                  width: max-content;
                 }
-                @include for-mobile {
-                  width: 100%;
-                  display: unset;
+                a.button {
+                  margin-top: $--spacing-m;
                 }
               }
             }

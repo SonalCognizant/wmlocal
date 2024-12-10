@@ -37,12 +37,12 @@
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols > div > div:has(h2) {
+    max-width: calc(50% - 51px);
     padding: 72px 0 72px 36px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols > div > div:has(h2) {
-    min-width: calc(50% - 51px);
     max-width: calc(50% - 51px);
     padding: 72px 0 72px 36px;
   }
@@ -50,11 +50,13 @@
 @media (min-width: 1201px) and (max-width: 1379px) {
   .image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols > div > div:has(h2) {
     padding: 120px 0 120px 52px;
+    max-width: calc((100% - 30px) / 12 * 5);
   }
 }
 @media (min-width: 1380px) {
   .image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols > div > div:has(h2) {
     padding: 120px 0 120px 0;
+    max-width: calc((100% - 30px) / 12 * 5);
   }
 }
 @media (min-width: 480.5px) {
@@ -142,6 +144,7 @@
   }
 }
 .image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols.block p {
+  width: 100%;
   color: #4b4c4d;
   font-family: roboto, sans-serif;
   font-size: 16px;
@@ -150,22 +153,18 @@
   letter-spacing: 0px;
   text-align: left;
   line-height: 24px;
-  margin-bottom: 36px;
+  margin-bottom: 20px;
   margin-top: 0;
 }
 .image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols.block p.button-container {
   margin-top: 0;
   margin-bottom: 0;
 }
-.image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols.block p.button-container a.button {
-  text-align: center;
-}
-.image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols.block p.button-container a.button.primary {
-  margin-bottom: 16px;
-}
-@media (max-width: 480px) {
+@media (min-width: 480.5px) {
   .image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols.block p.button-container {
-    width: 100%;
-    display: unset;
+    width: max-content;
   }
+}
+.image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols.block p.button-container a.button {
+  margin-top: 16px;
 }

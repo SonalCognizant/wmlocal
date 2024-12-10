@@ -91,7 +91,7 @@ export default function decorate(block) {
     dropdownul.style.display = dropdownul.style.display === 'block' ? 'none' : 'block';
   });
 
-  dropdownul.querySelectorAll('li').forEach((option) => {
+  dropdownul.querySelectorAll('a').forEach((option) => {
     option.addEventListener('click', () => {
       dropdownbtn.textContent = option.textContent;
       dropdownul.style.display = 'none';

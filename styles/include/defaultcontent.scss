@@ -47,7 +47,11 @@
         display: inline-flex;
         padding-bottom: 0;
         padding-right: 26px;
-
+        @include for-mobile {
+          width: 100%;
+          display: unset;
+          padding: 0;
+        }
         &:last-child {
           padding-right: 0;
         }
@@ -58,6 +62,11 @@
           letter-spacing: 0px;
           text-align: left;
           line-height: 19px;
+          &.button{
+            @include for-mobile {
+              margin-bottom: 16px;
+            }
+          }
         }
       }
       span {
@@ -91,6 +100,10 @@
         text-align: left;
         line-height: 24px;
         &.button-container{
+          @include for-mobile {
+            width: 100%;
+            display: unset;
+          }
           a{
             &.button{
               opacity: 1;

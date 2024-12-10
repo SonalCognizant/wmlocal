@@ -51,7 +51,7 @@
               padding: $--spacing-huge $--spacing-xl;
             }
             @include for-laptop{
-              padding: $--spacing-huge $--spacing-xl;
+              padding: $--spacing-huge $--spacing-xxl $--spacing-huge 37px;
             }
             @include for-large{
               padding: $--spacing-huge $--spacing-xxl;
@@ -62,6 +62,7 @@
             >div {
               h2{
                 color: $--white;
+                width: 100%;
                 margin: 0;
                 .icon-whitepromoicon{
                   margin-bottom: $--spacing-l;
@@ -77,6 +78,7 @@
               }
               p{
                 color: $--white;
+                width: 100%;
                 margin: 0;
                 margin: $--spacing-l 0 35px 0;
                 @include for-nonmobile {
