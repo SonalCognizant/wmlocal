@@ -39,14 +39,14 @@ const callToActionEvent = (linkHref, event) => {
       cta_click_image_alt_text: ctaClickImageAltTxt,
       cta_location: ctaLocation,
       cta_type: ctaType,
-      /* nav_menu_type: null,
+      nav_menu_type: null,
       nav_click_image_alt_text: null,
       nav_click_text: null,
       link_classes: null,
       link_domain: null,
       link_url: null,
       link_id: null,
-      outbound: null, */
+      outbound: null,
     },
   });
 };
@@ -59,7 +59,7 @@ function navigationEvent(linkHref, event) {
       nav_menu_type: 'link',
       nav_click_image_alt_text: '',
       nav_click_text: navClickText,
-      /*  link_classes: null,
+      link_classes: null,
       link_domain: null,
       link_url: null,
       link_id: null,
@@ -69,7 +69,7 @@ function navigationEvent(linkHref, event) {
       cta_data_info: null,
       cta_click_image_alt_text: null,
       cta_location: null,
-      cta_type: null, */
+      cta_type: null,
     },
   });
 }
@@ -88,7 +88,7 @@ function clickEvent(linkHref, event) {
       link_url: linkUrl,
       link_id: linkID || 'undefined',
       outbound: 'true',
-      /* nav_menu_type: null,
+       nav_menu_type: null,
       nav_click_image_alt_text: null,
       nav_click_text: null,
       cta_element_type: null,
@@ -96,7 +96,7 @@ function clickEvent(linkHref, event) {
       cta_data_info: null,
       cta_click_image_alt_text: null,
       cta_location: null,
-      cta_type: null, */
+      cta_type: null,
     },
   });
 }
@@ -109,12 +109,12 @@ function modalOpenEvent() {
       modal_location: window.location.href,
       modal_name: '',
       modal_impression: '1',
-      /* link_classes: null,
+      link_classes: null,
       link_domain: null,
       link_url: null,
       link_id: null,
       outbound: null,
-       nav_menu_type: null,
+      nav_menu_type: null,
       nav_click_image_alt_text: null,
       nav_click_text: null,
       cta_element_type: null,
@@ -122,7 +122,7 @@ function modalOpenEvent() {
       cta_data_info: null,
       cta_click_image_alt_text: null,
       cta_location: null,
-      cta_type: null, */
+      cta_type: null,
     },
   });
 }
@@ -135,7 +135,7 @@ function modalCloseEvent() {
       modal_location: window.location.href,
       modal_name: '',
       modal_impression: '0',
-      /* link_classes: null,
+      link_classes: null,
       link_domain: null,
       link_url: null,
       link_id: null,
@@ -148,7 +148,7 @@ function modalCloseEvent() {
       cta_data_info: null,
       cta_click_image_alt_text: null,
       cta_location: null,
-      cta_type: null, */
+      cta_type: null,
     },
   });
 }
@@ -191,7 +191,7 @@ function buttonAnalytics() {
 }
 
 function analyticsMain() {
-  buttonAnalytics();
+ // buttonAnalytics();
 }
 
 export {
