@@ -171,12 +171,14 @@ function socialMediaAnalytics(){
 }
 
 const isSocialLink = (linkHref) => {
-  let socialLink = false;
+  const socialMediaDomains = [
+    'facebook.com', 'twitter.com', 'linked.com', 'instagram.com', 'youtube.com',
+  ];
 
   const linkURL = new URL(linkHref);
   const linkDomain = linkURL.hostname;
-  console.log(linkDomain);
-  return socialLink;
+  console.log('is social link', socialMediaDomains.some((domain) => linkDomain.includes(domain)));
+  return socialMediaDomains.some((domain) => linkDomain.includes(domain));
 };
 
 function buttonAnalytics() {
