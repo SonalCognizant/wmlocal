@@ -36,7 +36,7 @@
       @include for-mobile {
         padding: 72px 0 52px 0;
         font-size: 28px;
-        width: fit-content;
+        width: 345px;
       }
       @include for-xlarge {
         padding: 120px 0 52px 0;
@@ -50,7 +50,7 @@
       @include for-tablet {
         padding: 96px 0 72px 0;
         font-size: 28px;
-        width: fit-content;
+        width: 345px;
       }
     }
     > .enrolling {
@@ -61,12 +61,22 @@
         margin: 0;
         list-style: none;
         padding: 0;
-        padding-bottom: 120px;
         @include for-mobile {
+          padding-bottom: 72px;
           flex-direction: column;
           gap: 52px;
         }
+        @include for-xlarge {
+          padding-bottom: 120px;
+        }
+        @include for-large {
+          padding-bottom: 120px;
+        }
+        @include for-laptop {
+          padding-bottom: 120px;
+        }
         @include for-tablet {
+          padding-bottom: 96px;
           flex-direction: column;
           gap: 52px;
         }
@@ -298,12 +308,22 @@
         margin: 0;
         list-style: none;
         padding: 0;
-        padding-bottom: 120px;
         @include for-mobile {
+          padding-bottom: 72px;
           flex-direction: column;
           gap: 52px;
         }
+        @include for-xlarge {
+          padding-bottom: 120px;
+        }
+        @include for-large {
+          padding-bottom: 120px;
+        }
+        @include for-laptop {
+          padding-bottom: 120px;
+        }
         @include for-tablet {
+          padding-bottom: 96px;
           flex-direction: column;
           gap: 52px;
         }
@@ -458,7 +478,21 @@
         margin: 0;
         list-style: none;
         padding: 0;
-        padding-bottom: 120px;
+        @include for-mobile {
+          padding-bottom: 72px;
+        }
+        @include for-xlarge {
+          padding-bottom: 120px;
+        }
+        @include for-large {
+          padding-bottom: 120px;
+        }
+        @include for-laptop {
+          padding-bottom: 120px;
+        }
+        @include for-tablet {
+          padding-bottom: 96px;
+        }
         > .enrolling-1-column {
           > .cards-card-body {
             display: flex;

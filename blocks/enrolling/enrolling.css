@@ -49,7 +49,7 @@
   .enrolling-container .enrolling-wrapper .enrolling-heading {
     padding: 72px 0 52px 0;
     font-size: 28px;
-    width: fit-content;
+    width: 345px;
   }
 }
 @media (min-width: 1380px) {
@@ -71,7 +71,7 @@
   .enrolling-container .enrolling-wrapper .enrolling-heading {
     padding: 96px 0 72px 0;
     font-size: 28px;
-    width: fit-content;
+    width: 345px;
   }
 }
 .enrolling-container .enrolling-wrapper > .enrolling {
@@ -83,16 +83,32 @@
   margin: 0;
   list-style: none;
   padding: 0;
-  padding-bottom: 120px;
 }
 @media (max-width: 480px) {
   .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation {
+    padding-bottom: 72px;
     flex-direction: column;
     gap: 52px;
   }
 }
+@media (min-width: 1380px) {
+  .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation {
+    padding-bottom: 120px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation {
+    padding-bottom: 120px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation {
+    padding-bottom: 120px;
+  }
+}
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation {
+    padding-bottom: 96px;
     flex-direction: column;
     gap: 52px;
   }
@@ -330,16 +346,32 @@
   margin: 0;
   list-style: none;
   padding: 0;
-  padding-bottom: 120px;
 }
 @media (max-width: 480px) {
   .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation {
+    padding-bottom: 72px;
     flex-direction: column;
     gap: 52px;
   }
 }
+@media (min-width: 1380px) {
+  .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation {
+    padding-bottom: 120px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation {
+    padding-bottom: 120px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation {
+    padding-bottom: 120px;
+  }
+}
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation {
+    padding-bottom: 96px;
     flex-direction: column;
     gap: 52px;
   }
@@ -498,7 +530,31 @@
   margin: 0;
   list-style: none;
   padding: 0;
-  padding-bottom: 120px;
+}
+@media (max-width: 480px) {
+  .enrolling-container .enrolling-wrapper > .enrolling > .column-1-variation {
+    padding-bottom: 72px;
+  }
+}
+@media (min-width: 1380px) {
+  .enrolling-container .enrolling-wrapper > .enrolling > .column-1-variation {
+    padding-bottom: 120px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .enrolling-container .enrolling-wrapper > .enrolling > .column-1-variation {
+    padding-bottom: 120px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .enrolling-container .enrolling-wrapper > .enrolling > .column-1-variation {
+    padding-bottom: 120px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .enrolling-container .enrolling-wrapper > .enrolling > .column-1-variation {
+    padding-bottom: 96px;
+  }
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-1-variation > .enrolling-1-column > .cards-card-body {
   display: flex;
