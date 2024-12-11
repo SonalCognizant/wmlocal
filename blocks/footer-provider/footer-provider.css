@@ -113,6 +113,10 @@
   vertical-align: sub;
   padding-left: 4px;
 }
+.footer-provider-wrapper .footer-provider > .claims-div > div ul li span i {
+  padding-left: 4px;
+  font-size: 19px;
+}
 .footer-provider-wrapper .footer-provider > .wellmarkdrug-div {
   max-width: 1275px;
   margin: auto;
@@ -162,6 +166,10 @@
   width: 18.57px;
   vertical-align: sub;
   padding-left: 4px;
+}
+.footer-provider-wrapper .footer-provider > .wellmarkdrug-div > div ul li span i {
+  padding-left: 4px;
+  font-size: 19px;
 }
 .footer-provider-wrapper .footer-provider > .wellmarkdrug-div > .social-div {
   display: flex;
