@@ -165,19 +165,49 @@ function modalCloseEvent() {
   });
 }
 
-function socialMediaAnalytics(){
-
-
+function socialMediaAnalytics(linkHref) {
+  const linkURL = new URL(linkHref);
+  const linkDomain = linkURL.hostname;
+  window.adobeDataLayer.push({
+    event: 'social',
+    eventData: {
+      social_network: linkDomain,
+      social_share: window.location.href,
+      social_clickthrough: '',
+      /*  modal_action: null,
+      modal_location: null,
+      modal_name: null,
+      modal_impression: null,
+      link_classes: null,
+      link_domain: null,
+      link_url: null,
+      link_id: null,
+      outbound: null,
+      nav_menu_type: null,
+      nav_click_image_alt_text: null,
+      nav_click_text: null,
+      cta_element_type: null,
+      cta_click_text: null,
+      cta_data_info: null,
+      cta_click_image_alt_text: null,
+      cta_location: null,
+      cta_type: null, */
+    },
+  });
 }
 
 const isSocialLink = (linkHref) => {
   const socialMediaDomains = [
-    'facebook.com', 'twitter.com', 'linked.com', 'instagram.com', 'youtube.com',
+    'facebook.com',
+    'twitter.com',
+    'linked.com',
+    'instagram.com',
+    'youtube.com',
+    'x.xom',
   ];
 
   const linkURL = new URL(linkHref);
   const linkDomain = linkURL.hostname;
-  console.log('is social link', socialMediaDomains.some((domain) => linkDomain.includes(domain)));
   return socialMediaDomains.some((domain) => linkDomain.includes(domain));
 };
 
@@ -202,7 +232,7 @@ function buttonAnalytics() {
       if (linkHref) {
         if (isOutboundLink(linkHref)) {
           if (isSocialLink(linkHref)) {
-            socialMediaAnalytics();
+            socialMediaAnalytics(linkHref);
           } else {
             clickEvent(linkHref, event);
           }
