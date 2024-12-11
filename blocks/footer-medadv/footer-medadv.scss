@@ -37,6 +37,18 @@
           > a > span {
             height: 40px;
             width: 40px;
+            display: inline-block;
+            i {
+              font-size: 24px;
+              color: black;
+              height: 100%;
+              width: 100%;
+              border: 1px solid black;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 5px;
+            }
           }
         }
         @include for-mobile {
@@ -180,6 +192,18 @@
           > a > span {
             height: 40px;
             width: 40px;
+            display: inline-block;
+            i {
+              font-size: 24px;
+              color: black;
+              height: 100%;
+              width: 100%;
+              border: 1px solid black;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 5px;
+            }
           }
         }
         @include for-mobile {

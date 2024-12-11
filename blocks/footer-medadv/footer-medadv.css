@@ -51,6 +51,18 @@
 .footer-medadv-wrapper .footer-medadv > .logo-social-div > .social-div > p > a > span {
   height: 40px;
   width: 40px;
+  display: inline-block;
+}
+.footer-medadv-wrapper .footer-medadv > .logo-social-div > .social-div > p > a > span i {
+  font-size: 24px;
+  color: black;
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
 }
 @media (max-width: 480px) {
   .footer-medadv-wrapper .footer-medadv > .logo-social-div > .social-div {
@@ -238,6 +250,18 @@
 .footer-medadv-wrapper .footer-medadv > .attention-div > .social-div > p > a > span {
   height: 40px;
   width: 40px;
+  display: inline-block;
+}
+.footer-medadv-wrapper .footer-medadv > .attention-div > .social-div > p > a > span i {
+  font-size: 24px;
+  color: black;
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
 }
 @media (max-width: 480px) {
   .footer-medadv-wrapper .footer-medadv > .attention-div > .social-div {
