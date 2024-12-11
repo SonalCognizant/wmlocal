@@ -344,11 +344,11 @@ a:any-link {
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
-.icon {
+/* .icon {
   display: inline-block;
   height: 24px;
   width: 24px;
-}
+} */
 .icon > i {
   font-size: 24px;
   color: #4a7390;
