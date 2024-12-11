@@ -80,6 +80,8 @@
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation {
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   list-style: none;
   padding: 0;
@@ -112,6 +114,9 @@
     flex-direction: column;
     gap: 52px;
   }
+}
+.enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-1-column {
+  width: fit-content;
 }
 @media (min-width: 1380px) {
   .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-1-column {
@@ -186,6 +191,9 @@
   font-style: Bold;
   letter-spacing: 0px;
   text-align: center;
+}
+.enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-2-column {
+  width: fit-content;
 }
 @media (min-width: 1380px) {
   .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-2-column {
@@ -267,6 +275,9 @@
   letter-spacing: 0px;
   text-align: center;
 }
+.enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-3-column {
+  width: fit-content;
+}
 @media (min-width: 1380px) {
   .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-3-column {
     padding-left: 80px;
@@ -343,6 +354,8 @@
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation {
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   list-style: none;
   padding: 0;
@@ -375,6 +388,9 @@
     flex-direction: column;
     gap: 52px;
   }
+}
+.enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-1-column {
+  width: fit-content;
 }
 @media (min-width: 1380px) {
   .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-1-column {
@@ -448,6 +464,9 @@
   font-style: Bold;
   letter-spacing: 0px;
   text-align: center;
+}
+.enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-2-column {
+  width: fit-content;
 }
 @media (min-width: 1380px) {
   .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-2-column {
@@ -527,6 +546,8 @@
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-1-variation {
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   list-style: none;
   padding: 0;
@@ -555,6 +576,9 @@
   .enrolling-container .enrolling-wrapper > .enrolling > .column-1-variation {
     padding-bottom: 96px;
   }
+}
+.enrolling-container .enrolling-wrapper > .enrolling > .column-1-variation > .enrolling-1-column {
+  width: fit-content;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-1-variation > .enrolling-1-column > .cards-card-body {
   display: flex;
