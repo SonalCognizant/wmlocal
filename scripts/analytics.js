@@ -39,7 +39,7 @@ const callToActionEvent = (linkHref, event) => {
       cta_click_image_alt_text: ctaClickImageAltTxt,
       cta_location: ctaLocation,
       cta_type: ctaType,
-      nav_menu_type: null,
+      /* nav_menu_type: null,
       nav_click_image_alt_text: null,
       nav_click_text: null,
       link_classes: null,
@@ -50,7 +50,7 @@ const callToActionEvent = (linkHref, event) => {
       modal_action: null,
       modal_location: null,
       modal_name: null,
-      modal_impression: null,
+      modal_impression: null, */
     },
   });
 };
@@ -63,7 +63,7 @@ function navigationEvent(linkHref, event) {
       nav_menu_type: 'link',
       nav_click_image_alt_text: '',
       nav_click_text: navClickText,
-      link_classes: null,
+      /* link_classes: null,
       link_domain: null,
       link_url: null,
       link_id: null,
@@ -77,7 +77,7 @@ function navigationEvent(linkHref, event) {
       modal_action: null,
       modal_location: null,
       modal_name: null,
-      modal_impression: null,
+      modal_impression: null, */
     },
   });
 }
@@ -96,7 +96,7 @@ function clickEvent(linkHref, event) {
       link_url: linkUrl,
       link_id: linkID || 'undefined',
       outbound: 'true',
-      nav_menu_type: null,
+      /* nav_menu_type: null,
       nav_click_image_alt_text: null,
       nav_click_text: null,
       cta_element_type: null,
@@ -108,7 +108,7 @@ function clickEvent(linkHref, event) {
       modal_action: null,
       modal_location: null,
       modal_name: null,
-      modal_impression: null,
+      modal_impression: null, */
     },
   });
 }
@@ -121,7 +121,7 @@ function modalOpenEvent() {
       modal_location: window.location.href,
       modal_name: '',
       modal_impression: '1',
-      link_classes: null,
+      /* link_classes: null,
       link_domain: null,
       link_url: null,
       link_id: null,
@@ -134,7 +134,7 @@ function modalOpenEvent() {
       cta_data_info: null,
       cta_click_image_alt_text: null,
       cta_location: null,
-      cta_type: null,
+      cta_type: null, */
     },
   });
 }
@@ -147,7 +147,7 @@ function modalCloseEvent() {
       modal_location: window.location.href,
       modal_name: '',
       modal_impression: '0',
-      link_classes: null,
+      /* link_classes: null,
       link_domain: null,
       link_url: null,
       link_id: null,
@@ -160,10 +160,24 @@ function modalCloseEvent() {
       cta_data_info: null,
       cta_click_image_alt_text: null,
       cta_location: null,
-      cta_type: null,
+      cta_type: null, */
     },
   });
 }
+
+function socialMediaAnalytics(){
+
+
+}
+
+const isSocialLink = (linkHref) => {
+  let socialLink = false;
+
+  const linkURL = new URL(linkHref);
+  const linkDomain = linkURL.hostname;
+  console.log(linkDomain);
+  return socialLink;
+};
 
 function buttonAnalytics() {
   const buttons = document.querySelectorAll('a');
@@ -185,7 +199,11 @@ function buttonAnalytics() {
       }
       if (linkHref) {
         if (isOutboundLink(linkHref)) {
-          clickEvent(linkHref, event);
+          if (isSocialLink(linkHref)) {
+            socialMediaAnalytics();
+          } else {
+            clickEvent(linkHref, event);
+          }
         } else if (
           !isOutboundLink(linkHref)
           && button.classList.contains('button')
