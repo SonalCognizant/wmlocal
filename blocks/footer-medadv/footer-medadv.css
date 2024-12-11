@@ -113,6 +113,11 @@
   vertical-align: text-top;
   padding-left: 4px;
 }
+.footer-medadv-wrapper .footer-medadv > .contact-div > div ul li span i {
+  vertical-align: text-bottom;
+  padding-left: 4px;
+  font-size: 16px;
+}
 .footer-medadv-wrapper .footer-medadv > .adobe-div {
   max-width: 1275px;
   margin: auto;
