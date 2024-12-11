@@ -38,12 +38,16 @@
       }
       @include for-laptop {
         padding: 120px 0px 120px 0px;
+        width: calc(83.33% - 10px);
+        margin: 0 auto;
       }
       @include for-mobile {
         padding: 72px 0;
+        width: 100%;
       }
       @include for-tablet {
         padding: 96px 0;
+        width: 100%;
       }
       > .button {
         margin: 0;
@@ -71,10 +75,10 @@
           width: 100%;
         }
         @include for-laptop {
-          width: calc(83.33% - 10px)
+          width: 100%;
         }
         @include for-tablet {
-          width: 100%
+          width: 100%;
         }
         @include for-mobile {
           padding-bottom: 24px;
@@ -99,8 +103,7 @@
           width: 100%;
         }
         @include for-laptop {
-          width: calc(83.33% - 10px);
-          padding: 0 25px;
+          width: 100%;
         }
         @include for-tablet {
           width: 100%;
