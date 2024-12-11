@@ -41,11 +41,15 @@
 @media (min-width: 1380px) {
   .promo-text-wrapper > .promo-text > div {
     padding: 120px 0px;
+    width: calc(66.66% - 10px);
+    margin: 0 auto;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .promo-text-wrapper > .promo-text > div {
     padding: 120px 0px;
+    width: calc(66.66% - 10px);
+    margin: 0 auto;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
@@ -87,17 +91,17 @@
 }
 @media (min-width: 1380px) {
   .promo-text-wrapper > .promo-text > div > .description {
-    width: calc(66.66% + 60px);
+    width: 100%;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .promo-text-wrapper > .promo-text > div > .description {
-    width: calc(66.66% + 60px);
+    width: 100%;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .promo-text-wrapper > .promo-text > div > .description {
-    width: 83.3333333333%;
+    width: calc(83.33% - 10px);
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
@@ -124,17 +128,18 @@
 }
 @media (min-width: 1380px) {
   .promo-text-wrapper > .promo-text > div > .title {
-    width: calc(66.66% + 60px);
+    width: 100%;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .promo-text-wrapper > .promo-text > div > .title {
-    width: calc(66.66% + 60px);
+    width: 100%;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .promo-text-wrapper > .promo-text > div > .title {
-    width: 83.3333333333%;
+    width: calc(83.33% - 10px);
+    padding: 0 25px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
