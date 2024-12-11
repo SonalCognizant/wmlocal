@@ -285,13 +285,17 @@
           @include for-large {
             gap: 0;
           }
-           li {
+          li {
             font-size: 12px;
             > .icon-pdf {
               height: 14px;
               width: 13.68px;
               padding-left: 4.58px;
               vertical-align: sub;
+            }
+            span i {
+              font-size: 14px;
+              padding-left: 4.5px;
             }
             @include for-laptop {
               &:first-child {
@@ -310,7 +314,7 @@
                   padding-right: 0;
                   border-right: none;
                 }
-                span{
+                span {
                   padding-right: 22px;
                   border-right: 1px solid $--gray-700;
                 }
@@ -333,7 +337,7 @@
                   padding-right: 0;
                   border-right: none;
                 }
-                span{
+                span {
                   padding-right: 22px;
                   border-right: 1px solid $--gray-700;
                 }
@@ -356,7 +360,7 @@
                   padding-right: 0;
                   border-right: none;
                 }
-                span{
+                span {
                   padding-right: 22px;
                   border-right: 1px solid $--gray-700;
                 }
