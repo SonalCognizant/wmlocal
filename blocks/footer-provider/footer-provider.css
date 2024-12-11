@@ -51,6 +51,18 @@
 .footer-provider-wrapper .footer-provider > .logo-social-div > .social-div > p > a > span {
   height: 40px;
   width: 40px;
+  display: inline-block;
+}
+.footer-provider-wrapper .footer-provider > .logo-social-div > .social-div > p > a > span i {
+  font-size: 24px;
+  color: black;
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
 }
 @media (max-width: 480px) {
   .footer-provider-wrapper .footer-provider > .logo-social-div > .social-div {
@@ -100,6 +112,10 @@
   width: 16.29px;
   vertical-align: sub;
   padding-left: 4px;
+}
+.footer-provider-wrapper .footer-provider > .claims-div > div ul li span i {
+  padding-left: 4px;
+  font-size: 19px;
 }
 .footer-provider-wrapper .footer-provider > .wellmarkdrug-div {
   max-width: 1275px;
@@ -151,6 +167,10 @@
   vertical-align: sub;
   padding-left: 4px;
 }
+.footer-provider-wrapper .footer-provider > .wellmarkdrug-div > div ul li span i {
+  padding-left: 4px;
+  font-size: 19px;
+}
 .footer-provider-wrapper .footer-provider > .wellmarkdrug-div > .social-div {
   display: flex;
   gap: 12px;
@@ -164,6 +184,18 @@
 .footer-provider-wrapper .footer-provider > .wellmarkdrug-div > .social-div > p > a > span {
   height: 40px;
   width: 40px;
+  display: inline-block;
+}
+.footer-provider-wrapper .footer-provider > .wellmarkdrug-div > .social-div > p > a > span i {
+  font-size: 24px;
+  color: black;
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
 }
 @media (max-width: 480px) {
   .footer-provider-wrapper .footer-provider > .wellmarkdrug-div > .social-div {
