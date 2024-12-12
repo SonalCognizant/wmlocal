@@ -79,9 +79,6 @@
   line-height: 24px;
   margin: 0;
 }
-.textblocks-container .textblocks-wrapper .textblocks > ul > li > .block-div > p :first-child {
-  padding-bottom: 24px;
-}
 .textblocks-container .textblocks-wrapper .textblocks > ul > li > .block-div > p a {
   opacity: 1;
   color: #005589;
@@ -97,4 +94,7 @@
   padding-left: 6px;
   height: 15px;
   width: 15px;
+}
+.textblocks-container .textblocks-wrapper .textblocks > ul > li > .block-div :last-child {
+  padding-top: 24px;
 }
