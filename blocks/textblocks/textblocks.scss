@@ -54,6 +54,7 @@
               letter-spacing: 0px;
               text-align: left;
               padding-bottom: 12px;
+              margin: 0;
             }
             > p {
               opacity: 1;
@@ -65,9 +66,10 @@
               letter-spacing: 0px;
               text-align: left;
               line-height: 24px;
-              padding-bottom: 24px;
-            }
-            > p {
+              margin: 0;
+              :first-child {
+                padding-bottom: 24px;
+              }
               a {
                 opacity: 1;
                 color: $--blue-675;
