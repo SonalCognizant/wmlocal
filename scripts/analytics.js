@@ -19,7 +19,7 @@ const isOutboundLink = (linkHref) => {
   return outboundLink;
 };
 
-const callToActionEvent = (adobeDataLayer, linkHref, event) => {
+const callToActionEvent = (linkHref, event) => {
   let ctaElementType = event.target.href;
   if (isOutboundLink(linkHref)) {
     const url = new URL(linkHref, window.location.href);
@@ -30,8 +30,7 @@ const callToActionEvent = (adobeDataLayer, linkHref, event) => {
   const ctaType = 'button';
   const ctaDataInfo = '';
   const ctaClickImageAltTxt = '';
-
-  adobeDataLayer.push({
+  window.adobeDataLayer.push({
     event: 'call_to_action',
     eventData: {
       cta_element_type: ctaElementType,
@@ -40,67 +39,236 @@ const callToActionEvent = (adobeDataLayer, linkHref, event) => {
       cta_click_image_alt_text: ctaClickImageAltTxt,
       cta_location: ctaLocation,
       cta_type: ctaType,
+      /* nav_menu_type: null,
+      nav_click_image_alt_text: null,
+      nav_click_text: null,
+      link_classes: null,
+      link_domain: null,
+      link_url: null,
+      link_id: null,
+      outbound: null,
+      modal_action: null,
+      modal_location: null,
+      modal_name: null,
+      modal_impression: null, */
     },
   });
 };
 
-function navigationEvent(adobeDataLayer, linkHref, event) {
+function navigationEvent(linkHref, event) {
   const navClickText = event.target.innerText || event.currentTarget.text;
-  adobeDataLayer.push({
+  window.adobeDataLayer.push({
     event: 'navigation',
     eventData: {
       nav_menu_type: 'link',
       nav_click_image_alt_text: '',
       nav_click_text: navClickText,
+      /* link_classes: null,
+      link_domain: null,
+      link_url: null,
+      link_id: null,
+      outbound: null,
+      cta_element_type: null,
+      cta_click_text: null,
+      cta_data_info: null,
+      cta_click_image_alt_text: null,
+      cta_location: null,
+      cta_type: null,
+      modal_action: null,
+      modal_location: null,
+      modal_name: null,
+      modal_impression: null, */
     },
   });
 }
 
-function clickEvent(adobeDataLayer, linkHref, event) {
+function clickEvent(linkHref, event) {
   const linkClasses = Array.from(event.currentTarget.classList).join(' ');
   const linkURL = new URL(linkHref);
   const linkUrl = linkURL.href;
   const linkDomain = linkURL.hostname;
   const linkID = event.currentTarget.getAttribute('id');
-  adobeDataLayer.push({
+  window.adobeDataLayer.push({
     event: 'click',
     eventData: {
       link_classes: linkClasses,
       link_domain: linkDomain,
       link_url: linkUrl,
       link_id: linkID || 'undefined',
-      outbound: 'yes',
+      outbound: 'true',
+      /* nav_menu_type: null,
+      nav_click_image_alt_text: null,
+      nav_click_text: null,
+      cta_element_type: null,
+      cta_click_text: null,
+      cta_data_info: null,
+      cta_click_image_alt_text: null,
+      cta_location: null,
+      cta_type: null,
+      modal_action: null,
+      modal_location: null,
+      modal_name: null,
+      modal_impression: null, */
     },
   });
 }
 
-function buttonAnalytics(adobeDataLayer) {
+function modalOpenEvent() {
+  window.adobeDataLayer.push({
+    event: 'modal',
+    eventData: {
+      modal_action: 'open',
+      modal_location: window.location.href,
+      modal_name: '',
+      modal_impression: '1',
+      /* link_classes: null,
+      link_domain: null,
+      link_url: null,
+      link_id: null,
+      outbound: null,
+      nav_menu_type: null,
+      nav_click_image_alt_text: null,
+      nav_click_text: null,
+      cta_element_type: null,
+      cta_click_text: null,
+      cta_data_info: null,
+      cta_click_image_alt_text: null,
+      cta_location: null,
+      cta_type: null, */
+    },
+  });
+}
+
+function modalCloseEvent() {
+  window.adobeDataLayer.push({
+    event: 'modal',
+    eventData: {
+      modal_action: 'close',
+      modal_location: window.location.href,
+      modal_name: '',
+      modal_impression: '0',
+      /* link_classes: null,
+      link_domain: null,
+      link_url: null,
+      link_id: null,
+      outbound: null,
+      nav_menu_type: null,
+      nav_click_image_alt_text: null,
+      nav_click_text: null,
+      cta_element_type: null,
+      cta_click_text: null,
+      cta_data_info: null,
+      cta_click_image_alt_text: null,
+      cta_location: null,
+      cta_type: null, */
+    },
+  });
+}
+
+function socialMediaAnalytics(linkHref) {
+  const linkURL = new URL(linkHref);
+  const linkDomain = linkURL.hostname;
+  window.adobeDataLayer.push({
+    event: 'social',
+    eventData: {
+      social_network: linkDomain,
+      social_share: window.location.href,
+      social_clickthrough: '',
+      /*  modal_action: null,
+      modal_location: null,
+      modal_name: null,
+      modal_impression: null,
+      link_classes: null,
+      link_domain: null,
+      link_url: null,
+      link_id: null,
+      outbound: null,
+      nav_menu_type: null,
+      nav_click_image_alt_text: null,
+      nav_click_text: null,
+      cta_element_type: null,
+      cta_click_text: null,
+      cta_data_info: null,
+      cta_click_image_alt_text: null,
+      cta_location: null,
+      cta_type: null, */
+    },
+  });
+}
+
+const isSocialLink = (linkHref) => {
+  const socialMediaDomains = [
+    'facebook.com',
+    'twitter.com',
+    'linked.com',
+    'instagram.com',
+    'youtube.com',
+    'x.com',
+  ];
+
+  const linkURL = new URL(linkHref);
+  const linkDomain = linkURL.hostname;
+  return socialMediaDomains.some((domain) => linkDomain.includes(domain));
+};
+
+function buttonAnalytics() {
   const buttons = document.querySelectorAll('a');
   buttons.forEach((button) => {
     button.addEventListener('click', (event) => {
+      event.stopPropagation();
       const linkHref = event.currentTarget.getAttribute('href');
+      if (
+        button.hasAttribute('data-toggle')
+        && button.getAttribute('data-toggle') === 'modal'
+      ) {
+        modalOpenEvent();
+      }
+      if (
+        button.hasAttribute('data-dismiss')
+        && button.getAttribute('data-dismiss') === 'modal'
+      ) {
+        modalCloseEvent();
+      }
       if (linkHref) {
         if (isOutboundLink(linkHref)) {
-          clickEvent(adobeDataLayer, linkHref, event);
+          if (isSocialLink(linkHref)) {
+            socialMediaAnalytics(linkHref);
+          } else {
+            clickEvent(linkHref, event);
+          }
         } else if (
           !isOutboundLink(linkHref)
           && button.classList.contains('button')
         ) {
-          callToActionEvent(adobeDataLayer, linkHref, event);
+          callToActionEvent(linkHref, event);
         } else if (
           !button.classList.contains('button')
           && !isOutboundLink(linkHref)
         ) {
-          navigationEvent(adobeDataLayer, linkHref, event);
+          navigationEvent(linkHref, event);
         }
       }
     });
   });
 }
+function modalAnalytics() {
+  const headerExpand = document.querySelectorAll('header .collapse-bar-menu');
+  headerExpand.forEach((buttonExpand) => {
+    buttonExpand.addEventListener('click', () => {
+      modalOpenEvent();
+    });
+  });
 
+  const headerCollapse = document.querySelectorAll('header .collapse-bar-close');
+  headerCollapse.forEach((buttonCollapse) => {
+    buttonCollapse.addEventListener('click', () => {
+      modalCloseEvent();
+    });
+  });
+}
 function analyticsMain() {
-  const adobeDataLayer = window.adobeDataLayer || [];
-  buttonAnalytics(adobeDataLayer);
+  buttonAnalytics();
+  modalAnalytics();
 }
 
 export {

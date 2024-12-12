@@ -75,7 +75,7 @@
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .promo-text-focus-dropdown-container .promo-text-focus-dropdown-wrapper .promo-text-focus-dropdown.block .promo-focus-block > div {
-    padding: 72px 36px;
+    padding: 72px 52px 72px 37px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
@@ -90,6 +90,7 @@
 }
 .promo-text-focus-dropdown-container .promo-text-focus-dropdown-wrapper .promo-text-focus-dropdown.block .promo-focus-block > div > div h2 {
   color: #ffffff;
+  width: 100%;
   margin: 0;
 }
 .promo-text-focus-dropdown-container .promo-text-focus-dropdown-wrapper .promo-text-focus-dropdown.block .promo-focus-block > div > div h2 .icon-whitepromoicon {
@@ -109,6 +110,7 @@
 }
 .promo-text-focus-dropdown-container .promo-text-focus-dropdown-wrapper .promo-text-focus-dropdown.block .promo-focus-block > div > div p {
   color: #ffffff;
+  width: 100%;
   margin: 0;
   margin: 24px 0 35px 0;
 }

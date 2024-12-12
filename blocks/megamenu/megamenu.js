@@ -327,11 +327,13 @@ function renderMegaMenu(nav) {
   const breadcrumbsicon = document.createElement('img');
   breadcrumbsicon.classList.add('collapse-btn');
   breadcrumbsicon.src = '../../icons/breadcrumbs-icon.svg';
+  breadcrumbsicon.setAttribute('data-toggle', 'modal');
   const collapsemenu = document.createElement('p');
   collapsemenu.classList.add('collapse-menu');
   collapsemenu.innerHTML = ('Menu');
   const collapseclose = document.createElement('img');
   collapseclose.src = '../../icons/close-icon.svg';
+  collapseclose.setAttribute('data-dismiss', 'modal');
   collapseclose.classList.add('close-btn');
   const colclose = document.createElement('p');
   colclose.classList.add('collapse-close');

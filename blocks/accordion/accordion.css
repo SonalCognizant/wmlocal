@@ -154,6 +154,16 @@ main .section div {
   width: 50%;
   padding: 120px 52px 120px 0;
 }
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .six-column-layout.accordion-container .accordion-wrapper {
+    padding: 120px 36px 120px 36px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .six-column-layout.accordion-container .accordion-wrapper {
+    padding: 120px 36px 120px 36px;
+  }
+}
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .six-column-layout.accordion-container .accordion-wrapper {
     width: 90%;

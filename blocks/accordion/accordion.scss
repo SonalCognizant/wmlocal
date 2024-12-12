@@ -142,6 +142,12 @@ main {
     .accordion-wrapper{
         width: 50%;
         padding: $--spacing-max $--spacing-xxl $--spacing-max 0;
+        @include for-large{
+            padding: $--spacing-max $--spacing-xl $--spacing-max $--spacing-xl;
+        }
+        @include for-laptop{
+            padding: $--spacing-max $--spacing-xl $--spacing-max $--spacing-xl;
+        }
         @include for-tablet{
             width: 90%;
         }
