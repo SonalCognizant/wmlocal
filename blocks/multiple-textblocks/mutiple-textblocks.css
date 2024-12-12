@@ -2,10 +2,13 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
+.multiple-textblocks-wrapper {
+  padding: 52px;
+}
 .multiple-textblocks-wrapper .title {
   opacity: 1;
-  color: rgb(74, 115, 144);
-  font-family: "MuseoSlab-700";
+  color: #4a7390;
+  font-family: museo, sans-serif;
   font-size: 32px;
   font-weight: 600;
   font-style: 700;
