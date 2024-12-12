@@ -64,6 +64,7 @@
   font-style: Bold;
   letter-spacing: 0px;
   text-align: left;
+  padding-bottom: 12px;
 }
 .textblocks-container .textblocks-wrapper .textblocks > ul > li > .block-div > p {
   opacity: 1;
@@ -75,6 +76,7 @@
   letter-spacing: 0px;
   text-align: left;
   line-height: 24px;
+  padding-bottom: 24px;
 }
 .textblocks-container .textblocks-wrapper .textblocks > ul > li > .block-div > p a {
   opacity: 1;
