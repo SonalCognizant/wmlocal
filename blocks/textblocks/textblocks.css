@@ -14,6 +14,7 @@
   font-style: 700;
   letter-spacing: 0px;
   text-align: left;
+  margin: 0;
 }
 @media (max-width: 480px) {
   .textblocks-container .textblocks-wrapper .title {
@@ -45,9 +46,11 @@
 .textblocks-container .textblocks-wrapper .textblocks > ul {
   list-style: none;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  column-gap: 30px;
+  row-gap: 52px;
 }
 .textblocks-container .textblocks-wrapper .textblocks > ul > li {
   width: calc(25% - 22.5px);
