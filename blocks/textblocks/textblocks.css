@@ -118,6 +118,7 @@
 }
 .textblocks-container .textblocks-wrapper .textblocks > ul > li > .block-div > p:last-child {
   padding-top: 24px;
+  width: fit-content;
 }
 .textblocks-container .textblocks-wrapper .textblocks > ul > li > .block-div > p a {
   opacity: 1;
@@ -134,4 +135,5 @@
   padding-left: 6px;
   height: 15px;
   width: 15px;
+  vertical-align: text-top;
 }
