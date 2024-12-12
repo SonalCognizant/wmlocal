@@ -396,7 +396,6 @@ function decorateButtons(element) {
           up.childNodes.length === 1
           && (up.tagName === 'P' || up.tagName === 'DIV')
         ) {
-          a.className = 'button'; // default
           up.classList.add('button-container');
         }
         if (
