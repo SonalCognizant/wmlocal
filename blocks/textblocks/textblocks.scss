@@ -55,8 +55,17 @@
         margin: 0;
         column-gap: 30px;
         row-gap: 52px;
+        @include for-mobile {
+          flex-direction: column;
+        }
         > li {
           width: calc((100% / 4) - 22.5px);
+          @include for-tablet {
+            width: calc((100% / 2) - 15px);
+          }
+          @include for-mobile {
+            width: 100%;
+          }
           > .block-div {
             > h4 {
               opacity: 1;
