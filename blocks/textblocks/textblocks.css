@@ -2,8 +2,30 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
-.textblocks-container .textblocks-wrapper {
-  padding: 52px;
+@media (max-width: 480px) {
+  .textblocks-container .textblocks-wrapper {
+    padding: 0 16px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .textblocks-container .textblocks-wrapper {
+    padding: 0 36px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .textblocks-container .textblocks-wrapper {
+    padding: 0 52px;
+  }
+}
+@media (min-width: 1380px) {
+  .textblocks-container .textblocks-wrapper {
+    padding: 0;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .textblocks-container .textblocks-wrapper {
+    padding: 0 36px;
+  }
 }
 .textblocks-container .textblocks-wrapper .title {
   opacity: 1;

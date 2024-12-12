@@ -3,7 +3,21 @@
 
 .textblocks-container {
   .textblocks-wrapper {
-    padding: 52px;
+    @include for-mobile {
+      padding: 0 16px;
+    }
+    @include for-tablet {
+      padding: 0 36px;
+    }
+    @include for-large {
+      padding: 0 52px;
+    }
+    @include for-xlarge {
+      padding: 0;
+    }
+    @include for-laptop {
+      padding: 0 36px;
+    }
     .title {
       opacity: 1;
       color: $--blue-550;
