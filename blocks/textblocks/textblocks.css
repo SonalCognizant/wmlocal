@@ -4,27 +4,27 @@
 /* wellmark spacing size start */
 @media (max-width: 480px) {
   .textblocks-container .textblocks-wrapper {
-    padding: 0 16px;
+    padding: 72px 16px 72px 16px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .textblocks-container .textblocks-wrapper {
-    padding: 0 36px;
+    padding: 96px 36px 96px 36px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .textblocks-container .textblocks-wrapper {
-    padding: 0 52px;
+    padding: 120px 52px 120px 52px;
   }
 }
 @media (min-width: 1380px) {
   .textblocks-container .textblocks-wrapper {
-    padding: 0;
+    padding: 120px 0 120px 0;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .textblocks-container .textblocks-wrapper {
-    padding: 0 36px;
+    padding: 120px 36px 120px 36px;
   }
 }
 .textblocks-container .textblocks-wrapper .title {
