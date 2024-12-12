@@ -36,6 +36,7 @@
       &.block {
         .promo-focus-block{
           background: $--blue-550;
+          border-radius: 0 0 5px 5px;
           @include for-laptop{
             width: calc((100% / 2) - 15px);
           }
@@ -51,7 +52,7 @@
               padding: $--spacing-huge $--spacing-xl;
             }
             @include for-laptop{
-              padding: $--spacing-huge $--spacing-xl;
+              padding: $--spacing-huge $--spacing-xxl;
             }
             @include for-large{
               padding: $--spacing-huge $--spacing-xxl;
