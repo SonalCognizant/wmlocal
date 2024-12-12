@@ -203,7 +203,7 @@ const isSocialLink = (linkHref) => {
     'linked.com',
     'instagram.com',
     'youtube.com',
-    'x.xom',
+    'x.com',
   ];
 
   const linkURL = new URL(linkHref);
