@@ -1,8 +1,8 @@
 @import "../../styles/include/mq.scss";
 @import "../../styles/include/tokens.scss";
 
-.textblocks-container {
-  .textblocks-wrapper {
+.multiple-textblocks-container {
+  .multiple-textblocks-wrapper {
     @include for-mobile {
       padding: 72px 16px 72px 16px;
     }
@@ -46,7 +46,7 @@
         padding-bottom: 72px;
       }
     }
-    .textblocks {
+    .multiple-textblocks {
       > ul {
         list-style: none;
         display: flex;
