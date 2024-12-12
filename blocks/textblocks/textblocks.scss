@@ -44,11 +44,6 @@
         > li {
           width: calc((100% / 4) - 22.5px);
           > .block-div {
-            &:last-child {
-              p {
-                padding-top: 24px;
-              }
-            }
             > h4 {
               opacity: 1;
               color: $--blue-550;
@@ -72,6 +67,9 @@
               text-align: left;
               line-height: 24px;
               margin: 0;
+              &:last-child {
+                padding-top: 24px;
+              }
               a {
                 opacity: 1;
                 color: $--blue-675;

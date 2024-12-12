@@ -55,9 +55,6 @@
 .textblocks-container .textblocks-wrapper .textblocks > ul > li {
   width: calc(25% - 22.5px);
 }
-.textblocks-container .textblocks-wrapper .textblocks > ul > li > .block-div:last-child p {
-  padding-top: 24px;
-}
 .textblocks-container .textblocks-wrapper .textblocks > ul > li > .block-div > h4 {
   opacity: 1;
   color: #4a7390;
@@ -81,6 +78,9 @@
   text-align: left;
   line-height: 24px;
   margin: 0;
+}
+.textblocks-container .textblocks-wrapper .textblocks > ul > li > .block-div > p:last-child {
+  padding-top: 24px;
 }
 .textblocks-container .textblocks-wrapper .textblocks > ul > li > .block-div > p a {
   opacity: 1;
