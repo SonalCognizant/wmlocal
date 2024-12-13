@@ -198,6 +198,9 @@
   width: 80px;
   height: 80px;
 }
+.promo-image-container .promo-image > .promo-4-column > li .cards-card-body p > span > i {
+  font-size: 80px;
+}
 .promo-image-container .promo-image > .promo-3-column {
   list-style: none;
   display: flex;
@@ -327,6 +330,9 @@
   width: 80px;
   height: 80px;
 }
+.promo-image-container .promo-image > .promo-3-column > li .cards-card-body p > span > i {
+  font-size: 80px;
+}
 .promo-image-container .promo-image > .promo-2-column {
   list-style: none;
   display: flex;
@@ -454,4 +460,7 @@
 .promo-image-container .promo-image > .promo-2-column > li .cards-card-body p > span > img {
   width: 80px;
   height: 80px;
+}
+.promo-image-container .promo-image > .promo-2-column > li .cards-card-body p > span > i {
+  font-size: 80px;
 }

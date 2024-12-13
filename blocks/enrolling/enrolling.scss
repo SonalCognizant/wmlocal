@@ -36,7 +36,7 @@
       @include for-mobile {
         padding: 72px 0 52px 0;
         font-size: 28px;
-        width: fit-content;
+        width: 345px;
       }
       @include for-xlarge {
         padding: 120px 0 52px 0;
@@ -50,7 +50,7 @@
       @include for-tablet {
         padding: 96px 0 72px 0;
         font-size: 28px;
-        width: fit-content;
+        width: 345px;
       }
     }
     > .enrolling {
@@ -58,19 +58,32 @@
       margin: 0;
       > .column-3-variation {
         display: flex;
+        justify-content: center;
+        align-items: center;
         margin: 0;
         list-style: none;
         padding: 0;
-        padding-bottom: 120px;
         @include for-mobile {
+          padding-bottom: 72px;
           flex-direction: column;
           gap: 52px;
         }
+        @include for-xlarge {
+          padding-bottom: 120px;
+        }
+        @include for-large {
+          padding-bottom: 120px;
+        }
+        @include for-laptop {
+          padding-bottom: 120px;
+        }
         @include for-tablet {
+          padding-bottom: 96px;
           flex-direction: column;
           gap: 52px;
         }
         > .enrolling-1-column {
+          width: fit-content;
           @include for-xlarge {
             padding-right: 80px;
           }
@@ -118,6 +131,16 @@
                 font-size: 20px;
                 font-weight: 700;
                 letter-spacing: 0px;
+                a {
+                  padding: 0 12px;
+                }
+                span > i {
+                  font-size: 24px;
+                  vertical-align: middle;
+                }
+              }
+              > span > i {
+                font-size: 64px;
               }
             }
             > .button-container {
@@ -140,6 +163,7 @@
           }
         }
         > .enrolling-2-column {
+          width: fit-content;
           @include for-xlarge {
             border-left: 2px solid $--gray-225;
             padding: 0 80px;
@@ -186,6 +210,9 @@
                 width: 22px;
                 vertical-align: middle;
               }
+              > span > i {
+                font-size: 64px;
+              }
               &:last-child {
                 padding-top: 12px;
                 opacity: 1;
@@ -193,6 +220,13 @@
                 font-size: 20px;
                 font-weight: 700;
                 letter-spacing: 0px;
+                a {
+                  padding: 0 12px;
+                }
+                span > i {
+                  font-size: 24px;
+                  vertical-align: middle;
+                }
               }
             }
             > .button-container {
@@ -215,6 +249,7 @@
           }
         }
         > .enrolling-3-column {
+          width: fit-content;
           @include for-xlarge {
             padding-left: 80px;
           }
@@ -262,6 +297,16 @@
                 font-size: 20px;
                 font-weight: 700;
                 letter-spacing: 0px;
+                a {
+                  padding: 0 12px;
+                }
+                span > i {
+                  font-size: 24px;
+                  vertical-align: middle;
+                }
+              }
+              > span > i {
+                font-size: 64px;
               }
             }
             > .button-container {
@@ -286,19 +331,32 @@
       }
       > .column-2-variation {
         display: flex;
+        justify-content: center;
+        align-items: center;
         margin: 0;
         list-style: none;
         padding: 0;
-        padding-bottom: 120px;
         @include for-mobile {
+          padding-bottom: 72px;
           flex-direction: column;
           gap: 52px;
         }
+        @include for-xlarge {
+          padding-bottom: 120px;
+        }
+        @include for-large {
+          padding-bottom: 120px;
+        }
+        @include for-laptop {
+          padding-bottom: 120px;
+        }
         @include for-tablet {
+          padding-bottom: 96px;
           flex-direction: column;
           gap: 52px;
         }
         > .enrolling-1-column {
+          width: fit-content;
           @include for-xlarge {
             padding-right: 72px;
           }
@@ -345,6 +403,16 @@
                 font-size: 20px;
                 font-weight: 700;
                 letter-spacing: 0px;
+                a {
+                  padding: 0 12px;
+                }
+                span > i {
+                  font-size: 24px;
+                  vertical-align: middle;
+                }
+              }
+              > span > i {
+                font-size: 64px;
               }
             }
             > .button-container {
@@ -367,6 +435,7 @@
           }
         }
         > .enrolling-2-column {
+          width: fit-content;
           @include for-xlarge {
             border-left: 2px solid $--gray-225;
             padding-left: 72px;
@@ -416,6 +485,16 @@
                 font-size: 20px;
                 font-weight: 700;
                 letter-spacing: 0px;
+                a {
+                  padding: 0 12px;
+                }
+                span > i {
+                  font-size: 24px;
+                  vertical-align: middle;
+                }
+              }
+              > span > i {
+                font-size: 64px;
               }
             }
             > .button-container {
@@ -440,11 +519,28 @@
       }
       > .column-1-variation {
         display: flex;
+        justify-content: center;
+        align-items: center;
         margin: 0;
         list-style: none;
         padding: 0;
-        padding-bottom: 120px;
+        @include for-mobile {
+          padding-bottom: 72px;
+        }
+        @include for-xlarge {
+          padding-bottom: 120px;
+        }
+        @include for-large {
+          padding-bottom: 120px;
+        }
+        @include for-laptop {
+          padding-bottom: 120px;
+        }
+        @include for-tablet {
+          padding-bottom: 96px;
+        }
         > .enrolling-1-column {
+          width: fit-content;
           > .cards-card-body {
             display: flex;
             align-items: center;
@@ -483,6 +579,16 @@
                 font-size: 20px;
                 font-weight: 700;
                 letter-spacing: 0px;
+                a {
+                  padding: 0 12px;
+                }
+                span > i {
+                  font-size: 24px;
+                  vertical-align: middle;
+                }
+              }
+              > span > i {
+                font-size: 64px;
               }
             }
             > .button-container {

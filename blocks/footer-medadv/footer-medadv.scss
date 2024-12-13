@@ -37,6 +37,18 @@
           > a > span {
             height: 40px;
             width: 40px;
+            display: inline-block;
+            i {
+              font-size: 24px;
+              color: black;
+              height: 100%;
+              width: 100%;
+              border: 1px solid black;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 5px;
+            }
           }
         }
         @include for-mobile {
@@ -74,6 +86,11 @@
         width: 16px;
         vertical-align: text-top;
         padding-left: 4px;
+      }
+      > div ul li span i {
+        vertical-align: text-bottom;
+        padding-left: 4px;
+        font-size: 16px;
       }
     }
     > .adobe-div {
@@ -180,6 +197,18 @@
           > a > span {
             height: 40px;
             width: 40px;
+            display: inline-block;
+            i {
+              font-size: 24px;
+              color: black;
+              height: 100%;
+              width: 100%;
+              border: 1px solid black;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 5px;
+            }
           }
         }
         @include for-mobile {
@@ -256,13 +285,17 @@
           @include for-large {
             gap: 0;
           }
-           li {
+          li {
             font-size: 12px;
             > .icon-pdf {
               height: 14px;
               width: 13.68px;
               padding-left: 4.58px;
               vertical-align: sub;
+            }
+            span i {
+              font-size: 14px;
+              padding-left: 4.5px;
             }
             @include for-laptop {
               &:first-child {
@@ -281,7 +314,7 @@
                   padding-right: 0;
                   border-right: none;
                 }
-                span{
+                span {
                   padding-right: 22px;
                   border-right: 1px solid $--gray-700;
                 }
@@ -304,7 +337,7 @@
                   padding-right: 0;
                   border-right: none;
                 }
-                span{
+                span {
                   padding-right: 22px;
                   border-right: 1px solid $--gray-700;
                 }
@@ -327,7 +360,7 @@
                   padding-right: 0;
                   border-right: none;
                 }
-                span{
+                span {
                   padding-right: 22px;
                   border-right: 1px solid $--gray-700;
                 }
