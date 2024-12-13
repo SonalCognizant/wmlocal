@@ -7,6 +7,20 @@ form {
   margin: auto;
   padding: 114px 0 112px 0;
 }
+@media (min-width: 1380px) {
+  form {
+    width: 1275px !important;
+    margin: auto;
+    padding: 114px 0 112px 0;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  form {
+    width: 1275px !important;
+    margin: auto;
+    padding: 114px 0 112px 0;
+  }
+}
 form .mktoFormRow {
   width: calc(41.6666666667% - 15px);
   display: flex;
@@ -17,6 +31,9 @@ form .mktoFormRow .mktoOffset {
 }
 form .mktoFormRow div:nth-last-child(2) {
   margin-bottom: 33px !important;
+}
+form .mktoFormRow div:first-child {
+  margin-bottom: 0 !important;
 }
 form .mktoFormRow div div {
   width: 100%;
@@ -44,4 +61,8 @@ form .mktoFormRow div div input {
 form .mktoFormRow div div select {
   width: 100% !important;
   padding: 9px 133px 9px 20px !important;
+}
+form .mktoFormRow div div .mktoError {
+  right: 0 !important;
+  bottom: 0 !important;
 }

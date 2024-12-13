@@ -6,6 +6,16 @@ form{
     width: 1275px !important;
     margin: auto;
     padding: 114px 0 112px 0;
+    @include for-xlarge{
+        width: 1275px !important;
+        margin: auto;
+        padding: 114px 0 112px 0;
+    }
+    @include for-large{
+        width: 1275px !important;
+        margin: auto;
+        padding: 114px 0 112px 0;
+    }
     .mktoFormRow{
         width: calc(((100% / 12) * 5) - 15px);
         display: flex;
@@ -16,6 +26,9 @@ form{
         div{
             &:nth-last-child(2){
                 margin-bottom: 33px !important;
+            }
+            &:first-child{
+                margin-bottom: 0 !important;
             }
         }
          div {
@@ -44,6 +57,10 @@ form{
                 select{
                     width: 100% !important;
                     padding: 9px 133px 9px 20px !important;
+                }
+                .mktoError{
+                    right: 0 !important;
+                    bottom: 0 !important;
                 }
             }
         }
