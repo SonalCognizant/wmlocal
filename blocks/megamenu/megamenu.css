@@ -728,6 +728,7 @@ header .main-header-wrapper .main-header .main-header-menu .header-menu-block .h
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li:hover .header-menu-item .menu-submenu-content .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div .columns-img-col img {
     width: 74px;
     height: 74px;
+    border-radius: 4px;
   }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li:hover .header-menu-item .menu-submenu-content .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div .button-container a {
     border: none;
@@ -818,6 +819,7 @@ header .main-header-wrapper .main-header .main-header-menu .header-menu-block .h
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li:hover .header-menu-item .menu-submenu-content .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div .columns-img-col img {
     width: 125px;
     height: 125px;
+    border-radius: 4px;
   }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li:hover .header-menu-item .menu-submenu-content .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div .button-container a {
     border: none;
@@ -907,6 +909,7 @@ header .main-header-wrapper .main-header .main-header-menu .header-menu-block .h
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li:hover .header-menu-item .menu-submenu-content .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div .columns-img-col img {
     width: 125px;
     height: 125px;
+    border-radius: 4px;
   }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li:hover .header-menu-item .menu-submenu-content .image-text-container .image-text-wrapper .image-text.block.columns-2-cols > div .button-container a {
     border: none;
