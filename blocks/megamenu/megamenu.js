@@ -410,6 +410,13 @@ function renderMegaMenu(nav) {
   sectionregister.appendChild(forgetpassword);
 }
 
+function generateUrl(dataArray, index){
+  const locateIndex = index - 1;
+  const dynamicString = dataArray.slice(0, index).join().replaceAll(',', '/');
+  const breadcrumbUrl = window.location.origin + '/' + dynamicString;
+  const productElement = document.querySelector(`[data-breadcrumb-value=${dataArray[locateIndex]}]`);
+  productElement.setAttribute('href', breadcrumbUrl);
+}
 /**
  * Loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
@@ -435,7 +442,7 @@ export default async function decorate(block) {
     const mainTag = document.querySelector('main');
     mainTag.prepend(breadCrumbdiv);
     const breadcrumLength = locationPath.length;
-    for (let i in locationPath) {
+    for (const i in locationPath) {
       // creation of breadcrumbs lists
       const breadcrumbList = document.createElement('li');
       breadcrumbList.classList.add('breadcrumb-list');
@@ -458,18 +465,12 @@ export default async function decorate(block) {
       breadcrumbList.prepend(breadcrumbImg2);
     }
     const breadcrumurlLength = locationPath.length;
-    for (let j = breadcrumurlLength; j > 0; j --) {
-      const lastchildUrls = j == breadcrumLength;
+    for (let j = breadcrumurlLength; j > 0; j--) {
+      const lastchildUrls = j === breadcrumLength;
       if (!lastchildUrls){
         generateUrl(locationPath, j);
       }
     }
   }
 }
-function generateUrl(dataArray, index){
-  const locateIndex = index - 1;
-  const dynamicString = dataArray.slice(0, index).join().replaceAll(',', '/');
-  const breadcrumbUrl = window.location.origin + '/' + dynamicString;
-  const productElement = document.querySelector(`[data-breadcrumb-value=${dataArray[locateIndex]}]`);
-  productElement.setAttribute('href', breadcrumbUrl);
-}
+
