@@ -725,6 +725,18 @@ async function loadSections(element) {
     await loadSection(sections[i]);
   }
 }
+ // marketo form integration//
+function loadmarketoForms() {
+  window.addEventListener('load', function() {
+    const getformValue = getMetadata('marketo_forms');
+    const formIdvalue = parseInt(getformValue.split('_')[1]);
+    const cForm = document.createElement('form');
+    cForm.setAttribute('id', getformValue);
+    const getbodyTag = document.querySelector('main');
+    getbodyTag.append(cForm);
+    MktoForms2.loadForm("//899-BTB-436.mktoweb.com", "899-BTB-436", formIdvalue);
+  })
+}
 
 init();
 
@@ -753,4 +765,5 @@ export {
   toClassName,
   waitForFirstImage,
   wrapTextNodes,
+  loadmarketoForms,
 };

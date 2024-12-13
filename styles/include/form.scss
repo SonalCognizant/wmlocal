@@ -1,0 +1,51 @@
+@import '../../styles/include/tokens.scss';
+@import '../../styles/include/mq.scss';
+
+
+form{
+    width: 1275px !important;
+    margin: auto;
+    padding: 114px 0 112px 0;
+    .mktoFormRow{
+        width: calc(((100% / 12) * 5) - 15px);
+        display: flex;
+        flex-direction: column;
+        .mktoOffset{
+            display: none;
+        }
+        div{
+            &:nth-last-child(2){
+                margin-bottom: 33px !important;
+            }
+        }
+         div {
+            div {
+                width: 100%;
+                label{
+                    width: 100% !important;
+                    font-weight: 500 !important;
+                    color: $--gray-700;
+                    font-family: $--font-roboto;
+                    font-size: 16px;
+                    line-height: 32px !important;
+                    .mktoAsterix{
+                        display: none;
+                    }
+                }
+                input{
+                    width: 100% !important;
+                    font-weight: 400;
+                    color: $--gray-700;
+                    font-family: $--font-roboto;
+                    font-size: 16px !important;
+                    line-height: 32px !important;
+                    padding: 10px 21px 8px 20px !important;
+                }
+                select{
+                    width: 100% !important;
+                    padding: 9px 133px 9px 20px !important;
+                }
+            }
+        }
+    }
+}

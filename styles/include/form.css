@@ -1,0 +1,47 @@
+/* wellmark color start */
+/* wellmark color end */
+/* wellmark spacing size start */
+/* wellmark spacing size start */
+form {
+  width: 1275px !important;
+  margin: auto;
+  padding: 114px 0 112px 0;
+}
+form .mktoFormRow {
+  width: calc(41.6666666667% - 15px);
+  display: flex;
+  flex-direction: column;
+}
+form .mktoFormRow .mktoOffset {
+  display: none;
+}
+form .mktoFormRow div:nth-last-child(2) {
+  margin-bottom: 33px !important;
+}
+form .mktoFormRow div div {
+  width: 100%;
+}
+form .mktoFormRow div div label {
+  width: 100% !important;
+  font-weight: 500 !important;
+  color: #4b4c4d;
+  font-family: roboto, sans-serif;
+  font-size: 16px;
+  line-height: 32px !important;
+}
+form .mktoFormRow div div label .mktoAsterix {
+  display: none;
+}
+form .mktoFormRow div div input {
+  width: 100% !important;
+  font-weight: 400;
+  color: #4b4c4d;
+  font-family: roboto, sans-serif;
+  font-size: 16px !important;
+  line-height: 32px !important;
+  padding: 10px 21px 8px 20px !important;
+}
+form .mktoFormRow div div select {
+  width: 100% !important;
+  padding: 9px 133px 9px 20px !important;
+}

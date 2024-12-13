@@ -13,6 +13,7 @@ import {
   loadSections,
   loadCSS,
   sampleRUM,
+  loadmarketoForms,
 } from './aem.js';
 import { decorateExternalImages } from './externalImage.js';
 
@@ -77,6 +78,7 @@ export function decorateMain(main) {
   decorateBlocks(main);
   decorateExternalImages(main);
   decorateExternalImages(main, '//External Image//');
+  loadmarketoForms();
 }
 /**
  * Loads everything needed to get to LCP.
@@ -135,3 +137,4 @@ async function loadPage() {
   loadDelayed();
 }
 loadPage();
+

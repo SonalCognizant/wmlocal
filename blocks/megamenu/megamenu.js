@@ -441,7 +441,7 @@ export default async function decorate(block) {
       breadcrumbList.classList.add('breadcrumb-list');
       const breadcrumbaTag = document.createElement('a');
       breadcrumbaTag.textContent = locationPath[i];
-      breadcrumbaTag.setAttribute('data-breadcrumb-value',locationPath[i]);
+      breadcrumbaTag.setAttribute('data-breadcrumb-value', locationPath[i]);
       breadcrumbList.append(breadcrumbaTag);
       breadCrumbdiv.append(breadcrumbList);
       // get the image for the breadcrumb
@@ -458,18 +458,18 @@ export default async function decorate(block) {
       breadcrumbList.prepend(breadcrumbImg2);
     }
     const breadcrumurlLength = locationPath.length;
-    for (let j = breadcrumurlLength; j > 0; j--){
+    for (let j = breadcrumurlLength; j > 0; j --) {
       const lastchildUrls = j == breadcrumLength;
-      if(!lastchildUrls){
-        generateUrl(locationPath,j);
+      if (!lastchildUrls){
+        generateUrl(locationPath, j);
       }
     }
   }
 }
 function generateUrl(dataArray, index){
   const locateIndex = index - 1;
-  const dynamicString = dataArray.slice(0, index).join().replaceAll(',','/');
+  const dynamicString = dataArray.slice(0, index).join().replaceAll(',', '/');
   const breadcrumbUrl = window.location.origin + '/' + dynamicString;
   const productElement = document.querySelector(`[data-breadcrumb-value=${dataArray[locateIndex]}]`);
-  productElement.setAttribute('href',breadcrumbUrl);
+  productElement.setAttribute('href', breadcrumbUrl);
 }
