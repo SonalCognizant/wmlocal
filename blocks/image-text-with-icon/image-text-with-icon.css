@@ -81,7 +81,7 @@
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols > div > div {
-    max-width: calc((100% - 30px) / 2);
+    max-width: calc((100% - 30px) / 12 * 5);
   }
 }
 @media (min-width: 1380px) {
