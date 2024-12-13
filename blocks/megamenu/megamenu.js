@@ -410,10 +410,10 @@ function renderMegaMenu(nav) {
   sectionregister.appendChild(forgetpassword);
 }
 
-function generateUrl(dataArray, index){
+function generateUrl(dataArray, index) {
   const locateIndex = index - 1;
   const dynamicString = dataArray.slice(0, index).join().replaceAll(',', '/');
-  const breadcrumbUrl = window.location.origin + '/' + dynamicString;
+  const breadcrumbUrl = window.location.origin.concat('/', dynamicString);
   const productElement = document.querySelector(`[data-breadcrumb-value=${dataArray[locateIndex]}]`);
   productElement.setAttribute('href', breadcrumbUrl);
 }
@@ -467,10 +467,9 @@ export default async function decorate(block) {
     const breadcrumurlLength = locationPath.length;
     for (let j = breadcrumurlLength; j > 0; j--) {
       const lastchildUrls = j === breadcrumLength;
-      if (!lastchildUrls){
+      if (!lastchildUrls) {
         generateUrl(locationPath, j);
       }
     }
   }
 }
-
