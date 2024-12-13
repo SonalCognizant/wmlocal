@@ -95,6 +95,7 @@ header .main-header-wrapper .main-header .main-header-section .main-header-nav .
     font-weight: 500;
     padding-top: 2px;
     line-height: 20px;
+    color: #4b4c4d;
   }
   header .main-header-wrapper .main-header .main-header-section .main-header-nav .collapse-bar .collapse-bar-close {
     display: none;
@@ -123,6 +124,7 @@ header .main-header-wrapper .main-header .main-header-section .main-header-nav .
     font-weight: 500;
     padding-top: 4px;
     line-height: 14px;
+    color: #4b4c4d;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
@@ -148,6 +150,7 @@ header .main-header-wrapper .main-header .main-header-section .main-header-nav .
     font-weight: 500;
     padding-top: 2px;
     line-height: 20px;
+    color: #4b4c4d;
   }
   header .main-header-wrapper .main-header .main-header-section .main-header-nav .collapse-bar .collapse-bar-close {
     display: none;
@@ -176,6 +179,7 @@ header .main-header-wrapper .main-header .main-header-section .main-header-nav .
     font-weight: 500;
     padding-top: 4px;
     line-height: 14px;
+    color: #4b4c4d;
   }
 }
 @media (max-width: 480px) {
@@ -212,6 +216,7 @@ header .main-header-wrapper .main-header .main-header-section .main-header-nav .
     border-bottom: 1px solid #d6e5f1;
     flex-direction: column;
     align-items: center;
+    color: #4b4c4d;
   }
   header .main-header-wrapper .main-header .main-header-section .main-header-nav .search-bar p {
     margin: 0;
@@ -229,6 +234,7 @@ header .main-header-wrapper .main-header .main-header-section .main-header-nav .
     border-bottom: 1px solid #d6e5f1;
     flex-direction: column;
     align-items: center;
+    color: #4b4c4d;
   }
   header .main-header-wrapper .main-header .main-header-section .main-header-nav .search-bar p {
     margin: 0;
