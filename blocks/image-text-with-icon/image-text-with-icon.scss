@@ -56,7 +56,7 @@
                 max-width: calc((100% - 30px) / 2);
               }
               @include for-large {
-                max-width: calc((100% - 30px) / 2);
+                max-width: calc((100% - 30px) / 12* 5);
               }
               @include for-xlarge {
                 max-width: calc((100% - 30px) / 12* 5);

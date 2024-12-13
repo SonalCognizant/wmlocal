@@ -50,8 +50,14 @@
               order: 1;
               display: flex;
               flex-flow: row wrap;
-              @include for-xlarge{
-                width: calc((100% / 12) * 6);
+              @include for-laptop {
+                max-width: calc((100% - 30px) / 2);
+              }
+              @include for-large {
+                max-width: calc((100% - 30px) / 12* 5);
+              }
+              @include for-xlarge {
+                max-width: calc((100% - 30px) / 12* 5);
               }
               @include for-nonmobile {
                 flex: 1;
