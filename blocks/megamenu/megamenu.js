@@ -2,12 +2,10 @@ import { loadFragment } from '../fragment/fragment.js';
 
 const navmenu = JSON.stringify([
   {
-    title: 'Home', path: 'home', href: '#',
+    title: 'Home',
   },
   {
     title: 'Shop',
-    path: 'shop',
-    href: '#',
     children: [
       {
         title: 'Shop plans',
@@ -37,8 +35,6 @@ const navmenu = JSON.stringify([
   },
   {
     title: 'Find care',
-    path: 'find-care',
-    href: '#',
     children: [
       {
         title: 'Find Care',
@@ -68,8 +64,6 @@ const navmenu = JSON.stringify([
   },
   {
     title: 'Members',
-    path: 'member',
-    href: '#',
     children: [
       {
         title: 'Members',
@@ -101,15 +95,13 @@ const navmenu = JSON.stringify([
     ],
   },
   {
-    title: 'Employer', path: 'employer', href: '#',
+    title: 'Employer',
   },
   {
-    title: 'Providers', path: 'providers', href: '#',
+    title: 'Providers',
   },
   {
     title: 'Producers',
-    path: 'producers',
-    href: '#',
   },
 ]);
 
@@ -138,9 +130,18 @@ function toggleSearchBar() {
 // render header content fargment
 async function renderheaderfargment(loadheaderdata) {
   const fragmentcontent = `/content-fragment/header/${loadheaderdata}`;
+  // console.log('check', loadheaderdata);
   const headerpath = await loadFragment(fragmentcontent);
   const headerviewcontent = headerpath?.firstElementChild;
   return headerviewcontent;
+}
+
+function titletransformation(value) {
+  let path;
+  if (value) {
+    path = value.toLowerCase().replace(' ', '-');
+  }
+  return path;
 }
 
 function renderMegaMenu(nav) {
@@ -163,7 +164,7 @@ function renderMegaMenu(nav) {
     headermenulink.className = 'header-menu-link';
     headermenuli.prepend(headermenulink);
     const navbaranchor = document.createElement('a');
-    navbaranchor.setAttribute('href', item.href);
+    navbaranchor.setAttribute('href', '#');
     navbaranchor.innerText = item.title;
     // Active menu
     headermenulink.addEventListener('click', (e) => {
@@ -234,7 +235,8 @@ function renderMegaMenu(nav) {
         }
       });
       try {
-        renderheaderfargment(item?.path).then((res) => {
+        const titlepath = titletransformation(item?.title);
+        renderheaderfargment(titlepath).then((res) => {
           menusubmenucontent.append(res);
         });
       } catch (error) {
