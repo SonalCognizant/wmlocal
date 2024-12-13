@@ -101,6 +101,7 @@
         align-items: center;
         display: flex;
         flex-direction: column;
+        border-radius: 4px;
         &:first-child {
           padding-bottom: 6px;
         }
@@ -203,6 +204,7 @@
         background-color: var(--background-color);
         display: flex;
         flex-direction: column;
+        border-radius: 4px;
         @include for-xlarge {
           width: calc(25% + 10px);
           //   padding: 24px;
@@ -315,6 +317,7 @@
         align-items: center;
         display: flex;
         flex-direction: column;
+        border-radius: 4px;
         @include for-xlarge {
           width: calc((100% - 104px) / 4);
           //   padding: 24px;

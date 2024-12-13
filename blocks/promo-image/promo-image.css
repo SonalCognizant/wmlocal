@@ -133,6 +133,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  border-radius: 4px;
 }
 .promo-image-container .promo-image > .promo-4-column > li:first-child {
   padding-bottom: 6px;
@@ -246,6 +247,7 @@
   background-color: var(--background-color);
   display: flex;
   flex-direction: column;
+  border-radius: 4px;
 }
 @media (min-width: 1380px) {
   .promo-image-container .promo-image > .promo-3-column > li {
@@ -378,6 +380,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  border-radius: 4px;
 }
 @media (min-width: 1380px) {
   .promo-image-container .promo-image > .promo-2-column > li {

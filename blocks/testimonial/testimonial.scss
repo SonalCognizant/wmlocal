@@ -86,6 +86,7 @@
           background-color: $--blue-50;
           color: $--gray-700;
           padding: 45px $--spacing-xl $--spacing-jumbo $--spacing-xl;
+          border-radius: 4px;
           @include for-xlarge {
             width: calc((100% + 60px) / 12* 3);
           }

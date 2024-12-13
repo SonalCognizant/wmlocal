@@ -129,6 +129,7 @@
 .section.testimonial-with-image-container .testimonial-with-image-wrapper .testimonial-with-image ul li div:first-child {
   padding: 0 35px 0 36px;
   background-color: #f3f9ff;
+  border-radius: 4px;
 }
 @media (min-width: 1380px) {
   .section.testimonial-with-image-container .testimonial-with-image-wrapper .testimonial-with-image ul li div:first-child {
@@ -146,6 +147,14 @@
 @media (min-width: 1201px) and (max-width: 1379px) {
   .section.testimonial-with-image-container .testimonial-with-image-wrapper .testimonial-with-image ul li div:first-child {
     width: calc(33.3333333333% - 85px);
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .section.testimonial-with-image-container .testimonial-with-image-wrapper .testimonial-with-image ul li div:first-child img {
+    width: 65px;
+    height: 45px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
@@ -207,6 +216,7 @@
 .section.testimonial-with-image-container .testimonial-with-image-wrapper .testimonial-with-image ul li div:last-child picture img {
   width: 100%;
   height: 600px;
+  border-radius: 5px;
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .section.testimonial-with-image-container .testimonial-with-image-wrapper .testimonial-with-image ul li div:last-child picture img {
