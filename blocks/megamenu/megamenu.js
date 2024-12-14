@@ -1,251 +1,5 @@
 import { loadFragment } from '../fragment/fragment.js';
 
-const flatJson = {
-  total: 34,
-  offset: 0,
-  limit: 34,
-  data: [
-    {
-      'Parent Title': 'Home',
-      Title: '',
-      'Sub Title': '',
-      Href: '',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Shop',
-      Title: 'Shop plans',
-      'Sub Title': 'Medicare Advantage3',
-      Href: '#',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Shop',
-      Title: 'Shop plans',
-      'Sub Title': 'Medicare Supplement',
-      Href: '#',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Shop',
-      Title: 'Shop plans',
-      'Sub Title': 'Individual and Family',
-      Href: '#',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Shop',
-      Title: 'Shop plans',
-      'Sub Title': 'Explore all plans',
-      Href: '#',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Shop',
-      Title: 'Business plans',
-      'Sub Title': 'Small group employer',
-      Href: '#',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Shop',
-      Title: 'Business plans',
-      'Sub Title': 'Mid-size employer',
-      Href: '#',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Shop',
-      Title: 'Business plans',
-      'Sub Title': 'Large employer',
-      Href: '#',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Shop',
-      Title: 'Understanding plans',
-      'Sub Title': 'Be well 24/7',
-      Href: '#',
-      Description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    },
-    {
-      'Parent Title': 'Shop',
-      Title: 'Understanding plans',
-      'Sub Title': 'Preventative services',
-      Href: '#',
-      Description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    },
-    {
-      'Parent Title': 'Find care',
-      Title: 'Find Care',
-      'Sub Title': 'Overview',
-      Href: '#',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Find care',
-      Title: 'Find Care',
-      'Sub Title': 'Medicare',
-      Href: '#',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Find care',
-      Title: 'Find Care',
-      'Sub Title': 'Affordable Care Act',
-      Href: '#',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Find care',
-      Title: 'Member Find care',
-      'Sub Title': 'Member care options',
-      Href: '#',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Find care',
-      Title: 'Member Find care',
-      'Sub Title': 'Mental health solutions',
-      Href: '#',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Find care',
-      Title: 'Member Find care',
-      'Sub Title': 'Virtual care',
-      Href: '#',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Find care',
-      Title: 'Additional Resources',
-      'Sub Title': 'Be well 24/7',
-      Href: '#',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Find care',
-      Title: 'Additional Resources',
-      'Sub Title': 'Case Management',
-      Href: '#',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Find care',
-      Title: 'Additional Resources',
-      'Sub Title': 'Preventative services',
-      Href: '#',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Members',
-      Title: 'Members',
-      'Sub Title': 'Pay your Bills',
-      Href: '/member/pay-your-bill',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Members',
-      Title: 'Members',
-      'Sub Title': 'Overview',
-      Href: '/member/overview',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Members',
-      Title: 'Members',
-      'Sub Title': 'ID Cards',
-      Href: '/member/id-cards',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Members',
-      Title: 'Members',
-      'Sub Title': 'Health Insurance Basics',
-      Href: '/member/health-insurance-basics',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Members',
-      Title: 'Coverage and Benefits',
-      'Sub Title': 'Life Events',
-      Href: '/member/coveraage-and-benefits/life-events',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Members',
-      Title: 'Coverage and Benefits',
-      'Sub Title': 'Claims',
-      Href: '/member/coveraage-and-benefits/claims',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Members',
-      Title: 'Coverage and Benefits',
-      'Sub Title': 'Coverage While Travelling',
-      Href: '/member/coveraage-and-benefits/coverage-while-traveling',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Members',
-      Title: 'Coverage and Benefits',
-      'Sub Title': 'Cost Estimation',
-      Href: '/member/coveraage-and-benefits/cost-estimation',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Members',
-      Title: 'Coverage and Benefits',
-      'Sub Title': 'Authorizations & Approvals',
-      Href: '/member/coveraage-and-benefits/authorizations-and-approvals',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Members',
-      Title: 'Prescription Drugs',
-      'Sub Title': 'My Wellmark',
-      Href: '/member/prescription-drugs-and-pharmacy-benefits/mywellmark',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Members',
-      Title: 'Prescription Drugs',
-      'Sub Title': 'Biosimilars',
-      Href: '/member/prescription-drugs-and-pharmacy-benefits/biosimilars',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Members',
-      Title: 'Prescription Drugs',
-      'Sub Title': 'Speciality Drugs',
-      Href: '/member/prescription-drugs-and-pharmacy-benefits/specialty-drugs',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Employer',
-      Title: '',
-      'Sub Title': '',
-      Href: '',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Providers',
-      Title: '',
-      'Sub Title': '',
-      Href: '',
-      Description: '',
-    },
-    {
-      'Parent Title': 'Producers',
-      Title: '',
-      'Sub Title': '',
-      Href: '',
-      Description: '',
-    },
-  ],
-};
-
 function transformData(flatData) {
   const result = [];
 
@@ -295,9 +49,6 @@ function transformData(flatData) {
     return item;
   });
 }
-
-const result1 = transformData(flatJson.data);
-const navmenu1 = JSON.stringify(result1, null, 2);
 
 // Menu bar onclick event
 function toggleMenu(e) {
@@ -608,7 +359,7 @@ function renderMegaMenu(nav, navmenu) {
 
 // Function to fetch the JSON and transform it
 function fetchAndTransformData(nav) {
-  const jsonUrl = 'https://sonaldev--wmlocal--sonalcognizant.hlx.page/content-fragment/megamenu.json';
+  const jsonUrl = '/content-fragment/megamenu.json';
   fetch(jsonUrl)
     .then((response) => {
       if (!response.ok) {
@@ -617,12 +368,14 @@ function fetchAndTransformData(nav) {
       return response.json();
     })
     .then((data) => {
+      // eslint-disable-next-line no-console
       console.log('this', data);
       const result = transformData(data.data); // Assuming the JSON has a `data` property
       const navmenu = JSON.stringify(result, null, 2);
       renderMegaMenu(nav, navmenu);
     })
     .catch((error) => {
+      // eslint-disable-next-line no-console
       console.error('There was a problem with the fetch operation:', error);
     });
 }
