@@ -296,9 +296,9 @@ function transformData(flatData) {
   });
 }
 
-const result = transformData(flatJson.data);
-const navmenu = JSON.stringify(result, null, 2);
-console.log(result);
+const result1 = transformData(flatJson.data);
+const navmenu1 = JSON.stringify(result1, null, 2);
+
 // Menu bar onclick event
 function toggleMenu(e) {
   const menuBarlist = e.target.closest('.collapse-bar');
@@ -338,7 +338,7 @@ function titletransformation(value) {
   return path;
 }
 
-function renderMegaMenu(nav) {
+function renderMegaMenu(nav, navmenu) {
   const mainheadersection = document.createElement('div');
   mainheadersection.className = 'main-header-section';
   const mainheadernav = document.createElement('div');
@@ -606,6 +606,26 @@ function renderMegaMenu(nav) {
   sectionregister.appendChild(forgetpassword);
 }
 
+// Function to fetch the JSON and transform it
+function fetchAndTransformData(nav) {
+  const jsonUrl = 'https://sonaldev--wmlocal--sonalcognizant.hlx.page/content-fragment/megamenu.json';
+  fetch(jsonUrl)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log('this', data);
+      const result = transformData(data.data); // Assuming the JSON has a `data` property
+      const navmenu = JSON.stringify(result, null, 2);
+      renderMegaMenu(nav, navmenu);
+    })
+    .catch((error) => {
+      console.error('There was a problem with the fetch operation:', error);
+    });
+}
 /**
  * Loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
@@ -614,7 +634,7 @@ export default async function decorate(block) {
   block.textContent = '';
   const nav = document.createElement('div');
   nav.className = 'main-header';
-  renderMegaMenu(nav);
+  fetchAndTransformData(nav);
   const navWrapper = document.createElement('div');
   navWrapper.className = 'main-header-wrapper';
   navWrapper.append(nav);
