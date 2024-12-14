@@ -290,7 +290,7 @@ function transformData(flatData) {
 
 const result = transformData(flatJson.data);
 const navmenu = JSON.stringify(result, null, 2);
-
+console.log(result);
 // Menu bar onclick event
 function toggleMenu(e) {
   const menuBarlist = e.target.closest('.collapse-bar');
