@@ -442,13 +442,13 @@ export default async function decorate(block) {
     const mainTag = document.querySelector('main');
     mainTag.prepend(breadCrumbdiv);
     const breadcrumLength = locationPath.length;
-    for (const i in locationPath) {
+    locationPath.forEach((index) => {
       // creation of breadcrumbs lists
       const breadcrumbList = document.createElement('li');
       breadcrumbList.classList.add('breadcrumb-list');
       const breadcrumbaTag = document.createElement('a');
-      breadcrumbaTag.textContent = locationPath[i];
-      breadcrumbaTag.setAttribute('data-breadcrumb-value', locationPath[i]);
+      breadcrumbaTag.textContent = index;
+      breadcrumbaTag.setAttribute('data-breadcrumb-value', index);
       breadcrumbList.append(breadcrumbaTag);
       breadCrumbdiv.append(breadcrumbList);
       // get the image for the breadcrumb
@@ -463,13 +463,14 @@ export default async function decorate(block) {
       breadcrumbImg2.setAttribute('data-icon-name', 'divider');
       breadcrumbImg2.className = 'backarrow';
       breadcrumbList.prepend(breadcrumbImg2);
-    }
+    });
     const breadcrumurlLength = locationPath.length;
-    for (let j = breadcrumurlLength; j > 0; j--) {
-      const lastchildUrls = j === breadcrumLength;
+    locationPath.forEach((index, key) => {
+      const indexDepricate = breadcrumurlLength - key;
+      const lastchildUrls = indexDepricate === breadcrumLength;
       if (!lastchildUrls) {
-        generateUrl(locationPath, j);
+        generateUrl(locationPath, indexDepricate);
       }
-    }
+    });
   }
 }
