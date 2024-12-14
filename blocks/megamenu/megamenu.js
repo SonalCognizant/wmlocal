@@ -75,7 +75,6 @@ function toggleSearchBar() {
 // render header content fargment
 async function renderheaderfargment(loadheaderdata) {
   const fragmentcontent = `/content-fragment/header/${loadheaderdata}`;
-  // console.log('check', loadheaderdata);
   const headerpath = await loadFragment(fragmentcontent);
   const headerviewcontent = headerpath?.firstElementChild;
   return headerviewcontent;
@@ -185,6 +184,7 @@ function renderMegaMenu(nav, navmenu) {
           menusubmenucontent.append(res);
         });
       } catch (error) {
+        // eslint-disable-next-line no-console
         console.log('error', error);
       }
     }
@@ -368,8 +368,6 @@ function fetchAndTransformData(nav) {
       return response.json();
     })
     .then((data) => {
-      // eslint-disable-next-line no-console
-      console.log('this', data);
       const result = transformData(data.data); // Assuming the JSON has a `data` property
       const navmenu = JSON.stringify(result, null, 2);
       renderMegaMenu(nav, navmenu);
