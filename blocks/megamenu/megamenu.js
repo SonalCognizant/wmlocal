@@ -1,6 +1,296 @@
 import { loadFragment } from '../fragment/fragment.js';
 
-const navmenu = JSON.stringify([
+const flatJson = {
+  total: 34,
+  offset: 0,
+  limit: 34,
+  data: [
+    {
+      'Parent Title': 'Home',
+      Title: '',
+      'Sub Title': '',
+      Href: '',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Shop',
+      Title: 'Shop plans',
+      'Sub Title': 'Medicare Advantage',
+      Href: '#',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Shop',
+      Title: 'Shop plans',
+      'Sub Title': 'Medicare Supplement',
+      Href: '#',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Shop',
+      Title: 'Shop plans',
+      'Sub Title': 'Individual and Family',
+      Href: '#',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Shop',
+      Title: 'Shop plans',
+      'Sub Title': 'Explore all plans',
+      Href: '#',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Shop',
+      Title: 'Business plans',
+      'Sub Title': 'Small group employer',
+      Href: '#',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Shop',
+      Title: 'Business plans',
+      'Sub Title': 'Mid-size employer',
+      Href: '#',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Shop',
+      Title: 'Business plans',
+      'Sub Title': 'Large employer',
+      Href: '#',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Shop',
+      Title: 'Understanding plans',
+      'Sub Title': 'Be well 24/7',
+      Href: '#',
+      Description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    {
+      'Parent Title': 'Shop',
+      Title: 'Understanding plans',
+      'Sub Title': 'Preventative services',
+      Href: '#',
+      Description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    {
+      'Parent Title': 'Find care',
+      Title: 'Find Care',
+      'Sub Title': 'Overview',
+      Href: '#',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Find care',
+      Title: 'Find Care',
+      'Sub Title': 'Medicare',
+      Href: '#',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Find care',
+      Title: 'Find Care',
+      'Sub Title': 'Affordable Care Act',
+      Href: '#',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Find care',
+      Title: 'Member Find care',
+      'Sub Title': 'Member care options',
+      Href: '#',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Find care',
+      Title: 'Member Find care',
+      'Sub Title': 'Mental health solutions',
+      Href: '#',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Find care',
+      Title: 'Member Find care',
+      'Sub Title': 'Virtual care',
+      Href: '#',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Find care',
+      Title: 'Additional Resources',
+      'Sub Title': 'Be well 24/7',
+      Href: '#',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Find care',
+      Title: 'Additional Resources',
+      'Sub Title': 'Case Management',
+      Href: '#',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Find care',
+      Title: 'Additional Resources',
+      'Sub Title': 'Preventative services',
+      Href: '#',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Members',
+      Title: 'Members',
+      'Sub Title': 'Pay your Bills',
+      Href: '/member/pay-your-bill',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Members',
+      Title: 'Members',
+      'Sub Title': 'Overview',
+      Href: '/member/overview',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Members',
+      Title: 'Members',
+      'Sub Title': 'ID Cards',
+      Href: '/member/id-cards',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Members',
+      Title: 'Members',
+      'Sub Title': 'Health Insurance Basics',
+      Href: '/member/health-insurance-basics',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Members',
+      Title: 'Coverage and Benefits',
+      'Sub Title': 'Life Events',
+      Href: '/member/coveraage-and-benefits/life-events',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Members',
+      Title: 'Coverage and Benefits',
+      'Sub Title': 'Claims',
+      Href: '/member/coveraage-and-benefits/claims',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Members',
+      Title: 'Coverage and Benefits',
+      'Sub Title': 'Coverage While Travelling',
+      Href: '/member/coveraage-and-benefits/coverage-while-traveling',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Members',
+      Title: 'Coverage and Benefits',
+      'Sub Title': 'Cost Estimation',
+      Href: '/member/coveraage-and-benefits/cost-estimation',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Members',
+      Title: 'Coverage and Benefits',
+      'Sub Title': 'Authorizations & Approvals',
+      Href: '/member/coveraage-and-benefits/authorizations-and-approvals',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Members',
+      Title: 'Prescription Drugs',
+      'Sub Title': 'My Wellmark',
+      Href: '/member/prescription-drugs-and-pharmacy-benefits/mywellmark',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Members',
+      Title: 'Prescription Drugs',
+      'Sub Title': 'Biosimilars',
+      Href: '/member/prescription-drugs-and-pharmacy-benefits/biosimilars',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Members',
+      Title: 'Prescription Drugs',
+      'Sub Title': 'Speciality Drugs',
+      Href: '/member/prescription-drugs-and-pharmacy-benefits/specialty-drugs',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Employer',
+      Title: '',
+      'Sub Title': '',
+      Href: '',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Providers',
+      Title: '',
+      'Sub Title': '',
+      Href: '',
+      Description: '',
+    },
+    {
+      'Parent Title': 'Producers',
+      Title: '',
+      'Sub Title': '',
+      Href: '',
+      Description: '',
+    },
+  ],
+};
+
+function transformData(flatData) {
+  const result = [];
+
+  // Iterate through the flat data and build the hierarchical structure
+  flatData.forEach((item) => {
+    const parentTitle = item['Parent Title'];
+    const title = item.Title;
+    const subTitle = item['Sub Title'];
+    const href = item.Href;
+    const description = item.Description;
+
+    // Find the parent in the result array
+    let parent = result.find((p) => p.title === parentTitle);
+
+    if (!parent) {
+      parent = { title: parentTitle, children: [] };
+      result.push(parent);
+    }
+
+    // Now, find the specific child category (e.g., 'Shop', 'Find care') and insert
+    let child = parent.children.find((c) => c.title === title);
+
+    if (!child) {
+      child = { title, subChildren: [] };
+      parent.children.push(child);
+    }
+
+    // Add the subTitle as a subChild if it exists
+    if (subTitle) {
+      child.subChildren.push({
+        title: subTitle,
+        // eslint-disable-next-line object-shorthand
+        href: href,
+        // eslint-disable-next-line object-shorthand
+        description: description,
+      });
+    }
+  });
+
+  return result;
+}
+
+const result = transformData(flatJson.data);
+const navmenu = JSON.stringify(result, null, 2);
+const navmenu1 = JSON.stringify([
   {
     title: 'Home',
   },
@@ -27,8 +317,18 @@ const navmenu = JSON.stringify([
       {
         title: 'Understanding plans',
         subChildren: [
-          { title: 'Be well 24/7', href: '#', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-          { title: 'Preventative services', href: '#', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+          {
+            title: 'Be well 24/7',
+            href: '#',
+            description:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          },
+          {
+            title: 'Preventative services',
+            href: '#',
+            description:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          },
         ],
       },
     ],
@@ -68,28 +368,68 @@ const navmenu = JSON.stringify([
       {
         title: 'Members',
         subChildren: [
-          { title: 'Pay your Bills', href: '/member/pay-your-bill', description: '' },
+          {
+            title: 'Pay your Bills',
+            href: '/member/pay-your-bill',
+            description: '',
+          },
           { title: 'Overview', href: '/member/overview', description: '' },
           { title: 'ID Cards', href: '/member/id-cards', description: '' },
-          { title: 'Health Insurance Basics', href: '/member/health-insurance-basics', description: '' },
+          {
+            title: 'Health Insurance Basics',
+            href: '/member/health-insurance-basics',
+            description: '',
+          },
         ],
       },
       {
         title: 'Coverage and Benefits',
         subChildren: [
-          { title: 'Life Events', href: '/member/coveraage-and-benefits/life-events', description: '' },
-          { title: 'Claims', href: '/member/coveraage-and-benefits/claims', description: '' },
-          { title: 'Coverage While Travelling', href: '/member/coveraage-and-benefits/coverage-while-traveling', description: '' },
-          { title: 'Cost Estimation', href: '/member/coveraage-and-benefits/cost-estimation', description: '' },
-          { title: 'Authorizations & Approvals', href: '/member/coveraage-and-benefits/authorizations-and-approvals', description: '' },
+          {
+            title: 'Life Events',
+            href: '/member/coveraage-and-benefits/life-events',
+            description: '',
+          },
+          {
+            title: 'Claims',
+            href: '/member/coveraage-and-benefits/claims',
+            description: '',
+          },
+          {
+            title: 'Coverage While Travelling',
+            href: '/member/coveraage-and-benefits/coverage-while-traveling',
+            description: '',
+          },
+          {
+            title: 'Cost Estimation',
+            href: '/member/coveraage-and-benefits/cost-estimation',
+            description: '',
+          },
+          {
+            title: 'Authorizations & Approvals',
+            href: '/member/coveraage-and-benefits/authorizations-and-approvals',
+            description: '',
+          },
         ],
       },
       {
         title: 'Prescription Drugs',
         subChildren: [
-          { title: 'My Wellmark', href: '/member/prescription-drugs-and-pharmacy-benefits/mywellmark', description: '' },
-          { title: 'Biosimilars', href: '/member/prescription-drugs-and-pharmacy-benefits/biosimilars', description: '' },
-          { title: 'Speciality Drugs', href: '/member/prescription-drugs-and-pharmacy-benefits/specialty-drugs', description: '' },
+          {
+            title: 'My Wellmark',
+            href: '/member/prescription-drugs-and-pharmacy-benefits/mywellmark',
+            description: '',
+          },
+          {
+            title: 'Biosimilars',
+            href: '/member/prescription-drugs-and-pharmacy-benefits/biosimilars',
+            description: '',
+          },
+          {
+            title: 'Speciality Drugs',
+            href: '/member/prescription-drugs-and-pharmacy-benefits/specialty-drugs',
+            description: '',
+          },
         ],
       },
     ],
@@ -332,14 +672,14 @@ function renderMegaMenu(nav) {
   breadcrumbsicon.setAttribute('data-toggle', 'modal');
   const collapsemenu = document.createElement('p');
   collapsemenu.classList.add('collapse-menu');
-  collapsemenu.innerHTML = ('Menu');
+  collapsemenu.innerHTML = 'Menu';
   const collapseclose = document.createElement('img');
   collapseclose.src = '../../icons/close-icon.svg';
   collapseclose.setAttribute('data-dismiss', 'modal');
   collapseclose.classList.add('close-btn');
   const colclose = document.createElement('p');
   colclose.classList.add('collapse-close');
-  colclose.innerHTML = ('Close');
+  colclose.innerHTML = 'Close';
   collapsediv.append(collapsebarmenu);
   collapsebarmenu.prepend(breadcrumbsicon);
   collapsebarmenu.append(collapsemenu);
@@ -352,7 +692,7 @@ function renderMegaMenu(nav) {
   searchicon.src = '../../icons/search-icon.svg';
   const searchmenu = document.createElement('p');
   searchmenu.classList.add('search-menu');
-  searchmenu.innerHTML = ('Search');
+  searchmenu.innerHTML = 'Search';
   searchdiv.append(searchicon);
   searchdiv.append(searchmenu);
 
@@ -365,17 +705,17 @@ function renderMegaMenu(nav) {
   sectionregister.classList.add('section-register', 'button-container');
   const loginheading = document.createElement('h4');
   loginheading.classList.add('login-heading');
-  loginheading.innerHTML = ('Log in to your account');
+  loginheading.innerHTML = 'Log in to your account';
   const emaillabel = document.createElement('p');
   emaillabel.classList.add('email-label');
-  emaillabel.innerHTML = ('User ID or Email (required)');
+  emaillabel.innerHTML = 'User ID or Email (required)';
   const logininput = document.createElement('input');
   logininput.className = 'input-login';
   logininput.setAttribute('type', 'text');
   logininput.setAttribute('name', 'username');
   const passwordlabel = document.createElement('p');
   passwordlabel.classList.add('password-label');
-  passwordlabel.innerHTML = ('Password (required)');
+  passwordlabel.innerHTML = 'Password (required)';
   const passwordinput = document.createElement('input');
   passwordinput.className = 'input-password';
   passwordinput.setAttribute('type', 'password');
@@ -392,10 +732,10 @@ function renderMegaMenu(nav) {
   registerbtn.classList.add('button', 'secondary');
   const forgetuser = document.createElement('p');
   forgetuser.classList.add('forget-user');
-  forgetuser.innerHTML = ('Forgot User ID or Email?');
+  forgetuser.innerHTML = 'Forgot User ID or Email?';
   const forgetpassword = document.createElement('p');
   forgetpassword.classList.add('forget-password');
-  forgetpassword.innerHTML = ('Forgot Password?');
+  forgetpassword.innerHTML = 'Forgot Password?';
   // Section login append
   headermenublock.appendChild(sectionblock);
   sectionblock.appendChild(sectionlogin);
