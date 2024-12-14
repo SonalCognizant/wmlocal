@@ -15,7 +15,7 @@ const flatJson = {
     {
       'Parent Title': 'Shop',
       Title: 'Shop plans',
-      'Sub Title': 'Medicare Advantage2',
+      'Sub Title': 'Medicare Advantage3',
       Href: '#',
       Description: '',
     },
@@ -249,6 +249,9 @@ const flatJson = {
 function transformData(flatData) {
   const result = [];
 
+  // Create a map to hold references to the parent categories by their titles
+  const parentMap = {};
+
   // Iterate through the flat data and build the hierarchical structure
   flatData.forEach((item) => {
     const parentTitle = item['Parent Title'];
@@ -257,35 +260,40 @@ function transformData(flatData) {
     const href = item.Href;
     const description = item.Description;
 
-    // Find the parent in the result array
-    let parent = result.find((p) => p.title === parentTitle);
-
-    if (!parent) {
-      parent = { title: parentTitle, children: [] };
-      result.push(parent);
+    // If there is no parent in the result yet, add it to the map
+    if (!parentMap[parentTitle]) {
+      parentMap[parentTitle] = { title: parentTitle, children: [] };
+      result.push(parentMap[parentTitle]);
     }
 
-    // Now, find the specific child category (e.g., 'Shop', 'Find care') and insert
-    let child = parent.children.find((c) => c.title === title);
+    // Get the parent object
+    const parent = parentMap[parentTitle];
 
-    if (!child) {
+    // If the child with the title does not exist under the parent, create it
+    let child = parent.children.find((c) => c.title === title);
+    if (!child && title) {
       child = { title, subChildren: [] };
       parent.children.push(child);
     }
 
-    // Add the subTitle as a subChild if it exists
+    // Add subTitle to the subChildren if it exists
     if (subTitle) {
       child.subChildren.push({
         title: subTitle,
-        // eslint-disable-next-line object-shorthand
-        href: href,
-        // eslint-disable-next-line object-shorthand
-        description: description,
+        href,
+        description,
       });
     }
   });
 
-  return result;
+  // Ensure that 'Home' and other parents without children are included without 'children' array
+  return result.map((item) => {
+    // If there are no children, remove the 'children' property
+    if (item.children.length === 0) {
+      delete item.children;
+    }
+    return item;
+  });
 }
 
 const result = transformData(flatJson.data);
