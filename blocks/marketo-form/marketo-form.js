@@ -1,22 +1,21 @@
+function addScript(src) {
+  const script = document.createElement('script');
+  script.src = src;
+  document.head.appendChild(script);
+}
+// creation of block for marketo form
 export default function decorate(block) {
-// append the img tag for the icon after inner-link
-  const imgIcon = block.querySelector('.button-container');
-  const linkImgicon = document.createElement('img');
-  linkImgicon.src = '/icons/right-arrow.svg';
-  linkImgicon.setAttribute('data-icon-name', 'right-arrow');
-  linkImgicon.className = 'link-img';
-  imgIcon.append(linkImgicon);
-  // slicing the first element of the block
-  const innerleftDivs = [...block.children].slice(0, 1);
-  const blockleft = document.createElement('div');
-  blockleft.classList.add('block-left');
-  block.prepend(blockleft);
-  blockleft.append(innerleftDivs[0]);
-  // slicing remaining elements of the block
-  const childLength = [...block.children].length;
-  const innerrightDivs = [...block.children].slice(1, childLength);
-  const blockRight = document.createElement('div');
-  blockRight.classList.add('block-right');
-  block.append(blockRight);
-  blockRight.append(...innerrightDivs);
+  addScript('//899-BTB-436.mktoweb.com/js/forms2/js/forms2.min.js');
+  [...block.children].forEach((row) => {
+    const section = row.querySelector('p');
+    const divId = section.innerHTML;
+    const idstringValue = divId.split('_')[1];
+    const cForm = document.createElement('form');
+    cForm.setAttribute('id', divId);
+    section.insertAdjacentElement('afterend', cForm);
+    setTimeout(() => {
+      const formId = parseInt(idstringValue, 10);
+      MktoForms2.loadForm('//899-BTB-436.mktoweb.com', '899-BTB-436', formId);
+    }, 1000);
+  });
 }

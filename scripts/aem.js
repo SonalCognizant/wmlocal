@@ -724,22 +724,6 @@ async function loadSections(element) {
     await loadSection(sections[i]);
   }
 }
-// marketo form integration//
-function loadmarketoForms() {
-  const getformValue = getMetadata('marketo_forms');
-  const splitformId = getformValue.split('_')[1];
-  const formIdvalue = parseInt(splitformId, 10);
-  const formDiv = document.createElement('div');
-  formDiv.classList.add('section');
-  const cForm = document.createElement('form');
-  cForm.setAttribute('id', getformValue);
-  cForm.setAttribute('data-formId', formIdvalue);
-  const getbodyTag = document.querySelector('main');
-  formDiv.append(cForm);
-  getbodyTag.append(formDiv);
-  MktoForms2.loadForm('//899-BTB-436.mktoweb.com', '899-BTB-436', formIdvalue);
-}
-
 init();
 
 export {
@@ -767,5 +751,4 @@ export {
   toClassName,
   waitForFirstImage,
   wrapTextNodes,
-  loadmarketoForms,
 };
