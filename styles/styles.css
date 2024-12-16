@@ -24,7 +24,7 @@
   }
 }
 
-a.button, .mktoButtonRow,
+a.button, .mktoButtonRow, form.eds-mktoForm.mktoForm .mktoButtonWrap .mktoButton,
 button {
   box-sizing: border-box;
   max-width: 100%;
@@ -47,19 +47,19 @@ button {
   text-align: center;
   text-wrap: auto;
 }
-a.button.primary, .mktoButtonRow.primary,
+a.button.primary, .mktoButtonRow.primary, form.eds-mktoForm.mktoForm .mktoButtonWrap .mktoButton.primary,
 button.primary {
   background-color: #005589;
   color: #ffffff;
   padding: 12px 36px;
   text-decoration: none;
 }
-a.button.primary:hover, .mktoButtonRow.primary:hover,
+a.button.primary:hover, .mktoButtonRow.primary:hover, form.eds-mktoForm.mktoForm .mktoButtonWrap .mktoButton.primary:hover,
 button.primary:hover {
   background-color: #0f3659;
   color: #ffffff;
 }
-a.button.primary:focus, .mktoButtonRow.primary:focus,
+a.button.primary:focus, .mktoButtonRow.primary:focus, form.eds-mktoForm.mktoForm .mktoButtonWrap .mktoButton.primary:focus,
 button.primary:focus {
   background-color: #0f3659;
   color: #ffffff;
@@ -67,7 +67,7 @@ button.primary:focus {
   outline-style: dashed;
   outline-offset: 2px;
 }
-a.button.secondary, .mktoButtonRow.secondary,
+a.button.secondary, .mktoButtonRow.secondary, form.eds-mktoForm.mktoForm .mktoButtonWrap .mktoButton.secondary,
 button.secondary {
   background-color: #ffffff;
   border: 2px solid #005589;
@@ -75,13 +75,13 @@ button.secondary {
   padding: 10px 34px;
   text-decoration: none;
 }
-a.button.secondary:hover, .mktoButtonRow.secondary:hover,
+a.button.secondary:hover, .mktoButtonRow.secondary:hover, form.eds-mktoForm.mktoForm .mktoButtonWrap .mktoButton.secondary:hover,
 button.secondary:hover {
   background-color: #f3f9ff;
   border: 2px solid #0F3659;
   color: #0F3659;
 }
-a.button.secondary:focus, .mktoButtonRow.secondary:focus,
+a.button.secondary:focus, .mktoButtonRow.secondary:focus, form.eds-mktoForm.mktoForm .mktoButtonWrap .mktoButton.secondary:focus,
 button.secondary:focus {
   background-color: #f3f9ff;
   border: 2px solid #0F3659;
@@ -379,75 +379,6 @@ a:any-link {
 .icon > i {
   font-size: 24px;
   color: #4a7390;
-}
-
-/* wellmark color start */
-/* wellmark color end */
-/* wellmark spacing size start */
-/* wellmark spacing size start */
-form {
-  width: 1275px !important;
-  margin: auto;
-  padding: 114px 0 112px 0;
-}
-@media (min-width: 1380px) {
-  form {
-    width: 1275px !important;
-    margin: auto;
-    padding: 114px 0 112px 0;
-  }
-}
-@media (min-width: 1201px) and (max-width: 1379px) {
-  form {
-    width: 1275px !important;
-    margin: auto;
-    padding: 114px 0 112px 0;
-  }
-}
-form .mktoFormRow {
-  width: calc(41.6666666667% - 15px);
-  display: flex;
-  flex-direction: column;
-}
-form .mktoFormRow .mktoOffset {
-  display: none;
-}
-form .mktoFormRow div:nth-last-child(2) {
-  margin-bottom: 33px !important;
-}
-form .mktoFormRow div:first-child {
-  margin-bottom: 0 !important;
-}
-form .mktoFormRow div div {
-  width: 100%;
-}
-form .mktoFormRow div div label {
-  width: 100% !important;
-  font-weight: 500 !important;
-  color: #4b4c4d;
-  font-family: roboto, sans-serif;
-  font-size: 16px;
-  line-height: 32px !important;
-}
-form .mktoFormRow div div label .mktoAsterix {
-  display: none;
-}
-form .mktoFormRow div div input {
-  width: 100% !important;
-  font-weight: 400;
-  color: #4b4c4d;
-  font-family: roboto, sans-serif;
-  font-size: 16px !important;
-  line-height: 32px !important;
-  padding: 10px 21px 8px 20px !important;
-}
-form .mktoFormRow div div select {
-  width: 100% !important;
-  padding: 9px 133px 9px 20px !important;
-}
-form .mktoFormRow div div .mktoError {
-  right: 0 !important;
-  bottom: 0 !important;
 }
 
 :root {
