@@ -119,6 +119,34 @@ button.secondary:focus {
   outline-offset: 2px;
 }
 
+.background-blue-550 .button-container .button.primary {
+  background-color: #ffffff;
+  color: #005589;
+}
+.background-blue-550 .button-container .button.primary:hover {
+  color: #0f3659;
+}
+.background-blue-550 .button-container .button.primary:focus {
+  color: #0f3659;
+  outline: 3px solid #ffffff;
+  outline-style: dashed;
+  outline-offset: 2px;
+}
+.background-blue-550 .button-container .button.secondary {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+.background-blue-550 .button-container .button.secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1882352941);
+}
+.background-blue-550 .button-container .button.secondary:focus {
+  background-color: rgba(255, 255, 255, 0.1882352941);
+  outline: 3px solid #ffffff;
+  outline-style: dashed;
+  outline-offset: 2px;
+}
+
 /* wellmark color start */
 /* wellmark color end */
 /* wellmark spacing size start */
@@ -209,6 +237,18 @@ a:any-link {
   background-color: #f3f9ff;
 }
 
+.background-blue-100 {
+  background-color: #d6e5f1;
+}
+
+.background-gray-100 {
+  background-color: #f2f2f3;
+}
+
+.background-blue-550 {
+  background-color: #4a7390;
+}
+
 /* wellmark color start */
 /* wellmark color end */
 /* wellmark spacing size start */
@@ -279,6 +319,8 @@ a:any-link {
   display: inline-flex;
   padding-bottom: 0;
   padding-right: 26px;
+  width: max-content;
+  margin-bottom: 16px;
 }
 @media (max-width: 480px) {
   .section .default-content-wrapper p.button-container {
@@ -302,11 +344,7 @@ a:any-link {
 }
 .section .default-content-wrapper p.button-container a.button {
   font-size: 18px;
-}
-@media (max-width: 480px) {
-  .section .default-content-wrapper p.button-container a.button {
-    margin-bottom: 16px;
-  }
+  padding-bottom: 12px;
 }
 .section .default-content-wrapper p span.icon.icon-green-tick {
   padding-right: 14px;

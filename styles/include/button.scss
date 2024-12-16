@@ -107,3 +107,35 @@ button {
     }
   }
 }
+
+.background-blue-550{
+  .button-container{
+    .button.primary{
+      background-color: $--white;
+      color: $--primary-675;
+          &:hover{
+            color: $--primary-775;
+          }
+          &:focus{
+          color: $--primary-775;
+          outline: 3px solid $--white;
+          outline-style: dashed;
+          outline-offset: 2px;
+        }
+      }
+    .button.secondary{
+      background: transparent;
+      border: 2px solid $--white;
+      color: $--white;
+      &:hover{
+        background-color: #ffffff30;
+      }
+      &:focus{
+        background-color: #ffffff30;
+        outline: 3px solid $--white;
+        outline-style: dashed;
+        outline-offset: 2px;
+      }
+    }
+  }
+}
