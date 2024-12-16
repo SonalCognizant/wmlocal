@@ -201,12 +201,12 @@
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-1-column > .cards-card-body > h3 {
-    padding: 0 6px;
+    padding: 24px 6px 12px 6px;
   }
 }
 @media (max-width: 480px) {
   .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-1-column > .cards-card-body > h3 {
-    padding: 0 6px;
+    padding: 24px 6px 12px 6px;
   }
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-2-column {
@@ -301,12 +301,12 @@
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-2-column > .cards-card-body > h3 {
-    padding: 0 6px;
+    padding: 24px 6px 12px 6px;
   }
 }
 @media (max-width: 480px) {
   .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-2-column > .cards-card-body > h3 {
-    padding: 0 6px;
+    padding: 24px 6px 12px 6px;
   }
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-3-column {
@@ -395,12 +395,12 @@
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-3-column > .cards-card-body > h3 {
-    padding: 0 6px;
+    padding: 24px 6px 12px 6px;
   }
 }
 @media (max-width: 480px) {
   .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-3-column > .cards-card-body > h3 {
-    padding: 0 6px;
+    padding: 24px 6px 12px 6px;
   }
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation {

@@ -160,10 +160,10 @@
               letter-spacing: 0px;
               text-align: center;
               @include for-tablet {
-                padding: 0 6px;
+                padding: 24px 6px 12px 6px;
               }
               @include for-mobile {
-                padding: 0 6px;
+                padding: 24px 6px 12px 6px;
               }
             }
           }
@@ -252,10 +252,10 @@
               letter-spacing: 0px;
               text-align: center;
               @include for-tablet {
-                padding: 0 6px;
+                padding: 24px 6px 12px 6px;
               }
               @include for-mobile {
-                padding: 0 6px;
+                padding: 24px 6px 12px 6px;
               }
             }
           }
@@ -338,10 +338,10 @@
               letter-spacing: 0px;
               text-align: center;
               @include for-tablet {
-                padding: 0 6px;
+                padding: 24px 6px 12px 6px;
               }
               @include for-mobile {
-                padding: 0 6px;
+                padding: 24px 6px 12px 6px;
               }
             }
           }
