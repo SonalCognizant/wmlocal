@@ -25,12 +25,17 @@ export default function decorate(block) {
   linkImg.className = 'link-img';
   linkDiv.append(linkImg);
   parentElement.append(linkDiv);
+
   // adding class for the ul based on the children length
   const testimonialClass = `testimonial-${block.children.length - 2}-quote`;
   ul.classList.add(testimonialClass);
+
+  // Create a static array of children to avoid live collection issues
+  const childrenArray = Array.from(block.children);
+
   // Process the remaining children to create list items
-  [...block.children].forEach((row, index) => {
-    if (index < block.children.length - 1 && index > 0) {
+  childrenArray.forEach((row, index) => {
+    if (index < childrenArray.length - 1 && index > 0) {
       const li = document.createElement('li');
       while (row.firstElementChild) li.append(row.firstElementChild);
 
@@ -41,15 +46,19 @@ export default function decorate(block) {
       const imgTag = document.createElement('img');
       imgTag.src = '/icons/quote.svg';
       imgTag.setAttribute('data-icon-name', 'quote');
-
-      // setAttribute for the header
-      const hTag = li.querySelector('h3');
-      hTag.className = 'testimonial-title';
-
-      // setAttribute for the paragraph
-      const pTag = li.querySelector('p');
-      pTag.className = 'testimonial-description';
       li.prepend(imgTag);
+
+      // Check for h3 and p tags before setting class
+      const hTag = li.querySelector('h3');
+      if (hTag) {
+        hTag.className = 'testimonial-title';
+      }
+
+      const pTag = li.querySelector('p');
+      if (pTag) {
+        pTag.className = 'testimonial-description';
+      }
+
       ul.append(li);
     }
   });
