@@ -73,7 +73,12 @@
           display: flex;
           &.button{
             font-size: 18px;
-            padding-bottom: 12px;
+            &.primary{
+              padding-bottom: 12px;
+            }
+            &.secondary{
+              padding-bottom: 10px;
+            }
           }
         }
       }
