@@ -13,6 +13,7 @@
     "color-function-notation": null,
     "alpha-value-notation": null,
     "value-keyword-case": null,
-    "number-max-precision": null
+    "number-max-precision": null,
+    "selector-class-pattern": null
   }
 }

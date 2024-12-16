@@ -724,7 +724,6 @@ async function loadSections(element) {
     await loadSection(sections[i]);
   }
 }
-
 init();
 
 export {
