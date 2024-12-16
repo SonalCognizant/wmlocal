@@ -24,7 +24,7 @@
   }
 }
 
-a.button, .mktoButtonRow, form.eds-mktoForm.mktoForm .mktoButtonWrap .mktoButton,
+a.button, .mktoButtonRow, form.eds-mkto-form.mktoForm .mktoButtonWrap .mktoButton,
 button {
   box-sizing: border-box;
   max-width: 100%;
@@ -47,19 +47,19 @@ button {
   text-align: center;
   text-wrap: auto;
 }
-a.button.primary, .mktoButtonRow.primary, form.eds-mktoForm.mktoForm .mktoButtonWrap .mktoButton.primary,
+a.button.primary, .mktoButtonRow.primary, form.eds-mkto-form.mktoForm .mktoButtonWrap .mktoButton.primary,
 button.primary {
   background-color: #005589;
   color: #ffffff;
   padding: 12px 36px;
   text-decoration: none;
 }
-a.button.primary:hover, .mktoButtonRow.primary:hover, form.eds-mktoForm.mktoForm .mktoButtonWrap .mktoButton.primary:hover,
+a.button.primary:hover, .mktoButtonRow.primary:hover, form.eds-mkto-form.mktoForm .mktoButtonWrap .mktoButton.primary:hover,
 button.primary:hover {
   background-color: #0f3659;
   color: #ffffff;
 }
-a.button.primary:focus, .mktoButtonRow.primary:focus, form.eds-mktoForm.mktoForm .mktoButtonWrap .mktoButton.primary:focus,
+a.button.primary:focus, .mktoButtonRow.primary:focus, form.eds-mkto-form.mktoForm .mktoButtonWrap .mktoButton.primary:focus,
 button.primary:focus {
   background-color: #0f3659;
   color: #ffffff;
@@ -67,7 +67,7 @@ button.primary:focus {
   outline-style: dashed;
   outline-offset: 2px;
 }
-a.button.secondary, .mktoButtonRow.secondary, form.eds-mktoForm.mktoForm .mktoButtonWrap .mktoButton.secondary,
+a.button.secondary, .mktoButtonRow.secondary, form.eds-mkto-form.mktoForm .mktoButtonWrap .mktoButton.secondary,
 button.secondary {
   background-color: #ffffff;
   border: 2px solid #005589;
@@ -75,13 +75,13 @@ button.secondary {
   padding: 10px 34px;
   text-decoration: none;
 }
-a.button.secondary:hover, .mktoButtonRow.secondary:hover, form.eds-mktoForm.mktoForm .mktoButtonWrap .mktoButton.secondary:hover,
+a.button.secondary:hover, .mktoButtonRow.secondary:hover, form.eds-mkto-form.mktoForm .mktoButtonWrap .mktoButton.secondary:hover,
 button.secondary:hover {
   background-color: #f3f9ff;
   border: 2px solid #0F3659;
   color: #0F3659;
 }
-a.button.secondary:focus, .mktoButtonRow.secondary:focus, form.eds-mktoForm.mktoForm .mktoButtonWrap .mktoButton.secondary:focus,
+a.button.secondary:focus, .mktoButtonRow.secondary:focus, form.eds-mkto-form.mktoForm .mktoButtonWrap .mktoButton.secondary:focus,
 button.secondary:focus {
   background-color: #f3f9ff;
   border: 2px solid #0F3659;

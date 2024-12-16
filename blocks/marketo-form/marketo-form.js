@@ -13,7 +13,7 @@ export default function decorate(block) {
     const divId = section.innerHTML;
     const idstringValue = divId.split('_')[1];
     const cForm = document.createElement('form');
-    cForm.classList.add('eds-mktoForm');
+    cForm.classList.add('eds-mkto-form');
     cForm.setAttribute('id', divId);
     section.insertAdjacentElement('afterend', cForm);
     setTimeout(() => {

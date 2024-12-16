@@ -6,71 +6,71 @@
   display: none;
 }
 
-form.eds-mktoForm.mktoForm {
+form.eds-mkto-form.mktoForm {
   width: 1275px !important;
   margin: auto;
   padding: 114px 0 112px 0;
 }
 @media (min-width: 1380px) {
-  form.eds-mktoForm.mktoForm {
+  form.eds-mkto-form.mktoForm {
     width: 1275px !important;
     margin: auto;
     padding: 114px 0 112px 0;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
-  form.eds-mktoForm.mktoForm {
+  form.eds-mkto-form.mktoForm {
     width: 1275px !important;
     margin: auto;
     padding: 114px 0 112px 0;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
-  form.eds-mktoForm.mktoForm {
+  form.eds-mkto-form.mktoForm {
     width: 100% !important;
     padding: 67px 20px 105px 20px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
-  form.eds-mktoForm.mktoForm {
+  form.eds-mkto-form.mktoForm {
     width: 100% !important;
     padding: 67px 20px 105px 20px;
   }
 }
 @media (max-width: 480px) {
-  form.eds-mktoForm.mktoForm {
+  form.eds-mkto-form.mktoForm {
     width: 100% !important;
     padding: 67px 20px 105px 20px;
   }
 }
-form.eds-mktoForm.mktoForm .mktoFormRow {
+form.eds-mkto-form.mktoForm .mktoFormRow {
   width: calc(41.6666666667% - 15px);
   display: flex;
   flex-direction: column;
 }
-form.eds-mktoForm.mktoForm .mktoFormRow .mktoOffset {
+form.eds-mkto-form.mktoForm .mktoFormRow .mktoOffset {
   display: none;
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
-  form.eds-mktoForm.mktoForm .mktoFormRow {
+  form.eds-mkto-form.mktoForm .mktoFormRow {
     width: 100% !important;
   }
 }
 @media (max-width: 480px) {
-  form.eds-mktoForm.mktoForm .mktoFormRow {
+  form.eds-mkto-form.mktoForm .mktoFormRow {
     width: 100% !important;
   }
 }
-form.eds-mktoForm.mktoForm .mktoFormRow div:nth-last-child(2) {
+form.eds-mkto-form.mktoForm .mktoFormRow div:nth-last-child(2) {
   margin-bottom: 33px;
 }
-form.eds-mktoForm.mktoForm .mktoFormRow div:first-child {
+form.eds-mkto-form.mktoForm .mktoFormRow div:first-child {
   margin-bottom: 0;
 }
-form.eds-mktoForm.mktoForm .mktoFormRow div div {
+form.eds-mkto-form.mktoForm .mktoFormRow div div {
   width: 100%;
 }
-form.eds-mktoForm.mktoForm .mktoFormRow div div label {
+form.eds-mkto-form.mktoForm .mktoFormRow div div label {
   width: 100% !important;
   font-weight: 500;
   color: #4b4c4d;
@@ -78,10 +78,10 @@ form.eds-mktoForm.mktoForm .mktoFormRow div div label {
   font-size: 16px;
   line-height: 32px;
 }
-form.eds-mktoForm.mktoForm .mktoFormRow div div label .mktoAsterix {
+form.eds-mkto-form.mktoForm .mktoFormRow div div label .mktoAsterix {
   display: none;
 }
-form.eds-mktoForm.mktoForm .mktoFormRow div div input {
+form.eds-mkto-form.mktoForm .mktoFormRow div div input {
   width: 100% !important;
   font-weight: 400;
   color: #4b4c4d;
@@ -90,27 +90,27 @@ form.eds-mktoForm.mktoForm .mktoFormRow div div input {
   line-height: 32px;
   padding: 10px 21px 8px 20px;
 }
-form.eds-mktoForm.mktoForm .mktoFormRow div div select {
+form.eds-mkto-form.mktoForm .mktoFormRow div div select {
   width: 100% !important;
   padding: 9px 133px 9px 20px;
 }
-form.eds-mktoForm.mktoForm .mktoFormRow div div .mktoError {
+form.eds-mkto-form.mktoForm .mktoFormRow div div .mktoError {
   right: 0 !important;
   bottom: 0 !important;
 }
-form.eds-mktoForm.mktoForm .mktoFormRow .mktoRadioList {
+form.eds-mkto-form.mktoForm .mktoFormRow .mktoRadioList {
   width: 100% !important;
   display: flex;
   align-items: center;
 }
-form.eds-mktoForm.mktoForm .mktoFormRow .mktoRadioList input.mktoField {
+form.eds-mkto-form.mktoForm .mktoFormRow .mktoRadioList input.mktoField {
   width: 22px !important;
   height: 22px;
 }
-form.eds-mktoForm.mktoForm .mktoFormRow .mktoRadioList label {
+form.eds-mkto-form.mktoForm .mktoFormRow .mktoRadioList label {
   margin-left: 9px;
 }
-form.eds-mktoForm.mktoForm .mktoButtonRow .mktoButton {
+form.eds-mkto-form.mktoForm .mktoButtonRow .mktoButton {
   height: unset;
   text-shadow: unset;
   box-shadow: unset;
