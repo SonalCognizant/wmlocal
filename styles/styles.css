@@ -344,7 +344,12 @@ a:any-link {
 }
 .section .default-content-wrapper p.button-container a.button {
   font-size: 18px;
+}
+.section .default-content-wrapper p.button-container a.button.primary {
   padding-bottom: 12px;
+}
+.section .default-content-wrapper p.button-container a.button.secondary {
+  padding-bottom: 10px;
 }
 .section .default-content-wrapper p span.icon.icon-green-tick {
   padding-right: 14px;
