@@ -97,12 +97,6 @@
             h2 {
               color: $--blue-550;
               width: 100%;
-              font-family: $--font-museo;
-              font-size: 32px;
-              font-weight: 700;
-              opacity: 1;
-              letter-spacing: 0px;
-              text-align: left;
               margin-top: 0;
               margin-bottom: $--spacing-l;
               @include for-mobile {
@@ -130,6 +124,55 @@
                 }
                 a.button {
                   margin-top: $--spacing-m;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.background-blue-550{
+  &.image-text-overlap-container {
+    .image-text-overlap-wrapper {
+      padding: 0;
+      .image-text-overlap {
+        &.block {
+          &.columns-2-cols {
+            &.block {
+              h2 {
+                color: $--white;
+                width: 100%;
+                margin-top: 0;
+                margin-bottom: $--spacing-l;
+                @include for-mobile {
+                  margin-top: $--spacing-xxl;
+                  margin-bottom: $--spacing-l;
+                }
+              }
+              p {
+                width: 100%;
+                color: $--white;
+                font-family: $--font-roboto;
+                font-size: 16px;
+                font-weight: 400;
+                font-style: normal;
+                letter-spacing: 0px;
+                text-align: left;
+                line-height: 24px;
+                margin-bottom: 20px;
+                margin-top: 0;
+                &.button-container {
+                  margin-top: 0;
+                  margin-bottom: 0;
+                  @include for-nonmobile {
+                    width: max-content;
+                  }
+                  a.button {
+                    margin-top: $--spacing-m;
+                  }
                 }
               }
             }

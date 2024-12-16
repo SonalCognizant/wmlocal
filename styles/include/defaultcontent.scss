@@ -52,6 +52,8 @@
         display: inline-flex;
         padding-bottom: 0;
         padding-right: 26px;
+        width: max-content;
+        margin-bottom: 16px;
         @include for-mobile {
           width: 100%;
           display: inline-block;
@@ -71,9 +73,7 @@
           display: flex;
           &.button{
             font-size: 18px;
-            @include for-mobile {
-              margin-bottom: 16px;
-            }
+            padding-bottom: 12px;
           }
         }
       }
