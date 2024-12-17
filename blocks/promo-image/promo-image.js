@@ -15,6 +15,8 @@ export default function decorate(block) {
   imageWrapperDiv.style.backgroundSize = 'cover';
   imageWrapperDiv.style.backgroundPosition = 'center';
   imageWrapperDiv.style.backgroundRepeat = 'no-repeat';
+  imageWrapperDiv.style.height = '600px';
+  imageWrapperDiv.style.width = '100%';
   const mainHeading = document.createElement('h2');
   mainHeading.classList.add('promo-image-heading');
   mainHeading.textContent = `${title}`;
