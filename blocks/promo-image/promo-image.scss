@@ -6,6 +6,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-image: linear-gradient(
+    180deg, 
+    rgb(75, 76, 77) 0%, 
+    rgba(93, 93, 93, 0.65) 29%, 
+    rgba(115, 115, 115, 0.2) 100%
+    ), url(https://dev1--wmlocal--sonalcognizant.aem.page/images/image-text/image-content-img.png);
     @include for-mobile {
       background-image: linear-gradient(180deg, rgba(75, 76, 77, 1) 0%, rgba(93, 93, 93, 0.65) 29%, rgba(115, 115, 115, 0.2) 100%) !important;
       padding: 0 16px;
