@@ -11,7 +11,11 @@ export default function decorate(block) {
         const picWrapper = pic.closest('div');
         if (picWrapper && picWrapper.children.length === 1) {
           // picture is only content in column
-          picWrapper.classList.add('columns-img-col');
+          const parentofImg = picWrapper.parentElement;
+          const parentDiv = document.createElement('div');
+          parentDiv.classList.add('columns-img-col');
+          parentofImg.append(parentDiv);
+          parentDiv.append(pic);
         }
       }
     });

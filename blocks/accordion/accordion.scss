@@ -9,7 +9,10 @@ main {
     }
 }
 .accordion-wrapper {
-    padding: $--spacing-max $--spacing-xxl;
+    padding: $--spacing-max 0;
+    @include for-large{
+        padding: $--spacing-max $--spacing-xl $--spacing-max $--spacing-xl;
+    }
     @include for-laptop{
         padding: $--spacing-max $--spacing-xl;
     }
@@ -118,9 +121,15 @@ main {
 .eight-column-layout.accordion-container{
     .accordion-wrapper{
         details{
-            width: 66.66%;
+            width: calc(((100% / 12) * 9) - 10px);
+            @include for-large{
+                width: calc(((100% / 12) * 9) - 10px);
+            }
             @include for-laptop{
-                width: 83.33%;
+                width: calc(((100% / 12) * 9) - 60px);
+            }
+            @include for-tablet{
+                width: 100%;
             }
             @include for-mobile{
                 width: 100%;
