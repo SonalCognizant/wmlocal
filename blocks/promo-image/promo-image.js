@@ -10,13 +10,11 @@ export default function decorate(block) {
     180deg, 
     rgb(75, 76, 77) 0%, 
     rgba(93, 93, 93, 0.65) 29%, 
-    rgba(115, 115, 115, 0.2)
+    rgba(115, 115, 115, 0.2) 100%,
   ), url(${backgroundImage})`;
   imageWrapperDiv.style.backgroundSize = 'cover';
   imageWrapperDiv.style.backgroundPosition = 'center';
   imageWrapperDiv.style.backgroundRepeat = 'no-repeat';
-  imageWrapperDiv.style.height = '600px';
-  imageWrapperDiv.style.width = '100%';
   const mainHeading = document.createElement('h2');
   mainHeading.classList.add('promo-image-heading');
   mainHeading.textContent = `${title}`;
