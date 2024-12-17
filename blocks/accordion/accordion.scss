@@ -132,7 +132,7 @@ main {
     max-width: 1275px;
     margin: 0 auto;
     display: flex;
-    gap: 108px;
+    gap: 30px;
     @include for-tablet{
         flex-direction: column;
     }
@@ -141,21 +141,34 @@ main {
     }
     .accordion-wrapper{
         width: 50%;
-        padding: $--spacing-max $--spacing-xxl $--spacing-max 0;
+        padding: $--spacing-max 0 $--spacing-max 0;
         @include for-large{
             padding: $--spacing-max $--spacing-xl $--spacing-max $--spacing-xl;
         }
         @include for-laptop{
-            padding: $--spacing-max $--spacing-xl $--spacing-max $--spacing-xl;
+            padding: $--spacing-max 0 $--spacing-max $--spacing-xl;
         }
         @include for-tablet{
-            width: 90%;
+            padding: $--spacing-jumbo 0;
+            width: calc(100% - 72px);
         }
         @include for-mobile{
-            width: 90%;
+            width: calc(100% - 32px);
+            padding: $--spacing-huge 0;
         }
         .accordion-heading{
-            margin-bottom: 45px;
+            margin-bottom: $--spacing-huge;
+            @include for-tablet{
+                margin-bottom: $--spacing-xxl;
+            }
+            @include for-mobile{
+                margin-bottom: $--spacing-xl;
+            }
+        }
+        &:nth-child(2){
+            @include for-laptop{
+                padding: $--spacing-max 38px $--spacing-max 0;
+            }
         }
     }
 }
