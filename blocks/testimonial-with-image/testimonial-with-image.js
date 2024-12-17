@@ -9,7 +9,6 @@ export default function decorate(block) {
   mainHeading.classList.add('testimonial-heading');
   mainHeading.textContent = title;
   parentElement.prepend(mainHeading);
-  
   // Get the link from the last child
   const lastChildIndex = block.children.length - 1;
   const lastChild = block.children[lastChildIndex];
@@ -30,7 +29,6 @@ export default function decorate(block) {
     linkImg.className = 'link-img';
     linkDiv.append(linkImg);
   }
-  
   parentElement.append(linkDiv);
 
   // Create a static array of children to avoid live collection issues
@@ -61,8 +59,7 @@ export default function decorate(block) {
         if (hTag) {
           hTag.className = 'testimonial-title';
           hTag.parentElement.prepend(imgTag);
-        }
-        else {
+        } else {
           pTag.parentElement.prepend(imgTag);
         }
 
@@ -82,7 +79,6 @@ export default function decorate(block) {
         const imgTag = document.createElement('img');
         imgTag.src = '/icons/quote.svg';
         imgTag.setAttribute('data-icon-name', 'quote');
-        
         const pTag = li.querySelector('p');
         if (pTag) {
           pTag.className = 'testimonial-description';
@@ -92,8 +88,7 @@ export default function decorate(block) {
         if (hTag) {
           hTag.className = 'testimonial-title';
           hTag.parentElement.prepend(imgTag);
-        }
-        else {
+        } else {
           pTag.parentElement.prepend(imgTag);
         }
 
