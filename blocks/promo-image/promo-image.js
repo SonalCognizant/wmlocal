@@ -2,12 +2,11 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function decorate(block) {
   /* change to ul, li */
-  // const backgroundImage = block.children[0].innerText;
+  const backgroundImage = block.children[0].innerText;
   const title = block.children[1].innerText;
   const ul = document.createElement('ul');
   const imageWrapperDiv = block.parentElement;
-  // imageWrapperDiv.style.backgroundImage = `linear-gradient(180deg, rgba(75, 76, 77, 1) 0%,
-  // rgba(93, 93, 93, 0.65) 29%, rgba(115, 115, 115, 0.2) 100%),url(${backgroundImage})`;
+  imageWrapperDiv.style.backgroundImage = `url(${backgroundImage})`;
   imageWrapperDiv.style.backgroundSize = 'cover';
   imageWrapperDiv.style.backgroundPosition = 'center';
   imageWrapperDiv.style.backgroundRepeat = 'no-repeat';
