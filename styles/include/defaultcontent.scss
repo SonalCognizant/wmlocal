@@ -42,7 +42,10 @@
     h3,
     h4 {
       margin: 0;
-      padding-bottom: $--spacing-l;
+      padding-bottom: $--spacing-m;
+      @include for-nonmobile {
+        padding-bottom: $--spacing-l;
+      }
     }
     p {
       margin: 0;
@@ -107,10 +110,11 @@
     }
     ul {
       padding-left: $--spacing-l;
-      padding-bottom: $--spacing-xl;
+      padding-bottom: $--spacing-l;
       margin: 0;
       li{
-        padding-bottom: $--spacing-m;
+        padding-bottom: $--spacing-l;
+        padding-left: 14px;
       }
     }
   }
@@ -154,6 +158,9 @@
         padding: 0 $--spacing-m $--spacing-m $--spacing-m;
         @include for-tablet {
           padding: 0 $--spacing-xl $--spacing-l $--spacing-xl;
+        }
+        @include for-tablet-smallest {
+          padding: 0 $--spacing-xl $--spacing-m $--spacing-xl;
         }
         @include for-laptop {
           padding: 0 $--spacing-xl $--spacing-l $--spacing-xl;

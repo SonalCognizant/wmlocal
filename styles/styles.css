@@ -308,7 +308,15 @@ a:any-link {
 .section .default-content-wrapper h3,
 .section .default-content-wrapper h4 {
   margin: 0;
-  padding-bottom: 24px;
+  padding-bottom: 16px;
+}
+@media (min-width: 480.5px) {
+  .section .default-content-wrapper h1,
+  .section .default-content-wrapper h2,
+  .section .default-content-wrapper h3,
+  .section .default-content-wrapper h4 {
+    padding-bottom: 24px;
+  }
 }
 .section .default-content-wrapper p {
   margin: 0;
@@ -371,11 +379,12 @@ a:any-link {
 }
 .section .default-content-wrapper ul {
   padding-left: 24px;
-  padding-bottom: 36px;
+  padding-bottom: 24px;
   margin: 0;
 }
 .section .default-content-wrapper ul li {
-  padding-bottom: 16px;
+  padding-bottom: 24px;
+  padding-left: 14px;
 }
 .section.body-small .default-content-wrapper {
   padding-top: 0;
@@ -415,6 +424,11 @@ a:any-link {
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .section .display-wrapper .display.block {
     padding: 0 36px 24px 36px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 752.5px) {
+  .section .display-wrapper .display.block {
+    padding: 0 36px 16px 36px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
