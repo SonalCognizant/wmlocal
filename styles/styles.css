@@ -322,6 +322,11 @@ a:any-link {
   margin: 0;
   padding-bottom: 24px;
   width: 100%;
+  font-size: 18px;
+  line-height: 24px;
+  color: #4b4c4d;
+  font-family: roboto, sans-serif;
+  font-weight: 400;
 }
 .section .default-content-wrapper p.button-container {
   display: inline-flex;
