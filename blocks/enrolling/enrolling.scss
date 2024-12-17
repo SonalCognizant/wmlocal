@@ -431,6 +431,11 @@
                   font-size: 24px;
                   vertical-align: middle;
                 }
+                &:has(.icon) {
+                  a {
+                    padding: 0 12px;
+                  }
+                }
               }
               > span > i {
                 font-size: 64px;
@@ -509,6 +514,11 @@
                 span > i {
                   font-size: 24px;
                   vertical-align: middle;
+                }
+                &:has(.icon) {
+                  a {
+                    padding: 0 12px;
+                  }
                 }
               }
               > span > i {
@@ -600,6 +610,11 @@
                 span > i {
                   font-size: 24px;
                   vertical-align: middle;
+                }
+                &:has(.icon) {
+                  a {
+                    padding: 0 12px;
+                  }
                 }
               }
               > span > i {

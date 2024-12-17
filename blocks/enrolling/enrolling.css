@@ -502,6 +502,9 @@
   font-size: 24px;
   vertical-align: middle;
 }
+.enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-1-column > .cards-card-body > p:last-child:has(.icon) a {
+  padding: 0 12px;
+}
 .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-1-column > .cards-card-body > p > span > i {
   font-size: 64px;
 }
@@ -584,6 +587,9 @@
 .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-2-column > .cards-card-body > p:last-child span > i {
   font-size: 24px;
   vertical-align: middle;
+}
+.enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-2-column > .cards-card-body > p:last-child:has(.icon) a {
+  padding: 0 12px;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-2-column > .cards-card-body > p > span > i {
   font-size: 64px;
@@ -683,6 +689,9 @@
 .enrolling-container .enrolling-wrapper > .enrolling > .column-1-variation > .enrolling-1-column > .cards-card-body > p:last-child span > i {
   font-size: 24px;
   vertical-align: middle;
+}
+.enrolling-container .enrolling-wrapper > .enrolling > .column-1-variation > .enrolling-1-column > .cards-card-body > p:last-child:has(.icon) a {
+  padding: 0 12px;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-1-variation > .enrolling-1-column > .cards-card-body > p > span > i {
   font-size: 64px;
