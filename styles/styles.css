@@ -24,7 +24,7 @@
   }
 }
 
-a.button,
+a.button, .mktoButtonRow, form.eds-mkto-form.mktoForm .mktoButtonWrap .mktoButton,
 button {
   box-sizing: border-box;
   max-width: 100%;
@@ -47,19 +47,19 @@ button {
   text-align: center;
   text-wrap: auto;
 }
-a.button.primary,
+a.button.primary, .mktoButtonRow.primary, form.eds-mkto-form.mktoForm .mktoButtonWrap .mktoButton.primary,
 button.primary {
   background-color: #005589;
   color: #ffffff;
   padding: 12px 36px;
   text-decoration: none;
 }
-a.button.primary:hover,
+a.button.primary:hover, .mktoButtonRow.primary:hover, form.eds-mkto-form.mktoForm .mktoButtonWrap .mktoButton.primary:hover,
 button.primary:hover {
   background-color: #0f3659;
   color: #ffffff;
 }
-a.button.primary:focus,
+a.button.primary:focus, .mktoButtonRow.primary:focus, form.eds-mkto-form.mktoForm .mktoButtonWrap .mktoButton.primary:focus,
 button.primary:focus {
   background-color: #0f3659;
   color: #ffffff;
@@ -67,7 +67,7 @@ button.primary:focus {
   outline-style: dashed;
   outline-offset: 2px;
 }
-a.button.secondary,
+a.button.secondary, .mktoButtonRow.secondary, form.eds-mkto-form.mktoForm .mktoButtonWrap .mktoButton.secondary,
 button.secondary {
   background-color: #ffffff;
   border: 2px solid #005589;
@@ -75,13 +75,13 @@ button.secondary {
   padding: 10px 34px;
   text-decoration: none;
 }
-a.button.secondary:hover,
+a.button.secondary:hover, .mktoButtonRow.secondary:hover, form.eds-mkto-form.mktoForm .mktoButtonWrap .mktoButton.secondary:hover,
 button.secondary:hover {
   background-color: #f3f9ff;
   border: 2px solid #0F3659;
   color: #0F3659;
 }
-a.button.secondary:focus,
+a.button.secondary:focus, .mktoButtonRow.secondary:focus, form.eds-mkto-form.mktoForm .mktoButtonWrap .mktoButton.secondary:focus,
 button.secondary:focus {
   background-color: #f3f9ff;
   border: 2px solid #0F3659;
@@ -113,6 +113,34 @@ button.secondary:focus {
   background-color: rgba(255, 255, 255, 0.1882352941);
 }
 .blue-550 .button-container .button.secondary:focus {
+  background-color: rgba(255, 255, 255, 0.1882352941);
+  outline: 3px solid #ffffff;
+  outline-style: dashed;
+  outline-offset: 2px;
+}
+
+.background-blue-550 .button-container .button.primary {
+  background-color: #ffffff;
+  color: #005589;
+}
+.background-blue-550 .button-container .button.primary:hover {
+  color: #0f3659;
+}
+.background-blue-550 .button-container .button.primary:focus {
+  color: #0f3659;
+  outline: 3px solid #ffffff;
+  outline-style: dashed;
+  outline-offset: 2px;
+}
+.background-blue-550 .button-container .button.secondary {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+.background-blue-550 .button-container .button.secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1882352941);
+}
+.background-blue-550 .button-container .button.secondary:focus {
   background-color: rgba(255, 255, 255, 0.1882352941);
   outline: 3px solid #ffffff;
   outline-style: dashed;
@@ -209,6 +237,18 @@ a:any-link {
   background-color: #f3f9ff;
 }
 
+.background-blue-100 {
+  background-color: #d6e5f1;
+}
+
+.background-gray-100 {
+  background-color: #f2f2f3;
+}
+
+.background-blue-550 {
+  background-color: #4a7390;
+}
+
 /* wellmark color start */
 /* wellmark color end */
 /* wellmark spacing size start */
@@ -260,25 +300,45 @@ a:any-link {
   }
 }
 .section .default-content-wrapper h1,
+.section .default-content-wrapper h2 {
+  color: #4a7390;
+}
+.section .default-content-wrapper h1,
 .section .default-content-wrapper h2,
 .section .default-content-wrapper h3,
 .section .default-content-wrapper h4 {
   margin: 0;
-  padding-bottom: 24px;
+  padding-bottom: 16px;
+}
+@media (min-width: 480.5px) {
+  .section .default-content-wrapper h1,
+  .section .default-content-wrapper h2,
+  .section .default-content-wrapper h3,
+  .section .default-content-wrapper h4 {
+    padding-bottom: 24px;
+  }
 }
 .section .default-content-wrapper p {
   margin: 0;
-  padding-bottom: 36px;
+  padding-bottom: 24px;
+  width: 100%;
+  font-size: 18px;
+  line-height: 24px;
+  color: #4b4c4d;
+  font-family: roboto, sans-serif;
+  font-weight: 400;
 }
 .section .default-content-wrapper p.button-container {
   display: inline-flex;
   padding-bottom: 0;
   padding-right: 26px;
+  width: max-content;
+  margin-bottom: 16px;
 }
 @media (max-width: 480px) {
   .section .default-content-wrapper p.button-container {
     width: 100%;
-    display: unset;
+    display: inline-block;
     padding: 0;
   }
 }
@@ -292,22 +352,43 @@ a:any-link {
   letter-spacing: 0px;
   text-align: left;
   line-height: 19px;
+  padding-bottom: 15px;
+  display: flex;
 }
-@media (max-width: 480px) {
-  .section .default-content-wrapper p.button-container a.button {
-    margin-bottom: 16px;
-  }
+.section .default-content-wrapper p.button-container a.button {
+  font-size: 18px;
+}
+.section .default-content-wrapper p.button-container a.button.primary {
+  padding-bottom: 12px;
+}
+.section .default-content-wrapper p.button-container a.button.secondary {
+  padding-bottom: 10px;
 }
 .section .default-content-wrapper p span.icon.icon-green-tick {
   padding-right: 14px;
+  min-width: 24px;
+}
+.section .default-content-wrapper p span.icon.icon-right-arrow {
+  padding-left: 6px;
+  max-width: 15px;
+  max-height: 15px;
+  margin-top: 4px;
+}
+.section .default-content-wrapper p span.icon.icon-linkpdf {
+  padding-left: 6px;
+  max-width: 19px;
+  max-height: 20px;
+}
+.section .default-content-wrapper p:has(.icon) {
+  display: flex;
 }
 .section .default-content-wrapper ul {
   padding-left: 24px;
-  padding-bottom: 36px;
   margin: 0;
 }
 .section .default-content-wrapper ul li {
-  padding-bottom: 16px;
+  padding-bottom: 24px;
+  padding-left: 14px;
 }
 .section.body-small .default-content-wrapper {
   padding-top: 0;
@@ -329,8 +410,9 @@ a:any-link {
     display: unset;
   }
 }
-.section.body-small .default-content-wrapper p.button-container a.button {
+.section.body-small .default-content-wrapper p.button-container a {
   opacity: 1;
+  display: flex;
   color: #005589;
   font-family: roboto, sans-serif;
   font-size: 14px;
@@ -338,6 +420,33 @@ a:any-link {
   letter-spacing: 0px;
   text-align: left;
   text-decoration: underline;
+  line-height: 24px;
+}
+.section .display-wrapper .display.block {
+  padding: 0 16px 16px 16px;
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .section .display-wrapper .display.block {
+    padding: 0 36px 24px 36px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 752.5px) {
+  .section .display-wrapper .display.block {
+    padding: 0 36px 16px 36px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .section .display-wrapper .display.block {
+    padding: 0 36px 24px 36px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .section .display-wrapper .display.block {
+    padding: 0 52px 24px 52px;
+  }
+}
+.section .display-wrapper .display.block p {
+  margin: 0;
 }
 
 /* wellmark color start */

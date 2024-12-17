@@ -1,5 +1,6 @@
 @import '../../styles/include/tokens.scss';
 @import '../../styles/include/mq.scss';
+@import 'breadcrumb.scss';
 
 header {
 	.main-header-wrapper {
@@ -75,6 +76,7 @@ header {
                                     font-weight: 500;
                                     padding-top: 2px;
                                     line-height: 20px;
+                                    color: $--gray-700;
                                 }
                             }
                             .collapse-bar-close{
@@ -102,6 +104,7 @@ header {
                                         font-weight: 500;
                                         padding-top: 4px;
                                         line-height: 14px;
+                                        color: $--gray-700;
                                     }
                                 }
                             }
@@ -126,6 +129,7 @@ header {
                                     font-weight: 500;
                                     padding-top: 2px;
                                     line-height: 20px;
+                                    color: $--gray-700;
                                 }
                             }
                             .collapse-bar-close{
@@ -153,6 +157,7 @@ header {
                                         font-weight: 500;
                                         padding-top: 4px;
                                         line-height: 14px;
+                                        color: $--gray-700;
                                     }
                                 }
                             }
@@ -188,6 +193,7 @@ header {
                             border-bottom: 1px solid $--blue-100;
                             flex-direction: column;
                             align-items: center;
+                            color: $--gray-700;
                             p{
                                 margin: 0;
                                 font-size: 12px;
@@ -203,6 +209,7 @@ header {
                             border-bottom: 1px solid $--blue-100;
                             flex-direction: column;
                             align-items: center;
+                            color: $--gray-700;
                             p{
                                 margin: 0;
                                 font-size: 12px;
@@ -694,6 +701,7 @@ header {
                                                                     img{
                                                                         width: 74px;
                                                                         height: 74px;
+                                                                        border-radius: 4px;
                                                                     }
                                                                 }
                                                                 .button-container{
@@ -796,6 +804,7 @@ header {
                                                                     img{
                                                                         width: 125px;
                                                                         height: 125px;
+                                                                        border-radius: 4px;
                                                                     }
                                                                 }
                                                                 .button-container{
@@ -897,6 +906,7 @@ header {
                                                                     img{
                                                                         width: 125px;
                                                                         height: 125px;
+                                                                        border-radius: 4px;
                                                                     }
                                                                 }
                                                                 .button-container{
