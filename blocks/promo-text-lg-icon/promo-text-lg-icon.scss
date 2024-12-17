@@ -30,18 +30,23 @@
       padding: 0;
       @include for-xlarge {
         padding: 120px 0px;
+        width: calc(66.66% - 10px);
       }
       @include for-large {
         padding: 120px 0px;
+        width: calc(66.66% - 10px);
       }
       @include for-laptop {
         padding: 120px 0px 120px 0px;
+        width: calc(83.33% - 10px);
       }
       @include for-mobile {
         padding: 72px 0;
+        width: 100%;
       }
       @include for-tablet {
         padding: 96px 0;
+        width: 100%;
       }
       > div {
         display: flex;
@@ -49,21 +54,6 @@
         align-items: center;
         position: relative;
         width: 100%;
-        @include for-xlarge {
-          width: calc(66.66% - 10px);
-        }
-        @include for-large {
-          width: calc(66.66% - 10px);
-        }
-        @include for-laptop {
-          width: calc(83.33% - 10px);
-        }
-        @include for-tablet {
-          width: 100%;
-        }
-        @include for-mobile {
-          width: 100%;
-        }
         > .title {
           opacity: 1;
           color: $--white;
