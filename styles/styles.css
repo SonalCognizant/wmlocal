@@ -409,6 +409,27 @@ a:any-link {
   text-decoration: underline;
   line-height: 24px;
 }
+.section .display-wrapper .display.block {
+  padding: 0 16px 16px 16px;
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .section .display-wrapper .display.block {
+    padding: 0 36px 24px 36px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .section .display-wrapper .display.block {
+    padding: 0 36px 24px 36px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .section .display-wrapper .display.block {
+    padding: 0 52px 24px 52px;
+  }
+}
+.section .display-wrapper .display.block p {
+  margin: 0;
+}
 
 /* wellmark color start */
 /* wellmark color end */

@@ -42,18 +42,18 @@
     h3,
     h4 {
       margin: 0;
-      padding-bottom: 24px;
+      padding-bottom: $--spacing-l;
     }
     p {
       margin: 0;
-      padding-bottom: 24px;
+      padding-bottom: $--spacing-l;
       width: 100%;
       &.button-container {
         display: inline-flex;
         padding-bottom: 0;
         padding-right: 26px;
         width: max-content;
-        margin-bottom: 16px;
+        margin-bottom: $--spacing-m;
         @include for-mobile {
           width: 100%;
           display: inline-block;
@@ -74,7 +74,7 @@
           &.button{
             font-size: 18px;
             &.primary{
-              padding-bottom: 12px;
+              padding-bottom: $--spacing-s;
             }
             &.secondary{
               padding-bottom: 10px;
@@ -106,11 +106,11 @@
       display: flex;
     }
     ul {
-      padding-left: 24px;
-      padding-bottom: 36px;
+      padding-left: $--spacing-l;
+      padding-bottom: $--spacing-xl;
       margin: 0;
       li{
-        padding-bottom: 16px;
+        padding-bottom: $--spacing-m;
       }
     }
   }
@@ -144,6 +144,25 @@
             text-decoration: underline;
             line-height: 24px;
           }
+        }
+      }
+    }
+  }
+  .display-wrapper{
+    .display{
+      &.block{
+        padding: 0 $--spacing-m $--spacing-m $--spacing-m;
+        @include for-tablet {
+          padding: 0 $--spacing-xl $--spacing-l $--spacing-xl;
+        }
+        @include for-laptop {
+          padding: 0 $--spacing-xl $--spacing-l $--spacing-xl;
+        }
+        @include for-large {
+          padding: 0 $--spacing-xxl $--spacing-l $--spacing-xxl;
+        }
+        p{
+          margin: 0;
         }
       }
     }
