@@ -68,6 +68,12 @@
             }
             div{
               &:nth-child(2){
+                @include for-large {
+                  max-width: calc((100% - 30px) / 12* 6);
+                }
+                @include for-xlarge {
+                  max-width: calc((100% - 30px) / 12* 6);
+                }
                 @include for-tablet{
                   display: none;
                 }
@@ -98,7 +104,7 @@
             display: flex;
           }
           &.block {
-            h2 {
+            p:first-child {
               color: $--white;
               font-family: $--font-museo;
               font-size: 60px;
@@ -123,7 +129,7 @@
                 margin-bottom: $--spacing-xs;
               }
             }
-            p {
+            p:nth-child(2) {
               color: $--white;
               font-family: $--font-museo;
               font-size: 60px;
@@ -167,7 +173,7 @@
           @include for-laptop{
             gap: unset;
           }
-          h2{
+          p:first-child{
             font-weight: 300;
             @include for-xlarge{
               margin-bottom: $--spacing-m;
@@ -182,7 +188,7 @@
               margin-bottom: $--spacing-m;
             }
           }
-          p:first-child{
+          p:nth-child(2){
             width: 100%;
             font-family: $--font-roboto;
             font-weight: 400;
