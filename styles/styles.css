@@ -216,6 +216,7 @@ h4 {
 body {
   display: none;
   margin: 0;
+  color: #4b4c4d;
   font-family: roboto, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -327,6 +328,8 @@ a:any-link {
   color: #4b4c4d;
   font-family: roboto, sans-serif;
   font-weight: 400;
+  opacity: 1;
+  letter-spacing: 0px;
 }
 .section .default-content-wrapper p.button-container {
   display: inline-flex;
@@ -384,11 +387,23 @@ a:any-link {
 }
 .section .default-content-wrapper ul {
   padding-left: 24px;
+  padding-bottom: 24px;
   margin: 0;
 }
 .section .default-content-wrapper ul li {
-  padding-bottom: 24px;
+  color: #4b4c4d;
+  font-family: roboto, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  opacity: 1;
+  letter-spacing: 0px;
+  text-align: left;
+  padding-bottom: 12px;
   padding-left: 14px;
+}
+.section .default-content-wrapper ul li:last-child {
+  padding-bottom: 0;
 }
 .section.body-small .default-content-wrapper {
   padding-top: 0;
