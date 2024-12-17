@@ -271,7 +271,7 @@ a:any-link {
     padding: 120px 52px;
   }
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379.5px) {
   .section .text-container .text-wrapper {
     padding: 120px 0;
   }
@@ -294,7 +294,7 @@ a:any-link {
     padding: 0 52px 120px 52px;
   }
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379.5px) {
   .section .default-content-wrapper {
     padding: 0 0 120px 0;
   }
@@ -322,6 +322,11 @@ a:any-link {
   margin: 0;
   padding-bottom: 24px;
   width: 100%;
+  font-size: 18px;
+  line-height: 24px;
+  color: #4b4c4d;
+  font-family: roboto, sans-serif;
+  font-weight: 400;
 }
 .section .default-content-wrapper p.button-container {
   display: inline-flex;
@@ -519,7 +524,7 @@ header.megamenu-wrapper {
     height: 161px;
   }
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379.5px) {
   header.megamenu-wrapper {
     height: 161px;
   }
