@@ -21,6 +21,9 @@
     padding: 0 36px;
   }
   > .promo-text-lg-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     > div {
       display: flex;
       flex-direction: column;
@@ -134,15 +137,6 @@
         padding-bottom: 36px;
         z-index: 2;
         width: 100%;
-        @include for-xlarge {
-          width: calc(66.66% - 10px);
-        }
-        @include for-large {
-          width: calc(66.66% - 10px);
-        }
-        @include for-laptop {
-          width: calc(83.33% - 10px);
-        }
         @include for-mobile {
           padding-bottom: 24px;
         }
