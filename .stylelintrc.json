@@ -14,5 +14,6 @@
     "alpha-value-notation": null,
     "value-keyword-case": null,
     "number-max-precision": null
-  }
+  },
+  "ignoreFiles": ["styles/all.min.css"]
 }
