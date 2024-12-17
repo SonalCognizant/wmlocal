@@ -50,13 +50,13 @@
         position: relative;
         width: 100%;
         @include for-xlarge {
-          width: calc(66.66% + 60px);
+          width: calc(66.66% - 10px);
         }
         @include for-large {
-          width: calc(66.66% + 60px);
+          width: calc(66.66% - 10px);
         }
         @include for-laptop {
-          width: calc(100% / 12* 10);
+          width: calc(83.33% - 10px);
         }
         @include for-tablet {
           width: 100%;
@@ -75,13 +75,12 @@
           padding-bottom: 24px;
           margin: 0;
           z-index: 2;
+          width: 100%;
           @include for-tablet {
-            width: 100%;
             font-size: 28px;
           }
           @include for-mobile {
             padding-bottom: 16px;
-            width: 100%;
             font-size: 28px;
           }
         }
