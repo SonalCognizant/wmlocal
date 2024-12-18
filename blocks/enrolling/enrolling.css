@@ -143,6 +143,7 @@
 .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-1-column > .cards-card-body > p {
   margin: 0;
   color: #4b4c4d;
+  text-align: center;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-1-column > .cards-card-body > p > .icon-mobile {
   height: 64px;
@@ -184,8 +185,13 @@
 .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-1-column > .cards-card-body > p > span > i {
   font-size: 64px;
 }
+@media (max-width: 480px) {
+  .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-1-column > .cards-card-body > .button-container {
+    width: unset;
+  }
+}
 .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-1-column > .cards-card-body > .button-container a {
-  padding: 12px 22px;
+  padding: 10px 22px;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-1-column > .cards-card-body > h3 {
   margin: 0;
@@ -243,6 +249,7 @@
 .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-2-column > .cards-card-body > p {
   margin: 0;
   color: #4b4c4d;
+  text-align: center;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-2-column > .cards-card-body > p > .icon-mobile {
   height: 64px;
@@ -284,8 +291,13 @@
 .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-2-column > .cards-card-body > p:last-child:has(.icon) a {
   padding: 0 12px;
 }
+@media (max-width: 480px) {
+  .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-2-column > .cards-card-body > .button-container {
+    width: unset;
+  }
+}
 .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-2-column > .cards-card-body > .button-container a {
-  padding: 12px 22px;
+  padding: 10px 22px;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-2-column > .cards-card-body > h3 {
   margin: 0;
@@ -337,6 +349,7 @@
 .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-3-column > .cards-card-body > p {
   margin: 0;
   color: #4b4c4d;
+  text-align: center;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-3-column > .cards-card-body > p > .icon-mobile {
   height: 64px;
@@ -378,8 +391,13 @@
 .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-3-column > .cards-card-body > p > span > i {
   font-size: 64px;
 }
+@media (max-width: 480px) {
+  .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-3-column > .cards-card-body > .button-container {
+    width: unset;
+  }
+}
 .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-3-column > .cards-card-body > .button-container a {
-  padding: 12px 22px;
+  padding: 10px 22px;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-3-column > .cards-card-body > h3 {
   margin: 0;
@@ -467,6 +485,7 @@
 .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-1-column > .cards-card-body > p {
   margin: 0;
   color: #4b4c4d;
+  text-align: center;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-1-column > .cards-card-body > p > .icon-mobile {
   height: 64px;
@@ -508,8 +527,13 @@
 .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-1-column > .cards-card-body > p > span > i {
   font-size: 64px;
 }
+@media (max-width: 480px) {
+  .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-1-column > .cards-card-body > .button-container {
+    width: unset;
+  }
+}
 .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-1-column > .cards-card-body > .button-container a {
-  padding: 12px 22px;
+  padding: 10px 22px;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-1-column > .cards-card-body > h3 {
   margin: 0;
@@ -553,6 +577,7 @@
 .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-2-column > .cards-card-body > p {
   margin: 0;
   color: #4b4c4d;
+  text-align: center;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-2-column > .cards-card-body > p > .icon-mobile {
   height: 64px;
@@ -594,8 +619,13 @@
 .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-2-column > .cards-card-body > p > span > i {
   font-size: 64px;
 }
+@media (max-width: 480px) {
+  .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-2-column > .cards-card-body > .button-container {
+    width: unset;
+  }
+}
 .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-2-column > .cards-card-body > .button-container a {
-  padding: 12px 22px;
+  padding: 10px 22px;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-2-column > .cards-card-body > h3 {
   margin: 0;
@@ -655,6 +685,7 @@
 .enrolling-container .enrolling-wrapper > .enrolling > .column-1-variation > .enrolling-1-column > .cards-card-body > p {
   margin: 0;
   color: #4b4c4d;
+  text-align: center;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-1-variation > .enrolling-1-column > .cards-card-body > p > .icon-mobile {
   height: 64px;
@@ -696,8 +727,13 @@
 .enrolling-container .enrolling-wrapper > .enrolling > .column-1-variation > .enrolling-1-column > .cards-card-body > p > span > i {
   font-size: 64px;
 }
+@media (max-width: 480px) {
+  .enrolling-container .enrolling-wrapper > .enrolling > .column-1-variation > .enrolling-1-column > .cards-card-body > .button-container {
+    width: unset;
+  }
+}
 .enrolling-container .enrolling-wrapper > .enrolling > .column-1-variation > .enrolling-1-column > .cards-card-body > .button-container a {
-  padding: 12px 22px;
+  padding: 10px 22px;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-1-variation > .enrolling-1-column > .cards-card-body > h3 {
   margin: 0;

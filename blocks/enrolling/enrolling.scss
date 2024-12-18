@@ -102,6 +102,7 @@
             > p {
               margin: 0;
               color: $--gray-700;
+              text-align: center;
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -146,8 +147,11 @@
               }
             }
             > .button-container {
+              @include for-mobile {
+                width: unset;
+              }
               a {
-                padding: 12px 22px;
+                padding: 10px 22px;
               }
             }
             > h3 {
@@ -196,6 +200,7 @@
             > p {
               margin: 0;
               color: $--gray-700;
+              text-align: center;
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -240,8 +245,11 @@
               }
             }
             > .button-container {
+              @include for-mobile {
+                width: unset;
+              }
               a {
-                padding: 12px 22px;
+                padding: 10px 22px;
               }
             }
             > h3 {
@@ -284,6 +292,7 @@
             > p {
               margin: 0;
               color: $--gray-700;
+              text-align: center;
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -328,8 +337,11 @@
               }
             }
             > .button-container {
+              @include for-mobile {
+                width: unset;
+              }
               a {
-                padding: 12px 22px;
+                padding: 10px 22px;
               }
             }
             > h3 {
@@ -398,6 +410,7 @@
             > p {
               margin: 0;
               color: $--gray-700;
+              text-align: center;
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -442,8 +455,11 @@
               }
             }
             > .button-container {
+              @include for-mobile {
+                width: unset;
+              }
               a {
-                padding: 12px 22px;
+                padding: 10px 22px;
               }
             }
             > h3 {
@@ -482,6 +498,7 @@
             > p {
               margin: 0;
               color: $--gray-700;
+              text-align: center;
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -526,8 +543,11 @@
               }
             }
             > .button-container {
+              @include for-mobile {
+                width: unset;
+              }
               a {
-                padding: 12px 22px;
+                padding: 10px 22px;
               }
             }
             > h3 {
@@ -578,6 +598,7 @@
             > p {
               margin: 0;
               color: $--gray-700;
+              text-align: center;
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -622,8 +643,11 @@
               }
             }
             > .button-container {
+              @include for-mobile {
+                width: unset;
+              }
               a {
-                padding: 12px 22px;
+                padding: 10px 22px;
               }
             }
             > h3 {
