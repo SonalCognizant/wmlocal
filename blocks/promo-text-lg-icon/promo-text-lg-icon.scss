@@ -5,23 +5,25 @@
   margin: 0;
   opacity: 1;
   background-color: rgba(74, 115, 144, 1);
-  > .promo-text-lg-icon {
+  @include for-xlarge {
     padding: 0 52px;
-    @include for-xlarge {
-      padding: 0 52px;
-    }
-    @include for-large {
-      padding: 0 52px;
-    }
-    @include for-laptop {
-      padding: 0 36px;
-    }
-    @include for-mobile {
-      padding: 0 16px;
-    }
-    @include for-tablet {
-      padding: 0 36px;
-    }
+  }
+  @include for-large {
+    padding: 0 52px;
+  }
+  @include for-laptop {
+    padding: 0 36px;
+  }
+  @include for-mobile {
+    padding: 0 16px;
+  }
+  @include for-tablet {
+    padding: 0 36px;
+  }
+  > .promo-text-lg-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     > div {
       display: flex;
       flex-direction: column;
@@ -31,18 +33,23 @@
       padding: 0;
       @include for-xlarge {
         padding: 120px 0px;
+        width: calc(66.66% - 10px);
       }
       @include for-large {
         padding: 120px 0px;
+        width: calc(66.66% - 10px);
       }
       @include for-laptop {
-        padding: 118px 0px 120px 0px;
+        padding: 120px 0px 120px 0px;
+        width: calc(83.33% - 10px);
       }
       @include for-mobile {
         padding: 72px 0;
+        width: 100%;
       }
       @include for-tablet {
         padding: 96px 0;
+        width: 100%;
       }
       > div {
         display: flex;
@@ -61,21 +68,13 @@
           padding-bottom: 24px;
           margin: 0;
           z-index: 2;
-          @include for-xlarge {
-            width: calc(66.66% + 60px);
-          }
-          @include for-large {
-            width: calc(66.66% + 60px);
-          }
-          @include for-laptop {
-            width: calc(100% / 12* 10);
-          }
+          width: 100%;
           @include for-tablet {
-            width: 100%
+            font-size: 28px;
           }
           @include for-mobile {
             padding-bottom: 16px;
-            width: 100%
+            font-size: 28px;
           }
         }
         > p {
@@ -137,21 +136,9 @@
         margin: 0;
         padding-bottom: 36px;
         z-index: 2;
-        @include for-xlarge {
-          width: calc(66.66% + 60px);
-        }
-        @include for-large {
-          width: calc(66.66% + 60px);
-        }
-        @include for-laptop {
-          width: calc(100% / 12* 10);
-        }
-        @include for-tablet {
-          width: 100%
-        }
+        width: 100%;
         @include for-mobile {
           padding-bottom: 24px;
-          width: 100%
         }
       }
     }

@@ -391,11 +391,15 @@ function renderMegaMenu(nav) {
   registerbtn.setAttribute('title', 'button');
   registerbtn.classList.add('button', 'secondary');
   const forgetuser = document.createElement('p');
-  forgetuser.classList.add('forget-user');
-  forgetuser.innerHTML = ('Forgot User ID or Email?');
+  const forgetuserlink = document.createElement('a');
+  forgetuserlink.setAttribute('href', '#');
+  forgetuserlink.classList.add('forget-user');
+  forgetuserlink.innerHTML = ('Forgot User ID or Email?');
   const forgetpassword = document.createElement('p');
-  forgetpassword.classList.add('forget-password');
-  forgetpassword.innerHTML = ('Forgot Password?');
+  const forgetpasswordlink = document.createElement('a');
+  forgetpasswordlink.setAttribute('href', '#');
+  forgetpasswordlink.classList.add('forget-password');
+  forgetpasswordlink.innerHTML = ('Forgot Password?');
   // Section login append
   headermenublock.appendChild(sectionblock);
   sectionblock.appendChild(sectionlogin);
@@ -409,7 +413,9 @@ function renderMegaMenu(nav) {
   sectionblock.appendChild(sectionregister);
   sectionregister.appendChild(registerbtn);
   sectionregister.appendChild(forgetuser);
+  forgetuser.appendChild(forgetuserlink);
   sectionregister.appendChild(forgetpassword);
+  forgetpassword.appendChild(forgetpasswordlink);
 }
 
 function generateUrl(dataArray, index) {

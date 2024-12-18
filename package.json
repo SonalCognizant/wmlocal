@@ -36,6 +36,7 @@
     "sass": "^1.59.3",
     "sinon": "15.0.1",
     "stylelint": "15.2.0",
-    "stylelint-config-standard": "30.0.1"
+    "stylelint-config-standard": "30.0.1",
+    "@fortawesome/fontawesome-pro": "^6.7.2"
   }
 }
