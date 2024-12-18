@@ -102,6 +102,7 @@
             > p {
               margin: 0;
               color: $--gray-700;
+              text-align: center;
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -146,13 +147,17 @@
               }
             }
             > .button-container {
+              @include for-mobile {
+                width: unset;
+              }
               a {
-                padding: 12px 22px;
+                padding: 10px 22px;
               }
             }
             > h3 {
               margin: 0;
               padding: 24px 0px 12px 0;
+              line-height: 28px;
               opacity: 1;
               color: $--gray-700;
               font-family: $--font-roboto;
@@ -196,6 +201,7 @@
             > p {
               margin: 0;
               color: $--gray-700;
+              text-align: center;
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -240,13 +246,17 @@
               }
             }
             > .button-container {
+              @include for-mobile {
+                width: unset;
+              }
               a {
-                padding: 12px 22px;
+                padding: 10px 22px;
               }
             }
             > h3 {
               margin: 0;
               padding: 24px 0px 12px 0;
+              line-height: 28px;
               opacity: 1;
               color: $--gray-700;
               font-family: $--font-roboto;
@@ -284,6 +294,7 @@
             > p {
               margin: 0;
               color: $--gray-700;
+              text-align: center;
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -328,13 +339,17 @@
               }
             }
             > .button-container {
+              @include for-mobile {
+                width: unset;
+              }
               a {
-                padding: 12px 22px;
+                padding: 10px 22px;
               }
             }
             > h3 {
               margin: 0;
               padding: 24px 0px 12px 0;
+              line-height: 28px;
               opacity: 1;
               color: $--gray-700;
               font-family: $--font-roboto;
@@ -398,6 +413,7 @@
             > p {
               margin: 0;
               color: $--gray-700;
+              text-align: center;
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -442,8 +458,11 @@
               }
             }
             > .button-container {
+              @include for-mobile {
+                width: unset;
+              }
               a {
-                padding: 12px 22px;
+                padding: 10px 22px;
               }
             }
             > h3 {
@@ -451,6 +470,7 @@
               padding: 24px 0px 12px 0;
               opacity: 1;
               color: $--gray-700;
+              line-height: 28px;
               font-family: $--font-roboto;
               font-size: 24px;
               font-weight: 700;
@@ -482,6 +502,7 @@
             > p {
               margin: 0;
               color: $--gray-700;
+              text-align: center;
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -526,8 +547,11 @@
               }
             }
             > .button-container {
+              @include for-mobile {
+                width: unset;
+              }
               a {
-                padding: 12px 22px;
+                padding: 10px 22px;
               }
             }
             > h3 {
@@ -536,6 +560,7 @@
               opacity: 1;
               color: $--gray-700;
               font-family: $--font-roboto;
+              line-height: 28px;
               font-size: 24px;
               font-weight: 700;
               font-style: Bold;
@@ -578,6 +603,7 @@
             > p {
               margin: 0;
               color: $--gray-700;
+              text-align: center;
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -622,8 +648,11 @@
               }
             }
             > .button-container {
+              @include for-mobile {
+                width: unset;
+              }
               a {
-                padding: 12px 22px;
+                padding: 10px 22px;
               }
             }
             > h3 {
@@ -637,6 +666,7 @@
               font-style: Bold;
               letter-spacing: 0px;
               text-align: center;
+              line-height: 28px;
             }
           }
         }
