@@ -355,6 +355,7 @@ header {
                                         width: 16px;
                                         height: 9px;
                                         margin-left: $--spacing-xs;
+                                        margin-bottom: 3px;
                                     }
                                 }
                                 ~ .header-menu-item{
@@ -378,6 +379,7 @@ header {
                                     text-decoration: none;
                                     padding-bottom: $--spacing-xxs;
                                     height: 19px;
+                                    line-height: 19px;
                                     @include for-mobile{
                                         height: 18px;
                                         line-height: 18px;
@@ -641,11 +643,12 @@ header {
                                         display: flex;
                                         flex-direction: row;
                                         background-color: $--white;
-                                        top: 77px;
+                                        top: 73px;
                                         gap: 30px;
                                         width: calc(100% + 72px);
                                         left: -36px;
                                         box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.2);
+                                        border-top: 2px solid #d6e5f1;
                                         .header-submenu-list {
                                             width: calc((100% + 66px) / 12* 7);
                                             padding-left: $--spacing-xl;
@@ -702,20 +705,17 @@ header {
                                                 .mega-image-text-wrapper{
                                                     .mega-image-text {
                                                         &.block {
-                                                            padding: $--spacing-l 0 $--spacing-l 0;
+                                                            padding-top: $--spacing-l;
                                                             >div {
                                                                 gap: $--spacing-m;
                                                                 align-items: start;
                                                                 display: flex;
                                                             }
                                                             >div{
-                                                                .columns-img-col{
-                                                                    display: contents;
-                                                                    img{
-                                                                        width: 74px;
-                                                                        height: 74px;
-                                                                        border-radius: 4px;
-                                                                    }
+                                                                img{
+                                                                    width: 74px;
+                                                                    height: 74px;
+                                                                    border-radius: 4px;
                                                                 }
                                                                 .button-container{
                                                                     a{
@@ -749,11 +749,12 @@ header {
                                         flex-direction: row;
                                         background-color: $--white;
                                         padding: 0 $--spacing-xxl;
-                                        top: 77px;
+                                        top: 73px;
                                         gap: 30px;
                                         width: 100%;
                                         left: -51px;
                                         box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.2);
+                                        border-top: 2px solid #d6e5f1;
                                         .header-submenu-list {
                                             width: calc((100% + 104px) / 12* 7);
                                             .header-submenu-ul{
@@ -809,20 +810,17 @@ header {
                                                 .mega-image-text-wrapper{
                                                     .mega-image-text {
                                                         &.block {
-                                                            padding: $--spacing-l 0 $--spacing-l 0;
+                                                            padding-top: $--spacing-l;
                                                             >div {
                                                                 gap: $--spacing-m;
                                                                 align-items: start;
                                                                 display: flex;
                                                             }
                                                             >div{
-                                                                .columns-img-col{
-                                                                    display: contents;
-                                                                    img{
-                                                                        width: 125px;
-                                                                        height: 125px;
-                                                                        border-radius: 4px;
-                                                                    }
+                                                                img{
+                                                                    width: 125px;
+                                                                    height: 125px;
+                                                                    border-radius: 4px;
                                                                 }
                                                                 .button-container{
                                                                     a{
@@ -854,13 +852,11 @@ header {
                                         position: absolute;
                                         display: flex;
                                         flex-direction: row;
-                                        background-color: $--white;
-                                        padding: 0 $--spacing-xxl;
-                                        top: 77px;
+                                        margin: 0 $--spacing-xxl;
+                                        top: 73px;
                                         gap: 30px;
                                         width: 100%;
                                         left: -52px;
-                                        box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.2);
                                         .header-submenu-list {
                                             width: calc((100% + 104px) / 12* 7);
                                             .header-submenu-ul{
@@ -904,6 +900,8 @@ header {
                                             width: calc((100% - 104px) / 12* 5);
                                             background: $--blue-50;
                                             padding: $--spacing-xl;
+                                            z-index: -1;
+                                            border-top: 2px solid #d6e5f1;
                                             .mega-image-text-container{
                                                 .default-content-wrapper{
                                                     padding: 0;
@@ -916,20 +914,17 @@ header {
                                                 .mega-image-text-wrapper{
                                                     .mega-image-text {
                                                         &.block {
-                                                            padding: $--spacing-l 0 $--spacing-l 0;
+                                                            padding-top: $--spacing-l;
                                                             >div {
                                                                 gap: $--spacing-m;
                                                                 align-items: start;
                                                                 display: flex;
                                                             }
                                                             >div{
-                                                                .columns-img-col{
-                                                                    display: contents;
-                                                                    img{
-                                                                        width: 125px;
-                                                                        height: 125px;
-                                                                        border-radius: 4px;
-                                                                    }
+                                                                img{
+                                                                    width: 125px;
+                                                                    height: 125px;
+                                                                    border-radius: 4px;
                                                                 }
                                                                 .button-container{
                                                                     a{
@@ -953,6 +948,18 @@ header {
                                                     }
                                                 }
                                             }
+                                        }
+                                        &::after {
+                                            display: block;
+                                            content: "";
+                                            background-color: $--white;
+                                            height: 100%;
+                                            position: absolute;
+                                            width: 100vw;
+                                            z-index: -2;
+                                            left: calc(((100vw - 1275px) /2) * -1);
+                                            box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.2);
+                                            border-top: 2px solid $--blue-100;
                                         }
                                     }
                                 }
@@ -1036,7 +1043,13 @@ header {
                                     }
                                     &.forget-password{
                                         display: inline-block;
-                                        margin-bottom: $--spacing-m;
+                                        margin-bottom: 55px;
+                                        @include for-tablet{
+                                            margin-bottom: 52px;
+                                        }
+                                        @include for-tablet-smallest{
+                                            margin-bottom: 55px;
+                                        }
                                     }
                                 }
                             }

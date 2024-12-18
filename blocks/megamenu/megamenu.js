@@ -210,7 +210,7 @@ function renderMegaMenu(nav) {
       headermenuitem.appendChild(headersubmenulist);
       headersubmenulist.appendChild(headersubmenuul);
       headermenuitem.appendChild(menusubmenucontent);
-      headermenuli.appendChild(headermenuitem);
+      headermenuli.append(headermenuitem);
 
       item.children.forEach((child) => {
         const submenuul = document.createElement('ul');
