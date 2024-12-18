@@ -402,7 +402,7 @@ function decorateButtons(element) {
           up.childNodes.length === 1
           && up.tagName === 'STRONG'
           && twoup.childNodes.length === 1
-          && twoup.tagName === 'P'
+          && (twoup.tagName === 'P' || twoup.tagName === 'DIV')
         ) {
           a.className = 'button primary';
           twoup.classList.add('button-container');
@@ -411,7 +411,7 @@ function decorateButtons(element) {
           up.childNodes.length === 1
           && up.tagName === 'EM'
           && twoup.childNodes.length === 1
-          && twoup.tagName === 'P'
+          && (twoup.tagName === 'P' || twoup.tagName === 'DIV')
         ) {
           a.className = 'button secondary';
           twoup.classList.add('button-container');
@@ -459,7 +459,6 @@ function decorateFontIcon(span, prefix = '') {
   const iconTag = document.createElement('i');
   iconTag.classList.add(`fa-${style}`);
   iconTag.classList.add(`fa-${icon}`);
-  console.log(prefix, iconName, icon, style, 'hello');
   iconTag.dataset.iconName = iconName;
   span.append(iconTag);
 }

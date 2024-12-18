@@ -1,25 +1,33 @@
 export default function decorate(block) {
-  const { parentElement } = block.parentElement;
-  parentElement.classList.add('blue-550');
-  const cols = [...block.firstElementChild.children];
-  block.classList.add(`columns-${cols.length}-cols`);
-  const firstElementDiv = block.firstElementChild;
-  firstElementDiv.classList.add('content-block');
-  // setup image columns
-  [...block.children].forEach((row) => {
-    [...row.children].forEach((col) => {
-      const pic = col.querySelector('picture');
-      if (pic) {
-        const picWrapper = pic.closest('div');
-        if (picWrapper && picWrapper.children.length === 1) {
-          // picture is only content in column
-          const parentofImg = picWrapper.parentElement;
-          const parentDiv = document.createElement('div');
-          parentDiv.classList.add('columns-img-col');
-          parentofImg.append(parentDiv);
-          parentDiv.append(pic);
-        }
-      }
-    });
-  });
+  const image = block.children[0].children[0].children[0].querySelector('img');
+  const titleClass = block.children[1].children[0].querySelector('p');
+  if (titleClass){
+    titleClass.classList.add('title');
+  }
+  const descrClass = block.children[1].children[1].querySelector('p');
+  if (descrClass) {
+    descrClass.classList.add('description');
+  }
+  const mainDiv = document.createElement("div");
+  mainDiv.classList.add('tbnr-maindiv');
+  const textContDiv = document.createElement("div");
+  textContDiv.classList.add('tbnr-textcont');
+  const picDiv = document.createElement("div");
+  picDiv.classList.add('tbnr-pic');
+  const btnDiv = document.createElement("div");
+  btnDiv.classList.add('tbnr-btn');
+  // console.log(block);
+  const buttons = block.children[2].children[0].innerHTML;
+  btnDiv.innerHTML = buttons;
+  picDiv.append(image);
+  if (titleClass) {
+    textContDiv.append(titleClass);
+  }
+  if (descrClass) {
+    textContDiv.append(descrClass);
+  }
+  textContDiv.append(btnDiv);
+  mainDiv.append(textContDiv, picDiv);
+  block.innerHTML = '';
+  block.append(mainDiv);
 }

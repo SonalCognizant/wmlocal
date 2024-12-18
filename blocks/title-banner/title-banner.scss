@@ -15,7 +15,6 @@
   .title-banner-wrapper {
     .title-banner {
       &.block {
-        &.columns-2-cols {
           padding: 50px $--spacing-xxl;
           @include for-xlarge{
             padding: 50px 0 0 0;
@@ -32,182 +31,195 @@
           @include for-mobile{
             padding: $--spacing-xxl $--spacing-m;
           }
-          >div {
+        .tbnr-maindiv {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          @include for-nonmobile {
+            align-items: center;
+            flex-direction: row;
+          }
+          @include for-xlarge {
+            gap: calc(((100% - (11 * 30px)) / 12) + 60px);
+          }
+          @include for-tablet{
+            width: calc((100% * 5) / 6);
+          }
+          .tbnr-textcont {
+            order: 1;
             display: flex;
-            flex-direction: column;
-            gap: 30px;
-            @include for-nonmobile {
-              align-items: center;
-              flex-direction: row;
+            flex-flow: row wrap;
+            @include for-tablet{
+              flex-direction: column;
+            }
+            @include for-laptop {
+              max-width: calc((100% - 30px) / 12 * 6);
+              padding-bottom: $--spacing-jumbo;
+            }
+            @include for-large {
+              max-width: calc((100% - 30px) / 12* 5);
             }
             @include for-xlarge {
-              gap: calc(((100% - (11 * 30px)) / 12) + 60px);
+              max-width: calc((100% - 30px) / 12* 5);
             }
-            @include for-tablet{
-              width: calc((100% * 5) / 6);
+            @include for-nonmobile {
+              flex: 1;
+              order: unset;
+              text-align: left;
+              column-gap: 12px;
             }
-            >div {
-              order: 1;
-              display: flex;
-              flex-flow: row wrap;
-              @include for-laptop {
-                max-width: calc((100% - 30px) / 2);
-              }
-              @include for-large {
-                max-width: calc((100% - 30px) / 12* 5);
-              }
-              @include for-xlarge {
-                max-width: calc((100% - 30px) / 12* 5);
-              }
-              @include for-nonmobile {
-                flex: 1;
-                order: unset;
-                text-align: left;
-                column-gap: 12px;
-              }
-              p {
-                &:first-child {
-                  color: $--white;
-                  font-family: $--font-museo;
+            p {
+              &.title {
+                color: $--white;
+                font-family: $--font-museo;
+                font-size: 60px;
+                line-height: 66px;
+                font-weight: 700;
+                margin-top: 0;
+                margin-bottom: $--spacing-l;
+                @include for-xlarge{
+                  margin-bottom: 0;
+                }
+                @include for-tablet {
                   font-size: 60px;
                   line-height: 66px;
-                  font-weight: 700;
-                  margin-top: 0;
-                  margin-bottom: $--spacing-l;
-                  @include for-xlarge{
-                    margin-bottom: 0;
-                  }
-                  @include for-tablet {
-                    font-size: 60px;
-                    line-height: 66px;
-                    margin-bottom: $--spacing-xs;
-                  }
-                  @include for-mobile {
-                    margin-bottom: $--spacing-xs;
-                    font-size: 40px;
-                    line-height: 48px;
-                  }
-                  @include for-laptop{
-                    margin-bottom: $--spacing-xs;
-                  }
+                  margin-bottom: $--spacing-xs;
                 }
-                &:last-child {
-                  color: $--white;
-                  font-family: $--font-museo;
-                  font-size: 60px;
-                  line-height: 66px;
-                  font-weight: 300;
-                  font-style: normal;
-                  margin-bottom: $--spacing-l;
-                  margin-top: 0;
-                  &.button-container {
-                    margin-top: 0;
-                    margin-bottom: 0;
-                    a.button {
-                      &.primary {
-                        margin-bottom: $--spacing-m;
-                      }
-                    }
-                    @include for-mobile {
-                      width: 100%;
-                      display: unset;
-                    }
-                  }
-                  @include for-mobile{
-                    font-size: 40px;
-                    line-height: 48px;
-                  }
+                @include for-mobile {
+                  margin-bottom: $--spacing-xs;
+                  font-size: 40px;
+                  line-height: 48px;
+                }
+                @include for-laptop{
+                  margin-bottom: $--spacing-xs;
                 }
               }
-            }
-            div{
-              &:nth-child(2){
-                @include for-large {
-                  max-width: calc((100% - 30px) / 12* 6);
-                }
-                @include for-xlarge {
-                  max-width: calc((100% - 30px) / 12* 6);
-                }
-                @include for-tablet{
-                  display: none;
-                }
+              &.description{
+                color: $--white;
+                font-family: $--font-museo;
+                font-size: 60px;
+                line-height: 66px;
+                font-weight: 300;
+                font-style: normal;
+                margin-bottom: $--spacing-l;
+                margin-top: 0;
                 @include for-mobile{
-                  display: none;
-                }
-                >.columns-img-col {
-                  order: 0;
-                  align-self: flex-start;
-                  @include for-xlarge{
-                    min-width: calc((100% - 30px) / 2);
-                  }
-                  @include for-large{
-                    align-self: flex-end;
-                  }
-                  @include for-laptop{
-                    align-self: flex-end;
-                  }
+                  font-size: 40px;
+                  line-height: 48px;
                 }
               }
             }
-            >.columns-col img {
-              display: block;
+            .tbnr-btn{
+              display: flex;
+              .button-container{
+                margin: 0;
+                &:last-child{
+                  margin-left: 12px;
+                }
+              }
+              @include for-mobile{
+                width: 100%;
+                flex-direction: column;
+                .button-container{
+                  &:last-child{
+                    margin: $--spacing-m 0 0 0;
+                  }
+                }
+              }
             }
           }
-          img {
-            width: 100%;
-            display: flex;
+          .tbnr-pic{
+            @include for-laptop{
+              max-width: calc((100% - 30px) / 12* 6);
+              min-height: 446px;
+              img{
+                min-height: 446px;
+              }
+            }
+              @include for-large {
+                max-width: calc((100% - 30px) / 12* 6);
+              }
+              @include for-xlarge {
+                max-width: calc((100% - 30px) / 12* 6);
+              }
+              @include for-tablet{
+                display: none;
+              }
+              @include for-mobile{
+                display: none;
+              }
+              img {
+                order: 0;
+                align-self: flex-start;
+                width: 100%;
+                display: flex;
+                @include for-xlarge{
+                  min-width: calc((100% - 30px) / 2);
+                }
+                @include for-large{
+                  align-self: flex-end;
+                  min-width: calc((100% - 30px) / 2);
+                }
+                @include for-laptop{
+                  align-self: flex-end;
+                }
+              }
           }
         }
       }
     }
   }
 }
-.one-btn-banner.title-banner-container.blue-550{
+.one-btn-banner.title-banner-container{
   .title-banner-wrapper{
-    .block.columns-2-cols{
-      div{
+    .block{
+      @include for-laptop{
+        padding: 67px $--spacing-xl 0 $--spacing-xl;
+      }
+      .tbnr-maindiv{
         @include for-laptop{
           gap: 30px;
         }
-        div{
+        .tbnr-textcont{
           @include for-laptop{
             gap: unset;
           }
-          p:first-child{
-            font-weight: 300;
+          .title{
+            font-weight: 300 !important;
             @include for-xlarge{
-              margin-bottom: $--spacing-m;
+              margin-bottom: $--spacing-m !important;
             }
             @include for-laptop{
-              margin-bottom: $--spacing-m;
+              margin-bottom: $--spacing-m !important;
             }
             @include for-tablet{
-              margin-bottom: $--spacing-m;
+              margin-bottom: $--spacing-m !important;
             }
             @include for-mobile{
-              margin-bottom: $--spacing-m;
+              margin-bottom: $--spacing-m !important;
             }
           }
-          p:nth-child(2){
+          .description{
             width: 100%;
             font-family: $--font-roboto;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 24px;
+            font-weight: 400 !important;
+            font-size: 16px !important;
+            line-height: 24px !important;
             @include for-xlarge{
-              margin-bottom: $--spacing-xl;
+              margin-bottom: $--spacing-xl !important;
             }
             @include for-laptop{
-              margin-bottom: $--spacing-xl;
+              margin-bottom: $--spacing-xl !important;
             }
             @include for-tablet{
-              margin-bottom: $--spacing-xl;
+              margin-bottom: $--spacing-xl !important;
             }
             @include for-mobile{
-              margin-bottom: $--spacing-xl;
+              margin-bottom: $--spacing-xl !important;
             }
           }
-          p.button-container{
+          p{
+            margin: 0;
             @include for-mobile{
               width: unset;
             }
