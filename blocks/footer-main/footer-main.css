@@ -43,15 +43,19 @@
 .footer-main-wrapper .footer-main > .logo-social-div > .social-div {
   display: flex;
   gap: 12px;
+  margin: 0;
 }
 .footer-main-wrapper .footer-main > .logo-social-div > .social-div > p {
   display: flex;
   gap: 12px;
 }
 .footer-main-wrapper .footer-main > .logo-social-div > .social-div > p > a > span {
-  height: 40px;
-  width: 40px;
+  border: 1.5px solid #4d4d4f;
+  height: 20px;
+  width: 20px;
   display: inline-block;
+  padding: 8px;
+  border-radius: 5px;
 }
 .footer-main-wrapper .footer-main > .logo-social-div > .social-div > p > a > span i {
   font-size: 24px;
@@ -240,11 +244,15 @@
 .footer-main-wrapper .footer-main > .attention-div > .social-div > p {
   display: flex;
   gap: 12px;
+  margin: 0;
 }
 .footer-main-wrapper .footer-main > .attention-div > .social-div > p > a > span {
-  height: 40px;
-  width: 40px;
+  border: 1.5px solid #4d4d4f;
+  height: 20px;
+  width: 20px;
   display: inline-block;
+  padding: 8px;
+  border-radius: 5px;
 }
 .footer-main-wrapper .footer-main > .attention-div > .social-div > p > a > span i {
   font-size: 24px;
