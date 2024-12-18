@@ -823,7 +823,7 @@ header .main-header-wrapper .main-header .main-header-menu .header-menu-block .h
     padding-top: 4px;
   }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li:hover .header-menu-item .menu-submenu-content {
-    width: calc((100% - 153px) / 12 * 5);
+    width: calc((100% - 55px) / 12 * 5);
     background: #f3f9ff;
     padding: 36px;
   }
@@ -841,8 +841,6 @@ header .main-header-wrapper .main-header .main-header-menu .header-menu-block .h
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li:hover .header-menu-item .menu-submenu-content .mega-image-text-container .mega-image-text-wrapper .mega-image-text.block > div {
     gap: 16px;
     align-items: start;
-  }
-  header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li:hover .header-menu-item .menu-submenu-content .mega-image-text-container .mega-image-text-wrapper .mega-image-text.block > div {
     display: flex;
   }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li:hover .header-menu-item .menu-submenu-content .mega-image-text-container .mega-image-text-wrapper .mega-image-text.block > div .columns-img-col {
@@ -940,8 +938,6 @@ header .main-header-wrapper .main-header .main-header-menu .header-menu-block .h
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li:hover .header-menu-item .menu-submenu-content .mega-image-text-container .mega-image-text-wrapper .mega-image-text.block > div {
     gap: 16px;
     align-items: start;
-  }
-  header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li:hover .header-menu-item .menu-submenu-content .mega-image-text-container .mega-image-text-wrapper .mega-image-text.block > div {
     display: flex;
   }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li:hover .header-menu-item .menu-submenu-content .mega-image-text-container .mega-image-text-wrapper .mega-image-text.block > div .columns-img-col {
@@ -1039,8 +1035,6 @@ header .main-header-wrapper .main-header .main-header-menu .header-menu-block .h
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li:hover .header-menu-item .menu-submenu-content .mega-image-text-container .mega-image-text-wrapper .mega-image-text.block > div {
     gap: 16px;
     align-items: start;
-  }
-  header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li:hover .header-menu-item .menu-submenu-content .mega-image-text-container .mega-image-text-wrapper .mega-image-text.block > div {
     display: flex;
   }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li:hover .header-menu-item .menu-submenu-content .mega-image-text-container .mega-image-text-wrapper .mega-image-text.block > div .columns-img-col {

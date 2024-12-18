@@ -687,7 +687,7 @@ header {
                                             }
                                         }
                                         .menu-submenu-content {
-                                            width: calc((100% - 153px) / 12* 5);
+                                            width: calc((100% - 55px) / 12* 5);
                                             background: $--blue-50;
                                             padding: $--spacing-xl;
                                             .mega-image-text-container{
@@ -706,9 +706,9 @@ header {
                                                             >div {
                                                                 gap: $--spacing-m;
                                                                 align-items: start;
+                                                                display: flex;
                                                             }
                                                             >div{
-                                                                display: flex;
                                                                 .columns-img-col{
                                                                     display: contents;
                                                                     img{
@@ -813,9 +813,9 @@ header {
                                                             >div {
                                                                 gap: $--spacing-m;
                                                                 align-items: start;
+                                                                display: flex;
                                                             }
                                                             >div{
-                                                                display: flex;
                                                                 .columns-img-col{
                                                                     display: contents;
                                                                     img{
@@ -920,9 +920,9 @@ header {
                                                             >div {
                                                                 gap: $--spacing-m;
                                                                 align-items: start;
+                                                                display: flex;
                                                             }
                                                             >div{
-                                                                display: flex;
                                                                 .columns-img-col{
                                                                     display: contents;
                                                                     img{
