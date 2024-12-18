@@ -377,6 +377,15 @@ header {
                                     color: $--gray-700;
                                     text-decoration: none;
                                     padding-bottom: $--spacing-xxs;
+                                    height: 19px;
+                                    @include for-mobile{
+                                        height: 18px;
+                                        line-height: 18px;
+                                    }
+                                    @include for-tablet{
+                                        height: 18px;
+                                        line-height: 18px;
+                                    }
                                 }
                                 &.menu-active{
                                     a{
@@ -484,6 +493,8 @@ header {
                                                     margin: 0;
                                                     border-bottom: 2px solid $--blue-100;
                                                     padding: $--spacing-m 0 18px 0;
+                                                    font-size: 16px;
+                                                    line-height: 24px;
                                                 }
                                                 li {
                                                     padding: $--spacing-m 0;
@@ -532,6 +543,8 @@ header {
                                                     margin: 0;
                                                     border-bottom: 2px solid $--blue-100;
                                                     padding: $--spacing-m 0 18px 0;
+                                                    font-size: 16px;
+                                                    line-height: 24px;
                                                 }
                                                 li {
                                                     padding: $--spacing-m 0;
@@ -676,8 +689,8 @@ header {
                                         .menu-submenu-content {
                                             width: calc((100% - 153px) / 12* 5);
                                             background: $--blue-50;
-                                            padding: $--spacing-xl $--spacing-huge $--spacing-xl $--spacing-xl;
-                                            .image-text-container{
+                                            padding: $--spacing-xl;
+                                            .mega-image-text-container{
                                                 .default-content-wrapper{
                                                     padding: 0;
                                                     h4{
@@ -686,21 +699,21 @@ header {
                                                         padding-bottom: $--spacing-l;
                                                     }
                                                 }
-                                                .image-text-wrapper{
-                                                    .image-text {
+                                                .mega-image-text-wrapper{
+                                                    .mega-image-text {
                                                         &.block {
-                                                          &.columns-2-cols {
                                                             padding: $--spacing-l 0 $--spacing-l 0;
                                                             >div {
                                                                 gap: $--spacing-m;
                                                                 align-items: start;
                                                             }
                                                             >div{
+                                                                display: flex;
                                                                 .columns-img-col{
                                                                     display: contents;
                                                                     img{
-                                                                        width: 74px;
-                                                                        height: 74px;
+                                                                        width: 125px;
+                                                                        height: 125px;
                                                                         border-radius: 4px;
                                                                     }
                                                                 }
@@ -712,12 +725,16 @@ header {
                                                                     }
                                                                 }
                                                                 p{
-                                                                    font-size: 16px;
                                                                     margin: 0;
-                                                                    padding-right: 18px;
+                                                                    color: $--gray-700;
+                                                                    font-family: $--font-roboto;
+                                                                    font-size: 16px;
+                                                                    font-weight: 400;
+                                                                    letter-spacing: 0px;
+                                                                    text-align: left;
+                                                                    line-height: 24px;
                                                                 }
                                                             }
-                                                          }
                                                         }
                                                     }
                                                 }
@@ -780,7 +797,7 @@ header {
                                             width: calc((100% - 104px) / 12* 5);
                                             background: $--blue-50;
                                             padding: $--spacing-xl;
-                                            .image-text-container{
+                                            .mega-image-text-container{
                                                 .default-content-wrapper{
                                                     padding: 0;
                                                     h4{
@@ -789,16 +806,16 @@ header {
                                                         padding-bottom: $--spacing-l;
                                                     }
                                                 }
-                                                .image-text-wrapper{
-                                                    .image-text {
+                                                .mega-image-text-wrapper{
+                                                    .mega-image-text {
                                                         &.block {
-                                                          &.columns-2-cols {
                                                             padding: $--spacing-l 0 $--spacing-l 0;
                                                             >div {
                                                                 gap: $--spacing-m;
                                                                 align-items: start;
                                                             }
                                                             >div{
+                                                                display: flex;
                                                                 .columns-img-col{
                                                                     display: contents;
                                                                     img{
@@ -815,11 +832,16 @@ header {
                                                                     }
                                                                 }
                                                                 p{
-                                                                    font-size: 16px;
                                                                     margin: 0;
+                                                                    color: $--gray-700;
+                                                                    font-family: $--font-roboto;
+                                                                    font-size: 16px;
+                                                                    font-weight: 400;
+                                                                    letter-spacing: 0px;
+                                                                    text-align: left;
+                                                                    line-height: 24px;
                                                                 }
                                                             }
-                                                          }
                                                         }
                                                     }
                                                 }
@@ -882,7 +904,7 @@ header {
                                             width: calc((100% - 104px) / 12* 5);
                                             background: $--blue-50;
                                             padding: $--spacing-xl;
-                                            .image-text-container{
+                                            .mega-image-text-container{
                                                 .default-content-wrapper{
                                                     padding: 0;
                                                     h4{
@@ -891,16 +913,16 @@ header {
                                                         padding-bottom: $--spacing-l;
                                                     }
                                                 }
-                                                .image-text-wrapper{
-                                                    .image-text {
+                                                .mega-image-text-wrapper{
+                                                    .mega-image-text {
                                                         &.block {
-                                                          &.columns-2-cols {
                                                             padding: $--spacing-l 0 $--spacing-l 0;
                                                             >div {
                                                                 gap: $--spacing-m;
                                                                 align-items: start;
                                                             }
                                                             >div{
+                                                                display: flex;
                                                                 .columns-img-col{
                                                                     display: contents;
                                                                     img{
@@ -917,11 +939,16 @@ header {
                                                                     }
                                                                 }
                                                                 p{
-                                                                    font-size: 16px;
                                                                     margin: 0;
+                                                                    color: $--gray-700;
+                                                                    font-family: $--font-roboto;
+                                                                    font-size: 16px;
+                                                                    font-weight: 400;
+                                                                    letter-spacing: 0px;
+                                                                    text-align: left;
+                                                                    line-height: 24px;
                                                                 }
                                                             }
-                                                          }
                                                         }
                                                     }
                                                 }
@@ -975,7 +1002,7 @@ header {
                             }
                             .input-password{
                                 width: calc(100% - 8px);
-                                margin-bottom: $--spacing-m;
+                                margin-bottom: $--spacing-l;
                                 height: 52px;
                             }
                             a.button.primary, button.primary {
@@ -989,23 +1016,28 @@ header {
                             }
                             a.button.secondary, button.secondary {
                                 width: 100%;
-                                margin-bottom: $--spacing-m;
+                                margin-bottom: $--spacing-l;
                             }
                             p{
-                                font-family: $--font-roboto;
-                                font-size: 16px;
-                                font-weight: 500;
-                                font-style: normal;
-                                letter-spacing: 0px;
-                                text-align: left;
-                                line-height: 24px;
                                 margin: 0;
-                                color: $--white;
-                                &.forget-user{
-                                    padding-bottom: $--spacing-l;  
-                                }
-                                &.forget-password{
-                                    padding-bottom: $--spacing-m;
+                                a{
+                                    font-family: $--font-roboto;
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    font-style: normal;
+                                    letter-spacing: 0px;
+                                    text-align: left;
+                                    line-height: 24px;
+                                    margin: 0;
+                                    color: $--white;
+                                    &.forget-user{
+                                        display: inline-block;
+                                        margin-bottom: $--spacing-l;  
+                                    }
+                                    &.forget-password{
+                                        display: inline-block;
+                                        margin-bottom: $--spacing-m;
+                                    }
                                 }
                             }
                         }
