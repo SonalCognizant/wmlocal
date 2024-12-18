@@ -459,6 +459,7 @@ function decorateFontIcon(span, prefix = '') {
   const iconTag = document.createElement('i');
   iconTag.classList.add(`fa-${style}`);
   iconTag.classList.add(`fa-${icon}`);
+  console.log(prefix, iconName, icon, style, 'hello');
   iconTag.dataset.iconName = iconName;
   span.append(iconTag);
 }
