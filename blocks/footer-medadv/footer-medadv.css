@@ -47,6 +47,7 @@
 .footer-medadv-wrapper .footer-medadv > .logo-social-div > .social-div > p {
   display: flex;
   gap: 12px;
+  margin: 0;
 }
 .footer-medadv-wrapper .footer-medadv > .logo-social-div > .social-div > p > a > span {
   border: 1.5px solid #4d4d4f;
@@ -254,6 +255,7 @@
 .footer-medadv-wrapper .footer-medadv > .attention-div > .social-div > p {
   display: flex;
   gap: 12px;
+  margin: 0;
 }
 .footer-medadv-wrapper .footer-medadv > .attention-div > .social-div > p > a > span {
   border: 1.5px solid #4d4d4f;

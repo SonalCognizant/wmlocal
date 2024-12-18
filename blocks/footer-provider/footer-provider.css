@@ -47,6 +47,7 @@
 .footer-provider-wrapper .footer-provider > .logo-social-div > .social-div > p {
   display: flex;
   gap: 12px;
+  margin: 0;
 }
 .footer-provider-wrapper .footer-provider > .logo-social-div > .social-div > p > a > span {
   border: 1.5px solid #4d4d4f;
