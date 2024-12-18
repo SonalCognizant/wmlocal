@@ -35,9 +35,12 @@
           display: flex;
           gap: 12px;
           > a > span {
-            height: 40px;
-            width: 40px;
+            border: 1.5px solid #4d4d4f;
+            height: 20px;
+            width: 20px;
             display: inline-block;
+            padding: 8px;
+            border-radius: 5px;
             i {
               font-size: 24px;
               color: black;
@@ -140,9 +143,12 @@
           margin: 0;
           padding-top: 36px;
           > a > span {
-            height: 40px;
-            width: 40px;
+            border: 1.5px solid #4d4d4f;
+            height: 20px;
+            width: 20px;
             display: inline-block;
+            padding: 8px;
+            border-radius: 5px;
             i {
               font-size: 24px;
               color: black;
@@ -227,7 +233,7 @@
           @include for-large {
             gap: 0;
           }
-           li {
+          li {
             font-size: 12px;
             @include for-laptop {
               &:first-child {

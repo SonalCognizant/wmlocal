@@ -49,9 +49,12 @@
   gap: 12px;
 }
 .footer-provider-wrapper .footer-provider > .logo-social-div > .social-div > p > a > span {
-  height: 40px;
-  width: 40px;
+  border: 1.5px solid #4d4d4f;
+  height: 20px;
+  width: 20px;
   display: inline-block;
+  padding: 8px;
+  border-radius: 5px;
 }
 .footer-provider-wrapper .footer-provider > .logo-social-div > .social-div > p > a > span i {
   font-size: 24px;
@@ -182,9 +185,12 @@
   padding-top: 36px;
 }
 .footer-provider-wrapper .footer-provider > .wellmarkdrug-div > .social-div > p > a > span {
-  height: 40px;
-  width: 40px;
+  border: 1.5px solid #4d4d4f;
+  height: 20px;
+  width: 20px;
   display: inline-block;
+  padding: 8px;
+  border-radius: 5px;
 }
 .footer-provider-wrapper .footer-provider > .wellmarkdrug-div > .social-div > p > a > span i {
   font-size: 24px;
