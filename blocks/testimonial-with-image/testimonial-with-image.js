@@ -113,7 +113,7 @@ export default function decorate(block) {
   mainHeading.classList.add('testimonial-heading');
   mainHeading.textContent = title;
   parentElement.prepend(mainHeading);
-  
+
   // Get the link from the last child
   const lastChildIndex = block.children.length - 1;
   const lastChild = block.children[lastChildIndex];
@@ -202,7 +202,7 @@ export default function decorate(block) {
       }
     });
   }
-  
+
   // Clear the original block content and append the new list
   block.textContent = '';
   block.append(ul);

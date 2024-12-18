@@ -1,20 +1,20 @@
 export default function decorate(block) {
   const image = block.children[0].children[0].children[0].querySelector('img');
   const titleClass = block.children[1].children[0].querySelector('p');
-  if (titleClass){
+  if (titleClass) {
     titleClass.classList.add('title');
   }
   const descrClass = block.children[1].children[1].querySelector('p');
   if (descrClass) {
     descrClass.classList.add('description');
   }
-  const mainDiv = document.createElement("div");
+  const mainDiv = document.createElement('div');
   mainDiv.classList.add('tbnr-maindiv');
-  const textContDiv = document.createElement("div");
+  const textContDiv = document.createElement('div');
   textContDiv.classList.add('tbnr-textcont');
-  const picDiv = document.createElement("div");
+  const picDiv = document.createElement('div');
   picDiv.classList.add('tbnr-pic');
-  const btnDiv = document.createElement("div");
+  const btnDiv = document.createElement('div');
   btnDiv.classList.add('tbnr-btn');
   // console.log(block);
   const buttons = block.children[2].children[0].innerHTML;
