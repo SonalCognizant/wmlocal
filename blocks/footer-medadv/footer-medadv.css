@@ -62,7 +62,6 @@
   color: black;
   height: 100%;
   width: 100%;
-  border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -270,11 +269,9 @@
   color: black;
   height: 100%;
   width: 100%;
-  border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
 }
 @media (max-width: 480px) {
   .footer-medadv-wrapper .footer-medadv > .attention-div > .social-div {
