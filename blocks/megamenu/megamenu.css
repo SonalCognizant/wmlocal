@@ -1159,13 +1159,3 @@ header .main-header-wrapper .main-header .main-header-menu .header-menu-block .s
   display: inline-block;
   margin-bottom: 55px;
 }
-@media (min-width: 480.5px) and (max-width: 1023.5px) {
-  header .main-header-wrapper .main-header .main-header-menu .header-menu-block .section-block .section-register p a.forget-password {
-    margin-bottom: 52px;
-  }
-}
-@media (min-width: 480.5px) and (max-width: 752.5px) {
-  header .main-header-wrapper .main-header .main-header-menu .header-menu-block .section-block .section-register p a.forget-password {
-    margin-bottom: 55px;
-  }
-}
