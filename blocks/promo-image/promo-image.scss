@@ -1,5 +1,5 @@
-@import '../../styles/include/mq.scss';
-@import '../../styles/include/tokens.scss';
+@import "../../styles/include/mq.scss";
+@import "../../styles/include/tokens.scss";
 .promo-image-container {
   .promo-image-wrapper {
     display: flex;
@@ -7,17 +7,35 @@
     align-items: center;
     flex-direction: column;
     ::before {
-      background-image: linear-gradient(180deg, rgba(75, 76, 77, 1) 0%, rgba(93, 93, 93, 0.65) 29%, rgba(115, 115, 115, 0.2) 100%) !important;
-      content: "hello";
-      height: 200px;
-      width: 200px;
+      background-image: linear-gradient(
+        180deg,
+        rgba(75, 76, 77, 1) 0%,
+        rgba(93, 93, 93, 0.65) 29%,
+        rgba(115, 115, 115, 0.2) 100%
+      ) !important;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
     }
     @include for-mobile {
-      background-image: linear-gradient(180deg, rgba(75, 76, 77, 1) 0%, rgba(93, 93, 93, 0.65) 29%, rgba(115, 115, 115, 0.2) 100%) !important;
+      background-image: linear-gradient(
+        180deg,
+        rgba(75, 76, 77, 1) 0%,
+        rgba(93, 93, 93, 0.65) 29%,
+        rgba(115, 115, 115, 0.2) 100%
+      ) !important;
       padding: 0 16px;
     }
     @include for-tablet {
-      background-image: linear-gradient(180deg, rgba(75, 76, 77, 1) 0%, rgba(93, 93, 93, 0.65) 29%, rgba(115, 115, 115, 0.2) 100%) !important;
+      background-image: linear-gradient(
+        180deg,
+        rgba(75, 76, 77, 1) 0%,
+        rgba(93, 93, 93, 0.65) 29%,
+        rgba(115, 115, 115, 0.2) 100%
+      ) !important;
       padding: 0 36px;
     }
     @include for-xlarge {
@@ -154,11 +172,11 @@
             margin: 0;
             opacity: 1;
             padding: 36px 36px 0 36px;
-            &:last-child{
+            &:last-child {
               padding-top: 16px;
               padding-bottom: 36px;
             }
-            > span{
+            > span {
               width: 100%;
               height: 100%;
               border-bottom: 2px solid $--gray-100;
@@ -205,7 +223,7 @@
         gap: 30px;
         flex-direction: column;
       }
-      
+
       > li {
         background-color: var(--background-color);
         display: flex;
@@ -252,7 +270,7 @@
             margin: 0;
             opacity: 1;
             padding: 36px 36px 0 36px;
-            &:last-child{
+            &:last-child {
               padding-top: 16px;
               @include for-xlarge {
                 padding-bottom: 60px;
@@ -270,7 +288,7 @@
                 padding-bottom: 60px;
               }
             }
-            > span{
+            > span {
               width: 100%;
               height: 100%;
               border-bottom: 2px solid $--gray-100;
@@ -317,7 +335,7 @@
         gap: 30px;
         // flex-wrap: wrap;
       }
-      
+
       > li {
         background-color: var(--background-color);
         align-items: center;
@@ -364,7 +382,7 @@
             margin: 0;
             opacity: 1;
             padding: 36px 36px 0 36px;
-            &:last-child{
+            &:last-child {
               padding-top: 16px;
 
               @include for-xlarge {
@@ -383,7 +401,7 @@
                 padding-bottom: 60px;
               }
             }
-            > span{
+            > span {
               width: 100%;
               height: 100%;
               border-bottom: 2px solid $--gray-100;
