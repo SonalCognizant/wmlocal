@@ -378,14 +378,11 @@ header {
                                     color: $--gray-700;
                                     text-decoration: none;
                                     padding-bottom: $--spacing-xxs;
-                                    height: 19px;
                                     line-height: 19px;
                                     @include for-mobile{
-                                        height: 18px;
                                         line-height: 18px;
                                     }
                                     @include for-tablet{
-                                        height: 18px;
                                         line-height: 18px;
                                     }
                                 }

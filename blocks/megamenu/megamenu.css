@@ -525,18 +525,15 @@ header .main-header-wrapper .main-header .main-header-menu .header-menu-block .h
   color: #4b4c4d;
   text-decoration: none;
   padding-bottom: 4px;
-  height: 19px;
   line-height: 19px;
 }
 @media (max-width: 480px) {
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li .header-menu-link a {
-    height: 18px;
     line-height: 18px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li .header-menu-link a {
-    height: 18px;
     line-height: 18px;
   }
 }
