@@ -379,12 +379,6 @@ header {
                                     text-decoration: none;
                                     padding-bottom: $--spacing-xxs;
                                     line-height: 19px;
-                                    @include for-mobile{
-                                        line-height: 18px;
-                                    }
-                                    @include for-tablet{
-                                        line-height: 18px;
-                                    }
                                 }
                                 &.menu-active{
                                     a{
