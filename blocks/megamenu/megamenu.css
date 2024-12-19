@@ -527,16 +527,6 @@ header .main-header-wrapper .main-header .main-header-menu .header-menu-block .h
   padding-bottom: 4px;
   line-height: 19px;
 }
-@media (max-width: 480px) {
-  header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li .header-menu-link a {
-    line-height: 18px;
-  }
-}
-@media (min-width: 480.5px) and (max-width: 1023.5px) {
-  header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li .header-menu-link a {
-    line-height: 18px;
-  }
-}
 header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li .header-menu-link.menu-active a {
   color: #005589;
   border-bottom: 2px solid #005589;
