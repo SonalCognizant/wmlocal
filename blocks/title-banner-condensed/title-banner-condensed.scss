@@ -34,22 +34,20 @@
               padding: 0 16px;
             }
             .title {
-              &:first-child{
-                color: $--white;
-                font-family: $--font-museo;
-                font-size: 60px;
-                line-height: 66px;
-                font-weight: 300;
-                margin-top: 0;
-                margin-bottom: $--spacing-l;
-                @include for-mobile {
-                  margin-bottom: $--spacing-s;
-                  font-size: 40px;
-                  line-height: 48px;
-                }
-                @include for-tablet {
-                  margin-bottom: $--spacing-s;
-                }
+              color: $--white;
+              font-family: $--font-museo;
+              font-size: 60px;
+              line-height: 66px;
+              font-weight: 300;
+              margin-top: 0;
+              margin-bottom: $--spacing-l;
+              @include for-mobile {
+                margin-bottom: $--spacing-s;
+                font-size: 40px;
+                line-height: 48px;
+              }
+              @include for-tablet {
+                margin-bottom: $--spacing-s;
               }
             }
             .description {
