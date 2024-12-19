@@ -1,4 +1,6 @@
 export default function decorate(block) {
+  const parentEle = block.parentElement.parentElement;
+  parentEle.classList.add('blue-550');
   const image = block.children[0].children[0].children[0].querySelector('img');
   const titleClass = block.children[1].children[0].querySelector('p');
   if (titleClass) {

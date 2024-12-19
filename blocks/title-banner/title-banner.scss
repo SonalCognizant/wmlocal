@@ -1,10 +1,13 @@
 @import '../../styles/include/mq.scss';
 @import '../../styles/include/tokens.scss';
 
-.title-banner-container {
-  background-image: linear-gradient(270deg, rgba(166, 198, 221, 1) 0%, rgba(148, 182, 206, 1) 0%, rgba(73, 115, 144, 1) 100%);
+.title-banner-container.blue-550 {
+  background-image: linear-gradient(180deg, rgba(166, 198, 221, 1) 0%, rgba(148, 182, 206, 1) 0%, rgba(73, 115, 144, 1) 100%);
   @include for-xlarge{
     background-image: linear-gradient(180deg, rgba(166, 198, 221, 1) 0%, rgba(148, 182, 206, 1) 0%, rgba(73, 115, 144, 1) 100%);
+  }
+  @include for-laptop{
+    background-image: linear-gradient(270deg, rgba(166, 198, 221, 1) 0%, rgba(148, 182, 206, 1) 0%, rgba(73, 115, 144, 1) 100%);
   }
   @include for-tablet{
     background: $--blue-550;
@@ -170,30 +173,45 @@
     }
   }
 }
-.one-btn-banner.title-banner-container{
+.one-btn-banner.title-banner-container.blue-550{
+  background-image: linear-gradient(135deg, rgba(214, 229, 241, 1) 0%, rgba(255, 255, 255, 1) 100%);
   .title-banner-wrapper{
     .block{
       @include for-laptop{
         padding: 67px $--spacing-xl 0 $--spacing-xl;
       }
+      @include for-tablet{
+        padding: 74px 0 68px 35px;
+      }
       .tbnr-maindiv{
+        gap: 30px;
         @include for-laptop{
           gap: 30px;
         }
         .tbnr-textcont{
+          @include for-xlarge{
+            max-width: calc((100% - 30px) / 12* 6);
+          }
+          @include for-tablet{
+            width: calc((100% - 30px) / 12* 5);
+          }
           @include for-laptop{
             gap: unset;
           }
           .title{
             font-weight: 300 !important;
+            color: $--gray-700 !important;
             @include for-xlarge{
               margin-bottom: $--spacing-m !important;
+              line-height: 72px !important;
             }
             @include for-laptop{
               margin-bottom: $--spacing-m !important;
+              line-height: 72px !important;
             }
             @include for-tablet{
               margin-bottom: $--spacing-m !important;
+              line-height: 72px !important;
             }
             @include for-mobile{
               margin-bottom: $--spacing-m !important;
@@ -201,10 +219,12 @@
           }
           .description{
             width: 100%;
-            font-family: $--font-roboto;
+            font-family: $--font-roboto !important;
             font-weight: 400 !important;
             font-size: 16px !important;
             line-height: 24px !important;
+            opacity: 1;
+            color: $--gray-700 !important;
             @include for-xlarge{
               margin-bottom: $--spacing-xl !important;
             }
@@ -220,6 +240,11 @@
           }
           p{
             margin: 0;
+            @include for-mobile{
+              width: unset;
+            }
+          }
+          .tbnr-btn{
             @include for-mobile{
               width: unset;
             }
