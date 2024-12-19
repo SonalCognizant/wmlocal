@@ -6,7 +6,7 @@ export default function decorate(block) {
   const title = block.children[1].innerText;
   const ul = document.createElement('ul');
   const imageWrapperDiv = block.parentElement;
-  imageWrapperDiv.style.background = `url(${backgroundImage}) , linear-gradient(to bottom, rgb(75, 76, 77) 0%, rgba(93, 93, 93, 0.65) 29%, rgba(115, 115, 115, 0.2) 100%)`;
+  imageWrapperDiv.style.background = `url(${backgroundImage}) , linear-gradient(to bottom, rgb(75, 76, 77) 0%, rgba(93, 93, 93, 0.65) 29%, rgba(115, 115, 115, 0.2) 100%) !important`;
   // imageWrapperDiv.style.backgroundSize = 'cover';
   // imageWrapperDiv.style.backgroundPosition = 'center';
   // imageWrapperDiv.style.backgroundRepeat = 'no-repeat';
