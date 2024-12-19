@@ -1046,12 +1046,6 @@ header {
                                     &.forget-password{
                                         display: inline-block;
                                         margin-bottom: 55px;
-                                        @include for-tablet{
-                                            margin-bottom: 52px;
-                                        }
-                                        @include for-tablet-smallest{
-                                            margin-bottom: 55px;
-                                        }
                                     }
                                 }
                             }
