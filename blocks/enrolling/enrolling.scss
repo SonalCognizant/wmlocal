@@ -103,8 +103,10 @@
               margin: 0;
               color: $--gray-700;
               text-align: center;
-              span {
-                width: 100%;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
               }
               > .icon-mobile {
                 height: 64px;
@@ -205,8 +207,10 @@
               margin: 0;
               color: $--gray-700;
               text-align: center;
-              span {
-                width: 100%;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
               }
               > .icon-mobile {
                 height: 64px;
@@ -301,8 +305,10 @@
               margin: 0;
               color: $--gray-700;
               text-align: center;
-              span {
-                width: 100%;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
               }
               > .icon-mobile {
                 height: 64px;
@@ -419,13 +425,15 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            span {
-              width: 100%;
-            }
             > p {
               margin: 0;
               color: $--gray-700;
               text-align: center;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
+              }
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -515,8 +523,10 @@
               margin: 0;
               color: $--gray-700;
               text-align: center;
-              span {
-                width: 100%;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
               }
               > .icon-mobile {
                 height: 64px;
@@ -619,8 +629,10 @@
               margin: 0;
               color: $--gray-700;
               text-align: center;
-              span {
-                width: 100%;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
               }
               > .icon-mobile {
                 height: 64px;
