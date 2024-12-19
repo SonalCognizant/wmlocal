@@ -145,6 +145,9 @@
   color: #4b4c4d;
   text-align: center;
 }
+.enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-1-column > .cards-card-body > p span {
+  width: 100%;
+}
 .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-1-column > .cards-card-body > p > .icon-mobile {
   height: 64px;
   width: 64px;
@@ -252,6 +255,9 @@
   color: #4b4c4d;
   text-align: center;
 }
+.enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-2-column > .cards-card-body > p span {
+  width: 100%;
+}
 .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-2-column > .cards-card-body > p > .icon-mobile {
   height: 64px;
   width: 64px;
@@ -352,6 +358,9 @@
   margin: 0;
   color: #4b4c4d;
   text-align: center;
+}
+.enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-3-column > .cards-card-body > p span {
+  width: 100%;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-3-variation > .enrolling-3-column > .cards-card-body > p > .icon-mobile {
   height: 64px;
@@ -485,6 +494,9 @@
   justify-content: center;
   flex-direction: column;
 }
+.enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-1-column > .cards-card-body span {
+  width: 100%;
+}
 .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-1-column > .cards-card-body > p {
   margin: 0;
   color: #4b4c4d;
@@ -582,6 +594,9 @@
   margin: 0;
   color: #4b4c4d;
   text-align: center;
+}
+.enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-2-column > .cards-card-body > p span {
+  width: 100%;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-2-variation > .enrolling-2-column > .cards-card-body > p > .icon-mobile {
   height: 64px;
@@ -691,6 +706,9 @@
   margin: 0;
   color: #4b4c4d;
   text-align: center;
+}
+.enrolling-container .enrolling-wrapper > .enrolling > .column-1-variation > .enrolling-1-column > .cards-card-body > p span {
+  width: 100%;
 }
 .enrolling-container .enrolling-wrapper > .enrolling > .column-1-variation > .enrolling-1-column > .cards-card-body > p > .icon-mobile {
   height: 64px;
