@@ -76,6 +76,7 @@
                   height: 64px;
                   i {
                     font-size: 64px;
+                    color: $--white;
                   }
                 }
                 @include for-mobile {

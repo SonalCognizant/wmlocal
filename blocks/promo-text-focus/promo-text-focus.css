@@ -106,6 +106,7 @@
 }
 .promo-text-focus-container .promo-text-focus-wrapper .promo-text-focus.block .promo-focus-block > div > div h2 span i {
   font-size: 64px;
+  color: #ffffff;
 }
 @media (max-width: 480px) {
   .promo-text-focus-container .promo-text-focus-wrapper .promo-text-focus.block .promo-focus-block > div > div h2 {
