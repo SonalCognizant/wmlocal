@@ -181,7 +181,7 @@
         padding: 67px $--spacing-xl 0 $--spacing-xl;
       }
       @include for-tablet{
-        padding: 74px 0 68px 35px;
+        padding: 74px 36px 68px 35px;
       }
       .tbnr-maindiv{
         gap: 30px;
@@ -193,7 +193,7 @@
             max-width: calc((100% - 30px) / 12* 6);
           }
           @include for-tablet{
-            width: calc((100% - 30px) / 12* 5);
+            min-width: calc(((100% / 6) * 5) - 90px);
           }
           @include for-laptop{
             gap: unset;
@@ -245,6 +245,10 @@
             }
           }
           .tbnr-btn{
+            @include for-tablet{
+              display: unset;
+              width: min-content;
+            }
             @include for-mobile{
               width: unset;
             }

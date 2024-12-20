@@ -237,7 +237,7 @@
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .one-btn-banner.title-banner-container.blue-550 .title-banner-wrapper .block {
-    padding: 74px 0 68px 35px;
+    padding: 74px 36px 68px 35px;
   }
 }
 .one-btn-banner.title-banner-container.blue-550 .title-banner-wrapper .block .tbnr-maindiv {
@@ -255,7 +255,7 @@
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .one-btn-banner.title-banner-container.blue-550 .title-banner-wrapper .block .tbnr-maindiv .tbnr-textcont {
-    width: calc((100% - 30px) / 12 * 5);
+    min-width: calc(83.3333333333% - 90px);
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
@@ -325,6 +325,12 @@
 @media (max-width: 480px) {
   .one-btn-banner.title-banner-container.blue-550 .title-banner-wrapper .block .tbnr-maindiv .tbnr-textcont p {
     width: unset;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .one-btn-banner.title-banner-container.blue-550 .title-banner-wrapper .block .tbnr-maindiv .tbnr-textcont .tbnr-btn {
+    display: unset;
+    width: min-content;
   }
 }
 @media (max-width: 480px) {
