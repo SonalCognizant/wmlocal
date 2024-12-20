@@ -144,6 +144,9 @@
   height: 100%;
   width: 100%;
 }
+.promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > div > p > span i {
+  font-size: 110px;
+}
 .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > .button {
   margin: 0;
   border-radius: 2px;
