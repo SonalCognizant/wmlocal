@@ -113,6 +113,14 @@
                 width: 64px;
                 height: 64px;
               }
+              span {
+                margin-bottom: $--spacing-l;
+                width: 64px;
+                height: 64px;
+                i {
+                  font-size: 64px;
+                }
+              }
               @include for-tablet {
                 font-size: 32px;
               }
