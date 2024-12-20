@@ -15,7 +15,7 @@ import {
   sampleRUM,
 } from './aem.js';
 import { decorateExternalImages } from './externalImage.js';
-import { analyticsMain } from './analytics.js';
+
 /**
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
@@ -77,7 +77,6 @@ export function decorateMain(main) {
   decorateBlocks(main);
   decorateExternalImages(main);
   decorateExternalImages(main, '//External Image//');
-  analyticsMain();
 }
 /**
  * Loads everything needed to get to LCP.

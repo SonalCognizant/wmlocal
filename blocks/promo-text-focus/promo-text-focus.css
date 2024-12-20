@@ -49,6 +49,7 @@
 }
 .promo-text-focus-container .promo-text-focus-wrapper .promo-text-focus.block .promo-focus-block {
   background: #4a7390;
+  border-radius: 0 0 5px 5px;
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .promo-text-focus-container .promo-text-focus-wrapper .promo-text-focus.block .promo-focus-block {
@@ -75,7 +76,7 @@
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .promo-text-focus-container .promo-text-focus-wrapper .promo-text-focus.block .promo-focus-block > div {
-    padding: 72px 36px;
+    padding: 72px 52px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
@@ -90,6 +91,7 @@
 }
 .promo-text-focus-container .promo-text-focus-wrapper .promo-text-focus.block .promo-focus-block > div > div h2 {
   color: #ffffff;
+  width: 100%;
   margin: 0;
 }
 .promo-text-focus-container .promo-text-focus-wrapper .promo-text-focus.block .promo-focus-block > div > div h2 .icon-whitepromoicon {
@@ -97,8 +99,14 @@
   width: 64px;
   height: 64px;
 }
+@media (max-width: 480px) {
+  .promo-text-focus-container .promo-text-focus-wrapper .promo-text-focus.block .promo-focus-block > div > div h2 {
+    font-size: 32px;
+  }
+}
 .promo-text-focus-container .promo-text-focus-wrapper .promo-text-focus.block .promo-focus-block > div > div p {
   color: #ffffff;
+  width: 100%;
   margin: 0;
   margin: 16px 0 24px 0;
 }
@@ -111,9 +119,8 @@
   margin-top: 0;
   margin-bottom: 0;
 }
-@media (max-width: 480px) {
+@media (min-width: 480.5px) {
   .promo-text-focus-container .promo-text-focus-wrapper .promo-text-focus.block .promo-focus-block > div > div p.button-container {
-    width: 100%;
-    display: unset;
+    width: max-content;
   }
 }

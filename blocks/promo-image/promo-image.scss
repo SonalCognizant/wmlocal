@@ -48,7 +48,7 @@
     }
     @include for-xlarge {
       padding-top: 120px;
-      width: calc(50% - 15px);
+      max-width: 623px;
       margin: 0 auto;
     }
     @include for-large {
@@ -101,6 +101,7 @@
         align-items: center;
         display: flex;
         flex-direction: column;
+        border-radius: 4px;
         &:first-child {
           padding-bottom: 6px;
         }
@@ -160,6 +161,9 @@
                 width: 80px;
                 height: 80px;
               }
+              > i {
+                font-size: 80px;
+              }
             }
           }
         }
@@ -200,6 +204,7 @@
         background-color: var(--background-color);
         display: flex;
         flex-direction: column;
+        border-radius: 4px;
         @include for-xlarge {
           width: calc(25% + 10px);
           //   padding: 24px;
@@ -268,6 +273,9 @@
                 width: 80px;
                 height: 80px;
               }
+              > i {
+                font-size: 80px;
+              }
             }
           }
         }
@@ -309,6 +317,7 @@
         align-items: center;
         display: flex;
         flex-direction: column;
+        border-radius: 4px;
         @include for-xlarge {
           width: calc((100% - 104px) / 4);
           //   padding: 24px;
@@ -376,6 +385,9 @@
               > img {
                 width: 80px;
                 height: 80px;
+              }
+              > i {
+                font-size: 80px;
               }
             }
           }

@@ -37,7 +37,7 @@
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols > div {
-    max-width: 83.3333333333%;
+    width: calc(83.3333333333% - 4px);
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
@@ -72,6 +72,31 @@
   .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols > div > div {
     min-width: calc((100% - 30px) / 2);
     width: calc((100% - 30px) / 2);
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols > div > div {
+    max-width: calc((100% - 30px) / 2);
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols > div > div {
+    max-width: calc((100% - 30px) / 12 * 5);
+  }
+}
+@media (min-width: 1380px) {
+  .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols > div > div {
+    max-width: calc((100% - 30px) / 12 * 5);
+  }
+}
+@media (max-width: 480px) {
+  .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols > div div:last-child {
+    display: none;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols > div div:last-child {
+    display: none;
   }
 }
 .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols > div > .columns-img-col {
@@ -112,6 +137,7 @@
 .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols img {
   width: 100%;
   display: flex;
+  border-radius: 5px;
 }
 .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols.block h2 {
   color: #4a7390;
@@ -125,12 +151,17 @@
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols.block h2 {
-    font-size: 28px;
-    line-height: 28px;
+    font-size: 32px;
+  }
+}
+@media (max-width: 480px) {
+  .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols.block h2 {
+    font-size: 32px;
   }
 }
 .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols.block p {
   color: #4b4c4d;
+  width: 100%;
   font-family: roboto, sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -144,12 +175,11 @@
   margin-top: 0;
   margin-bottom: 0;
 }
+@media (min-width: 480.5px) {
+  .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols.block p.button-container {
+    width: max-content;
+  }
+}
 .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols.block p.button-container a.button {
   margin-top: 16px;
-}
-@media (max-width: 480px) {
-  .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols.block p.button-container {
-    width: 100%;
-    display: unset;
-  }
 }

@@ -60,6 +60,9 @@
   }
 
   .promo-no-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @include for-mobile {
       padding: 52px 0px 72px 0px;
     }
@@ -143,6 +146,7 @@
             width: 100%;
             aspect-ratio: 4 / 3;
             object-fit: cover;
+            border-radius: 4px;
           }
         }
 
@@ -235,6 +239,7 @@
             width: 100%;
             aspect-ratio: 4 / 3;
             object-fit: cover;
+            border-radius: 4px;
           }
         }
 
@@ -331,6 +336,7 @@
             width: 100%;
             aspect-ratio: 4 / 3;
             object-fit: cover;
+            border-radius: 4px;
           }
         }
 

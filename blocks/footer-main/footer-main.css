@@ -46,11 +46,27 @@
 }
 .footer-main-wrapper .footer-main > .logo-social-div > .social-div > p {
   display: flex;
-  gap: 11px;
+  gap: 12px;
+  margin: 0;
 }
 .footer-main-wrapper .footer-main > .logo-social-div > .social-div > p > a > span {
-  height: 40px;
-  width: 40px;
+  border: 1.5px solid #4d4d4f;
+  height: 21px;
+  width: 21px;
+  display: inline-block;
+  padding: 8.25px;
+  border-radius: 5px;
+}
+.footer-main-wrapper .footer-main > .logo-social-div > .social-div > p > a > span i {
+  font-size: 24px;
+  color: black;
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
 }
 @media (max-width: 480px) {
   .footer-main-wrapper .footer-main > .logo-social-div > .social-div {
@@ -63,64 +79,70 @@
   }
 }
 .footer-main-wrapper .footer-main > .contact-div {
-  border-bottom: 2px solid #c2c2c3;
   max-width: 1275px;
   margin: auto;
 }
 @media (max-width: 480px) {
   .footer-main-wrapper .footer-main > .contact-div {
-    padding: 36px 20px;
+    padding: 36px 20px 0px 20px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .footer-main-wrapper .footer-main > .contact-div {
-    padding: 36px 36px;
+    padding: 36px 36px 0px 36px;
   }
 }
 @media (min-width: 1380px) {
   .footer-main-wrapper .footer-main > .contact-div {
-    padding: 36px 52px;
+    padding: 36px 52px 0px 52px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .footer-main-wrapper .footer-main > .contact-div {
-    padding: 36px 52px;
+    padding: 36px 52px 0 52px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .footer-main-wrapper .footer-main > .contact-div {
-    padding: 36px 36px;
+    padding: 36px 36px 0 36px;
   }
+}
+.footer-main-wrapper .footer-main > .contact-div > div {
+  padding-bottom: 36px;
+  border-bottom: 2px solid #c2c2c3;
 }
 .footer-main-wrapper .footer-main > .adobe-div {
-  border-bottom: 2px solid #c2c2c3;
   max-width: 1275px;
   margin: auto;
 }
 @media (max-width: 480px) {
   .footer-main-wrapper .footer-main > .adobe-div {
-    padding: 36px 20px;
+    padding: 36px 20px 0px 20px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .footer-main-wrapper .footer-main > .adobe-div {
-    padding: 36px 36px;
+    padding: 36px 36px 0px 36px;
   }
 }
 @media (min-width: 1380px) {
   .footer-main-wrapper .footer-main > .adobe-div {
-    padding: 36px 52px;
+    padding: 36px 52px 0px 52px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .footer-main-wrapper .footer-main > .adobe-div {
-    padding: 36px 52px;
+    padding: 36px 52px 0px 52px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .footer-main-wrapper .footer-main > .adobe-div {
-    padding: 36px 36px;
+    padding: 36px 36px 0px 36px;
   }
+}
+.footer-main-wrapper .footer-main > .adobe-div > div {
+  padding-bottom: 36px;
+  border-bottom: 2px solid #c2c2c3;
 }
 .footer-main-wrapper .footer-main > .language-div {
   max-width: 1275px;
@@ -138,12 +160,12 @@
 }
 @media (min-width: 1380px) {
   .footer-main-wrapper .footer-main > .language-div {
-    padding: 36px 52px 24px 52px;
+    padding: 36px 52px 30px 52px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .footer-main-wrapper .footer-main > .language-div {
-    padding: 36px 52px 24px 52px;
+    padding: 36px 52px 30px 52px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
@@ -221,11 +243,27 @@
 }
 .footer-main-wrapper .footer-main > .attention-div > .social-div > p {
   display: flex;
-  gap: 11px;
+  gap: 12px;
+  margin: 0;
 }
 .footer-main-wrapper .footer-main > .attention-div > .social-div > p > a > span {
-  height: 40px;
-  width: 40px;
+  border: 1.5px solid #4d4d4f;
+  height: 21px;
+  width: 21px;
+  display: inline-block;
+  padding: 8.25px;
+  border-radius: 5px;
+}
+.footer-main-wrapper .footer-main > .attention-div > .social-div > p > a > span i {
+  font-size: 24px;
+  color: black;
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
 }
 @media (max-width: 480px) {
   .footer-main-wrapper .footer-main > .attention-div > .social-div {
@@ -300,21 +338,66 @@
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .footer-main-wrapper .footer-main > .copyright-div > div > ul {
-    gap: 33px;
+    gap: 0;
   }
 }
 @media (min-width: 1380px) {
   .footer-main-wrapper .footer-main > .copyright-div > div > ul {
-    gap: 33px;
+    gap: 0;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .footer-main-wrapper .footer-main > .copyright-div > div > ul {
-    gap: 33px;
+    gap: 0;
   }
 }
-.footer-main-wrapper .footer-main > .copyright-div > div > ul > li {
+.footer-main-wrapper .footer-main > .copyright-div > div > ul li {
   font-size: 12px;
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .footer-main-wrapper .footer-main > .copyright-div > div > ul li:first-child a {
+    padding-left: 0;
+  }
+  .footer-main-wrapper .footer-main > .copyright-div > div > ul li:last-child a {
+    padding-right: 0;
+    border: none;
+  }
+}
+@media (min-width: 1380px) {
+  .footer-main-wrapper .footer-main > .copyright-div > div > ul li:first-child a {
+    padding-left: 0;
+  }
+  .footer-main-wrapper .footer-main > .copyright-div > div > ul li:last-child a {
+    padding-right: 0;
+    border: none;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .footer-main-wrapper .footer-main > .copyright-div > div > ul li:first-child a {
+    padding-left: 0;
+  }
+  .footer-main-wrapper .footer-main > .copyright-div > div > ul li:last-child a {
+    padding-right: 0;
+    border: none;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .footer-main-wrapper .footer-main > .copyright-div > div > ul li > a {
+    padding: 0 16px;
+    border-right: 1px solid #4b4c4d;
+  }
+}
+@media (min-width: 1380px) {
+  .footer-main-wrapper .footer-main > .copyright-div > div > ul li > a {
+    padding: 0 16px;
+    border-right: 1px solid #4b4c4d;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .footer-main-wrapper .footer-main > .copyright-div > div > ul li > a {
+    padding: 0 16px;
+    border-right: 1px solid #4b4c4d;
+  }
 }
 .footer-main-wrapper .footer-main > div > div > ul {
   list-style: none;

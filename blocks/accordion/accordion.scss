@@ -9,7 +9,10 @@ main {
     }
 }
 .accordion-wrapper {
-    padding: $--spacing-max $--spacing-xxl;
+    padding: $--spacing-max 0;
+    @include for-large{
+        padding: $--spacing-max $--spacing-xl $--spacing-max $--spacing-xl;
+    }
     @include for-laptop{
         padding: $--spacing-max $--spacing-xl;
     }
@@ -29,16 +32,18 @@ main {
         margin-bottom: $--spacing-huge;
         @include for-tablet{
             margin-bottom: $--spacing-xxl;
+            font-size: 28px;
         }
         @include for-mobile{
-            margin-bottom: $--spacing-xxl;
+            margin-bottom: $--spacing-xl;
+            font-size: 28px;
         }
     }
 
     .accordion {
         font-family: $--font-roboto;
         details {
-            border-top: 2px solid #dadada;
+            border-top: 2px solid $--gray-225;
             @include for-laptop{
                 width: 100%;
             }
@@ -51,10 +56,12 @@ main {
             p {
                 margin: 0;
                 text-decoration: underline;
+                font-size: 18px;
+                font-weight: 700;
             }
             .accordion-item-body{
                 p{
-                    font-size: $--spacing-m;
+                    font-size: 16px;
                     font-weight: 400;
                     line-height: $--spacing-l;
                     color: $--gray-700;
@@ -82,11 +89,11 @@ main {
                 &::after {
                     content: '';
                     position: absolute;
-                    top: 50%;
+                    top: 40%;
                     right: 18px;
                     transform: translateY(-50%) rotate(135deg);
-                    width: 8px;
-                    height: 8px;
+                    width: 20px;
+                    height: 20px;
                     border: 2px solid;
                     border-width: 2px 2px 0 0;
                     transition: transform 0.2s;
@@ -98,6 +105,7 @@ main {
                     background-color: unset;
                     &::after {
                         transform: translateY(-50%) rotate(-45deg);
+                        top: 60%;
                     }
                 }
 
@@ -113,9 +121,15 @@ main {
 .eight-column-layout.accordion-container{
     .accordion-wrapper{
         details{
-            width: 66.66%;
+            width: calc(((100% / 12) * 9) - 10px);
+            @include for-large{
+                width: calc(((100% / 12) * 9) - 10px);
+            }
             @include for-laptop{
-                width: 83.33%;
+                width: calc(((100% / 12) * 9) - 60px);
+            }
+            @include for-tablet{
+                width: 100%;
             }
             @include for-mobile{
                 width: 100%;
@@ -127,7 +141,7 @@ main {
     max-width: 1275px;
     margin: 0 auto;
     display: flex;
-    gap: $--spacing-l;
+    gap: 30px;
     @include for-tablet{
         flex-direction: column;
     }
@@ -136,11 +150,34 @@ main {
     }
     .accordion-wrapper{
         width: 50%;
+        padding: $--spacing-max 0 $--spacing-max 0;
+        @include for-large{
+            padding: $--spacing-max $--spacing-xl $--spacing-max $--spacing-xl;
+        }
+        @include for-laptop{
+            padding: $--spacing-max 0 $--spacing-max $--spacing-xl;
+        }
         @include for-tablet{
-            width: 90%;
+            padding: $--spacing-jumbo 0;
+            width: calc(100% - 72px);
         }
         @include for-mobile{
-            width: 90%;
+            width: calc(100% - 32px);
+            padding: $--spacing-huge 0;
+        }
+        .accordion-heading{
+            margin-bottom: $--spacing-huge;
+            @include for-tablet{
+                margin-bottom: $--spacing-xxl;
+            }
+            @include for-mobile{
+                margin-bottom: $--spacing-xl;
+            }
+        }
+        &:nth-child(2){
+            @include for-laptop{
+                padding: $--spacing-max 38px $--spacing-max 0;
+            }
         }
     }
 }

@@ -28,18 +28,20 @@
                 padding: 0 $--spacing-m $--spacing-huge $--spacing-m;
               }
               @include for-tablet {
+                max-width: calc(50% - 51px);
                 padding: $--spacing-huge 0 $--spacing-huge $--spacing-xl;
               }
               @include for-laptop {
-                min-width: calc(50% - 51px);
                 max-width: calc(50% - 51px);
                 padding: $--spacing-huge 0 $--spacing-huge $--spacing-xl;
               }
               @include for-large {
                 padding: $--spacing-max 0 $--spacing-max $--spacing-xxl;
+                max-width: calc((100% - 30px) / 12* 5);
               }
               @include for-xlarge {
                 padding: $--spacing-max 0 $--spacing-max 0;
+                max-width: calc((100% - 30px) / 12* 5);
               }
               @include for-nonmobile {
                 flex: 1;
@@ -83,27 +85,18 @@
             display: flex;
             @include for-laptop {
               margin: -27px 0 -28px 0;
-              height: revert-layer;
             }
             @include for-large {
               margin: -68px 0 -70px 0;
-              height: revert-layer;
             }
             @include for-xlarge {
               margin: -68px 0 -70px 0;
-              height: revert-layer;
             }
           }
           &.block {
             h2 {
               color: $--blue-550;
               width: 100%;
-              font-family: $--font-museo;
-              font-size: 32px;
-              font-weight: 700;
-              opacity: 1;
-              letter-spacing: 0px;
-              text-align: left;
               margin-top: 0;
               margin-bottom: $--spacing-l;
               @include for-mobile {
@@ -112,6 +105,7 @@
               }
             }
             p {
+              width: 100%;
               color: $--gray-700;
               font-family: $--font-roboto;
               font-size: 16px;
@@ -120,19 +114,65 @@
               letter-spacing: 0px;
               text-align: left;
               line-height: 24px;
-              margin-bottom: $--spacing-xl;
+              margin-bottom: 20px;
               margin-top: 0;
               &.button-container {
                 margin-top: 0;
                 margin-bottom: 0;
-                a.button {
-                  &.primary {
-                    margin-bottom: 16px;
-                  }
+                @include for-nonmobile {
+                  width: max-content;
                 }
+                a.button {
+                  margin-top: $--spacing-m;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.background-blue-550{
+  &.image-text-overlap-container {
+    .image-text-overlap-wrapper {
+      padding: 0;
+      .image-text-overlap {
+        &.block {
+          &.columns-2-cols {
+            &.block {
+              h2 {
+                color: $--white;
+                width: 100%;
+                margin-top: 0;
+                margin-bottom: $--spacing-l;
                 @include for-mobile {
-                  width: 100%;
-                  display: unset;
+                  margin-top: $--spacing-xxl;
+                  margin-bottom: $--spacing-l;
+                }
+              }
+              p {
+                width: 100%;
+                color: $--white;
+                font-family: $--font-roboto;
+                font-size: 16px;
+                font-weight: 400;
+                font-style: normal;
+                letter-spacing: 0px;
+                text-align: left;
+                line-height: 24px;
+                margin-bottom: 20px;
+                margin-top: 0;
+                &.button-container {
+                  margin-top: 0;
+                  margin-bottom: 0;
+                  @include for-nonmobile {
+                    width: max-content;
+                  }
+                  a.button {
+                    margin-top: $--spacing-m;
+                  }
                 }
               }
             }

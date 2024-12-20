@@ -2,12 +2,10 @@ import { loadFragment } from '../fragment/fragment.js';
 
 const navmenu = JSON.stringify([
   {
-    title: 'Home', path: 'home', href: '#',
+    title: 'Home',
   },
   {
     title: 'Shop',
-    path: 'shop',
-    href: '#',
     children: [
       {
         title: 'Shop plans',
@@ -37,8 +35,6 @@ const navmenu = JSON.stringify([
   },
   {
     title: 'Find care',
-    path: 'find-care',
-    href: '#',
     children: [
       {
         title: 'Find Care',
@@ -68,8 +64,6 @@ const navmenu = JSON.stringify([
   },
   {
     title: 'Members',
-    path: 'member',
-    href: '#',
     children: [
       {
         title: 'Members',
@@ -101,15 +95,13 @@ const navmenu = JSON.stringify([
     ],
   },
   {
-    title: 'Employer', path: 'employer', href: '#',
+    title: 'Employer',
   },
   {
-    title: 'Providers', path: 'providers', href: '#',
+    title: 'Providers',
   },
   {
     title: 'Producers',
-    path: 'producers',
-    href: '#',
   },
 ]);
 
@@ -138,9 +130,18 @@ function toggleSearchBar() {
 // render header content fargment
 async function renderheaderfargment(loadheaderdata) {
   const fragmentcontent = `/content-fragment/header/${loadheaderdata}`;
+  // console.log('check', loadheaderdata);
   const headerpath = await loadFragment(fragmentcontent);
   const headerviewcontent = headerpath?.firstElementChild;
   return headerviewcontent;
+}
+
+function titletransformation(value) {
+  let path;
+  if (value) {
+    path = value.toLowerCase().replace(' ', '-');
+  }
+  return path;
 }
 
 function renderMegaMenu(nav) {
@@ -163,10 +164,10 @@ function renderMegaMenu(nav) {
     headermenulink.className = 'header-menu-link';
     headermenuli.prepend(headermenulink);
     const navbaranchor = document.createElement('a');
-    navbaranchor.setAttribute('href', item.href);
+    navbaranchor.setAttribute('href', '#');
     navbaranchor.innerText = item.title;
     // Active menu
-    headermenuli.addEventListener('click', (e) => {
+    headermenulink.addEventListener('click', (e) => {
       const navbarselect = e.target?.closest('.header-menu-link');
       if (navbarselect?.classList.contains('menu-active')) {
         navbarselect?.classList.remove('menu-active');
@@ -201,18 +202,15 @@ function renderMegaMenu(nav) {
       headermenuitem.className = 'header-menu-item';
       const headersubmenuul = document.createElement('div');
       headersubmenuul.className = 'header-submenu-ul';
-      navbaranchor.appendChild(headermenuitem);
 
       const headersubmenulist = document.createElement('div');
       headersubmenulist.className = 'header-submenu-list';
       const menusubmenucontent = document.createElement('div');
       menusubmenucontent.className = 'menu-submenu-content';
-      // renderheaderfargment().then((res)=>{console.log('test', res)});
-      // menusubmenucontent.append(renderheaderfargment());
       headermenuitem.appendChild(headersubmenulist);
       headersubmenulist.appendChild(headersubmenuul);
       headermenuitem.appendChild(menusubmenucontent);
-      headermenuli.appendChild(headermenuitem);
+      headermenuli.append(headermenuitem);
 
       item.children.forEach((child) => {
         const submenuul = document.createElement('ul');
@@ -237,7 +235,8 @@ function renderMegaMenu(nav) {
         }
       });
       try {
-        renderheaderfargment(item?.path).then((res) => {
+        const titlepath = titletransformation(item?.title);
+        renderheaderfargment(titlepath).then((res) => {
           menusubmenucontent.append(res);
         });
       } catch (error) {
@@ -254,6 +253,8 @@ function renderMegaMenu(nav) {
   headermenublock.append(headermenuul);
 
   // Logo path
+  const headerlogodiv = document.createElement('div');
+  headerlogodiv.classList.add('main-header-logo');
   const headerlogoanchor = document.createElement('a');
   headerlogoanchor.setAttribute('href', '/');
   const logoImg = document.createElement('img');
@@ -261,7 +262,8 @@ function renderMegaMenu(nav) {
   logoImg.setAttribute('title', 'Wellmark Logo');
   logoImg.setAttribute('alt', 'Wellmark Logo');
   logoImg.className = 'navbar-logo';
-  mainheadernav.append(headerlogoanchor);
+  mainheadernav.append(headerlogodiv);
+  headerlogodiv.append(headerlogoanchor);
   headerlogoanchor.append(logoImg);
 
   // Search path
@@ -319,22 +321,31 @@ function renderMegaMenu(nav) {
   setTimeout(() => {
     toggleSearchBar();
   }, 500);
+  const collapsebarmenu = document.createElement('div');
+  collapsebarmenu.classList.add('collapse-bar-menu');
+  const collapsebarclose = document.createElement('div');
+  collapsebarclose.classList.add('collapse-bar-close');
+
   const breadcrumbsicon = document.createElement('img');
   breadcrumbsicon.classList.add('collapse-btn');
   breadcrumbsicon.src = '../../icons/breadcrumbs-icon.svg';
+  breadcrumbsicon.setAttribute('data-toggle', 'modal');
   const collapsemenu = document.createElement('p');
   collapsemenu.classList.add('collapse-menu');
   collapsemenu.innerHTML = ('Menu');
   const collapseclose = document.createElement('img');
   collapseclose.src = '../../icons/close-icon.svg';
+  collapseclose.setAttribute('data-dismiss', 'modal');
   collapseclose.classList.add('close-btn');
   const colclose = document.createElement('p');
   colclose.classList.add('collapse-close');
   colclose.innerHTML = ('Close');
-  collapsediv.prepend(breadcrumbsicon);
-  collapsediv.append(collapsemenu);
-  collapsediv.append(collapseclose);
-  collapsediv.append(colclose);
+  collapsediv.append(collapsebarmenu);
+  collapsebarmenu.prepend(breadcrumbsicon);
+  collapsebarmenu.append(collapsemenu);
+  collapsediv.append(collapsebarclose);
+  collapsebarclose.prepend(collapseclose);
+  collapsebarclose.append(colclose);
 
   const searchicon = document.createElement('img');
   searchicon.classList.add('search-btn');
@@ -380,11 +391,15 @@ function renderMegaMenu(nav) {
   registerbtn.setAttribute('title', 'button');
   registerbtn.classList.add('button', 'secondary');
   const forgetuser = document.createElement('p');
-  forgetuser.classList.add('forget-user');
-  forgetuser.innerHTML = ('Forgot User ID or Email?');
+  const forgetuserlink = document.createElement('a');
+  forgetuserlink.setAttribute('href', '#');
+  forgetuserlink.classList.add('forget-user');
+  forgetuserlink.innerHTML = ('Forgot User ID or Email?');
   const forgetpassword = document.createElement('p');
-  forgetpassword.classList.add('forget-password');
-  forgetpassword.innerHTML = ('Forgot Password?');
+  const forgetpasswordlink = document.createElement('a');
+  forgetpasswordlink.setAttribute('href', '#');
+  forgetpasswordlink.classList.add('forget-password');
+  forgetpasswordlink.innerHTML = ('Forgot Password?');
   // Section login append
   headermenublock.appendChild(sectionblock);
   sectionblock.appendChild(sectionlogin);
@@ -398,9 +413,18 @@ function renderMegaMenu(nav) {
   sectionblock.appendChild(sectionregister);
   sectionregister.appendChild(registerbtn);
   sectionregister.appendChild(forgetuser);
+  forgetuser.appendChild(forgetuserlink);
   sectionregister.appendChild(forgetpassword);
+  forgetpassword.appendChild(forgetpasswordlink);
 }
 
+function generateUrl(dataArray, index) {
+  const locateIndex = index - 1;
+  const dynamicString = dataArray.slice(0, index).join().replaceAll(',', '/');
+  const breadcrumbUrl = window.location.origin.concat('/', dynamicString);
+  const productElement = document.querySelector(`[data-breadcrumb-value=${dataArray[locateIndex]}]`);
+  productElement.setAttribute('href', breadcrumbUrl);
+}
 /**
  * Loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
@@ -414,4 +438,47 @@ export default async function decorate(block) {
   navWrapper.className = 'main-header-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+  // create the breadcrumbs for the page
+  const breadCrumbTag = document.querySelector('meta[name="breadcrumbs"]').content;
+  // if the page has the metadata as like true then loading the breadcrumbs to the page
+  if (breadCrumbTag.toLowerCase() === 'true') {
+    const locationPath = window.location.pathname.split('/');
+    locationPath.shift();
+    // creation of breadcrumb ul
+    const breadCrumbdiv = document.createElement('ul');
+    breadCrumbdiv.classList.add('breadcrumb-ul');
+    const mainTag = document.querySelector('main');
+    mainTag.prepend(breadCrumbdiv);
+    const breadcrumLength = locationPath.length;
+    locationPath.forEach((index) => {
+      // creation of breadcrumbs lists
+      const breadcrumbList = document.createElement('li');
+      breadcrumbList.classList.add('breadcrumb-list');
+      const breadcrumbaTag = document.createElement('a');
+      breadcrumbaTag.textContent = index;
+      breadcrumbaTag.setAttribute('data-breadcrumb-value', index);
+      breadcrumbList.append(breadcrumbaTag);
+      breadCrumbdiv.append(breadcrumbList);
+      // get the image for the breadcrumb
+      const breadcrumbImg = document.createElement('img');
+      breadcrumbImg.src = '/icons/breadcrumb-divider.svg';
+      breadcrumbImg.setAttribute('data-icon-name', 'divider');
+      breadcrumbImg.className = 'divider-img';
+      breadcrumbList.append(breadcrumbImg);
+      // get the image for the breadcrumb
+      const breadcrumbImg2 = document.createElement('img');
+      breadcrumbImg2.src = '/icons/breadcrumb-backarrow.svg';
+      breadcrumbImg2.setAttribute('data-icon-name', 'divider');
+      breadcrumbImg2.className = 'backarrow';
+      breadcrumbList.prepend(breadcrumbImg2);
+    });
+    const breadcrumurlLength = locationPath.length;
+    locationPath.forEach((index, key) => {
+      const indexDepricate = breadcrumurlLength - key;
+      const lastchildUrls = indexDepricate === breadcrumLength;
+      if (!lastchildUrls) {
+        generateUrl(locationPath, indexDepricate);
+      }
+    });
+  }
 }

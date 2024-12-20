@@ -3,8 +3,6 @@
 
 .promo-text-wrapper {
   margin: 0;
-  > .promo-text {
-    padding: 0 52px;
     @include for-xlarge {
       padding: 0 52px;
     }
@@ -20,6 +18,7 @@
     @include for-tablet {
       padding: 0 36px;
     }
+  > .promo-text {
     > div {
       display: flex;
       flex-direction: column;
@@ -28,19 +27,27 @@
       justify-content: center;
       padding: 0;
       @include for-xlarge {
-        padding: 120px 217px;
+        padding: 120px 0px;
+        width: calc(66.66% - 10px);
+        margin: 0 auto;
       }
       @include for-large {
-        padding: 120px 217px;
+        padding: 120px 0px;
+        width: calc(66.66% - 10px);
+        margin: 0 auto;
       }
       @include for-laptop {
-        padding: 118px 81px 120px 81px;
+        padding: 120px 0px 120px 0px;
+        width: calc(83.33% - 10px);
+        margin: 0 auto;
       }
       @include for-mobile {
         padding: 72px 0;
+        width: 100%;
       }
       @include for-tablet {
         padding: 96px 0;
+        width: 100%;
       }
       > .button {
         margin: 0;
@@ -61,8 +68,21 @@
         line-height: 24px;
         margin: 0;
         padding-bottom: 36px;
+        @include for-xlarge {
+          width: 100%;
+        }
+        @include for-large {
+          width: 100%;
+        }
+        @include for-laptop {
+          width: 100%;
+        }
+        @include for-tablet {
+          width: 100%;
+        }
         @include for-mobile {
           padding-bottom: 24px;
+          width: 100%
         }
       }
 
@@ -76,8 +96,23 @@
         text-align: center;
         padding-bottom: 24px;
         margin: 0;
+        @include for-xlarge {
+          width: 100%;
+        }
+        @include for-large {
+          width: 100%;
+        }
+        @include for-laptop {
+          width: 100%;
+        }
+        @include for-tablet {
+          width: 100%;
+          font-size: 28px;
+        }
         @include for-mobile {
           padding-bottom: 16px;
+          width: 100%;
+          font-size: 28px;
         }
       }
     }

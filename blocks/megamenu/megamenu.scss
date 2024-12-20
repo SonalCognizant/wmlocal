@@ -1,5 +1,6 @@
 @import '../../styles/include/tokens.scss';
 @import '../../styles/include/mq.scss';
+@import 'breadcrumb.scss';
 
 header {
 	.main-header-wrapper {
@@ -38,12 +39,10 @@ header {
                         align-items: center;
                     }
                     @include for-mobile {
-                        height: 60px;
-                        box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.2);
+                        height: 59px;
                     }
                     @include for-tablet {
-                        height: 60px;
-                        box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.2);
+                        height: 59px;
                     }
                     img{
                         @include for-mobile {
@@ -57,72 +56,127 @@ header {
                     }
                     .collapse-bar{
                         display: none;
-                        .collapse-btn{
-                            width: 18px;
-                            height: 14px;
-                        }
-                        &.active{
-                            background-color: $--white;
-                            flex-direction: column;
-                            align-items: center;
-                            @include for-mobile {
-                                display: flex;
-                            }
-                            @include for-tablet {
-                                display: flex;
-                            }
-                            .collapse-btn{
-                                display: none;
-                            }
-                            .collapse-menu{
-                                display: none;
-                            }
-                            .close-btn{
-                                display: inline-block;
-                                width: 18px;
-                                height: 18px;
-                            }
-                            .collapse-close{
-                                display: inline-block;
-                            }
-                        }
                         @include for-mobile {
                             display: flex;
                             text-align: left;
-                            padding: $--spacing-s $--spacing-m 9px 17px;
-                            border-right: 1px solid $--blue-100;
-                            flex-direction: column;
-                            align-items: center;
-                            p{
-                                margin: 0;
-                                font-size: 12px;
-                                font-weight: 500;
+                            .collapse-bar-menu{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                padding: 14px 15px 9px 14px;
+                                border-right: 2px solid $--blue-100;
+                                border-bottom: 2px solid $--blue-100;
+                                .collapse-btn{
+                                    width: 18px;
+                                    height: 14px;
+                                }
+                                .collapse-menu {
+                                    margin: 0;
+                                    font-size: 12px;
+                                    font-weight: 500;
+                                    padding-top: 2px;
+                                    line-height: 20px;
+                                    color: $--gray-700;
+                                }
                             }
-                            .close-btn{
+                            .collapse-bar-close{
                                 display: none;
                             }
-                            .collapse-close{
-                                display: none;
+                            &.active{
+                                background-color: $--white;
+                                .collapse-bar-menu{
+                                    display: none;
+                                }
+                                .collapse-bar-close{
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    border-right: 2px solid $--blue-100;
+                                    padding: $--spacing-s 15px 11px 14px;
+                                    .close-btn{
+                                        display: inline-block;
+                                        width: 18px;
+                                        height: 18px;
+                                    }
+                                    .collapse-close {
+                                        margin: 0;
+                                        font-size: 12px;
+                                        font-weight: 500;
+                                        padding-top: 4px;
+                                        line-height: 14px;
+                                        color: $--gray-700;
+                                    }
+                                }
                             }
                         }
                         @include for-tablet {
                             display: flex;
                             text-align: left;
-                            padding: $--spacing-s $--spacing-m 9px 17px;
-                            border-right: 1px solid $--blue-100;
-                            flex-direction: column;
-                            align-items: center;
-                            p{
-                                margin: 0;
-                                font-size: 12px;
-                                font-weight: 500;
+                            .collapse-bar-menu{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                padding: 14px 15px 9px 14px;
+                                border-right: 2px solid $--blue-100;
+                                border-bottom: 2px solid $--blue-100;
+                                .collapse-btn{
+                                    width: 18px;
+                                    height: 14px;
+                                }
+                                .collapse-menu {
+                                    margin: 0;
+                                    font-size: 12px;
+                                    font-weight: 500;
+                                    padding-top: 2px;
+                                    line-height: 20px;
+                                    color: $--gray-700;
+                                }
                             }
-                            .close-btn{
+                            .collapse-bar-close{
                                 display: none;
                             }
-                            .collapse-close{
-                                display: none;
+                            &.active{
+                                background-color: $--white;
+                                .collapse-bar-menu{
+                                    display: none;
+                                }
+                                .collapse-bar-close{
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    border-right: 2px solid $--blue-100;
+                                    padding: $--spacing-s 15px 11px 14px;
+                                    .close-btn{
+                                        display: inline-block;
+                                        width: 18px;
+                                        height: 18px;
+                                    }
+                                    .collapse-close {
+                                        margin: 0;
+                                        font-size: 12px;
+                                        font-weight: 500;
+                                        padding-top: 4px;
+                                        line-height: 14px;
+                                        color: $--gray-700;
+                                    }
+                                }
                             }
+                        }
+                    }
+                    .main-header-logo{
+                        @include for-mobile {
+                            width: 100%;
+                            padding: 14px 0 13px 0;
+                            display: flex;
+                            justify-content: center;
+                            border-bottom: 2px solid $--blue-100;
+                        }
+                        @include for-tablet {
+                            width: 100%;
+                            padding: 14px 0 13px 0;
+                            display: flex;
+                            justify-content: center;
+                            border-bottom: 2px solid $--blue-100;
                         }
                     }
                     .search-bar{
@@ -134,27 +188,33 @@ header {
                         @include for-mobile {
                             display: flex;
                             text-align: left;
-                            padding: 10px $--spacing-m $--spacing-xs 17px;
-                            border-left: 1px solid $--blue-100;
+                            padding: $--spacing-s $--spacing-m 9px 17px;
+                            border-left: 2px solid $--blue-100;
+                            border-bottom: 2px solid $--blue-100;
                             flex-direction: column;
                             align-items: center;
+                            color: $--gray-700;
                             p{
                                 margin: 0;
                                 font-size: 12px;
                                 font-weight: 500;
+                                line-height: 20px;
                             }
                         }
                         @include for-tablet {
                             display: flex;
                             text-align: left;
-                            padding: 10px $--spacing-m $--spacing-xs 17px;
-                            border-left: 1px solid $--blue-100;
+                            padding: $--spacing-s $--spacing-m 9px 17px;
+                            border-left: 2px solid $--blue-100;
+                            border-bottom: 2px solid $--blue-100;
                             flex-direction: column;
                             align-items: center;
+                            color: $--gray-700;
                             p{
                                 margin: 0;
                                 font-size: 12px;
                                 font-weight: 500;
+                                line-height: 20px;
                             }
                         }
                     }
@@ -182,7 +242,7 @@ header {
                                     border-radius: 2px;
                                     border: 2px solid $--blue-100;
                                     background-color: $--white;
-                                    color: #6E6E6E;
+                                    color: $--gray-700;
                                     font-size: 16px;
                                     font-family: $--font-roboto;
                                     font-style: italic;
@@ -232,6 +292,7 @@ header {
                 @include for-mobile {
                     padding: 0;
                     display: none;
+                    box-shadow: none;
                     &.active{
                         display: block;
                     }
@@ -239,6 +300,7 @@ header {
                 @include for-tablet {
                     padding: 0;
                     display: none;
+                    box-shadow: none;
                     &.active{
                         display: block;
                     }
@@ -286,69 +348,42 @@ header {
                                 display: inline-block;
                             }
                             .header-menu-link{
-                                padding: $--spacing-l 0 $--spacing-l 0;
-                                margin-right: $--spacing-xxl;
+                                padding: $--spacing-l $--spacing-xxl $--spacing-l 0;
                                 display:flex;
                                 .header-menu-icon{
                                     img{
                                         width: 16px;
                                         height: 9px;
                                         margin-left: $--spacing-xs;
+                                        margin-bottom: 3px;
                                     }
                                 }
                                 ~ .header-menu-item{
                                     @include for-mobile {
-                                        display: none !important;
+                                        display: none;
                                     }
                                     @include for-tablet {
-                                        display: none !important;
+                                        display: none;
                                     }
                                 }
                                 &.menu-active ~ .header-menu-item{
                                     @include for-mobile {
-                                        display: block !important;
+                                        display: block;
                                     }
                                     @include for-tablet {
-                                        display: block !important;
+                                        display: block;
                                     }
                                 }
                                 a{
                                     color: $--gray-700;
                                     text-decoration: none;
                                     padding-bottom: $--spacing-xxs;
+                                    line-height: 19px;
                                 }
                                 &.menu-active{
                                     a{
                                         color: $--blue-675;
                                         border-bottom: 2px solid $--blue-675; 
-                                    }
-                                    @include for-mobile{
-                                        a{
-                                            color: $--gray-700;
-                                            border-bottom: none;
-                                        }
-                                        .header-menu-icon{
-                                            .menu-up-arrow{
-                                                display: inline-block !important;
-                                            }
-                                            .menu-down-arrow{
-                                                display: none !important;
-                                            }
-                                        }
-                                    }
-                                    @include for-tablet{
-                                        a{
-                                            color: $--gray-700;
-                                            border-bottom: none;
-                                        }
-                                        .header-menu-icon{
-                                            .menu-up-arrow{
-                                                display: inline-block !important;
-                                            }
-                                            .menu-down-arrow{
-                                                display: none !important;
-                                            }
-                                        }
                                     }
                                 }
                                 @include for-mobile{
@@ -363,12 +398,24 @@ header {
                                         }
                                         .menu-down-arrow{
                                             display: inline-block;
+                                            width: 12px;
+                                            height: 7px;
+                                            margin-left: 10px;
+                                            margin-bottom: 3px;
                                         }
                                     }
                                     &.menu-active {
+                                        a{
+                                            color: $--gray-700;
+                                            border-bottom: none;
+                                        }
                                         .header-menu-icon{
                                             .menu-up-arrow{
                                                 display: inline-block;
+                                                width: 12px;
+                                                height: 7px;
+                                                margin-left: 9px;
+                                                margin-bottom: 3px;
                                             }
                                             .menu-down-arrow{
                                                 display: none;
@@ -388,12 +435,24 @@ header {
                                         }
                                         .menu-down-arrow{
                                             display: inline-block;
+                                            width: 12px;
+                                            height: 7px;
+                                            margin-left: 10px;
+                                            margin-bottom: 3px;
                                         }
                                     }
                                     &.menu-active {
+                                        a{
+                                            color: $--gray-700;
+                                            border-bottom: none;
+                                        }
                                         .header-menu-icon{
                                             .menu-up-arrow{
                                                 display: inline-block;
+                                                width: 12px;
+                                                height: 7px;
+                                                margin-left: 9px;
+                                                margin-bottom: 3px;
                                             }
                                             .menu-down-arrow{
                                                 display: none;
@@ -413,7 +472,6 @@ header {
                                         width: 100%;
                                         .header-submenu-ul{
                                             display: flex; 
-                                            gap: $--spacing-xs;
                                             flex-direction: column;
                                             width: 100%;
                                             ul{
@@ -425,8 +483,10 @@ header {
                                                 background: $--blue-50;
                                                 h4{
                                                     margin: 0;
-                                                    border-bottom: 2px solid $--gray-100;
+                                                    border-bottom: 2px solid $--blue-100;
                                                     padding: $--spacing-m 0 18px 0;
+                                                    font-size: 16px;
+                                                    line-height: 24px;
                                                 }
                                                 li {
                                                     padding: $--spacing-m 0;
@@ -461,7 +521,6 @@ header {
                                         width: 100%;
                                         .header-submenu-ul{
                                             display: flex; 
-                                            gap: $--spacing-xs;
                                             flex-direction: column;
                                             width: 100%;
                                             ul{
@@ -473,8 +532,10 @@ header {
                                                 background: $--blue-50;
                                                 h4{
                                                     margin: 0;
-                                                    border-bottom: 2px solid $--gray-100;
+                                                    border-bottom: 2px solid $--blue-100;
                                                     padding: $--spacing-m 0 18px 0;
+                                                    font-size: 16px;
+                                                    line-height: 24px;
                                                 }
                                                 li {
                                                     padding: $--spacing-m 0;
@@ -571,14 +632,15 @@ header {
                                         display: flex;
                                         flex-direction: row;
                                         background-color: $--white;
-                                        padding: 0 $--spacing-xl;
-                                        top: 77px;
+                                        top: 73px;
                                         gap: 30px;
-                                        width: 100%;
-                                        left: -37px;
+                                        width: calc(100% + 72px);
+                                        left: -36px;
                                         box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.2);
+                                        border-top: 2px solid #d6e5f1;
                                         .header-submenu-list {
-                                            width: 58%;
+                                            width: calc((100% + 66px) / 12* 7);
+                                            padding-left: $--spacing-xl;
                                             .header-submenu-ul{
                                                 display: flex; 
                                                 gap: 30px;
@@ -590,7 +652,7 @@ header {
                                                     width: calc((100% - 24px) / 3);
                                                     h4{
                                                         margin: 0;
-                                                        border-bottom: 2px solid $--gray-100;
+                                                        border-bottom: 2px solid #ededee;
                                                         padding-bottom: 24px;
                                                     }
                                                     li {
@@ -617,10 +679,10 @@ header {
                                             }
                                         }
                                         .menu-submenu-content {
-                                            width: 42%;
+                                            width: calc((100% - 55px) / 12* 5);
                                             background: $--blue-50;
                                             padding: $--spacing-xl;
-                                            .image-text-container{
+                                            .mega-image-text-container{
                                                 .default-content-wrapper{
                                                     padding: 0;
                                                     h4{
@@ -629,32 +691,40 @@ header {
                                                         padding-bottom: $--spacing-l;
                                                     }
                                                 }
-                                                .image-text-wrapper{
-                                                    .image-text {
+                                                .mega-image-text-wrapper{
+                                                    .mega-image-text {
                                                         &.block {
-                                                          &.columns-2-cols {
-                                                            padding: $--spacing-l 0 $--spacing-l 0;
+                                                            padding-top: $--spacing-l;
                                                             >div {
                                                                 gap: $--spacing-m;
                                                                 align-items: start;
+                                                                display: flex;
                                                             }
                                                             >div{
-                                                                .columns-img-col{
-                                                                    display: contents;
+                                                                img{
+                                                                    width: 74px;
+                                                                    height: 74px;
+                                                                    border-radius: 4px;
                                                                 }
                                                                 .button-container{
                                                                     a{
                                                                         border: none;
                                                                         padding-bottom: $--spacing-xs;
                                                                         font-size: 16px;
+                                                                        font-weight: 500;
                                                                     }
                                                                 }
                                                                 p{
-                                                                    font-size: 16px;
                                                                     margin: 0;
+                                                                    color: $--gray-700;
+                                                                    font-family: $--font-roboto;
+                                                                    font-size: 16px;
+                                                                    font-weight: 400;
+                                                                    letter-spacing: 0px;
+                                                                    text-align: left;
+                                                                    line-height: 24px;
                                                                 }
                                                             }
-                                                          }
                                                         }
                                                     }
                                                 }
@@ -669,13 +739,14 @@ header {
                                         flex-direction: row;
                                         background-color: $--white;
                                         padding: 0 $--spacing-xxl;
-                                        top: 77px;
+                                        top: 73px;
                                         gap: 30px;
                                         width: 100%;
-                                        left: -51px;
+                                        left: -52px;
                                         box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.2);
+                                        border-top: 2px solid #d6e5f1;
                                         .header-submenu-list {
-                                            width: 58%;
+                                            width: calc((100% + 104px) / 12* 7);
                                             .header-submenu-ul{
                                                 display: flex; 
                                                 gap: 30px;
@@ -687,7 +758,7 @@ header {
                                                     width: calc((100% - 24px) / 3);
                                                     h4{
                                                         margin: 0;
-                                                        border-bottom: 2px solid $--gray-100;
+                                                        border-bottom: 2px solid #ededee;
                                                         padding-bottom: 24px;
                                                     }
                                                     li {
@@ -714,10 +785,10 @@ header {
                                             }
                                         }
                                         .menu-submenu-content {
-                                            width: 42%;
+                                            width: calc((100% - 104px) / 12* 5);
                                             background: $--blue-50;
                                             padding: $--spacing-xl;
-                                            .image-text-container{
+                                            .mega-image-text-container{
                                                 .default-content-wrapper{
                                                     padding: 0;
                                                     h4{
@@ -726,32 +797,40 @@ header {
                                                         padding-bottom: $--spacing-l;
                                                     }
                                                 }
-                                                .image-text-wrapper{
-                                                    .image-text {
+                                                .mega-image-text-wrapper{
+                                                    .mega-image-text {
                                                         &.block {
-                                                          &.columns-2-cols {
-                                                            padding: $--spacing-l 0 $--spacing-l 0;
+                                                            padding-top: $--spacing-l;
                                                             >div {
                                                                 gap: $--spacing-m;
                                                                 align-items: start;
+                                                                display: flex;
                                                             }
                                                             >div{
-                                                                .columns-img-col{
-                                                                    display: contents;
+                                                                img{
+                                                                    width: 125px;
+                                                                    height: 125px;
+                                                                    border-radius: 4px;
                                                                 }
                                                                 .button-container{
                                                                     a{
                                                                         border: none;
                                                                         padding-bottom: $--spacing-xs;
                                                                         font-size: 16px;
+                                                                        font-weight: 500;
                                                                     }
                                                                 }
                                                                 p{
-                                                                    font-size: 16px;
                                                                     margin: 0;
+                                                                    color: $--gray-700;
+                                                                    font-family: $--font-roboto;
+                                                                    font-size: 16px;
+                                                                    font-weight: 400;
+                                                                    letter-spacing: 0px;
+                                                                    text-align: left;
+                                                                    line-height: 24px;
                                                                 }
                                                             }
-                                                          }
                                                         }
                                                     }
                                                 }
@@ -764,15 +843,14 @@ header {
                                         position: absolute;
                                         display: flex;
                                         flex-direction: row;
-                                        background-color: $--white;
-                                        padding: 0 $--spacing-xxl;
-                                        top: 77px;
+                                        margin: 0 $--spacing-xxl;
+                                        top: 72px;
                                         gap: 30px;
                                         width: 100%;
-                                        left: -51px;
-                                        box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.2);
+                                        left: -52px;
                                         .header-submenu-list {
-                                            width: 58%;
+                                            width: calc((100% + 104px) / 12* 7);
+                                            z-index: 1;
                                             .header-submenu-ul{
                                                 display: flex; 
                                                 gap: 30px;
@@ -784,7 +862,7 @@ header {
                                                     width: calc((100% - 24px) / 3);
                                                     h4{
                                                         margin: 0;
-                                                        border-bottom: 2px solid $--gray-100;
+                                                        border-bottom: 2px solid #ededee;
                                                         padding-bottom: 24px;
                                                     }
                                                     li {
@@ -811,10 +889,12 @@ header {
                                             }
                                         }
                                         .menu-submenu-content {
-                                            width: 42%;
+                                            width: calc((100% - 104px) / 12* 5);
                                             background: $--blue-50;
                                             padding: $--spacing-xl;
-                                            .image-text-container{
+                                            z-index: 1;
+                                            border-top: 2px solid #d6e5f1;
+                                            .mega-image-text-container{
                                                 .default-content-wrapper{
                                                     padding: 0;
                                                     h4{
@@ -823,36 +903,56 @@ header {
                                                         padding-bottom: $--spacing-l;
                                                     }
                                                 }
-                                                .image-text-wrapper{
-                                                    .image-text {
+                                                .mega-image-text-wrapper{
+                                                    .mega-image-text {
                                                         &.block {
-                                                          &.columns-2-cols {
-                                                            padding: $--spacing-l 0 $--spacing-l 0;
+                                                            padding-top: $--spacing-l;
                                                             >div {
                                                                 gap: $--spacing-m;
                                                                 align-items: start;
+                                                                display: flex;
                                                             }
                                                             >div{
-                                                                .columns-img-col{
-                                                                    display: contents;
+                                                                img{
+                                                                    width: 125px;
+                                                                    height: 125px;
+                                                                    border-radius: 4px;
                                                                 }
                                                                 .button-container{
                                                                     a{
                                                                         border: none;
                                                                         padding-bottom: $--spacing-xs;
                                                                         font-size: 16px;
+                                                                        font-weight: 500;
                                                                     }
                                                                 }
                                                                 p{
-                                                                    font-size: 16px;
                                                                     margin: 0;
+                                                                    color: $--gray-700;
+                                                                    font-family: $--font-roboto;
+                                                                    font-size: 16px;
+                                                                    font-weight: 400;
+                                                                    letter-spacing: 0px;
+                                                                    text-align: left;
+                                                                    line-height: 24px;
                                                                 }
                                                             }
-                                                          }
                                                         }
                                                     }
                                                 }
                                             }
+                                        }
+                                        &::after {
+                                            display: block;
+                                            content: "";
+                                            background-color: $--white;
+                                            height: 100%;
+                                            position: absolute;
+                                            width: 100vw;
+                                            z-index: 0;
+                                            left: calc(((100vw - 1275px) /2) * -1);
+                                            box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.2);
+                                            border-top: 2px solid $--blue-100;
                                         }
                                     }
                                 }
@@ -902,7 +1002,7 @@ header {
                             }
                             .input-password{
                                 width: calc(100% - 8px);
-                                margin-bottom: $--spacing-m;
+                                margin-bottom: $--spacing-l;
                                 height: 52px;
                             }
                             a.button.primary, button.primary {
@@ -916,23 +1016,28 @@ header {
                             }
                             a.button.secondary, button.secondary {
                                 width: 100%;
-                                margin-bottom: $--spacing-m;
+                                margin-bottom: $--spacing-l;
                             }
                             p{
-                                font-family: $--font-roboto;
-                                font-size: 16px;
-                                font-weight: 500;
-                                font-style: normal;
-                                letter-spacing: 0px;
-                                text-align: left;
-                                line-height: 24px;
                                 margin: 0;
-                                color: $--white;
-                                &.forget-user{
-                                    padding-bottom: $--spacing-l;  
-                                }
-                                &.forget-password{
-                                    padding-bottom: $--spacing-m;
+                                a{
+                                    font-family: $--font-roboto;
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    font-style: normal;
+                                    letter-spacing: 0px;
+                                    text-align: left;
+                                    line-height: 24px;
+                                    margin: 0;
+                                    color: $--white;
+                                    &.forget-user{
+                                        display: inline-block;
+                                        margin-bottom: $--spacing-l;  
+                                    }
+                                    &.forget-password{
+                                        display: inline-block;
+                                        margin-bottom: 55px;
+                                    }
                                 }
                             }
                         }

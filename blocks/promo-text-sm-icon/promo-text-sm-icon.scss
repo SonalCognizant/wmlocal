@@ -28,13 +28,13 @@
       justify-content: center;
       padding: 0;
       @include for-xlarge {
-        padding: 120px 217px;
+        padding: 120px 0px;
       }
       @include for-large {
-        padding: 120px 217px;
+        padding: 120px 0px;
       }
       @include for-laptop {
-        padding: 118px 81px 120px 81px;
+        padding: 118px 0px 120px 0px;
       }
       @include for-mobile {
         padding: 72px 0;
@@ -47,6 +47,7 @@
         justify-content: center;
         align-items: center;
         position: relative;
+        width: 100%;
         > .title {
           opacity: 1;
           color: $--blue-550;
@@ -57,8 +58,21 @@
           text-align: center;
           padding-bottom: 24px;
           margin: 0;
+          @include for-xlarge {
+            width: calc(66.66% + 60px);
+          }
+          @include for-large {
+            width: calc(66.66% + 60px);
+          }
+          @include for-laptop {
+            width: calc(100% / 12* 10);
+          }
+          @include for-tablet {
+            width: 100%
+          }
           @include for-mobile {
             padding-bottom: 16px;
+            width: 100%
           }
         }
         > p {
@@ -112,8 +126,21 @@
         line-height: 24px;
         margin: 0;
         padding-bottom: 36px;
+        @include for-xlarge {
+          width: calc(66.66% + 60px);
+        }
+        @include for-large {
+          width: calc(66.66% + 60px);
+        }
+        @include for-laptop {
+          width: calc(100% / 12* 10);
+        }
+        @include for-tablet {
+          width: 100%
+        }
         @include for-mobile {
           padding-bottom: 24px;
+          width: 100%
         }
       }
     }

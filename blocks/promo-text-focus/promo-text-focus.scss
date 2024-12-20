@@ -36,6 +36,7 @@
       &.block {
         .promo-focus-block{
           background: $--blue-550;
+          border-radius: 0 0 5px 5px;
           @include for-laptop{
             width: calc((100% / 2) - 15px);
           }
@@ -51,7 +52,7 @@
               padding: $--spacing-huge $--spacing-xl;
             }
             @include for-laptop{
-              padding: $--spacing-huge $--spacing-xl;
+              padding: $--spacing-huge $--spacing-xxl;
             }
             @include for-large{
               padding: $--spacing-huge $--spacing-xxl;
@@ -62,15 +63,20 @@
             >div {
               h2{
                 color: $--white;
+                width: 100%;
                 margin: 0;
                 .icon-whitepromoicon{
                   margin-bottom: $--spacing-l;
                   width: 64px;
                   height: 64px;
                 }
+                @include for-mobile {
+                  font-size: 32px;
+                }
               }
               p{
                 color: $--white;
+                width: 100%;
                 margin: 0;
                 margin: $--spacing-m 0 $--spacing-l 0;
                 @include for-mobile{
@@ -79,9 +85,8 @@
                 &.button-container {
                   margin-top: 0;
                   margin-bottom: 0;
-                  @include for-mobile {
-                    width: 100%;
-                    display: unset;
+                  @include for-nonmobile {
+                    width: max-content;
                   }
                 }
               }

@@ -29,7 +29,7 @@
     padding: 72px 16px;
   }
 }
-.section.testimonial-container .testimonial-wrapper h2 {
+.section.testimonial-container .testimonial-wrapper .testimonial-heading {
   font-family: museo, sans-serif;
   font-size: 32px;
   line-height: 38px;
@@ -40,32 +40,32 @@
   text-align: center;
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
-  .section.testimonial-container .testimonial-wrapper h2 {
+  .section.testimonial-container .testimonial-wrapper .testimonial-heading {
     margin-bottom: 52px;
     font-size: 28px;
   }
 }
 @media (max-width: 480px) {
-  .section.testimonial-container .testimonial-wrapper h2 {
+  .section.testimonial-container .testimonial-wrapper .testimonial-heading {
     margin-bottom: 36px;
     font-size: 28px;
   }
 }
-.section.testimonial-container .testimonial-wrapper div:last-child {
+.section.testimonial-container .testimonial-wrapper div.inline-link {
   padding-top: 72px;
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
-  .section.testimonial-container .testimonial-wrapper div:last-child {
+  .section.testimonial-container .testimonial-wrapper div.inline-link {
     padding-top: 72px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
-  .section.testimonial-container .testimonial-wrapper div:last-child {
+  .section.testimonial-container .testimonial-wrapper div.inline-link {
     padding-top: 36px;
   }
 }
 @media (max-width: 480px) {
-  .section.testimonial-container .testimonial-wrapper div:last-child {
+  .section.testimonial-container .testimonial-wrapper div.inline-link {
     padding-top: 36px;
   }
 }
@@ -114,26 +114,21 @@
   background-color: #f3f9ff;
   color: #4b4c4d;
   padding: 45px 36px 96px 36px;
-}
-@media (max-width: 480px) {
-  .section.testimonial-container .testimonial-wrapper .testimonial ul li {
-    margin-bottom: 24px;
-  }
+  border-radius: 4px;
 }
 @media (min-width: 1380px) {
   .section.testimonial-container .testimonial-wrapper .testimonial ul li {
-    width: calc((100% - 104px) / 3);
+    width: calc((100% + 60px) / 12 * 3);
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .section.testimonial-container .testimonial-wrapper .testimonial ul li {
-    width: calc((100% - 104px) / 3);
+    width: calc((100% + 60px) / 12 * 3);
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .section.testimonial-container .testimonial-wrapper .testimonial ul li {
-    width: calc((100% - 72px) / 2);
-    padding-bottom: 20px;
+    width: calc((100% - 30px) / 3);
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
@@ -194,19 +189,39 @@
   }
 }
 
+@media (min-width: 1380px) {
+  .testimonial-wrapper .testimonial .testimonial-1-quote li {
+    width: calc((100% - 175px) / 12 * 6) !important;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .testimonial-wrapper .testimonial .testimonial-1-quote li {
+    width: calc((100% - 175px) / 12 * 6) !important;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .testimonial-wrapper .testimonial .testimonial-1-quote li {
+    width: calc((100% - 175px) / 12 * 6) !important;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .testimonial-wrapper .testimonial .testimonial-1-quote li {
+    width: calc(100% - 72px) !important;
+  }
+}
+
 .eight-column-large .testimonial-wrapper .testimonial ul li {
   background-color: #f3f9ff;
   width: calc((100% - 104px) / 2) !important;
 }
 @media (min-width: 1380px) {
   .eight-column-large .testimonial-wrapper .testimonial ul li {
-    width: calc(58.3333333333% + 20px) !important;
+    width: calc(66.6666666667% - 82px) !important;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .eight-column-large .testimonial-wrapper .testimonial ul li {
     width: 75% !important;
-    padding-bottom: 61px !important;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
@@ -217,15 +232,5 @@
 @media (max-width: 480px) {
   .eight-column-large .testimonial-wrapper .testimonial ul li {
     width: unset !important;
-  }
-}
-@media (min-width: 480.5px) and (max-width: 1023.5px) {
-  .eight-column-large .testimonial-wrapper div:last-child {
-    padding-top: 52px !important;
-  }
-}
-@media (max-width: 480px) {
-  .eight-column-large .testimonial-wrapper div:last-child {
-    padding-top: 36px !important;
   }
 }

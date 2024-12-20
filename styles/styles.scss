@@ -13,6 +13,8 @@
 @import 'include/button';
 @import 'include/tokens';
 @import 'include/typography';
+@import 'include/defaultcontent';
+@import './include/font-icons.scss';
 
 :root {
   /* colors */
@@ -143,12 +145,6 @@ main img {
   max-width: 100%;
   width: auto;
   height: auto;
-}
-
-.icon {
-  display: inline-block;
-  height: 24px;
-  width: 24px;
 }
 
 .icon img {

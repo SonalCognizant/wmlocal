@@ -4,50 +4,74 @@ export default function decorate(block) {
   const ul = document.createElement('ul');
 
   // Get the title from the first child and prepend it
-  const title = block.children[0].innerText;
-  const mainHeading = document.createElement('h2');
-  mainHeading.classList.add('testimonial-heading');
-  mainHeading.textContent = title;
-  parentElement.prepend(mainHeading);
+  const firstChild = block.children[0];
 
-  // Get the link from the last child and append it
+  // Check if the first child is authored (you can define your own criteria for "authored")
+  if (firstChild && firstChild.innerText.trim() !== '') { // Example condition: check if it has text
+    const title = firstChild.innerText;
+    const mainHeading = document.createElement('h2');
+    mainHeading.classList.add('testimonial-heading');
+    mainHeading.textContent = title;
+    parentElement.prepend(mainHeading);
+  }
+
+  // Get the link from the last child
+  const lastChildIndex = block.children.length - 1;
+  const lastChild = block.children[lastChildIndex];
   const linkDiv = document.createElement('div');
-  const link = block.children[block.children.length - 1].innerText;
-  const hyperLink = document.createElement('a');
-  hyperLink.classList.add('testimonial-link');
-  hyperLink.textContent = link;
-  linkDiv.append(hyperLink);
 
-  // get the image for the link
-  const linkImg = document.createElement('img');
-  linkImg.src = '/icons/right-arrow.svg';
-  linkImg.setAttribute('data-icon-name', 'right-arrow');
-  linkImg.className = 'link-img';
-  linkDiv.append(linkImg);
+  // Check if the last child has content
+  if (lastChild && lastChild.innerText.trim() !== '') {
+    linkDiv.classList.add('inline-link');
+    const link = lastChild.innerText;
+    const hyperLink = document.createElement('a');
+    hyperLink.classList.add('testimonial-link');
+    hyperLink.textContent = link;
+    linkDiv.append(hyperLink);
+
+    // Get the image for the link
+    const linkImg = document.createElement('img');
+    linkImg.src = '/icons/right-arrow.svg';
+    linkImg.setAttribute('data-icon-name', 'right-arrow');
+    linkImg.className = 'link-img';
+    linkDiv.append(linkImg);
+  }
+
   parentElement.append(linkDiv);
 
+  // Adding class for the ul based on the children length
+  const testimonialClass = `testimonial-${block.children.length - 2}-quote`;
+  ul.classList.add(testimonialClass);
+
+  // Create a static array of children to avoid live collection issues
+  const childrenArray = Array.from(block.children);
+
   // Process the remaining children to create list items
-  [...block.children].forEach((row, index) => {
-    if (index < block.children.length - 1 && index > 0) {
+  childrenArray.forEach((row, index) => {
+    if (index < childrenArray.length - 1 && index > 0) {
       const li = document.createElement('li');
       while (row.firstElementChild) li.append(row.firstElementChild);
 
       // Set class for the list item
       li.className = 'testimonial-card';
 
-      // get the image from the icon and append it to the list
+      // Get the image from the icon and append it to the list
       const imgTag = document.createElement('img');
       imgTag.src = '/icons/quote.svg';
       imgTag.setAttribute('data-icon-name', 'quote');
-
-      // setAttribute for the header
-      const hTag = li.querySelector('h3');
-      hTag.className = 'testimonial-title';
-
-      // setAttribute for the paragraph
-      const pTag = li.querySelector('p');
-      pTag.className = 'testimonial-description';
       li.prepend(imgTag);
+
+      // Check for h3 and p tags before setting class
+      const hTag = li.querySelector('h3');
+      if (hTag) {
+        hTag.className = 'testimonial-title';
+      }
+
+      const pTag = li.querySelector('p');
+      if (pTag) {
+        pTag.className = 'testimonial-description';
+      }
+
       ul.append(li);
     }
   });

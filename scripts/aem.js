@@ -396,14 +396,13 @@ function decorateButtons(element) {
           up.childNodes.length === 1
           && (up.tagName === 'P' || up.tagName === 'DIV')
         ) {
-          a.className = 'button'; // default
           up.classList.add('button-container');
         }
         if (
           up.childNodes.length === 1
           && up.tagName === 'STRONG'
           && twoup.childNodes.length === 1
-          && twoup.tagName === 'P'
+          && (twoup.tagName === 'P' || twoup.tagName === 'DIV')
         ) {
           a.className = 'button primary';
           twoup.classList.add('button-container');
@@ -412,7 +411,7 @@ function decorateButtons(element) {
           up.childNodes.length === 1
           && up.tagName === 'EM'
           && twoup.childNodes.length === 1
-          && twoup.tagName === 'P'
+          && (twoup.tagName === 'P' || twoup.tagName === 'DIV')
         ) {
           a.className = 'button secondary';
           twoup.classList.add('button-container');
@@ -428,6 +427,7 @@ function decorateButtons(element) {
  * @param {string} [prefix] prefix to be added to icon src
  * @param {string} [alt] alt text to be added to icon
  */
+// here i have to work
 function decorateIcon(span, prefix = '', alt = '') {
   const iconName = Array.from(span.classList)
     .find((c) => c.startsWith('icon-'))
@@ -445,10 +445,34 @@ function decorateIcon(span, prefix = '', alt = '') {
  * @param {Element} [element] Element containing icons
  * @param {string} [prefix] prefix to be added to icon the src
  */
+function decorateFontIcon(span, prefix = '') {
+  const iconName = Array.from(span.classList)
+    .find((c) => c.startsWith('icon-'))
+    .substring(5);
+  let style = 'regular'; // Default style is 'fa-regular'
+  let icon = '';
+  if (iconName.includes('--')) {
+    [style, icon] = iconName.split('--');
+  } else {
+    icon = iconName;
+  }
+  const iconTag = document.createElement('i');
+  iconTag.classList.add(`fa-${style}`);
+  iconTag.classList.add(`fa-${icon}`);
+  console.log(prefix, iconName, icon, style, 'hello');
+  iconTag.dataset.iconName = iconName;
+  span.append(iconTag);
+}
+
 function decorateIcons(element, prefix = '') {
+  const isFontIcon = false;
   const icons = [...element.querySelectorAll('span.icon')];
   icons.forEach((span) => {
-    decorateIcon(span, prefix);
+    if (isFontIcon) {
+      decorateFontIcon(span, prefix);
+    } else {
+      decorateIcon(span, prefix);
+    }
   });
 }
 
@@ -700,7 +724,6 @@ async function loadSections(element) {
     await loadSection(sections[i]);
   }
 }
-
 init();
 
 export {
