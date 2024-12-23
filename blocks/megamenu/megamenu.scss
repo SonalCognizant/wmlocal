@@ -288,7 +288,7 @@ header {
                 justify-content: space-between;
                 background-color:  $--white;
                 padding: 0 $--spacing-xxl;
-                box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.2);
+                box-shadow: 1px 7px 9px -4px rgba(0, 0, 0, 0.2);
                 @include for-mobile {
                     padding: 0;
                     display: none;
@@ -636,7 +636,7 @@ header {
                                         gap: 30px;
                                         width: calc(100% + 72px);
                                         left: -36px;
-                                        box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.2);
+                                        box-shadow: 1px 7px 9px -4px rgba(0, 0, 0, 0.2);
                                         border-top: 2px solid #d6e5f1;
                                         .header-submenu-list {
                                             width: calc((100% + 66px) / 12* 7);
@@ -743,7 +743,7 @@ header {
                                         gap: 30px;
                                         width: 100%;
                                         left: -52px;
-                                        box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.2);
+                                        box-shadow: 1px 7px 9px -4px rgba(0, 0, 0, 0.2);
                                         border-top: 2px solid #d6e5f1;
                                         .header-submenu-list {
                                             width: calc((100% + 104px) / 12* 7);
@@ -951,7 +951,7 @@ header {
                                             width: 100vw;
                                             z-index: 0;
                                             left: calc(((100vw - 1275px) /2) * -1);
-                                            box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.2);
+                                            box-shadow: 1px 7px 9px -4px rgba(0, 0, 0, 0.2);
                                             border-top: 2px solid $--blue-100;
                                         }
                                     }

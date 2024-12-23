@@ -213,6 +213,16 @@ h4 {
   line-height: 21px;
 }
 
+h5 {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 19px;
+}
+
 body {
   display: none;
   margin: 0;
@@ -307,7 +317,9 @@ a:any-link {
 .section .default-content-wrapper h1,
 .section .default-content-wrapper h2,
 .section .default-content-wrapper h3,
-.section .default-content-wrapper h4 {
+.section .default-content-wrapper h4,
+.section .default-content-wrapper h5,
+.section .default-content-wrapper h6 {
   margin: 0;
   padding-bottom: 16px;
 }
@@ -315,7 +327,9 @@ a:any-link {
   .section .default-content-wrapper h1,
   .section .default-content-wrapper h2,
   .section .default-content-wrapper h3,
-  .section .default-content-wrapper h4 {
+  .section .default-content-wrapper h4,
+  .section .default-content-wrapper h5,
+  .section .default-content-wrapper h6 {
     padding-bottom: 24px;
   }
 }
