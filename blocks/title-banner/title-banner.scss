@@ -245,10 +245,6 @@
             }
           }
           .tbnr-btn{
-            @include for-tablet{
-              display: unset;
-              width: min-content;
-            }
             @include for-mobile{
               width: unset;
             }
