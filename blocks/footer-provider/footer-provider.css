@@ -59,14 +59,12 @@
 }
 .footer-provider-wrapper .footer-provider > .logo-social-div > .social-div > p > a > span i {
   font-size: 24px;
-  color: black;
+  color: #4d4d4f;
   height: 100%;
   width: 100%;
-  border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
 }
 @media (max-width: 480px) {
   .footer-provider-wrapper .footer-provider > .logo-social-div > .social-div {
@@ -195,14 +193,12 @@
 }
 .footer-provider-wrapper .footer-provider > .wellmarkdrug-div > .social-div > p > a > span i {
   font-size: 24px;
-  color: black;
+  color: #4d4d4f;
   height: 100%;
   width: 100%;
-  border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
 }
 @media (max-width: 480px) {
   .footer-provider-wrapper .footer-provider > .wellmarkdrug-div > .social-div {

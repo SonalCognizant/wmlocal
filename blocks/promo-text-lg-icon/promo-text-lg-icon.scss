@@ -112,6 +112,24 @@
               height: 100%;
               width: 100%;
             }
+            > i {
+              color: #426781;
+              @include for-xlarge {
+                font-size: 345px;
+              }
+              @include for-large {
+                font-size: 345px;
+              }
+              @include for-laptop {
+                font-size: 345px;
+              }
+              @include for-mobile {
+                font-size: 299px;
+              }
+              @include for-tablet {
+                font-size: 256px;
+              }
+            }
           }
         }
       }

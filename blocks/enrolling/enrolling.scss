@@ -103,6 +103,11 @@
               margin: 0;
               color: $--gray-700;
               text-align: center;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
+              }
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -202,6 +207,11 @@
               margin: 0;
               color: $--gray-700;
               text-align: center;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
+              }
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -295,6 +305,11 @@
               margin: 0;
               color: $--gray-700;
               text-align: center;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
+              }
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -414,6 +429,11 @@
               margin: 0;
               color: $--gray-700;
               text-align: center;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
+              }
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -503,6 +523,11 @@
               margin: 0;
               color: $--gray-700;
               text-align: center;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
+              }
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -604,6 +629,11 @@
               margin: 0;
               color: $--gray-700;
               text-align: center;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
+              }
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
