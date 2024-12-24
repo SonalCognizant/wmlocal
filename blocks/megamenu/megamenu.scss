@@ -64,8 +64,8 @@ header {
                                 flex-direction: column;
                                 align-items: center;
                                 padding: 14px 15px 9px 14px;
-                                border-right: 1px solid $--blue-100;
-                                border-bottom: 1px solid $--blue-100;
+                                border-right: 2px solid $--blue-100;
+                                border-bottom: 2px solid $--blue-100;
                                 .collapse-btn{
                                     width: 18px;
                                     height: 14px;
@@ -91,7 +91,7 @@ header {
                                     display: flex;
                                     flex-direction: column;
                                     align-items: center;
-                                    border-right: 1px solid $--blue-100;
+                                    border-right: 2px solid $--blue-100;
                                     padding: $--spacing-s 15px 11px 14px;
                                     .close-btn{
                                         display: inline-block;
@@ -117,8 +117,8 @@ header {
                                 flex-direction: column;
                                 align-items: center;
                                 padding: 14px 15px 9px 14px;
-                                border-right: 1px solid $--blue-100;
-                                border-bottom: 1px solid $--blue-100;
+                                border-right: 2px solid $--blue-100;
+                                border-bottom: 2px solid $--blue-100;
                                 .collapse-btn{
                                     width: 18px;
                                     height: 14px;
@@ -144,7 +144,7 @@ header {
                                     display: flex;
                                     flex-direction: column;
                                     align-items: center;
-                                    border-right: 1px solid $--blue-100;
+                                    border-right: 2px solid $--blue-100;
                                     padding: $--spacing-s 15px 11px 14px;
                                     .close-btn{
                                         display: inline-block;
@@ -169,14 +169,14 @@ header {
                             padding: 14px 0 13px 0;
                             display: flex;
                             justify-content: center;
-                            border-bottom: 1px solid $--blue-100;
+                            border-bottom: 2px solid $--blue-100;
                         }
                         @include for-tablet {
                             width: 100%;
                             padding: 14px 0 13px 0;
                             display: flex;
                             justify-content: center;
-                            border-bottom: 1px solid $--blue-100;
+                            border-bottom: 2px solid $--blue-100;
                         }
                     }
                     .search-bar{
@@ -189,8 +189,8 @@ header {
                             display: flex;
                             text-align: left;
                             padding: $--spacing-s $--spacing-m 9px 17px;
-                            border-left: 1px solid $--blue-100;
-                            border-bottom: 1px solid $--blue-100;
+                            border-left: 2px solid $--blue-100;
+                            border-bottom: 2px solid $--blue-100;
                             flex-direction: column;
                             align-items: center;
                             color: $--gray-700;
@@ -205,8 +205,8 @@ header {
                             display: flex;
                             text-align: left;
                             padding: $--spacing-s $--spacing-m 9px 17px;
-                            border-left: 1px solid $--blue-100;
-                            border-bottom: 1px solid $--blue-100;
+                            border-left: 2px solid $--blue-100;
+                            border-bottom: 2px solid $--blue-100;
                             flex-direction: column;
                             align-items: center;
                             color: $--gray-700;
@@ -288,7 +288,7 @@ header {
                 justify-content: space-between;
                 background-color:  $--white;
                 padding: 0 $--spacing-xxl;
-                box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.2);
+                box-shadow: 1px 7px 9px -4px rgba(0, 0, 0, 0.2);
                 @include for-mobile {
                     padding: 0;
                     display: none;
@@ -355,6 +355,7 @@ header {
                                         width: 16px;
                                         height: 9px;
                                         margin-left: $--spacing-xs;
+                                        margin-bottom: 3px;
                                     }
                                 }
                                 ~ .header-menu-item{
@@ -377,15 +378,7 @@ header {
                                     color: $--gray-700;
                                     text-decoration: none;
                                     padding-bottom: $--spacing-xxs;
-                                    height: 19px;
-                                    @include for-mobile{
-                                        height: 18px;
-                                        line-height: 18px;
-                                    }
-                                    @include for-tablet{
-                                        height: 18px;
-                                        line-height: 18px;
-                                    }
+                                    line-height: 19px;
                                 }
                                 &.menu-active{
                                     a{
@@ -479,7 +472,6 @@ header {
                                         width: 100%;
                                         .header-submenu-ul{
                                             display: flex; 
-                                            gap: $--spacing-xs;
                                             flex-direction: column;
                                             width: 100%;
                                             ul{
@@ -529,7 +521,6 @@ header {
                                         width: 100%;
                                         .header-submenu-ul{
                                             display: flex; 
-                                            gap: $--spacing-xs;
                                             flex-direction: column;
                                             width: 100%;
                                             ul{
@@ -641,11 +632,12 @@ header {
                                         display: flex;
                                         flex-direction: row;
                                         background-color: $--white;
-                                        top: 77px;
+                                        top: 73px;
                                         gap: 30px;
                                         width: calc(100% + 72px);
                                         left: -36px;
-                                        box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.2);
+                                        box-shadow: 1px 7px 9px -4px rgba(0, 0, 0, 0.2);
+                                        border-top: 2px solid #d6e5f1;
                                         .header-submenu-list {
                                             width: calc((100% + 66px) / 12* 7);
                                             padding-left: $--spacing-xl;
@@ -702,26 +694,24 @@ header {
                                                 .mega-image-text-wrapper{
                                                     .mega-image-text {
                                                         &.block {
-                                                            padding: $--spacing-l 0 $--spacing-l 0;
+                                                            padding-top: $--spacing-l;
                                                             >div {
                                                                 gap: $--spacing-m;
                                                                 align-items: start;
                                                                 display: flex;
                                                             }
                                                             >div{
-                                                                .columns-img-col{
-                                                                    display: contents;
-                                                                    img{
-                                                                        width: 74px;
-                                                                        height: 74px;
-                                                                        border-radius: 4px;
-                                                                    }
+                                                                img{
+                                                                    width: 74px;
+                                                                    height: 74px;
+                                                                    border-radius: 4px;
                                                                 }
                                                                 .button-container{
                                                                     a{
                                                                         border: none;
                                                                         padding-bottom: $--spacing-xs;
                                                                         font-size: 16px;
+                                                                        font-weight: 500;
                                                                     }
                                                                 }
                                                                 p{
@@ -749,11 +739,12 @@ header {
                                         flex-direction: row;
                                         background-color: $--white;
                                         padding: 0 $--spacing-xxl;
-                                        top: 77px;
+                                        top: 73px;
                                         gap: 30px;
                                         width: 100%;
-                                        left: -51px;
-                                        box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.2);
+                                        left: -52px;
+                                        box-shadow: 1px 7px 9px -4px rgba(0, 0, 0, 0.2);
+                                        border-top: 2px solid #d6e5f1;
                                         .header-submenu-list {
                                             width: calc((100% + 104px) / 12* 7);
                                             .header-submenu-ul{
@@ -809,26 +800,24 @@ header {
                                                 .mega-image-text-wrapper{
                                                     .mega-image-text {
                                                         &.block {
-                                                            padding: $--spacing-l 0 $--spacing-l 0;
+                                                            padding-top: $--spacing-l;
                                                             >div {
                                                                 gap: $--spacing-m;
                                                                 align-items: start;
                                                                 display: flex;
                                                             }
                                                             >div{
-                                                                .columns-img-col{
-                                                                    display: contents;
-                                                                    img{
-                                                                        width: 125px;
-                                                                        height: 125px;
-                                                                        border-radius: 4px;
-                                                                    }
+                                                                img{
+                                                                    width: 125px;
+                                                                    height: 125px;
+                                                                    border-radius: 4px;
                                                                 }
                                                                 .button-container{
                                                                     a{
                                                                         border: none;
                                                                         padding-bottom: $--spacing-xs;
                                                                         font-size: 16px;
+                                                                        font-weight: 500;
                                                                     }
                                                                 }
                                                                 p{
@@ -854,15 +843,14 @@ header {
                                         position: absolute;
                                         display: flex;
                                         flex-direction: row;
-                                        background-color: $--white;
-                                        padding: 0 $--spacing-xxl;
-                                        top: 77px;
+                                        margin: 0 $--spacing-xxl;
+                                        top: 72px;
                                         gap: 30px;
                                         width: 100%;
                                         left: -52px;
-                                        box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.2);
                                         .header-submenu-list {
                                             width: calc((100% + 104px) / 12* 7);
+                                            z-index: 1;
                                             .header-submenu-ul{
                                                 display: flex; 
                                                 gap: 30px;
@@ -904,6 +892,8 @@ header {
                                             width: calc((100% - 104px) / 12* 5);
                                             background: $--blue-50;
                                             padding: $--spacing-xl;
+                                            z-index: 1;
+                                            border-top: 2px solid #d6e5f1;
                                             .mega-image-text-container{
                                                 .default-content-wrapper{
                                                     padding: 0;
@@ -916,26 +906,24 @@ header {
                                                 .mega-image-text-wrapper{
                                                     .mega-image-text {
                                                         &.block {
-                                                            padding: $--spacing-l 0 $--spacing-l 0;
+                                                            padding-top: $--spacing-l;
                                                             >div {
                                                                 gap: $--spacing-m;
                                                                 align-items: start;
                                                                 display: flex;
                                                             }
                                                             >div{
-                                                                .columns-img-col{
-                                                                    display: contents;
-                                                                    img{
-                                                                        width: 125px;
-                                                                        height: 125px;
-                                                                        border-radius: 4px;
-                                                                    }
+                                                                img{
+                                                                    width: 125px;
+                                                                    height: 125px;
+                                                                    border-radius: 4px;
                                                                 }
                                                                 .button-container{
                                                                     a{
                                                                         border: none;
                                                                         padding-bottom: $--spacing-xs;
                                                                         font-size: 16px;
+                                                                        font-weight: 500;
                                                                     }
                                                                 }
                                                                 p{
@@ -953,6 +941,18 @@ header {
                                                     }
                                                 }
                                             }
+                                        }
+                                        &::after {
+                                            display: block;
+                                            content: "";
+                                            background-color: $--white;
+                                            height: 100%;
+                                            position: absolute;
+                                            width: 100vw;
+                                            z-index: 0;
+                                            left: calc(((100vw - 1275px) /2) * -1);
+                                            box-shadow: 1px 7px 9px -4px rgba(0, 0, 0, 0.2);
+                                            border-top: 2px solid $--blue-100;
                                         }
                                     }
                                 }
@@ -1036,7 +1036,7 @@ header {
                                     }
                                     &.forget-password{
                                         display: inline-block;
-                                        margin-bottom: $--spacing-m;
+                                        margin-bottom: 55px;
                                     }
                                 }
                             }

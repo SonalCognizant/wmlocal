@@ -17,7 +17,7 @@
     @include for-mobile{
       padding: $--spacing-huge $--spacing-m;
     }
-    h2{
+    .testimonial-heading{
       font-family: $--font-museo;
       font-size: 32px;
       line-height: 38px;
@@ -36,7 +36,7 @@
       }
     }
     div{
-      &:last-child{
+      &.inline-link{
         padding-top: $--spacing-huge;
         @include for-laptop{
           padding-top: $--spacing-huge;

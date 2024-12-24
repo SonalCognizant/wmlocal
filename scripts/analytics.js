@@ -1,5 +1,6 @@
 /* eslint-env browser */
 
+// check if url is relative
 function isRelativeURL(linkHref) {
   const url = new URL(linkHref, window.location.href);
   return url.origin === window.location.origin;

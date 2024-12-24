@@ -14,45 +14,53 @@
   }
   .title-banner-condensed-wrapper {
     .title-banner-condensed {
-      &.columns-1-cols {
-        width: 840px;
-        padding: $--spacing-huge 0 $--spacing-xxl 0;
+      &.block {
+        padding: 71px 0 51px 0;
         @include for-tablet {
           padding: $--spacing-huge 0 $--spacing-huge $--spacing-xl;
-          width: 80%;
         }
         @include for-laptop {
-          padding: $--spacing-huge 0 $--spacing-huge $--spacing-xl;
+          padding: 71px 0 71px 35px;
         }
         @include for-mobile{
           width: 100%;
           padding: $--spacing-xxl 0 $--spacing-xxl 0;
         }
-        div{
-          div{
+        .tbnr-maindiv{
+          @include for-xlarge{
+            width: calc(((100% / 12) * 8) - 10px);
+          }
+          @include for-large{
+            width: calc(((100% / 12) * 8) - 10px);
+          }
+          @include for-laptop{
+            width: calc(((100% / 12) * 9) - 30px);
+          }
+          @include for-tablet{
+            width: calc(((100% / 6) * 5) - 30px);
+          }
+          .tbnr-textcont{
             @include for-mobile{
               padding: 0 16px;
             }
-            p {
-              &:first-child{
-                color: $--white;
-                font-family: $--font-museo;
-                font-size: 60px;
-                line-height: 66px;
-                font-weight: 300;
-                margin-top: 0;
-                margin-bottom: $--spacing-l;
-                @include for-mobile {
-                  margin-bottom: $--spacing-s;
-                  font-size: 40px;
-                  line-height: 48px;
-                }
-                @include for-tablet {
-                  margin-bottom: $--spacing-s;
-                }
+            .title {
+              color: $--white;
+              font-family: $--font-museo;
+              font-size: 60px;
+              line-height: 72px;
+              font-weight: 300;
+              margin-top: 0;
+              margin-bottom: $--spacing-l;
+              @include for-mobile {
+                margin-bottom: $--spacing-s;
+                font-size: 40px;
+                line-height: 48px;
+              }
+              @include for-tablet {
+                margin-bottom: $--spacing-s;
               }
             }
-            p {
+            .description {
               color: $--white;
               font-family: $--font-roboto;
               font-size: 16px;

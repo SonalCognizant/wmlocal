@@ -29,7 +29,7 @@
     padding: 72px 16px;
   }
 }
-.section.testimonial-container .testimonial-wrapper h2 {
+.section.testimonial-container .testimonial-wrapper .testimonial-heading {
   font-family: museo, sans-serif;
   font-size: 32px;
   line-height: 38px;
@@ -40,32 +40,32 @@
   text-align: center;
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
-  .section.testimonial-container .testimonial-wrapper h2 {
+  .section.testimonial-container .testimonial-wrapper .testimonial-heading {
     margin-bottom: 52px;
     font-size: 28px;
   }
 }
 @media (max-width: 480px) {
-  .section.testimonial-container .testimonial-wrapper h2 {
+  .section.testimonial-container .testimonial-wrapper .testimonial-heading {
     margin-bottom: 36px;
     font-size: 28px;
   }
 }
-.section.testimonial-container .testimonial-wrapper div:last-child {
+.section.testimonial-container .testimonial-wrapper div.inline-link {
   padding-top: 72px;
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
-  .section.testimonial-container .testimonial-wrapper div:last-child {
+  .section.testimonial-container .testimonial-wrapper div.inline-link {
     padding-top: 72px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
-  .section.testimonial-container .testimonial-wrapper div:last-child {
+  .section.testimonial-container .testimonial-wrapper div.inline-link {
     padding-top: 36px;
   }
 }
 @media (max-width: 480px) {
-  .section.testimonial-container .testimonial-wrapper div:last-child {
+  .section.testimonial-container .testimonial-wrapper div.inline-link {
     padding-top: 36px;
   }
 }
