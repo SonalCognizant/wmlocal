@@ -46,7 +46,7 @@
       }
       @include for-laptop {
         padding: 120px 0px 120px 0px;
-        width: calc(83.33% - 10px);
+        width: 83%;
       }
       @include for-mobile {
         padding: 72px 0;
