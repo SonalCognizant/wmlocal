@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: unset;
+  max-width: unset !important;
 }
 @media (min-width: 1380px) {
   .promo-text-lg-icon-wrapper {
