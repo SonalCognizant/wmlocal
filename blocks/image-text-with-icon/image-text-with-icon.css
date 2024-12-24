@@ -89,16 +89,6 @@
     max-width: calc((100% - 30px) / 12 * 5);
   }
 }
-@media (max-width: 480px) {
-  .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols > div div:last-child {
-    display: none;
-  }
-}
-@media (min-width: 480.5px) and (max-width: 1023.5px) {
-  .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols > div div:last-child {
-    display: none;
-  }
-}
 .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols > div > .columns-img-col {
   order: 0;
   align-self: flex-start;
