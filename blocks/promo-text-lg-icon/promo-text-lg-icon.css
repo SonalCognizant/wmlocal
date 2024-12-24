@@ -6,6 +6,10 @@
   margin: 0;
   opacity: 1;
   background-color: rgb(74, 115, 144);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: unset;
 }
 @media (min-width: 1380px) {
   .promo-text-lg-icon-wrapper {
@@ -36,6 +40,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 1275px;
 }
 .promo-text-lg-icon-wrapper > .promo-text-lg-icon > div {
   display: flex;
