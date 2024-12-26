@@ -48,7 +48,7 @@
         padding: 120px 0 52px 0;
       }
       @include for-tablet {
-        padding: 96px 0 72px 0;
+        padding: 96px 0 52px 0;
         font-size: 28px;
         width: 345px;
       }
@@ -102,6 +102,16 @@
             > p {
               margin: 0;
               color: $--gray-700;
+              text-align: center;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
+              }
+              > .icon-shopbag {
+                height: 64px;
+                width: 72px;
+              }
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -146,13 +156,17 @@
               }
             }
             > .button-container {
+              @include for-mobile {
+                width: unset;
+              }
               a {
-                padding: 12px 22px;
+                padding: 10px 22px;
               }
             }
             > h3 {
               margin: 0;
               padding: 24px 0px 12px 0;
+              line-height: 28px;
               opacity: 1;
               color: $--gray-700;
               font-family: $--font-roboto;
@@ -196,6 +210,12 @@
             > p {
               margin: 0;
               color: $--gray-700;
+              text-align: center;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
+              }
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -204,6 +224,10 @@
                   height: 100%;
                   width: 100%;
                 }
+              }
+              > .icon-shopbag {
+                height: 64px;
+                width: 72px;
               }
               > .icon-search-icon-enrolling {
                 height: 64px;
@@ -240,13 +264,17 @@
               }
             }
             > .button-container {
+              @include for-mobile {
+                width: unset;
+              }
               a {
-                padding: 12px 22px;
+                padding: 10px 22px;
               }
             }
             > h3 {
               margin: 0;
               padding: 24px 0px 12px 0;
+              line-height: 28px;
               opacity: 1;
               color: $--gray-700;
               font-family: $--font-roboto;
@@ -284,6 +312,12 @@
             > p {
               margin: 0;
               color: $--gray-700;
+              text-align: center;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
+              }
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -292,6 +326,10 @@
                   height: 100%;
                   width: 100%;
                 }
+              }
+              > .icon-shopbag {
+                height: 64px;
+                width: 72px;
               }
               > .icon-search-icon-enrolling {
                 height: 64px;
@@ -328,13 +366,17 @@
               }
             }
             > .button-container {
+              @include for-mobile {
+                width: unset;
+              }
               a {
-                padding: 12px 22px;
+                padding: 10px 22px;
               }
             }
             > h3 {
               margin: 0;
               padding: 24px 0px 12px 0;
+              line-height: 28px;
               opacity: 1;
               color: $--gray-700;
               font-family: $--font-roboto;
@@ -398,6 +440,12 @@
             > p {
               margin: 0;
               color: $--gray-700;
+              text-align: center;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
+              }
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -406,6 +454,10 @@
                   height: 100%;
                   width: 100%;
                 }
+              }
+              > .icon-shopbag {
+                height: 64px;
+                width: 72px;
               }
               > .icon-search-icon-enrolling {
                 height: 64px;
@@ -442,8 +494,11 @@
               }
             }
             > .button-container {
+              @include for-mobile {
+                width: unset;
+              }
               a {
-                padding: 12px 22px;
+                padding: 10px 22px;
               }
             }
             > h3 {
@@ -451,6 +506,7 @@
               padding: 24px 0px 12px 0;
               opacity: 1;
               color: $--gray-700;
+              line-height: 28px;
               font-family: $--font-roboto;
               font-size: 24px;
               font-weight: 700;
@@ -482,6 +538,12 @@
             > p {
               margin: 0;
               color: $--gray-700;
+              text-align: center;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
+              }
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -490,6 +552,10 @@
                   height: 100%;
                   width: 100%;
                 }
+              }
+              > .icon-shopbag {
+                height: 64px;
+                width: 72px;
               }
               > .icon-search-icon-enrolling {
                 height: 64px;
@@ -526,8 +592,11 @@
               }
             }
             > .button-container {
+              @include for-mobile {
+                width: unset;
+              }
               a {
-                padding: 12px 22px;
+                padding: 10px 22px;
               }
             }
             > h3 {
@@ -536,6 +605,7 @@
               opacity: 1;
               color: $--gray-700;
               font-family: $--font-roboto;
+              line-height: 28px;
               font-size: 24px;
               font-weight: 700;
               font-style: Bold;
@@ -578,6 +648,12 @@
             > p {
               margin: 0;
               color: $--gray-700;
+              text-align: center;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
+              }
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -586,6 +662,10 @@
                   height: 100%;
                   width: 100%;
                 }
+              }
+              > .icon-shopbag {
+                height: 64px;
+                width: 72px;
               }
               > .icon-search-icon-enrolling {
                 height: 64px;
@@ -622,8 +702,11 @@
               }
             }
             > .button-container {
+              @include for-mobile {
+                width: unset;
+              }
               a {
-                padding: 12px 22px;
+                padding: 10px 22px;
               }
             }
             > h3 {
@@ -637,6 +720,7 @@
               font-style: Bold;
               letter-spacing: 0px;
               text-align: center;
+              line-height: 28px;
             }
           }
         }

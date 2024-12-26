@@ -4,11 +4,16 @@ export default function decorate(block) {
   const ul = document.createElement('ul');
 
   // Get the title from the first child and prepend it
-  const title = block.children[0].innerText;
-  const mainHeading = document.createElement('h2');
-  mainHeading.classList.add('testimonial-heading');
-  mainHeading.textContent = title;
-  parentElement.prepend(mainHeading);
+  const firstChild = block.children[0];
+
+  // Check if the first child is authored (you can define your own criteria for "authored")
+  if (firstChild && firstChild.innerText.trim() !== '') { // Example condition: check if it has text
+    const title = firstChild.innerText;
+    const mainHeading = document.createElement('h2');
+    mainHeading.classList.add('testimonial-heading');
+    mainHeading.textContent = title;
+    parentElement.prepend(mainHeading);
+  }
 
   // Get the link from the last child
   const lastChildIndex = block.children.length - 1;
@@ -17,6 +22,7 @@ export default function decorate(block) {
 
   // Check if the last child has content
   if (lastChild && lastChild.innerText.trim() !== '') {
+    linkDiv.classList.add('inline-link');
     const link = lastChild.innerText;
     const hyperLink = document.createElement('a');
     hyperLink.classList.add('testimonial-link');

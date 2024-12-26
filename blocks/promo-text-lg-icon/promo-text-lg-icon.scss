@@ -5,6 +5,10 @@
   margin: 0;
   opacity: 1;
   background-color: rgba(74, 115, 144, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: unset !important;
   @include for-xlarge {
     padding: 0 52px;
   }
@@ -24,6 +28,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 1275px;
     > div {
       display: flex;
       flex-direction: column;
@@ -41,7 +46,7 @@
       }
       @include for-laptop {
         padding: 120px 0px 120px 0px;
-        width: calc(83.33% - 10px);
+        width: 83%;
       }
       @include for-mobile {
         padding: 72px 0;
@@ -111,6 +116,24 @@
             > img {
               height: 100%;
               width: 100%;
+            }
+            > i {
+              color: #426781;
+              @include for-xlarge {
+                font-size: 345px;
+              }
+              @include for-large {
+                font-size: 345px;
+              }
+              @include for-laptop {
+                font-size: 345px;
+              }
+              @include for-mobile {
+                font-size: 299px;
+              }
+              @include for-tablet {
+                font-size: 256px;
+              }
             }
           }
         }

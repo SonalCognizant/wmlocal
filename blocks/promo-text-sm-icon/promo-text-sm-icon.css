@@ -5,31 +5,28 @@
 .promo-text-sm-icon-wrapper {
   margin: 0;
 }
-.promo-text-sm-icon-wrapper > .promo-text-sm-icon {
-  padding: 0 52px;
-}
 @media (min-width: 1380px) {
-  .promo-text-sm-icon-wrapper > .promo-text-sm-icon {
+  .promo-text-sm-icon-wrapper {
     padding: 0 52px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
-  .promo-text-sm-icon-wrapper > .promo-text-sm-icon {
+  .promo-text-sm-icon-wrapper {
     padding: 0 52px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
-  .promo-text-sm-icon-wrapper > .promo-text-sm-icon {
+  .promo-text-sm-icon-wrapper {
     padding: 0 36px;
   }
 }
 @media (max-width: 480px) {
-  .promo-text-sm-icon-wrapper > .promo-text-sm-icon {
+  .promo-text-sm-icon-wrapper {
     padding: 0 16px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
-  .promo-text-sm-icon-wrapper > .promo-text-sm-icon {
+  .promo-text-sm-icon-wrapper {
     padding: 0 36px;
   }
 }
@@ -44,26 +41,34 @@
 @media (min-width: 1380px) {
   .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div {
     padding: 120px 0px;
+    width: calc(66.66% - 10px);
+    margin: 0 auto;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div {
     padding: 120px 0px;
+    width: calc(66.66% - 10px);
+    margin: 0 auto;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div {
-    padding: 118px 0px 120px 0px;
+    padding: 120px 0px 120px 0px;
+    width: calc(83.33% - 10px);
+    margin: 0 auto;
   }
 }
 @media (max-width: 480px) {
   .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div {
     padding: 72px 0;
+    width: 100%;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div {
     padding: 96px 0;
+    width: 100%;
   }
 }
 .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > div {
@@ -83,31 +88,19 @@
   text-align: center;
   padding-bottom: 24px;
   margin: 0;
-}
-@media (min-width: 1380px) {
-  .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > div > .title {
-    width: calc(66.66% + 60px);
-  }
-}
-@media (min-width: 1201px) and (max-width: 1379px) {
-  .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > div > .title {
-    width: calc(66.66% + 60px);
-  }
-}
-@media (min-width: 1024px) and (max-width: 1200px) {
-  .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > div > .title {
-    width: 83.3333333333%;
-  }
+  width: 100%;
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > div > .title {
     width: 100%;
+    font-size: 28px;
   }
 }
 @media (max-width: 480px) {
   .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > div > .title {
     padding-bottom: 16px;
     width: 100%;
+    font-size: 28px;
   }
 }
 .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > div > p {
@@ -151,6 +144,9 @@
   height: 100%;
   width: 100%;
 }
+.promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > div > p > span i {
+  font-size: 110px;
+}
 .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > .button {
   margin: 0;
   border-radius: 2px;
@@ -172,26 +168,7 @@
   line-height: 24px;
   margin: 0;
   padding-bottom: 36px;
-}
-@media (min-width: 1380px) {
-  .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > .description {
-    width: calc(66.66% + 60px);
-  }
-}
-@media (min-width: 1201px) and (max-width: 1379px) {
-  .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > .description {
-    width: calc(66.66% + 60px);
-  }
-}
-@media (min-width: 1024px) and (max-width: 1200px) {
-  .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > .description {
-    width: 83.3333333333%;
-  }
-}
-@media (min-width: 480.5px) and (max-width: 1023.5px) {
-  .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > .description {
-    width: 100%;
-  }
+  width: 100%;
 }
 @media (max-width: 480px) {
   .promo-text-sm-icon-wrapper > .promo-text-sm-icon > div > .description {

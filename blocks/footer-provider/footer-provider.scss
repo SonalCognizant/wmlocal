@@ -34,20 +34,24 @@
         > p {
           display: flex;
           gap: 12px;
+          margin: 0;
           > a > span {
-            height: 40px;
-            width: 40px;
+            border: 1.5px solid #4d4d4f;
+            height: 21px;
+            width: 21px;
             display: inline-block;
+            padding: 8.25px;
+            border-radius: 5px;
             i {
               font-size: 24px;
-              color: black;
+              color: #4d4d4f;
               height: 100%;
               width: 100%;
-              border: 1px solid black;
+              // border: 1px solid black;
               display: flex;
               justify-content: center;
               align-items: center;
-              border-radius: 5px;
+              // border-radius: 5px;
             }
           }
         }
@@ -140,19 +144,22 @@
           margin: 0;
           padding-top: 36px;
           > a > span {
-            height: 40px;
-            width: 40px;
+            border: 1.5px solid #4d4d4f;
+            height: 21px;
+            width: 21px;
             display: inline-block;
+            padding: 8.25px;
+            border-radius: 5px;
             i {
               font-size: 24px;
-              color: black;
+              color: #4d4d4f;
               height: 100%;
               width: 100%;
-              border: 1px solid black;
+              // border: 1px solid black;
               display: flex;
               justify-content: center;
               align-items: center;
-              border-radius: 5px;
+              // border-radius: 5px;
             }
           }
         }
@@ -227,7 +234,7 @@
           @include for-large {
             gap: 0;
           }
-           li {
+          li {
             font-size: 12px;
             @include for-laptop {
               &:first-child {

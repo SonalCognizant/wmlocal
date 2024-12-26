@@ -73,6 +73,18 @@
                     margin-left: 15px;
                   }
                 }
+                span {
+                  margin-bottom: $--spacing-l;
+                  width: 64px;
+                  height: 64px;
+                  @include for-laptop{
+                    margin-left: 15px;
+                  }
+                  i {
+                    font-size: 64px;
+                    color: $--white;
+                  }
+                }
                 @include for-mobile {
                   font-size: 32px;
                 }
