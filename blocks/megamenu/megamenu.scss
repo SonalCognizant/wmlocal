@@ -339,23 +339,35 @@ header {
                             font-size: 16px;
                             font-family: $--font-roboto;
                             font-weight: 500;
+                            margin: $--spacing-l $--spacing-xxl 30px 0;
                             @include for-mobile {
                                 border-bottom: 1px solid $--blue-100;
                                 display: inline-block;
+                                margin: 0;
                             }
                             @include for-tablet {
                                 border-bottom: 1px solid $--blue-100;
                                 display: inline-block;
+                                margin: 0;
                             }
                             .header-menu-link{
-                                padding: $--spacing-l $--spacing-xxl $--spacing-l 0;
                                 display:flex;
                                 .header-menu-icon{
+                                    cursor: pointer;
                                     img{
                                         width: 16px;
                                         height: 9px;
                                         margin-left: $--spacing-xs;
                                         margin-bottom: 3px;
+                                    }
+                                }
+                                .navbarpara{
+                                    margin: 0;
+                                    padding-bottom: 4px;
+                                    line-height: 19px;
+                                    cursor: pointer;
+                                    &:hover{
+                                        border-bottom: 2px solid $--blue-675;
                                     }
                                 }
                                 ~ .header-menu-item{
@@ -366,12 +378,348 @@ header {
                                         display: none;
                                     }
                                 }
-                                &.menu-active ~ .header-menu-item{
+                                &.show-menu ~ .header-menu-item{
                                     @include for-mobile {
                                         display: block;
                                     }
                                     @include for-tablet {
                                         display: block;
+                                    }
+                                    a{
+                                        color: $--blue-675;
+                                        border-bottom: 2px solid $--blue-675;
+                                        @include for-mobile {
+                                            border-bottom: none;
+                                            color: $--gray-700;
+                                        }
+                                        @include for-tablet {
+                                            border-bottom: none;
+                                            color: $--gray-700;
+                                        }
+                                    }
+                                    @include for-laptop{
+                                        position: absolute;
+                                        display: flex;
+                                        flex-direction: row;
+                                        background-color: $--white;
+                                        top: 78px;
+                                        gap: 30px;
+                                        width: calc(100% + 72px);
+                                        left: -36px;
+                                        box-shadow: 1px 7px 9px -4px rgba(0, 0, 0, 0.2);
+                                        border-top: 2px solid #d6e5f1;
+                                        .header-submenu-list {
+                                            width: calc((100% + 66px) / 12* 7);
+                                            padding-left: $--spacing-xl;
+                                            .header-submenu-ul{
+                                                display: flex; 
+                                                gap: 30px;
+                                                ul{
+                                                    list-style-type: none;
+                                                    margin: 0;
+                                                    padding: $--spacing-xl 0 $--spacing-xxl 0;
+                                                    text-align: left;
+                                                    width: calc((100% - 24px) / 3);
+                                                    h4{
+                                                        margin: 0;
+                                                        border-bottom: 2px solid #ededee;
+                                                        padding-bottom: 24px;
+                                                    }
+                                                    li {
+                                                        padding-top: 24px;
+                                                        a{
+                                                            border: none;
+                                                            text-decoration: underline;
+                                                            padding: 0;
+                                                            color: $--blue-675;
+                                                        }
+                                                        p{
+                                                            font-family: $--font-roboto;
+                                                            font-size: 16px;
+                                                            font-weight: 400;
+                                                            color: $--gray-500;
+                                                            letter-spacing: 0px;
+                                                            text-align: left;
+                                                            line-height: 24px;
+                                                            margin: 0;
+                                                            padding-top: $--spacing-xxs;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .menu-submenu-content {
+                                            width: calc((100% - 55px) / 12* 5);
+                                            background: $--blue-50;
+                                            padding: $--spacing-xl;
+                                            .mega-image-text-container{
+                                                .default-content-wrapper{
+                                                    padding: 0;
+                                                    h4{
+                                                        margin: 0;
+                                                        border-bottom: 2px solid $--blue-100;
+                                                        padding-bottom: $--spacing-l;
+                                                    }
+                                                }
+                                                .mega-image-text-wrapper{
+                                                    .mega-image-text {
+                                                        &.block {
+                                                            padding-top: $--spacing-l;
+                                                            >div {
+                                                                gap: $--spacing-m;
+                                                                align-items: start;
+                                                                display: flex;
+                                                            }
+                                                            >div{
+                                                                img{
+                                                                    width: 74px;
+                                                                    height: 74px;
+                                                                    border-radius: 4px;
+                                                                }
+                                                                .button-container{
+                                                                    a{
+                                                                        border: none;
+                                                                        padding-bottom: $--spacing-xs;
+                                                                        font-size: 16px;
+                                                                        font-weight: 500;
+                                                                    }
+                                                                }
+                                                                p{
+                                                                    margin: 0;
+                                                                    color: $--gray-700;
+                                                                    font-family: $--font-roboto;
+                                                                    font-size: 16px;
+                                                                    font-weight: 400;
+                                                                    letter-spacing: 0px;
+                                                                    text-align: left;
+                                                                    line-height: 24px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    @include for-large{
+                                        position: absolute;
+                                        display: flex;
+                                        flex-direction: row;
+                                        background-color: $--white;
+                                        padding: 0 $--spacing-xxl;
+                                        top: 78px;
+                                        gap: 30px;
+                                        width: 100%;
+                                        left: -52px;
+                                        box-shadow: 1px 7px 9px -4px rgba(0, 0, 0, 0.2);
+                                        border-top: 2px solid #d6e5f1;
+                                        .header-submenu-list {
+                                            width: calc((100% + 104px) / 12* 7);
+                                            .header-submenu-ul{
+                                                display: flex; 
+                                                gap: 30px;
+                                                ul{
+                                                    list-style-type: none;
+                                                    margin: 0;
+                                                    padding: $--spacing-xl 0 $--spacing-xxl 0;
+                                                    text-align: left;
+                                                    width: calc((100% - 24px) / 3);
+                                                    h4{
+                                                        margin: 0;
+                                                        border-bottom: 2px solid #ededee;
+                                                        padding-bottom: 24px;
+                                                    }
+                                                    li {
+                                                        padding-top: 24px;
+                                                        a{
+                                                            border: none;
+                                                            text-decoration: underline;
+                                                            padding: 0;
+                                                            color: $--blue-675;
+                                                        }
+                                                        p{
+                                                            font-family: $--font-roboto;
+                                                            font-size: 16px;
+                                                            font-weight: 400;
+                                                            color: $--gray-500;
+                                                            letter-spacing: 0px;
+                                                            text-align: left;
+                                                            line-height: 24px;
+                                                            margin: 0;
+                                                            padding-top: $--spacing-xxs;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .menu-submenu-content {
+                                            width: calc((100% - 104px) / 12* 5);
+                                            background: $--blue-50;
+                                            padding: $--spacing-xl;
+                                            .mega-image-text-container{
+                                                .default-content-wrapper{
+                                                    padding: 0;
+                                                    h4{
+                                                        margin: 0;
+                                                        border-bottom: 2px solid $--blue-100;
+                                                        padding-bottom: $--spacing-l;
+                                                    }
+                                                }
+                                                .mega-image-text-wrapper{
+                                                    .mega-image-text {
+                                                        &.block {
+                                                            padding-top: $--spacing-l;
+                                                            >div {
+                                                                gap: $--spacing-m;
+                                                                align-items: start;
+                                                                display: flex;
+                                                            }
+                                                            >div{
+                                                                img{
+                                                                    width: 125px;
+                                                                    height: 125px;
+                                                                    border-radius: 4px;
+                                                                }
+                                                                .button-container{
+                                                                    a{
+                                                                        border: none;
+                                                                        padding-bottom: $--spacing-xs;
+                                                                        font-size: 16px;
+                                                                        font-weight: 500;
+                                                                    }
+                                                                }
+                                                                p{
+                                                                    margin: 0;
+                                                                    color: $--gray-700;
+                                                                    font-family: $--font-roboto;
+                                                                    font-size: 16px;
+                                                                    font-weight: 400;
+                                                                    letter-spacing: 0px;
+                                                                    text-align: left;
+                                                                    line-height: 24px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    @include for-xlarge{
+                                        position: absolute;
+                                        display: flex;
+                                        flex-direction: row;
+                                        margin: 0 $--spacing-xxl;
+                                        top: 78px;
+                                        gap: 30px;
+                                        width: 100%;
+                                        left: -52px;
+                                        .header-submenu-list {
+                                            width: calc((100% + 104px) / 12* 7);
+                                            z-index: 1;
+                                            .header-submenu-ul{
+                                                display: flex; 
+                                                gap: 30px;
+                                                ul{
+                                                    list-style-type: none;
+                                                    margin: 0;
+                                                    padding: $--spacing-xl 0 $--spacing-xxl 0;
+                                                    text-align: left;
+                                                    width: calc((100% - 24px) / 3);
+                                                    h4{
+                                                        margin: 0;
+                                                        border-bottom: 2px solid #ededee;
+                                                        padding-bottom: 24px;
+                                                    }
+                                                    li {
+                                                        padding-top: 24px;
+                                                        a{
+                                                            border: none;
+                                                            text-decoration: underline;
+                                                            padding: 0;
+                                                            color: $--blue-675;
+                                                        }
+                                                        p{
+                                                            font-family: $--font-roboto;
+                                                            font-size: 16px;
+                                                            font-weight: 400;
+                                                            color: $--gray-500;
+                                                            letter-spacing: 0px;
+                                                            text-align: left;
+                                                            line-height: 24px;
+                                                            margin: 0;
+                                                            padding-top: $--spacing-xxs;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .menu-submenu-content {
+                                            width: calc((100% - 104px) / 12* 5);
+                                            background: $--blue-50;
+                                            padding: $--spacing-xl;
+                                            z-index: 1;
+                                            border-top: 2px solid #d6e5f1;
+                                            .mega-image-text-container{
+                                                .default-content-wrapper{
+                                                    padding: 0;
+                                                    h4{
+                                                        margin: 0;
+                                                        border-bottom: 2px solid $--blue-100;
+                                                        padding-bottom: $--spacing-l;
+                                                    }
+                                                }
+                                                .mega-image-text-wrapper{
+                                                    .mega-image-text {
+                                                        &.block {
+                                                            padding-top: $--spacing-l;
+                                                            >div {
+                                                                gap: $--spacing-m;
+                                                                align-items: start;
+                                                                display: flex;
+                                                            }
+                                                            >div{
+                                                                img{
+                                                                    width: 125px;
+                                                                    height: 125px;
+                                                                    border-radius: 4px;
+                                                                }
+                                                                .button-container{
+                                                                    a{
+                                                                        border: none;
+                                                                        padding-bottom: $--spacing-xs;
+                                                                        font-size: 16px;
+                                                                        font-weight: 500;
+                                                                    }
+                                                                }
+                                                                p{
+                                                                    margin: 0;
+                                                                    color: $--gray-700;
+                                                                    font-family: $--font-roboto;
+                                                                    font-size: 16px;
+                                                                    font-weight: 400;
+                                                                    letter-spacing: 0px;
+                                                                    text-align: left;
+                                                                    line-height: 24px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &::after {
+                                            display: block;
+                                            content: "";
+                                            background-color: $--white;
+                                            height: 100%;
+                                            position: absolute;
+                                            width: 100vw;
+                                            z-index: 0;
+                                            left: calc(((100vw - 1275px) /2) * -1);
+                                            box-shadow: 1px 7px 9px -4px rgba(0, 0, 0, 0.2);
+                                            border-top: 2px solid $--blue-100;
+                                        }
                                     }
                                 }
                                 a{
@@ -386,11 +734,46 @@ header {
                                         border-bottom: 2px solid $--blue-675; 
                                     }
                                 }
+                                &.show-menu{
+                                    @include for-laptop{
+                                        .header-menu-icon{
+                                            .menu-up-arrow{
+                                                display: inline-block;
+                                            }
+                                            .menu-down-arrow{
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                    @include for-large{
+                                        .header-menu-icon{
+                                            .menu-up-arrow{
+                                                display: inline-block;
+                                            }
+                                            .menu-down-arrow{
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                    @include for-xlarge{
+                                        .header-menu-icon{
+                                            .menu-up-arrow{
+                                                display: inline-block;
+                                            }
+                                            .menu-down-arrow{
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
                                 @include for-mobile{
                                     padding: $--spacing-m $--spacing-xl;
                                     margin: 0;
                                     a{
                                         line-height: 18px;
+                                    }
+                                    .navbarpara{
+                                        line-height: 18px; 
                                     }
                                     .header-menu-icon{
                                         .menu-up-arrow{
@@ -401,10 +784,10 @@ header {
                                             width: 12px;
                                             height: 7px;
                                             margin-left: 10px;
-                                            margin-bottom: 3px;
+                                            margin-bottom: 5px;
                                         }
                                     }
-                                    &.menu-active {
+                                    &.show-menu {
                                         a{
                                             color: $--gray-700;
                                             border-bottom: none;
@@ -415,7 +798,7 @@ header {
                                                 width: 12px;
                                                 height: 7px;
                                                 margin-left: 9px;
-                                                margin-bottom: 3px;
+                                                margin-bottom: 5px;
                                             }
                                             .menu-down-arrow{
                                                 display: none;
@@ -429,6 +812,9 @@ header {
                                     a{
                                         line-height: 18px;
                                     }
+                                    .navbarpara{
+                                        line-height: 18px; 
+                                    }
                                     .header-menu-icon{
                                         .menu-up-arrow{
                                             display: none;
@@ -438,10 +824,10 @@ header {
                                             width: 12px;
                                             height: 7px;
                                             margin-left: 10px;
-                                            margin-bottom: 3px;
+                                            margin-bottom: 5px;
                                         }
                                     }
-                                    &.menu-active {
+                                    &.show-menu {
                                         a{
                                             color: $--gray-700;
                                             border-bottom: none;
@@ -452,7 +838,7 @@ header {
                                                 width: 12px;
                                                 height: 7px;
                                                 margin-left: 9px;
-                                                margin-bottom: 3px;
+                                                margin-bottom: 5px;
                                             }
                                             .menu-down-arrow{
                                                 display: none;
@@ -583,8 +969,8 @@ header {
                                     }
                                 }
                             }
-                            &:hover{
-                                a{
+                            a{
+                                &:hover{
                                     color: $--blue-675;
                                     border-bottom: 2px solid $--blue-675;
                                     @include for-mobile {
@@ -594,366 +980,6 @@ header {
                                     @include for-tablet {
                                         border-bottom: none;
                                         color: $--gray-700;
-                                    }
-                                }
-                                @include for-laptop{
-                                    .header-menu-icon{
-                                        .menu-up-arrow{
-                                            display: inline-block;
-                                        }
-                                        .menu-down-arrow{
-                                            display: none;
-                                        }
-                                    }
-                                }
-                                @include for-large{
-                                    .header-menu-icon{
-                                        .menu-up-arrow{
-                                            display: inline-block;
-                                        }
-                                        .menu-down-arrow{
-                                            display: none;
-                                        }
-                                    }
-                                }
-                                @include for-xlarge{
-                                    .header-menu-icon{
-                                        .menu-up-arrow{
-                                            display: inline-block;
-                                        }
-                                        .menu-down-arrow{
-                                            display: none;
-                                        }
-                                    }
-                                }
-                                @include for-laptop{
-                                    .header-menu-item {
-                                        position: absolute;
-                                        display: flex;
-                                        flex-direction: row;
-                                        background-color: $--white;
-                                        top: 73px;
-                                        gap: 30px;
-                                        width: calc(100% + 72px);
-                                        left: -36px;
-                                        box-shadow: 1px 7px 9px -4px rgba(0, 0, 0, 0.2);
-                                        border-top: 2px solid #d6e5f1;
-                                        .header-submenu-list {
-                                            width: calc((100% + 66px) / 12* 7);
-                                            padding-left: $--spacing-xl;
-                                            .header-submenu-ul{
-                                                display: flex; 
-                                                gap: 30px;
-                                                ul{
-                                                    list-style-type: none;
-                                                    margin: 0;
-                                                    padding: $--spacing-xl 0 $--spacing-xxl 0;
-                                                    text-align: left;
-                                                    width: calc((100% - 24px) / 3);
-                                                    h4{
-                                                        margin: 0;
-                                                        border-bottom: 2px solid #ededee;
-                                                        padding-bottom: 24px;
-                                                    }
-                                                    li {
-                                                        padding-top: 24px;
-                                                        a{
-                                                            border: none;
-                                                            text-decoration: underline;
-                                                            padding: 0;
-                                                            color: $--blue-675;
-                                                        }
-                                                        p{
-                                                            font-family: $--font-roboto;
-                                                            font-size: 16px;
-                                                            font-weight: 400;
-                                                            color: $--gray-500;
-                                                            letter-spacing: 0px;
-                                                            text-align: left;
-                                                            line-height: 24px;
-                                                            margin: 0;
-                                                            padding-top: $--spacing-xxs;
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                        .menu-submenu-content {
-                                            width: calc((100% - 55px) / 12* 5);
-                                            background: $--blue-50;
-                                            padding: $--spacing-xl;
-                                            .mega-image-text-container{
-                                                .default-content-wrapper{
-                                                    padding: 0;
-                                                    h4{
-                                                        margin: 0;
-                                                        border-bottom: 2px solid $--blue-100;
-                                                        padding-bottom: $--spacing-l;
-                                                    }
-                                                }
-                                                .mega-image-text-wrapper{
-                                                    .mega-image-text {
-                                                        &.block {
-                                                            padding-top: $--spacing-l;
-                                                            >div {
-                                                                gap: $--spacing-m;
-                                                                align-items: start;
-                                                                display: flex;
-                                                            }
-                                                            >div{
-                                                                img{
-                                                                    width: 74px;
-                                                                    height: 74px;
-                                                                    border-radius: 4px;
-                                                                }
-                                                                .button-container{
-                                                                    a{
-                                                                        border: none;
-                                                                        padding-bottom: $--spacing-xs;
-                                                                        font-size: 16px;
-                                                                        font-weight: 500;
-                                                                    }
-                                                                }
-                                                                p{
-                                                                    margin: 0;
-                                                                    color: $--gray-700;
-                                                                    font-family: $--font-roboto;
-                                                                    font-size: 16px;
-                                                                    font-weight: 400;
-                                                                    letter-spacing: 0px;
-                                                                    text-align: left;
-                                                                    line-height: 24px;
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                                @include for-large{
-                                    .header-menu-item {
-                                        position: absolute;
-                                        display: flex;
-                                        flex-direction: row;
-                                        background-color: $--white;
-                                        padding: 0 $--spacing-xxl;
-                                        top: 73px;
-                                        gap: 30px;
-                                        width: 100%;
-                                        left: -52px;
-                                        box-shadow: 1px 7px 9px -4px rgba(0, 0, 0, 0.2);
-                                        border-top: 2px solid #d6e5f1;
-                                        .header-submenu-list {
-                                            width: calc((100% + 104px) / 12* 7);
-                                            .header-submenu-ul{
-                                                display: flex; 
-                                                gap: 30px;
-                                                ul{
-                                                    list-style-type: none;
-                                                    margin: 0;
-                                                    padding: $--spacing-xl 0 $--spacing-xxl 0;
-                                                    text-align: left;
-                                                    width: calc((100% - 24px) / 3);
-                                                    h4{
-                                                        margin: 0;
-                                                        border-bottom: 2px solid #ededee;
-                                                        padding-bottom: 24px;
-                                                    }
-                                                    li {
-                                                        padding-top: 24px;
-                                                        a{
-                                                            border: none;
-                                                            text-decoration: underline;
-                                                            padding: 0;
-                                                            color: $--blue-675;
-                                                        }
-                                                        p{
-                                                            font-family: $--font-roboto;
-                                                            font-size: 16px;
-                                                            font-weight: 400;
-                                                            color: $--gray-500;
-                                                            letter-spacing: 0px;
-                                                            text-align: left;
-                                                            line-height: 24px;
-                                                            margin: 0;
-                                                            padding-top: $--spacing-xxs;
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                        .menu-submenu-content {
-                                            width: calc((100% - 104px) / 12* 5);
-                                            background: $--blue-50;
-                                            padding: $--spacing-xl;
-                                            .mega-image-text-container{
-                                                .default-content-wrapper{
-                                                    padding: 0;
-                                                    h4{
-                                                        margin: 0;
-                                                        border-bottom: 2px solid $--blue-100;
-                                                        padding-bottom: $--spacing-l;
-                                                    }
-                                                }
-                                                .mega-image-text-wrapper{
-                                                    .mega-image-text {
-                                                        &.block {
-                                                            padding-top: $--spacing-l;
-                                                            >div {
-                                                                gap: $--spacing-m;
-                                                                align-items: start;
-                                                                display: flex;
-                                                            }
-                                                            >div{
-                                                                img{
-                                                                    width: 125px;
-                                                                    height: 125px;
-                                                                    border-radius: 4px;
-                                                                }
-                                                                .button-container{
-                                                                    a{
-                                                                        border: none;
-                                                                        padding-bottom: $--spacing-xs;
-                                                                        font-size: 16px;
-                                                                        font-weight: 500;
-                                                                    }
-                                                                }
-                                                                p{
-                                                                    margin: 0;
-                                                                    color: $--gray-700;
-                                                                    font-family: $--font-roboto;
-                                                                    font-size: 16px;
-                                                                    font-weight: 400;
-                                                                    letter-spacing: 0px;
-                                                                    text-align: left;
-                                                                    line-height: 24px;
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                                @include for-xlarge{
-                                    .header-menu-item {
-                                        position: absolute;
-                                        display: flex;
-                                        flex-direction: row;
-                                        margin: 0 $--spacing-xxl;
-                                        top: 72px;
-                                        gap: 30px;
-                                        width: 100%;
-                                        left: -52px;
-                                        .header-submenu-list {
-                                            width: calc((100% + 104px) / 12* 7);
-                                            z-index: 1;
-                                            .header-submenu-ul{
-                                                display: flex; 
-                                                gap: 30px;
-                                                ul{
-                                                    list-style-type: none;
-                                                    margin: 0;
-                                                    padding: $--spacing-xl 0 $--spacing-xxl 0;
-                                                    text-align: left;
-                                                    width: calc((100% - 24px) / 3);
-                                                    h4{
-                                                        margin: 0;
-                                                        border-bottom: 2px solid #ededee;
-                                                        padding-bottom: 24px;
-                                                    }
-                                                    li {
-                                                        padding-top: 24px;
-                                                        a{
-                                                            border: none;
-                                                            text-decoration: underline;
-                                                            padding: 0;
-                                                            color: $--blue-675;
-                                                        }
-                                                        p{
-                                                            font-family: $--font-roboto;
-                                                            font-size: 16px;
-                                                            font-weight: 400;
-                                                            color: $--gray-500;
-                                                            letter-spacing: 0px;
-                                                            text-align: left;
-                                                            line-height: 24px;
-                                                            margin: 0;
-                                                            padding-top: $--spacing-xxs;
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                        .menu-submenu-content {
-                                            width: calc((100% - 104px) / 12* 5);
-                                            background: $--blue-50;
-                                            padding: $--spacing-xl;
-                                            z-index: 1;
-                                            border-top: 2px solid #d6e5f1;
-                                            .mega-image-text-container{
-                                                .default-content-wrapper{
-                                                    padding: 0;
-                                                    h4{
-                                                        margin: 0;
-                                                        border-bottom: 2px solid $--blue-100;
-                                                        padding-bottom: $--spacing-l;
-                                                    }
-                                                }
-                                                .mega-image-text-wrapper{
-                                                    .mega-image-text {
-                                                        &.block {
-                                                            padding-top: $--spacing-l;
-                                                            >div {
-                                                                gap: $--spacing-m;
-                                                                align-items: start;
-                                                                display: flex;
-                                                            }
-                                                            >div{
-                                                                img{
-                                                                    width: 125px;
-                                                                    height: 125px;
-                                                                    border-radius: 4px;
-                                                                }
-                                                                .button-container{
-                                                                    a{
-                                                                        border: none;
-                                                                        padding-bottom: $--spacing-xs;
-                                                                        font-size: 16px;
-                                                                        font-weight: 500;
-                                                                    }
-                                                                }
-                                                                p{
-                                                                    margin: 0;
-                                                                    color: $--gray-700;
-                                                                    font-family: $--font-roboto;
-                                                                    font-size: 16px;
-                                                                    font-weight: 400;
-                                                                    letter-spacing: 0px;
-                                                                    text-align: left;
-                                                                    line-height: 24px;
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                        &::after {
-                                            display: block;
-                                            content: "";
-                                            background-color: $--white;
-                                            height: 100%;
-                                            position: absolute;
-                                            width: 100vw;
-                                            z-index: 0;
-                                            left: calc(((100vw - 1275px) /2) * -1);
-                                            box-shadow: 1px 7px 9px -4px rgba(0, 0, 0, 0.2);
-                                            border-top: 2px solid $--blue-100;
-                                        }
                                     }
                                 }
                             }
