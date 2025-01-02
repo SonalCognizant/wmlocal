@@ -75,7 +75,7 @@
           z-index: 2;
           width: 100%;
           @include for-tablet {
-            font-size: 28px;
+            font-size: 32px;
           }
           @include for-mobile {
             padding-bottom: 16px;
@@ -106,9 +106,9 @@
             height: 299px;
           }
           @include for-tablet {
-            bottom: -165px;
-            width: 256px;
-            height: 256px;
+            bottom: -200px;
+            width: 299px;
+            height: 299px;
           }
           > span {
             height: 100%;
@@ -132,7 +132,7 @@
                 font-size: 299px;
               }
               @include for-tablet {
-                font-size: 256px;
+                font-size: 299px;
               }
             }
           }
