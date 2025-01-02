@@ -7,7 +7,7 @@ export default function decorate(block) {
   const ul = document.createElement('ul');
   const imageWrapperDiv = block.parentElement;
   imageWrapperDiv.style.backgroundImage = `url(${backgroundImage}) , linear-gradient(
-      180deg,
+      181deg,
       rgba(75, 76, 77, 1) 0%,
       rgba(93, 93, 93, 0.65) 29%,
       rgba(115, 115, 115, 0.2) 100%
