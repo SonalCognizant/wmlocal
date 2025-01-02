@@ -63,33 +63,40 @@ export function createOptimizedPicture(
 }
 
 function getUrlExtension(url) {
-  return url.split(/[#?]/)[0].split('.').pop().trim();
+  const extensionValid = url.split(/[#?]/)[0].split('.').pop().trim();
+  const geturlvalid = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'].includes(extensionValid.toLowerCase());
+  let setreturn = '';
+  if (geturlvalid) {
+    setreturn = url.split(/[#?]/)[0].split('.').pop().trim();
+  } else {
+    const aaidURL = url.split(/[:]/);
+    if (aaidURL.includes('aaid')) {
+      setreturn = 'aaid';
+    }
+  }
+  return setreturn;
+}
+function returnExtension(element) {
+  const ext = getUrlExtension(element.getAttribute('href'));
+  const extensionvalidation = ext === 'aaid' ? true : ext
+    && ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'].includes(ext.toLowerCase());
+  return { isVisible: extensionvalidation, isaaid: extensionvalidation };
 }
 // eslint-disable-next-line consistent-return
 function isExternalImage(element, externalImageMarker) {
   // if the element is not an anchor, it's not an external image
-  if (element.tagName !== 'A') return false;
+  if (element.tagName !== 'A') return { isVisible: false, isaaid: false };
 
-  // if the element is an anchor with the external image marker as text content,
-  // it's an external image
   if (element.textContent.trim() === externalImageMarker) {
-    return true;
+    return { isVisible: true, isaaid: false };
   }
-
-  // if the element is an anchor with the href as text content and the href has
-  // an image extension, it's an external image
-  if (element.textContent.trim() === element.getAttribute('href')) {
-    const ext = getUrlExtension(element.getAttribute('href'));
-    return (
-      ext
-      && ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'].includes(ext.toLowerCase())
-    );
-  }
+  return returnExtension(element);
 }
 export function decorateExternalImages(ele, deliveryMarker) {
   const extImages = ele.querySelectorAll('a');
   extImages.forEach((extImage) => {
-    if (isExternalImage(extImage, deliveryMarker)) {
+    const externalImgvalidate = isExternalImage(extImage, deliveryMarker);
+    if (externalImgvalidate.isVisible) {
       const extImageSrc = extImage.getAttribute('href');
       const extPicture = createOptimizedPicture(extImageSrc);
       /* copy query params from link to img */
@@ -101,7 +108,9 @@ export function decorateExternalImages(ele, deliveryMarker) {
           if (srcset) {
             child.setAttribute(
               'srcset',
-              appendQueryParams(new URL(srcset, extImageSrc), searchParams),
+              `${externalImgvalidate.isaaid ? extImageSrc : appendQueryParams(new URL(srcset, extImageSrc), searchParams)}`,
+              // appendQueryParams(new URL(srcset, extImageSrc), searchParams),
+              // extImageSrc
             );
           }
         } else if (child.tagName === 'IMG') {
@@ -109,7 +118,9 @@ export function decorateExternalImages(ele, deliveryMarker) {
           if (src) {
             child.setAttribute(
               'src',
-              appendQueryParams(new URL(src, extImageSrc), searchParams),
+              `${externalImgvalidate.isaaid ? extImageSrc : appendQueryParams(new URL(src, extImageSrc), searchParams)}`,
+              // appendQueryParams(new URL(src, extImageSrc), searchParams),
+              // extImageSrc
             );
           }
         }
