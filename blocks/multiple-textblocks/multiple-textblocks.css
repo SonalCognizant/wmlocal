@@ -116,7 +116,7 @@
   line-height: 24px;
   margin: 0;
 }
-.multiple-textblocks-container .multiple-textblocks-wrapper .multiple-textblocks > ul > li > .block-div > p:last-child {
+.multiple-textblocks-container .multiple-textblocks-wrapper .multiple-textblocks > ul > li > .block-div > p:has(a) {
   padding-top: 24px;
   width: fit-content;
 }
