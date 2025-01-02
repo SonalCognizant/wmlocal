@@ -107,8 +107,8 @@
           }
           @include for-tablet {
             bottom: -165px;
-            width: 256px;
-            height: 256px;
+            width: 299px;
+            height: 299px;
           }
           > span {
             height: 100%;
@@ -132,7 +132,7 @@
                 font-size: 299px;
               }
               @include for-tablet {
-                font-size: 256px;
+                font-size: 299px;
               }
             }
           }
