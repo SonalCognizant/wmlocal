@@ -102,7 +102,7 @@
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .promo-text-lg-icon-wrapper > .promo-text-lg-icon > div > div > .title {
-    font-size: 28px;
+    font-size: 32px;
   }
 }
 @media (max-width: 480px) {
