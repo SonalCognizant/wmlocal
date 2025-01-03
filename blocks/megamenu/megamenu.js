@@ -108,23 +108,43 @@ function renderMegaMenu(nav, navmenu) {
     const headermenulink = document.createElement('div');
     headermenulink.className = 'header-menu-link';
     headermenuli.prepend(headermenulink);
-    const navbaranchor = document.createElement('a');
-    navbaranchor.setAttribute('href', '#');
-    navbaranchor.innerText = item.title;
-    // Active menu
-    headermenulink.addEventListener('click', (e) => {
-      const navbarselect = e.target?.closest('.header-menu-link');
-      if (navbarselect?.classList.contains('menu-active')) {
-        navbarselect?.classList.remove('menu-active');
-      } else {
-        const anchoractive = document.querySelectorAll('.header-menu-link');
-        anchoractive.forEach((anchor) => {
-          anchor.classList.remove('menu-active');
-        });
-        navbarselect?.classList.add('menu-active');
-      }
-    });
-    headermenulink.append(navbaranchor);
+    if (!item.children || item.children.length === 0) {
+      const navbaranchor = document.createElement('a');
+      navbaranchor.setAttribute('href', '#');
+      navbaranchor.innerText = item.title;
+      headermenuli.appendChild(navbaranchor);
+      // Active menu
+      navbaranchor.addEventListener('click', (e) => {
+        const navbarselect = e.target?.closest('.header-menu-link');
+        if (navbarselect?.classList.contains('menu-active')) {
+          navbarselect?.classList.remove('menu-active');
+        } else {
+          const anchoractive = document.querySelectorAll('.header-menu-link');
+          anchoractive.forEach((anchor) => {
+            anchor.classList.remove('menu-active');
+          });
+          navbarselect?.classList.add('menu-active');
+        }
+      });
+      headermenulink.append(navbaranchor);
+    } else {
+      const navbarpara = document.createElement('p');
+      navbarpara.innerText = item.title;
+      navbarpara.className = 'navbarpara';
+      headermenulink.appendChild(navbarpara);
+      headermenulink.addEventListener('click', (e) => {
+        const navbarselect = e.target?.closest('.header-menu-link');
+        if (navbarselect?.classList.contains('show-menu')) {
+          navbarselect?.classList.remove('show-menu');
+        } else {
+          const anchoractive = document.querySelectorAll('.header-menu-link');
+          anchoractive.forEach((anchor) => {
+            anchor.classList.remove('show-menu');
+          });
+          navbarselect?.classList.add('show-menu');
+        }
+      });
+    }
 
     // View menu list
     if (item.children) {
@@ -392,6 +412,31 @@ function fetchAndTransformData(nav) {
     });
 }
 
+// Active default menu
+function highlightEventlistener(nav) {
+  const activemenu = nav.querySelectorAll('.header-menu-link');
+  const activemenushow = window.location.pathname.split('/');
+  activemenu.forEach((activenav) => {
+    const linktext = activenav.querySelector('a')?.textContent;
+    if (activemenushow.includes(linktext?.toLowerCase())) {
+      activenav.classList.add('menu-active');
+    }
+  });
+}
+
+// Outside click submenu close
+window.addEventListener('click', (e) => {
+  const handleClickOutside = document.querySelectorAll('.header-menu-link');
+  handleClickOutside.forEach((checkactivemenu) => {
+    const outsideClickListener = e.target.closest('.header-menu-link');
+    const outsideClick = e.target?.closest('.header-menu-li')?.querySelector('.header-menu-item');
+    const closeactive = outsideClickListener === null && outsideClick === undefined;
+    if (closeactive) {
+      checkactivemenu.classList.remove('show-menu');
+    }
+  });
+});
+
 /**
  * Loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
@@ -405,6 +450,7 @@ export default async function decorate(block) {
   navWrapper.className = 'main-header-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+  highlightEventlistener(nav);
   // create the breadcrumbs for the page
   const breadCrumbTag = document.querySelector('meta[name="breadcrumbs"]').content;
   // if the page has the metadata as like true then loading the breadcrumbs to the page
