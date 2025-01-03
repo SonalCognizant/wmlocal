@@ -414,14 +414,16 @@ function fetchAndTransformData(nav) {
 
 // Active default menu
 function highlightEventlistener(nav) {
-  const activemenu = nav.querySelectorAll('.header-menu-link');
-  const activemenushow = window.location.pathname.split('/');
-  activemenu.forEach((activenav) => {
-    const linktext = activenav.querySelector('a')?.textContent;
-    if (activemenushow.includes(linktext?.toLowerCase())) {
-      activenav.classList.add('menu-active');
-    }
-  });
+  setTimeout(() => {
+    const activemenu = nav.querySelectorAll('.header-menu-link');
+    const activemenushow = window.location.pathname.split('/');
+    activemenu.forEach((activenav) => {
+      const linktext = activenav.querySelector('a')?.textContent;
+      if (activemenushow.includes(linktext?.toLowerCase())) {
+        activenav.classList.add('menu-active');
+      }
+    });
+  }, 500);
 }
 
 // Outside click submenu close
