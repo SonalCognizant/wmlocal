@@ -3,11 +3,11 @@
 
 .breadcrumb-ul{
     display: flex;
-    max-width: 1275px;
-    margin: auto;
     padding: $--spacing-l 0;
+    margin: 0;
     .breadcrumb-list{
         list-style: none;
+        line-height: 19px;
         padding: 8px 0;
         position: relative;
         margin: 0 15px;
@@ -47,12 +47,22 @@
             }
         }
     }
+    @include for-xlarge{
+        max-width: 1275px;
+        margin: auto;
+    }
+    @include for-large{
+        width: calc(100% - 52px);
+        padding-left: $--spacing-xxl;
+    }
     @include for-laptop{
-        width: calc(100% - 75px);
+        width: calc(100% - 36px);
+        padding-left: $--spacing-xl;
     }
     @include for-tablet{
-        width: 100%;
-        padding: 32px 0 32px 36px;
+        width: calc(100% - 36px);
+        padding: 32px 0;
+        padding-left: $--spacing-xl;
         .breadcrumb-list{
             display: none;
             padding: 0;
@@ -69,8 +79,9 @@
         }
     }
     @include for-mobile{
-        width: 100%;
-        padding: 32px 0 32px 16px;
+        width: calc(100% - 36px);
+        padding: 32px 0;
+        padding-left: $--spacing-m;
         .breadcrumb-list{
             display: none;
             padding: 0;
