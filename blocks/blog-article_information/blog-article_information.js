@@ -24,7 +24,6 @@
 //     const readingArticlesSection = document.createElement('div');
 //     readingArticlesSection.classList.add('reading-articles');
 //     const readingArticles = document.createElement('p');
-//     readingArticles.textContent = `Reading Articles: ${block.dataset.articles || 'No articles available'}`;
 //     // Append reading articles to the section
 //     readingArticlesSection.appendChild(readingArticles);
 //     // Create a section for the audio link
