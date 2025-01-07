@@ -21,4 +21,3 @@ export default function decorate(block) {
     audio.parentElement.classList.add('article-audio');
   }
 }
-  
