@@ -371,6 +371,12 @@ header {
                                     cursor: pointer;
                                     &:hover{
                                         border-bottom: 2px solid $--blue-675;
+                                        @include for-mobile {
+                                            border-bottom: none;
+                                        }
+                                        @include for-tablet {
+                                            border-bottom: none;
+                                        }
                                     }
                                 }
                                 ~ .header-menu-item{
@@ -735,6 +741,14 @@ header {
                                     a{
                                         color: $--blue-675;
                                         border-bottom: 2px solid $--blue-675; 
+                                        @include for-mobile{
+                                            color: $--gray-700;
+                                            border-bottom: none;
+                                        }
+                                        @include for-tablet{
+                                            color: $--gray-700;
+                                            border-bottom: none;
+                                        }
                                     }
                                 }
                                 &.show-menu{
