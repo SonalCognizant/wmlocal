@@ -1,9 +1,11 @@
+@charset "UTF-8";
 /* wellmark color start */
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
 .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block {
   margin: auto;
+  position: relative;
 }
 @media (min-width: 1380px) {
   .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block {
@@ -23,11 +25,13 @@
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block {
     width: calc(100% - 72px);
+    padding-bottom: 21px;
   }
 }
 @media (max-width: 480px) {
   .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block {
     width: calc(100% - 32px);
+    padding-bottom: 21px;
   }
 }
 .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block p {
@@ -45,8 +49,46 @@
   width: 50%;
   display: flex;
 }
+.blog-article-information-container .blog-article-information-wrapper .blog-article-information.block div:has(.date) .date p:first-child {
+  position: relative;
+}
+.blog-article-information-container .blog-article-information-wrapper .blog-article-information.block div:has(.date) .date p:first-child::after {
+  content: "•";
+  position: absolute;
+  right: -10px;
+  top: 55%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #4b4c4d;
+}
 .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block div:has(.date) .date p:last-child {
-  margin-left: 5px;
+  margin-left: 13px;
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block div:has(.date) .date {
+    width: 100%;
+    flex-direction: column;
+  }
+  .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block div:has(.date) .date p::after {
+    display: none;
+  }
+  .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block div:has(.date) .date p:last-child {
+    margin: 0;
+    padding-top: 8px;
+  }
+}
+@media (max-width: 480px) {
+  .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block div:has(.date) .date {
+    width: 100%;
+    flex-direction: column;
+  }
+  .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block div:has(.date) .date p::after {
+    display: none;
+  }
+  .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block div:has(.date) .date p:last-child {
+    margin: 0;
+    padding-top: 8px;
+  }
 }
 .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block div:has(.date) .author {
   width: 50%;
@@ -57,6 +99,16 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block div:has(.date) .author p {
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 480px) {
+  .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block div:has(.date) .author p {
+    justify-content: flex-start;
+  }
 }
 .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block div:has(.date) .author p span {
   margin-right: 8px;
@@ -73,8 +125,32 @@
   left: 5px;
   top: 3px;
 }
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block div:has(.date) .author {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+}
+@media (max-width: 480px) {
+  .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block div:has(.date) .author {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+}
 .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block .article-link {
   padding: 8px 0;
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block .article-link {
+    padding-bottom: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block .article-link {
+    padding-bottom: 12px;
+  }
 }
 .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block .article-link p a {
   color: #005589;
@@ -85,11 +161,31 @@
   text-decoration: underline;
   margin-right: 12px;
 }
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block .article-link p a {
+    white-space: nowrap;
+  }
+}
+@media (max-width: 480px) {
+  .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block .article-link p a {
+    white-space: nowrap;
+  }
+}
 .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block .article-link p a:first-child {
   margin-left: 4px;
 }
 .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block .article-link p a:last-child {
   margin-right: 0;
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block .article-audio {
+    padding-bottom: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block .article-audio {
+    padding-bottom: 12px;
+  }
 }
 .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block .article-audio p {
   display: flex;
@@ -106,6 +202,11 @@
 .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block .article-audio p span {
   margin-right: 8px;
   height: 21px;
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block .article-audio p span {
+    margin-right: 16px;
+  }
 }
 .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block .article-audio p span i {
   color: #4b4c4d;
