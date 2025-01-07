@@ -79,7 +79,7 @@
         }
     }
     @include for-mobile{
-        width: calc(100% - 36px);
+        width: calc(100% - 16px);
         padding: 32px 0;
         padding-left: $--spacing-m;
         .breadcrumb-list{
