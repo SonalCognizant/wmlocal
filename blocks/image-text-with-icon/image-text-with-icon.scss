@@ -62,16 +62,6 @@
                 max-width: calc((100% - 30px) / 12* 5);
               }
             }
-            div{
-              &:last-child{
-                @include for-mobile {
-                  display: none;
-                }
-                @include for-tablet {
-                  display: none;
-                }
-              }
-            }
             >.columns-img-col {
               order: 0;
               align-self: flex-start;
