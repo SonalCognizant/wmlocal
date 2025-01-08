@@ -752,19 +752,19 @@ function loadPublishedDate() {
     })
     .then((data) => {
       const found = data.data.find((item) => item.path === currPagePath);
+      let lastModifiedDate = null;
+      let lastPublisheddate = null;
       if (found) {
         // eslint-disable-next-line no-undef
         if (found.lastModified) {
-          const lastModifiedFormatted = formatDate(found.lastModified);
-          window.BlogLastModified = lastModifiedFormatted;
+          lastModifiedDate = formatDate(found.lastModified);
         }
         if (found.lastPublished) {
-          const lastPublishedFormatted = formatDate(new Date(found.lastPublished).getTime() / 1000);
-          window.BlogLastPublished = lastPublishedFormatted;
-        } else {
-          window.BlogLastPublished = null;
+          lastPublisheddate = formatDate(new Date(found.lastPublished).getTime() / 1000);
         }
       }
+      window.BlogLastModified = lastModifiedDate;
+      window.BlogLastPublished = lastPublisheddate;
     })
     .catch((error) => {
       // eslint-disable-next-line no-console
