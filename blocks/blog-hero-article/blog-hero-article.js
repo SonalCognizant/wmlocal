@@ -22,13 +22,13 @@ import { loadFragment } from '../fragment/fragment.js';
 export default async function decorate(block) {
   // load footer as fragment
   const blogHeroMeta = getMetadata('blog-hero');
-  console.log(blogHeroMeta);
+  console.log(blogHeroMeta, 'blogheroMeta');
   const blogHeroPath = blogHeroMeta
     ? new URL(blogHeroMeta, window.location).pathname
     : '/blog-hero';
   const fragment = await loadFragment(blogHeroPath);
-  console.log(blogHeroPath);
-  console.log(fragment);
+  console.log(blogHeroPath, 'blogheropath');
+  console.log(fragment, 'fragment');
   // decorate footer DOM
   block.textContent = '';
   const blogHero = document.createElement('div');
