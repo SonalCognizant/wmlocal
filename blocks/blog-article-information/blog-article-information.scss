@@ -1,0 +1,191 @@
+@import "../../styles/include/mq.scss";
+@import "../../styles/include/tokens.scss";
+
+.blog-article-information-container{
+    .blog-article-information-wrapper{
+        .blog-article-information.block{
+            margin: auto;
+            position: relative;
+            @include for-xlarge{
+                width: 1275px;
+            }
+            @include for-large{
+                width: calc(100% - 72px);
+            }
+            @include for-laptop{
+                width: calc(100% - 72px);
+            }
+            @include for-tablet{
+                width: calc(100% - 72px);
+                padding-bottom: 21px;
+            }
+            @include for-mobile{
+                width: calc(100% - 32px);
+                padding-bottom: 21px;
+            }
+            p{
+                color: $--gray-700;
+                font-family: $--font-roboto;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                margin: 0;
+            }
+            div{
+                &:has(.date){
+                    display: flex;
+                    .date{
+                        width: 50%;
+                        display: flex;
+                        p{
+                            &:first-child{
+                                position: relative;
+                                &::after{
+                                    content: "•";
+                                    position: absolute;
+                                    right: -10px;
+                                    top: 55%;
+                                    transform: translateY(-50%);
+                                    font-size: 16px;
+                                    color: $--gray-700;
+                                }
+                            }
+                            &:last-child{
+                                margin-left: 13px;
+                            }
+                        }
+                        @include for-tablet{
+                            width: 100%;
+                            flex-direction: column;
+                            p{
+                                &::after{
+                                    display: none;
+                                }
+                                &:last-child{
+                                    margin: 0;
+                                    padding-top: 8px;
+                                }
+                            }
+                        }
+                        @include for-mobile{
+                            width: 100%;
+                            flex-direction: column;
+                            p{
+                                &::after{
+                                    display: none;
+                                }
+                                &:last-child{
+                                    margin: 0;
+                                    padding-top: 8px;
+                                }
+                            }
+                        }
+                    }
+                    .author{
+                        width: 50%;
+                        text-align: right;
+                        p{
+                            line-height: 20px;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+                            @include for-tablet{
+                                justify-content: flex-start;
+                            }
+                            @include for-mobile{
+                                justify-content: flex-start;
+                            }
+                            span{
+                                margin-right: 8px;
+                                background-color: $--gray-700;
+                                border-radius: 50%;
+                                width: 24px;
+                                height: 21px;
+                                position: relative;
+                                i{
+                                    font-size: 16px;
+                                    color: $--white;
+                                    position: absolute;
+                                    left: 5px;
+                                    top: 3px;
+                                }
+                            }
+                        }
+                        @include for-tablet{
+                            width: 100%;
+                            position: absolute;
+                            bottom: 0;
+                        }
+                        @include for-mobile{
+                            width: 100%;
+                            position: absolute;
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+            .article-link{
+                padding: 8px 0;
+                @include for-tablet{
+                    padding-bottom: 12px;
+                }
+                @include for-mobile{
+                    padding-bottom: 12px;
+                }
+                p{
+                    a{
+                        color: $--blue-675;
+                        font-family: $--font-roboto;
+                        font-size: 16px;
+                        line-height: 19px;
+                        font-weight: 500;
+                        text-decoration: underline;
+                        margin-right: 12px;
+                        @include for-tablet{
+                            white-space: nowrap;
+                        }
+                        @include for-mobile{
+                            white-space: nowrap;
+                        }
+                        &:first-child{
+                            margin-left: 4px;
+                        }
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+            .article-audio{
+                @include for-tablet{
+                    padding-bottom: 12px;
+                }
+                @include for-mobile{
+                    padding-bottom: 12px;
+                }
+                p{
+                    display: flex;
+                    align-items: center;
+                    a{
+                        color: $--blue-675;
+                        font-family: $--font-roboto;
+                        font-size: 16px;
+                        line-height: 19px;
+                        font-weight: 500;
+                        text-decoration: underline;
+                    }
+                    span{
+                        margin-right: 8px;
+                        height: 21px;
+                        @include for-tablet{
+                            margin-right: 16px;
+                        }
+                        i{
+                            color: $--gray-700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
