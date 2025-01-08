@@ -743,9 +743,14 @@ function loadPublishedDate() {
       return response.json();
     })
     .then((data) => {
+      console.log("gggg");
       const found = data.data.find((item) => item.path === currPagePath);
       if (found) {
-        console.log(found.lastModified, found.lastPublished);
+        // eslint-disable-next-line no-undef
+        const lastModifiedFormatted = formatDate(found.lastModified);
+        // eslint-disable-next-line no-undef
+        const lastPublishedFormatted = formatDate(new Date(found.lastPublished).getTime() / 1000);
+        console.log(lastModifiedFormatted, lastPublishedFormatted);
       }
     })
     .catch((error) => {
