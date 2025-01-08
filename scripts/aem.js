@@ -725,6 +725,25 @@ async function loadSections(element) {
   }
 }
 
+function loadPublishedDate() {
+  const sitemapjsonUrl = '/sitemap.json';
+  fetch(sitemapjsonUrl)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then((data) => {
+      const result = data.data; // Assuming the JSON has a `data` property
+    })
+    .catch((error) => {
+      // eslint-disable-next-line no-console
+      console.error('There was a problem with the fetch operation:', error);
+    });
+}
+
+
 init();
 
 export {
@@ -752,4 +771,5 @@ export {
   toClassName,
   waitForFirstImage,
   wrapTextNodes,
+  loadPublishedDate,
 };
