@@ -724,6 +724,47 @@ async function loadSections(element) {
     await loadSection(sections[i]);
   }
 }
+
+function formatDate(timestamp) {
+  const date = new Date(timestamp * 1000);
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  const year = date.getFullYear();
+  return `${month}/${day}/${year}`;
+}
+
+function loadPublishedDate() {
+  const currPagePath = window.location.pathname;
+  const sitemapjsonUrl = '/sitemap.json';
+  fetch(sitemapjsonUrl)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then((data) => {
+      const found = data.data.find((item) => item.path === currPagePath);
+      let lastModifiedDate = null;
+      let lastPublisheddate = null;
+      if (found) {
+        // eslint-disable-next-line no-undef
+        if (found.lastModified) {
+          lastModifiedDate = formatDate(found.lastModified);
+        }
+        if (found.lastPublished) {
+          lastPublisheddate = formatDate(new Date(found.lastPublished).getTime() / 1000);
+        }
+      }
+      window.BlogLastModified = lastModifiedDate;
+      window.BlogLastPublished = lastPublisheddate;
+    })
+    .catch((error) => {
+      // eslint-disable-next-line no-console
+      console.error('There was a problem with the fetch operation:', error);
+    });
+}
+
 init();
 
 export {
@@ -751,4 +792,5 @@ export {
   toClassName,
   waitForFirstImage,
   wrapTextNodes,
+  loadPublishedDate,
 };
