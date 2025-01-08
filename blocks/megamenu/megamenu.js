@@ -113,8 +113,18 @@ function renderMegaMenu(nav, navmenu) {
       navbaranchor.setAttribute('href', '#');
       navbaranchor.innerText = item.title;
       headermenuli.appendChild(navbaranchor);
+      headermenuli.addEventListener('click', () => {
+        const handleClickOutside = document.querySelectorAll('.header-menu-link');
+        handleClickOutside.forEach((checkactivemenu) => {
+          checkactivemenu.classList.remove('show-menu');
+        });
+      });
       // Active menu
       navbaranchor.addEventListener('click', (e) => {
+        const handleClickOutside = document.querySelectorAll('.header-menu-link');
+        handleClickOutside.forEach((checkactivemenu) => {
+          checkactivemenu.classList.remove('show-menu');
+        });
         const navbarselect = e.target?.closest('.header-menu-link');
         if (navbarselect?.classList.contains('menu-active')) {
           navbarselect?.classList.remove('menu-active');
