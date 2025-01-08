@@ -736,6 +736,7 @@ function loadPublishedDate() {
     })
     .then((data) => {
       const result = data.data; // Assuming the JSON has a `data` property
+      console.log(result);
     })
     .catch((error) => {
       // eslint-disable-next-line no-console
