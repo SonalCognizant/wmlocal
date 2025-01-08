@@ -732,6 +732,15 @@ async function loadSections(element) {
   }
 }
 
+function formatDate(timestamp) {
+  const date = new Date(timestamp * 1000);
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate() + 1).padStart(2, '0');
+  const year = date.getFullYear();
+  return `${month}/${day}/${year}`;
+}
+
+
 function loadPublishedDate() {
   const currPagePath = window.location.pathname;
   const sitemapjsonUrl = '/sitemap.json';
