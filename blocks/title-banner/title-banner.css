@@ -164,7 +164,7 @@
   margin: 0;
 }
 .title-banner-container.blue-550 .title-banner-wrapper .title-banner.block .tbnr-maindiv .tbnr-textcont .tbnr-btn .button-container:last-child {
-  margin-left: 12px;
+  margin-left: 24px;
 }
 @media (max-width: 480px) {
   .title-banner-container.blue-550 .title-banner-wrapper .title-banner.block .tbnr-maindiv .tbnr-textcont .tbnr-btn {
