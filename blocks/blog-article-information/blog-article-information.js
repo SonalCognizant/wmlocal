@@ -4,10 +4,16 @@ export default function decorate(block) {
   if (dates) {
     dates.parentElement.classList.add('date');
   }
-  const date = block.children[0].children[1].querySelector('p');
-  if (date) {
-    blockChild.append(date);
-  }
+  setTimeout(() => {
+    const date = block.children[0].children[1].querySelector('p');
+    if (date) {
+      const modifiedDate = window.BlogLastModified;
+      const spanmodified = document.createElement('span');
+      spanmodified.innerHTML = modifiedDate;
+      date.append(spanmodified);
+      blockChild.append(date);
+    }
+  }, 500);
   const author = block.children[0].children[2].querySelector('p');
   if (author) {
     author.parentElement.classList.add('author');
