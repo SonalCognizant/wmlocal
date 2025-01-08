@@ -1,5 +1,3 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
-
 export default function decorate(block) {
   /* change to ul, li */
   const title = block.children[0].innerText;
