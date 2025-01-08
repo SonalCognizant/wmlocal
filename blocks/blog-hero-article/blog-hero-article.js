@@ -29,6 +29,9 @@ export default async function decorate(block) {
   const fragment = await loadFragment(blogHeroPath);
   console.log(blogHeroPath, 'blogheropath');
   console.log(fragment, 'fragment');
+  const datafromArticleInformation = fragment.firstElementChild.children[0];
+  const datafromImageContent = fragment.firstElementChild.children[1];
+  console.log(datafromArticleInformation, datafromImageContent);
   // decorate footer DOM
   block.textContent = '';
   const blogHero = document.createElement('div');
