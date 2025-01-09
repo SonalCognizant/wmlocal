@@ -3,7 +3,7 @@
 
 main {
     .section {
-        div {
+        .accordion-wrapper {
             margin: 0 auto;
         }
     }
@@ -89,11 +89,11 @@ main {
                 &::after {
                     content: '';
                     position: absolute;
-                    top: 40%;
-                    right: 18px;
+                    top: 45%;
+                    right: 24px;
                     transform: translateY(-50%) rotate(135deg);
-                    width: 20px;
-                    height: 20px;
+                    width: 10px;
+                    height: 10px;
                     border: 2px solid;
                     border-width: 2px 2px 0 0;
                     transition: transform 0.2s;
