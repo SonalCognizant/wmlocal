@@ -13,10 +13,10 @@ export default async function decorate(block) {
   console.log(datafromArticleInformation, datafromImageContent);
   const lastUpdatedDate = datafromArticleInformation.querySelector('.date');
   const articleReadTime = datafromArticleInformation.querySelector('.article-link');
-  const anchorscatoegory = datafromArticleInformation.querySelectorAll('.article-link p');
-  const imageSrc = datafromImageContent.querySelector('.columns-img-col p picture');
+  const anchorscatoegory = datafromArticleInformation.querySelectorAll('.article-link p').innerHTML;
+  const imageSrc = datafromImageContent.querySelector('.columns-img-col p picture').innerHTML;
   const description = datafromImageContent.querySelector('.image-text').children[0].children[0].textContent;
-  console.log(lastUpdatedDate.children[1].textContent, lastUpdatedDate.children[1], 'lastUpdatedDate');
+  console.log(lastUpdatedDate.children[1].textContent, 'lastUpdatedDate');
   console.log(articleReadTime, 'articleReadTime');
   console.log(anchorscatoegory, 'acnhors');
   console.log(imageSrc, description);
