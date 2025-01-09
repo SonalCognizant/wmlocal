@@ -24,6 +24,7 @@ export default function decorate(block) {
           const spanNull = document.createElement('span');
           spanNull.innerHTML = 'MM/DD/YYYY';
           date.append(spanNull);
+          blockChild.append(date);
         }
       }
     }
