@@ -18,7 +18,9 @@ export default async function decorate(block) {
   block.innerHTML = '';
   const blogHero = document.createElement('div');
   const imgDiv = document.createElement('div');
+  imgDiv.classList.add('image-div');
   const contentDiv = document.createElement('div');
+  contentDiv.classList.add('content-div');
   const button = document.createElement('p');
   button.classList.add('button-container');
   const buttonanchor = document.createElement('a');
