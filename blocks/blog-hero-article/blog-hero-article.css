@@ -28,11 +28,11 @@
   padding-bottom: 16px;
   line-height: 38px;
 }
-.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div > p {
+.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div div > p {
   display: flex;
   gap: 12px;
 }
-.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div > p > a {
+.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div div > p > a {
   opacity: 1;
   color: #005589;
   font-family: roboto, sans-serif;
