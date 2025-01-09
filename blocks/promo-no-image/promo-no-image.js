@@ -1,5 +1,3 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
-
 export default function decorate(block) {
   /* change to ul, li */
   const title = block.children[0].innerText;
@@ -22,9 +20,9 @@ export default function decorate(block) {
       ul.append(li);
     }
   });
-  ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(
-    createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]),
-  ));
+  // ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(
+  //   createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]),
+  // ));
   block.textContent = '';
   block.append(ul);
 }

@@ -445,7 +445,7 @@ function decorateIcon(span, prefix = '', alt = '') {
  * @param {Element} [element] Element containing icons
  * @param {string} [prefix] prefix to be added to icon the src
  */
-function decorateFontIcon(span, prefix = '') {
+function decorateFontIcon(span) {
   const iconName = Array.from(span.classList)
     .find((c) => c.startsWith('icon-'))
     .substring(5);
@@ -459,7 +459,7 @@ function decorateFontIcon(span, prefix = '') {
   const iconTag = document.createElement('i');
   iconTag.classList.add(`fa-${style}`);
   iconTag.classList.add(`fa-${icon}`);
-  console.log(prefix, iconName, icon, style, 'hello');
+  // console.log(prefix, iconName, icon, style, 'hello');
   iconTag.dataset.iconName = iconName;
   span.append(iconTag);
 }
@@ -469,7 +469,7 @@ function decorateIcons(element, prefix = '') {
   const icons = [...element.querySelectorAll('span.icon')];
   icons.forEach((span) => {
     if (isFontIcon) {
-      decorateFontIcon(span, prefix);
+      decorateFontIcon(span);
     } else {
       decorateIcon(span, prefix);
     }
