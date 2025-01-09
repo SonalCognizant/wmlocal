@@ -20,12 +20,13 @@ export default async function decorate(block) {
   const imgDiv = document.createElement('div');
   const contentDiv = document.createElement('div');
   const button = document.createElement('p');
-  button.innerText = 'know More';
   button.classList.add('button-container');
-  console.log(button);
   const buttonanchor = document.createElement('a');
   buttonanchor.classList.add('button', 'primary');
   buttonanchor.setAttribute('href', 'google.com');
+  buttonanchor.innerText = 'know More';
+  button.append(buttonanchor);
+  console.log(button);
   imgDiv.innerHTML = imageSrc;
   const categoryDateDiv = document.createElement('div');
   const descriptionDiv = document.createElement('div');
