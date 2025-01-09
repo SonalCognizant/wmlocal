@@ -36,6 +36,7 @@ export default async function decorate(block) {
   heading.append(mainHeading);
   descriptionPara.append(description);
   descriptionDiv.append(descriptionPara);
+  descriptionDiv.classList.add('description');
   const lastUpdatedpara = document.createElement('p');
   // const lastUpdatedDate = datafromArticleInformation.querySelector('.date');
   // const lastUpdatedDateallpara = lastUpdatedDate.querySelectorAll('p')[1];
