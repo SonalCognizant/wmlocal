@@ -11,10 +11,6 @@ export default async function decorate(block) {
   const mainHeading = fragment.children[0].textContent;
   const datafromArticleInformation = fragment.children[1].children[0];
   const datafromImageContent = fragment.children[1].children[1];
-  const lastUpdatedDate = datafromArticleInformation.querySelector('.date');
-  const lastUpdatedDateallpara = lastUpdatedDate.querySelectorAll('p')[1];
-  const spanDate = lastUpdatedDateallpara.querySelector('span');
-  const modifiedDate = spanDate.textContent;
   const articleReadTime = datafromArticleInformation.querySelector('.article-link').children[1];
   const imageSrc = datafromImageContent.querySelector('.columns-img-col p picture').innerHTML;
   const description = datafromImageContent.querySelector('.image-text').children[0].children[0].textContent;
@@ -31,6 +27,10 @@ export default async function decorate(block) {
   descriptionPara.append(description);
   descriptionDiv.append(descriptionPara);
   const lastUpdatedpara = document.createElement('p');
+  const lastUpdatedDate = datafromArticleInformation.querySelector('.date');
+  const lastUpdatedDateallpara = lastUpdatedDate.querySelectorAll('p')[1];
+  const spanDate = lastUpdatedDateallpara.querySelector('span');
+  const modifiedDate = spanDate.textContent;
   lastUpdatedpara.append(modifiedDate);
   categoryDateDiv.append(lastUpdatedpara, articleReadTime);
   contentDiv.append(heading, categoryDateDiv, descriptionDiv);
