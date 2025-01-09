@@ -16,7 +16,9 @@ export default async function decorate(block) {
   const anchorscatoegory = datafromArticleInformation.querySelectorAll('.article-link p a');
   const imageSrc = datafromImageContent.querySelector('.columns-img-col');
   const description = datafromImageContent.querySelector('.image-text').children[0].children[0].innerText;
-  console.log(lastUpdatedDate.children[1].innerText, articleReadTime.innerText, anchorscatoegory);
+  console.log(lastUpdatedDate.children[1].innerText, 'lastUpdatedDate');
+  console.log(articleReadTime.innerText, 'articleReadTime');
+  console.log(anchorscatoegory, 'acnhors');
   console.log(imageSrc, description);
   block.textContent = '';
   const blogHero = document.createElement('div');
