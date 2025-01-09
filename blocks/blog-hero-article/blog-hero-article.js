@@ -11,12 +11,12 @@ export default async function decorate(block) {
   const datafromArticleInformation = fragment.firstElementChild.children[0];
   const datafromImageContent = fragment.firstElementChild.children[1];
   console.log(datafromArticleInformation, datafromImageContent);
-  const lastUpdatedDate = datafromArticleInformation.querySelector('.date ');
+  const lastUpdatedDate = datafromArticleInformation.querySelector('.date');
   const articleReadTime = datafromArticleInformation.querySelector('.article-link');
   const anchorscatoegory = datafromArticleInformation.querySelectorAll('.article-link p');
   const imageSrc = datafromImageContent.querySelector('.columns-img-col p picture');
   const description = datafromImageContent.querySelector('.image-text').children[0].children[0].textContent;
-  console.log(lastUpdatedDate.children[1].textContent, 'lastUpdatedDate');
+  console.log(lastUpdatedDate.children[1].textContent, lastUpdatedDate.children[1], 'lastUpdatedDate');
   console.log(articleReadTime, 'articleReadTime');
   console.log(anchorscatoegory, 'acnhors');
   console.log(imageSrc, description);
