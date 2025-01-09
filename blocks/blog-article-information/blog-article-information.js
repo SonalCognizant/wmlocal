@@ -8,6 +8,7 @@ export default function decorate(block) {
     // Check if block and its children exist
     if (block && block.children && block.children[0] && block.children[0].children[1]) {
       const date = block.children[0].children[1].querySelector('p');
+      blockChild.append(date);
       // Check if date element exists
       if (date) {
         const modifiedDate = window.BlogLastModified;
@@ -26,8 +27,6 @@ export default function decorate(block) {
           date.append(spanNull);
           blockChild.append(date);
         }
-      } else {
-        blockChild.append(date);
       }
     }
   }, 500);
