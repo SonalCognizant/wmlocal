@@ -26,7 +26,7 @@ export default async function decorate(block) {
   heading.append(mainHeading);
   descriptionPara.append(description);
   descriptionDiv.append(descriptionPara);
-  categoryDateDiv.append(lastUpdatedDate.children[1].textContent);
+  categoryDateDiv.append(lastUpdatedDate);
   contentDiv.append(heading, categoryDateDiv, descriptionDiv);
   blogHero.append(imgDiv, contentDiv);
   block.append(blogHero);
