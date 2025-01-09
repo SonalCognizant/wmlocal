@@ -9,6 +9,7 @@ export default async function decorate(block) {
     ? new URL(blogHeroMeta, window.location).pathname
     : '/blog-hero';
   const fragment = await loadFragment(blogHeroPath);
+  console.log(fragment);
   const datafromArticleInformation = fragment.firstElementChild.children[0];
   const datafromImageContent = fragment.firstElementChild.children[1];
   const lastUpdatedDate = datafromArticleInformation.querySelector('.date');
