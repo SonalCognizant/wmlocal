@@ -50,6 +50,9 @@
           > .description {
             padding: 24px 0;
             height: 150px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
           > .button-container {
             margin: 0;
