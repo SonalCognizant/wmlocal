@@ -11,9 +11,10 @@ export default async function decorate(block) {
   const datafromArticleInformation = fragment.firstElementChild.children[0];
   const datafromImageContent = fragment.firstElementChild.children[1];
   console.log(datafromArticleInformation, datafromImageContent);
-  const lastUpdatedDate = datafromArticleInformation.children.children[0].children[0]
-    .children[1].innerText;
-  console.log(lastUpdatedDate);
+  const lastUpdatedDate = datafromArticleInformation.querySelector('.date');
+  const articleReadTime = datafromArticleInformation.querySelector('.article-link');
+
+  console.log(lastUpdatedDate, articleReadTime);
   block.textContent = '';
   const blogHero = document.createElement('div');
   block.append(blogHero);
