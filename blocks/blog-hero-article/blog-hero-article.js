@@ -13,6 +13,7 @@ export default async function decorate(block) {
   const datafromArticleInformation = fragment.children[1].children[0];
   const datafromImageContent = fragment.children[1].children[1];
   const lastUpdatedDate = datafromArticleInformation.querySelector('.date p span');
+  console.log(lastUpdatedDate);
   const articleReadTime = datafromArticleInformation.querySelector('.article-link').children[1];
   const imageSrc = datafromImageContent.querySelector('.columns-img-col p picture').innerHTML;
   const description = datafromImageContent.querySelector('.image-text').children[0].children[0].textContent;
