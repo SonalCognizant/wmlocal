@@ -26,7 +26,6 @@ export default async function decorate(block) {
   buttonanchor.setAttribute('href', 'google.com');
   buttonanchor.innerText = 'Read more';
   button.append(buttonanchor);
-  console.log(button);
   imgDiv.innerHTML = imageSrc;
   const categoryDateDiv = document.createElement('div');
   const descriptionDiv = document.createElement('div');
