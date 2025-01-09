@@ -30,7 +30,7 @@ export default async function decorate(block) {
   descriptionPara.append(description);
   descriptionDiv.append(descriptionPara);
   const lastUpdatedpara = document.createElement('p');
-  if (lastUpdatedDate) {
+  if (lastUpdatedDate !== null && lastUpdatedDate !== '' && lastUpdatedDate !== 'undefined') {
     lastUpdatedpara.append(lastUpdatedDate.children[1].textContent);
   }
   categoryDateDiv.append(lastUpdatedpara, articleReadTime);
