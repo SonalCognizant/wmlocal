@@ -2,8 +2,7 @@ import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 export default async function decorate(block) {
-  const pageURL = block.innerContent;
-  console.log(pageURL);
+  console.log(block);
   const blogHeroMeta = getMetadata('blog-hero');
   const blogHeroPath = blogHeroMeta
     ? new URL(blogHeroMeta, window.location).pathname
@@ -16,7 +15,6 @@ export default async function decorate(block) {
   const lastUpdatedDateallpara = lastUpdatedDate.querySelectorAll('p')[1];
   const spanDate = lastUpdatedDateallpara.querySelector('span');
   const modifiedDate = spanDate.textContent;
-  console.log(modifiedDate);
   const articleReadTime = datafromArticleInformation.querySelector('.article-link').children[1];
   const imageSrc = datafromImageContent.querySelector('.columns-img-col p picture').innerHTML;
   const description = datafromImageContent.querySelector('.image-text').children[0].children[0].textContent;
