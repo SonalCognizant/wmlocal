@@ -31,7 +31,7 @@
           > p {
             display: flex;
             gap: 12px;
-            :has(a) {
+            > a {
               opacity: 1;
               color: $--blue-675;
               font-family: $--font-roboto;

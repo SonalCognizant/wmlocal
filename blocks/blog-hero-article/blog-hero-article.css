@@ -32,7 +32,7 @@
   display: flex;
   gap: 12px;
 }
-.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div > p :has(a) {
+.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div > p > a {
   opacity: 1;
   color: #005589;
   font-family: roboto, sans-serif;
