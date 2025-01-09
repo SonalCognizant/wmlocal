@@ -20,7 +20,7 @@ export default async function decorate(block) {
   console.log(articleReadTime.textContent, 'articleReadTime');
   console.log(anchorscatoegory, 'acnhors');
   console.log(imageSrc, description);
-  block.textContent = '';
-  const blogHero = document.createElement('div');
-  block.append(blogHero);
+  // block.textContent = '';
+  // const blogHero = document.createElement('div');
+  // block.append(blogHero);
 }
