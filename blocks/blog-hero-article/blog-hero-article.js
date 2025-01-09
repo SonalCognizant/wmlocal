@@ -3,7 +3,7 @@ import { loadFragment } from '../fragment/fragment.js';
 
 export default async function decorate(block) {
   // load footer as fragment
-  console.log(block);
+  // console.log(block);
   const blogHeroMeta = getMetadata('blog-hero');
   const blogHeroPath = blogHeroMeta
     ? new URL(blogHeroMeta, window.location).pathname
@@ -14,13 +14,12 @@ export default async function decorate(block) {
   const datafromImageContent = fragment.firstElementChild.children[1];
   const lastUpdatedDate = datafromArticleInformation.querySelector('.date');
   const articleReadTime = datafromArticleInformation.querySelector('.article-link').textContent;
-  const anchorscatoegory = datafromArticleInformation.querySelectorAll('.article-link p').innerHTML;
   const imageSrc = datafromImageContent.querySelector('.columns-img-col p picture').innerHTML;
   const description = datafromImageContent.querySelector('.image-text').children[0].children[0].textContent;
-  console.log(lastUpdatedDate.lastChild.textContent, 'lastUpdatedDate');
-  console.log(articleReadTime, 'articleReadTime');
-  console.log(anchorscatoegory, 'acnhors');
-  console.log(imageSrc, description);
+  // console.log(lastUpdatedDate.lastChild.textContent, 'lastUpdatedDate');
+  // console.log(articleReadTime, 'articleReadTime');
+  // console.log(anchorscatoegory, 'acnhors');
+  // console.log(imageSrc, description);
   block.textContent = '';
   const blogHero = document.createElement('div');
   const imgDiv = document.createElement('div');
@@ -33,7 +32,7 @@ export default async function decorate(block) {
   const descriptionPara = document.createElement('p');
   descriptionPara.append(description);
   descriptionDiv.append(descriptionPara);
-  categoryDateDiv.append(articleReadTime);
+  categoryDateDiv.append(lastUpdatedDate, articleReadTime);
   contentDiv.append(headingDiv, categoryDateDiv, descriptionDiv);
   blogHero.append(imgDiv, contentDiv);
   block.append(blogHero);
