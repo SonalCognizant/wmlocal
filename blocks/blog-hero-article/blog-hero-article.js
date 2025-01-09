@@ -2,7 +2,7 @@ import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 export default async function decorate(block) {
-  console.log(block);
+  // console.log(block);
   const blogHeroMeta = getMetadata('blog-hero');
   const blogHeroPath = blogHeroMeta
     ? new URL(blogHeroMeta, window.location).pathname
