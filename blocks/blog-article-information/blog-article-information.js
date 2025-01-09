@@ -26,6 +26,8 @@ export default function decorate(block) {
           date.append(spanNull);
           blockChild.append(date);
         }
+      } else {
+        blockChild.append(date);
       }
     }
   }, 500);
