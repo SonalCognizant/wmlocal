@@ -7,13 +7,13 @@
         > div {
             display: flex;
             gap: 30px;
-            > image-div {
+            > .image-div {
                 width: 57.33%;
                 > img {
                     width: 100%;
                 }
             }
-            > content-div {
+            > .content-div {
                 width: 40.33%;
             }
         }

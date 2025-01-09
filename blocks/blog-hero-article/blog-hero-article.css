@@ -6,12 +6,12 @@
   display: flex;
   gap: 30px;
 }
-.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > image-div {
+.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .image-div {
   width: 57.33%;
 }
-.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > image-div > img {
+.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .image-div > img {
   width: 100%;
 }
-.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > content-div {
+.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div {
   width: 40.33%;
 }
