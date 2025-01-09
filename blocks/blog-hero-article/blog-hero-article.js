@@ -2,7 +2,7 @@ import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 export default async function decorate(block) {
-  console.log(block.textContent);
+  const mainPageURL = block.textContent;
   const blogHeroMeta = getMetadata('blog-hero');
   const blogHeroPath = blogHeroMeta
     ? new URL(blogHeroMeta, window.location).pathname
@@ -23,7 +23,7 @@ export default async function decorate(block) {
   button.classList.add('button-container');
   const buttonanchor = document.createElement('a');
   buttonanchor.classList.add('button', 'primary');
-  buttonanchor.setAttribute('href', 'google.com');
+  buttonanchor.setAttribute('href', `${mainPageURL}`);
   buttonanchor.innerText = 'Read more';
   button.append(buttonanchor);
   imgDiv.innerHTML = imageSrc;
