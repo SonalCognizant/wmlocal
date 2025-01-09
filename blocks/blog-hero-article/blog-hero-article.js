@@ -10,10 +10,9 @@ export default async function decorate(block) {
   const fragment = await loadFragment(blogHeroPath);
   const datafromArticleInformation = fragment.firstElementChild.children[0];
   const datafromImageContent = fragment.firstElementChild.children[1];
-  console.log(datafromArticleInformation, datafromImageContent);
   const lastUpdatedDate = datafromArticleInformation.querySelector('.date');
   const articleReadTime = datafromArticleInformation.querySelector('.article-link');
-  const anchorscatoegory = datafromArticleInformation.querySelectorAll('.article-link p');
+  const anchorscatoegory = datafromArticleInformation.querySelectorAll('.article-link p').innerHTML;
   const imageSrc = datafromImageContent.querySelector('.columns-img-col p picture').innerHTML;
   const description = datafromImageContent.querySelector('.image-text').children[0].children[0].textContent;
   console.log(lastUpdatedDate.lastChild.textContent, 'lastUpdatedDate');
