@@ -19,6 +19,9 @@ export default async function decorate(block) {
   const blogHero = document.createElement('div');
   const imgDiv = document.createElement('div');
   const contentDiv = document.createElement('div');
+  const button = document.createElement('p');
+  button.innerText = 'know More';
+  console.log(button);
   imgDiv.innerHTML = imageSrc;
   const categoryDateDiv = document.createElement('div');
   const descriptionDiv = document.createElement('div');
@@ -34,7 +37,7 @@ export default async function decorate(block) {
   // const modifiedDate = spanDate.textContent;
   lastUpdatedpara.append(articlereadtime);
   categoryDateDiv.append(lastUpdatedpara, articleAnchors);
-  contentDiv.append(heading, categoryDateDiv, descriptionDiv);
+  contentDiv.append(heading, categoryDateDiv, descriptionDiv, button);
   blogHero.append(imgDiv, contentDiv);
   block.append(blogHero);
 }
