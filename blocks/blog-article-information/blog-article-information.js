@@ -24,25 +24,10 @@ export default function decorate(block) {
           const spanNull = document.createElement('span');
           spanNull.innerHTML = 'MM/DD/YYYY';
           date.append(spanNull);
-          console.error('window.BlogLastModified is null or undefined');
         }
-      } else {
-        console.error('Date element not found');
       }
-    } else {
-      console.error('Block or its children are null or undefined');
     }
   }, 500);
-  // setTimeout(() => {
-  //   const date = block.children[0].children[1].querySelector('p');
-  //   if (date) {
-  //     const modifiedDate = window.BlogLastModified;
-  //     const spanmodified = document.createElement('span');
-  //     spanmodified.innerHTML = modifiedDate;
-  //     date.append(spanmodified);
-  //     blockChild.append(date);
-  //   }
-  // }, 500);
   const author = block.children[0].children[2].querySelector('p');
   if (author) {
     author.parentElement.classList.add('author');
