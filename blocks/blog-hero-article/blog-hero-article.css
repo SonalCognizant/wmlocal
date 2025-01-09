@@ -15,3 +15,15 @@
 .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div {
   width: 40.33%;
 }
+.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div h2 {
+  opacity: 1;
+  color: #4a7390;
+  font-family: museo, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  font-style: 700;
+  letter-spacing: 0px;
+  text-align: left;
+  margin: 0;
+  padding-bottom: 16px;
+}

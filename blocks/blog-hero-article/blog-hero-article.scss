@@ -1,22 +1,34 @@
-@import '../../styles/include/mq.scss';
-@import '../../styles/include/tokens.scss';
+@import "../../styles/include/mq.scss";
+@import "../../styles/include/tokens.scss";
 
 .blog-hero-article-container {
   .blog-hero-article-wrapper {
     .blog-hero-article {
-        > div {
-            display: flex;
-            gap: 30px;
-            > .image-div {
-                width: 57.33%;
-                > img {
-                    width: 100%;
-                }
-            }
-            > .content-div {
-                width: 40.33%;
-            }
+      > div {
+        display: flex;
+        gap: 30px;
+        > .image-div {
+          width: 57.33%;
+          > img {
+            width: 100%;
+          }
         }
+        > .content-div {
+          width: 40.33%;
+          h2 {
+            opacity: 1;
+            color: $--blue-550;
+            font-family: $--font-museo;
+            font-size: 32px;
+            font-weight: 600;
+            font-style: 700;
+            letter-spacing: 0px;
+            text-align: left;
+            margin: 0;
+            padding-bottom: 16px;
+          }
+        }
+      }
     }
   }
 }
