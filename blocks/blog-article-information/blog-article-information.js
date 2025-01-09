@@ -24,6 +24,10 @@ export default function decorate(block) {
           const spanNull = document.createElement('span');
           spanNull.innerHTML = 'MM/DD/YYYY';
           date.append(spanNull);
+          // Check if blockChild exists before appending
+          if (blockChild) {
+            blockChild.append(date);
+          }
         }
       }
     }
@@ -32,10 +36,21 @@ export default function decorate(block) {
   if (author) {
     author.parentElement.classList.add('author');
   }
-  const linkParagraphs = block.children[1].children[0].querySelectorAll('p');
-  linkParagraphs.forEach((p) => {
-    p.parentElement.classList.add('article-link');
-  });
+  const linkPara = block.children[1].children[0].querySelector('p');
+  if (linkPara) {
+    linkPara.parentElement.classList.add('article-link');
+    const links = linkPara.querySelectorAll('a');
+    const anchorPtag = document.createElement('p');
+    links.forEach((link) => {
+      if (link.href || link.textContent.trim()) {
+        anchorPtag.append(link);
+      } else {
+        // Remove the empty <a> tag
+        link.remove();
+      }
+    });
+    linkPara.parentElement.append(anchorPtag);
+  }
   const audio = block.children[2].children[0].querySelector('p');
   if (audio) {
     audio.parentElement.classList.add('article-audio');
