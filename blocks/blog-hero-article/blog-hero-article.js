@@ -29,7 +29,7 @@ export default async function decorate(block) {
   descriptionPara.append(description);
   descriptionDiv.append(descriptionPara);
   const lastUpdatedpara = document.createElement('p');
-  lastUpdatedpara.append(lastUpdatedDate.innerText);
+  lastUpdatedpara.append(lastUpdatedDate);
   // if (lastUpdatedDate.children[1] !== 'undefined' && lastUpdatedDate !== 'undefined') {
   //   lastUpdatedpara.append(lastUpdatedDate?.children[1]?.innerText);
   // } else {
