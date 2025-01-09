@@ -28,11 +28,11 @@ export default async function decorate(block) {
   descriptionPara.append(description);
   descriptionDiv.append(descriptionPara);
   const lastUpdatedpara = document.createElement('p');
-  const lastUpdatedDate = datafromArticleInformation.querySelector('.date');
-  const lastUpdatedDateallpara = lastUpdatedDate.querySelectorAll('p')[1];
-  const spanDate = lastUpdatedDateallpara.querySelector('span');
-  const modifiedDate = spanDate.textContent;
-  lastUpdatedpara.append(modifiedDate, articlereadtime);
+  // const lastUpdatedDate = datafromArticleInformation.querySelector('.date');
+  // const lastUpdatedDateallpara = lastUpdatedDate.querySelectorAll('p')[1];
+  // const spanDate = lastUpdatedDateallpara.querySelector('span');
+  // const modifiedDate = spanDate.textContent;
+  lastUpdatedpara.append(articlereadtime);
   categoryDateDiv.append(lastUpdatedpara, articleAnchors);
   contentDiv.append(heading, categoryDateDiv, descriptionDiv);
   blogHero.append(imgDiv, contentDiv);
