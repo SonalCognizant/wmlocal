@@ -3,6 +3,7 @@ import { loadFragment } from '../fragment/fragment.js';
 
 export default async function decorate(block) {
   // load footer as fragment
+  console.log(block);
   const blogHeroMeta = getMetadata('blog-hero');
   const blogHeroPath = blogHeroMeta
     ? new URL(blogHeroMeta, window.location).pathname
