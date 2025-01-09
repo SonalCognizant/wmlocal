@@ -31,6 +31,7 @@
 .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div div > p {
   display: flex;
   gap: 12px;
+  margin: 0;
 }
 .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div div > p > a {
   opacity: 1;
