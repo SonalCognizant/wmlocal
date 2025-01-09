@@ -13,6 +13,7 @@ import {
   loadSections,
   loadCSS,
   sampleRUM,
+  loadPublishedDate,
 } from './aem.js';
 import { decorateExternalImages } from './externalImage.js';
 
@@ -84,6 +85,7 @@ export function decorateMain(main) {
  */
 async function loadEager(doc) {
   doc.documentElement.lang = 'en';
+  loadPublishedDate();
   decorateTemplateAndTheme();
   if (getMetadata('breadcrumbs').toLowerCase() === 'true') {
     doc.body.dataset.breadcrumbs = true;
