@@ -21,6 +21,7 @@ export default async function decorate(block) {
   const contentDiv = document.createElement('div');
   const button = document.createElement('p');
   button.innerText = 'know More';
+  button.classList.add('button-container');
   console.log(button);
   imgDiv.innerHTML = imageSrc;
   const categoryDateDiv = document.createElement('div');
