@@ -48,14 +48,14 @@
             }
           }
           > .description {
-            padding: 24px 0;
+            padding-top: 24px;
             height: 150px;
-            white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
           }
           > .button-container {
             margin: 0;
+            padding-top: 24px;
           }
         }
       }

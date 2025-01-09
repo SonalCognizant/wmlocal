@@ -46,12 +46,12 @@
   text-decoration: underline;
 }
 .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div > .description {
-  padding: 24px 0;
+  padding-top: 24px;
   height: 150px;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div > .button-container {
   margin: 0;
+  padding-top: 24px;
 }
