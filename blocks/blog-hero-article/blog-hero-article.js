@@ -9,9 +9,10 @@ export default async function decorate(block) {
     ? new URL(blogHeroMeta, window.location).pathname
     : '/blog-hero';
   const fragment = await loadFragment(blogHeroPath);
-  console.log(fragment);
-  const datafromArticleInformation = fragment.firstElementChild.children[0];
-  const datafromImageContent = fragment.firstElementChild.children[1];
+  // console.log(fragment);
+  const datafromArticleInformation = fragment.firstElementChild;
+  const datafromImageContent = fragment.firstElementChild;
+  console.log(datafromArticleInformation, datafromImageContent);
   const lastUpdatedDate = datafromArticleInformation.querySelector('.date');
   const articleReadTime = datafromArticleInformation.querySelector('.article-link').textContent;
   const imageSrc = datafromImageContent.querySelector('.columns-img-col p picture').innerHTML;
