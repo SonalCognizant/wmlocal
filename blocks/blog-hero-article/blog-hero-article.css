@@ -107,6 +107,11 @@
   padding: 52px 0 16px 0;
   line-height: 38px;
 }
+@media (max-width: 480px) {
+  .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div h2 {
+    font-size: 28px;
+  }
+}
 .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div div > p {
   display: flex;
   gap: 12px;

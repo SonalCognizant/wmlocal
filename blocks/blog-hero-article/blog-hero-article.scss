@@ -80,6 +80,9 @@
             margin: 0;
             padding: 52px 0 16px 0;
             line-height: 38px;
+            @include for-mobile {
+                font-size: 28px;
+            }
           }
           div {
             > p {
