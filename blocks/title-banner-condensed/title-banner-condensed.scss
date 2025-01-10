@@ -13,6 +13,9 @@
     background: $--blue-550;
   }
   .title-banner-condensed-wrapper {
+    @include for-large{
+      width: calc(100% - 100px);
+    }
     .title-banner-condensed {
       &.block {
         padding: 71px 0 51px 0;

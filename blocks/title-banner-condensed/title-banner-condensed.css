@@ -20,6 +20,11 @@
     background: #4a7390;
   }
 }
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .title-banner-condensed-container .title-banner-condensed-wrapper {
+    width: calc(100% - 100px);
+  }
+}
 .title-banner-condensed-container .title-banner-condensed-wrapper .title-banner-condensed.block {
   padding: 71px 0 51px 0;
 }
