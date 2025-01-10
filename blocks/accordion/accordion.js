@@ -24,15 +24,16 @@ export default function decorate(block) {
     row.replaceWith(details);
   });
   const { parentElement } = block;
-  // Get the title innertext from the first child
-  const titleText = block.children[0].innerText;
   // get the first child
   const title = block.children[0];
   // remove the first child
   title.remove();
-  // create the heading element for accordion
-  const mainHeading = document.createElement('h2');
-  mainHeading.classList.add('accordion-heading');
-  mainHeading.textContent = titleText;
-  parentElement.prepend(mainHeading);
+  // Check if the title exists and has non-empty content
+  if (title && title.textContent.trim() !== "") {
+    // Create the heading element for accordion
+    const mainHeading = document.createElement('h2');
+    mainHeading.classList.add('accordion-heading');
+    mainHeading.textContent = title.textContent.trim(); // Use the trimmed content
+    parentElement.prepend(mainHeading);
+  }
 }
