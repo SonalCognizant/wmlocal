@@ -18,16 +18,19 @@
         @include for-laptop {
           display: flex;
           gap: 30px;
+          padding: 0 36px;
         }
         @include for-mobile {
           display: flex;
           flex-direction: column;
           gap: 52px;
+          padding: 0 16px;
         }
         @include for-tablet {
           display: flex;
           flex-direction: column;
           gap: 52px;
+          padding: 0 36px;
         }
         > .image-div {
           @include for-xlarge {
