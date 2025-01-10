@@ -29,7 +29,6 @@
   .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div {
     display: flex;
     flex-direction: column;
-    gap: 52px;
     padding: 0 16px;
   }
 }
@@ -37,7 +36,6 @@
   .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div {
     display: flex;
     flex-direction: column;
-    gap: 52px;
     padding: 0 36px;
   }
 }
