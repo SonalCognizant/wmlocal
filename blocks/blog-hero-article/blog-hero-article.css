@@ -131,6 +131,17 @@
 }
 .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div > .description > p {
   height: 100%;
+  position: relative;
+}
+.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div > .description > p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px; /* Adjust based on the number of lines you want to fade */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+  pointer-events: none; /* Ensures the text is still selectable */
 }
 .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div > .button-container {
   margin: 0;
