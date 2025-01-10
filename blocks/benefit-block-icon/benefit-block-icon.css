@@ -51,7 +51,7 @@
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .benefit-block-icon-container .benefit-block-icon-wrapper .benefit-block-icon .block-left {
-    padding: 150px 0;
+    padding: 96px 0;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
@@ -92,6 +92,18 @@
   line-height: 38px;
   margin: 0;
 }
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .benefit-block-icon-container .benefit-block-icon-wrapper .benefit-block-icon .block-left > div > div h2 {
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+@media (max-width: 480px) {
+  .benefit-block-icon-container .benefit-block-icon-wrapper .benefit-block-icon .block-left > div > div h2 {
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
 .benefit-block-icon-container .benefit-block-icon-wrapper .benefit-block-icon .block-left > div > div p {
   color: #4b4c4d;
   font-family: roboto, sans-serif;
@@ -115,6 +127,11 @@
   padding: 0;
   align-items: center;
 }
+@media (max-width: 480px) {
+  .benefit-block-icon-container .benefit-block-icon-wrapper .benefit-block-icon .block-left > div > div .button-container {
+    display: flex;
+  }
+}
 .benefit-block-icon-container .benefit-block-icon-wrapper .benefit-block-icon .block-left > div > div .button-container a {
   font-size: 16px;
   line-height: 19px;
@@ -127,7 +144,6 @@
   margin-left: 5px;
   width: 15px;
   height: 15px;
-  margin-top: 4px;
 }
 .benefit-block-icon-container .benefit-block-icon-wrapper .benefit-block-icon .block-right {
   width: 58.3333333333%;
@@ -136,11 +152,13 @@
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .benefit-block-icon-container .benefit-block-icon-wrapper .benefit-block-icon .block-right {
     width: 100%;
+    padding-bottom: 0;
   }
 }
 @media (max-width: 480px) {
   .benefit-block-icon-container .benefit-block-icon-wrapper .benefit-block-icon .block-right {
     width: 100%;
+    padding-bottom: 0;
   }
 }
 .benefit-block-icon-container .benefit-block-icon-wrapper .benefit-block-icon .block-right > div {
@@ -172,7 +190,7 @@
     width: 100%;
   }
 }
-.benefit-block-icon-container .benefit-block-icon-wrapper .benefit-block-icon .block-right > div > div h2 {
+.benefit-block-icon-container .benefit-block-icon-wrapper .benefit-block-icon .block-right > div > div h4 {
   color: #005589;
   font-family: roboto, sans-serif;
   font-size: 20px;
@@ -180,6 +198,9 @@
   font-weight: 700;
   text-decoration: underline;
   cursor: pointer;
+  margin: 0;
+}
+.benefit-block-icon-container .benefit-block-icon-wrapper .benefit-block-icon .block-right > div > div h2 {
   margin: 0;
 }
 .benefit-block-icon-container .benefit-block-icon-wrapper .benefit-block-icon .block-right > div > div h2 span {
