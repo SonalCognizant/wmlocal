@@ -52,6 +52,9 @@
             height: 150px;
             overflow: hidden;
             text-overflow: ellipsis;
+            > p {
+                height: 100%;
+            }
           }
           > .button-container {
             margin: 0;
