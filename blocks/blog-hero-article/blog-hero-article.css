@@ -6,9 +6,32 @@
   display: flex;
   gap: 30px;
 }
-.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .image-div {
-  width: 57.33%;
-  padding-bottom: 72px;
+@media (min-width: 1380px) {
+  .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .image-div {
+    width: 57.33%;
+    padding-bottom: 72px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .image-div {
+    width: 57.33%;
+    padding-bottom: 72px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .image-div {
+    width: 45%;
+  }
+}
+@media (max-width: 480px) {
+  .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .image-div {
+    width: 100%;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .image-div {
+    width: 100%;
+  }
 }
 .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .image-div > img {
   width: 100%;
