@@ -7,6 +7,28 @@
       > div {
         display: flex;
         gap: 30px;
+        @include for-xlarge {
+          display: flex;
+          gap: 30px;
+        }
+        @include for-large {
+          display: flex;
+          gap: 30px;
+        }
+        @include for-laptop {
+          display: flex;
+          gap: 30px;
+        }
+        @include for-mobile {
+          display: flex;
+          flex-direction: column;
+          gap: 52px;
+        }
+        @include for-tablet {
+          display: flex;
+          flex-direction: column;
+          gap: 52px;
+        }
         > .image-div {
           @include for-xlarge {
             width: 57.33%;
