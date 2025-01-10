@@ -132,6 +132,12 @@
           > .button-container {
             margin: 0;
             padding-top: 24px;
+            @include for-mobile {
+                padding-bottom: 72px;
+            }
+              @include for-tablet {
+                padding-bottom: 96px;
+            }
           }
         }
       }
