@@ -18,5 +18,10 @@ export default function decorate(block) {
   const blockRight = document.createElement('div');
   blockRight.classList.add('block-right');
   block.append(blockRight);
-  blockRight.append(...innerrightDivs);
+  if (innerrightDivs) {
+    blockRight.append(...innerrightDivs);
+    // Remove empty divs
+    const emptyDivs = blockRight.querySelectorAll('div:empty');
+    emptyDivs.forEach((div) => div.remove());
+  }
 }
