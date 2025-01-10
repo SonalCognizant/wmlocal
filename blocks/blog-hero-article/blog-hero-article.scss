@@ -6,7 +6,6 @@
     .blog-hero-article {
       > div {
         display: flex;
-        gap: 30px;
         @include for-xlarge {
           display: flex;
           gap: 30px;
