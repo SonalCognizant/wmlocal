@@ -3,10 +3,18 @@
 
 .benefit-block-icon-container {
   .benefit-block-icon-wrapper {
+    @include for-large {
+      width: calc(100% - 100px);
+      margin: 0 auto;
+    }
     .benefit-block-icon {
       display: flex;
       gap: calc(((100% - (11 * 30px)) / 12) + 60px);
+      align-items: stretch;
       @include for-xlarge {
+        padding: $--spacing-max 0;
+      }
+      @include for-large {
         padding: $--spacing-max 0;
       }
       @include for-laptop {
@@ -23,13 +31,13 @@
         gap: unset;
       }
       .block-left {
+        flex: 1;
         border-radius: 4px;
         background-color: $--blue-50;
         width: calc((100% - 60px) / 12 * 4);
-        padding: 190px 0;
-        height: 100%;
+        padding: $--spacing-jumbo 0;
         @include for-laptop {
-          padding: 150px 0;
+          padding: $--spacing-jumbo 0;
         }
         @include for-tablet {
           width: 100%;
@@ -55,8 +63,17 @@
               color: $--blue-550;
               font-family: $--font-museo;
               font-size: 32px;
-              font-weight: 600;
+              font-weight: 700;
+              line-height: 38px;
               margin: 0;
+              @include for-tablet{
+                font-size: 28px;
+                line-height: 33px;
+              }
+              @include for-mobile{
+                font-size: 28px;
+                line-height: 33px;
+              }
             }
             p {
               color: $--gray-700;
@@ -75,9 +92,13 @@
             }
             .button-container {
               padding: 0;
-              .button {
+              align-items: center;
+              @include for-mobile{
+                display: flex;
+              }
+              a {
                 font-size: 16px;
-                line-height: 22px;
+                line-height: 19px;
                 font-family: $--font-roboto;
                 font-weight: 500;
                 color: $--blue-675;
@@ -87,7 +108,6 @@
                 margin-left: 5px;
                 width: 15px;
                 height: 15px;
-                margin-top: 4px;
               }
             }
           }
@@ -95,11 +115,14 @@
       }
       .block-right {
         width: calc((100% / 12) * 7);
+        padding-bottom: $--spacing-xxl;
         @include for-tablet {
           width: 100%;
+          padding-bottom: 0;
         }
         @include for-mobile {
           width: 100%;
+          padding-bottom: 0;
         }
         > div {
           display: flex;
@@ -120,18 +143,17 @@
             @include for-mobile {
               width: 100%;
             }
-            .icon-benefit-icon {
-              width: 64px;
-              height: 64px;
-              margin-bottom: 24px;
-            }
-            h2 {
+            h4 {
               color: $--blue-675;
               font-family: $--font-roboto;
               font-size: 20px;
+              line-height: 24px;
               font-weight: 700;
               text-decoration: underline;
               cursor: pointer;
+              margin: 0;
+            }
+            h2 {
               margin: 0;
               span {
                 height: 64px;
