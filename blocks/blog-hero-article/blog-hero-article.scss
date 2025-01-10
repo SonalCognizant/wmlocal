@@ -86,6 +86,9 @@
               display: flex;
               gap: 12px;
               margin: 0;
+              &:first-child {
+                padding-bottom: 8px;
+              }
               > a {
                 opacity: 1;
                 color: $--blue-675;
