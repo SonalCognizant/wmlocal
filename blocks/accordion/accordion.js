@@ -29,7 +29,7 @@ export default function decorate(block) {
   // remove the first child
   title.remove();
   // Check if the title exists and has non-empty content
-  if (title && title.textContent.trim() !== "") {
+  if (title && title.textContent.trim() !== '') {
     // Create the heading element for accordion
     const mainHeading = document.createElement('h2');
     mainHeading.classList.add('accordion-heading');
