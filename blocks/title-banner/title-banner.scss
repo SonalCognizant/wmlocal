@@ -1,14 +1,8 @@
 @import '../../styles/include/mq.scss';
 @import '../../styles/include/tokens.scss';
 
-.title-banner-container.blue-550 {
-  background-image: linear-gradient(180deg, rgba(166, 198, 221, 1) 0%, rgba(148, 182, 206, 1) 0%, rgba(73, 115, 144, 1) 100%);
-  @include for-xlarge{
-    background-image: linear-gradient(180deg, rgba(166, 198, 221, 1) 0%, rgba(148, 182, 206, 1) 0%, rgba(73, 115, 144, 1) 100%);
-  }
-  @include for-laptop{
-    background-image: linear-gradient(270deg, rgba(166, 198, 221, 1) 0%, rgba(148, 182, 206, 1) 0%, rgba(73, 115, 144, 1) 100%);
-  }
+.title-banner-container {
+  background-image: linear-gradient(270deg, rgba(166, 198, 221, 1) 0%, rgba(148, 182, 206, 1) 0%, rgba(73, 115, 144, 1) 100%);
   @include for-tablet{
     background: $--blue-550;
   }
@@ -173,7 +167,7 @@
     }
   }
 }
-.one-btn-banner.title-banner-container.blue-550{
+.one-btn-banner.title-banner-container{
   background-image: linear-gradient(135deg, rgba(214, 229, 241, 1) 0%, rgba(255, 255, 255, 1) 100%);
   .title-banner-wrapper{
     .block{

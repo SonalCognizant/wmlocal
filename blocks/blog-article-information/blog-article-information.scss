@@ -43,7 +43,7 @@
                                 &::after{
                                     content: "•";
                                     position: absolute;
-                                    right: -10px;
+                                    right: -9px;
                                     top: 55%;
                                     transform: translateY(-50%);
                                     font-size: 16px;
@@ -86,7 +86,6 @@
                     }
                     .author{
                         width: 50%;
-                        text-align: right;
                         p{
                             line-height: 20px;
                             display: flex;
@@ -103,7 +102,7 @@
                                 background-color: $--gray-700;
                                 border-radius: 50%;
                                 width: 24px;
-                                height: 21px;
+                                height: 24px;
                                 position: relative;
                                 i{
                                     font-size: 16px;
@@ -148,11 +147,10 @@
                     text-wrap: nowrap;
                     &:first-child{
                         position: relative;
-                        padding-right: 4px;
                         &::after{
                             content: "•";
                             position: absolute;
-                            right: -6px;
+                            right: -9px;
                             top: 52%;
                             transform: translateY(-50%);
                             font-size: 16px;
