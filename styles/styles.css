@@ -751,6 +751,25 @@ a:any-link {
     padding-bottom: 16px;
   }
 }
+.section .display-wrapper {
+  width: 60%;
+  margin: 0;
+}
+@media (max-width: 480px) {
+  .section .display-wrapper {
+    width: 100%;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .section .display-wrapper {
+    width: 100%;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 752.5px) {
+  .section .display-wrapper {
+    width: 100%;
+  }
+}
 .section .display-wrapper .display.block {
   padding: 0 16px 16px 16px;
 }

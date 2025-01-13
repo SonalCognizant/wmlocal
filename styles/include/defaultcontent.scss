@@ -346,6 +346,17 @@
     }
   }
   .display-wrapper{
+    width: 60%;
+      margin: 0;
+      @include for-mobile {
+        width: 100%;
+      }
+      @include for-tablet {
+        width: 100%;
+      }
+      @include for-tablet-smallest {
+        width: 100%;
+      }
     .display{
       &.block{
         padding: 0 $--spacing-m $--spacing-m $--spacing-m;
