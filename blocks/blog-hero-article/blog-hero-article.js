@@ -42,7 +42,9 @@ export default async function decorate(block) {
   const lastUpdatedDateallpara = lastUpdatedDate.querySelectorAll('p')[1];
   const spanDate = lastUpdatedDateallpara.querySelector('span');
   const modifiedDate = spanDate.textContent;
-  lastUpdatedpara.append(modifiedDate, ' - ', articlereadtime);
+  const span = document.createElement('span');
+  span.append(modifiedDate);
+  lastUpdatedpara.append(span, articlereadtime);
   categoryDateDiv.append(lastUpdatedpara, articleAnchors);
   contentDiv.append(heading, categoryDateDiv, descriptionDiv, button);
   blogHero.append(imgDiv, contentDiv);
