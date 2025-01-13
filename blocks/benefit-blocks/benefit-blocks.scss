@@ -161,10 +161,12 @@
               @include for-tablet{
                 text-decoration: none;
                 cursor: none;
+                color: $--blue-550;
               }
               @include for-mobile{
                 text-decoration: none;
                 cursor: none;
+                color: $--blue-550;
               }
             }
             p{
@@ -175,6 +177,56 @@
               line-height: 24px;
               margin: 0;
               padding-top: $--spacing-s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.benefit-block-four-column.benefit-blocks-container {
+  .benefit-blocks-wrapper{
+    @include for-laptop{
+      width: calc(100% - 72px);
+    }
+    @include for-tablet{
+      width: calc(100% - 72px);
+    }
+    @include for-mobile{
+      width: calc(100% - 32px);
+    }
+    .benefit-blocks.block {
+      padding: $--spacing-max 0;
+      @include for-tablet{
+        padding: $--spacing-jumbo 0;
+      }
+      @include for-mobile{
+        padding: $--spacing-huge 0;
+      }
+      .block-left{
+        margin-bottom: 0;
+        padding: $--spacing-jumbo 0;
+        @include for-mobile{
+          padding: $--spacing-huge 0;
+        }
+      }
+      .block-right{
+        padding: 69px 0 68px 0;
+        @include for-laptop{
+          padding: 88px 0;
+        }
+        @include for-tablet{
+          padding: $--spacing-xxl 0 0 0;
+        }
+        @include for-mobile{
+          padding: 0;
+        }
+        >div:first-child{
+          div{
+            padding-top: 0;
+            @include for-mobile{
+              padding-top: $--spacing-xxl;
             }
           }
         }
