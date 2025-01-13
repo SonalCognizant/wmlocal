@@ -24,7 +24,7 @@ export default function decorate(block) {
     const btnDiv = document.createElement('div');
     btnDiv.classList.add('tbnr-btn');
     // Iterate over the NodeList and check/add the class
-    buttonDiv.forEach(button => {
+    buttonDiv.forEach((button) => {
       if (!button.classList.contains('button-container')) {
         button.classList.add('button-container');
       }
