@@ -141,6 +141,7 @@
       > .button {
         margin: 0;
         border-radius: 2px;
+        border: none;
         @include for-mobile {
           width: 100%;
         }
