@@ -95,6 +95,7 @@
 }
 .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div:first-child > div {
   width: 100%;
+  padding: 0;
 }
 .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div:first-child > div h2 {
   color: #4a7390;
@@ -143,16 +144,38 @@
   height: 64px;
   margin-bottom: 24px;
 }
-.benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2 {
+.benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2:has(span) {
   margin: 0;
 }
-.benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2 span {
+.benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2:has(span) span {
   width: 64px;
   height: 64px;
   margin-bottom: 24px;
 }
-.benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2 span i {
+.benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2:has(span) span i {
   font-size: 64px;
+}
+.benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2 {
+  color: #005589;
+  font-family: roboto, sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 0;
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2 {
+    text-decoration: none;
+    color: #4a7390;
+  }
+}
+@media (max-width: 480px) {
+  .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2 {
+    text-decoration: none;
+    color: #4a7390;
+  }
 }
 .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h4 {
   color: #005589;

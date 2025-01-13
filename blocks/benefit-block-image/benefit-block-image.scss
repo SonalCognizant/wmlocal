@@ -72,6 +72,7 @@
             padding: 0;
             > div {
               width: 100%;
+              padding: 0;
               h2 {
                 color: $--blue-550;
                 font-family: $--font-museo;
@@ -112,7 +113,7 @@
               height: 64px;
               margin-bottom: 24px;
             }
-            h2 {
+            h2:has(span) {
               margin: 0;
               span {
                 width: 64px;
@@ -121,6 +122,24 @@
                 i {
                   font-size: 64px;
                 }
+              }
+            }
+            h2 {
+              color: $--blue-675;
+              font-family: $--font-roboto;
+              font-size: 20px;
+              line-height: 24px;
+              font-weight: 700;
+              text-decoration: underline;
+              cursor: pointer;
+              margin: 0;
+              @include for-tablet {
+                text-decoration: none;
+                color: $--blue-550;
+              }
+              @include for-mobile {
+                text-decoration: none;
+                color: $--blue-550;
               }
             }
             h4 {
