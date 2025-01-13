@@ -1,5 +1,6 @@
 export default function decorate(block) {
-  console.log(block);
+  const parentEle = block.parentElement.parentElement;
+  parentEle.classList.add('blue-550');
   const titleClass = block.children[0].children[0].querySelector('p');
   if (titleClass) {
     titleClass.classList.add('title');
@@ -17,6 +18,19 @@ export default function decorate(block) {
   }
   if (descrClass) {
     textContDiv.append(descrClass);
+  }
+  const buttonDiv = block.children[1].children[0].querySelectorAll('p');
+  if (buttonDiv) {
+    const btnDiv = document.createElement('div');
+    btnDiv.classList.add('tbnr-btn');
+    // Iterate over the NodeList and check/add the class
+    buttonDiv.forEach(button => {
+      if (!button.classList.contains('button-container')) {
+        button.classList.add('button-container');
+      }
+      btnDiv.append(button);
+    });
+    textContDiv.appendChild(btnDiv);
   }
   mainDiv.append(textContDiv);
   block.innerHTML = '';

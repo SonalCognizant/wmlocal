@@ -72,6 +72,22 @@
               font-style: normal;
               margin: 0;
             }
+            .tbnr-btn{
+              padding-top: $--spacing-xl;
+              display: flex;
+              gap: 24px;
+              @include for-tablet{
+                padding-top: $--spacing-l;
+              }
+              @include for-mobile{
+                flex-direction: column;
+                gap: 16px;
+                padding-top: $--spacing-l;
+              }
+              .button-container{
+                margin: 0;
+              }
+            }
           }
         }
       }

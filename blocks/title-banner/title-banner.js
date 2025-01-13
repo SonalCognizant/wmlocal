@@ -25,7 +25,6 @@ export default function decorate(block) {
   picDiv.classList.add('tbnr-pic');
   const btnDiv = document.createElement('div');
   btnDiv.classList.add('tbnr-btn');
-  // console.log(block);
   const buttons = block.children[2].children[0].innerHTML;
   btnDiv.innerHTML = buttons;
   picDiv.append(image);
