@@ -113,7 +113,7 @@
               height: 64px;
               margin-bottom: 24px;
             }
-            h2 {
+            h2:has(span) {
               margin: 0;
               span {
                 width: 64px;

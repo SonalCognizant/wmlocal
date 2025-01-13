@@ -144,15 +144,15 @@
   height: 64px;
   margin-bottom: 24px;
 }
-.benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2 {
+.benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2:has(span) {
   margin: 0;
 }
-.benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2 span {
+.benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2:has(span) span {
   width: 64px;
   height: 64px;
   margin-bottom: 24px;
 }
-.benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2 span i {
+.benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2:has(span) span i {
   font-size: 64px;
 }
 .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2 {
