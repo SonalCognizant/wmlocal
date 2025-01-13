@@ -14,7 +14,11 @@ export default function decorate(block) {
   const paragraph = document.createElement('p');
   paragraph.classList.add('description');
   paragraph.append(description);
-  div.append(div2, paragraph, button);
+  if (button) {
+    div.append(div2, paragraph, button);
+  } else {
+    div.append(div2, paragraph);
+  }
   block.innerHTML = '';
   block.append(div);
 }
