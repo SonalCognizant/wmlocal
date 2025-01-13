@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* wellmark color start */
 /* wellmark color end */
 /* wellmark spacing size start */
@@ -118,6 +119,18 @@
 }
 .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div div > p:first-child {
   padding-bottom: 8px;
+}
+.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div div > p span {
+  position: relative;
+}
+.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div div > p span::after {
+  content: "•";
+  position: absolute;
+  right: -9px;
+  top: 52%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #4b4c4d;
 }
 .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div div > p > a {
   opacity: 1;
