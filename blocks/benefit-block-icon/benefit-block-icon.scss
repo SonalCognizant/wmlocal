@@ -152,6 +152,12 @@
               text-decoration: underline;
               cursor: pointer;
               margin: 0;
+              @include for-tablet {
+                color: $--blue-550;
+              }
+              @include for-mobile {
+                color: $--blue-550;
+              }
             }
             h2 {
               margin: 0;
