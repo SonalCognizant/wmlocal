@@ -1,14 +1,14 @@
-import { getMetadata } from '../../scripts/aem.js';
+// import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 export default async function decorate(block) {
   const mainPageURL = block.textContent;
-  const blogHeroMeta = getMetadata('blog-hero');
+  // const blogHeroMeta = getMetadata('blog-hero');
   // const blogHeroPath = blogHeroMeta
   //   ? new URL(blogHeroMeta, window.location).pathname
   //   : '/blog-hero';
-  const blogHeroPath = new URL(blogHeroMeta, window.location).pathname;
-  console.log(blogHeroPath, blogHeroMeta);
+  const blogHeroPath = new URL(window.location).pathname;
+  console.log(blogHeroPath);
   const fragment = await loadFragment(blogHeroPath);
   const mainHeading = fragment.children[0].textContent;
   const datafromArticleInformation = fragment.children[1].children[0];
