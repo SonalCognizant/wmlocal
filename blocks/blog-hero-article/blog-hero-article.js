@@ -7,10 +7,9 @@ export default async function decorate(block) {
   // const blogHeroPath = blogHeroMeta
   //   ? new URL(blogHeroMeta, window.location).pathname
   //   : '/blog-hero';
-  const blogHeroPath = block.children[0].innerText;
+  const blogHeroPath = new URL(block.children[0].innerText);
   console.log(blogHeroPath);
-  block.innerHTML = '';
-  const fragment = loadFragment(blogHeroPath);
+  const fragment = await loadFragment(blogHeroPath);
   console.log(fragment);
   const mainHeading = fragment.children[0].textContent;
   const datafromArticleInformation = fragment.children[1].children[0];
@@ -53,5 +52,6 @@ export default async function decorate(block) {
   categoryDateDiv.append(articleAnchors);
   contentDiv.append(heading, categoryDateDiv, descriptionDiv, button);
   blogHero.append(imgDiv, contentDiv);
+  block.innerHTML = '';
   block.append(blogHero);
 }
