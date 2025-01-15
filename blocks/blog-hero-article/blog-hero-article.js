@@ -7,7 +7,7 @@ export default async function decorate(block) {
   // const blogHeroPath = blogHeroMeta
   //   ? new URL(blogHeroMeta, window.location).pathname
   //   : '/blog-hero';
-  const blogHeroPath = new URL(block.children[0].innerText);
+  const blogHeroPath = new URL(block.children[0].innerText).pathname;
   console.log(blogHeroPath);
   const fragment = await loadFragment(blogHeroPath);
   console.log(fragment);
