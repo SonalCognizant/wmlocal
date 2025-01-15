@@ -18,7 +18,7 @@ export default async function decorate(block) {
   console.log(articlereadtime);
   const imageSrc = datafromImageContent.querySelector('.columns-img-col p picture').innerHTML;
   const description = datafromImageContent.querySelector('.image-text').children[0].children[0].textContent;
-  // block.innerHTML = '';
+  block.innerHTML = '';
   const blogHero = document.createElement('div');
   const imgDiv = document.createElement('div');
   imgDiv.classList.add('image-div');
@@ -52,5 +52,5 @@ export default async function decorate(block) {
   categoryDateDiv.append(articleAnchors);
   contentDiv.append(heading, categoryDateDiv, descriptionDiv, button);
   blogHero.append(imgDiv, contentDiv);
-  // block.append(blogHero);
+  block.append(blogHero);
 }
