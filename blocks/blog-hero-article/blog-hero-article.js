@@ -1,21 +1,17 @@
-import { getMetadata } from '../../scripts/aem.js';
+// import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 export default async function decorate(block) {
   const mainPageURL = block.textContent;
-  const blogHeroMeta = getMetadata('blog-hero');
-  const blogHeroPath = blogHeroMeta
-    ? new URL(blogHeroMeta, window.location).pathname
-    : '/blog-hero';
+  const blogHeroPath = new URL(block.children[0].innerText).pathname;
   const fragment = await loadFragment(blogHeroPath);
   const mainHeading = fragment.children[0].textContent;
   const datafromArticleInformation = fragment.children[1].children[0];
   const datafromImageContent = fragment.children[1].children[1];
   const articleAnchors = datafromArticleInformation.querySelector('.article-link').children[1];
   const articlereadtime = datafromArticleInformation.querySelector('.article-link').children[0].textContent;
-  const imageSrc = datafromImageContent.querySelector('.columns-img-col p picture').innerHTML;
+  const imageSrc = datafromImageContent.querySelector('.columns-img-col picture').innerHTML;
   const description = datafromImageContent.querySelector('.image-text').children[0].children[0].textContent;
-  block.innerHTML = '';
   const blogHero = document.createElement('div');
   const imgDiv = document.createElement('div');
   imgDiv.classList.add('image-div');
@@ -48,5 +44,6 @@ export default async function decorate(block) {
   categoryDateDiv.append(lastUpdatedpara, articleAnchors);
   contentDiv.append(heading, categoryDateDiv, descriptionDiv, button);
   blogHero.append(imgDiv, contentDiv);
+  block.innerHTML = '';
   block.append(blogHero);
 }
