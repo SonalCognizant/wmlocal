@@ -37,7 +37,7 @@ export default async function decorate(block) {
   if (datafromArticleInformation.querySelector('.date') !== undefined && datafromArticleInformation.querySelector('.date') !== null) {
     const publishedDate = datafromArticleInformation.querySelector('.date');
     console.log(publishedDate, publishedDate.children[0]);
-    const publishDate = publishedDate.children[0].split(':')[1];
+    const publishDate = String(publishedDate.children[0].textContent).split(':')[1];
     console.log(publishDate);
     const span = document.createElement('span');
     span.append(publishDate);
