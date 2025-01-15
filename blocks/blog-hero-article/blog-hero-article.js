@@ -40,14 +40,16 @@ export default async function decorate(block) {
   // console.log(lastUpdatedDateallpara);
   // const spanDate = lastUpdatedDateallpara.querySelector('span');
   // console.log(spanDate);
-  const lastUpdatedDate = datafromArticleInformation.querySelector('.date').lastChild;
-  console.log(lastUpdatedDate);
-  const spanDate = lastUpdatedDate.querySelector('span');
-  console.log(spanDate);
-  const modifiedDate = spanDate.textContent;
-  const span = document.createElement('span');
-  span.append(modifiedDate);
-  lastUpdatedpara.append(span, articlereadtime);
+  if (datafromArticleInformation.querySelector('.date').lastChild !== undefined && datafromArticleInformation.querySelector('.date').lastChild !== null) {
+    const lastUpdatedDate = datafromArticleInformation.querySelector('.date').lastChild;
+    if (lastUpdatedDate.querySelector('span') !== null && lastUpdatedDate.querySelector('span') !== undefined) {
+      const spanDate = lastUpdatedDate.querySelector('span');
+      const modifiedDate = spanDate.textContent;
+      const span = document.createElement('span');
+      span.append(modifiedDate);
+      lastUpdatedpara.append(span, articlereadtime);
+    }
+  }
   categoryDateDiv.append(lastUpdatedpara, articleAnchors);
   contentDiv.append(heading, categoryDateDiv, descriptionDiv, button);
   blogHero.append(imgDiv, contentDiv);
