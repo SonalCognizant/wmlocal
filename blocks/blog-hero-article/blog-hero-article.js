@@ -10,7 +10,7 @@ export default async function decorate(block) {
   const datafromImageContent = fragment.children[1].children[1];
   const articleAnchors = datafromArticleInformation.querySelector('.article-link').children[1];
   const articlereadtime = datafromArticleInformation.querySelector('.article-link').children[0].textContent;
-  const imageSrc = datafromImageContent.querySelector('.columns-img-col p picture').innerHTML;
+  const imageSrc = datafromImageContent.querySelector('.columns-img-col picture').innerHTML;
   const description = datafromImageContent.querySelector('.image-text').children[0].children[0].textContent;
   const blogHero = document.createElement('div');
   const imgDiv = document.createElement('div');
