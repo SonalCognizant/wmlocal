@@ -3,20 +3,13 @@ import { loadFragment } from '../fragment/fragment.js';
 
 export default async function decorate(block) {
   const mainPageURL = block.textContent;
-  // const blogHeroMeta = getMetadata('blog-hero');
-  // const blogHeroPath = blogHeroMeta
-  //   ? new URL(blogHeroMeta, window.location).pathname
-  //   : '/blog-hero';
   const blogHeroPath = new URL(block.children[0].innerText).pathname;
-  console.log(blogHeroPath);
   const fragment = await loadFragment(blogHeroPath);
-  console.log(fragment);
   const mainHeading = fragment.children[0].textContent;
   const datafromArticleInformation = fragment.children[1].children[0];
   const datafromImageContent = fragment.children[1].children[1];
   const articleAnchors = datafromArticleInformation.querySelector('.article-link').children[1];
   const articlereadtime = datafromArticleInformation.querySelector('.article-link').children[0].textContent;
-  console.log(articlereadtime);
   const imageSrc = datafromImageContent.querySelector('.columns-img-col p picture').innerHTML;
   const description = datafromImageContent.querySelector('.image-text').children[0].children[0].textContent;
   const blogHero = document.createElement('div');
@@ -40,16 +33,16 @@ export default async function decorate(block) {
   descriptionPara.append(description);
   descriptionDiv.append(descriptionPara);
   descriptionDiv.classList.add('description');
-  // const lastUpdatedpara = document.createElement('p');
-  // const lastUpdatedDate = datafromArticleInformation.querySelector('.date');
-  // const lastUpdatedDateallpara = lastUpdatedDate.querySelectorAll('p')[1];
-  // const spanDate = lastUpdatedDateallpara.querySelector('span');
-  // const modifiedDate = spanDate.textContent;
-  // const span = document.createElement('span');
-  // span.append(modifiedDate);
-  // lastUpdatedpara.append(span, articlereadtime);
-  // categoryDateDiv.append(lastUpdatedpara, articleAnchors);
-  categoryDateDiv.append(articleAnchors);
+  const lastUpdatedpara = document.createElement('p');
+  const lastUpdatedDate = datafromArticleInformation.querySelector('.date');
+  const lastUpdatedDateallpara = lastUpdatedDate.querySelectorAll('p')[1];
+  const spanDate = lastUpdatedDateallpara.querySelector('span');
+  const modifiedDate = spanDate.textContent;
+  const span = document.createElement('span');
+  span.append(modifiedDate);
+  lastUpdatedpara.append(span, articlereadtime);
+  categoryDateDiv.append(lastUpdatedpara, articleAnchors);
+  // categoryDateDiv.append(articleAnchors);
   contentDiv.append(heading, categoryDateDiv, descriptionDiv, button);
   blogHero.append(imgDiv, contentDiv);
   block.innerHTML = '';
