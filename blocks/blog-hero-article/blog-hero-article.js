@@ -42,7 +42,7 @@ export default async function decorate(block) {
     const span = document.createElement('span');
     span.append(publishDate);
     const articletime = document.createElement('span');
-    articletime.ATTRIBUTE_NODE(articlereadtime);
+    articletime.append(articlereadtime);
     // lastUpdatedpara.append(span, articlereadtime);
     dateandtime.append(publishDate, articletime);
   }
