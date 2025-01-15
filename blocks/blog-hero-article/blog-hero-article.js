@@ -9,7 +9,9 @@ export default async function decorate(block) {
   //   : '/blog-hero';
   const blogHeroPath = block.children[0].innerText;
   console.log(blogHeroPath);
+  block.innerHTML = '';
   const fragment = await loadFragment(blogHeroPath);
+  console.log(fragment);
   const mainHeading = fragment.children[0].textContent;
   const datafromArticleInformation = fragment.children[1].children[0];
   const datafromImageContent = fragment.children[1].children[1];
@@ -18,7 +20,6 @@ export default async function decorate(block) {
   console.log(articlereadtime);
   const imageSrc = datafromImageContent.querySelector('.columns-img-col p picture').innerHTML;
   const description = datafromImageContent.querySelector('.image-text').children[0].children[0].textContent;
-  block.innerHTML = '';
   const blogHero = document.createElement('div');
   const imgDiv = document.createElement('div');
   imgDiv.classList.add('image-div');
