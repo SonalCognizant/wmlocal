@@ -13,10 +13,13 @@ export default function decorate(block) {
   paragraph.classList.add('description');
   paragraph.append(description);
   div.append(div2, paragraph);
-  if (block.children[2] !== null && block.children[2] !== undefined) {
+  if (block.children[2] !== null && block.children[2] !== undefined && block.children[2] !== '') {
     const button = block.children[2]?.children[0]?.children[0]?.children[0]?.children[0];
     button.classList.add('button', 'secondary');
     div.append(div2, paragraph, button);
+  }
+  if (block.children[2] === '') {
+    div.append(div2, paragraph);
   }
   block.innerHTML = '';
   block.append(div);
