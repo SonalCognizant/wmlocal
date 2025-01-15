@@ -34,9 +34,9 @@ export default async function decorate(block) {
   descriptionDiv.append(descriptionPara);
   descriptionDiv.classList.add('description');
   const lastUpdatedpara = document.createElement('p');
-  const lastUpdatedDate = datafromArticleInformation.querySelector('.date');
+  const lastUpdatedDate = datafromArticleInformation.querySelector('.date').lastChild;
   console.log(lastUpdatedDate);
-  const lastUpdatedDateallpara = lastUpdatedDate.querySelectorAll('p')[1];
+  const lastUpdatedDateallpara = lastUpdatedDate.querySelectorAll('p');
   console.log(lastUpdatedDateallpara);
   const spanDate = lastUpdatedDateallpara.querySelector('span');
   console.log(spanDate);
