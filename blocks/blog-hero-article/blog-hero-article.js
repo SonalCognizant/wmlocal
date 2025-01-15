@@ -42,7 +42,6 @@ export default async function decorate(block) {
   span.append(modifiedDate);
   lastUpdatedpara.append(span, articlereadtime);
   categoryDateDiv.append(lastUpdatedpara, articleAnchors);
-  // categoryDateDiv.append(articleAnchors);
   contentDiv.append(heading, categoryDateDiv, descriptionDiv, button);
   blogHero.append(imgDiv, contentDiv);
   block.innerHTML = '';
