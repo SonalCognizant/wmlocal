@@ -10,7 +10,7 @@ export default async function decorate(block) {
   const blogHeroPath = block.children[0].innerText;
   console.log(blogHeroPath);
   block.innerHTML = '';
-  const fragment = await loadFragment(blogHeroPath);
+  const fragment = loadFragment(blogHeroPath);
   console.log(fragment);
   const mainHeading = fragment.children[0].textContent;
   const datafromArticleInformation = fragment.children[1].children[0];
