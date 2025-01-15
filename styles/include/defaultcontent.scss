@@ -2,25 +2,6 @@
 @import 'tokens';
 
 .section {
-  &:has(.default-content-wrapper){
-    @include for-xlarge {
-      max-width: 1275px;
-      margin: 0 auto;
-    }
-    .default-content-wrapper{
-      width: 60%;
-      margin: 0;
-      @include for-mobile {
-        width: 100%;
-      }
-      @include for-tablet {
-        width: 100%;
-      }
-      @include for-tablet-smallest {
-        width: 100%;
-      }
-    }
-  }
   .text-container {
     .text-wrapper {
       padding: $--spacing-huge $--spacing-m;
@@ -64,6 +45,13 @@
     h6 {
       margin: 0;
       padding-bottom: $--spacing-m;
+      width: 60%;
+      @include for-mobile {
+        width: 100%;
+      }
+      @include for-tablet {
+        width: 100%;
+      }
       @include for-nonmobile {
         padding-bottom: $--spacing-l;
       }
@@ -130,7 +118,6 @@
     p {
       margin: 0;
       padding-bottom: $--spacing-l;
-      width: 100%;
       font-size: 16px;
       line-height: 24px;
       color: $--gray-700;
@@ -138,6 +125,13 @@
       font-weight: 400;
       opacity: 1;
       letter-spacing: 0px;
+      width: 60%;
+      @include for-mobile {
+        width: 100%;
+      }
+      @include for-tablet {
+        width: 100%;
+      }
       .icon{
         height: auto;
         width: auto;
@@ -225,25 +219,6 @@
           }
         }
       }
-      span {
-        &.icon{
-          &.icon-green-tick {
-            padding-right: 14px;
-            min-width: 24px;
-          }
-          &.icon-right-arrow {
-            padding-left: 6px;
-            max-width: 15px;
-            max-height: 15px;
-            margin-top: 4px;
-          }
-          &.icon-linkpdf{
-            padding-left: 6px;
-            max-width: 19px;
-            max-height: 20px;
-          }
-        }
-      }
     }
     a{
       .icon{
@@ -275,6 +250,40 @@
       padding-left: $--spacing-l;
       padding-bottom: $--spacing-l;
       margin: 0;
+      width: 60%;
+      @include for-mobile {
+        width: 100%;
+      }
+      @include for-tablet {
+        width: 100%;
+      }
+      li{
+        color: $--gray-700;
+        font-family: $--font-roboto;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        opacity: 1;
+        letter-spacing: 0px;
+        text-align: left;
+        padding-bottom: $--spacing-s;
+        padding-left: 14px;
+        &:last-child{
+          padding-bottom: 0;
+        }
+      }
+    }
+    ol {
+      padding-left: $--spacing-l;
+      padding-bottom: $--spacing-l;
+      margin: 0;
+      width: 60%;
+      @include for-mobile {
+        width: 100%;
+      }
+      @include for-tablet {
+        width: 100%;
+      }
       li{
         color: $--gray-700;
         font-family: $--font-roboto;
@@ -346,33 +355,28 @@
     }
   }
   .display-wrapper{
-    width: 60%;
-      margin: 0;
-      @include for-mobile {
-        width: 100%;
-      }
-      @include for-tablet {
-        width: 100%;
-      }
-      @include for-tablet-smallest {
-        width: 100%;
-      }
     .display{
       &.block{
+        width: 100%;
         padding: 0 $--spacing-m $--spacing-m $--spacing-m;
         @include for-tablet {
+          width: 100%;
           padding: 0 $--spacing-xl $--spacing-l $--spacing-xl;
         }
         @include for-tablet-smallest {
+          width: 100%;
           padding: 0 $--spacing-xl $--spacing-m $--spacing-xl;
         }
         @include for-laptop {
+          width: 60%;
           padding: 0 $--spacing-xl $--spacing-l $--spacing-xl;
         }
         @include for-large {
+          width: 60%;
           padding: 0 $--spacing-xxl $--spacing-l $--spacing-xxl;
         }
         @include for-xlarge {
+          width: 60%;
           padding: 0 0 $--spacing-l 0;
         }
         p{
