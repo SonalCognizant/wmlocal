@@ -4,9 +4,10 @@ import { loadFragment } from '../fragment/fragment.js';
 export default async function decorate(block) {
   const mainPageURL = block.textContent;
   const blogHeroMeta = getMetadata('blog-hero');
-  const blogHeroPath = blogHeroMeta
-    ? new URL(blogHeroMeta, window.location).pathname
-    : '/blog-hero';
+  // const blogHeroPath = blogHeroMeta
+  //   ? new URL(blogHeroMeta, window.location).pathname
+  //   : '/blog-hero';
+  const blogHeroPath = new URL(blogHeroMeta, window.location).pathname;
   console.log(blogHeroPath, blogHeroMeta);
   const fragment = await loadFragment(blogHeroPath);
   const mainHeading = fragment.children[0].textContent;
