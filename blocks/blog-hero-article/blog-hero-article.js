@@ -34,11 +34,15 @@ export default async function decorate(block) {
   descriptionDiv.append(descriptionPara);
   descriptionDiv.classList.add('description');
   const lastUpdatedpara = document.createElement('p');
+  // const lastUpdatedDate = datafromArticleInformation.querySelector('.date');
+  // console.log(lastUpdatedDate);
+  // const lastUpdatedDateallpara = lastUpdatedDate.querySelectorAll('p');
+  // console.log(lastUpdatedDateallpara);
+  // const spanDate = lastUpdatedDateallpara.querySelector('span');
+  // console.log(spanDate);
   const lastUpdatedDate = datafromArticleInformation.querySelector('.date').lastChild;
   console.log(lastUpdatedDate);
-  const lastUpdatedDateallpara = lastUpdatedDate.querySelectorAll('p');
-  console.log(lastUpdatedDateallpara);
-  const spanDate = lastUpdatedDateallpara.querySelector('span');
+  const spanDate = lastUpdatedDate.querySelector('span');
   console.log(spanDate);
   const modifiedDate = spanDate.textContent;
   const span = document.createElement('span');
