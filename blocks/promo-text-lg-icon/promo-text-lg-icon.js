@@ -2,8 +2,6 @@ export default function decorate(block) {
   const svgIcon = block.children[0]?.children[0]?.children[0];
   const title = block.children[0]?.textContent;
   const description = block.children[1]?.textContent;
-  // const button = block.children[2]?.children[0]?.children[0]?.children[0]?.children[0];
-  // button.classList.add('button', 'secondary');
   const div = document.createElement('div');
   const div2 = document.createElement('div');
   const svg = svgIcon;
@@ -15,6 +13,11 @@ export default function decorate(block) {
   paragraph.classList.add('description');
   paragraph.append(description);
   div.append(div2, paragraph);
+  if (block.children[2]) {
+    const button = block.children[2]?.children[0]?.children[0]?.children[0]?.children[0];
+    button.classList.add('button', 'secondary');
+    div.append(div2, paragraph, button);
+  }
   block.innerHTML = '';
   block.append(div);
 }
