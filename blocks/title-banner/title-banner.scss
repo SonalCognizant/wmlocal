@@ -240,7 +240,7 @@
           }
           .tbnr-btn{
             @include for-mobile{
-              width: unset;
+              width: 100%;
             }
           }
         }
