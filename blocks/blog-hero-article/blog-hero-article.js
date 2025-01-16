@@ -33,18 +33,18 @@ export default async function decorate(block) {
   descriptionPara.append(description);
   descriptionDiv.append(descriptionPara);
   descriptionDiv.classList.add('description');
-  const lastUpdatedpara = document.createElement('p');
-  if (datafromArticleInformation.querySelector('.date').lastChild !== undefined && datafromArticleInformation.querySelector('.date').lastChild !== null) {
-    const lastUpdatedDate = datafromArticleInformation.querySelector('.date').lastChild;
-    if (lastUpdatedDate.querySelector('span') !== null && lastUpdatedDate.querySelector('span') !== undefined) {
-      const spanDate = lastUpdatedDate.querySelector('span');
-      const modifiedDate = spanDate.textContent;
-      const span = document.createElement('span');
-      span.append(modifiedDate);
-      lastUpdatedpara.append(span, articlereadtime);
-    }
+  const dateandtime = document.createElement('p');
+  if (datafromArticleInformation.querySelector('.date') !== undefined && datafromArticleInformation.querySelector('.date') !== null) {
+    const publishedDate = datafromArticleInformation.querySelector('.date');
+    const publishDate = String(publishedDate.children[0].textContent).split(':')[1];
+    const span = document.createElement('span');
+    span.append(publishDate);
+    const articletime = document.createElement('span');
+    articletime.append(articlereadtime);
+    // lastUpdatedpara.append(span, articlereadtime);
+    dateandtime.append(span, articletime);
   }
-  categoryDateDiv.append(lastUpdatedpara, articleAnchors);
+  categoryDateDiv.append(dateandtime, articleAnchors);
   contentDiv.append(heading, categoryDateDiv, descriptionDiv, button);
   blogHero.append(imgDiv, contentDiv);
   block.innerHTML = '';

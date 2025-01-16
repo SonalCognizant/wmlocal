@@ -123,7 +123,7 @@
 .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div div > p span {
   position: relative;
 }
-.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div div > p span::after {
+.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div div > p span:first-child::after {
   content: "•";
   position: absolute;
   right: -9px;
