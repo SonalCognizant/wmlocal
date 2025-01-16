@@ -60,6 +60,7 @@
 .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-left > div > div img {
   width: 100%;
   height: 100%;
+  border-radius: 5px;
 }
 .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right {
   width: 58.3333333333%;
