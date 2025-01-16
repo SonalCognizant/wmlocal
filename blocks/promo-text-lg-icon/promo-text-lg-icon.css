@@ -2,6 +2,11 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
+.promo-text-lg-icon-container {
+  position: relative;
+  z-index: 0;
+}
+
 .promo-text-lg-icon-wrapper {
   margin: 0;
   opacity: 1;

@@ -1,6 +1,10 @@
 @import "../../styles/include/mq.scss";
 @import "../../styles/include/tokens.scss";
 
+.promo-text-lg-icon-container {
+  position: relative;
+  z-index: 0;
+}
 .promo-text-lg-icon-wrapper {
   margin: 0;
   opacity: 1;
