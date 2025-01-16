@@ -556,6 +556,9 @@ a:any-link {
   letter-spacing: 0px;
   width: 60%;
 }
+.section .default-content-wrapper p:has(img) {
+  width: 100%;
+}
 @media (max-width: 480px) {
   .section .default-content-wrapper p {
     width: 100%;
