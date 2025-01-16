@@ -49,7 +49,7 @@
           >div {
             padding: $--spacing-huge $--spacing-m;
             @include for-tablet{
-              padding: $--spacing-huge $--spacing-xl;
+              padding: $--spacing-jumbo $--spacing-xl 48px $--spacing-xl;
             }
             @include for-laptop{
               padding: $--spacing-huge $--spacing-xxl;

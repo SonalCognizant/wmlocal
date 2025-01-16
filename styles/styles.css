@@ -680,16 +680,20 @@ a:any-link {
   padding-left: 24px;
   padding-bottom: 24px;
   margin: 0;
-  width: 60%;
 }
-@media (max-width: 480px) {
+@media (min-width: 1024px) and (max-width: 1200px) {
   .section .default-content-wrapper ul {
-    width: 100%;
+    width: 60%;
   }
 }
-@media (min-width: 480.5px) and (max-width: 1023.5px) {
+@media (min-width: 1201px) and (max-width: 1379px) {
   .section .default-content-wrapper ul {
-    width: 100%;
+    width: 60%;
+  }
+}
+@media (min-width: 1380px) {
+  .section .default-content-wrapper ul {
+    width: 60%;
   }
 }
 .section .default-content-wrapper ul li {
@@ -720,16 +724,20 @@ a:any-link {
   padding-left: 24px;
   padding-bottom: 24px;
   margin: 0;
-  width: 60%;
 }
-@media (max-width: 480px) {
+@media (min-width: 1024px) and (max-width: 1200px) {
   .section .default-content-wrapper ol {
-    width: 100%;
+    width: 60%;
   }
 }
-@media (min-width: 480.5px) and (max-width: 1023.5px) {
+@media (min-width: 1201px) and (max-width: 1379px) {
   .section .default-content-wrapper ol {
-    width: 100%;
+    width: 60%;
+  }
+}
+@media (min-width: 1380px) {
+  .section .default-content-wrapper ol {
+    width: 60%;
   }
 }
 .section .default-content-wrapper ol li {
@@ -813,18 +821,15 @@ a:any-link {
   }
 }
 .section .display-wrapper .display.block {
-  width: 100%;
   padding: 0 16px 16px 16px;
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .section .display-wrapper .display.block {
-    width: 100%;
     padding: 0 36px 24px 36px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 752.5px) {
   .section .display-wrapper .display.block {
-    width: 100%;
     padding: 0 36px 16px 36px;
   }
 }

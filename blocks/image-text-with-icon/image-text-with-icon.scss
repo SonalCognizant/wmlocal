@@ -3,6 +3,9 @@
 
 .image-text-with-icon-container {
   .image-text-with-icon-wrapper {
+    @include for-large{
+      width: calc(100% - 104px);
+    }
     .image-text-with-icon {
       &.block {
         &.columns-2-cols {
@@ -14,7 +17,7 @@
             padding: $--spacing-max $--spacing-xl;
           }
           @include for-large {
-            padding: $--spacing-max $--spacing-xxl;
+            padding: $--spacing-max 0;
           }
           @include for-xlarge {
             padding: $--spacing-max 0;
