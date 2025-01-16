@@ -139,14 +139,21 @@
         height: auto;
         width: auto;
         i{
-          &.fa-solid{
-            &.fa-circle-check{
-              color: green;
-              font-size: 24px;
+          font-size: 16px;
+          color: $--blue-675;
+          padding: 0 6px 0 12px;
+        }
+        &.icon-solid--circle-check{
+          i{
+            &.fa-solid{
+              &.fa-circle-check{
+                color: green;
+                font-size: 24px;
+              }
             }
+            font-size: 15px;
+            padding-right: 12px;
           }
-          font-size: 15px;
-          padding-right: 12px;
         }
       }
       &.button-container {
@@ -229,7 +236,7 @@
         width: auto;
         i{
           font-size: 16px;
-          color: #005589;
+          color: $--blue-675;
           padding-left: 6px;
         }
       }
@@ -245,7 +252,8 @@
         width: auto;
         i{
           font-size: 16px;
-          padding: 0 0 0 12px;
+          color: $--blue-675;
+          padding: 0 6px 0 12px;
         }
       }
     }
@@ -271,6 +279,15 @@
         text-align: left;
         padding-bottom: $--spacing-s;
         padding-left: 14px;
+        .icon{
+          height: auto;
+          width: auto;
+          i{
+            font-size: 16px;
+            color: $--blue-675;
+            padding: 0 6px 0 12px;
+          }
+        }
         &:last-child{
           padding-bottom: 0;
         }
@@ -298,6 +315,15 @@
         text-align: left;
         padding-bottom: $--spacing-s;
         padding-left: 14px;
+        .icon{
+          height: auto;
+          width: auto;
+          i{
+            font-size: 16px;
+            color: $--blue-675;
+            padding: 0 6px 0 12px;
+          }
+        }
         &:last-child{
           padding-bottom: 0;
         }
@@ -317,13 +343,14 @@
         letter-spacing: 0px;
         text-align: left;
         line-height: 24px;
+        display: flex;
         .icon{
           height: auto;
           width: auto;
           i{
             font-size: 12px;
             color: $--gray-700;
-            padding-left: 12px;
+            padding: 0 6px 0 12px;;
           }
         }
         @include for-mobile {
@@ -346,7 +373,7 @@
             width: auto;
             i{
               font-size: 14px;
-              color: #005589;
+              color: $--blue-675;
               padding-left: 12px;
             }
           }
