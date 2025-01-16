@@ -91,28 +91,18 @@
           margin: 0;
           @include for-xlarge {
             bottom: -210px;
-            width: 345px;
-            height: 345px;
           }
           @include for-large {
             bottom: -210px;
-            width: 345px;
-            height: 345px;
           }
           @include for-laptop {
             bottom: -210px;
-            width: 345px;
-            height: 345px;
           }
           @include for-mobile {
             bottom: -205px;
-            width: 299px;
-            height: 299px;
           }
           @include for-tablet {
             bottom: -200px;
-            width: 299px;
-            height: 299px;
           }
           > span {
             height: 100%;
