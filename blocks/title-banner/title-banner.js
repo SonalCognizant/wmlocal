@@ -1,6 +1,13 @@
 export default function decorate(block) {
   const parentEle = block.parentElement.parentElement;
-  parentEle.classList.add('blue-550');
+  // Check if the parent element has the class 'one-btn-banner'
+  if (parentEle.classList.contains('one-btn-banner')) {
+    // Remove the class 'blue-550' if 'one-btn-banner' is present
+    parentEle.classList.remove('blue-550');
+  } else {
+    // Add the class 'blue-550' if 'one-btn-banner' is not present
+    parentEle.classList.add('blue-550');
+  }
   const image = block.children[0].children[0].children[0].querySelector('img');
   const titleClass = block.children[1].children[0].querySelector('p');
   if (titleClass) {
@@ -18,7 +25,6 @@ export default function decorate(block) {
   picDiv.classList.add('tbnr-pic');
   const btnDiv = document.createElement('div');
   btnDiv.classList.add('tbnr-btn');
-  // console.log(block);
   const buttons = block.children[2].children[0].innerHTML;
   btnDiv.innerHTML = buttons;
   picDiv.append(image);
