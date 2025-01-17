@@ -128,13 +128,12 @@ main {
                 .accordion-item-body {
                     padding: $--spacing-l;
                     padding-top: 0;
-                    background-color: var(--background-color);
                 }
             }
         }
     }
 }
-.eight-column-layout.accordion-container{
+.nine-column-layout.accordion-container{
     .accordion-wrapper{
         details{
             width: calc(((100% / 12) * 9) - 10px);
@@ -143,6 +142,25 @@ main {
             }
             @include for-laptop{
                 width: calc(((100% / 12) * 9) - 60px);
+            }
+            @include for-tablet{
+                width: 100%;
+            }
+            @include for-mobile{
+                width: 100%;
+            }
+        }
+    }
+}
+.eight-column-layout.accordion-container{
+    .accordion-wrapper{
+        details{
+            width: calc(((100% / 12) * 8));
+            @include for-large{
+                width: calc(((100% / 12) * 8));
+            }
+            @include for-laptop{
+                width: calc(((100% / 12) * 8) - 60px);
             }
             @include for-tablet{
                 width: 100%;
