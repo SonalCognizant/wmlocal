@@ -112,18 +112,18 @@
     font-size: 28px;
   }
 }
-.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div div > p {
+.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div .date-div > p {
   display: flex;
   gap: 12px;
   margin: 0;
 }
-.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div div > p:first-child {
+.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div .date-div > p:first-child {
   padding-bottom: 8px;
 }
-.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div div > p span {
+.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div .date-div > p span {
   position: relative;
 }
-.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div div > p span:first-child::after {
+.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div .date-div > p span:first-child::after {
   content: "•";
   position: absolute;
   right: -9px;
@@ -132,7 +132,7 @@
   font-size: 16px;
   color: #4b4c4d;
 }
-.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div div > p > a {
+.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div .date-div > p > a {
   opacity: 1;
   color: #005589;
   font-family: roboto, sans-serif;
@@ -152,7 +152,6 @@
 .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div > .description > p {
   height: 100%;
   position: relative;
-  padding-bottom: 0px;
 }
 .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div > .description > p::after {
   content: "";

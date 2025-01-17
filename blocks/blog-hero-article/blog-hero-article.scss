@@ -83,7 +83,7 @@
               font-size: 28px;
             }
           }
-          div {
+          .date-div {
             > p {
               display: flex;
               gap: 12px;
@@ -126,7 +126,6 @@
             > p {
               height: 100%;
               position: relative;
-              padding-bottom: 0px;
               &::after {
                 content: "";
                 position: absolute;

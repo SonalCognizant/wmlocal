@@ -26,6 +26,7 @@ export default async function decorate(block) {
   button.append(buttonanchor);
   imgDiv.innerHTML = imageSrc;
   const categoryDateDiv = document.createElement('div');
+  categoryDateDiv.classList.add('date-div');
   const descriptionDiv = document.createElement('div');
   const descriptionPara = document.createElement('p');
   const heading = document.createElement('h2');
