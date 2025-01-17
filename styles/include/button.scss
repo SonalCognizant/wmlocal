@@ -31,13 +31,20 @@ button {
   line-height: 28px;
   text-align: center;
   text-wrap: auto;
-
   &.primary {
     background-color: $--primary-675;
     color: $--white;
     padding: 12px 36px;
     text-decoration: none;
-
+    .icon{
+      height: auto;
+      width: auto;
+      i{
+        font-size: 15px;
+        color: $--white;
+        padding: 0 12px 0 0;
+      }
+    }
     &:hover {
       background-color: $--primary-775;
       color: $--white;
@@ -58,7 +65,6 @@ button {
     color: $--blue-675;
     padding: 10px 34px;
     text-decoration: none;
-
     &:hover {
       background-color: $--blue-50;
       border: 2px solid $--blue-775;
@@ -73,6 +79,43 @@ button {
       outline-style: dashed;
       outline-offset: 2px;
     }
+
+    .icon{
+      height: auto;
+      width: auto;
+      i{
+        font-size: 15px;
+        color: $--blue-675;
+        padding: 0 12px 0 0;
+      }
+    }
+    &:has(.icon){
+      &:hover{
+        .icon{
+          height: auto;
+          width: auto;
+          i{
+            color: $--blue-775;
+          }
+        }
+      }
+    }
+  }
+
+  &.disabled{
+    background-color: $--gray-100;
+    padding: 12px 36px;
+    color: $--gray-700;
+    text-decoration: none;
+    .icon{
+      height: auto;
+      width: auto;
+      i{
+        font-size: 15px;
+        color: $--gray-700;
+        padding: 0 12px 0 0;
+      }
+    }
   }
 }
 
@@ -81,10 +124,30 @@ button {
     .button.primary{
       background-color: $--white;
       color: $--primary-675;
-          &:hover{
-            color: $--primary-775;
+      .icon{
+        height: auto;
+        width: auto;
+        i{
+          font-size: 15px;
+          color: $--primary-675;
+          padding: 0 12px 0 0;
+        }
+      }
+      &:has(.icon){
+        &:hover{
+          .icon{
+            height: auto;
+            width: auto;
+            i{
+              color: $--primary-775;
+            }
           }
-          &:focus{
+        }
+      }
+        &:hover{
+          color: $--primary-775;
+        }
+        &:focus{
           color: $--primary-775;
           outline: 3px solid $--white;
           outline-style: dashed;
@@ -95,6 +158,27 @@ button {
       background: transparent;
       border: 2px solid $--white;
       color: $--white;
+      .icon{
+        height: auto;
+        width: auto;
+        i{
+          font-size: 15px;
+          color: $--white;
+          padding: 0 12px 0 0;
+        }
+      }
+      &:has(.icon){
+        &:hover{
+          .icon{
+            height: auto;
+            width: auto;
+            i{
+              color: $--white;
+              background-color: #ffffff30;
+            }
+          }
+        }
+      }
       &:hover{
         background-color: #ffffff30;
       }
@@ -113,20 +197,35 @@ button {
     .button.primary{
       background-color: $--white;
       color: $--primary-675;
-          &:hover{
-            color: $--primary-775;
-          }
-          &:focus{
-          color: $--primary-775;
-          outline: 3px solid $--white;
-          outline-style: dashed;
-          outline-offset: 2px;
+      .icon{
+        height: auto;
+        width: auto;
+        i{
+          font-size: 15px;
+          color: $--primary-675;
+          padding: 0 12px 0 0;
         }
+      }
+      &:focus{
+        color: $--primary-775;
+        outline: 3px solid $--white;
+        outline-style: dashed;
+        outline-offset: 2px;
+      }
       }
     .button.secondary{
       background: transparent;
       border: 2px solid $--white;
       color: $--white;
+      .icon{
+        height: auto;
+        width: auto;
+        i{
+          font-size: 15px;
+          color: $--white;
+          padding: 0 12px 0 0;
+        }
+      }
       &:hover{
         background-color: #ffffff30;
       }

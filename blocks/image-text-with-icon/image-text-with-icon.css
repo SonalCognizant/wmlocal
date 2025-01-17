@@ -2,6 +2,11 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .image-text-with-icon-container .image-text-with-icon-wrapper {
+    width: calc(100% - 104px);
+  }
+}
 .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols {
   padding: 72px 16px;
 }
@@ -17,7 +22,7 @@
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols {
-    padding: 120px 52px;
+    padding: 120px 0;
   }
 }
 @media (min-width: 1379px) {

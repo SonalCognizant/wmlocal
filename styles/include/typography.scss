@@ -102,3 +102,35 @@ a:any-link {
 .background-blue-550 {
   background-color: $--blue-550;
 }
+
+.block-padding-top{
+  padding-top: $--spacing-huge;
+  @include for-tablet {
+    padding-top: $--spacing-jumbo;
+  }
+  @include for-laptop {
+    padding-top: $--spacing-max;
+  }
+  @include for-large {
+    padding-top: $--spacing-max;
+  }
+  @include for-xlarge {
+    padding-top: $--spacing-max;
+  }
+}
+
+.block-padding-bottom{
+  padding-bottom: $--spacing-huge;
+  @include for-tablet {
+    padding-bottom: $--spacing-jumbo;
+  }
+  @include for-laptop {
+    padding-bottom: $--spacing-max;
+  }
+  @include for-large {
+    padding-bottom: $--spacing-max;
+  }
+  @include for-xlarge {
+    padding-bottom: $--spacing-max;
+  }
+}
