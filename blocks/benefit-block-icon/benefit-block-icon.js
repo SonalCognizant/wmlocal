@@ -1,11 +1,4 @@
 export default function decorate(block) {
-  // append the img tag for the icon after inner-link
-  const imgIcon = block.querySelector('.button-container');
-  const linkImgicon = document.createElement('img');
-  linkImgicon.src = '/icons/right-arrow.svg';
-  linkImgicon.setAttribute('data-icon-name', 'right-arrow');
-  linkImgicon.className = 'link-img';
-  imgIcon.append(linkImgicon);
   // slicing the first element of the block
   const innerleftDivs = [...block.children].slice(0, 1);
   const blockleft = document.createElement('div');

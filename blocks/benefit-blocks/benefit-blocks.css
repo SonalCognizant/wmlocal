@@ -126,16 +126,10 @@
     padding: 16px 0 24px 0;
   }
 }
-.benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-left > div > div .button-container {
+.benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-left > div > div p:has(a) {
   padding: 0;
-  align-items: center;
 }
-@media (max-width: 480px) {
-  .benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-left > div > div .button-container {
-    display: flex;
-  }
-}
-.benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-left > div > div .button-container a {
+.benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-left > div > div p:has(a) a {
   font-size: 16px;
   line-height: 19px;
   font-family: roboto, sans-serif;
@@ -143,10 +137,14 @@
   color: #005589;
   text-decoration: underline;
 }
-.benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-left > div > div .button-container .link-img {
+.benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-left > div > div p:has(a) span {
   margin-left: 6px;
   width: 15px;
   height: 15px;
+}
+.benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-left > div > div p:has(a) span i {
+  font-size: 15px;
+  color: #005589;
 }
 .benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-right {
   width: 58.3333333333%;

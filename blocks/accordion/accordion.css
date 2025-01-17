@@ -94,7 +94,7 @@ main .section .accordion-wrapper {
 }
 .accordion-wrapper .accordion details .accordion-item-body p span.icon i {
   font-size: 16px;
-  margin-left: 12px;
+  padding: 0 6px 0 12px;
   color: #005589;
 }
 .accordion-wrapper .accordion details summary {
