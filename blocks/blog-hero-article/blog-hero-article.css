@@ -68,6 +68,7 @@
 }
 .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .image-div > img {
   width: 100%;
+  border-radius: 4px;
 }
 @media (min-width: 1379px) {
   .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div {
