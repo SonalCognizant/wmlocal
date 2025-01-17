@@ -90,12 +90,8 @@
                 padding: $--spacing-m 0 $--spacing-l 0;
               }
             }
-            .button-container {
+            p:has(a) {
               padding: 0;
-              align-items: center;
-              @include for-mobile{
-                display: flex;
-              }
               a {
                 font-size: 16px;
                 line-height: 19px;
@@ -104,10 +100,14 @@
                 color: $--blue-675;
                 text-decoration: underline;
               }
-              .link-img {
+              span {
                 margin-left: 6px;
                 width: 15px;
                 height: 15px;
+                i{
+                  font-size: 15px;
+                  color: $--blue-675;
+                }
               }
             }
           }
