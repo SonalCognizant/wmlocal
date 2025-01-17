@@ -92,6 +92,11 @@ main .section .accordion-wrapper {
   color: #4b4c4d;
   text-decoration: none;
 }
+.accordion-wrapper .accordion details .accordion-item-body p span.icon i {
+  font-size: 16px;
+  margin-left: 12px;
+  color: #005589;
+}
 .accordion-wrapper .accordion details summary {
   position: relative;
   padding: 24px 63px 24px 24px;
