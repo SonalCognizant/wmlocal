@@ -49,6 +49,7 @@
           }
           > img {
             width: 100%;
+            border-radius: 4px;
           }
         }
         > .content-div {
@@ -83,7 +84,7 @@
               font-size: 28px;
             }
           }
-          div {
+          .date-div {
             > p {
               display: flex;
               gap: 12px;
@@ -126,6 +127,7 @@
             > p {
               height: 100%;
               position: relative;
+              margin: 0;
               &::after {
                 content: "";
                 position: absolute;

@@ -25,7 +25,7 @@
     padding: 0 36px;
   }
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .footer-medadv-wrapper .footer-medadv > .logo-social-div {
     padding: 0 52px;
   }
@@ -91,7 +91,7 @@
     padding: 36px 36px 0px 36px;
   }
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .footer-medadv-wrapper .footer-medadv > .contact-div {
     padding: 36px 52px 0px 52px;
   }
@@ -135,7 +135,7 @@
     padding: 36px 36px 0px 36px;
   }
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .footer-medadv-wrapper .footer-medadv > .adobe-div {
     padding: 36px 52px 0px 52px;
   }
@@ -168,7 +168,7 @@
     padding: 36px 36px 24px 36px;
   }
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .footer-medadv-wrapper .footer-medadv > .language-div {
     padding: 36px 52px 24px 52px;
   }
@@ -221,7 +221,7 @@
     padding: 0 36px 52px 36px;
   }
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .footer-medadv-wrapper .footer-medadv > .attention-div {
     padding: 0 52px 52px 52px;
   }
@@ -283,7 +283,7 @@
     display: flex;
   }
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .footer-medadv-wrapper .footer-medadv > .attention-div > .social-div {
     display: none;
   }
@@ -312,7 +312,7 @@
     padding: 36px 36px 52px 36px;
   }
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .footer-medadv-wrapper .footer-medadv > .copyright-div {
     padding: 36px 52px 52px 52px;
   }
@@ -366,7 +366,7 @@
     gap: 0;
   }
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .footer-medadv-wrapper .footer-medadv > .copyright-div > div > ul {
     gap: 0;
   }
@@ -406,7 +406,7 @@
     border-right: 1px solid #4b4c4d;
   }
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .footer-medadv-wrapper .footer-medadv > .copyright-div > div > ul li:first-child a {
     padding-left: 0;
   }
@@ -446,7 +446,7 @@
     border-right: 1px solid #4b4c4d;
   }
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .footer-medadv-wrapper .footer-medadv > .copyright-div > div > ul li > a {
     padding: 0 22px;
     border-right: 1px solid #4b4c4d;

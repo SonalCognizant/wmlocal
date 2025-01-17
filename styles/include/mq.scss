@@ -39,7 +39,7 @@ $breakpoint5: 1379px;
  
 //very large screen 1379 +
 @mixin for-xlarge {
-  @media (min-width: calc($breakpoint5 + 1px)) {
+  @media (min-width: calc($breakpoint5)) {
     @content;
   }
 }

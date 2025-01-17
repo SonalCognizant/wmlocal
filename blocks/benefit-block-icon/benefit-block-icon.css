@@ -13,7 +13,7 @@
   gap: calc((100% - 330px) / 12 + 60px);
   align-items: stretch;
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .benefit-block-icon-container .benefit-block-icon-wrapper .benefit-block-icon {
     padding: 120px 0;
   }
