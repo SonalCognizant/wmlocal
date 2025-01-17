@@ -126,6 +126,7 @@
             > p {
               height: 100%;
               position: relative;
+              margin: 0;
               &::after {
                 content: "";
                 position: absolute;
