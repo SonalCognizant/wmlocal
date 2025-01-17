@@ -45,7 +45,7 @@
     h6 {
       margin: 0;
       padding-bottom: $--spacing-m;
-      width: 60%;
+      width: calc((100% - 15px) / 12* 8);
       @include for-mobile {
         width: 100%;
       }
@@ -63,7 +63,7 @@
         i{
           font-size: 32px;
           color: $--gray-700;
-          padding-left: $--spacing-s;
+          margin-left: $--spacing-s;
         }
       }
     }
@@ -75,7 +75,7 @@
         i{
           font-size: 24px;
           color: $--gray-700;
-          padding-left: $--spacing-s;
+          margin-left: $--spacing-s;
         }
       }
     }
@@ -87,7 +87,7 @@
         i{
           font-size: 20px;
           color: $--gray-700;
-          padding-left: $--spacing-s;
+          margin-left: $--spacing-s;
         }
       }
     }
@@ -99,7 +99,7 @@
         i{
           font-size: 18px;
           color: $--gray-700;
-          padding-left: $--spacing-s;
+          margin-left: $--spacing-s;
         }
       }
     }
@@ -111,7 +111,7 @@
         i{
           font-size: 16px;
           color: $--gray-700;
-          padding-left: $--spacing-s;
+          margin-left: $--spacing-s;
         }
       }
     }
@@ -128,7 +128,7 @@
       font-weight: 400;
       opacity: 1;
       letter-spacing: 0px;
-      width: 60%;
+      width: calc((100% - 15px) / 12* 8);
       @include for-mobile {
         width: 100%;
       }
@@ -141,7 +141,7 @@
         i{
           font-size: 16px;
           color: $--blue-675;
-          padding: 0 6px 0 $--spacing-s;
+          margin: 0 6px 0 $--spacing-s;
         }
         &.icon-solid--circle-check{
           i{
@@ -152,7 +152,7 @@
               }
             }
             font-size: 15px;
-            padding-right: $--spacing-s;
+            margin-right: $--spacing-s;
           }
         }
       }
@@ -189,7 +189,7 @@
                   i{
                     font-size: 15px;
                     color: #fff;
-                    padding: 0 $--spacing-s 0 0;
+                    margin: 0 $--spacing-s 0 0;
                   }
                 }
               }
@@ -201,7 +201,7 @@
                   i{
                     font-size: 15px;
                     color: $--blue-675;
-                    padding: 0 $--spacing-s 0 0;
+                    margin: 0 $--spacing-s 0 0;
                   }
                 }
                 &:hover{
@@ -221,7 +221,7 @@
                   i{
                     font-size: 15px;
                     color: $--gray-700;
-                    padding: 0 $--spacing-s 0 0;
+                    margin: 0 $--spacing-s 0 0;
                   }
                 }
               }
@@ -237,7 +237,7 @@
         i{
           font-size: 16px;
           color: $--blue-675;
-          padding-left: 6px;
+          margin-left: 6px;
         }
       }
     }
@@ -253,7 +253,7 @@
         i{
           font-size: 16px;
           color: $--blue-675;
-          padding: 0 6px 0 $--spacing-s;
+          margin: 0 6px 0 $--spacing-s;
         }
       }
     }
@@ -262,13 +262,13 @@
       padding-bottom: $--spacing-l;
       margin: 0;
       @include for-laptop {
-        width: 60%;
+        width: calc((100% - 15px) / 12* 8);
       }
       @include for-large {
-        width: 60%;
+        width: calc((100% - 15px) / 12* 8);
       }
       @include for-xlarge {
-        width: 60%;
+        width: calc((100% - 15px) / 12* 8);
       }
       li{
         color: $--gray-700;
@@ -287,7 +287,7 @@
           i{
             font-size: 16px;
             color: $--blue-675;
-            padding: 0 6px 0 $--spacing-s;
+            margin: 0 6px 0 $--spacing-s;
           }
         }
         &:last-child{
@@ -300,13 +300,13 @@
       padding-bottom: $--spacing-l;
       margin: 0;
       @include for-laptop {
-        width: 60%;
+        width: calc((100% - 15px) / 12* 8);
       }
       @include for-large {
-        width: 60%;
+        width: calc((100% - 15px) / 12* 8);
       }
       @include for-xlarge {
-        width: 60%;
+        width: calc((100% - 15px) / 12* 8);
       }
       li{
         color: $--gray-700;
@@ -325,7 +325,7 @@
           i{
             font-size: 16px;
             color: $--blue-675;
-            padding: 0 6px 0 $--spacing-s;
+            margin: 0 6px 0 $--spacing-s;
           }
         }
         &:last-child{
@@ -354,7 +354,7 @@
           i{
             font-size: 12px;
             color: $--gray-700;
-            padding: 0 6px 0 $--spacing-s;
+            margin: 0 6px 0 $--spacing-s;
           }
         }
         @include for-mobile {
@@ -378,7 +378,7 @@
             i{
               font-size: 14px;
               color: $--blue-675;
-              padding-left: $--spacing-s;
+              margin-left: $--spacing-s;
             }
           }
           @include for-mobile {
@@ -399,15 +399,15 @@
           padding: 0 $--spacing-xl $--spacing-m $--spacing-xl;
         }
         @include for-laptop {
-          width: 60%;
+          width: calc((100% - 15px) / 12* 8);
           padding: 0 $--spacing-xl $--spacing-l $--spacing-xl;
         }
         @include for-large {
-          width: 60%;
+          width: calc((100% - 15px) / 12* 8);
           padding: 0 $--spacing-xxl $--spacing-l $--spacing-xxl;
         }
         @include for-xlarge {
-          width: 60%;
+          width: calc((100% - 15px) / 12* 8);
           padding: 0 0 $--spacing-l 0;
         }
         p{

@@ -28,11 +28,16 @@
     @include for-xlarge{
       height: 575px;
       background-position: 22%;
+      max-width: unset;
     }
     .promo-text-focus {
       width: 100%;
       display: flex;
       justify-content: end;
+      @include for-xlarge{
+        max-width: 1275px;
+        margin: 0 auto;
+      }
       &.block {
         .promo-focus-block{
           background: $--blue-550;
