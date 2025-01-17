@@ -7,7 +7,7 @@
   align-items: center;
   gap: calc((100% - 330px) / 12 + 60px);
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks {
     padding: 120px 0;
   }

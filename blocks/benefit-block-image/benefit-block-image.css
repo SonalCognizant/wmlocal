@@ -7,7 +7,7 @@
   flex-direction: row-reverse;
   gap: calc((100% - 330px) / 12 + 60px);
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image {
     padding: 120px 0;
   }

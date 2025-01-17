@@ -49,7 +49,7 @@
 .breadcrumb-ul .breadcrumb-list:last-child .divider-img {
   display: none;
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .breadcrumb-ul {
     max-width: 1275px;
     margin: auto;
@@ -90,7 +90,7 @@
 }
 @media (max-width: 480px) {
   .breadcrumb-ul {
-    width: calc(100% - 36px);
+    width: calc(100% - 16px);
     padding: 32px 0;
     padding-left: 16px;
   }

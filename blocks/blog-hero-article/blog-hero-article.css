@@ -6,7 +6,7 @@
 .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div {
   display: flex;
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div {
     display: flex;
     gap: 30px;
@@ -39,7 +39,7 @@
     padding: 0 36px;
   }
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .image-div {
     width: 57.33%;
     padding-bottom: 72px;
@@ -69,7 +69,7 @@
 .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .image-div > img {
   width: 100%;
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div {
     width: 40.33%;
   }
