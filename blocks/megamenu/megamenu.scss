@@ -369,7 +369,7 @@ header {
                                     padding-bottom: 4px;
                                     line-height: 19px;
                                     cursor: pointer;
-                                    @include for-mobile {
+									@include for-mobile {
                                         cursor: none;
                                     }
                                     @include for-tablet {
@@ -377,7 +377,7 @@ header {
                                     }
                                     &:hover{
                                         border-bottom: 2px solid $--blue-675;
-                                        @include for-mobile {
+										@include for-mobile {
                                             border-bottom: none;
                                         }
                                         @include for-tablet {
@@ -425,6 +425,7 @@ header {
                                         border-top: 2px solid #d6e5f1;
                                         .header-submenu-list {
                                             width: calc((100% + 66px) / 12* 7);
+                                            z-index: 1;
                                             padding-left: $--spacing-xl;
                                             .header-submenu-ul{
                                                 display: flex; 
@@ -530,6 +531,7 @@ header {
                                         border-top: 2px solid #d6e5f1;
                                         .header-submenu-list {
                                             width: calc((100% + 104px) / 12* 7);
+                                            z-index: 1;
                                             .header-submenu-ul{
                                                 display: flex; 
                                                 gap: 30px;
@@ -747,7 +749,7 @@ header {
                                     a{
                                         color: $--blue-675;
                                         border-bottom: 2px solid $--blue-675; 
-                                        @include for-mobile{
+										@include for-mobile{
                                             color: $--gray-700;
                                             border-bottom: none;
                                         }
@@ -794,7 +796,7 @@ header {
                                     margin: 0;
                                     a{
                                         line-height: 18px;
-                                        cursor: none;
+										cursor: none;
                                     }
                                     .navbarpara{
                                         line-height: 18px; 
@@ -835,7 +837,7 @@ header {
                                     margin: 0;
                                     a{
                                         line-height: 18px;
-                                        cursor: none;
+										cursor: none;
                                     }
                                     .navbarpara{
                                         line-height: 18px; 
@@ -1094,6 +1096,208 @@ header {
                     }
                 }
             }
+            .blog-header-section{
+                .blog-header-nav{
+                    background-color: $--blue-675;
+                    padding: 24px 36px;
+                    .blog-menu-block{
+                        max-width: 1275px;
+                        margin: auto;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        .blog-menu-logo{
+                            display: flex;
+                            align-items: center;
+                            .blog-logo{
+                                width: 72px;
+                                height: 25px;
+                                padding: 3px 19px 3px 0;
+                                border-right: 2px solid #C8CCD0;
+                                @include for-mobile { 
+                                    border: none;
+                                }
+                                @include for-tablet { 
+                                    border: none;
+                                }
+                            }
+                            .blog-label{
+                                opacity: 1;
+                                color: $--white;
+                                font-family: $--font-roboto;
+                                font-size: 14px;
+                                font-weight: 400;
+                                letter-spacing: 0px;
+                                text-align: left;
+                                line-height: 24px;
+                                margin: 0;
+                                padding-left: 20px;
+                                @include for-mobile { 
+                                    display: none;
+                                }
+                                @include for-tablet { 
+                                    display: none;
+                                }
+                            }
+                        }
+                        .blog-menu-button{
+                            @include for-mobile {
+                                display: flex;
+                                justify-content: flex-end;
+                            }
+                            @include for-tablet {
+                                display: flex;
+                                justify-content: flex-end;
+                            }
+                        }
+                    }
+                }
+                .blog-header-menu{
+                    background-color: #014169;
+                    padding: 0 52px;
+                    @include for-mobile {
+                        display: none;
+                        padding: 0;
+                    }
+                    @include for-tablet {
+                        display: none;
+                        padding: 0;
+                    }
+                    .blog-menu-view{
+                        max-width: 1275px;
+                        margin: auto;
+                        .blog-menu-ul{
+                            list-style-type: none;
+                            margin: 0;
+                            padding: 0;
+                            display: flex;
+                            position: relative;
+                            @include for-mobile {
+                                display: block;
+                            }
+                            @include for-tablet {
+                                display: block;
+                            }
+                            .blog-menu-li{
+                                text-align: left;
+                                text-decoration: none;
+                                font-size: 16px;
+                                font-family: roboto, sans-serif;
+                                font-weight: 500;
+                                margin: 16px 52px 15px 0;
+                                @include for-mobile {
+                                    padding: 16px 52px;
+                                    margin: 0;
+                                    border-top: 1px solid #4A7390;
+                                }
+                                @include for-tablet {
+                                    padding: 16px 52px;
+                                    margin: 0;
+                                    border-top: 1px solid #4A7390;
+                                }
+                                a{
+                                    color: $--white;
+                                    text-decoration: none;
+                                }
+                                .blog-menu-link{
+                                    .blogbarpara{
+                                        margin: 0;
+                                        color: $--white;
+                                    }
+                                }
+                                .blog-menu-item{
+                                    display: none;
+                                    position: absolute;
+                                    background-color: #014169;
+                                    top: 55px;
+                                    border-radius: 0px 0px 2px 2px;
+                                    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.2);
+                                    z-index: -1;
+                                    .blog-submenu-ul {
+                                        // display: none;
+                                        list-style-type: none;
+                                        margin: 0;
+                                        padding: 32px 50px 52px 50px;
+                                        li{
+                                            padding-bottom: 16px;
+                                        }
+                                    }
+                                }
+                                .blog-menu-link{
+                                    &.show-blog-menu ~ .blog-menu-item{
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .blog-mobile-menu{
+                    background-color: #014169;
+                    padding: 20px 36px 21px 36px;
+                    color: $--white;
+                    opacity: 1;
+                    font-family: roboto, sans-serif;
+                    font-size: 16px;
+                    font-weight: 500;
+                    letter-spacing: 0px;
+                    text-align: left;
+                    line-height: 18px;
+                    border-top: 1px solid #4A7390;
+                    .mobile-up-arrow{
+                        display: none;
+                    }
+                    .mobile-down-arrow{
+                        display: inline-block;
+                        padding-left: 9px;
+                        margin-bottom: 1px;
+                    }
+                    &.mobile-arrow{
+                        .mobile-up-arrow{
+                            display: inline-block;
+                            padding-left: 9px;
+                            margin-bottom: 1px;
+                        }
+                        .mobile-down-arrow{
+                            display: none;
+                        }  
+                    }
+                    @include for-laptop {
+                        display: none;
+                    }
+                    @include for-large {
+                        display: none;
+                    }
+                    @include for-xlarge {
+                        display: none;
+                    }
+                }
+            }
         }
 	}
+    &.blog-menu{
+        .megamenu{
+            &.block{
+                .main-header-wrapper{
+                    .main-header{
+                        .main-header-menu{
+                            .header-menu-block{
+                                @include for-mobile {
+                                    max-height: 80vh;
+                                    overflow-y: auto;
+                                    min-height: 80vh;
+                                }
+                                @include for-mobile {
+                                    max-height: 80vh;
+                                    overflow-y: auto;
+                                    min-height: 80vh;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
