@@ -152,6 +152,7 @@
 .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div > .description > p {
   height: 100%;
   position: relative;
+  padding-bottom: 0px;
 }
 .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div > .description > p::after {
   content: "";
