@@ -369,6 +369,12 @@ header {
                                     padding-bottom: 4px;
                                     line-height: 19px;
                                     cursor: pointer;
+                                    @include for-mobile {
+                                        cursor: none;
+                                    }
+                                    @include for-tablet {
+                                        cursor: none;
+                                    }
                                     &:hover{
                                         border-bottom: 2px solid $--blue-675;
                                         @include for-mobile {
@@ -788,6 +794,7 @@ header {
                                     margin: 0;
                                     a{
                                         line-height: 18px;
+                                        cursor: none;
                                     }
                                     .navbarpara{
                                         line-height: 18px; 
@@ -828,6 +835,7 @@ header {
                                     margin: 0;
                                     a{
                                         line-height: 18px;
+                                        cursor: none;
                                     }
                                     .navbarpara{
                                         line-height: 18px; 

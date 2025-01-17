@@ -43,7 +43,7 @@
                                 &::after{
                                     content: "•";
                                     position: absolute;
-                                    right: -10px;
+                                    right: -9px;
                                     top: 55%;
                                     transform: translateY(-50%);
                                     font-size: 16px;
@@ -86,7 +86,6 @@
                     }
                     .author{
                         width: 50%;
-                        text-align: right;
                         p{
                             line-height: 20px;
                             display: flex;
@@ -103,7 +102,7 @@
                                 background-color: $--gray-700;
                                 border-radius: 50%;
                                 width: 24px;
-                                height: 21px;
+                                height: 24px;
                                 position: relative;
                                 i{
                                     font-size: 16px;
@@ -129,32 +128,67 @@
             }
             .article-link{
                 padding: 8px 0;
+                display: flex;
+                gap: 12px;
+                align-items: center;
                 @include for-tablet{
                     padding-bottom: 12px;
+                    position: relative;
                 }
                 @include for-mobile{
                     padding-bottom: 12px;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                @media (min-width: 481px) and (max-width: 492px) {
+                    padding-bottom: 24px;
                 }
                 p{
-                    a{
-                        color: $--blue-675;
-                        font-family: $--font-roboto;
-                        font-size: 16px;
-                        line-height: 19px;
-                        font-weight: 500;
-                        text-decoration: underline;
-                        margin-right: 12px;
-                        @include for-tablet{
-                            white-space: nowrap;
+                    text-wrap: nowrap;
+                    &:first-child{
+                        position: relative;
+                        &::after{
+                            content: "•";
+                            position: absolute;
+                            right: -9px;
+                            top: 52%;
+                            transform: translateY(-50%);
+                            font-size: 16px;
+                            color: $--gray-700;
                         }
                         @include for-mobile{
-                            white-space: nowrap;
+                            &::after{
+                                display: none;
+                            }
                         }
-                        &:first-child{
-                            margin-left: 4px;
+                    }
+                    &:last-child{
+                        display: flex;
+                        flex-wrap: wrap;
+                        a{
+                            color: $--blue-675;
+                            font-family: $--font-roboto;
+                            font-size: 16px;
+                            line-height: 19px;
+                            font-weight: 500;
+                            text-decoration: underline;
+                            margin-right: 12px;
+                            @include for-tablet{
+                                white-space: nowrap;
+                            }
+                            @include for-mobile{
+                                white-space: nowrap;
+                            }
+                            &:last-child{
+                                margin-right: 0;
+                            }
                         }
-                        &:last-child{
-                            margin-right: 0;
+                        @media (min-width: 481px) and (max-width: 492px) {
+                            a:last-child{
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                            }
                         }
                     }
                 }
@@ -165,6 +199,9 @@
                 }
                 @include for-mobile{
                     padding-bottom: 12px;
+                }
+                @media (min-width: 481px) and (max-width: 492px) {
+                    padding-top: 12px;
                 }
                 p{
                     display: flex;

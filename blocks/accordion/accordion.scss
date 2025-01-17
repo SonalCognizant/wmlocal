@@ -59,6 +59,15 @@ main {
                 font-size: 18px;
                 font-weight: 700;
             }
+            .item-description{
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 400;
+                color: $--gray-700;
+                text-decoration: none;
+                padding-top: 8px;
+
+            }
             .accordion-item-body{
                 p{
                     font-size: 16px;

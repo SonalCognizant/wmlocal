@@ -18,5 +18,21 @@ export default function decorate(block) {
   const blockRight = document.createElement('div');
   blockRight.classList.add('block-right');
   block.append(blockRight);
-  blockRight.append(...innerrightDivs);
+  if (innerrightDivs) {
+    blockRight.append(...innerrightDivs);
+    // Change all the second <h2> to <h4>
+    const divs = blockRight.querySelectorAll('div');
+    divs.forEach((div) => {
+      const h2s = div.querySelector('h2');
+      if (h2s) {
+        const secondH2 = h2s;
+        const h4 = document.createElement('h4');
+        h4.innerHTML = secondH2.innerHTML; // Copy the inner HTML
+        secondH2.replaceWith(h4); // Replace the <h2> with <h4>
+      }
+    });
+    // Remove empty divs
+    const emptyDivs = blockRight.querySelectorAll('div:empty');
+    emptyDivs.forEach((div) => div.remove());
+  }
 }

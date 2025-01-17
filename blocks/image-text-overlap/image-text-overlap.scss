@@ -4,6 +4,9 @@
 .image-text-overlap-container {
   .image-text-overlap-wrapper {
     padding: 0;
+    @include for-large{
+      width: calc(100% - 104px);
+    }
     .image-text-overlap {
       &.block {
         &.columns-2-cols {
@@ -36,7 +39,7 @@
                 padding: $--spacing-huge 0 $--spacing-huge $--spacing-xl;
               }
               @include for-large {
-                padding: $--spacing-max 0 $--spacing-max $--spacing-xxl;
+                padding: $--spacing-max 0 $--spacing-max 0;
                 max-width: calc((100% - 30px) / 12* 5);
               }
               @include for-xlarge {
@@ -67,7 +70,6 @@
                 width: calc(50% - 51px);
               }
               @include for-large {
-                padding: 0 $--spacing-xxl 0 0;
                 width: calc((100% - 30px) / 2);
                 min-width: calc((100% - 30px) / 2);
               }
