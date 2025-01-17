@@ -63,7 +63,7 @@
         i{
           font-size: 32px;
           color: $--gray-700;
-          padding-left: 12px;
+          padding-left: $--spacing-s;
         }
       }
     }
@@ -75,7 +75,7 @@
         i{
           font-size: 24px;
           color: $--gray-700;
-          padding-left: 12px;
+          padding-left: $--spacing-s;
         }
       }
     }
@@ -87,7 +87,7 @@
         i{
           font-size: 20px;
           color: $--gray-700;
-          padding-left: 12px;
+          padding-left: $--spacing-s;
         }
       }
     }
@@ -99,7 +99,7 @@
         i{
           font-size: 18px;
           color: $--gray-700;
-          padding-left: 12px;
+          padding-left: $--spacing-s;
         }
       }
     }
@@ -111,7 +111,7 @@
         i{
           font-size: 16px;
           color: $--gray-700;
-          padding-left: 12px;
+          padding-left: $--spacing-s;
         }
       }
     }
@@ -139,14 +139,21 @@
         height: auto;
         width: auto;
         i{
-          &.fa-solid{
-            &.fa-circle-check{
-              color: green;
-              font-size: 24px;
+          font-size: 16px;
+          color: $--blue-675;
+          padding: 0 6px 0 $--spacing-s;
+        }
+        &.icon-solid--circle-check{
+          i{
+            &.fa-solid{
+              &.fa-circle-check{
+                color: green;
+                font-size: 24px;
+              }
             }
+            font-size: 15px;
+            padding-right: $--spacing-s;
           }
-          font-size: 15px;
-          padding-right: 12px;
         }
       }
       &.button-container {
@@ -182,7 +189,7 @@
                   i{
                     font-size: 15px;
                     color: #fff;
-                    padding: 0 12px 0 0;
+                    padding: 0 $--spacing-s 0 0;
                   }
                 }
               }
@@ -194,7 +201,7 @@
                   i{
                     font-size: 15px;
                     color: $--blue-675;
-                    padding: 0 12px 0 0;
+                    padding: 0 $--spacing-s 0 0;
                   }
                 }
                 &:hover{
@@ -214,7 +221,7 @@
                   i{
                     font-size: 15px;
                     color: $--gray-700;
-                    padding: 0 12px 0 0;
+                    padding: 0 $--spacing-s 0 0;
                   }
                 }
               }
@@ -229,7 +236,7 @@
         width: auto;
         i{
           font-size: 16px;
-          color: #005589;
+          color: $--blue-675;
           padding-left: 6px;
         }
       }
@@ -245,7 +252,8 @@
         width: auto;
         i{
           font-size: 16px;
-          padding: 0 0 0 12px;
+          color: $--blue-675;
+          padding: 0 6px 0 $--spacing-s;
         }
       }
     }
@@ -253,12 +261,14 @@
       padding-left: $--spacing-l;
       padding-bottom: $--spacing-l;
       margin: 0;
-      width: 60%;
-      @include for-mobile {
-        width: 100%;
+      @include for-laptop {
+        width: 60%;
       }
-      @include for-tablet {
-        width: 100%;
+      @include for-large {
+        width: 60%;
+      }
+      @include for-xlarge {
+        width: 60%;
       }
       li{
         color: $--gray-700;
@@ -271,6 +281,15 @@
         text-align: left;
         padding-bottom: $--spacing-s;
         padding-left: 14px;
+        .icon{
+          height: auto;
+          width: auto;
+          i{
+            font-size: 16px;
+            color: $--blue-675;
+            padding: 0 6px 0 $--spacing-s;
+          }
+        }
         &:last-child{
           padding-bottom: 0;
         }
@@ -280,12 +299,14 @@
       padding-left: $--spacing-l;
       padding-bottom: $--spacing-l;
       margin: 0;
-      width: 60%;
-      @include for-mobile {
-        width: 100%;
+      @include for-laptop {
+        width: 60%;
       }
-      @include for-tablet {
-        width: 100%;
+      @include for-large {
+        width: 60%;
+      }
+      @include for-xlarge {
+        width: 60%;
       }
       li{
         color: $--gray-700;
@@ -298,6 +319,15 @@
         text-align: left;
         padding-bottom: $--spacing-s;
         padding-left: 14px;
+        .icon{
+          height: auto;
+          width: auto;
+          i{
+            font-size: 16px;
+            color: $--blue-675;
+            padding: 0 6px 0 $--spacing-s;
+          }
+        }
         &:last-child{
           padding-bottom: 0;
         }
@@ -317,13 +347,14 @@
         letter-spacing: 0px;
         text-align: left;
         line-height: 24px;
+        display: flex;
         .icon{
           height: auto;
           width: auto;
           i{
             font-size: 12px;
             color: $--gray-700;
-            padding-left: 12px;
+            padding: 0 6px 0 $--spacing-s;
           }
         }
         @include for-mobile {
@@ -346,8 +377,8 @@
             width: auto;
             i{
               font-size: 14px;
-              color: #005589;
-              padding-left: 12px;
+              color: $--blue-675;
+              padding-left: $--spacing-s;
             }
           }
           @include for-mobile {
@@ -360,14 +391,11 @@
   .display-wrapper{
     .display{
       &.block{
-        width: 100%;
         padding: 0 $--spacing-m $--spacing-m $--spacing-m;
         @include for-tablet {
-          width: 100%;
           padding: 0 $--spacing-xl $--spacing-l $--spacing-xl;
         }
         @include for-tablet-smallest {
-          width: 100%;
           padding: 0 $--spacing-xl $--spacing-m $--spacing-xl;
         }
         @include for-laptop {
