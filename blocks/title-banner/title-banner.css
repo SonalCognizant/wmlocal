@@ -319,6 +319,6 @@
 }
 @media (max-width: 480px) {
   .one-btn-banner.title-banner-container .title-banner-wrapper .block .tbnr-maindiv .tbnr-textcont .tbnr-btn {
-    width: unset;
+    width: 100%;
   }
 }
