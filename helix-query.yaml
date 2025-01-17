@@ -1,0 +1,7 @@
+indices:
+  mysite:
+    include:
+      - /akash-aemlive/**
+    exclude:
+      - /documents/snippets/**
+    target: /query-index.json
