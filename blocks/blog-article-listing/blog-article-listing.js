@@ -86,11 +86,11 @@ const myJson = [
 ];
 export default async function decorate(block) {
   const heading = block.children[0].children[0].innerText;
-  console.log(heading);
   const inlinewithIcon = block.children[0].children[1].innerHTML;
-  console.log(inlinewithIcon);
+  console.log(heading, inlinewithIcon);
   block.innerHTML = '';
   const blockDiv = document.createElement('div');
+  blockDiv.classList.add('cards-div');
   // eslint-disable-next-line object-curly-newline
   myJson.forEach(({ ImageUrl, category, publishedDate, articleReadTime, title }) => {
     const imageURL = ImageUrl;
@@ -99,11 +99,13 @@ export default async function decorate(block) {
     const articleTime = articleReadTime;
     const titleofCard = title;
     const mainDiv = document.createElement('div');
+    mainDiv.classList.add('card-div');
     const contentDiv = document.createElement('div');
     const image = document.createElement('img');
     image.src = `${imageURL}`;
     image.alt = 'thumbnail';
     const categoryPara = document.createElement('p');
+    categoryPara.classList.add('category-list');
     categoryList.forEach((item) => {
       const value = item;
       const anchors = document.createElement('a');
@@ -112,12 +114,16 @@ export default async function decorate(block) {
       categoryPara.append(anchors);
     });
     const datetimeDiv = document.createElement('div');
+    datetimeDiv.classList.add('date-div');
     const pubDate = document.createElement('p');
     pubDate.append(publishDate);
+    pubDate.classList.add('date');
     const arcretime = document.createElement('p');
     arcretime.append(articleTime);
+    arcretime.classList.add('read-time');
     datetimeDiv.append(pubDate, arcretime);
     const mainTitle = document.createElement('h3');
+    mainTitle.classList.add('card-title');
     mainTitle.append(titleofCard);
     contentDiv.append(mainTitle, datetimeDiv, categoryPara);
     mainDiv.append(image, contentDiv);
