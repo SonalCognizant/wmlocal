@@ -109,13 +109,15 @@ export default async function decorate(block) {
       anchors.append(value);
       categoryPara.append(anchors);
     });
+    const datetimeDiv = document.createElement('div');
     const pubDate = document.createElement('p');
     pubDate.append(publishDate);
     const arcretime = document.createElement('p');
     arcretime.append(articleTime);
+    datetimeDiv.append(pubDate, arcretime);
     const mainTitle = document.createElement('h3');
     mainTitle.append(titleofCard);
-    contentDiv.append(mainTitle, pubDate, arcretime, categoryPara);
+    contentDiv.append(mainTitle, datetimeDiv, categoryPara);
     mainDiv.append(image, contentDiv);
     block.innerHTML = '';
     block.append(mainDiv);
