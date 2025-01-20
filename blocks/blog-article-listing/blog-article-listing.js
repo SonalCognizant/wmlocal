@@ -13,7 +13,7 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://asesstttxyzamjdandjamdkam.com',
+    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -22,7 +22,7 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://asesstttxyzamjdandjamdkam.com',
+    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -31,7 +31,7 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://asesstttxyzamjdandjamdkam.com',
+    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -40,7 +40,7 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://asesstttxyzamjdandjamdkam.com',
+    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -49,7 +49,7 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://asesstttxyzamjdandjamdkam.com',
+    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -58,7 +58,7 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://asesstttxyzamjdandjamdkam.com',
+    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -67,7 +67,7 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://asesstttxyzamjdandjamdkam.com',
+    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -76,7 +76,7 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://asesstttxyzamjdandjamdkam.com',
+    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -101,21 +101,20 @@ export default async function decorate(block) {
     const image = document.createElement('img');
     image.src = `${imageURL}`;
     image.alt = 'thumbnail';
-    const allCategory = categoryList.forEach((item) => {
+    categoryList.forEach((item) => {
       const value = { item };
       const anchors = document.createElement('a');
       anchors.href = 'www.google.com';
       anchors.append(value);
-      return anchors;
+      console.log(anchors);
     });
-    console.log(allCategory);
     const pubDate = document.createElement('p');
     pubDate.append(publishDate);
     const arcretime = document.createElement('p');
     arcretime.append(articleTime);
     const mainTitle = document.createElement('h3');
     mainTitle.append(titleofCard);
-    contentDiv.append(mainTitle, pubDate, arcretime, allCategory);
+    contentDiv.append(mainTitle, pubDate, arcretime);
     mainDiv.append(image, contentDiv);
     block.innerHTML = '';
     block.append(mainDiv);
