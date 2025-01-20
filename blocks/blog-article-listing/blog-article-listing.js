@@ -86,7 +86,7 @@ const myJson = [
 ];
 export default async function decorate(block) {
   const heading = block.children[0].children[0].innerText;
-  const inlinewithIcon = block.children[0].children[1].innerHTML;
+  const inlinewithIcon = block.children[0].children[1].innerText;
   console.log(heading, inlinewithIcon);
   const headDiv = document.createElement('div');
   headDiv.append(heading, inlinewithIcon);
