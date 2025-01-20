@@ -103,7 +103,7 @@ export default async function decorate(block) {
     image.alt = 'thumbnail';
     const categoryPara = document.createElement('p');
     categoryList.forEach((item) => {
-      const value = { item };
+      const value = item;
       const anchors = document.createElement('a');
       anchors.href = 'www.google.com';
       anchors.append(value);
