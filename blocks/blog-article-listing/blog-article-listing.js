@@ -88,6 +88,8 @@ export default async function decorate(block) {
   const heading = block.children[0].children[0].innerText;
   const inlinewithIcon = block.children[0].children[1].innerHTML;
   console.log(heading, inlinewithIcon);
+  const headDiv = document.createElement('div');
+  headDiv.append(heading, inlinewithIcon);
   block.innerHTML = '';
   const blockDiv = document.createElement('div');
   blockDiv.classList.add('cards-div');
@@ -101,6 +103,7 @@ export default async function decorate(block) {
     const mainDiv = document.createElement('div');
     mainDiv.classList.add('card-div');
     const contentDiv = document.createElement('div');
+    contentDiv.classList.add('content-div');
     const image = document.createElement('img');
     image.src = `${imageURL}`;
     image.alt = 'thumbnail';
