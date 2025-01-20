@@ -3,7 +3,7 @@
 
 const myJson = [
   {
-    publishedDate: '10/02/1999',
+    publishDate: '10/02/1999',
     ImageUrl: 'https://asesstttxyzamjdandjamdkam.com',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
@@ -87,13 +87,20 @@ const myJson = [
 console.log(myJson);
 export default async function decorate(block) {
   console.log(block);
-//   const heading = block.children[0].innerText;
-//   let imageURL;
-//   let category;
-//   let publishedDate;
-//   let articleReadTime;
-//   let title;
-//   console.log(heading);
-//   myJson.forEach((item)=>{
-//     console.log(item);
+  const heading = block.children[0].innerText;
+  console.log(heading);
+  // eslint-disable-next-line object-curly-newline
+  myJson.forEach(({ ImageUrl, category, publishDate, articleReadTime, title }) => {
+    const imageURL = ImageUrl;
+    const categoryList = category;
+    const publishedDate = publishDate;
+    const articleTime = articleReadTime;
+    const titleofCard = title;
+    const mainDiv = document.createElement('div');
+    const contentDiv = document.createElement('div');
+    const image = document.createElement('img');
+    image.src = `${imageURL}`;
+    console.log(categoryList, publishedDate, articleTime, titleofCard, mainDiv, contentDiv);
+    console.log(imageURL);
+  });
 }
