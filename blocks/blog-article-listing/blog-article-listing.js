@@ -3,7 +3,7 @@
 
 const myJson = [
   {
-    publishDate: '10/02/1999',
+    publishedDate: '10/02/1999',
     ImageUrl: 'https://asesstttxyzamjdandjamdkam.com',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
@@ -90,10 +90,10 @@ export default async function decorate(block) {
   const inlinewithIcon = block.children[0].children[1].innerHTML;
   console.log(inlinewithIcon);
   // eslint-disable-next-line object-curly-newline
-  myJson.forEach(({ ImageUrl, category, publishDate, articleReadTime, title }) => {
+  myJson.forEach(({ ImageUrl, category, publishedDate, articleReadTime, title }) => {
     const imageURL = ImageUrl;
     const categoryList = category;
-    const publishedDate = publishDate;
+    const publishDate = publishedDate;
     const articleTime = articleReadTime;
     const titleofCard = title;
     const mainDiv = document.createElement('div');
@@ -110,7 +110,7 @@ export default async function decorate(block) {
     });
     console.log(allCategory);
     const pubDate = document.createElement('p');
-    pubDate.append(publishedDate);
+    pubDate.append(publishDate);
     const arcretime = document.createElement('p');
     arcretime.append(articleTime);
     const mainTitle = document.createElement('h3');
