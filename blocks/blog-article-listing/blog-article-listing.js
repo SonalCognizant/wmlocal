@@ -90,7 +90,7 @@ export default async function decorate(block) {
   const inlinewithIcon = block.children[0].children[1].innerHTML;
   console.log(inlinewithIcon);
   block.innerHTML = '';
-  const mainDiv = document.createElement('div');
+  const blockDiv = document.createElement('div');
   // eslint-disable-next-line object-curly-newline
   myJson.forEach(({ ImageUrl, category, publishedDate, articleReadTime, title }) => {
     const imageURL = ImageUrl;
@@ -98,6 +98,8 @@ export default async function decorate(block) {
     const publishDate = publishedDate;
     const articleTime = articleReadTime;
     const titleofCard = title;
+    // eslint-disable-next-line no-var
+    var mainDiv = document.createElement('div');
     const contentDiv = document.createElement('div');
     const image = document.createElement('img');
     image.src = `${imageURL}`;
@@ -120,8 +122,7 @@ export default async function decorate(block) {
     mainTitle.append(titleofCard);
     contentDiv.append(mainTitle, datetimeDiv, categoryPara);
     mainDiv.append(image, contentDiv);
+    blockDiv.append(mainDiv);
   });
-  const blockDiv = document.createElement('div');
-  blockDiv.append(mainDiv);
   block.append(blockDiv);
 }
