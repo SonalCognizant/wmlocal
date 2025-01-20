@@ -132,5 +132,5 @@ export default async function decorate(block) {
     mainDiv.append(image, contentDiv);
     blockDiv.append(mainDiv);
   });
-  block.append(blockDiv);
+  block.append(headDiv, blockDiv);
 }
