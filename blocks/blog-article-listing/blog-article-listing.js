@@ -98,8 +98,7 @@ export default async function decorate(block) {
     const publishDate = publishedDate;
     const articleTime = articleReadTime;
     const titleofCard = title;
-    // eslint-disable-next-line no-var
-    var mainDiv = document.createElement('div');
+    const mainDiv = document.createElement('div');
     const contentDiv = document.createElement('div');
     const image = document.createElement('img');
     image.src = `${imageURL}`;
