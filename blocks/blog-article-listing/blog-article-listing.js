@@ -121,5 +121,7 @@ export default async function decorate(block) {
     contentDiv.append(mainTitle, datetimeDiv, categoryPara);
     mainDiv.append(image, contentDiv);
   });
-  block.append(mainDiv);
+  const blockDiv = document.createElement('div');
+  blockDiv.append(mainDiv);
+  block.append(blockDiv);
 }
