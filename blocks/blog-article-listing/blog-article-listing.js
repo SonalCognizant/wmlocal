@@ -101,12 +101,13 @@ export default async function decorate(block) {
     const image = document.createElement('img');
     image.src = `${imageURL}`;
     image.alt = 'thumbnail';
+    const categoryPara = document.createElement('p');
     categoryList.forEach((item) => {
       const value = { item };
       const anchors = document.createElement('a');
       anchors.href = 'www.google.com';
       anchors.append(value);
-      console.log(anchors);
+      categoryPara.append(anchors);
     });
     const pubDate = document.createElement('p');
     pubDate.append(publishDate);
@@ -114,7 +115,7 @@ export default async function decorate(block) {
     arcretime.append(articleTime);
     const mainTitle = document.createElement('h3');
     mainTitle.append(titleofCard);
-    contentDiv.append(mainTitle, pubDate, arcretime);
+    contentDiv.append(mainTitle, pubDate, arcretime, categoryPara);
     mainDiv.append(image, contentDiv);
     block.innerHTML = '';
     block.append(mainDiv);
