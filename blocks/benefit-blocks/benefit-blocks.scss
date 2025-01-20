@@ -235,7 +235,7 @@
   }
 }
 
-.benefit-block-two-column.benefit-blocks-container {
+.two-column-layout.benefit-blocks-container {
   .benefit-blocks-wrapper{
     @include for-laptop{
       width: calc(100% - 72px);
@@ -248,6 +248,7 @@
     }
     .benefit-blocks.block {
       padding: $--spacing-max 0;
+      align-items: center;
       @include for-tablet{
         padding: $--spacing-jumbo 0;
       }
