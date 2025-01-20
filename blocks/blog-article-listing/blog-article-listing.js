@@ -84,11 +84,11 @@ const myJson = [
     articleUrl: 'https://abcd.com',
   },
 ];
-console.log(myJson);
 export default async function decorate(block) {
-  console.log(block);
-  const heading = block.children[0].innerText;
+  const heading = block.children[0].children[0].innerText;
   console.log(heading);
+  const inlinewithIcon = block.children[0].children[1].innerHTML;
+  console.log(inlinewithIcon);
   // eslint-disable-next-line object-curly-newline
   myJson.forEach(({ ImageUrl, category, publishDate, articleReadTime, title }) => {
     const imageURL = ImageUrl;
@@ -100,7 +100,24 @@ export default async function decorate(block) {
     const contentDiv = document.createElement('div');
     const image = document.createElement('img');
     image.src = `${imageURL}`;
-    console.log(categoryList, publishedDate, articleTime, titleofCard, mainDiv, contentDiv);
-    console.log(imageURL);
+    image.alt = 'thumbnail';
+    const allCategory = categoryList.forEach((item) => {
+      const value = { item };
+      const anchors = document.createElement('a');
+      anchors.href = 'www.google.com';
+      anchors.append(value);
+      return anchors;
+    });
+    console.log(allCategory);
+    const pubDate = document.createElement('p');
+    pubDate.append(publishedDate);
+    const arcretime = document.createElement('p');
+    arcretime.append(articleTime);
+    const mainTitle = document.createElement('h3');
+    mainTitle.append(titleofCard);
+    contentDiv.append(mainTitle, pubDate, arcretime, allCategory);
+    mainDiv.append(image, contentDiv);
+    block.innerHTML = '';
+    block.append(mainDiv);
   });
 }
