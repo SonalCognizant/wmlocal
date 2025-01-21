@@ -52,18 +52,30 @@
   letter-spacing: 0px;
   text-align: left;
   text-decoration: underline;
+  margin: 0;
+  padding-bottom: 8px;
 }
 .blog-article-listing .cards-div > .card-div > .content-div > .date-div {
   display: flex;
   position: relative;
   gap: 13px;
+  padding-bottom: 12px;
+}
+.blog-article-listing .cards-div > .card-div > .content-div > .date-div > .date {
+  margin: 0;
 }
 .blog-article-listing .cards-div > .card-div > .content-div > .date-div > .date::after {
   content: "•";
   position: absolute;
   right: 305px;
-  top: 61%;
+  top: 35%;
   transform: translateY(-50%);
   font-size: 16px;
   color: #4b4c4d;
+}
+.blog-article-listing .cards-div > .card-div > .content-div > .date-div > .read-time {
+  margin: 0;
+}
+.blog-article-listing .cards-div > .card-div > .content-div > .date-div > .category-list {
+  margin: 0;
 }

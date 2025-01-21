@@ -56,21 +56,31 @@
           letter-spacing: 0px;
           text-align: left;
           text-decoration: underline;
+          margin: 0;
+          padding-bottom: 8px;
         }
         > .date-div {
           display: flex;
           position: relative;
           gap: 13px;
+          padding-bottom: 12px;
           > .date {
+            margin: 0;
             &::after {
               content: "•";
               position: absolute;
               right: 305px;
-              top: 61%;
+              top: 35%;
               transform: translateY(-50%);
               font-size: 16px;
               color: $--gray-700;
             }
+          }
+          > .read-time {
+            margin: 0;
+          }
+          > .category-list {
+            margin: 0;
           }
         }
       }
