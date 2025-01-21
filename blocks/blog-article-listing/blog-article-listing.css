@@ -47,6 +47,7 @@
   flex-wrap: wrap;
   column-gap: 30px;
   row-gap: 36px;
+  padding-bottom: 58px;
 }
 .blog-article-listing .cards-div > .card-div {
   width: calc(33.3333333333% - 20px);
