@@ -60,6 +60,7 @@
         > .date-div {
           display: flex;
           position: relative;
+          gap: 13px;
           > .date {
             &::after {
               content: "•";
