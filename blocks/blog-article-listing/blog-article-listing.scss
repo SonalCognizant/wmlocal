@@ -59,7 +59,8 @@
         }
         > .date-div {
           display: flex;
-          &:first-child {
+          position: relative;
+          > .date {
             &::after {
               content: "•";
               position: absolute;

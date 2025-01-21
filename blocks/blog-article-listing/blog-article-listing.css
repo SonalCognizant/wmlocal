@@ -55,8 +55,9 @@
 }
 .blog-article-listing .cards-div > .card-div > .content-div > .date-div {
   display: flex;
+  position: relative;
 }
-.blog-article-listing .cards-div > .card-div > .content-div > .date-div:first-child::after {
+.blog-article-listing .cards-div > .card-div > .content-div > .date-div > .date::after {
   content: "•";
   position: absolute;
   right: -9px;
