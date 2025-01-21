@@ -42,6 +42,9 @@
   column-gap: 30px;
   row-gap: 36px;
 }
+.blog-article-listing .cards-div > .card-div {
+  width: calc(33.3333333333% - 20px);
+}
 .blog-article-listing .cards-div > .card-div > .content-div > .card-title {
   opacity: 1;
   color: #005589;
