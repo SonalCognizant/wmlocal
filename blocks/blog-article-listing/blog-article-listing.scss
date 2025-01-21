@@ -1,0 +1,63 @@
+@import "../../styles/include/mq.scss";
+@import "../../styles/include/tokens.scss";
+
+.blog-article-listing {
+  .heading-div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 120px;
+    padding-bottom: 52px;
+    > .title {
+      opacity: 1;
+      color: $--gray-700;
+      font-family: $--font-museo;
+      font-size: 32px;
+      font-weight: 600;
+      font-style: 700;
+      letter-spacing: 0px;
+      text-align: left;
+      margin: 0;
+    }
+    > .text-icon {
+      > p {
+        opacity: 1;
+        color: $--blue-675;
+        font-family: $--font-roboto;
+        font-size: 16px;
+        font-weight: 500;
+        font-style: Medium;
+        letter-spacing: 0px;
+        text-align: right;
+        text-decoration: underline;
+        margin: 0;
+        > span {
+          > i {
+            color: $--blue-675;
+          }
+        }
+      }
+    }
+  }
+  .cards-div {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 36px;
+    > .card-div {
+      > .content-div {
+        > .card-title {
+          opacity: 1;
+          color: $--blue-675;
+          font-family: $--font-roboto;
+          font-size: 24px;
+          font-weight: 700;
+          font-style: Bold;
+          letter-spacing: 0px;
+          text-align: left;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
