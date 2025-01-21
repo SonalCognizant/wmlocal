@@ -46,6 +46,9 @@
     row-gap: 36px;
     > .card-div {
         width: calc((100% / 3) - 20px);
+        > img {
+            width: 100%;
+        }
       > .content-div {
         > .card-title {
           opacity: 1;
