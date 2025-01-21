@@ -54,6 +54,7 @@
   text-decoration: underline;
   margin: 0;
   padding-bottom: 8px;
+  padding-top: 29px;
 }
 .blog-article-listing .cards-div > .card-div > .content-div > .date-div {
   display: flex;
@@ -76,6 +77,8 @@
 .blog-article-listing .cards-div > .card-div > .content-div > .date-div > .read-time {
   margin: 0;
 }
-.blog-article-listing .cards-div > .card-div > .content-div > .date-div > .category-list {
+.blog-article-listing .cards-div > .card-div > .content-div > .category-list {
   margin: 0;
+  display: flex;
+  gap: 12px;
 }

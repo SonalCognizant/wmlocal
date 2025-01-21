@@ -58,6 +58,7 @@
           text-decoration: underline;
           margin: 0;
           padding-bottom: 8px;
+          padding-top: 29px;
         }
         > .date-div {
           display: flex;
@@ -79,9 +80,11 @@
           > .read-time {
             margin: 0;
           }
-          > .category-list {
+        }
+        > .category-list {
             margin: 0;
-          }
+            display: flex;
+            gap: 12px;
         }
       }
     }
