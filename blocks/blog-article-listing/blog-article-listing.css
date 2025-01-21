@@ -33,9 +33,14 @@
   text-decoration: underline;
   margin: 0;
 }
+.blog-article-listing .heading-div > .text-icon > p > span {
+  height: unset;
+  width: unset;
+}
 .blog-article-listing .heading-div > .text-icon > p > span > i {
   color: #005589;
   font-size: 15px;
+  padding-left: 6px;
 }
 .blog-article-listing .cards-div {
   display: flex;

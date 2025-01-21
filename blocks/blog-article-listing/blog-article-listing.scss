@@ -32,9 +32,12 @@
         text-decoration: underline;
         margin: 0;
         > span {
+            height: unset;
+            width: unset;
           > i {
             color: $--blue-675;
             font-size: 15px;
+            padding-left: 6px;
           }
         }
       }
