@@ -167,16 +167,6 @@
 .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2:has(a) {
   color: #005589;
 }
-@media (min-width: 480.5px) and (max-width: 1023.5px) {
-  .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2:has(a) {
-    color: #4a7390;
-  }
-}
-@media (max-width: 480px) {
-  .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2:has(a) {
-    color: #4a7390;
-  }
-}
 .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h4 {
   font-family: roboto, sans-serif;
   font-size: 20px;
@@ -187,16 +177,6 @@
 }
 .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h4:has(a) {
   color: #005589;
-}
-@media (min-width: 480.5px) and (max-width: 1023.5px) {
-  .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h4:has(a) {
-    color: #4a7390;
-  }
-}
-@media (max-width: 480px) {
-  .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h4:has(a) {
-    color: #4a7390;
-  }
 }
 .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div p {
   color: #4b4c4d;

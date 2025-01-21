@@ -157,16 +157,6 @@
               margin: 0;
               &:has(a){
                 color: $--blue-675;
-                @include for-tablet{
-                  text-decoration: none;
-                  cursor: none;
-                  color: $--blue-550;
-                }
-                @include for-mobile{
-                  text-decoration: none;
-                  cursor: none;
-                  color: $--blue-550;
-                }
               }
             }
             p{

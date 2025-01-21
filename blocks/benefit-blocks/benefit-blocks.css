@@ -206,20 +206,6 @@
 .benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-right > div > div h4:has(a) {
   color: #005589;
 }
-@media (min-width: 480.5px) and (max-width: 1023.5px) {
-  .benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-right > div > div h4:has(a) {
-    text-decoration: none;
-    cursor: none;
-    color: #4a7390;
-  }
-}
-@media (max-width: 480px) {
-  .benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-right > div > div h4:has(a) {
-    text-decoration: none;
-    cursor: none;
-    color: #4a7390;
-  }
-}
 .benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-right > div > div p {
   color: #4b4c4d;
   font-family: roboto, sans-serif;
