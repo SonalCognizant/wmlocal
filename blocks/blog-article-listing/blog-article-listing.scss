@@ -34,6 +34,7 @@
         > span {
           > i {
             color: $--blue-675;
+            font-size: 15px;
           }
         }
       }
@@ -74,7 +75,7 @@
             &::after {
               content: "•";
               position: absolute;
-              right: 305px;
+              right: 310px;
               top: 35%;
               transform: translateY(-50%);
               font-size: 16px;

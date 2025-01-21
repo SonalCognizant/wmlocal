@@ -35,6 +35,7 @@
 }
 .blog-article-listing .heading-div > .text-icon > p > span > i {
   color: #005589;
+  font-size: 15px;
 }
 .blog-article-listing .cards-div {
   display: flex;
@@ -74,7 +75,7 @@
 .blog-article-listing .cards-div > .card-div > .content-div > .date-div > .date::after {
   content: "•";
   position: absolute;
-  right: 305px;
+  right: 310px;
   top: 35%;
   transform: translateY(-50%);
   font-size: 16px;
