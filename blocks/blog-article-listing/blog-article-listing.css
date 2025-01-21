@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* wellmark color start */
 /* wellmark color end */
 /* wellmark spacing size start */
@@ -51,4 +52,16 @@
   letter-spacing: 0px;
   text-align: left;
   text-decoration: underline;
+}
+.blog-article-listing .cards-div > .card-div > .content-div > .date-div {
+  display: flex;
+}
+.blog-article-listing .cards-div > .card-div > .content-div > .date-div:first-child::after {
+  content: "•";
+  position: absolute;
+  right: -9px;
+  top: 52%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #4b4c4d;
 }

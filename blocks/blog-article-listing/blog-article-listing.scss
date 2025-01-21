@@ -57,6 +57,20 @@
           text-align: left;
           text-decoration: underline;
         }
+        > .date-div {
+          display: flex;
+          &:first-child {
+            &::after {
+              content: "•";
+              position: absolute;
+              right: -9px;
+              top: 52%;
+              transform: translateY(-50%);
+              font-size: 16px;
+              color: $--gray-700;
+            }
+          }
+        }
       }
     }
   }
