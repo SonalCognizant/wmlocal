@@ -60,8 +60,8 @@
 .blog-article-listing .cards-div > .card-div > .content-div > .date-div > .date::after {
   content: "•";
   position: absolute;
-  right: -9px;
-  top: 52%;
+  right: 305px;
+  top: 61%;
   transform: translateY(-50%);
   font-size: 16px;
   color: #4b4c4d;
