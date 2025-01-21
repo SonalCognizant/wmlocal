@@ -186,9 +186,6 @@
                 @include for-mobile{
                     padding-bottom: 12px;
                 }
-                @media (min-width: 481px) and (max-width: 492px) {
-                    padding-top: 12px;
-                }
                 p{
                     display: flex;
                     align-items: center;

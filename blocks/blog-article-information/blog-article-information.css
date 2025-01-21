@@ -210,11 +210,6 @@
     padding-bottom: 12px;
   }
 }
-@media (min-width: 481px) and (max-width: 492px) {
-  .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block .article-audio {
-    padding-top: 12px;
-  }
-}
 .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block .article-audio p {
   display: flex;
   align-items: center;
