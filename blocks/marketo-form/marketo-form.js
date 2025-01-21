@@ -18,7 +18,8 @@ function addScript(src, id) {
 }
 
 (() => {
-  // addScript('//899-BTB-436.mktoweb.com/js/forms2/js/forms2.min.js');
+  addScript('//899-BTB-436.mktoweb.com/js/forms2/js/forms2.min.js');
+  //new line
   addScript('//pages.wellmark.com/js/forms2/js/forms2.min.js');
   addScript('https://899-BTB-436.mktoweb.com/rs/899-BTB-436/images/teknkl-formsplus-core-1.0.8.js?version=0', 'teknkl-FormsPlus-Core-1.x');
   addScript('https://899-BTB-436.mktoweb.com/rs/899-BTB-436/images/teknkl-simpledto-2.0.4.js?version=0', 'teknkl-SimpleDTO-2.x');
@@ -36,7 +37,8 @@ export default function decorate(block) {
     section.insertAdjacentElement('afterend', cForm);
     setTimeout(() => {
       const formId = parseInt(idstringValue, 10);
-      // window.MktoForms2.loadForm('//899-BTB-436.mktoweb.com', '899-BTB-436', formId);
+      window.MktoForms2.loadForm('//899-BTB-436.mktoweb.com', '899-BTB-436', formId);
+      //new line
       window.MktoForms2.loadForm('//pages.wellmark.com', '464-UUV-172', formId);
     }, 1000);
   });
