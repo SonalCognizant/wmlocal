@@ -164,6 +164,7 @@ function renderBlogMenu(nav) {
       return response.json();
     })
     .then((data) => {
+      console.log('hello', data);
       const blogResult = transformBlogData(data.data); // Assuming the JSON has a `data` property
       const blogNavMenu = JSON.stringify(blogResult, null, 2);
       console.log(blogNavMenu);
