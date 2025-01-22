@@ -92,30 +92,35 @@ function titletransformation(value) {
 const navblogmenu = JSON.stringify([
   {
     title: 'Medicare',
+    href: '#',
   },
   {
     title: 'Plan smart',
+    href: '#',
   },
   {
     title: 'Healthy living',
+    href: '#',
   },
   {
     title: 'Fitness',
+    href: '#',
   },
   {
     title: 'Nutrition',
+    href: '#',
   },
   {
     title: 'Recipes',
     subChildren: [
-      { title: 'All', href: '#', description: '' },
-      { title: 'Main dishes', href: '#', description: '' },
-      { title: 'Appetizers', href: '#', description: '' },
-      { title: 'Breakfast', href: '#', description: '' },
-      { title: 'Salads & sides', href: '#', description: '' },
-      { title: 'Smoothies & drinks', href: '#', description: '' },
-      { title: 'Snacks', href: '#', description: '' },
-      { title: 'Desserts', href: '#', description: '' },
+      { title: 'All', href: '#' },
+      { title: 'Main dishes', href: '#' },
+      { title: 'Appetizers', href: '#' },
+      { title: 'Breakfast', href: '#' },
+      { title: 'Salads & sides', href: '#' },
+      { title: 'Smoothies & drinks', href: '#' },
+      { title: 'Snacks', href: '#' },
+      { title: 'Desserts', href: '#' },
     ],
   },
 ]);
