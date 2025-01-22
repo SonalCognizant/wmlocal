@@ -75,7 +75,6 @@ function toggleSearchBar() {
 // render header content fargment
 async function renderheaderfargment(loadheaderdata) {
   const fragmentcontent = `/content-fragment/header/${loadheaderdata}`;
-  // console.log('check', loadheaderdata);
   const headerpath = await loadFragment(fragmentcontent);
   const headerviewcontent = headerpath?.firstElementChild;
   return headerviewcontent;
@@ -87,6 +86,184 @@ function titletransformation(value) {
     path = value.toLowerCase().replace(' ', '-');
   }
   return path;
+}
+
+// Menu blog if url condition blog blogs
+const navblogmenu = JSON.stringify([
+  {
+    title: 'Medicare',
+  },
+  {
+    title: 'Plan smart',
+  },
+  {
+    title: 'Healthy living',
+  },
+  {
+    title: 'Fitness',
+  },
+  {
+    title: 'Nutrition',
+  },
+  {
+    title: 'Recipes',
+    subChildren: [
+      { title: 'All', href: '#', description: '' },
+      { title: 'Main dishes', href: '#', description: '' },
+      { title: 'Appetizers', href: '#', description: '' },
+      { title: 'Breakfast', href: '#', description: '' },
+      { title: 'Salads & sides', href: '#', description: '' },
+      { title: 'Smoothies & drinks', href: '#', description: '' },
+      { title: 'Snacks', href: '#', description: '' },
+      { title: 'Desserts', href: '#', description: '' },
+    ],
+  },
+]);
+function renderBlogMenu(nav) {
+  const blogheadersection = document.createElement('div');
+  blogheadersection.className = 'blog-header-section';
+  const blogheadernav = document.createElement('div');
+  blogheadernav.classList.add('blog-header-nav', 'blue-550');
+  const blogmenublock = document.createElement('div');
+  blogmenublock.className = 'blog-menu-block';
+  const blogheadermenu = document.createElement('div');
+  blogheadermenu.className = 'blog-header-menu';
+  const blogmobilemenu = document.createElement('div');
+  blogmobilemenu.className = 'blog-mobile-menu';
+  blogmobilemenu.innerHTML = ('Topics');
+  const mobileuparrow = document.createElement('img');
+  mobileuparrow.className = 'mobile-up-arrow';
+  mobileuparrow.src = '../../icons/mobile-up-arrow.svg';
+  mobileuparrow.setAttribute('title', 'image');
+  const mobiledownarrow = document.createElement('img');
+  mobiledownarrow.className = 'mobile-down-arrow';
+  mobiledownarrow.src = '../../icons/mobile-down-arrow.svg';
+  mobiledownarrow.setAttribute('title', 'image');
+
+  blogmobilemenu.appendChild(mobileuparrow);
+  blogmobilemenu.appendChild(mobiledownarrow);
+
+  const blogheaderlogo = document.createElement('div');
+  blogheaderlogo.className = 'blog-menu-logo';
+  const blogmenubutton = document.createElement('div');
+  blogmenubutton.classList.add('blog-menu-button', 'button-container');
+
+  const blogmenuview = document.createElement('div');
+  blogmenuview.className = 'blog-menu-view';
+  const blogmenuul = document.createElement('ul');
+  blogmenuul.className = 'blog-menu-ul';
+  const blogItems = JSON.parse(navblogmenu);
+
+  blogItems.forEach((item) => {
+    const blogmenuli = document.createElement('li');
+    blogmenuli.className = 'blog-menu-li';
+    const blogmenulink = document.createElement('div');
+    blogmenulink.className = 'blog-menu-link';
+    blogmenuli.prepend(blogmenulink);
+
+    if (!item.subChildren || item.subChildren.length === 0) {
+      const blogbaranchor = document.createElement('a');
+      blogbaranchor.setAttribute('href', '#');
+      blogbaranchor.innerText = item.title;
+      blogmenulink.appendChild(blogbaranchor);
+      blogmenuul.append(blogmenuli);
+    } else {
+      blogmenuli.addEventListener('click', (e) => {
+        const blogbarselect = e.target?.closest('.blog-menu-link');
+        if (blogbarselect?.classList.contains('show-blog-menu')) {
+          blogbarselect?.classList.remove('show-blog-menu');
+        } else {
+          const bloganchoractive = document.querySelectorAll('.blog-menu-link');
+          bloganchoractive.forEach((bloganchor) => {
+            bloganchor.classList.remove('show-blog-menu');
+          });
+          blogbarselect?.classList.add('show-blog-menu');
+        }
+      });
+    }
+    // View menu list
+    if (item.subChildren) {
+      const blogbarpara = document.createElement('p');
+      blogbarpara.innerText = item.title;
+      blogbarpara.className = 'blogbarpara';
+      blogmenulink.appendChild(blogbarpara);
+      blogmenuul.append(blogmenuli);
+      const blogmenuicon = document.createElement('span');
+      blogmenuicon.className = 'blog-menu-icon';
+      const bloguparrow = document.createElement('img');
+      bloguparrow.className = 'blog-up-arrow';
+      bloguparrow.src = '../../icons/mobile-up-arrow.svg';
+      bloguparrow.setAttribute('title', 'image');
+      const blogdownarrow = document.createElement('img');
+      blogdownarrow.className = 'blog-down-arrow';
+      blogdownarrow.src = '../../icons/mobile-down-arrow.svg';
+      blogdownarrow.setAttribute('title', 'image');
+
+      blogmenuicon.appendChild(bloguparrow);
+      blogmenuicon.appendChild(blogdownarrow);
+      blogbarpara.appendChild(blogmenuicon);
+      // View submenu list
+      const blogmenuitem = document.createElement('div');
+      blogmenuitem.className = 'blog-menu-item';
+      const blogsubmenuul = document.createElement('div');
+      blogsubmenuul.className = 'blog-submenu-ul';
+      const subblogul = document.createElement('ul');
+
+      blogmenuitem.appendChild(blogsubmenuul);
+      blogmenuli.append(blogmenuitem);
+      item.subChildren.forEach((child) => {
+        const subblogchild = document.createElement('li');
+        const subbloganchor = document.createElement('a');
+        subbloganchor.setAttribute('href', child.href);
+        subbloganchor.append(child.title);
+        blogsubmenuul.append(subblogul);
+        subblogul.append(subblogchild);
+        subblogchild.append(subbloganchor);
+      });
+    }
+  });
+
+  blogmobilemenu.addEventListener('click', () => {
+    const blogbarselect = document.querySelector('.blog-header-menu');
+    // Check the current display value
+    if (blogbarselect.style.display === 'none' || blogbarselect.style.display === '') {
+      blogbarselect.style.display = 'block';
+      blogmobilemenu.classList.add('mobile-arrow');
+    } else {
+      blogmobilemenu.classList.remove('mobile-arrow');
+      blogbarselect.style.display = 'none';
+    }
+  });
+
+  const blogImg = document.createElement('img');
+  blogImg.src = '../../images/global/blog-logo.png';
+  blogImg.setAttribute('title', 'Wellmark Logo');
+  blogImg.setAttribute('alt', 'Wellmark Logo');
+  blogImg.className = 'blog-logo';
+  const bloglabel = document.createElement('p');
+  bloglabel.classList.add('blog-label');
+  bloglabel.innerHTML = ('Getting the most from your health plan.');
+
+  const subscribebtn = document.createElement('a');
+  subscribebtn.textContent = 'Subscribe';
+  subscribebtn.setAttribute('href', '#');
+  subscribebtn.setAttribute('title', 'button');
+  subscribebtn.classList.add('button', 'secondary');
+
+  blogheadersection.append(blogheadernav);
+  blogheadernav.append(blogmenublock);
+  blogheadersection.append(blogmobilemenu);
+  blogheadersection.append(blogheadermenu);
+  nav.append(blogheadersection);
+  blogmenublock.append(blogheaderlogo);
+  blogmenublock.append(blogmenubutton);
+
+  blogheaderlogo.append(blogImg);
+  blogheaderlogo.append(bloglabel);
+  blogmenubutton.append(subscribebtn);
+
+  blogheadermenu.append(blogmenuview);
+  blogmenuview.append(blogmenuul);
 }
 
 function renderMegaMenu(nav, navmenu) {
@@ -278,10 +455,10 @@ function renderMegaMenu(nav, navmenu) {
   anchor.prepend(btnicon);
   mainheaderright.append(anchor);
   headersearch.append(headersearchbox);
+  headersearchbox.append(searchinput);
   headersearchbox.append(headersearchicon);
   headersearchicon.append(searchanchor);
   searchanchor.append(iconImg);
-  headersearchbox.append(searchinput);
 
   // Mobile code start
   const collapsediv = document.createElement('div');
@@ -402,7 +579,7 @@ function generateUrl(dataArray, index) {
 }
 
 // Function to fetch the JSON and transform it
-function fetchAndTransformData(nav) {
+function fetchAndTransformData(nav, block) {
   const jsonUrl = '/content-fragment/megamenu.json';
   fetch(jsonUrl)
     .then((response) => {
@@ -414,7 +591,15 @@ function fetchAndTransformData(nav) {
     .then((data) => {
       const result = transformData(data.data); // Assuming the JSON has a `data` property
       const navmenu = JSON.stringify(result, null, 2);
-      renderMegaMenu(nav, navmenu);
+      // renderMegaMenu(nav, navmenu);
+      // renderBlogMenu(nav, navmenu);
+      if (window.location.pathname === '/src1/blog-menu') {
+        renderMegaMenu(nav, navmenu);
+        renderBlogMenu(nav);
+        block.parentElement.classList.add('blog-menu');
+      } else {
+        renderMegaMenu(nav, navmenu);
+      }
     })
     .catch((error) => {
       // eslint-disable-next-line no-console
@@ -441,12 +626,40 @@ window.addEventListener('click', (e) => {
   const handleClickOutside = document.querySelectorAll('.header-menu-link');
   handleClickOutside.forEach((checkactivemenu) => {
     const outsideClickListener = e.target.closest('.header-menu-link');
+    console.log('check', outsideClickListener);
     const outsideClick = e.target?.closest('.header-menu-li')?.querySelector('.header-menu-item');
     const closeactive = outsideClickListener === null && outsideClick === undefined;
     if (closeactive) {
       checkactivemenu.classList.remove('show-menu');
     }
   });
+});
+
+// Outside click submenu close
+window.addEventListener('click', (e) => {
+  const bloghandleClickOutside = document.querySelectorAll('.blog-menu-link');
+  bloghandleClickOutside.forEach((checkactiveblogmenu) => {
+    const blogoutsideClickListener = e.target.closest('.blog-menu-link');
+    const blogoutsideClick = e.target?.closest('.blog-menu-li')?.querySelector('.blog-menu-ul');
+    const blogcloseactive = blogoutsideClickListener === null && blogoutsideClick === undefined;
+    if (blogcloseactive) {
+      checkactiveblogmenu.classList.remove('show-blog-menu');
+    }
+  });
+});
+
+// Scroll Blog menu
+window.addEventListener('scroll', () => {
+  const scrollpos = window.scrollY;
+  if (scrollpos > 150) {
+    const outside = document.querySelectorAll('.blog-header-section');
+    const check = outside[0];
+    check.classList.add('menu-sticky');
+  } else {
+    const outside = document.querySelectorAll('.blog-header-section');
+    const check = outside[0];
+    check.classList.remove('menu-sticky');
+  }
 });
 
 /**
@@ -457,12 +670,13 @@ export default async function decorate(block) {
   block.textContent = '';
   const nav = document.createElement('div');
   nav.className = 'main-header';
-  fetchAndTransformData(nav);
+  fetchAndTransformData(nav, block);
   const navWrapper = document.createElement('div');
   navWrapper.className = 'main-header-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
   highlightEventlistener(nav);
+
   // create the breadcrumbs for the page
   const breadCrumbTag = document.querySelector('meta[name="breadcrumbs"]').content;
   // if the page has the metadata as like true then loading the breadcrumbs to the page
