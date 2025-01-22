@@ -200,8 +200,10 @@ function renderBlogMenu(nav) {
     .then((data) => {
       const blogResult = transformBlogData(data.data); // Assuming the JSON has a `data` property
       const blogItems1 = JSON.stringify(blogResult, null, 2);
-      console.log(blogItems1);
-      const blogItems = JSON.parse(blogItems1);
+      const blogItems2 = JSON.parse(blogItems1);
+      const blogItems = JSON.parse(navblogmenu);
+      console.log(blogItems2);
+      console.log(blogItems);
       blogItems.forEach((item) => {
         const blogmenuli = document.createElement('li');
         blogmenuli.className = 'blog-menu-li';
