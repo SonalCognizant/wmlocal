@@ -187,7 +187,7 @@ function renderBlogMenu(nav) {
   blogmenuview.className = 'blog-menu-view';
   const blogmenuul = document.createElement('ul');
   blogmenuul.className = 'blog-menu-ul';
-  //const blogItems = JSON.parse(navblogmenu);
+ 
 
   const blogJsonUrl = '/content-fragment/megamenu.json?sheet=blog';
   fetch(blogJsonUrl)
@@ -199,8 +199,9 @@ function renderBlogMenu(nav) {
     })
     .then((data) => {
       const blogResult = transformBlogData(data.data); // Assuming the JSON has a `data` property
-      const blogItems = JSON.stringify(blogResult, null, 2);
-      console.log(blogItems);
+      const blogItems1 = JSON.stringify(blogResult, null, 2);
+      console.log(blogItems1);
+      const blogItems = JSON.parse(blogItems1);
       blogItems.forEach((item) => {
         const blogmenuli = document.createElement('li');
         blogmenuli.className = 'blog-menu-li';
