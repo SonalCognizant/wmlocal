@@ -129,7 +129,7 @@ function transformBlogData(data) {
   const result = [];
   const categories = {};
 
-  data.data.forEach((item) => {
+  data.forEach((item) => {
     if (item.Category && !item.Article) {
       categories[item.Category] = { title: item.Category, href: item['Category Link'] || '#' };
     } else if (item.Category && item.Article) {
