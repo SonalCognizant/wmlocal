@@ -203,6 +203,9 @@
           @include for-large {
             width: 209px;
           }
+          @include for-laptop {
+            width: 209px;
+          }
           > a {
             opacity: 1;
             color: $--blue-675;
