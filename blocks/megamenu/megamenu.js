@@ -626,7 +626,6 @@ window.addEventListener('click', (e) => {
   const handleClickOutside = document.querySelectorAll('.header-menu-link');
   handleClickOutside.forEach((checkactivemenu) => {
     const outsideClickListener = e.target.closest('.header-menu-link');
-    console.log('check', outsideClickListener);
     const outsideClick = e.target?.closest('.header-menu-li')?.querySelector('.header-menu-item');
     const closeactive = outsideClickListener === null && outsideClick === undefined;
     if (closeactive) {
