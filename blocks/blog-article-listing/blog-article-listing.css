@@ -248,6 +248,16 @@
   gap: 12px;
   flex-wrap: wrap;
 }
+@media (min-width: 1379px) {
+  .blog-article-listing .cards-div > .card-div > .content-div > .category-list {
+    width: 209px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .blog-article-listing .cards-div > .card-div > .content-div > .category-list {
+    width: 209px;
+  }
+}
 .blog-article-listing .cards-div > .card-div > .content-div > .category-list > a {
   opacity: 1;
   color: #005589;

@@ -197,6 +197,12 @@
           display: flex;
           gap: 12px;
           flex-wrap: wrap;
+          @include for-xlarge {
+            width: 209px;
+          }
+          @include for-large {
+            width: 209px;
+          }
           > a {
             opacity: 1;
             color: $--blue-675;
