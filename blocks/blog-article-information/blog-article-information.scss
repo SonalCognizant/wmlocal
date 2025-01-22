@@ -129,24 +129,22 @@
             .article-link{
                 padding: 8px 0;
                 display: flex;
-                gap: 12px;
                 align-items: center;
                 @include for-tablet{
                     padding-bottom: 12px;
-                    position: relative;
+                    flex-wrap: wrap;
                 }
                 @include for-mobile{
-                    padding-bottom: 12px;
-                    flex-direction: column;
-                    align-items: flex-start;
-                }
-                @media (min-width: 481px) and (max-width: 492px) {
-                    padding-bottom: 24px;
+                    padding-bottom: 0;
+                    flex-wrap: wrap;
                 }
                 p{
-                    text-wrap: nowrap;
+                    @include for-mobile{
+                        padding-bottom: 12px;
+                    }
                     &:first-child{
                         position: relative;
+                        margin-right: 13px;
                         &::after{
                             content: "•";
                             position: absolute;
@@ -157,39 +155,27 @@
                             color: $--gray-700;
                         }
                         @include for-mobile{
+                            display: block;
+                            width: 100%;
+                            margin: 0;
                             &::after{
                                 display: none;
                             }
                         }
                     }
-                    &:last-child{
-                        display: flex;
-                        flex-wrap: wrap;
-                        a{
-                            color: $--blue-675;
-                            font-family: $--font-roboto;
-                            font-size: 16px;
-                            line-height: 19px;
-                            font-weight: 500;
-                            text-decoration: underline;
-                            margin-right: 12px;
-                            @include for-tablet{
-                                white-space: nowrap;
-                            }
-                            @include for-mobile{
-                                white-space: nowrap;
-                            }
-                            &:last-child{
-                                margin-right: 0;
-                            }
+                    @media (min-width: 481px) and (max-width: 600px) {
+                        &:nth-child(n+4){
+                            padding-top: 9px;
                         }
-                        @media (min-width: 481px) and (max-width: 492px) {
-                            a:last-child{
-                                position: absolute;
-                                left: 0;
-                                bottom: 0;
-                            }
-                        }
+                    }
+                    a{
+                        color: $--blue-675;
+                        font-family: $--font-roboto;
+                        font-size: 16px;
+                        line-height: 19px;
+                        font-weight: 500;
+                        text-decoration: underline;
+                        margin-right: 12px;
                     }
                 }
             }
@@ -199,9 +185,6 @@
                 }
                 @include for-mobile{
                     padding-bottom: 12px;
-                }
-                @media (min-width: 481px) and (max-width: 492px) {
-                    padding-top: 12px;
                 }
                 p{
                     display: flex;

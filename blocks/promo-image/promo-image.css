@@ -20,7 +20,7 @@
     padding: 0 36px;
   }
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .promo-image-container .promo-image-wrapper {
     padding: 0 52px;
   }
@@ -63,7 +63,7 @@
     line-height: 34px;
   }
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .promo-image-heading {
     padding-top: 120px;
     max-width: 623px;
@@ -105,7 +105,7 @@
     gap: 24px;
   }
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .promo-image > .promo-4-column {
     gap: 30px;
     padding: 72px 0px 120px 0px;
@@ -143,7 +143,7 @@
 .promo-image > .promo-4-column > li:nth-child(2) {
   padding-bottom: 6px;
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .promo-image > .promo-4-column > li {
     width: calc((100% - 104px) / 4);
   }
@@ -220,7 +220,7 @@
     gap: 24px;
   }
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .promo-image > .promo-3-column {
     gap: 30px;
     padding: 72px 0px 120px 0px;
@@ -251,7 +251,7 @@
   flex-direction: column;
   border-radius: 4px;
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .promo-image > .promo-3-column > li {
     width: calc(25% + 10px);
   }
@@ -299,7 +299,7 @@
 .promo-image > .promo-3-column > li .cards-card-body p:last-child {
   padding-top: 16px;
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .promo-image > .promo-3-column > li .cards-card-body p:last-child {
     padding-bottom: 60px;
   }
@@ -353,7 +353,7 @@
     gap: 24px;
   }
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .promo-image > .promo-2-column {
     gap: 30px;
     padding: 72px 0px 120px 0px;
@@ -384,7 +384,7 @@
   flex-direction: column;
   border-radius: 4px;
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .promo-image > .promo-2-column > li {
     width: calc((100% - 104px) / 4);
   }
@@ -431,7 +431,7 @@
 .promo-image > .promo-2-column > li .cards-card-body p:last-child {
   padding-top: 16px;
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .promo-image > .promo-2-column > li .cards-card-body p:last-child {
     padding-bottom: 36px;
   }

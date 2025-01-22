@@ -124,6 +124,36 @@ const navblogmenu = JSON.stringify([
     ],
   },
 ]);
+
+function transformBlogData(data) {
+  const result = [];
+  const categories = {};
+
+  data.forEach((item) => {
+    if (item.Category && !item.Article) {
+      categories[item.Category] = { title: item.Category, href: item['Category Link'] || '#' };
+    } else if (item.Category && item.Article) {
+      if (!categories[item.Category]) {
+        categories[item.Category] = { title: item.Category, subChildren: [] };
+      }
+      categories[item.Category].subChildren.push({ title: item.Article, href: item['Article link'] || '#' });
+    } else if (!item.Category && item.Article) {
+      if (!categories.Recipes) {
+        categories.Recipes = { title: 'Recipes', subChildren: [] };
+      }
+      categories.Recipes.subChildren.push({ title: item.Article, href: item['Article link'] || '#' });
+    }
+  });
+
+  Object.values(categories).forEach((category) => {
+    if (category.subChildren) {
+      delete category.href;
+    }
+    result.push(category);
+  });
+  return result;
+}
+
 function renderBlogMenu(nav) {
   const blogheadersection = document.createElement('div');
   blogheadersection.className = 'blog-header-section';
@@ -157,76 +187,88 @@ function renderBlogMenu(nav) {
   blogmenuview.className = 'blog-menu-view';
   const blogmenuul = document.createElement('ul');
   blogmenuul.className = 'blog-menu-ul';
-  const blogItems = JSON.parse(navblogmenu);
 
-  blogItems.forEach((item) => {
-    const blogmenuli = document.createElement('li');
-    blogmenuli.className = 'blog-menu-li';
-    const blogmenulink = document.createElement('div');
-    blogmenulink.className = 'blog-menu-link';
-    blogmenuli.prepend(blogmenulink);
+  const blogJsonUrl = '/content-fragment/megamenu.json?sheet=blog';
+  fetch(blogJsonUrl)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then((data) => {
+      const blogResult = transformBlogData(data.data); // Assuming the JSON has a `data` property
+      const blogData = JSON.stringify(blogResult, null, 2);
+      const blogItems = JSON.parse(blogData);
+      blogItems.forEach((item) => {
+        const blogmenuli = document.createElement('li');
+        blogmenuli.className = 'blog-menu-li';
+        const blogmenulink = document.createElement('div');
+        blogmenulink.className = 'blog-menu-link';
+        blogmenuli.prepend(blogmenulink);
 
-    if (!item.subChildren || item.subChildren.length === 0) {
-      const blogbaranchor = document.createElement('a');
-      blogbaranchor.setAttribute('href', '#');
-      blogbaranchor.innerText = item.title;
-      blogmenulink.appendChild(blogbaranchor);
-      blogmenuul.append(blogmenuli);
-    } else {
-      blogmenuli.addEventListener('click', (e) => {
-        const blogbarselect = e.target?.closest('.blog-menu-link');
-        if (blogbarselect?.classList.contains('show-blog-menu')) {
-          blogbarselect?.classList.remove('show-blog-menu');
+        if (!item.subChildren || item.subChildren.length === 0) {
+          const blogbaranchor = document.createElement('a');
+          blogbaranchor.setAttribute('href', '#');
+          blogbaranchor.innerText = item.title;
+          blogmenulink.appendChild(blogbaranchor);
+          blogmenuul.append(blogmenuli);
         } else {
-          const bloganchoractive = document.querySelectorAll('.blog-menu-link');
-          bloganchoractive.forEach((bloganchor) => {
-            bloganchor.classList.remove('show-blog-menu');
+          blogmenuli.addEventListener('click', (e) => {
+            const blogbarselect = e.target?.closest('.blog-menu-link');
+            if (blogbarselect?.classList.contains('show-blog-menu')) {
+              blogbarselect?.classList.remove('show-blog-menu');
+            } else {
+              const bloganchoractive = document.querySelectorAll('.blog-menu-link');
+              bloganchoractive.forEach((bloganchor) => {
+                bloganchor.classList.remove('show-blog-menu');
+              });
+              blogbarselect?.classList.add('show-blog-menu');
+            }
           });
-          blogbarselect?.classList.add('show-blog-menu');
+        }
+        // View menu list
+        if (item.subChildren) {
+          const blogbarpara = document.createElement('p');
+          blogbarpara.innerText = item.title;
+          blogbarpara.className = 'blogbarpara';
+          blogmenulink.appendChild(blogbarpara);
+          blogmenuul.append(blogmenuli);
+          const blogmenuicon = document.createElement('span');
+          blogmenuicon.className = 'blog-menu-icon';
+          const bloguparrow = document.createElement('img');
+          bloguparrow.className = 'blog-up-arrow';
+          bloguparrow.src = '../../icons/mobile-up-arrow.svg';
+          bloguparrow.setAttribute('title', 'image');
+          const blogdownarrow = document.createElement('img');
+          blogdownarrow.className = 'blog-down-arrow';
+          blogdownarrow.src = '../../icons/mobile-down-arrow.svg';
+          blogdownarrow.setAttribute('title', 'image');
+
+          blogmenuicon.appendChild(bloguparrow);
+          blogmenuicon.appendChild(blogdownarrow);
+          blogbarpara.appendChild(blogmenuicon);
+          // View submenu list
+          const blogmenuitem = document.createElement('div');
+          blogmenuitem.className = 'blog-menu-item';
+          const blogsubmenuul = document.createElement('div');
+          blogsubmenuul.className = 'blog-submenu-ul';
+          const subblogul = document.createElement('ul');
+
+          blogmenuitem.appendChild(blogsubmenuul);
+          blogmenuli.append(blogmenuitem);
+          item.subChildren.forEach((child) => {
+            const subblogchild = document.createElement('li');
+            const subbloganchor = document.createElement('a');
+            subbloganchor.setAttribute('href', child.href);
+            subbloganchor.append(child.title);
+            blogsubmenuul.append(subblogul);
+            subblogul.append(subblogchild);
+            subblogchild.append(subbloganchor);
+          });
         }
       });
-    }
-    // View menu list
-    if (item.subChildren) {
-      const blogbarpara = document.createElement('p');
-      blogbarpara.innerText = item.title;
-      blogbarpara.className = 'blogbarpara';
-      blogmenulink.appendChild(blogbarpara);
-      blogmenuul.append(blogmenuli);
-      const blogmenuicon = document.createElement('span');
-      blogmenuicon.className = 'blog-menu-icon';
-      const bloguparrow = document.createElement('img');
-      bloguparrow.className = 'blog-up-arrow';
-      bloguparrow.src = '../../icons/mobile-up-arrow.svg';
-      bloguparrow.setAttribute('title', 'image');
-      const blogdownarrow = document.createElement('img');
-      blogdownarrow.className = 'blog-down-arrow';
-      blogdownarrow.src = '../../icons/mobile-down-arrow.svg';
-      blogdownarrow.setAttribute('title', 'image');
-
-      blogmenuicon.appendChild(bloguparrow);
-      blogmenuicon.appendChild(blogdownarrow);
-      blogbarpara.appendChild(blogmenuicon);
-      // View submenu list
-      const blogmenuitem = document.createElement('div');
-      blogmenuitem.className = 'blog-menu-item';
-      const blogsubmenuul = document.createElement('div');
-      blogsubmenuul.className = 'blog-submenu-ul';
-      const subblogul = document.createElement('ul');
-
-      blogmenuitem.appendChild(blogsubmenuul);
-      blogmenuli.append(blogmenuitem);
-      item.subChildren.forEach((child) => {
-        const subblogchild = document.createElement('li');
-        const subbloganchor = document.createElement('a');
-        subbloganchor.setAttribute('href', child.href);
-        subbloganchor.append(child.title);
-        blogsubmenuul.append(subblogul);
-        subblogul.append(subblogchild);
-        subblogchild.append(subbloganchor);
-      });
-    }
-  });
+    });
 
   blogmobilemenu.addEventListener('click', () => {
     const blogbarselect = document.querySelector('.blog-header-menu');

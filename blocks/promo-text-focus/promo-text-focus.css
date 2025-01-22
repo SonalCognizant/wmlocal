@@ -36,7 +36,7 @@
     background-position: 22%;
   }
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .promo-text-focus-container .promo-text-focus-wrapper {
     height: 575px;
     background-position: 22%;
@@ -68,7 +68,7 @@
     width: calc((100% - 30px) / 12 * 5);
   }
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .promo-text-focus-container .promo-text-focus-wrapper .promo-text-focus.block .promo-focus-block {
     width: calc((100% - 30px) / 12 * 5);
   }
@@ -91,7 +91,7 @@
     padding: 72px 52px;
   }
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .promo-text-focus-container .promo-text-focus-wrapper .promo-text-focus.block .promo-focus-block > div {
     padding: 72px 52px;
   }

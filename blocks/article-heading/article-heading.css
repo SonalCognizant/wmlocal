@@ -2,7 +2,7 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .article-heading-wrapper {
     padding: 120px 52px;
   }
@@ -32,7 +32,7 @@
   flex-direction: column;
   padding: 0;
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .article-heading-wrapper > .article-heading > div {
     width: calc(66.66% - 10px);
   }

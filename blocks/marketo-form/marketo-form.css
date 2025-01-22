@@ -11,7 +11,7 @@ form.eds-mkto-form.mktoForm {
   margin: auto;
   padding: 114px 0 112px 0;
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   form.eds-mkto-form.mktoForm {
     width: 1275px !important;
     margin: auto;
