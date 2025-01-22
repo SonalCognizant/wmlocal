@@ -93,12 +93,8 @@
                 padding: $--spacing-m 0 $--spacing-l 0;
               }
             }
-            .button-container{
+            p:has(a){
               padding: 0;
-              align-items: center;
-              @include for-mobile{
-                display: flex;
-              }
               a{
                 font-size: 16px;
                 line-height: 19px;
@@ -107,10 +103,14 @@
                 color: $--blue-675;
                 text-decoration: underline; 
               }
-              .link-img{
+              span{
                 margin-left: 6px;
                 width: 15px;
                 height: 15px;
+                i{
+                  font-size: 15px;
+                  color: $--blue-675;
+                }
               }
             }
           }
@@ -150,23 +150,13 @@
               width: 100%;
             }
             h4{
-              color: $--blue-675;
               font-family: $--font-roboto;
               font-size: 20px;
               line-height: 24px;
               font-weight: 700;
-              text-decoration: underline;
-              cursor: pointer;
               margin: 0;
-              @include for-tablet{
-                text-decoration: none;
-                cursor: none;
-                color: $--blue-550;
-              }
-              @include for-mobile{
-                text-decoration: none;
-                cursor: none;
-                color: $--blue-550;
+              &:has(a){
+                color: $--blue-675;
               }
             }
             p{
@@ -235,7 +225,7 @@
   }
 }
 
-.benefit-block-two-column.benefit-blocks-container {
+.two-column-layout.benefit-blocks-container {
   .benefit-blocks-wrapper{
     @include for-laptop{
       width: calc(100% - 72px);
@@ -248,6 +238,7 @@
     }
     .benefit-blocks.block {
       padding: $--spacing-max 0;
+      align-items: center;
       @include for-tablet{
         padding: $--spacing-jumbo 0;
       }

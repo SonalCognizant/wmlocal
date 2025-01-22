@@ -40,16 +40,16 @@ export default function decorate(block) {
   if (linkPara) {
     linkPara.parentElement.classList.add('article-link');
     const links = linkPara.querySelectorAll('a');
-    const anchorPtag = document.createElement('p');
     links.forEach((link) => {
       if (link.href || link.textContent.trim()) {
+        const anchorPtag = document.createElement('p');
         anchorPtag.append(link);
+        linkPara.parentElement.append(anchorPtag);
       } else {
         // Remove the empty <a> tag
         link.remove();
       }
     });
-    linkPara.parentElement.append(anchorPtag);
   }
   const audio = block.children[2].children[0].querySelector('p');
   if (audio) {
