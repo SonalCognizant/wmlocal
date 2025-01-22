@@ -4,7 +4,7 @@ indices:
       - /article-page/**
     exclude:
       - /documents/snippets/**
-    target: /query-index
+    target: /query-index.json
     properties:
       url:
         select: head > meta[property="og:url"]
