@@ -936,6 +936,30 @@ header.megamenu-wrapper {
   }
 }
 
+header.blog-menu {
+  height: 60px;
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  header.blog-menu {
+    height: 60px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  header.blog-menu {
+    height: 313px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  header.blog-menu {
+    height: 313px;
+  }
+}
+@media (min-width: 1380px) {
+  header.blog-menu {
+    height: 313px;
+  }
+}
+
 header .header,
 footer .footer {
   visibility: hidden;
