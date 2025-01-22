@@ -83,6 +83,7 @@
 @media (max-width: 480px) {
   .blog-article-listing .heading-div > .title {
     width: 100%;
+    font-size: 28px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
@@ -162,6 +163,7 @@
 }
 .blog-article-listing .cards-div > .card-div > img {
   width: 100%;
+  border-radius: 4px;
 }
 .blog-article-listing .cards-div > .card-div > .content-div > .card-title {
   opacity: 1;
@@ -244,6 +246,7 @@
   margin: 0;
   display: flex;
   gap: 12px;
+  flex-wrap: wrap;
 }
 .blog-article-listing .cards-div > .card-div > .content-div > .category-list > a {
   opacity: 1;
