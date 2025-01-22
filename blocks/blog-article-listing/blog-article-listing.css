@@ -25,14 +25,31 @@
   padding-top: 120px;
   padding-bottom: 52px;
 }
+@media (min-width: 1379px) {
+  .blog-article-listing .heading-div {
+    padding-top: 120px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .blog-article-listing .heading-div {
+    padding-top: 120px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .blog-article-listing .heading-div {
+    padding-top: 120px;
+  }
+}
 @media (max-width: 480px) {
   .blog-article-listing .heading-div {
+    padding-top: 96px;
     flex-direction: column;
     gap: 24px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .blog-article-listing .heading-div {
+    padding-top: 72px;
     flex-direction: column;
     gap: 24px;
   }
@@ -101,14 +118,21 @@
   row-gap: 36px;
   padding-bottom: 58px;
 }
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .blog-article-listing .cards-div {
+    padding-bottom: 52px;
+  }
+}
 @media (max-width: 480px) {
   .blog-article-listing .cards-div {
     flex-direction: column;
+    padding-bottom: 52px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .blog-article-listing .cards-div {
     flex-direction: column;
+    padding-bottom: 52px;
   }
 }
 @media (min-width: 1379px) {
@@ -161,11 +185,20 @@
 }
 .blog-article-listing .cards-div > .card-div > .content-div > .date-div > .date {
   margin: 0;
+  opacity: 1;
+  color: #4b4c4d;
+  font-family: roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: Regular;
+  letter-spacing: 0px;
+  text-align: left;
+  line-height: 24px;
 }
 .blog-article-listing .cards-div > .card-div > .content-div > .date-div > .date::after {
   content: "•";
   position: absolute;
-  right: 310px;
+  right: 323px;
   top: 35%;
   transform: translateY(-50%);
   font-size: 16px;
@@ -173,6 +206,15 @@
 }
 .blog-article-listing .cards-div > .card-div > .content-div > .date-div > .read-time {
   margin: 0;
+  opacity: 1;
+  color: #4b4c4d;
+  font-family: roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: Regular;
+  letter-spacing: 0px;
+  text-align: left;
+  line-height: 24px;
 }
 .blog-article-listing .cards-div > .card-div > .content-div > .category-list {
   margin: 0;
