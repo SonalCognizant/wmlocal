@@ -187,7 +187,6 @@ function renderBlogMenu(nav) {
   blogmenuview.className = 'blog-menu-view';
   const blogmenuul = document.createElement('ul');
   blogmenuul.className = 'blog-menu-ul';
- 
 
   const blogJsonUrl = '/content-fragment/megamenu.json?sheet=blog';
   fetch(blogJsonUrl)
