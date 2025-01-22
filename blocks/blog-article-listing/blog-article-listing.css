@@ -198,11 +198,35 @@
 .blog-article-listing .cards-div > .card-div > .content-div > .date-div > .date::after {
   content: "•";
   position: absolute;
-  right: 323px;
   top: 35%;
   transform: translateY(-50%);
   font-size: 16px;
   color: #4b4c4d;
+}
+@media (min-width: 1379px) {
+  .blog-article-listing .cards-div > .card-div > .content-div > .date-div > .date::after {
+    right: 310px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .blog-article-listing .cards-div > .card-div > .content-div > .date-div > .date::after {
+    right: 310px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .blog-article-listing .cards-div > .card-div > .content-div > .date-div > .date::after {
+    right: 204px;
+  }
+}
+@media (max-width: 480px) {
+  .blog-article-listing .cards-div > .card-div > .content-div > .date-div > .date::after {
+    left: 88px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .blog-article-listing .cards-div > .card-div > .content-div > .date-div > .date::after {
+    left: 88px;
+  }
 }
 .blog-article-listing .cards-div > .card-div > .content-div > .date-div > .read-time {
   margin: 0;

@@ -156,7 +156,21 @@
             &::after {
               content: "•";
               position: absolute;
-              right: 323px;
+              @include for-xlarge {
+                right: 310px;
+              }
+              @include for-large {
+                right: 310px;
+              }
+              @include for-laptop {
+                right: 204px;
+              }
+              @include for-mobile {
+                left: 88px;
+              }
+              @include for-tablet {
+                left: 88px;
+              }
               top: 35%;
               transform: translateY(-50%);
               font-size: 16px;
