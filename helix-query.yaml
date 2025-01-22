@@ -6,7 +6,8 @@ indices:
       - /documents/snippets/**
     target: /query-index
     properties:
-      imgPath:
-        select: main .blog-article-information-container .image-text-wrapper img 
-        value: | 
-          value: attribute(el, "src")
+      url:
+        select: head > meta[property="og:url"]
+        value: |
+          value: attribute(el, "content")
+      
