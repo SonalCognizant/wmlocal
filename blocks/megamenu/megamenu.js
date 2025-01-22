@@ -124,7 +124,50 @@ const navblogmenu = JSON.stringify([
     ],
   },
 ]);
+
+function transformBlogData(data) {
+  const result = [];
+  const categories = {};
+
+  data.data.forEach((item) => {
+    if (item.Category && !item.Article) {
+      categories[item.Category] = { title: item.Category, href: item['Category Link'] || '#' };
+    } else if (item.Category && item.Article) {
+      if (!categories[item.Category]) {
+        categories[item.Category] = { title: item.Category, subChildren: [] };
+      }
+      categories[item.Category].subChildren.push({ title: item.Article, href: item['Article link'] || '#' });
+    } else if (!item.Category && item.Article) {
+      if (!categories.Recipes) {
+        categories.Recipes = { title: 'Recipes', subChildren: [] };
+      }
+      categories.Recipes.subChildren.push({ title: item.Article, href: item['Article link'] || '#' });
+    }
+  });
+
+  Object.values(categories).forEach((category) => {
+    if (category.subChildren) {
+      delete category.href;
+    }
+    result.push(category);
+  });
+  return result;
+}
+
 function renderBlogMenu(nav) {
+  const blogJsonUrl = '/content-fragment/megamenu.json?sheet=blog';
+  fetch(blogJsonUrl)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then((data) => {
+      const blogResult = transformBlogData(data.data); // Assuming the JSON has a `data` property
+      const blogNavMenu = JSON.stringify(blogResult, null, 2);
+      console.log(blogNavMenu);
+    });
   const blogheadersection = document.createElement('div');
   blogheadersection.className = 'blog-header-section';
   const blogheadernav = document.createElement('div');
