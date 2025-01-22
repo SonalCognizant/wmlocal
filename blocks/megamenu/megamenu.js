@@ -204,7 +204,7 @@ function renderBlogMenu(nav) {
       const blogItems = JSON.parse(navblogmenu);
       console.log(blogItems2);
       console.log(blogItems);
-      blogItems.forEach((item) => {
+      blogItems2.forEach((item) => {
         const blogmenuli = document.createElement('li');
         blogmenuli.className = 'blog-menu-li';
         const blogmenulink = document.createElement('div');
