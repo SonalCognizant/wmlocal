@@ -7,7 +7,7 @@
 }
 
 form.eds-mkto-form p {
-  display: block;
+  display: block !important;
 }
 form.eds-mkto-form.mktoForm {
   width: 1275px !important;
