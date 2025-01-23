@@ -3,9 +3,9 @@
 
 .marketo-form.block{
     >div{
-        >div{
-            p{
-                &:first-child{
+        &:first-child{
+            >div{
+                p{
                     display: none;
                 }
             }
