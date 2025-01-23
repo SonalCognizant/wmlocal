@@ -2,7 +2,7 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
-.marketo-form.block > div > div p {
+.marketo-form.block > div > div p:first-child {
   display: none;
 }
 

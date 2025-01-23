@@ -5,7 +5,9 @@
     >div{
         >div{
             p{
-                display: none;
+                &:first-child{
+                    display: none;
+                }
             }
         }
     }
