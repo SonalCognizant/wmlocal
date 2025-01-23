@@ -6,6 +6,9 @@
   display: none;
 }
 
+form.eds-mkto-form p {
+  display: block;
+}
 form.eds-mkto-form.mktoForm {
   width: 1275px !important;
   margin: auto;
