@@ -2,9 +2,9 @@
 @import '../../styles/include/mq.scss';
 
 .marketo-form.block{
-    >div{
+    div{
         &:first-child{
-            >div{
+            div:first-child{
                 p{
                     &:first-child{
                         display: none;
