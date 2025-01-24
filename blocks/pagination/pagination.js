@@ -570,16 +570,16 @@ const myJson = [
 
 export default async function decorate(block) {
   // Query all <p> tags inside the .pagination block
-const paginationBlock = document.querySelector('.pagination.block');
-const pTags = paginationBlock.querySelectorAll('p');
+  const paginationBlock = document.querySelector('.pagination.block');
+  const pTags = paginationBlock.querySelectorAll('p');
 
-// Loop through each <p> tag
-pTags.forEach((p) => {
-  // Check if the innerText is "pagination" or "true"
-  if (p.innerText.toLowerCase() === 'pagination' || p.innerText.toLowerCase() === 'true') {
-    p.remove(); // Remove the <p> tag
-  }
-});
+  // Loop through each <p> tag
+  pTags.forEach((p) => {
+    // Check if the innerText is "pagination" or "true"
+    if (p.innerText.toLowerCase() === 'pagination' || p.innerText.toLowerCase() === 'true') {
+      p.remove(); // Remove the <p> tag
+    }
+  });
   const heading = block.children[0].children[0].innerText;
   const inlinewithIcon = block.children[0].children[1].innerHTML;
   const headingSpam = document.createElement('h2');
@@ -608,22 +608,90 @@ pTags.forEach((p) => {
 
   const itemsPerPage = 9;
   let currentPage = 1;
+  function renderItems() {
+    blockDiv.innerHTML = '';
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const jsonVar = myJson.slice(startIndex, endIndex);
+    jsonVar.forEach(({
+      ImageUrl, category, publishedDate, articleReadTime, title,
+    }) => {
+      const mainDiv = document.createElement('div');
+      mainDiv.classList.add('card-div');
+
+      const image = document.createElement('img');
+      image.src = ImageUrl;
+      image.alt = 'thumbnail';
+      mainDiv.appendChild(image);
+
+      const contentDiv = document.createElement('div');
+      contentDiv.classList.add('content-div');
+      mainDiv.appendChild(contentDiv);
+
+      const mainTitle = document.createElement('h3');
+      mainTitle.classList.add('card-title');
+      mainTitle.textContent = title;
+      contentDiv.appendChild(mainTitle);
+
+      const datetimeDiv = document.createElement('div');
+      datetimeDiv.classList.add('date-div');
+      contentDiv.appendChild(datetimeDiv);
+
+      const pubDate = document.createElement('p');
+      pubDate.classList.add('date');
+      pubDate.textContent = publishedDate;
+      datetimeDiv.appendChild(pubDate);
+
+      const arcretime = document.createElement('p');
+      arcretime.classList.add('read-time');
+      arcretime.textContent = articleReadTime;
+      datetimeDiv.appendChild(arcretime);
+
+      const categoryPara = document.createElement('p');
+      categoryPara.classList.add('category-list');
+      contentDiv.appendChild(categoryPara);
+
+      category.forEach((item) => {
+        const anchor = document.createElement('a');
+        anchor.href = 'www.google.com';
+        anchor.textContent = item;
+        categoryPara.appendChild(anchor);
+      });
+
+      blockDiv.appendChild(mainDiv);
+    });
+    countList.innerHTML = '';
+    const showingText = document.createElement('p');
+    showingText.textContent = 'Showing';
+    countList.appendChild(showingText);
+    const showingSpan = document.createElement('span');
+    showingSpan.textContent = `${startIndex + 1} - ${Math.min(endIndex, myJson.length)}`;
+    countList.appendChild(showingSpan);
+    const ofText = document.createElement('p');
+    ofText.textContent = 'of';
+    countList.appendChild(ofText);
+    const ofSpan = document.createElement('span');
+    ofSpan.textContent = myJson.length;
+    countList.appendChild(ofSpan);
+  }
 
   function renderPagination() {
     const totalPages = Math.ceil(myJson.length / itemsPerPage);
     countResult.innerHTML = '';
+    function newFunction(i) {
+      currentPage = i;
+      renderItems();
+    }
 
     // Always show the first three pages
-    for (let i = 1; i <= Math.min(3, totalPages); i++) {
+    for (let i = 1; i <= Math.min(3, totalPages); i += 1) {
       const button = document.createElement('button');
       button.textContent = i;
       button.addEventListener('click', () => {
-        currentPage = i;
-        renderItems();
+        newFunction(i);
       });
       countResult.appendChild(button);
     }
-
     // Add ellipsis if there are more than 3 pages
     if (totalPages > 3) {
       const ellipsis = document.createElement('button');
@@ -652,7 +720,7 @@ pTags.forEach((p) => {
     previousPageButton.innerHTML = '<i class="fa-regular fa-chevron-left"></i>';
     previousPageButton.addEventListener('click', () => {
       if (currentPage > 1) {
-        currentPage--;
+        currentPage -= 1;
         renderItems();
       }
     });
@@ -661,7 +729,7 @@ pTags.forEach((p) => {
     nextPageButton.innerHTML = '<i class="fa-regular fa-chevron-right"></i>';
     nextPageButton.addEventListener('click', () => {
       if (currentPage < totalPages) {
-        currentPage++;
+        currentPage += 1;
         renderItems();
       }
     });
@@ -674,63 +742,6 @@ pTags.forEach((p) => {
     });
     countResult.appendChild(lastPageButton);
     renderItems();
-  }
-
-  function renderItems() {
-    blockDiv.innerHTML = '';
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-    myJson.slice(startIndex, endIndex).forEach(({ ImageUrl, category, publishedDate, articleReadTime, title }) => {
-      const imageURL = ImageUrl;
-      const categoryList = category;
-      const publishDate = publishedDate;
-      const articleTime = articleReadTime;
-      const titleofCard = title;
-      const mainDiv = document.createElement('div');
-      mainDiv.classList.add('card-div');
-      const contentDiv = document.createElement('div');
-      contentDiv.classList.add('content-div');
-      const image = document.createElement('img');
-      image.src = `${imageURL}`;
-      image.alt = 'thumbnail';
-      const categoryPara = document.createElement('p');
-      categoryPara.classList.add('category-list');
-      categoryList.forEach((item) => {
-        const value = item;
-        const anchors = document.createElement('a');
-        anchors.href = 'www.google.com';
-        anchors.append(value);
-        categoryPara.append(anchors);
-      });
-      const datetimeDiv = document.createElement('div');
-      datetimeDiv.classList.add('date-div');
-      const pubDate = document.createElement('p');
-      pubDate.append(publishDate);
-      pubDate.classList.add('date');
-      const arcretime = document.createElement('p');
-      arcretime.append(articleTime);
-      arcretime.classList.add('read-time');
-      datetimeDiv.append(pubDate, arcretime);
-      const mainTitle = document.createElement('h3');
-      mainTitle.classList.add('card-title');
-      mainTitle.append(titleofCard);
-      contentDiv.append(mainTitle, datetimeDiv, categoryPara);
-      mainDiv.append(image, contentDiv);
-      blockDiv.appendChild(mainDiv);
-    });
-    countList.innerHTML = '';
-    const showingText = document.createElement('p');
-    showingText.textContent = 'Showing';
-    countList.appendChild(showingText);
-    const showingSpan = document.createElement('span');
-    showingSpan.textContent = `${startIndex + 1} - ${Math.min(endIndex, myJson.length)}`;
-    countList.appendChild(showingSpan);
-    const ofText = document.createElement('p');
-    ofText.textContent = 'of';
-    countList.appendChild(ofText);
-    const ofSpan = document.createElement('span');
-    ofSpan.textContent = myJson.length;
-    countList.appendChild(ofSpan);
   }
 
   renderPagination();
