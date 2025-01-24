@@ -88,43 +88,6 @@ function titletransformation(value) {
   return path;
 }
 
-// Menu blog if url condition blog blogs
-const navblogmenu = JSON.stringify([
-  {
-    title: 'Medicare',
-    href: '#',
-  },
-  {
-    title: 'Plan smart',
-    href: '#',
-  },
-  {
-    title: 'Healthy living',
-    href: '#',
-  },
-  {
-    title: 'Fitness',
-    href: '#',
-  },
-  {
-    title: 'Nutrition',
-    href: '#',
-  },
-  {
-    title: 'Recipes',
-    subChildren: [
-      { title: 'All', href: '#' },
-      { title: 'Main dishes', href: '#' },
-      { title: 'Appetizers', href: '#' },
-      { title: 'Breakfast', href: '#' },
-      { title: 'Salads & sides', href: '#' },
-      { title: 'Smoothies & drinks', href: '#' },
-      { title: 'Snacks', href: '#' },
-      { title: 'Desserts', href: '#' },
-    ],
-  },
-]);
-
 function transformBlogData(data) {
   const result = [];
   const categories = {};
@@ -209,21 +172,24 @@ function renderBlogMenu(nav) {
 
         if (!item.subChildren || item.subChildren.length === 0) {
           const blogbaranchor = document.createElement('a');
-          blogbaranchor.setAttribute('href', '#');
+          blogbaranchor.setAttribute('href', item.href);
           blogbaranchor.innerText = item.title;
           blogmenulink.appendChild(blogbaranchor);
           blogmenuul.append(blogmenuli);
         } else {
           blogmenuli.addEventListener('click', (e) => {
             const blogbarselect = e.target?.closest('.blog-menu-link');
-            if (blogbarselect?.classList.contains('show-blog-menu')) {
-              blogbarselect?.classList.remove('show-blog-menu');
-            } else {
-              const bloganchoractive = document.querySelectorAll('.blog-menu-link');
-              bloganchoractive.forEach((bloganchor) => {
-                bloganchor.classList.remove('show-blog-menu');
-              });
-              blogbarselect?.classList.add('show-blog-menu');
+            const blogcheck = blogbarselect != null;
+            if (blogcheck) {
+              if (blogbarselect?.classList.contains('show-blog-menu')) {
+                blogbarselect?.classList.remove('show-blog-menu');
+              } else {
+                const bloganchoractive = document.querySelectorAll('.blog-menu-link');
+                bloganchoractive.forEach((bloganchor) => {
+                  bloganchor.classList.remove('show-blog-menu');
+                });
+                blogbarselect?.classList.add('show-blog-menu');
+              }
             }
           });
         }
@@ -271,15 +237,7 @@ function renderBlogMenu(nav) {
     });
 
   blogmobilemenu.addEventListener('click', () => {
-    const blogbarselect = document.querySelector('.blog-header-menu');
-    // Check the current display value
-    if (blogbarselect.style.display === 'none' || blogbarselect.style.display === '') {
-      blogbarselect.style.display = 'block';
-      blogmobilemenu.classList.add('mobile-arrow');
-    } else {
-      blogmobilemenu.classList.remove('mobile-arrow');
-      blogbarselect.style.display = 'none';
-    }
+    blogmobilemenu.classList.toggle('mobile-arrow');
   });
 
   const blogImg = document.createElement('img');
@@ -668,7 +626,7 @@ function highlightEventlistener(nav) {
   }, 500);
 }
 
-// Outside click submenu close
+// Outside click main menu close
 window.addEventListener('click', (e) => {
   const handleClickOutside = document.querySelectorAll('.header-menu-link');
   handleClickOutside.forEach((checkactivemenu) => {
@@ -681,15 +639,24 @@ window.addEventListener('click', (e) => {
   });
 });
 
-// Outside click submenu close
+// Outside click blog menu close
 window.addEventListener('click', (e) => {
   const bloghandleClickOutside = document.querySelectorAll('.blog-menu-link');
+  const bloglist = e.target.classList?.contains('blog-menu-li');
   bloghandleClickOutside.forEach((checkactiveblogmenu) => {
     const blogoutsideClickListener = e.target.closest('.blog-menu-link');
-    const blogoutsideClick = e.target?.closest('.blog-menu-li')?.querySelector('.blog-menu-ul');
+    const blogoutsideClick = e.target?.closest('.blog-menu-li')?.querySelector('.blog-menu-item');
     const blogcloseactive = blogoutsideClickListener === null && blogoutsideClick === undefined;
-    if (blogcloseactive) {
-      checkactiveblogmenu.classList.remove('show-blog-menu');
+    const mobileblogcloseactive = (blogoutsideClickListener === null && blogoutsideClick === undefined) || (e.target.tagName === 'DIV' || bloglist);
+    if (window.innerWidth >= 1023) {
+      if (blogcloseactive) {
+        checkactiveblogmenu.classList.remove('show-blog-menu');
+      }
+    } else {
+      // eslint-disable-next-line no-lonely-if
+      if (mobileblogcloseactive) {
+        checkactiveblogmenu.classList.remove('show-blog-menu');
+      }
     }
   });
 });
