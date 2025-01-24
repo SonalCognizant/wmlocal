@@ -1259,11 +1259,11 @@ header {
                                         border-radius: 0px 0px 2px 2px;
                                         box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.2);
                                         .blog-submenu-ul {
-                                            list-style-type: none;
                                             margin: 0;
                                             ul{
                                                 margin: 0;
                                                 padding: 0;
+                                                list-style-type: none;
                                                 li{
                                                     padding: 15px 68px 16px 68px;
                                                     border-top: 1px solid #4A7390;
@@ -1283,11 +1283,11 @@ header {
                                         border-radius: 0px 0px 2px 2px;
                                         box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.2);
                                         .blog-submenu-ul {
-                                            list-style-type: none;
                                             margin: 0;
                                             ul{
                                                 margin: 0;
                                                 padding: 0;
+                                                list-style-type: none;
                                                 li{
                                                     padding: 15px 68px 16px 68px;
                                                     border-top: 1px solid #4A7390;
@@ -1305,12 +1305,12 @@ header {
                                         border-radius: 0px 0px 2px 2px;
                                         box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.2);
                                         .blog-submenu-ul {
-                                            list-style-type: none;
                                             margin: 0;
                                             padding: 32px 50px 52px 50px;
                                             ul{
                                                 margin: 0;
                                                 padding: 0;
+                                                list-style-type: none;
                                                 li{
                                                     padding-bottom: 16px;
                                                 }
@@ -1327,12 +1327,12 @@ header {
                                         border-radius: 0px 0px 2px 2px;
                                         box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.2);
                                         .blog-submenu-ul {
-                                            list-style-type: none;
                                             margin: 0;
                                             padding: 32px 50px 52px 50px;
                                             ul{
                                                 margin: 0;
                                                 padding: 0;
+                                                list-style-type: none;
                                                 li{
                                                     padding-bottom: 16px;
                                                 }
@@ -1349,12 +1349,12 @@ header {
                                         border-radius: 0px 0px 2px 2px;
                                         box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.2);
                                         .blog-submenu-ul {
-                                            list-style-type: none;
                                             margin: 0;
                                             padding: 32px 50px 52px 50px;
                                             ul{
                                                 margin: 0;
                                                 padding: 0;
+                                                list-style-type: none;
                                                 li{
                                                     padding-bottom: 16px;
                                                 }
@@ -1419,6 +1419,9 @@ header {
                         .mobile-down-arrow{
                             display: none;
                         }  
+                        ~ .blog-header-menu{
+                            display: block;
+                        }
                     }
                     @include for-laptop {
                         display: none;
