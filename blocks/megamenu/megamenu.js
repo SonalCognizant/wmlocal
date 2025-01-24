@@ -639,6 +639,19 @@ window.addEventListener('click', (e) => {
   });
 });
 
+// Outside click topic menu close
+window.addEventListener('click', (e) => {
+  const handletopic = document.querySelectorAll('.blog-mobile-menu');
+  handletopic.forEach((topicactivemenu) => {
+    const topicblogmenu = e.target.closest('.blog-header-menu');
+    const topicbloglist = e.target.closest('.blog-mobile-menu');
+    const topicclose = topicblogmenu === null && topicbloglist === null;
+    if (topicclose) {
+      topicactivemenu.classList.remove('mobile-arrow');
+    }
+  });
+});
+
 // Outside click blog menu close
 window.addEventListener('click', (e) => {
   const bloghandleClickOutside = document.querySelectorAll('.blog-menu-link');
