@@ -48,7 +48,7 @@
         padding: 120px 0 52px 0;
       }
       @include for-tablet {
-        padding: 96px 0 72px 0;
+        padding: 96px 0 52px 0;
         font-size: 28px;
         width: 345px;
       }
@@ -103,6 +103,15 @@
               margin: 0;
               color: $--gray-700;
               text-align: center;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
+              }
+              > .icon-shopbag {
+                height: 64px;
+                width: 72px;
+              }
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -202,6 +211,11 @@
               margin: 0;
               color: $--gray-700;
               text-align: center;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
+              }
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -210,6 +224,10 @@
                   height: 100%;
                   width: 100%;
                 }
+              }
+              > .icon-shopbag {
+                height: 64px;
+                width: 72px;
               }
               > .icon-search-icon-enrolling {
                 height: 64px;
@@ -295,6 +313,11 @@
               margin: 0;
               color: $--gray-700;
               text-align: center;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
+              }
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -303,6 +326,10 @@
                   height: 100%;
                   width: 100%;
                 }
+              }
+              > .icon-shopbag {
+                height: 64px;
+                width: 72px;
               }
               > .icon-search-icon-enrolling {
                 height: 64px;
@@ -414,6 +441,11 @@
               margin: 0;
               color: $--gray-700;
               text-align: center;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
+              }
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -422,6 +454,10 @@
                   height: 100%;
                   width: 100%;
                 }
+              }
+              > .icon-shopbag {
+                height: 64px;
+                width: 72px;
               }
               > .icon-search-icon-enrolling {
                 height: 64px;
@@ -503,6 +539,11 @@
               margin: 0;
               color: $--gray-700;
               text-align: center;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
+              }
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -511,6 +552,10 @@
                   height: 100%;
                   width: 100%;
                 }
+              }
+              > .icon-shopbag {
+                height: 64px;
+                width: 72px;
               }
               > .icon-search-icon-enrolling {
                 height: 64px;
@@ -604,6 +649,11 @@
               margin: 0;
               color: $--gray-700;
               text-align: center;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
+              }
               > .icon-mobile {
                 height: 64px;
                 width: 64px;
@@ -612,6 +662,10 @@
                   height: 100%;
                   width: 100%;
                 }
+              }
+              > .icon-shopbag {
+                height: 64px;
+                width: 72px;
               }
               > .icon-search-icon-enrolling {
                 height: 64px;

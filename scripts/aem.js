@@ -445,7 +445,7 @@ function decorateIcon(span, prefix = '', alt = '') {
  * @param {Element} [element] Element containing icons
  * @param {string} [prefix] prefix to be added to icon the src
  */
-function decorateFontIcon(span, prefix = '') {
+function decorateFontIcon(span) {
   const iconName = Array.from(span.classList)
     .find((c) => c.startsWith('icon-'))
     .substring(5);
@@ -459,17 +459,17 @@ function decorateFontIcon(span, prefix = '') {
   const iconTag = document.createElement('i');
   iconTag.classList.add(`fa-${style}`);
   iconTag.classList.add(`fa-${icon}`);
-  console.log(prefix, iconName, icon, style, 'hello');
+  // console.log(prefix, iconName, icon, style, 'hello');
   iconTag.dataset.iconName = iconName;
   span.append(iconTag);
 }
 
 function decorateIcons(element, prefix = '') {
-  const isFontIcon = false;
+  const isFontIcon = true;
   const icons = [...element.querySelectorAll('span.icon')];
   icons.forEach((span) => {
     if (isFontIcon) {
-      decorateFontIcon(span, prefix);
+      decorateFontIcon(span);
     } else {
       decorateIcon(span, prefix);
     }
@@ -724,6 +724,47 @@ async function loadSections(element) {
     await loadSection(sections[i]);
   }
 }
+
+function formatDate(timestamp) {
+  const date = new Date(timestamp * 1000);
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  const year = date.getFullYear();
+  return `${month}/${day}/${year}`;
+}
+
+function loadPublishedDate() {
+  const currPagePath = window.location.pathname;
+  const sitemapjsonUrl = '/sitemap.json';
+  fetch(sitemapjsonUrl)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then((data) => {
+      const found = data.data.find((item) => item.path === currPagePath);
+      let lastModifiedDate = null;
+      let lastPublisheddate = null;
+      if (found) {
+        // eslint-disable-next-line no-undef
+        if (found.lastModified) {
+          lastModifiedDate = formatDate(found.lastModified);
+        }
+        if (found.lastPublished) {
+          lastPublisheddate = formatDate(new Date(found.lastPublished).getTime() / 1000);
+        }
+      }
+      window.BlogLastModified = lastModifiedDate;
+      window.BlogLastPublished = lastPublisheddate;
+    })
+    .catch((error) => {
+      // eslint-disable-next-line no-console
+      console.error('There was a problem with the fetch operation:', error);
+    });
+}
+
 init();
 
 export {
@@ -751,4 +792,5 @@ export {
   toClassName,
   waitForFirstImage,
   wrapTextNodes,
+  loadPublishedDate,
 };

@@ -1,109 +1,54 @@
 import { loadFragment } from '../fragment/fragment.js';
 
-const navmenu = JSON.stringify([
-  {
-    title: 'Home',
-  },
-  {
-    title: 'Shop',
-    children: [
-      {
-        title: 'Shop plans',
-        subChildren: [
-          { title: 'Medicare Advantage', href: '#', description: '' },
-          { title: 'Medicare Supplement', href: '#', description: '' },
-          { title: 'Individual and Family', href: '#', description: '' },
-          { title: 'Explore all plans', href: '#', description: '' },
-        ],
-      },
-      {
-        title: 'Business plans',
-        subChildren: [
-          { title: 'Small group employer', href: '#', description: '' },
-          { title: 'Mid-size employer', href: '#', description: '' },
-          { title: 'Large employer', href: '#', description: '' },
-        ],
-      },
-      {
-        title: 'Understanding plans',
-        subChildren: [
-          { title: 'Be well 24/7', href: '#', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-          { title: 'Preventative services', href: '#', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'Find care',
-    children: [
-      {
-        title: 'Find Care',
-        subChildren: [
-          { title: 'Overview', href: '#', description: '' },
-          { title: 'Medicare', href: '#', description: '' },
-          { title: 'Affordable Care Act', href: '#', description: '' },
-        ],
-      },
-      {
-        title: 'Member Find care',
-        subChildren: [
-          { title: 'Member care options', href: '#', description: '' },
-          { title: 'Mental health solutions', href: '#', description: '' },
-          { title: 'Virtual care', href: '#', description: '' },
-        ],
-      },
-      {
-        title: 'Additional Resources',
-        subChildren: [
-          { title: 'Be well 24/7', href: '#', description: '' },
-          { title: 'Case Management', href: '#', description: '' },
-          { title: 'Preventative services', href: '#', description: '' },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'Members',
-    children: [
-      {
-        title: 'Members',
-        subChildren: [
-          { title: 'Pay your Bills', href: '/member/pay-your-bill', description: '' },
-          { title: 'Overview', href: '/member/overview', description: '' },
-          { title: 'ID Cards', href: '/member/id-cards', description: '' },
-          { title: 'Health Insurance Basics', href: '/member/health-insurance-basics', description: '' },
-        ],
-      },
-      {
-        title: 'Coverage and Benefits',
-        subChildren: [
-          { title: 'Life Events', href: '/member/coveraage-and-benefits/life-events', description: '' },
-          { title: 'Claims', href: '/member/coveraage-and-benefits/claims', description: '' },
-          { title: 'Coverage While Travelling', href: '/member/coveraage-and-benefits/coverage-while-traveling', description: '' },
-          { title: 'Cost Estimation', href: '/member/coveraage-and-benefits/cost-estimation', description: '' },
-          { title: 'Authorizations & Approvals', href: '/member/coveraage-and-benefits/authorizations-and-approvals', description: '' },
-        ],
-      },
-      {
-        title: 'Prescription Drugs',
-        subChildren: [
-          { title: 'My Wellmark', href: '/member/prescription-drugs-and-pharmacy-benefits/mywellmark', description: '' },
-          { title: 'Biosimilars', href: '/member/prescription-drugs-and-pharmacy-benefits/biosimilars', description: '' },
-          { title: 'Speciality Drugs', href: '/member/prescription-drugs-and-pharmacy-benefits/specialty-drugs', description: '' },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'Employer',
-  },
-  {
-    title: 'Providers',
-  },
-  {
-    title: 'Producers',
-  },
-]);
+function transformData(flatData) {
+  const result = [];
+
+  // Create a map to hold references to the parent categories by their titles
+  const parentMap = {};
+
+  // Iterate through the flat data and build the hierarchical structure
+  flatData.forEach((item) => {
+    const parentTitle = item['Parent Title'];
+    const title = item.Title;
+    const subTitle = item['Sub Title'];
+    const href = item.Href;
+    const description = item.Description;
+
+    // If there is no parent in the result yet, add it to the map
+    if (!parentMap[parentTitle]) {
+      parentMap[parentTitle] = { title: parentTitle, children: [] };
+      result.push(parentMap[parentTitle]);
+    }
+
+    // Get the parent object
+    const parent = parentMap[parentTitle];
+
+    // If the child with the title does not exist under the parent, create it
+    let child = parent.children.find((c) => c.title === title);
+    if (!child && title) {
+      child = { title, subChildren: [] };
+      parent.children.push(child);
+    }
+
+    // Add subTitle to the subChildren if it exists
+    if (subTitle) {
+      child.subChildren.push({
+        title: subTitle,
+        href,
+        description,
+      });
+    }
+  });
+
+  // Ensure that 'Home' and other parents without children are included without 'children' array
+  return result.map((item) => {
+    // If there are no children, remove the 'children' property
+    if (item.children.length === 0) {
+      delete item.children;
+    }
+    return item;
+  });
+}
 
 // Menu bar onclick event
 function toggleMenu(e) {
@@ -130,7 +75,6 @@ function toggleSearchBar() {
 // render header content fargment
 async function renderheaderfargment(loadheaderdata) {
   const fragmentcontent = `/content-fragment/header/${loadheaderdata}`;
-  // console.log('check', loadheaderdata);
   const headerpath = await loadFragment(fragmentcontent);
   const headerviewcontent = headerpath?.firstElementChild;
   return headerviewcontent;
@@ -144,7 +88,190 @@ function titletransformation(value) {
   return path;
 }
 
-function renderMegaMenu(nav) {
+function transformBlogData(data) {
+  const result = [];
+  const categories = {};
+
+  data.forEach((item) => {
+    if (item.Category && !item.Article) {
+      categories[item.Category] = { title: item.Category, href: item['Category Link'] || '#' };
+    } else if (item.Category && item.Article) {
+      if (!categories[item.Category]) {
+        categories[item.Category] = { title: item.Category, subChildren: [] };
+      }
+      categories[item.Category].subChildren.push({ title: item.Article, href: item['Article link'] || '#' });
+    } else if (!item.Category && item.Article) {
+      if (!categories.Recipes) {
+        categories.Recipes = { title: 'Recipes', subChildren: [] };
+      }
+      categories.Recipes.subChildren.push({ title: item.Article, href: item['Article link'] || '#' });
+    }
+  });
+
+  Object.values(categories).forEach((category) => {
+    if (category.subChildren) {
+      delete category.href;
+    }
+    result.push(category);
+  });
+  return result;
+}
+
+function renderBlogMenu(nav) {
+  const blogheadersection = document.createElement('div');
+  blogheadersection.className = 'blog-header-section';
+  const blogheadernav = document.createElement('div');
+  blogheadernav.classList.add('blog-header-nav', 'blue-550');
+  const blogmenublock = document.createElement('div');
+  blogmenublock.className = 'blog-menu-block';
+  const blogheadermenu = document.createElement('div');
+  blogheadermenu.className = 'blog-header-menu';
+  const blogmobilemenu = document.createElement('div');
+  blogmobilemenu.className = 'blog-mobile-menu';
+  blogmobilemenu.innerHTML = ('Topics');
+  const mobileuparrow = document.createElement('img');
+  mobileuparrow.className = 'mobile-up-arrow';
+  mobileuparrow.src = '../../icons/mobile-up-arrow.svg';
+  mobileuparrow.setAttribute('title', 'image');
+  const mobiledownarrow = document.createElement('img');
+  mobiledownarrow.className = 'mobile-down-arrow';
+  mobiledownarrow.src = '../../icons/mobile-down-arrow.svg';
+  mobiledownarrow.setAttribute('title', 'image');
+
+  blogmobilemenu.appendChild(mobileuparrow);
+  blogmobilemenu.appendChild(mobiledownarrow);
+
+  const blogheaderlogo = document.createElement('div');
+  blogheaderlogo.className = 'blog-menu-logo';
+  const blogmenubutton = document.createElement('div');
+  blogmenubutton.classList.add('blog-menu-button', 'button-container');
+
+  const blogmenuview = document.createElement('div');
+  blogmenuview.className = 'blog-menu-view';
+  const blogmenuul = document.createElement('ul');
+  blogmenuul.className = 'blog-menu-ul';
+
+  const blogJsonUrl = '/content-fragment/megamenu.json?sheet=blog';
+  fetch(blogJsonUrl)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then((data) => {
+      const blogResult = transformBlogData(data.data); // Assuming the JSON has a `data` property
+      const blogData = JSON.stringify(blogResult, null, 2);
+      const blogItems = JSON.parse(blogData);
+      blogItems.forEach((item) => {
+        const blogmenuli = document.createElement('li');
+        blogmenuli.className = 'blog-menu-li';
+        const blogmenulink = document.createElement('div');
+        blogmenulink.className = 'blog-menu-link';
+        blogmenuli.prepend(blogmenulink);
+
+        if (!item.subChildren || item.subChildren.length === 0) {
+          const blogbaranchor = document.createElement('a');
+          blogbaranchor.setAttribute('href', item.href);
+          blogbaranchor.innerText = item.title;
+          blogmenulink.appendChild(blogbaranchor);
+          blogmenuul.append(blogmenuli);
+        } else {
+          blogmenuli.addEventListener('click', (e) => {
+            const blogbarselect = e.target?.closest('.blog-menu-link');
+            const blogcheck = blogbarselect != null;
+            if (blogcheck) {
+              if (blogbarselect?.classList.contains('show-blog-menu')) {
+                blogbarselect?.classList.remove('show-blog-menu');
+              } else {
+                const bloganchoractive = document.querySelectorAll('.blog-menu-link');
+                bloganchoractive.forEach((bloganchor) => {
+                  bloganchor.classList.remove('show-blog-menu');
+                });
+                blogbarselect?.classList.add('show-blog-menu');
+              }
+            }
+          });
+        }
+        // View menu list
+        if (item.subChildren) {
+          const blogbarpara = document.createElement('p');
+          blogbarpara.innerText = item.title;
+          blogbarpara.className = 'blogbarpara';
+          blogmenulink.appendChild(blogbarpara);
+          blogmenuul.append(blogmenuli);
+          const blogmenuicon = document.createElement('span');
+          blogmenuicon.className = 'blog-menu-icon';
+          const bloguparrow = document.createElement('img');
+          bloguparrow.className = 'blog-up-arrow';
+          bloguparrow.src = '../../icons/mobile-up-arrow.svg';
+          bloguparrow.setAttribute('title', 'image');
+          const blogdownarrow = document.createElement('img');
+          blogdownarrow.className = 'blog-down-arrow';
+          blogdownarrow.src = '../../icons/mobile-down-arrow.svg';
+          blogdownarrow.setAttribute('title', 'image');
+
+          blogmenuicon.appendChild(bloguparrow);
+          blogmenuicon.appendChild(blogdownarrow);
+          blogbarpara.appendChild(blogmenuicon);
+          // View submenu list
+          const blogmenuitem = document.createElement('div');
+          blogmenuitem.className = 'blog-menu-item';
+          const blogsubmenuul = document.createElement('div');
+          blogsubmenuul.className = 'blog-submenu-ul';
+          const subblogul = document.createElement('ul');
+
+          blogmenuitem.appendChild(blogsubmenuul);
+          blogmenuli.append(blogmenuitem);
+          item.subChildren.forEach((child) => {
+            const subblogchild = document.createElement('li');
+            const subbloganchor = document.createElement('a');
+            subbloganchor.setAttribute('href', child.href);
+            subbloganchor.append(child.title);
+            blogsubmenuul.append(subblogul);
+            subblogul.append(subblogchild);
+            subblogchild.append(subbloganchor);
+          });
+        }
+      });
+    });
+
+  blogmobilemenu.addEventListener('click', () => {
+    blogmobilemenu.classList.toggle('mobile-arrow');
+  });
+
+  const blogImg = document.createElement('img');
+  blogImg.src = '../../images/global/blog-logo.png';
+  blogImg.setAttribute('title', 'Wellmark Logo');
+  blogImg.setAttribute('alt', 'Wellmark Logo');
+  blogImg.className = 'blog-logo';
+  const bloglabel = document.createElement('p');
+  bloglabel.classList.add('blog-label');
+  bloglabel.innerHTML = ('Getting the most from your health plan.');
+
+  const subscribebtn = document.createElement('a');
+  subscribebtn.textContent = 'Subscribe';
+  subscribebtn.setAttribute('href', '#');
+  subscribebtn.setAttribute('title', 'button');
+  subscribebtn.classList.add('button', 'secondary');
+
+  blogheadersection.append(blogheadernav);
+  blogheadernav.append(blogmenublock);
+  blogheadersection.append(blogmobilemenu);
+  blogheadersection.append(blogheadermenu);
+  nav.append(blogheadersection);
+  blogmenublock.append(blogheaderlogo);
+  blogmenublock.append(blogmenubutton);
+
+  blogheaderlogo.append(blogImg);
+  blogheaderlogo.append(bloglabel);
+  blogmenubutton.append(subscribebtn);
+
+  blogheadermenu.append(blogmenuview);
+  blogmenuview.append(blogmenuul);
+}
+
+function renderMegaMenu(nav, navmenu) {
   const mainheadersection = document.createElement('div');
   mainheadersection.className = 'main-header-section';
   const mainheadernav = document.createElement('div');
@@ -163,23 +290,53 @@ function renderMegaMenu(nav) {
     const headermenulink = document.createElement('div');
     headermenulink.className = 'header-menu-link';
     headermenuli.prepend(headermenulink);
-    const navbaranchor = document.createElement('a');
-    navbaranchor.setAttribute('href', '#');
-    navbaranchor.innerText = item.title;
-    // Active menu
-    headermenulink.addEventListener('click', (e) => {
-      const navbarselect = e.target?.closest('.header-menu-link');
-      if (navbarselect?.classList.contains('menu-active')) {
-        navbarselect?.classList.remove('menu-active');
-      } else {
-        const anchoractive = document.querySelectorAll('.header-menu-link');
-        anchoractive.forEach((anchor) => {
-          anchor.classList.remove('menu-active');
+    if (!item.children || item.children.length === 0) {
+      const navbaranchor = document.createElement('a');
+      navbaranchor.setAttribute('href', '#');
+      navbaranchor.innerText = item.title;
+      headermenuli.appendChild(navbaranchor);
+      headermenuli.addEventListener('click', () => {
+        const handleClickOutside = document.querySelectorAll('.header-menu-link');
+        handleClickOutside.forEach((checkactivemenu) => {
+          checkactivemenu.classList.remove('show-menu');
         });
-        navbarselect?.classList.add('menu-active');
-      }
-    });
-    headermenulink.append(navbaranchor);
+      });
+      // Active menu
+      navbaranchor.addEventListener('click', (e) => {
+        const handleClickOutside = document.querySelectorAll('.header-menu-link');
+        handleClickOutside.forEach((checkactivemenu) => {
+          checkactivemenu.classList.remove('show-menu');
+        });
+        const navbarselect = e.target?.closest('.header-menu-link');
+        if (navbarselect?.classList.contains('menu-active')) {
+          navbarselect?.classList.remove('menu-active');
+        } else {
+          const anchoractive = document.querySelectorAll('.header-menu-link');
+          anchoractive.forEach((anchor) => {
+            anchor.classList.remove('menu-active');
+          });
+          navbarselect?.classList.add('menu-active');
+        }
+      });
+      headermenulink.append(navbaranchor);
+    } else {
+      const navbarpara = document.createElement('p');
+      navbarpara.innerText = item.title;
+      navbarpara.className = 'navbarpara';
+      headermenulink.appendChild(navbarpara);
+      headermenulink.addEventListener('click', (e) => {
+        const navbarselect = e.target?.closest('.header-menu-link');
+        if (navbarselect?.classList.contains('show-menu')) {
+          navbarselect?.classList.remove('show-menu');
+        } else {
+          const anchoractive = document.querySelectorAll('.header-menu-link');
+          anchoractive.forEach((anchor) => {
+            anchor.classList.remove('show-menu');
+          });
+          navbarselect?.classList.add('show-menu');
+        }
+      });
+    }
 
     // View menu list
     if (item.children) {
@@ -303,10 +460,10 @@ function renderMegaMenu(nav) {
   anchor.prepend(btnicon);
   mainheaderright.append(anchor);
   headersearch.append(headersearchbox);
+  headersearchbox.append(searchinput);
   headersearchbox.append(headersearchicon);
   headersearchicon.append(searchanchor);
   searchanchor.append(iconImg);
-  headersearchbox.append(searchinput);
 
   // Mobile code start
   const collapsediv = document.createElement('div');
@@ -425,6 +582,99 @@ function generateUrl(dataArray, index) {
   const productElement = document.querySelector(`[data-breadcrumb-value=${dataArray[locateIndex]}]`);
   productElement.setAttribute('href', breadcrumbUrl);
 }
+
+// Function to fetch the JSON and transform it
+function fetchAndTransformData(nav, block) {
+  const jsonUrl = '/content-fragment/megamenu.json';
+  fetch(jsonUrl)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then((data) => {
+      const result = transformData(data.data); // Assuming the JSON has a `data` property
+      const navmenu = JSON.stringify(result, null, 2);
+      // renderMegaMenu(nav, navmenu);
+      // renderBlogMenu(nav, navmenu);
+      if (window.location.pathname === '/src1/blog-menu') {
+        renderMegaMenu(nav, navmenu);
+        renderBlogMenu(nav);
+        block.parentElement.classList.add('blog-menu');
+      } else {
+        renderMegaMenu(nav, navmenu);
+      }
+    })
+    .catch((error) => {
+      // eslint-disable-next-line no-console
+      console.error('There was a problem with the fetch operation:', error);
+    });
+}
+
+// Active default menu
+function highlightEventlistener(nav) {
+  setTimeout(() => {
+    const activemenu = nav.querySelectorAll('.header-menu-link');
+    const activemenushow = window.location.pathname.split('/');
+    activemenu.forEach((activenav) => {
+      const linktext = activenav.querySelector('a')?.textContent;
+      if (activemenushow.includes(linktext?.toLowerCase())) {
+        activenav.classList.add('menu-active');
+      }
+    });
+  }, 500);
+}
+
+// Outside click main menu close
+window.addEventListener('click', (e) => {
+  const handleClickOutside = document.querySelectorAll('.header-menu-link');
+  handleClickOutside.forEach((checkactivemenu) => {
+    const outsideClickListener = e.target.closest('.header-menu-link');
+    const outsideClick = e.target?.closest('.header-menu-li')?.querySelector('.header-menu-item');
+    const closeactive = outsideClickListener === null && outsideClick === undefined;
+    if (closeactive) {
+      checkactivemenu.classList.remove('show-menu');
+    }
+  });
+});
+
+// Outside click blog menu close
+window.addEventListener('click', (e) => {
+  const bloghandleClickOutside = document.querySelectorAll('.blog-menu-link');
+  const bloglist = e.target.classList?.contains('blog-menu-li');
+  bloghandleClickOutside.forEach((checkactiveblogmenu) => {
+    const blogoutsideClickListener = e.target.closest('.blog-menu-link');
+    const blogoutsideClick = e.target?.closest('.blog-menu-li')?.querySelector('.blog-menu-item');
+    const blogcloseactive = blogoutsideClickListener === null && blogoutsideClick === undefined;
+    const mobileblogcloseactive = (blogoutsideClickListener === null && blogoutsideClick === undefined) || (e.target.tagName === 'DIV' || bloglist);
+    if (window.innerWidth >= 1023) {
+      if (blogcloseactive) {
+        checkactiveblogmenu.classList.remove('show-blog-menu');
+      }
+    } else {
+      // eslint-disable-next-line no-lonely-if
+      if (mobileblogcloseactive) {
+        checkactiveblogmenu.classList.remove('show-blog-menu');
+      }
+    }
+  });
+});
+
+// Scroll Blog menu
+window.addEventListener('scroll', () => {
+  const scrollpos = window.scrollY;
+  if (scrollpos > 150) {
+    const outside = document.querySelectorAll('.blog-header-section');
+    const check = outside[0];
+    check.classList.add('menu-sticky');
+  } else {
+    const outside = document.querySelectorAll('.blog-header-section');
+    const check = outside[0];
+    check.classList.remove('menu-sticky');
+  }
+});
+
 /**
  * Loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
@@ -433,11 +683,13 @@ export default async function decorate(block) {
   block.textContent = '';
   const nav = document.createElement('div');
   nav.className = 'main-header';
-  renderMegaMenu(nav);
+  fetchAndTransformData(nav, block);
   const navWrapper = document.createElement('div');
   navWrapper.className = 'main-header-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+  highlightEventlistener(nav);
+
   // create the breadcrumbs for the page
   const breadCrumbTag = document.querySelector('meta[name="breadcrumbs"]').content;
   // if the page has the metadata as like true then loading the breadcrumbs to the page

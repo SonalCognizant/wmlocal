@@ -90,7 +90,7 @@
               text-align: left;
               line-height: 24px;
               margin: 0;
-              &:last-child {
+              &:has(a) {
                 padding-top: 24px;
                 width: fit-content;
               }
@@ -113,6 +113,7 @@
                 i {
                   font-size: 100%;
                   vertical-align: text-top;
+                  color: $--blue-675;
                 }
               }
             }

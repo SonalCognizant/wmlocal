@@ -3,6 +3,9 @@
 
 .image-text-with-icon-container {
   .image-text-with-icon-wrapper {
+    @include for-large{
+      width: calc(100% - 104px);
+    }
     .image-text-with-icon {
       &.block {
         &.columns-2-cols {
@@ -14,7 +17,7 @@
             padding: $--spacing-max $--spacing-xl;
           }
           @include for-large {
-            padding: $--spacing-max $--spacing-xxl;
+            padding: $--spacing-max 0;
           }
           @include for-xlarge {
             padding: $--spacing-max 0;
@@ -62,16 +65,6 @@
                 max-width: calc((100% - 30px) / 12* 5);
               }
             }
-            div{
-              &:last-child{
-                @include for-mobile {
-                  display: none;
-                }
-                @include for-tablet {
-                  display: none;
-                }
-              }
-            }
             >.columns-img-col {
               order: 0;
               align-self: flex-start;
@@ -112,6 +105,14 @@
                 margin-bottom: $--spacing-l;
                 width: 64px;
                 height: 64px;
+              }
+              span {
+                margin-bottom: $--spacing-l;
+                width: 64px;
+                height: 64px;
+                i {
+                  font-size: 64px;
+                }
               }
               @include for-tablet {
                 font-size: 32px;

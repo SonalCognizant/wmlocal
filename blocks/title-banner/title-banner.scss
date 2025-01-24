@@ -1,14 +1,8 @@
 @import '../../styles/include/mq.scss';
 @import '../../styles/include/tokens.scss';
 
-.title-banner-container.blue-550 {
-  background-image: linear-gradient(180deg, rgba(166, 198, 221, 1) 0%, rgba(148, 182, 206, 1) 0%, rgba(73, 115, 144, 1) 100%);
-  @include for-xlarge{
-    background-image: linear-gradient(180deg, rgba(166, 198, 221, 1) 0%, rgba(148, 182, 206, 1) 0%, rgba(73, 115, 144, 1) 100%);
-  }
-  @include for-laptop{
-    background-image: linear-gradient(270deg, rgba(166, 198, 221, 1) 0%, rgba(148, 182, 206, 1) 0%, rgba(73, 115, 144, 1) 100%);
-  }
+.title-banner-container {
+  background-image: linear-gradient(270deg, rgba(166, 198, 221, 1) 0%, rgba(148, 182, 206, 1) 0%, rgba(73, 115, 144, 1) 100%);
   @include for-tablet{
     background: $--blue-550;
   }
@@ -49,7 +43,6 @@
             width: calc((100% * 5) / 6);
           }
           .tbnr-textcont {
-            order: 1;
             display: flex;
             flex-flow: row wrap;
             @include for-tablet{
@@ -117,7 +110,7 @@
               .button-container{
                 margin: 0;
                 &:last-child{
-                  margin-left: 12px;
+                  margin-left: 24px;
                 }
               }
               @include for-mobile{
@@ -173,7 +166,7 @@
     }
   }
 }
-.one-btn-banner.title-banner-container.blue-550{
+.one-btn-banner.title-banner-container{
   background-image: linear-gradient(135deg, rgba(214, 229, 241, 1) 0%, rgba(255, 255, 255, 1) 100%);
   .title-banner-wrapper{
     .block{
@@ -191,6 +184,7 @@
         .tbnr-textcont{
           @include for-xlarge{
             max-width: calc((100% - 30px) / 12* 6);
+            flex: unset;
           }
           @include for-tablet{
             min-width: calc(((100% / 6) * 5) - 90px);
@@ -245,12 +239,8 @@
             }
           }
           .tbnr-btn{
-            @include for-tablet{
-              display: unset;
-              width: min-content;
-            }
             @include for-mobile{
-              width: unset;
+              width: 100%;
             }
           }
         }

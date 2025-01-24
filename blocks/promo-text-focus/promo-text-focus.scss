@@ -28,11 +28,16 @@
     @include for-xlarge{
       height: 575px;
       background-position: 22%;
+      max-width: unset;
     }
     .promo-text-focus {
       width: 100%;
       display: flex;
       justify-content: end;
+      @include for-xlarge{
+        max-width: 1275px;
+        margin: 0 auto;
+      }
       &.block {
         .promo-focus-block{
           background: $--blue-550;
@@ -49,7 +54,7 @@
           >div {
             padding: $--spacing-huge $--spacing-m;
             @include for-tablet{
-              padding: $--spacing-huge $--spacing-xl;
+              padding: $--spacing-jumbo $--spacing-xl 48px $--spacing-xl;
             }
             @include for-laptop{
               padding: $--spacing-huge $--spacing-xxl;
@@ -69,6 +74,15 @@
                   margin-bottom: $--spacing-l;
                   width: 64px;
                   height: 64px;
+                }
+                span {
+                  margin-bottom: $--spacing-l;
+                  width: 64px;
+                  height: 64px;
+                  i {
+                    font-size: 64px;
+                    color: $--white;
+                  }
                 }
                 @include for-mobile {
                   font-size: 32px;

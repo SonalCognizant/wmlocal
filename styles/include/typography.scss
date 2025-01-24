@@ -56,6 +56,16 @@ h4 {
   line-height: 21px;
 }
 
+h5 {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 19px;
+}
+
 body {
   display: none;
   margin: 0;
@@ -91,4 +101,36 @@ a:any-link {
 
 .background-blue-550 {
   background-color: $--blue-550;
+}
+
+.block-padding-top{
+  padding-top: $--spacing-huge;
+  @include for-tablet {
+    padding-top: $--spacing-jumbo;
+  }
+  @include for-laptop {
+    padding-top: $--spacing-max;
+  }
+  @include for-large {
+    padding-top: $--spacing-max;
+  }
+  @include for-xlarge {
+    padding-top: $--spacing-max;
+  }
+}
+
+.block-padding-bottom{
+  padding-bottom: $--spacing-huge;
+  @include for-tablet {
+    padding-bottom: $--spacing-jumbo;
+  }
+  @include for-laptop {
+    padding-bottom: $--spacing-max;
+  }
+  @include for-large {
+    padding-bottom: $--spacing-max;
+  }
+  @include for-xlarge {
+    padding-bottom: $--spacing-max;
+  }
 }

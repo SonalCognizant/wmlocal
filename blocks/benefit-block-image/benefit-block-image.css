@@ -2,12 +2,22 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .benefit-block-image-container .benefit-block-image-wrapper {
+    width: calc(100% - 104px);
+  }
+}
 .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image {
   display: flex;
   flex-direction: row-reverse;
   gap: calc((100% - 330px) / 12 + 60px);
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
+  .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image {
+    padding: 120px 0;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
   .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image {
     padding: 120px 0;
   }
@@ -50,6 +60,7 @@
 .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-left > div > div img {
   width: 100%;
   height: 100%;
+  border-radius: 5px;
 }
 .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right {
   width: 58.3333333333%;
@@ -67,7 +78,6 @@
 .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div {
   display: flex;
   gap: calc((100% - 180px) / 7 + 60px);
-  padding-top: 52px;
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div {
@@ -86,27 +96,34 @@
 }
 .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div:first-child > div {
   width: 100%;
+  padding: 0;
 }
 .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div:first-child > div h2 {
-  color: #005589;
+  color: #4a7390;
   font-family: museo, sans-serif;
   font-size: 32px;
-  font-weight: 600;
+  line-height: 38px;
+  font-weight: 700;
   text-decoration: none;
   margin-bottom: 20px;
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div:first-child > div h2 {
     margin: 0;
+    font-size: 28px;
+    line-height: 33px;
   }
 }
 @media (max-width: 480px) {
   .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div:first-child > div h2 {
     margin: 0;
+    font-size: 28px;
+    line-height: 33px;
   }
 }
 .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div {
   width: 42.8571428571%;
+  padding-top: 52px;
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div {
@@ -128,24 +145,38 @@
   height: 64px;
   margin-bottom: 24px;
 }
-.benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2 {
-  color: #005589;
-  font-family: roboto, sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  text-decoration: underline;
-  cursor: pointer;
+.benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2:has(span) {
   margin: 0;
 }
-@media (min-width: 480.5px) and (max-width: 1023.5px) {
-  .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2 {
-    text-decoration: none;
-  }
+.benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2:has(span) span {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 24px;
 }
-@media (max-width: 480px) {
-  .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2 {
-    text-decoration: none;
-  }
+.benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2:has(span) span i {
+  font-size: 64px;
+}
+.benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2 {
+  font-family: roboto, sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 0;
+  color: #4b4c4d;
+}
+.benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h2:has(a) {
+  color: #005589;
+}
+.benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h4 {
+  font-family: roboto, sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 0;
+  color: #4b4c4d;
+}
+.benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div h4:has(a) {
+  color: #005589;
 }
 .benefit-block-image-container .benefit-block-image-wrapper .benefit-block-image .block-right > div > div p {
   color: #4b4c4d;

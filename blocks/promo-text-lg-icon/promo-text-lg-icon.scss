@@ -1,10 +1,18 @@
 @import "../../styles/include/mq.scss";
 @import "../../styles/include/tokens.scss";
 
+.promo-text-lg-icon-container {
+  position: relative;
+  z-index: 0;
+}
 .promo-text-lg-icon-wrapper {
   margin: 0;
   opacity: 1;
   background-color: rgba(74, 115, 144, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: unset !important;
   @include for-xlarge {
     padding: 0 52px;
   }
@@ -24,6 +32,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 1275px;
     > div {
       display: flex;
       flex-direction: column;
@@ -41,7 +50,7 @@
       }
       @include for-laptop {
         padding: 120px 0px 120px 0px;
-        width: calc(83.33% - 10px);
+        width: 83%;
       }
       @include for-mobile {
         padding: 72px 0;
@@ -70,7 +79,7 @@
           z-index: 2;
           width: 100%;
           @include for-tablet {
-            font-size: 28px;
+            font-size: 32px;
           }
           @include for-mobile {
             padding-bottom: 16px;
@@ -82,28 +91,18 @@
           margin: 0;
           @include for-xlarge {
             bottom: -210px;
-            width: 345px;
-            height: 345px;
           }
           @include for-large {
             bottom: -210px;
-            width: 345px;
-            height: 345px;
           }
           @include for-laptop {
             bottom: -210px;
-            width: 345px;
-            height: 345px;
           }
           @include for-mobile {
             bottom: -205px;
-            width: 299px;
-            height: 299px;
           }
           @include for-tablet {
-            bottom: -165px;
-            width: 256px;
-            height: 256px;
+            bottom: -200px;
           }
           > span {
             height: 100%;
@@ -112,12 +111,32 @@
               height: 100%;
               width: 100%;
             }
+            > i {
+              color: #426781;
+              @include for-xlarge {
+                font-size: 345px;
+              }
+              @include for-large {
+                font-size: 345px;
+              }
+              @include for-laptop {
+                font-size: 345px;
+              }
+              @include for-mobile {
+                font-size: 299px;
+              }
+              @include for-tablet {
+                font-size: 299px;
+              }
+            }
           }
         }
       }
       > .button {
         margin: 0;
         border-radius: 2px;
+        border: none;
+        padding: 12px 36px;
         @include for-mobile {
           width: 100%;
         }
