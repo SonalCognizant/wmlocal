@@ -10,7 +10,7 @@
                 width: 1275px;
             }
             @include for-large{
-                width: calc(100% - 72px);
+                width: calc(100% - 104px);
             }
             @include for-laptop{
                 width: calc(100% - 72px);
