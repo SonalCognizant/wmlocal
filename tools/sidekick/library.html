@@ -35,7 +35,10 @@
       library.config = {
         base: '/tools/sidekick/library.json',
         plugins: {
-          tags: '/tools/sidekick/plugins/tags/tags.js',
+          tags: {
+      src: '/tools/sidekick/plugins/tags/tags.js',
+      foo: 'bar'
+    },
 			blocks: {
 			  encodeImages: true,
 			  viewPorts: [
