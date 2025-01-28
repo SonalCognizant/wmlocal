@@ -35,6 +35,11 @@
       library.config = {
         base: '/tools/sidekick/library.json',
         tags: '/tools/sidekick/plugins/tags/tags.js',
+        plugins: {
+          blocks: {
+            encodeImages: true,
+          }
+		    },
       }
 
       document.body.prepend(library)
