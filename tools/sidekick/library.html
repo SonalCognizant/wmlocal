@@ -33,9 +33,8 @@
     <script>
       const library = document.createElement('sidekick-library')
       library.config = {
+        base: '/tools/sidekick/library.json',
         plugins: {
-          base: '/tools/sidekick/library.json',
-          tags: '/tools/sidekick/plugins/tags/tags.js',
 			blocks: {
 			  encodeImages: true,
 			  viewPorts: [
@@ -63,7 +62,8 @@
 				},
 			  ],
 			}
-		  }
+		  },
+      tags: '/tools/sidekick/plugins/tags/tags.js',
       }
 
       document.body.prepend(library)
